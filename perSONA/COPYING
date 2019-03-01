@@ -1,0 +1,23 @@
+Copyright 2015-2018 Institute of Technical Acoustics (ITA), RWTH Aachen University
+
+This binary packages, although generated from code published under 
+Apache License, Version 2.0 requires distribution under the terms of
+the GNU General Public License. Options in the build configuration have been 
+selected that require linking against libraries that include a copyleft.
+
+GNU GPL dependencies: FFTW3
+
+> This distribution is subject to VA's selective license dependency and may require you to publish your derived work under a copyleft license as well. The details are described in [README.md](https://git.rwth-aachen.de/ita/VA/) of the main VA project.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.

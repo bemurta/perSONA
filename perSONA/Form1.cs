@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -16,34 +17,13 @@ namespace perSONA
     public partial class Form1 : Form
     {
         VANet vA;
+        Process p;
+        ProcessStartInfo info;
+        StreamWriter sw;
         public Form1()
         {
             InitializeComponent();
             vA = new VANet();
-//#if DEBUG
-//            Process cmd = new Process();
-//            cmd.StartInfo.FileName = "cmd.exe";
-//            cmd.StartInfo.RedirectStandardInput = true;
-//            cmd.StartInfo.RedirectStandardOutput = true;
-//            cmd.StartInfo.CreateNoWindow = false;
-//            cmd.StartInfo.UseShellExecute = false;
-//            cmd.Start();
-
-//            cmd.StandardInput.WriteLine("C:\\Users\\bernardo.murta\\Documents\\projects\\VA_full.v2018a_dev.win32-x64.vc12\\run_VAServer.bat");
-//            cmd.StandardInput.Flush();
-//            cmd.StandardInput.Close();
-//            cmd.WaitForExit();
-//            Console.WriteLine(cmd.StandardOutput.ReadToEnd());
-
-//#else
-            //System.Diagnostics.Process process = new System.Diagnostics.Process();
-            //System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            //startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            //startInfo.FileName = "cmd.exe";
-            //startInfo.Arguments = "C:\\Users\\bernardo.murta\\Documents\\projects\\VA_full.v2018a_dev.win32-x64.vc12\\run_VAServer.bat";
-            //process.StartInfo = startInfo;
-            //process.Start();
-//#endif
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)
@@ -51,13 +31,13 @@ namespace perSONA
             Cursor.Current = Cursors.WaitCursor;
             Thread.Sleep(1000);
             bool success = vA.Connect();
+            Console.WriteLine(success.ToString());
             if (success)
             {
                 buttonConnect.BackColor = Color.Green;
             }
             else
             {
-
                 buttonConnect.BackColor = Color.Red;
             }
             Cursor.Current = Cursors.Default;
@@ -72,6 +52,30 @@ namespace perSONA
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             vA.Disconnect();
+
+
+            sw.WriteLine("q");
+        }
+
+        private void openServer_Click(object sender, EventArgs e)
+        {
+            p = new Process();
+            info = new ProcessStartInfo();
+            info.FileName = "cmd.exe";
+            info.RedirectStandardInput = true;
+            info.UseShellExecute = false;
+            info.CreateNoWindow = true;
+            p.StartInfo = info;
+            p.Start();
+
+            using (sw = p.StandardInput)
+            {
+                if (sw.BaseStream.CanWrite)
+                {
+                    sw.WriteLine("cd ../../..");
+                    sw.WriteLine("run_VAServer.bat");
+                }
+            }
         }
     }
 }

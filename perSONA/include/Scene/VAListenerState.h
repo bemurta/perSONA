@@ -1,0 +1,132 @@
+/*
+ *  --------------------------------------------------------------------------------------------
+ *
+ *    VVV        VVV A           Virtual Acoustics (VA) | http://www.virtualacoustics.org
+ *     VVV      VVV AAA          Licensed under the Apache License, Version 2.0
+ *      VVV    VVV   AAA
+ *       VVV  VVV     AAA        Copyright 2015-2017
+ *        VVVVVV       AAA       Institute of Technical Acoustics (ITA)
+ *         VVVV         AAA      RWTH Aachen University
+ *
+ *  --------------------------------------------------------------------------------------------
+ */
+
+#ifndef IW_VACORE_SOUND_RECEIVER_STATE
+#define IW_VACORE_SOUND_RECEIVER_STATE
+
+#include "VASceneStateBase.h"
+
+#include <VAStruct.h>
+
+class CVAMotionState;
+class IVADirectivity;
+
+//! Class describing a human listener in a dynamic scene
+class CVAReceiverState : public CVASceneStateBase
+{
+public:
+
+	//! Anthropomentric parameter data class
+	class CVAAnthropometricParameter
+	{
+	public:
+		inline CVAAnthropometricParameter()
+			: dHeadWidth( 0.12f )
+			, dHeadHeight( 0.10f )
+			, dHeadDepth( 0.15f )
+		{
+			// Create Lookup Table (LUT)
+			const double dHeadDepthParameterTemp[ 15 ][ 15 ] = { { -1.32663502405705e-09, -2.43503275907386e-05, -3.80753613782314e-05, -4.59024528641772e-05, -5.05613751010658e-05, -5.29709167498282e-05, -5.38916705479231e-05, -5.39388265685670e-05, -5.31921127823187e-05, -5.22322866046698e-05, -5.07496814787789e-05, -4.91103641909740e-05, -4.74237095774432e-05, -4.56737851716182e-05, -4.37754742472762e-05 },
+			{ 2.43476742738391e-05, -1.32663502405705e-09, -1.37263688705369e-05, -2.15534545322527e-05, -2.62123766865408e-05, -2.86219184142400e-05, -2.95426735188453e-05, -2.95898282018925e-05, -2.88431144145340e-05, -2.78832882389946e-05, -2.64006963994756e-05, -2.47613515994560e-05, -2.30747113284524e-05, -2.13247868936506e-05, -1.94264760042806e-05 },
+			{ 3.80727080669940e-05, 1.37237155604097e-05, -1.32663502405705e-09, -7.82841232549458e-06, -1.24873345487275e-05, -1.48968998854304e-05, -1.58177050587627e-05, -1.58647816544955e-05, -1.51180722093303e-05, -1.41582459899370e-05, -1.26756408932449e-05, -1.10363092803434e-05, -9.34966899679424e-06, -7.59974459718649e-06, -5.70143368183729e-06 },
+			{ 4.58997995493871e-05, 2.15508012147980e-05, 7.82575901159266e-06, -1.32663502405705e-09, -4.66024881318194e-06, -7.06979222242499e-06, -7.99054430211665e-06, -8.03770032642426e-06, -7.29098485929836e-06, -6.33116035053671e-06, -4.84855519677918e-06, -3.20922227692311e-06, -1.52258199614952e-06, 2.27333169511290e-07, 2.12565198587367e-06 },
+			{ 5.05587217916048e-05, 2.62097233897363e-05, 1.24846812565860e-05, 4.65759551981915e-06, -1.32663502405705e-09, -2.41086836971771e-06, -3.33162213728144e-06, -3.37877816225518e-06, -2.63206266637450e-06, -1.67223650393566e-06, -1.89631393032741e-07, 1.44956283310016e-06, 3.13634048454414e-06, 4.88626324379737e-06, 6.78457412395250e-06 },
+			{ 5.29682634528017e-05, 2.86192651115513e-05, 1.48942465871826e-05, 7.06713891640565e-06, 2.40821506525268e-06, -1.32663502405705e-09, -9.22080451326579e-07, -9.69236470305113e-07, -2.22522682946646e-07, 7.37303498588027e-07, 2.21990862581123e-06, 3.85924024992601e-06, 5.54588052870120e-06, 7.29580491687365e-06, 9.19411583744090e-06 },
+			{ 5.38890172414597e-05, 2.95400202106055e-05, 1.58150517595157e-05, 7.98789100442399e-06, 3.32896883359357e-06, 9.19427152523689e-07, -1.32663502405705e-09, -4.84826887525713e-08, 6.98231112927772e-07, 1.65805728646884e-06, 3.14066241624555e-06, 4.77999403736273e-06, 6.46663431391747e-06, 8.21655872207394e-06, 1.01148696369791e-05 },
+			{ 5.39361732725396e-05, 2.95871748976495e-05, 1.58621283593563e-05, 8.03504701929469e-06, 3.37612485423744e-06, 9.66583171280178e-07, 4.58293747396255e-08, -1.32663502405705e-09, 7.45387139455822e-07, 1.70521332210072e-06, 3.18781845154437e-06, 4.82715007044110e-06, 6.51379034333210e-06, 8.26373845630446e-06, 1.01620256723889e-05 },
+			{ 5.31894594737459e-05, 2.88404611086257e-05, 1.51154188913205e-05, 7.28833156027342e-06, 2.62940937423295e-06, 2.19869372819481e-07, -7.00884421611647e-07, -7.48040435594177e-07, -1.32663502405705e-09, 9.58499524972289e-07, 2.44110466374181e-06, 4.08043627175836e-06, 5.76707656729791e-06, 7.51700094925312e-06, 9.41531180731481e-06 },
+			{ 5.22296333076433e-05, 2.78806349331973e-05, 1.41555926972403e-05, 6.32850705462040e-06, 1.66958322067590e-06, -7.39956790840601e-07, -1.66071058593786e-06, -1.70786662101463e-06, -9.61152823997225e-07, -1.32663502405705e-09, 1.48127843890844e-06, 3.12061002250008e-06, 4.80725033069618e-06, 6.55717477882067e-06, 8.45548565264753e-06 },
+			{ 5.07470281769784e-05, 2.63980431040034e-05, 1.26729876026577e-05, 4.84590187121992e-06, 1.86978087235445e-07, -2.22256193349590e-06, -3.14331573125770e-06, -3.19047174857090e-06, -2.44375795444007e-06, -1.48393174104200e-06, -1.32663502405705e-09, 1.63800497787747e-06, 3.32464525865106e-06, 5.07457227838515e-06, 6.97288057327494e-06 },
+			{ 4.91077108969451e-05, 2.47586982896619e-05, 1.10336559715485e-05, 3.20656897934146e-06, -1.45221614866742e-06, -3.86189355794375e-06, -4.78264733494438e-06, -4.82980337057626e-06, -4.08308956878489e-06, -3.12326330709212e-06, -1.64065828378579e-06, -1.32663502405705e-09, 1.68531362609858e-06, 3.43523803802981e-06, 5.33347870090850e-06 },
+			{ 4.74210562780852e-05, 2.30720580074451e-05, 9.34701569421659e-06, 1.51992869845685e-06, -3.13899378800997e-06, -5.54853381928844e-06, -6.46928761560694e-06, -6.51644364002557e-06, -5.76972986376934e-06, -4.80990363083134e-06, -3.32729856888925e-06, -1.68796693156281e-06, -1.32663502405705e-09, 1.74859774437763e-06, 3.64690866805351e-06 },
+			{ 4.56711318729264e-05, 2.13221335998437e-05, 7.59709129150021e-06, -2.29986482858102e-07, -4.88891652339341e-06, -7.29845821589858e-06, -8.21921202920350e-06, -8.26639175577348e-06, -7.51965425771495e-06, -6.55982808583921e-06, -5.07722558185098e-06, -3.43789134071848e-06, -1.75125105572604e-06, -1.32663502405705e-09, 1.89698426178442e-06 },
+			{ 4.37728209564670e-05, 1.94238227038124e-05, 5.69878038825245e-06, -2.12830528611985e-06, -6.78722742442073e-06, -9.19676913668788e-06, -1.01175229385575e-05, -1.01646789770760e-05, -9.41796512832216e-06, -8.45813895411496e-06, -6.97553387785099e-06, -5.33613200681682e-06, -3.64956196374777e-06, -1.89963756069833e-06, -1.32663502405705e-09 } };
+
+			m_vvdHeadDepthParameterLUT.resize( 15 );
+			for( int i = 0; i < 15; i++ )
+			{
+				m_vvdHeadDepthParameterLUT[ i ].resize( 15 );
+				for( int j = 0; j < 15; j++ )
+				{
+					m_vvdHeadDepthParameterLUT[ i ][ j ] = dHeadDepthParameterTemp[ i ][ j ];
+				}
+			}
+		};
+
+		double dHeadWidth; //!< Width of head (from ear to ear, default is 0.08m)
+		double dHeadHeight; //!< Hight of head [m]
+		double dHeadDepth; //!< Depth of head [m]
+
+		//! Returns the head depth parameter from lookup table
+		double GetHeadDepthParameterFromLUT( double dInvidividualDepth ) const;
+
+	private:
+		std::vector< std::vector< double > > m_vvdHeadDepthParameterLUT;
+	};
+
+	//! Initialize
+	/*
+	 * \note State aftercreation: non-finalized, reference counter is 0
+	 */
+	void Initialize( double dModificationTime );
+
+	//! Copy data from other state
+	void Copy( const CVAReceiverState* pSrc, double dModificationTime );
+
+	// Fixieren (Fixiert alle enthaltenen Objekte)
+	void Fix();
+
+	// Getter
+	const CVAMotionState* GetMotionState() const;
+	int GetAuralizationMode() const;
+	int GetDirectivityID() const;
+	const IVADirectivity* GetDirectivity() const;
+	double GetHeadDepthParameter( double dSubjDepth ) const;
+
+	//! Returns anthropometric data
+	const CVAAnthropometricParameter& GetAnthropometricData() const;
+
+	// Setter
+	void SetAuralizationMode( int iAuralizationMode );
+	void SetDirectivityID( int iID );
+	void SetDirectivity( const IVADirectivity* pDirectivity );
+
+	//! Sets anthropometric data
+	void SetAnthropometricData( const CVAAnthropometricParameter& oAnthroData );
+
+	//! Sets parameters
+	void SetParameters( const CVAStruct& oParams );
+
+	//! Returns parameters
+	CVAStruct GetParameters( const CVAStruct& oArgs ) const;
+
+	//! Modifier
+	CVAMotionState* AlterMotionState();
+
+	std::string ToString() const;
+
+protected:
+	void PreRelease();
+
+private:
+	struct InternalData
+	{
+		CVAMotionState* pMotionState; //!< State of motion in 3D space
+		int iAuraMode; //!< Auralization flags
+		int iDirectivityID; //!< HRIR data set index
+		const IVADirectivity* pDirectivity; //!< HRIR data set pointer
+		CVAAnthropometricParameter oAnthroData; //!< Anthropometric data
+	} data; //!< Listener state internal data
+};
+
+#endif // IW_VACORE_SOUND_RECEIVER_STATE
