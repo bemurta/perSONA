@@ -32,6 +32,12 @@
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.openServer = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
+            this.reset = new System.Windows.Forms.Button();
+            this.createSource = new System.Windows.Forms.Button();
+            this.createReceiver = new System.Windows.Forms.Button();
+            this.play = new System.Windows.Forms.Button();
+            this.createSource2 = new System.Windows.Forms.Button();
+            this.play2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonConnect
@@ -60,7 +66,7 @@
             this.openServer.Name = "openServer";
             this.openServer.Size = new System.Drawing.Size(75, 23);
             this.openServer.TabIndex = 2;
-            this.openServer.Text = "button1";
+            this.openServer.Text = "Connect";
             this.openServer.UseVisualStyleBackColor = true;
             this.openServer.Click += new System.EventHandler(this.openServer_Click);
             // 
@@ -72,11 +78,77 @@
             this.textBox.Size = new System.Drawing.Size(236, 365);
             this.textBox.TabIndex = 3;
             // 
+            // reset
+            // 
+            this.reset.Location = new System.Drawing.Point(626, 132);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(75, 23);
+            this.reset.TabIndex = 4;
+            this.reset.Text = "reset";
+            this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
+            // 
+            // createSource
+            // 
+            this.createSource.Location = new System.Drawing.Point(626, 215);
+            this.createSource.Name = "createSource";
+            this.createSource.Size = new System.Drawing.Size(112, 23);
+            this.createSource.TabIndex = 5;
+            this.createSource.Text = "create source";
+            this.createSource.UseVisualStyleBackColor = true;
+            this.createSource.Click += new System.EventHandler(this.createSource_Click);
+            // 
+            // createReceiver
+            // 
+            this.createReceiver.Location = new System.Drawing.Point(626, 185);
+            this.createReceiver.Name = "createReceiver";
+            this.createReceiver.Size = new System.Drawing.Size(112, 23);
+            this.createReceiver.TabIndex = 6;
+            this.createReceiver.Text = "create receiver";
+            this.createReceiver.UseVisualStyleBackColor = true;
+            this.createReceiver.Click += new System.EventHandler(this.createReceiver_Click);
+            // 
+            // play
+            // 
+            this.play.Location = new System.Drawing.Point(626, 244);
+            this.play.Name = "play";
+            this.play.Size = new System.Drawing.Size(112, 23);
+            this.play.TabIndex = 7;
+            this.play.Text = "play";
+            this.play.UseVisualStyleBackColor = true;
+            this.play.Click += new System.EventHandler(this.play_Click);
+            // 
+            // createSource2
+            // 
+            this.createSource2.Location = new System.Drawing.Point(626, 283);
+            this.createSource2.Name = "createSource2";
+            this.createSource2.Size = new System.Drawing.Size(112, 23);
+            this.createSource2.TabIndex = 8;
+            this.createSource2.Text = "create source 2";
+            this.createSource2.UseVisualStyleBackColor = true;
+            this.createSource2.Click += new System.EventHandler(this.createSource2_Click);
+            // 
+            // play2
+            // 
+            this.play2.Location = new System.Drawing.Point(626, 324);
+            this.play2.Name = "play2";
+            this.play2.Size = new System.Drawing.Size(112, 23);
+            this.play2.TabIndex = 9;
+            this.play2.Text = "play 2";
+            this.play2.UseVisualStyleBackColor = true;
+            this.play2.Click += new System.EventHandler(this.play2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.play2);
+            this.Controls.Add(this.createSource2);
+            this.Controls.Add(this.play);
+            this.Controls.Add(this.createReceiver);
+            this.Controls.Add(this.createSource);
+            this.Controls.Add(this.reset);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.openServer);
             this.Controls.Add(this.buttonDisconnect);
@@ -95,6 +167,12 @@
         private System.Windows.Forms.Button buttonDisconnect;
         private System.Windows.Forms.Button openServer;
         private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.Button createSource;
+        private System.Windows.Forms.Button createReceiver;
+        private System.Windows.Forms.Button play;
+        private System.Windows.Forms.Button createSource2;
+        private System.Windows.Forms.Button play2;
     }
 }
 
