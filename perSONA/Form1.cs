@@ -20,10 +20,47 @@ namespace perSONA
         Process p;
         ProcessStartInfo info;
         StreamWriter sw;
+        StreamReader sr;
         public Form1()
         {
             InitializeComponent();
             vA = new VANet();
+
+
+            p = new Process();
+            info = new ProcessStartInfo();
+            info.FileName = "cmd.exe";
+            info.RedirectStandardInput = true;
+            info.RedirectStandardOutput = true;
+            info.UseShellExecute = false;
+            info.CreateNoWindow = true;
+            p.StartInfo = info;
+            p.Start();
+            sw = p.StandardInput;
+            sr = p.StandardOutput;
+            if (sw.BaseStream.CanWrite)
+            {
+                sw.WriteLine("cd ../../..");
+                sw.WriteLine("run_VAServer.bat");
+            }
+
+            UpdateLog();
+        }
+
+        private async Task<bool> UpdateLog()
+        {
+            try
+            {
+                textBox.Text += await sr.ReadToEndAsync();
+                Thread.Sleep(1000);
+                await UpdateLog();
+                return true;
+            }
+            catch (Exception e)
+            {
+                sw.Write(e.Message);
+                return false;
+            }
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)
@@ -59,23 +96,6 @@ namespace perSONA
 
         private void openServer_Click(object sender, EventArgs e)
         {
-            p = new Process();
-            info = new ProcessStartInfo();
-            info.FileName = "cmd.exe";
-            info.RedirectStandardInput = true;
-            info.UseShellExecute = false;
-            info.CreateNoWindow = true;
-            p.StartInfo = info;
-            p.Start();
-
-            using (sw = p.StandardInput)
-            {
-                if (sw.BaseStream.CanWrite)
-                {
-                    sw.WriteLine("cd ../../..");
-                    sw.WriteLine("run_VAServer.bat");
-                }
-            }
         }
     }
 }

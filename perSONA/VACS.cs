@@ -36,6 +36,7 @@ namespace VA
         }
     }
 
+
     //! Play-it-safe VA networked interface class
     /*
      * Use this class to communicate with a VA server. All server-side exceptions or not-connected exceptions
@@ -95,21 +96,52 @@ namespace VA
         public int CreateSoundReceiver(string Name = "")
         {
             return NativeCreateSoundReceiver(_NetClient, Name);
+        }		
+		
+        public int CreateSoundReceiverExplicitRenderer(string RendererID, string Name = "")
+        {
+            return NativeCreateSoundReceiverExplicitRenderer(_NetClient, RendererID, Name);
+        }
+		
+        public void SetActiveSoundReceiverExplicitRenderer(string RendererID, int SoundReceiverID)
+        {
+            NativeSetActiveSoundReceiverExplicitRenderer(_NetClient, RendererID, SoundReceiverID);
+        }
+		
+        public int GetActiveSoundReceiverExplicitRenderer(string RendererID)
+        {
+            return NativeGetActiveSoundReceiverExplicitRenderer(_NetClient, RendererID);
         }
 
         public void SetSoundReceiverPose(int SoundReceiver, VAVec3 v, VAQuat o)
         {
             NativeSetSoundReceiverPose(_NetClient, SoundReceiver, v.x, v.y, v.z, o.x, o.y, o.z, o.w);
-        }
+		}
 
-        public void SetSoundReceiverRealWorldHeadPose(int SoundReceiver, VAVec3 v, VAQuat o)
-        {
-            NativeSetSoundReceiverRealWorldHeadPose(_NetClient, SoundReceiver, v.x, v.y, v.z, o.x, o.y, o.z, o.w);
-        }
+		public VAVec3 GetSoundReceiverRealWorldPosition(int SoundReceiver)
+		{
+			VAVec3 p = new VAVec3(0,0,0);
+			VAQuat q = new VAQuat(0,0,0,1);
+			NativeGetSoundReceiverRealWorldPose(_NetClient, SoundReceiver, ref p.x, ref p.y, ref p.z, ref q.x, ref q.y, ref q.z, ref q.w);
+			return p;
+		}
+
+		public VAQuat GetSoundReceiverRealWorldOrientation(int SoundReceiver)
+		{
+			VAVec3 p = new VAVec3(0,0,0);
+			VAQuat q = new VAQuat(0,0,0,1);
+			NativeGetSoundReceiverRealWorldPose(_NetClient, SoundReceiver, ref p.x, ref p.y, ref p.z, ref q.x, ref q.y, ref q.z, ref q.w);
+			return q;
+		}
+
+		public void SetSoundReceiverRealWorldHeadPose(int SoundReceiver, VAVec3 v, VAQuat o)
+		{
+			NativeSetSoundReceiverRealWorldPose(_NetClient, SoundReceiver, v.x, v.y, v.z, o.x, o.y, o.z, o.w);
+		}
 
         public void SetSoundReceiverPosition(int SoundReceiver, VAVec3 v3Pos)
         {
-            NativeSetSoundReceiverPosition(_NetClient, SoundReceiver, v3Pos.x, v3Pos.y, v3Pos.z);
+			NativeSetSoundReceiverPosition(_NetClient, SoundReceiver, v3Pos.x, v3Pos.y, v3Pos.z);
         }
 
         public void SetSoundReceiverOrientation(int iSoundReceiverID, VAQuat o)
@@ -137,6 +169,15 @@ namespace VA
         public int CreateSoundSource(string Name = "")
         {
             return NativeCreateSoundSource(_NetClient, Name);
+        }
+		
+        // Create sound source explicitly for one renderer
+        /** 
+         * Create a sound source (returns ID) for renderer
+         */
+        public int CreateSoundSourceExplicitRenderer(string RendererID, string Name = "")
+        {
+            return NativeCreateSoundSourceExplicitRenderer(_NetClient, RendererID, Name);
         }
 
         public void SetSoundSourcePose(int SoundSource, VAVec3 v, VAQuat o)
@@ -237,9 +278,9 @@ namespace VA
             return sIdentifier.ToString();
         }
 
-        public void SetSoundSourceVolume(int iSoundSourceID, double dGain)
+        public void SetSoundSourceSoundPower(int iSoundSourceID, double dPowerWatts)
         {
-            NativeSetSoundSourceSoundPower(_NetClient, iSoundSourceID, dGain);
+            NativeSetSoundSourceSoundPower(_NetClient, iSoundSourceID, dPowerWatts);
         }
         public void SetSoundSourceMuted(int iSoundSourceID, bool bMuted)
         {
@@ -488,9 +529,9 @@ namespace VA
             NativeTextToSpeechPlaySpeech(_NetClient, sSignalSourceIdentifier, sTextIdentifier);
         }
 
-        public void UpdateGenericPath(string sModuleID, int iSource, int iReceiver, int iChannel, double dDelaySeconds, int iNumSamples, double[] vdSampleBuffer)
+        public void UpdateGenericPath(string sModuleID, int iSource, int iReceiver, int iChannel, float fDelaySeconds, int iNumSamples, float[] vfSampleBuffer)
         {
-            NativeUpdateGenericPath(_NetClient, sModuleID, iSource, iReceiver, iChannel, dDelaySeconds, iNumSamples, vdSampleBuffer);
+            NativeUpdateGenericPath(_NetClient, sModuleID, iSource, iReceiver, iChannel, fDelaySeconds, iNumSamples, vfSampleBuffer);
         }
         public void UpdateGenericPathFromFile(string sModuleID, int iSource, int iReceiver, string sFilePath)
         {
@@ -608,7 +649,7 @@ namespace VA
         [DllImport("VANetCSWrapper")]
         private static extern double NativeGetSoundSourceSoundPower(IntPtr pClient, int iSoundSourceID);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeSetSoundSourceSoundPower(IntPtr pClient, int iSoundSourceID, double dGain);
+        private static extern void NativeSetSoundSourceSoundPower(IntPtr pClient, int iSoundSourceID, double dSoundPowerWatts);
         [DllImport("VANetCSWrapper")]
         private static extern bool NativeGetSoundSourceMuted(IntPtr pClient, int iSoundSourceID);
         [DllImport("VANetCSWrapper")]
@@ -674,29 +715,29 @@ namespace VA
         [DllImport("VANetCSWrapper")]
         private static extern void NativeGetSoundReceiverOrientation(IntPtr pClient, int iSoundReceiverID, ref double x, ref double y, ref double z, ref double w);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeSetSoundReceiverOrientation(IntPtr pClient, int iSoundReceiverID, double x, double y, double z, double w);
+        private static extern void NativeSetSoundReceiverOrientation(IntPtr pClient, int iSoundReceiverID, double qx, double qy, double qz, double qw);
         [DllImport("VANetCSWrapper")]
         private static extern void NativeGetSoundReceiverOrientationVU(IntPtr pClient, int iSoundReceiverID, ref double vx, ref double vy, ref double vz, ref double ux, ref double uy, ref double uz);
         [DllImport("VANetCSWrapper")]
         private static extern void NativeSetSoundReceiverOrientationVU(IntPtr pClient, int iSoundReceiverID, double vx, double vy, double vz, double ux, double uy, double uz);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeGetSoundReceiverHeadAboveTorsoOrientation(IntPtr pClient, int iSoundReceiverID, ref double x, ref double y, ref double z, ref double w);
+        private static extern void NativeGetSoundReceiverHeadAboveTorsoOrientation(IntPtr pClient, int iSoundReceiverID, ref double qx, ref double qy, ref double qz, ref double qw);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeSetSoundReceiverHeadAboveTorsoOrientation(IntPtr pClient, int iSoundReceiverID, double x, double y, double z, double w);
+        private static extern void NativeSetSoundReceiverHeadAboveTorsoOrientation(IntPtr pClient, int iSoundReceiverID, double qx, double qy, double qz, double qw);
 
 
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeGetSoundReceiverRealWorldHeadPositionOrientationVU(IntPtr pClient, int iSoundReceiverID, ref double px, ref double py, ref double pz, ref double vx, ref double vy, ref double vz, ref double ux, ref double uy, ref double uz);
+        private static extern void NativeGetSoundReceiverRealWorldPositionOrientationVU(IntPtr pClient, int iSoundReceiverID, ref double px, ref double py, ref double pz, ref double vx, ref double vy, ref double vz, ref double ux, ref double uy, ref double uz);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeSetSoundReceiverRealWorldHeadPositionOrientationVU(IntPtr pClient, int iSoundReceiverID, double px, double py, double pz, double vx, double vy, double vz, double ux, double uy, double uz);
+        private static extern void NativeSetSoundReceiverRealWorldPositionOrientationVU(IntPtr pClient, int iSoundReceiverID, double px, double py, double pz, double vx, double vy, double vz, double ux, double uy, double uz);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeGetSoundReceiverRealWorldHeadPose(IntPtr pClient, int iSoundReceiverID, ref double px, ref double py, ref double pz, ref double x, ref double y, ref double z, ref double w);
+        private static extern void NativeGetSoundReceiverRealWorldPose(IntPtr pClient, int iSoundReceiverID, ref double px, ref double py, ref double pz, ref double x, ref double y, ref double z, ref double w);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeSetSoundReceiverRealWorldHeadPose(IntPtr pClient, int iSoundReceiverID, double px, double py, double pz, double x, double y, double z, double w);
+        private static extern void NativeSetSoundReceiverRealWorldPose(IntPtr pClient, int iSoundReceiverID, double px, double py, double pz, double qx, double qy, double qz, double qw);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeGetSoundReceiverRealWorldHeadAboveTorsoOrientation(IntPtr pClient, int iSoundReceiverID, ref double x, ref double y, ref double z, ref double w);
+        private static extern void NativeGetSoundReceiverRealWorldHeadAboveTorsoOrientation(IntPtr pClient, int iSoundReceiverID, ref double qx, ref double qy, ref double qz, ref double qw);
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeSetSoundReceiverRealWorldHeadAboveTorsoOrientation(IntPtr pClient, int iSoundReceiverID, double x, double y, double z, double w);
+        private static extern void NativeSetSoundReceiverRealWorldHeadAboveTorsoOrientation(IntPtr pClient, int iSoundReceiverID, double qx, double qy, double qz, double qw);
 
 
         // Homogeneous medium
@@ -842,9 +883,14 @@ namespace VA
         // Generic path renderer
 
         [DllImport("VANetCSWrapper")]
-        private static extern void NativeUpdateGenericPath(IntPtr pClient, string sRendererID, int iSourceID, int iReceiverID, int iChannel, double dDelaySeconds, int iNumSamples, [In] double[] vdSampleBuffer);
+        private static extern void NativeUpdateGenericPath(IntPtr pClient, string sRendererID, int iSourceID, int iReceiverID, int iChannel, float fDelaySeconds, int iNumSamples, [In] float[] vfSampleBuffer);
         [DllImport("VANetCSWrapper")]
         private static extern void NativeUpdateGenericPathFromFile(IntPtr pClient, string sRendererID, int iSourceID, int iReceiverID, string sFilePath);
+
+        // Ambient mixer renderer
+        
+        [DllImport("VANetCSWrapper")]
+        private static extern void NativeAmbientMixerRendererPlaySampleFromFile( IntPtr pClient, string sRendererID, string sSampleFilePath );
 
     }
 }
