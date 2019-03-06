@@ -108,7 +108,8 @@ namespace perSONA
             vA.SetSoundReceiverOrientationVU(receiverId, new VAVec3(0, 0, -1), new VAVec3(0, 1, 0));
             //int hrirId = vA.CreateDirectivityFromFile("/conf/../data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             //int hrirId = vA.CreateDirectivityFromFile("../../../win32-x64.vc12/data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
-            //vA.SetSoundReceiverDirectivity(receiverId, hrirId);
+            int hrirId = vA.CreateDirectivityFromFile("$(DefaultHRIR)");
+            vA.SetSoundReceiverDirectivity(receiverId, hrirId);
         }
 
         private void play_Click(object sender, EventArgs e)
