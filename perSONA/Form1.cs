@@ -30,26 +30,6 @@ namespace perSONA
         {
             InitializeComponent();
             vA = new VANet();
-
-
-            p = new Process();
-            info = new ProcessStartInfo();
-            info.FileName = "cmd.exe";
-            info.RedirectStandardInput = true;
-            info.RedirectStandardOutput = true;
-            info.UseShellExecute = false;
-            info.CreateNoWindow = true;
-            p.StartInfo = info;
-            p.Start();
-            sw = p.StandardInput;
-            sr = p.StandardOutput;
-            if (sw.BaseStream.CanWrite)
-            {
-                sw.WriteLine("cd ../../..");
-                sw.WriteLine("run_VAServer.bat");
-            }
-
-            UpdateLog();
         }
 
         private async Task<bool> UpdateLog()
@@ -99,7 +79,8 @@ namespace perSONA
 
             sw = p.StandardInput;
             sw.WriteLine("q");
-            
+
+            p.Close();
         }
 
         private void openServer_Click(object sender, EventArgs e)
@@ -118,7 +99,7 @@ namespace perSONA
             {
                 if (sw.BaseStream.CanWrite)
                 {
-                    sw.WriteLine("cd ../../..");
+                    //sw.WriteLine("cd ../../..");
                     sw.WriteLine("run_VAServer.bat");
                 }
             }
@@ -131,7 +112,7 @@ namespace perSONA
 
         private void createSource_Click(object sender, EventArgs e)
         {
-            signalSourceId = vA.CreateSignalSourceBufferFromFile("../../../UFSC_Demos/audio/1.wav");
+            signalSourceId = vA.CreateSignalSourceBufferFromFile("data/1.wav");
             sourceId = vA.CreateSoundSource("Numbers");
             vA.SetSoundSourcePosition(sourceId, new VAVec3(1, 1.7, 0));
             vA.SetSoundSourceSignalSource(sourceId, signalSourceId);
@@ -145,7 +126,7 @@ namespace perSONA
             vA.SetSoundReceiverOrientationVU(receiverId, new VAVec3(0, 0, -1), new VAVec3(0, 1, 0));
             //int hrirId = vA.CreateDirectivityFromFile("/conf/../data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             //int hrirId = vA.CreateDirectivityFromFile("../../../win32-x64.vc12/data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
-            int hrirId = vA.CreateDirectivityFromFile("$(DefaultHRIR)");
+            int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
         }
 
@@ -156,7 +137,7 @@ namespace perSONA
 
         private void createSource2_Click(object sender, EventArgs e)
         {
-            signalSourceId2 = vA.CreateSignalSourceBufferFromFile("../../../UFSC_Demos/audio/2.wav");
+            signalSourceId2 = vA.CreateSignalSourceBufferFromFile("data/1.wav");
             sourceId2 = vA.CreateSoundSource("Numbers");
             vA.SetSoundSourcePosition(sourceId2, new VAVec3(0, 1.7, 1));
             vA.SetSoundSourceSignalSource(sourceId2, signalSourceId2);
