@@ -17,7 +17,7 @@ namespace perSONA
     public partial class Form1 : Form
     {
         VANet vA;
-        Process p;
+        private readonly Process process;
         ProcessStartInfo info;
         StreamWriter sw;
         StreamReader sr;
@@ -30,6 +30,27 @@ namespace perSONA
         {
             InitializeComponent();
             vA = new VANet();
+            this.process = new Process
+            {
+                StartInfo = VAServerProcessInfo()
+            };
+        }
+
+        ~Form1()
+        {
+            this.Form1_FormClosing(null, null);
+        }
+
+        private ProcessStartInfo VAServerProcessInfo()
+        {
+            info = new ProcessStartInfo();
+            info.FileName = "bin/VAServer.exe";
+            info.RedirectStandardInput = true;
+            //info.RedirectStandardOutput = true;
+            info.UseShellExecute = false;
+            info.CreateNoWindow = true;
+            info.Arguments = "localhost:12340 conf/VACore.ini";
+            return info;
         }
 
         private async Task<bool> UpdateLog()
@@ -75,34 +96,25 @@ namespace perSONA
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            vA.Disconnect();
-
-            sw = p.StandardInput;
-            sw.WriteLine("q");
-
-            p.Close();
+            try
+            {
+                vA.Disconnect();
+                this.sw?.WriteLine("q");
+                this.sr?.Close();
+                this.sw?.Close();
+                this.vA.Disconnect();
+                if (!this.process.CloseMainWindow())
+                    this.process.Kill();
+            }
+            catch
+            {
+                this.process.Kill();
+            }
         }
 
         private void openServer_Click(object sender, EventArgs e)
         {
-            p = new Process();
-            info = new ProcessStartInfo();
-            info.FileName = "cmd.exe";
-            info.RedirectStandardInput = true;
-            info.UseShellExecute = false;
-            info.CreateNoWindow = true;
-            //info.RedirectStandardOutput = true;
-            p.StartInfo = info;
-            p.Start();
-
-            sw = p.StandardInput;
-            {
-                if (sw.BaseStream.CanWrite)
-                {
-                    //sw.WriteLine("cd ../../..");
-                    sw.WriteLine("run_VAServer.bat");
-                }
-            }
+            this.process.Start();
         }
 
         private void reset_Click(object sender, EventArgs e)
