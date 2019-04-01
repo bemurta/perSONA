@@ -38,10 +38,14 @@
             this.play = new System.Windows.Forms.Button();
             this.createSource2 = new System.Windows.Forms.Button();
             this.play2 = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonConnect
             // 
+            this.buttonConnect.Enabled = false;
             this.buttonConnect.Location = new System.Drawing.Point(300, 185);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(142, 23);
@@ -66,7 +70,7 @@
             this.openServer.Name = "openServer";
             this.openServer.Size = new System.Drawing.Size(75, 23);
             this.openServer.TabIndex = 2;
-            this.openServer.Text = "Connect";
+            this.openServer.Text = "StartServer";
             this.openServer.UseVisualStyleBackColor = true;
             this.openServer.Click += new System.EventHandler(this.openServer_Click);
             // 
@@ -138,11 +142,33 @@
             this.play2.UseVisualStyleBackColor = true;
             this.play2.Click += new System.EventHandler(this.play2_Click);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(626, 377);
+            this.trackBar1.Maximum = 20;
+            this.trackBar1.Minimum = -40;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 10;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(666, 409);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "SNR: 0 dB";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.play2);
             this.Controls.Add(this.createSource2);
             this.Controls.Add(this.play);
@@ -156,6 +182,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +200,8 @@
         private System.Windows.Forms.Button play;
         private System.Windows.Forms.Button createSource2;
         private System.Windows.Forms.Button play2;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -24,7 +24,9 @@ namespace perSONA
         int sourceId;
         string signalSourceId;
         int sourceId2;
-        string signalSourceId2;
+        string speechSound;
+        string noiseSound;
+        int sourceId3;
 
         public Form1()
         {
@@ -90,8 +92,20 @@ namespace perSONA
         {
             buttonConnect.BackColor = Color.Gray;
             vA.Disconnect();
-            //sw = p.StandardInput;
-            sw.WriteLine("q");
+            try
+            {
+                vA.Disconnect();
+                this.sw?.WriteLine("q");
+                this.sr?.Close();
+                this.sw?.Close();
+                this.vA.Disconnect();
+                if (!this.process.CloseMainWindow())
+                    this.process.Kill();
+            }
+            catch
+            {
+                this.process.Kill();
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -115,6 +129,7 @@ namespace perSONA
         private void openServer_Click(object sender, EventArgs e)
         {
             this.process.Start();
+            buttonConnect.Enabled = true;
         }
 
         private void reset_Click(object sender, EventArgs e)
@@ -149,15 +164,63 @@ namespace perSONA
 
         private void createSource2_Click(object sender, EventArgs e)
         {
-            signalSourceId2 = vA.CreateSignalSourceBufferFromFile("data/1.wav");
-            sourceId2 = vA.CreateSoundSource("Numbers");
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(0, 1.7, 1));
-            vA.SetSoundSourceSignalSource(sourceId2, signalSourceId2);
+
+            Random rnd = new Random();
+            int angle = rnd.Next(360);
+
+            int radius = 2;
+
+            speechSound = vA.CreateSignalSourceBufferFromFile("data/Sounds/Speech/Trainning/Lista 1A/Lista 1A_frase1.wav");
+            sourceId2 = vA.CreateSoundSource("Speech");
+
+            noiseSound = vA.CreateSignalSourceBufferFromFile("data/Sounds/Noise/4talker-babble_ISTS.wav");
+            sourceId3 = vA.CreateSoundSource("Noise");
+
+            vA.SetSoundSourcePosition(sourceId2, new VAVec3(radius*Math.Cos(angle), 1.7, radius * Math.Sin(angle)));
+            
+            
+
+            vA.SetSoundSourcePosition(sourceId3, new VAVec3(0, 1.7, radius));
+            
+            
         }
 
         private void play2_Click(object sender, EventArgs e)
         {
-            vA.SetSignalSourceBufferPlaybackAction(signalSourceId2, "play");
+
+            Random rnd = new Random();
+            int angle = rnd.Next(360);
+            int radius = 2;
+            vA.SetSoundSourcePosition(sourceId2, new VAVec3(radius * Math.Cos(angle), 1.7, radius * Math.Sin(angle)));
+
+            double powerSpeech = 0.25;
+            double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
+            double powerNoise = powerSpeech/linRatio;
+
+            textBox.Text = String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1}", powerSpeech, powerNoise, linRatio, 20*Math.Log10(linRatio));
+
+            vA.SetSoundSourceSoundPower(sourceId2, powerSpeech);
+            vA.SetSoundSourceSignalSource(sourceId2, speechSound);
+
+            vA.SetSoundSourceSoundPower(sourceId3, powerNoise);
+            vA.SetSoundSourceSignalSource(sourceId3, noiseSound);
+
+            vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
+            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
+            Thread.Sleep(3000);
+            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+            label1.Text = String.Format("SNR: {0} dB", trackBar1.Value);
         }
     }
 }
