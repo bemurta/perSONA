@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.openServer = new System.Windows.Forms.Button();
@@ -40,13 +41,24 @@
             this.play2 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.getFolder = new System.Windows.Forms.Button();
+            this.speechRight = new System.Windows.Forms.Button();
+            this.speechFront = new System.Windows.Forms.Button();
+            this.speechLeft = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonConnect
             // 
             this.buttonConnect.Enabled = false;
-            this.buttonConnect.Location = new System.Drawing.Point(300, 185);
+            this.buttonConnect.Location = new System.Drawing.Point(300, 37);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(142, 23);
             this.buttonConnect.TabIndex = 0;
@@ -56,9 +68,9 @@
             // 
             // buttonDisconnect
             // 
-            this.buttonDisconnect.Location = new System.Drawing.Point(300, 240);
+            this.buttonDisconnect.Location = new System.Drawing.Point(300, 66);
             this.buttonDisconnect.Name = "buttonDisconnect";
-            this.buttonDisconnect.Size = new System.Drawing.Size(142, 23);
+            this.buttonDisconnect.Size = new System.Drawing.Size(223, 23);
             this.buttonDisconnect.TabIndex = 1;
             this.buttonDisconnect.Text = "Disconnect";
             this.buttonDisconnect.UseVisualStyleBackColor = true;
@@ -66,7 +78,7 @@
             // 
             // openServer
             // 
-            this.openServer.Location = new System.Drawing.Point(626, 93);
+            this.openServer.Location = new System.Drawing.Point(448, 39);
             this.openServer.Name = "openServer";
             this.openServer.Size = new System.Drawing.Size(75, 23);
             this.openServer.TabIndex = 2;
@@ -79,14 +91,15 @@
             this.textBox.Location = new System.Drawing.Point(22, 39);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(236, 365);
+            this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox.Size = new System.Drawing.Size(236, 251);
             this.textBox.TabIndex = 3;
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(626, 132);
+            this.reset.Location = new System.Drawing.Point(300, 95);
             this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(75, 23);
+            this.reset.Size = new System.Drawing.Size(223, 23);
             this.reset.TabIndex = 4;
             this.reset.Text = "reset";
             this.reset.UseVisualStyleBackColor = true;
@@ -94,7 +107,7 @@
             // 
             // createSource
             // 
-            this.createSource.Location = new System.Drawing.Point(626, 215);
+            this.createSource.Location = new System.Drawing.Point(410, 371);
             this.createSource.Name = "createSource";
             this.createSource.Size = new System.Drawing.Size(112, 23);
             this.createSource.TabIndex = 5;
@@ -104,7 +117,7 @@
             // 
             // createReceiver
             // 
-            this.createReceiver.Location = new System.Drawing.Point(626, 185);
+            this.createReceiver.Location = new System.Drawing.Point(411, 124);
             this.createReceiver.Name = "createReceiver";
             this.createReceiver.Size = new System.Drawing.Size(112, 23);
             this.createReceiver.TabIndex = 6;
@@ -114,7 +127,7 @@
             // 
             // play
             // 
-            this.play.Location = new System.Drawing.Point(626, 244);
+            this.play.Location = new System.Drawing.Point(410, 400);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(112, 23);
             this.play.TabIndex = 7;
@@ -124,9 +137,9 @@
             // 
             // createSource2
             // 
-            this.createSource2.Location = new System.Drawing.Point(626, 283);
+            this.createSource2.Location = new System.Drawing.Point(626, 52);
             this.createSource2.Name = "createSource2";
-            this.createSource2.Size = new System.Drawing.Size(112, 23);
+            this.createSource2.Size = new System.Drawing.Size(112, 21);
             this.createSource2.TabIndex = 8;
             this.createSource2.Text = "create source 2";
             this.createSource2.UseVisualStyleBackColor = true;
@@ -134,11 +147,11 @@
             // 
             // play2
             // 
-            this.play2.Location = new System.Drawing.Point(626, 324);
+            this.play2.Location = new System.Drawing.Point(626, 252);
             this.play2.Name = "play2";
             this.play2.Size = new System.Drawing.Size(112, 23);
             this.play2.TabIndex = 9;
-            this.play2.Text = "play 2";
+            this.play2.Text = "Random angle";
             this.play2.UseVisualStyleBackColor = true;
             this.play2.Click += new System.EventHandler(this.play2_Click);
             // 
@@ -162,11 +175,104 @@
             this.label1.Text = "SNR: 0 dB";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(300, 377);
+            this.trackBar2.Maximum = 100;
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(104, 45);
+            this.trackBar2.TabIndex = 12;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(346, 409);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Volume";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(300, 153);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(222, 137);
+            this.textBox1.TabIndex = 14;
+            // 
+            // getFolder
+            // 
+            this.getFolder.Location = new System.Drawing.Point(300, 124);
+            this.getFolder.Name = "getFolder";
+            this.getFolder.Size = new System.Drawing.Size(112, 23);
+            this.getFolder.TabIndex = 15;
+            this.getFolder.Text = "get folder";
+            this.getFolder.UseVisualStyleBackColor = true;
+            this.getFolder.Click += new System.EventHandler(this.getFolder_Click);
+            // 
+            // speechRight
+            // 
+            this.speechRight.Location = new System.Drawing.Point(626, 309);
+            this.speechRight.Name = "speechRight";
+            this.speechRight.Size = new System.Drawing.Size(112, 23);
+            this.speechRight.TabIndex = 16;
+            this.speechRight.Text = "SR,NF";
+            this.speechRight.UseVisualStyleBackColor = true;
+            this.speechRight.Click += new System.EventHandler(this.speechRight_Click);
+            // 
+            // speechFront
+            // 
+            this.speechFront.Location = new System.Drawing.Point(626, 338);
+            this.speechFront.Name = "speechFront";
+            this.speechFront.Size = new System.Drawing.Size(112, 23);
+            this.speechFront.TabIndex = 17;
+            this.speechFront.Text = "SF,NF";
+            this.speechFront.UseVisualStyleBackColor = true;
+            this.speechFront.Click += new System.EventHandler(this.speechFront_Click);
+            // 
+            // speechLeft
+            // 
+            this.speechLeft.Location = new System.Drawing.Point(626, 281);
+            this.speechLeft.Name = "speechLeft";
+            this.speechLeft.Size = new System.Drawing.Size(112, 23);
+            this.speechLeft.TabIndex = 18;
+            this.speechLeft.Text = "SL,NF";
+            this.speechLeft.UseVisualStyleBackColor = true;
+            this.speechLeft.Click += new System.EventHandler(this.speechLeft_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(626, 79);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBox1.Size = new System.Drawing.Size(112, 121);
+            this.listBox1.TabIndex = 19;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(626, 207);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(112, 20);
+            this.textBox2.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.speechLeft);
+            this.Controls.Add(this.speechFront);
+            this.Controls.Add(this.speechRight);
+            this.Controls.Add(this.getFolder);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.play2);
@@ -183,6 +289,7 @@
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +309,16 @@
         private System.Windows.Forms.Button play2;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button getFolder;
+        private System.Windows.Forms.Button speechRight;
+        private System.Windows.Forms.Button speechFront;
+        private System.Windows.Forms.Button speechLeft;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
