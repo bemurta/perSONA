@@ -6,12 +6,12 @@
 # 
 #             /\Y+
 #             |                              Rotation (right hand rule)
-#             |                              yaw: counterclockwise around Y+
-#			  |                              pitch: counterclockwise around X+
-#             |__________>X+                 roll: conterlockwise around Z- (***check with florian***)
-#            /								 e.g.: inclinar a cabeça pra frente: pitch negativo
-#           /								 e.g.: olhar para cima: pitch positivo
-#          /Z+							     e.g.: olhar pra direita: yaw negativo
+#             |                              yaw:    counterclockwise around Y+
+#	      |                              pitch:  counterclockwise around X+
+#             |__________>X+                 roll:   conterlockwise around Z- (***check with florian***)
+#            /				     	e.g.: inclinar a cabeça pra frente: pitch negativo
+#           /				        e.g.: olhar para cima: pitch positivo
+#          /Z+				        e.g.: olhar pra direita: yaw negativo
 #         \/
 
 

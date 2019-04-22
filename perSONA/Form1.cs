@@ -324,7 +324,7 @@ namespace perSONA
                 String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
                 var fileNames = filePaths.Select(Path.GetFileName);
 
-                textBox1.Text = String.Join("\r\n", fileNames);
+                listBox2.DataSource = fileNames;
 
             }
         }
@@ -439,6 +439,43 @@ namespace perSONA
             //    textBox2.Text += "," + item.ToString();
             //  textBox2.Text = textBox2.Text.Substring(1, textBox2.Text.Length - 1);
             //}
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int radius = 2;
+            int angle = 0;
+            String speechFile = listBox2.GetItemText(listBox2.SelectedItems);
+            String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+
+            TagLib.File tagFile = TagLib.File.Create(speechFile);
+            string title = tagFile.Tag.Title;
+            TimeSpan duration = tagFile.Properties.Duration;
+            concatText(String.Format("Title: {0}, duration: {1}", title, duration));
+            String[] words = title.Split(null);
+            listBox1.DataSource = words;
+            listBox1.ClearSelected();
+
+            speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
+            sourceId2 = vA.CreateSoundSource("Speech");
+
+            noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
+            sourceId3 = vA.CreateSoundSource("Noise");
+
+            vA.SetSoundSourcePosition(sourceId2, new VAVec3(radius * Math.Cos(angle), 1.7, radius * Math.Sin(angle)));
+
+            vA.SetSoundSourcePosition(sourceId3, new VAVec3(0, 1.7, radius));
+
+
+            concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
+                                     sourceId2, Path.GetFileName(speechFile),
+                                     sourceId3, Path.GetFileName(noiseFile)));
         }
     }
 }

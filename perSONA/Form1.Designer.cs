@@ -44,13 +44,14 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.getFolder = new System.Windows.Forms.Button();
             this.speechRight = new System.Windows.Forms.Button();
             this.speechFront = new System.Windows.Forms.Button();
             this.speechLeft = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.SuspendLayout();
@@ -137,11 +138,11 @@
             // 
             // createSource2
             // 
-            this.createSource2.Location = new System.Drawing.Point(626, 52);
+            this.createSource2.Location = new System.Drawing.Point(410, 297);
             this.createSource2.Name = "createSource2";
             this.createSource2.Size = new System.Drawing.Size(112, 21);
             this.createSource2.TabIndex = 8;
-            this.createSource2.Text = "create source 2";
+            this.createSource2.Text = "Random signal";
             this.createSource2.UseVisualStyleBackColor = true;
             this.createSource2.Click += new System.EventHandler(this.createSource2_Click);
             // 
@@ -192,15 +193,6 @@
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Volume";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(300, 153);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(222, 137);
-            this.textBox1.TabIndex = 14;
             // 
             // getFolder
             // 
@@ -259,18 +251,39 @@
             this.textBox2.Size = new System.Drawing.Size(112, 20);
             this.textBox2.TabIndex = 20;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(300, 170);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.ScrollAlwaysVisible = true;
+            this.listBox2.Size = new System.Drawing.Size(223, 121);
+            this.listBox2.TabIndex = 21;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(300, 297);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 21);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Select signal";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.speechLeft);
             this.Controls.Add(this.speechFront);
             this.Controls.Add(this.speechRight);
             this.Controls.Add(this.getFolder);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.label1);
@@ -312,13 +325,14 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button getFolder;
         private System.Windows.Forms.Button speechRight;
         private System.Windows.Forms.Button speechFront;
         private System.Windows.Forms.Button speechLeft;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
