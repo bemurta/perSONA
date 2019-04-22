@@ -127,7 +127,7 @@ namespace perSONA
             }
             catch
             {
-                this.process.Kill();
+                Console.WriteLine("Closed application");
             }
         }
 
@@ -322,7 +322,7 @@ namespace perSONA
                 }
 
                 String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-                var fileNames = filePaths.Select(Path.GetFileName);
+                var fileNames = filePaths.Select(Path.GetFileName).ToArray();
 
                 listBox2.DataSource = fileNames;
 
@@ -451,8 +451,9 @@ namespace perSONA
 
             int radius = 2;
             int angle = 0;
-            String speechFile = listBox2.GetItemText(listBox2.SelectedItems);
+            String speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+            concatText(speechFile);
 
             TagLib.File tagFile = TagLib.File.Create(speechFile);
             string title = tagFile.Tag.Title;
