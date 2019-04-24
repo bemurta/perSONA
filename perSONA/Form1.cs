@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VA;
+using ZedGraph;
 
 namespace perSONA
 {
@@ -90,7 +91,7 @@ namespace perSONA
                 concatText("Couldn't get a connection to VA");
             }
             Cursor.Current = Cursors.Default;
-            
+
         }
 
         private void buttonDisconnect_Click(object sender, EventArgs e)
@@ -127,7 +128,7 @@ namespace perSONA
             }
             catch
             {
-                this.process.Kill();
+                //this.process.Kill();
             }
         }
 
@@ -159,7 +160,7 @@ namespace perSONA
             sourceId = vA.CreateSoundSource("Numbers");
             vA.SetSoundSourcePosition(sourceId, new VAVec3(xSides, yHeight, zFront));
             vA.SetSoundSourceSignalSource(sourceId, signalSourceId);
-            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}", 
+            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}",
                                     xSides, zFront, yHeight, sourceId));
         }
 
@@ -170,7 +171,7 @@ namespace perSONA
             double xSides = 0;
             double zFront = 0;
             double yHeight = 1.7;
-   
+
 
             VAVec3 receiverPosition = new VAVec3(xSides, yHeight, zFront);
             VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
@@ -212,12 +213,12 @@ namespace perSONA
             {
                 filePaths = Directory.GetFiles(@"data/Sounds/Speech/Trainning/Lista 1A/", "*.wav");
                 fileNames = filePaths.Select(Path.GetFileName);
-            }else
+            } else
             {
                 filePaths = Directory.GetFiles(@speechFolder, "*.wav");
                 fileNames = filePaths.Select(Path.GetFileName);
             }
-    
+
             // Create a Random object  
             Random rand = new Random();
             // Generate a random index less than the size of the array.  
@@ -229,7 +230,7 @@ namespace perSONA
             TagLib.File tagFile = TagLib.File.Create(speechFile);
             string title = tagFile.Tag.Title;
             TimeSpan duration = tagFile.Properties.Duration;
-            concatText(String.Format("Title: {0}, duration: {1}",title, duration));
+            concatText(String.Format("Title: {0}, duration: {1}", title, duration));
             String[] words = title.Split(null);
             listBox1.DataSource = words;
             listBox1.ClearSelected();
@@ -240,13 +241,13 @@ namespace perSONA
             noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
             sourceId3 = vA.CreateSoundSource("Noise");
 
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(radius*Math.Cos(angle), 1.7, radius * Math.Sin(angle)));
+            vA.SetSoundSourcePosition(sourceId2, new VAVec3(radius * Math.Cos(angle), 1.7, radius * Math.Sin(angle)));
 
             vA.SetSoundSourcePosition(sourceId3, new VAVec3(0, 1.7, radius));
-            
-            
-            concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}", 
-                                     sourceId2, Path.GetFileName(speechFile), 
+
+
+            concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
+                                     sourceId2, Path.GetFileName(speechFile),
                                      sourceId3, Path.GetFileName(noiseFile)));
         }
 
@@ -261,16 +262,16 @@ namespace perSONA
             double yHeight = 1.7;
 
 
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(xSides, yHeight,zFront));
+            vA.SetSoundSourcePosition(sourceId2, new VAVec3(xSides, yHeight, zFront));
 
             double normalizationFactor = trackBar2.Value / 100.0;
             double powerSpeech = 0.25 * normalizationFactor;
             double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
-            double powerNoise = powerSpeech/linRatio;
+            double powerNoise = powerSpeech / linRatio;
 
             concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward", xSides, zFront, yHeight, sourceId2));
 
-            concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %", powerSpeech, powerNoise, linRatio, 20*Math.Log10(linRatio),normalizationFactor*100.0));
+            concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %", powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
 
             vA.SetSoundSourceSoundPower(sourceId2, powerSpeech);
             vA.SetSoundSourceSignalSource(sourceId2, speechSound);
@@ -328,6 +329,7 @@ namespace perSONA
 
             }
         }
+
 
         private void speechLeft_Click(object sender, EventArgs e)
         {
@@ -426,6 +428,11 @@ namespace perSONA
             Thread.Sleep(3000);
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
 
+            double[] radiusList = { radius, radius };
+            double[] angleList = { angle, 0 };
+
+            plotGraph(radiusList, angleList);
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -433,12 +440,7 @@ namespace perSONA
             double answer = listBox1.SelectedItems.Count;
             double totalWords =  listBox1.Items.Count;
             textBox2.Text = String.Format("Answer {0}/{1}= {2}% ", answer, totalWords, 100.0*(answer/totalWords));
-            
-            //foreach (var item in listBox1.SelectedItems)
-            //{
-            //    textBox2.Text += "," + item.ToString();
-            //  textBox2.Text = textBox2.Text.Substring(1, textBox2.Text.Length - 1);
-            //}
+
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -476,6 +478,112 @@ namespace perSONA
             concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
                                      sourceId2, Path.GetFileName(speechFile),
                                      sourceId3, Path.GetFileName(noiseFile)));
+
+            double[] radiusList = { radius, radius };
+            double[] angleList = { angle, 0 };
+
+            plotGraph(radiusList, angleList);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            int angleSpeech = 45;
+            int radiusSpeech = 2;
+
+            int angleNoise = 0;
+            int radiusNoise = 2;
+
+            double[] radius = { radiusSpeech, radiusNoise };
+            double[] angle = {angleSpeech, angleNoise};
+
+            plotGraph(radius, angle);
+
+
+        }
+
+        private void plotGraph(double[] radius, double[] angle)
+        {
+
+            double roomLength = 5;
+            double roomWidth = 5;
+            
+
+            ZedGraph.GraphPane myPane = zedGraphControl1.GraphPane;
+
+
+            PointPairList speechList   = new PointPairList();
+            PointPairList noiseList    = new PointPairList();
+            PointPairList circle       = new PointPairList();
+            PointPairList head = new PointPairList();
+            PointPairList speakers     = new PointPairList();
+            PointPairList nose     = new PointPairList();
+        
+            speechList.Add(radius[0] * Math.Cos(angle[0]), radius[0] * Math.Sin(angle[0]));
+            noiseList.Add(radius[1] *  Math.Cos(angle[1]), radius[1] * Math.Sin(angle[1]));
+
+
+            double radiusPerson = 0.22;
+            for (double i = 0; i < 2 * Math.PI; i += Math.PI / 50 )
+            {
+               
+                head.Add(radiusPerson * Math.Sin(i), radiusPerson * Math.Cos(i));
+            }
+
+            nose.Add(radiusPerson, -0.1);
+            nose.Add(radiusPerson + 0.1, 0);
+            nose.Add(radiusPerson, 0.1);
+
+            LineItem noseCurve = myPane.AddCurve("",
+                   nose, Color.Black, SymbolType.None);
+            LineItem headCurve = myPane.AddCurve("",
+                   head, Color.Black, SymbolType.None);
+
+            double radiusSpekers = 1.3;
+            for (double i = 0; i < 2 * Math.PI; i += Math.PI / 4)
+            {
+                speakers.Add(radiusSpekers * Math.Sin(i), radiusSpekers * Math.Cos(i));
+            }
+
+            LineItem speakersCurve = myPane.AddCurve("Speakers",
+                   speakers, Color.Black, SymbolType.Star);
+            speakersCurve.Line.IsVisible = false;
+
+            LineItem speechCurve = myPane.AddCurve("Speech",
+                   speechList, Color.Blue, SymbolType.Diamond);
+            speechCurve.Line.IsVisible = false;
+            speechCurve.Symbol.Size = 10;
+
+            
+            LineItem noiseCurve = myPane.AddCurve("Noise",
+                  noiseList, Color.Red, SymbolType.Circle);
+            noiseCurve.Line.IsVisible = false;
+            noiseCurve.Symbol.Size = 10;
+
+            myPane.Legend.FontSpec.Size = 21;
+            myPane.Legend.Border.IsVisible = false;
+
+            myPane.Title.IsVisible = false;
+            myPane.XAxis.IsVisible = false;
+            myPane.YAxis.IsVisible = false;
+            myPane.XAxis.Scale.MaxAuto = false;
+            myPane.XAxis.Scale.MinAuto = false;
+
+            myPane.YAxis.Scale.Min = - roomWidth / 2;
+            myPane.YAxis.Scale.Max =   roomWidth / 2;
+            myPane.XAxis.Scale.Min = - roomLength / 2;
+            myPane.XAxis.Scale.Max =   roomLength / 2;
+
+            zedGraphControl1.AxisChange();
+            zedGraphControl1.Refresh();
+
+        }
+
+
+        private void zedGraphControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
