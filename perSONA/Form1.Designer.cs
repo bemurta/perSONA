@@ -34,9 +34,7 @@
             this.openServer = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.reset = new System.Windows.Forms.Button();
-            this.createSource = new System.Windows.Forms.Button();
             this.createReceiver = new System.Windows.Forms.Button();
-            this.play = new System.Windows.Forms.Button();
             this.createSource2 = new System.Windows.Forms.Button();
             this.play2 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
@@ -108,16 +106,6 @@
             this.reset.UseVisualStyleBackColor = true;
             this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
-            // createSource
-            // 
-            this.createSource.Location = new System.Drawing.Point(410, 371);
-            this.createSource.Name = "createSource";
-            this.createSource.Size = new System.Drawing.Size(112, 23);
-            this.createSource.TabIndex = 5;
-            this.createSource.Text = "create source";
-            this.createSource.UseVisualStyleBackColor = true;
-            this.createSource.Click += new System.EventHandler(this.createSource_Click);
-            // 
             // createReceiver
             // 
             this.createReceiver.Location = new System.Drawing.Point(411, 124);
@@ -127,16 +115,6 @@
             this.createReceiver.Text = "create receiver";
             this.createReceiver.UseVisualStyleBackColor = true;
             this.createReceiver.Click += new System.EventHandler(this.createReceiver_Click);
-            // 
-            // play
-            // 
-            this.play.Location = new System.Drawing.Point(410, 400);
-            this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(112, 23);
-            this.play.TabIndex = 7;
-            this.play.Text = "play";
-            this.play.UseVisualStyleBackColor = true;
-            this.play.Click += new System.EventHandler(this.play_Click);
             // 
             // createSource2
             // 
@@ -305,7 +283,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.zedGraphControl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.textBox2);
@@ -320,14 +297,13 @@
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.play2);
             this.Controls.Add(this.createSource2);
-            this.Controls.Add(this.play);
             this.Controls.Add(this.createReceiver);
-            this.Controls.Add(this.createSource);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.openServer);
             this.Controls.Add(this.buttonDisconnect);
             this.Controls.Add(this.buttonConnect);
+            this.Controls.Add(this.zedGraphControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -345,9 +321,7 @@
         private System.Windows.Forms.Button openServer;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Button reset;
-        private System.Windows.Forms.Button createSource;
         private System.Windows.Forms.Button createReceiver;
-        private System.Windows.Forms.Button play;
         private System.Windows.Forms.Button createSource2;
         private System.Windows.Forms.Button play2;
         private System.Windows.Forms.TrackBar trackBar1;

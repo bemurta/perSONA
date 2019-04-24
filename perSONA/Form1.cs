@@ -39,6 +39,7 @@ namespace perSONA
             {
                 StartInfo = VAServerProcessInfo()
             };
+            getDatabaseFolder();
         }
 
         ~Form1()
@@ -128,7 +129,7 @@ namespace perSONA
             }
             catch
             {
-                //this.process.Kill();
+                Console.WriteLine("Closed application");
             }
         }
 
@@ -146,23 +147,7 @@ namespace perSONA
             vA.Reset();
         }
 
-        private void createSource_Click(object sender, EventArgs e)
-        {
-
-
-            double xSides = 1;
-            double zFront = 0;
-            double yHeight = 1.7;
-
-
-
-            signalSourceId = vA.CreateSignalSourceBufferFromFile("data/1.wav");
-            sourceId = vA.CreateSoundSource("Numbers");
-            vA.SetSoundSourcePosition(sourceId, new VAVec3(xSides, yHeight, zFront));
-            vA.SetSoundSourceSignalSource(sourceId, signalSourceId);
-            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}",
-                                    xSides, zFront, yHeight, sourceId));
-        }
+      
 
         private void createReceiver_Click(object sender, EventArgs e)
         {
@@ -202,23 +187,12 @@ namespace perSONA
         private void createSource2_Click(object sender, EventArgs e)
         {
 
-            Random rnd = new Random();
-            int angle = rnd.Next(360);
+
             String[] filePaths;
             var fileNames = Directory.GetFiles(@"data").Select(Path.GetFileName);
-            int radius = 2;
-
-
-            if (selectedFolder == 0)
-            {
-                filePaths = Directory.GetFiles(@"data/Sounds/Speech/Trainning/Lista 1A/", "*.wav");
-                fileNames = filePaths.Select(Path.GetFileName);
-            } else
-            {
-                filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-                fileNames = filePaths.Select(Path.GetFileName);
-            }
-
+            filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            fileNames = filePaths.Select(Path.GetFileName);
+        
             // Create a Random object  
             Random rand = new Random();
             // Generate a random index less than the size of the array.  
@@ -227,28 +201,7 @@ namespace perSONA
             String speechFile = filePaths[index];
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
 
-            TagLib.File tagFile = TagLib.File.Create(speechFile);
-            string title = tagFile.Tag.Title;
-            TimeSpan duration = tagFile.Properties.Duration;
-            concatText(String.Format("Title: {0}, duration: {1}", title, duration));
-            String[] words = title.Split(null);
-            listBox1.DataSource = words;
-            listBox1.ClearSelected();
-
-            speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
-            sourceId2 = vA.CreateSoundSource("Speech");
-
-            noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
-            sourceId3 = vA.CreateSoundSource("Noise");
-
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(radius * Math.Cos(angle), 1.7, radius * Math.Sin(angle)));
-
-            vA.SetSoundSourcePosition(sourceId3, new VAVec3(0, 1.7, radius));
-
-
-            concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
-                                     sourceId2, Path.GetFileName(speechFile),
-                                     sourceId3, Path.GetFileName(noiseFile)));
+            createAcousticScene(speechFile, noiseFile);
         }
 
         private void play2_Click(object sender, EventArgs e)
@@ -257,32 +210,8 @@ namespace perSONA
             Random rnd = new Random();
             int angle = rnd.Next(360);
             int radius = 2;
-            double xSides = radius * Math.Sin(angle);
-            double zFront = radius * Math.Cos(angle);
-            double yHeight = 1.7;
 
-
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(xSides, yHeight, zFront));
-
-            double normalizationFactor = trackBar2.Value / 100.0;
-            double powerSpeech = 0.25 * normalizationFactor;
-            double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
-            double powerNoise = powerSpeech / linRatio;
-
-            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward", xSides, zFront, yHeight, sourceId2));
-
-            concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %", powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
-
-            vA.SetSoundSourceSoundPower(sourceId2, powerSpeech);
-            vA.SetSoundSourceSignalSource(sourceId2, speechSound);
-
-            vA.SetSoundSourceSoundPower(sourceId3, powerNoise);
-            vA.SetSoundSourceSignalSource(sourceId3, noiseSound);
-
-            vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
-            Thread.Sleep(3000);
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
+            playScene(radius, angle);
 
         }
 
@@ -309,6 +238,11 @@ namespace perSONA
 
         private void getFolder_Click(object sender, EventArgs e)
         {
+            getDatabaseFolder();
+        }
+
+        private void getDatabaseFolder()
+        {
             using (var fbd = new FolderBrowserDialog())
             {
                 fbd.SelectedPath = Directory.GetCurrentDirectory();
@@ -323,35 +257,31 @@ namespace perSONA
                 }
 
                 String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-                var fileNames = filePaths.Select(Path.GetFileName);
+                var fileNames = filePaths.Select(Path.GetFileName).ToArray();
 
                 listBox2.DataSource = fileNames;
 
             }
         }
 
-
-        private void speechLeft_Click(object sender, EventArgs e)
+        private void playScene(double radius, double angle)
         {
-            int angle = -90;
-            int radius = 2;
-            double xSides = radius * Math.Sin(angle);
-            double zFront = radius * Math.Cos(angle);
+            double[] radiusList = { radius, radius };
+            double[] angleList = { angle, 0 };
+
+            plotGraph(radiusList, angleList);
+
+            double xSides = radius * Math.Sin(angle / 180 * Math.PI);
+            double zFront = radius * Math.Cos(angle / 180 * Math.PI);
             double yHeight = 1.7;
-
-
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(xSides, yHeight, zFront));
 
             double normalizationFactor = trackBar2.Value / 100.0;
             double powerSpeech = 0.25 * normalizationFactor;
             double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
             double powerNoise = powerSpeech / linRatio;
 
-            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward",
-                       xSides, zFront, yHeight, sourceId2));
-
-            concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %", 
-                       powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
+            vA.SetSoundSourcePosition(sourceId2, new VAVec3(xSides, yHeight, zFront));
+            vA.SetSoundSourcePosition(sourceId3, new VAVec3(0, 1.7, radius));
 
             vA.SetSoundSourceSoundPower(sourceId2, powerSpeech);
             vA.SetSoundSourceSignalSource(sourceId2, speechSound);
@@ -359,80 +289,39 @@ namespace perSONA
             vA.SetSoundSourceSoundPower(sourceId3, powerNoise);
             vA.SetSoundSourceSignalSource(sourceId3, noiseSound);
 
+            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward",
+                       xSides, zFront, yHeight, sourceId2));
+
+            concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %",
+                       powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
+
             vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
             Thread.Sleep(3000);
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
+
+        }
+
+        private void speechLeft_Click(object sender, EventArgs e)
+        {
+            int angle = -90;
+            int radius = 2;
+            playScene(radius, angle);
         }
 
         private void speechRight_Click(object sender, EventArgs e)
         {
             int angle = 90;
             int radius = 2;
-            double xSides = radius * Math.Sin(angle);
-            double zFront = radius * Math.Cos(angle);
-            double yHeight = 1.7;
+            playScene(radius, angle);
 
-
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(xSides, yHeight, zFront));
-
-            double normalizationFactor = trackBar2.Value / 100.0;
-            double powerSpeech = 0.25 * normalizationFactor;
-            double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
-            double powerNoise = powerSpeech / linRatio;
-
-            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward", xSides, zFront, yHeight, sourceId2));
-
-            concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %", powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
-
-            vA.SetSoundSourceSoundPower(sourceId2, powerSpeech);
-            vA.SetSoundSourceSignalSource(sourceId2, speechSound);
-
-            vA.SetSoundSourceSoundPower(sourceId3, powerNoise);
-            vA.SetSoundSourceSignalSource(sourceId3, noiseSound);
-
-            vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
-            Thread.Sleep(3000);
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
         }
 
         private void speechFront_Click(object sender, EventArgs e)
         {
             int angle = 0;
             int radius = 2;
-            double xSides = radius * Math.Sin(angle);
-            double zFront = radius * Math.Cos(angle);
-            double yHeight = 1.7;
-
-
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(xSides, yHeight, zFront));
-
-            double normalizationFactor = trackBar2.Value / 100.0;
-            double powerSpeech = 0.25 * normalizationFactor;
-            double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
-            double powerNoise = powerSpeech / linRatio;
-
-            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward", xSides, zFront, yHeight, sourceId2));
-
-            concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %", powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
-
-            vA.SetSoundSourceSoundPower(sourceId2, powerSpeech);
-            vA.SetSoundSourceSignalSource(sourceId2, speechSound);
-
-            vA.SetSoundSourceSoundPower(sourceId3, powerNoise);
-            vA.SetSoundSourceSignalSource(sourceId3, noiseSound);
-
-            vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
-            Thread.Sleep(3000);
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
-
-            double[] radiusList = { radius, radius };
-            double[] angleList = { angle, 0 };
-
-            plotGraph(radiusList, angleList);
-
+            playScene(radius, angle);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -451,15 +340,19 @@ namespace perSONA
         private void button1_Click(object sender, EventArgs e)
         {
 
-            int radius = 2;
-            int angle = 0;
-            String speechFile = listBox2.GetItemText(listBox2.SelectedItems);
+            String speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+            concatText(speechFile);
+            createAcousticScene( speechFile,  noiseFile);
+        }
 
+        private void createAcousticScene(string speechFile, string noiseFile)
+        {
             TagLib.File tagFile = TagLib.File.Create(speechFile);
             string title = tagFile.Tag.Title;
             TimeSpan duration = tagFile.Properties.Duration;
             concatText(String.Format("Title: {0}, duration: {1}", title, duration));
+
             String[] words = title.Split(null);
             listBox1.DataSource = words;
             listBox1.ClearSelected();
@@ -470,20 +363,9 @@ namespace perSONA
             noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
             sourceId3 = vA.CreateSoundSource("Noise");
 
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(radius * Math.Cos(angle), 1.7, radius * Math.Sin(angle)));
-
-            vA.SetSoundSourcePosition(sourceId3, new VAVec3(0, 1.7, radius));
-
-
             concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
                                      sourceId2, Path.GetFileName(speechFile),
                                      sourceId3, Path.GetFileName(noiseFile)));
-
-            double[] radiusList = { radius, radius };
-            double[] angleList = { angle, 0 };
-
-            plotGraph(radiusList, angleList);
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -512,6 +394,8 @@ namespace perSONA
 
             ZedGraph.GraphPane myPane = zedGraphControl1.GraphPane;
 
+            myPane.CurveList.Clear();
+ 
 
             PointPairList speechList   = new PointPairList();
             PointPairList noiseList    = new PointPairList();
@@ -520,8 +404,8 @@ namespace perSONA
             PointPairList speakers     = new PointPairList();
             PointPairList nose     = new PointPairList();
         
-            speechList.Add(radius[0] * Math.Cos(angle[0]), radius[0] * Math.Sin(angle[0]));
-            noiseList.Add(radius[1] *  Math.Cos(angle[1]), radius[1] * Math.Sin(angle[1]));
+            speechList.Add(radius[0] * Math.Sin(angle[0] / 180 * Math.PI), radius[0] * Math.Cos(angle[0] / 180 * Math.PI));
+            noiseList.Add(radius[1] *  Math.Sin(angle[1] / 180 * Math.PI), radius[1] * Math.Cos(angle[1] / 180 * Math.PI));
 
 
             double radiusPerson = 0.22;
@@ -531,9 +415,9 @@ namespace perSONA
                 head.Add(radiusPerson * Math.Sin(i), radiusPerson * Math.Cos(i));
             }
 
-            nose.Add(radiusPerson, -0.1);
-            nose.Add(radiusPerson + 0.1, 0);
-            nose.Add(radiusPerson, 0.1);
+            nose.Add(-0.1, radiusPerson);
+            nose.Add(0, radiusPerson + 0.1);
+            nose.Add(0.1, radiusPerson);
 
             LineItem noseCurve = myPane.AddCurve("",
                    nose, Color.Black, SymbolType.None);
