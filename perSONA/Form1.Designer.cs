@@ -52,6 +52,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +80,7 @@
             // 
             // openServer
             // 
-            this.openServer.Location = new System.Drawing.Point(448, 39);
+            this.openServer.Location = new System.Drawing.Point(448, 37);
             this.openServer.Name = "openServer";
             this.openServer.Size = new System.Drawing.Size(75, 23);
             this.openServer.TabIndex = 2;
@@ -108,7 +109,7 @@
             // 
             // createReceiver
             // 
-            this.createReceiver.Location = new System.Drawing.Point(411, 124);
+            this.createReceiver.Location = new System.Drawing.Point(411, 325);
             this.createReceiver.Name = "createReceiver";
             this.createReceiver.Size = new System.Drawing.Size(112, 23);
             this.createReceiver.TabIndex = 6;
@@ -118,9 +119,9 @@
             // 
             // createSource2
             // 
-            this.createSource2.Location = new System.Drawing.Point(410, 297);
+            this.createSource2.Location = new System.Drawing.Point(411, 297);
             this.createSource2.Name = "createSource2";
-            this.createSource2.Size = new System.Drawing.Size(112, 21);
+            this.createSource2.Size = new System.Drawing.Size(112, 24);
             this.createSource2.TabIndex = 8;
             this.createSource2.Text = "Random signal";
             this.createSource2.UseVisualStyleBackColor = true;
@@ -180,7 +181,7 @@
             this.getFolder.Name = "getFolder";
             this.getFolder.Size = new System.Drawing.Size(112, 23);
             this.getFolder.TabIndex = 15;
-            this.getFolder.Text = "get folder";
+            this.getFolder.Text = "load database";
             this.getFolder.UseVisualStyleBackColor = true;
             this.getFolder.Click += new System.EventHandler(this.getFolder_Click);
             // 
@@ -245,7 +246,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(300, 297);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 21);
+            this.button1.Size = new System.Drawing.Size(112, 24);
             this.button1.TabIndex = 22;
             this.button1.Text = "Select signal";
             this.button1.UseVisualStyleBackColor = true;
@@ -277,11 +278,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(411, 124);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 23);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "edit database";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox2);
@@ -339,6 +351,7 @@
         private System.Windows.Forms.Button button1;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

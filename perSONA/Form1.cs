@@ -15,7 +15,7 @@ using ZedGraph;
 
 namespace perSONA
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IdbInterface
     {
         VANet vA;
         private readonly Process process;
@@ -37,9 +37,7 @@ namespace perSONA
             {
                 StartInfo = VAServerProcessInfo()
             };
-            this.TopMost = true;
-            getDatabaseFolder();
-            this.TopMost = true;
+
         }
 
         ~Form1()
@@ -147,7 +145,7 @@ namespace perSONA
             vA.Reset();
         }
 
-      
+
 
         private void createReceiver_Click(object sender, EventArgs e)
         {
@@ -170,7 +168,7 @@ namespace perSONA
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
         }
 
-        private void concatText(String textToAppend)
+        public void concatText(String textToAppend)
         {
             textBox.Text = String.Concat(textBox.Text, "\r\n");
 
@@ -189,7 +187,7 @@ namespace perSONA
             var fileNames = Directory.GetFiles(@"data").Select(Path.GetFileName);
             filePaths = Directory.GetFiles(@speechFolder, "*.wav");
             fileNames = filePaths.Select(Path.GetFileName);
-        
+
             // Create a Random object  
             Random rand = new Random();
             // Generate a random index less than the size of the array.  
@@ -199,6 +197,13 @@ namespace perSONA
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
 
             createAcousticScene(speechFile, noiseFile);
+
+            string title = getTitle(speechFile);
+            String[] words = title.Split(null);
+
+            listBox1.DataSource = words;
+            listBox1.ClearSelected();
+            concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
         }
 
         private void play2_Click(object sender, EventArgs e)
@@ -228,6 +233,10 @@ namespace perSONA
 
         }
 
+        public VANet getVa()
+        {
+            return vA;
+        }
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
             label2.Text = String.Format("Volume: {0} %", trackBar2.Value);
@@ -235,10 +244,14 @@ namespace perSONA
 
         private void getFolder_Click(object sender, EventArgs e)
         {
-            getDatabaseFolder();
+            speechFolder = getDatabaseFolder();
+            this.TopMost = true;
+            String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
+            listBox2.DataSource = fileNames;
         }
 
-        private void getDatabaseFolder()
+        public string getDatabaseFolder()
         {
             using (var fbd = new FolderBrowserDialog())
             {
@@ -253,15 +266,13 @@ namespace perSONA
                     concatText("Files found: " + files.Length.ToString());
                 }
 
-                String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-                var fileNames = filePaths.Select(Path.GetFileName).ToArray();
 
-                listBox2.DataSource = fileNames;
-
+                return speechFolder;
             }
+
         }
 
-        private void playScene(double radius, double angle)
+        public void playScene(double radius, double angle)
         {
             double[] radiusList = { radius, radius };
             double[] angleList = { angle, 0 };
@@ -324,8 +335,8 @@ namespace perSONA
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             double answer = listBox1.SelectedItems.Count;
-            double totalWords =  listBox1.Items.Count;
-            textBox2.Text = String.Format("Answer {0}/{1}= {2}% ", answer, totalWords, 100.0*(answer/totalWords));
+            double totalWords = listBox1.Items.Count;
+            textBox2.Text = String.Format("Answer {0}/{1}= {2}% ", answer, totalWords, 100.0 * (answer / totalWords));
 
         }
 
@@ -340,33 +351,55 @@ namespace perSONA
             String speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
             concatText(speechFile);
-            createAcousticScene( speechFile,  noiseFile);
-        }
+            createAcousticScene(speechFile, noiseFile);
 
-        private void createAcousticScene(string speechFile, string noiseFile)
-        {
-            TagLib.File tagFile = TagLib.File.Create(speechFile);
-            string title = tagFile.Tag.Title;
+            string title = getTitle(speechFile);
 
             if (!String.IsNullOrEmpty(title))
             {
-
-            TimeSpan duration = tagFile.Properties.Duration;
-            concatText(String.Format("Title: {0}, duration: {1}", title, duration));
-
-            String[] words = title.Split(null);
-            listBox1.DataSource = words;
-            listBox1.ClearSelected();
+                String[] words = title.Split(null);
+                listBox1.DataSource = words;
+                listBox1.ClearSelected();
+                concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
             }
             else
             {
                 const string message =
-                    "Wrong set up of database wav files. Please add their sentences as regular test with words separeted by spaces in the title field of each speech audio file.";
-                const string caption = "Form Closing";
+                    "Wrong set up of database wav files. Please refer to database edit module to fix and use it in your tests.";
+                const string caption = "Incorrect database format. Metadata required!";
                 var result = MessageBox.Show(message, caption,
-                                             MessageBoxButtons.YesNo,
-                                             MessageBoxIcon.Question);
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Question);
+                concatText(String.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
+
             }
+
+
+        }
+
+        public string getTitle(string speechFile)
+        {
+            TagLib.File tagFile = TagLib.File.Create(speechFile);
+            
+            string title = tagFile.Tag.Title;
+
+            concatText(title);
+
+            return title;
+        }
+        public TimeSpan getDuration(string speechFile)
+        {
+            TagLib.File tagFile = TagLib.File.Create(speechFile);
+            TimeSpan duration = tagFile.Properties.Duration;
+
+            //concatText(duration.ToString());
+
+            return duration;
+        }
+
+        public void createAcousticScene(string speechFile, string noiseFile)
+        {
+
 
             speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
             speechSource = vA.CreateSoundSource("Speech");
@@ -389,7 +422,7 @@ namespace perSONA
             int radiusNoise = 2;
 
             double[] radius = { radiusSpeech, radiusNoise };
-            double[] angle = {angleSpeech, angleNoise};
+            double[] angle = { angleSpeech, angleNoise };
 
             plotGraph(radius, angle);
 
@@ -401,28 +434,28 @@ namespace perSONA
 
             double roomLength = 5;
             double roomWidth = 5;
-            
+
 
             ZedGraph.GraphPane myPane = zedGraphControl1.GraphPane;
 
             myPane.CurveList.Clear();
- 
 
-            PointPairList speechList   = new PointPairList();
-            PointPairList noiseList    = new PointPairList();
-            PointPairList circle       = new PointPairList();
+
+            PointPairList speechList = new PointPairList();
+            PointPairList noiseList = new PointPairList();
+            PointPairList circle = new PointPairList();
             PointPairList head = new PointPairList();
-            PointPairList speakers     = new PointPairList();
-            PointPairList nose     = new PointPairList();
-        
+            PointPairList speakers = new PointPairList();
+            PointPairList nose = new PointPairList();
+
             speechList.Add(radius[0] * Math.Sin(angle[0] / 180 * Math.PI), radius[0] * Math.Cos(angle[0] / 180 * Math.PI));
-            noiseList.Add(radius[1] *  Math.Sin(angle[1] / 180 * Math.PI), radius[1] * Math.Cos(angle[1] / 180 * Math.PI));
+            noiseList.Add(radius[1] * Math.Sin(angle[1] / 180 * Math.PI), radius[1] * Math.Cos(angle[1] / 180 * Math.PI));
 
 
             double radiusPerson = 0.22;
-            for (double i = 0; i < 2 * Math.PI; i += Math.PI / 50 )
+            for (double i = 0; i < 2 * Math.PI; i += Math.PI / 50)
             {
-               
+
                 head.Add(radiusPerson * Math.Sin(i), radiusPerson * Math.Cos(i));
             }
 
@@ -450,7 +483,7 @@ namespace perSONA
             speechCurve.Line.IsVisible = false;
             speechCurve.Symbol.Size = 10;
 
-            
+
             LineItem noiseCurve = myPane.AddCurve("Noise",
                   noiseList, Color.Red, SymbolType.Circle);
             noiseCurve.Line.IsVisible = false;
@@ -465,10 +498,10 @@ namespace perSONA
             myPane.XAxis.Scale.MaxAuto = false;
             myPane.XAxis.Scale.MinAuto = false;
 
-            myPane.YAxis.Scale.Min = - roomWidth / 2;
-            myPane.YAxis.Scale.Max =   roomWidth / 2;
-            myPane.XAxis.Scale.Min = - roomLength / 2;
-            myPane.XAxis.Scale.Max =   roomLength / 2;
+            myPane.YAxis.Scale.Min = -roomWidth / 2;
+            myPane.YAxis.Scale.Max = roomWidth / 2;
+            myPane.XAxis.Scale.Min = -roomLength / 2;
+            myPane.XAxis.Scale.Max = roomLength / 2;
 
             zedGraphControl1.AxisChange();
             zedGraphControl1.Refresh();
@@ -479,6 +512,11 @@ namespace perSONA
         private void zedGraphControl1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new dbForm(this).Show();
         }
     }
 }

@@ -72,7 +72,13 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ATL, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\z440.atl.core.2.8.0\lib\net30\ATL.dll</HintPath>
+    </Reference>
     <Reference Include="policy.2.0.taglib-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
       <HintPath>..\packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll</HintPath>
     </Reference>
@@ -88,8 +94,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
-      <HintPath>..\packages\taglib.2.1.0.0\lib\taglib-sharp.dll</HintPath>
+    <Reference Include="TagLibSharp, Version=2.2.0.6, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\TagLibSharp-Lidarr.2.2.0.6\lib\netstandard2.0\TagLibSharp.dll</HintPath>
     </Reference>
     <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
       <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
@@ -102,9 +108,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbInterface.cs" />
+    <Compile Include="dbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbForm.Designer.cs">
+      <DependentUpon>dbForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VACS.cs" />
+    <EmbeddedResource Include="dbForm.resx">
+      <DependentUpon>dbForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +163,7 @@
     <None Include="data\License.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="data\Noise\Highpass_ori_17s.mat" />
     <None Include="data\Singer.v17.ms.daff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -451,35 +468,72 @@
     <Content Include="data\HD650_all_inv.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="data\Noise\4talker-babble_ISTS.wav" />
+    <Content Include="data\Noise\cafeteria_babble.wav" />
+    <Content Include="data\Noise\Cafeteria_Babble_16kHz_21s.wav" />
+    <Content Include="data\Noise\cafeteria_babble_1_3-23_min_bte_front.wav" />
+    <Content Include="data\Noise\cafeteria_babble_1_3-23_min_bte_front_16kHz.wav" />
+    <Content Include="data\Noise\cafeteria_babble_loizou_16kHz_21s.wav" />
+    <Content Include="data\Noise\FX_Bus_Engine_001_16kHz_12s.wav" />
+    <Content Include="data\Noise\FX_Bus_Engine_002_16kHz_12s.wav" />
+    <Content Include="data\Noise\Honda_Bike_Start_Up_2_16kHz_12s.wav" />
+    <Content Include="data\Noise\ICRA_No01_16kHz_118s.wav" />
+    <Content Include="data\Noise\ICRA_No01_16kHz_21s.wav" />
+    <Content Include="data\Noise\ICRA_No06_16kHz_21s.wav" />
+    <Content Include="data\Noise\ICRA_No07_16kHz_21s.wav" />
+    <Content Include="data\Noise\SSN_IEEE.wav" />
+    <Content Include="data\Noise\street_noise_louzu_16kHz_21s.wav" />
     <Content Include="data\Sounds\1kHzTone_60dB_SPL.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\asa.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Choice.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\L001s04r.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\Sounds\asa.wav" />
+    <Content Include="data\Sounds\Choice.wav" />
+    <Content Include="data\Sounds\L001s04r.wav" />
     <Content Include="data\Sounds\Noise\4talker-babble_ISTS.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Noise\cafeteria_babble.wav" />
-    <Content Include="data\Sounds\Noise\Cafeteria_Babble_16kHz_21s.wav" />
-    <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front.wav" />
-    <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front_16kHz.wav" />
-    <Content Include="data\Sounds\Noise\cafeteria_babble_loizou_16kHz_21s.wav" />
-    <Content Include="data\Sounds\Noise\FX_Bus_Engine_001_16kHz_12s.wav" />
-    <Content Include="data\Sounds\Noise\FX_Bus_Engine_002_16kHz_12s.wav" />
-    <Content Include="data\Sounds\Noise\Honda_Bike_Start_Up_2_16kHz_12s.wav" />
-    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_118s.wav" />
-    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_21s.wav" />
-    <Content Include="data\Sounds\Noise\ICRA_No06_16kHz_21s.wav" />
-    <Content Include="data\Sounds\Noise\ICRA_No07_16kHz_21s.wav" />
-    <Content Include="data\Sounds\Noise\SSN_IEEE.wav" />
-    <Content Include="data\Sounds\Noise\street_noise_louzu_16kHz_21s.wav" />
+    <Content Include="data\Sounds\Noise\cafeteria_babble.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\Cafeteria_Babble_16kHz_21s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front_16kHz.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\cafeteria_babble_loizou_16kHz_21s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\FX_Bus_Engine_001_16kHz_12s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\FX_Bus_Engine_002_16kHz_12s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\Honda_Bike_Start_Up_2_16kHz_12s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_118s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_21s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\ICRA_No06_16kHz_21s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\ICRA_No07_16kHz_21s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\SSN_IEEE.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Noise\street_noise_louzu_16kHz_21s.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001001.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -815,115 +869,43 @@
     <Content Include="data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase7.wav" />
     <Content Include="data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase8.wav" />
     <Content Include="data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase9.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase10.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase11.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase12.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase13.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase14.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase15.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase16.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase17.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase18.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase19.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase2.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase20.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase21.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase22.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase23.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase24.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase25.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase3.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase4.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase5.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase6.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase7.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase8.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase9.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase1.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase10.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase11.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase12.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase13.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase14.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase15.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase16.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase17.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase18.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase19.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase2.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase20.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase21.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase22.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase23.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase24.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase25.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase3.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase4.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase5.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase6.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase7.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase8.wav" />
+    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase9.wav" />
     <Content Include="data\Sounds\Speech\Trainning\lista.gif" />
-    <Content Include="data\Sounds\S_01_01.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_02.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_03.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_04.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_05.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_06.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_07.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_08.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_09.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\S_01_10.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\tapestry.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\Sounds\S_01_01.wav" />
+    <Content Include="data\Sounds\S_01_02.wav" />
+    <Content Include="data\Sounds\S_01_03.wav" />
+    <Content Include="data\Sounds\S_01_04.wav" />
+    <Content Include="data\Sounds\S_01_05.wav" />
+    <Content Include="data\Sounds\S_01_06.wav" />
+    <Content Include="data\Sounds\S_01_07.wav" />
+    <Content Include="data\Sounds\S_01_08.wav" />
+    <Content Include="data\Sounds\S_01_09.wav" />
+    <Content Include="data\Sounds\S_01_10.wav" />
+    <Content Include="data\Sounds\tapestry.wav" />
     <Content Include="data\WelcomeToVA.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
