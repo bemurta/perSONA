@@ -480,16 +480,36 @@
     <Content Include="data\Sounds\Noise\ICRA_No07_16kHz_21s.wav" />
     <Content Include="data\Sounds\Noise\SSN_IEEE.wav" />
     <Content Include="data\Sounds\Noise\street_noise_louzu_16kHz_21s.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001001.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001002.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001003.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001004.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001005.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001006.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001007.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001008.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001009.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001010.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002001.wav" />
     <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002002.WAV" />
     <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002003.WAV" />
@@ -580,16 +600,36 @@
     <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010008.WAV" />
     <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010009.WAV" />
     <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001001.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001002.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001003.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001004.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001005.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001006.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001007.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001008.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001009.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001010.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002001.WAV" />
     <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002002.WAV" />
     <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002003.WAV" />

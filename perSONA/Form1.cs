@@ -22,13 +22,11 @@ namespace perSONA
         ProcessStartInfo info;
         StreamWriter sw;
         StreamReader sr;
-        int sourceId;
-        string signalSourceId;
-        int sourceId2;
+        string speechFolder;
         string speechSound;
         string noiseSound;
-        int sourceId3;
-        string speechFolder;
+        int speechSource;
+        int noiseSource;
         int selectedFolder = 0;
 
         public Form1()
@@ -39,7 +37,9 @@ namespace perSONA
             {
                 StartInfo = VAServerProcessInfo()
             };
+            this.TopMost = true;
             getDatabaseFolder();
+            this.TopMost = true;
         }
 
         ~Form1()
@@ -176,12 +176,9 @@ namespace perSONA
 
             textBox.Text = String.Concat(textBox.Text, textToAppend);
 
-        }
+            textBox.SelectionStart = textBox.Text.Length;
+            textBox.ScrollToCaret();
 
-
-        private void play_Click(object sender, EventArgs e)
-        {
-            vA.SetSignalSourceBufferPlaybackAction(signalSourceId, "play");
         }
 
         private void createSource2_Click(object sender, EventArgs e)
@@ -280,17 +277,17 @@ namespace perSONA
             double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
             double powerNoise = powerSpeech / linRatio;
 
-            vA.SetSoundSourcePosition(sourceId2, new VAVec3(xSides, yHeight, zFront));
-            vA.SetSoundSourcePosition(sourceId3, new VAVec3(0, 1.7, radius));
+            vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
+            vA.SetSoundSourcePosition(noiseSource, new VAVec3(0, 1.7, radius));
 
-            vA.SetSoundSourceSoundPower(sourceId2, powerSpeech);
-            vA.SetSoundSourceSignalSource(sourceId2, speechSound);
+            vA.SetSoundSourceSoundPower(speechSource, powerSpeech);
+            vA.SetSoundSourceSignalSource(speechSource, speechSound);
 
-            vA.SetSoundSourceSoundPower(sourceId3, powerNoise);
-            vA.SetSoundSourceSignalSource(sourceId3, noiseSound);
+            vA.SetSoundSourceSoundPower(noiseSource, powerNoise);
+            vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
 
             concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward",
-                       xSides, zFront, yHeight, sourceId2));
+                       xSides, zFront, yHeight, speechSource));
 
             concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %",
                        powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
@@ -350,22 +347,36 @@ namespace perSONA
         {
             TagLib.File tagFile = TagLib.File.Create(speechFile);
             string title = tagFile.Tag.Title;
+
+            if (!String.IsNullOrEmpty(title))
+            {
+
             TimeSpan duration = tagFile.Properties.Duration;
             concatText(String.Format("Title: {0}, duration: {1}", title, duration));
 
             String[] words = title.Split(null);
             listBox1.DataSource = words;
             listBox1.ClearSelected();
+            }
+            else
+            {
+                const string message =
+                    "Wrong set up of database wav files. Please add their sentences as regular test with words separeted by spaces in the title field of each speech audio file.";
+                const string caption = "Form Closing";
+                var result = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
+            }
 
             speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
-            sourceId2 = vA.CreateSoundSource("Speech");
+            speechSource = vA.CreateSoundSource("Speech");
 
             noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
-            sourceId3 = vA.CreateSoundSource("Noise");
+            noiseSource = vA.CreateSoundSource("Noise");
 
             concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
-                                     sourceId2, Path.GetFileName(speechFile),
-                                     sourceId3, Path.GetFileName(noiseFile)));
+                                     speechSource, Path.GetFileName(speechFile),
+                                     noiseSource, Path.GetFileName(noiseFile)));
         }
 
         private void button2_Click(object sender, EventArgs e)
