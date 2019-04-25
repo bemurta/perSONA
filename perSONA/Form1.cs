@@ -15,15 +15,13 @@ using ZedGraph;
 
 namespace perSONA
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IdbInterface
     {
         VANet vA;
         private readonly Process process;
         ProcessStartInfo info;
         StreamWriter sw;
         StreamReader sr;
-        int sourceId;
-        string signalSourceId;
         int sourceId2;
         string speechSound;
         string noiseSound;
@@ -39,7 +37,6 @@ namespace perSONA
             {
                 StartInfo = VAServerProcessInfo()
             };
-            getDatabaseFolder();
         }
 
         ~Form1()
@@ -170,7 +167,7 @@ namespace perSONA
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
         }
 
-        private void concatText(String textToAppend)
+        public void concatText(String textToAppend)
         {
             textBox.Text = String.Concat(textBox.Text, "\r\n");
 
@@ -179,10 +176,6 @@ namespace perSONA
         }
 
 
-        private void play_Click(object sender, EventArgs e)
-        {
-            vA.SetSignalSourceBufferPlaybackAction(signalSourceId, "play");
-        }
 
         private void createSource2_Click(object sender, EventArgs e)
         {
@@ -202,6 +195,13 @@ namespace perSONA
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
 
             createAcousticScene(speechFile, noiseFile);
+
+            string title = getTitle(speechFile);
+            String[] words = title.Split(null);
+
+            listBox1.DataSource = words;
+            listBox1.ClearSelected();
+            concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
         }
 
         private void play2_Click(object sender, EventArgs e)
@@ -231,6 +231,10 @@ namespace perSONA
 
         }
 
+        public VANet getVa()
+        {
+            return vA;
+        }
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
             label2.Text = String.Format("Volume: {0} %", trackBar2.Value);
@@ -238,10 +242,13 @@ namespace perSONA
 
         private void getFolder_Click(object sender, EventArgs e)
         {
-            getDatabaseFolder();
+            speechFolder = getDatabaseFolder();
+            String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
+            listBox2.DataSource = fileNames;
         }
 
-        private void getDatabaseFolder()
+        public string getDatabaseFolder()
         {
             using (var fbd = new FolderBrowserDialog())
             {
@@ -256,15 +263,13 @@ namespace perSONA
                     concatText("Files found: " + files.Length.ToString());
                 }
 
-                String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-                var fileNames = filePaths.Select(Path.GetFileName).ToArray();
-
-                listBox2.DataSource = fileNames;
-
+                
+                return speechFolder;
             }
+
         }
 
-        private void playScene(double radius, double angle)
+        public void playScene(double radius, double angle)
         {
             double[] radiusList = { radius, radius };
             double[] angleList = { angle, 0 };
@@ -344,18 +349,34 @@ namespace perSONA
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
             concatText(speechFile);
             createAcousticScene( speechFile,  noiseFile);
+
+            string title = getTitle(speechFile);
+            String[] words = title.Split(null);
+
+            listBox1.DataSource = words;
+            listBox1.ClearSelected();
+            concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
+
         }
 
-        private void createAcousticScene(string speechFile, string noiseFile)
+        public string getTitle(string speechFile)
         {
             TagLib.File tagFile = TagLib.File.Create(speechFile);
             string title = tagFile.Tag.Title;
-            TimeSpan duration = tagFile.Properties.Duration;
-            concatText(String.Format("Title: {0}, duration: {1}", title, duration));
 
-            String[] words = title.Split(null);
-            listBox1.DataSource = words;
-            listBox1.ClearSelected();
+            return title;
+        }
+        public TimeSpan getDuration(string speechFile)
+        {
+            TagLib.File tagFile = TagLib.File.Create(speechFile);
+            TimeSpan duration = tagFile.Properties.Duration;
+
+            return duration;
+        }
+
+        public void createAcousticScene(string speechFile, string noiseFile)
+        {
+
 
             speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
             sourceId2 = vA.CreateSoundSource("Speech");
@@ -468,6 +489,11 @@ namespace perSONA
         private void zedGraphControl1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new dbForm(this).Show();
         }
     }
 }
