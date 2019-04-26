@@ -317,7 +317,7 @@
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.zedGraphControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "perSona";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
