@@ -13,23 +13,18 @@ namespace perSONA
 {
     public partial class dbForm : Form
     {
-        private readonly IdbInterface idbInterface;
+        private readonly IvAInterface idbInterface;
         string speechFolder;
         VANet vA;
 
 
-        public dbForm(IdbInterface idbInterface)
+        public dbForm(IvAInterface idbInterface)
         {
                 InitializeComponent();
                 this.idbInterface = idbInterface;
         }
 
-        private void dbForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void playAudioButton_Click(object sender, EventArgs e)
         {
 
             vA = idbInterface.getVa();
@@ -153,6 +148,11 @@ namespace perSONA
                 listBox2.DataSource = "Digite Texto na Caixa ao lado".Split(null);
                 listBox2.ClearSelected();
             }
+        }
+
+        private void dbForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@ using ZedGraph;
 
 namespace perSONA
 {
-    public partial class Form1 : Form, IdbInterface
+    public partial class Form1 : Form, IvAInterface
     {
         VANet vA;
         private readonly Process process;
