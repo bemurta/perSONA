@@ -13,7 +13,7 @@ namespace perSONA
 {
     public partial class dbForm : Form
     {
-        private readonly IvAInterface idbInterface;
+        private readonly IvAInterface vAInterface;
         string speechFolder;
         VANet vA;
 
@@ -21,13 +21,13 @@ namespace perSONA
         public dbForm(IvAInterface idbInterface)
         {
                 InitializeComponent();
-                this.idbInterface = idbInterface;
+                this.vAInterface = idbInterface;
         }
 
         private void playAudioButton_Click(object sender, EventArgs e)
         {
 
-            vA = idbInterface.getVa();
+            vA = vAInterface.getVa();
 
             vA.Reset();
             int receiverId = vA.CreateSoundReceiver("Subject");
@@ -43,28 +43,28 @@ namespace perSONA
 
             vA.SetSoundReceiverPosition(receiverId, receiverPosition);
             vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU);
-            idbInterface.concatText(String.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
+            vAInterface.concatText(String.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
                                      xSides, zFront, yHeight, receiverId));
 
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
 
             String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
-            idbInterface.concatText(speechFile);
+            vAInterface.concatText(speechFile);
 
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
-            idbInterface.createAcousticScene(speechFile, noiseFile);
+            vAInterface.createAcousticScene(speechFile, noiseFile);
 
-            idbInterface.playScene(2, 0);
+            vAInterface.playScene(2, 0, 50);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            speechFolder = idbInterface.getDatabaseFolder();
+            speechFolder = vAInterface.getDatabaseFolder();
             String[] filePaths = System.IO.Directory.GetFiles(@speechFolder, "*.wav");
             String[] fileNames = filePaths.Select(System.IO.Path.GetFileName).ToArray();
             listBox1.DataSource = fileNames;
-            idbInterface.concatText(speechFolder);
+            vAInterface.concatText(speechFolder);
 
 
         }
@@ -72,13 +72,13 @@ namespace perSONA
         private void button3_Click(object sender, EventArgs e)
         {
             String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
-            idbInterface.concatText(speechFile);
+            vAInterface.concatText(speechFile);
 
             //String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
             //idbInterface.createAcousticScene(String.Concat(speechFile, ".WAV"), noiseFile);
 
 
-            string title = idbInterface.getTitle(speechFile);
+            string title = vAInterface.getTitle(speechFile);
 
 
             if (!String.IsNullOrEmpty(title))
@@ -101,6 +101,8 @@ namespace perSONA
 
         }
 
+
+
         private void button4_Click(object sender, EventArgs e)
         {
             String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
@@ -120,11 +122,11 @@ namespace perSONA
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
-            idbInterface.concatText(speechFile);
+            vAInterface.concatText(speechFile);
 
             String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
-            idbInterface.createAcousticScene(speechFile, noiseFile);
-            string title = idbInterface.getTitle(speechFile);
+            vAInterface.createAcousticScene(speechFile, noiseFile);
+            string title = vAInterface.getTitle(speechFile);
             updateWordsFromTag(title);
 
         }
@@ -151,6 +153,11 @@ namespace perSONA
         }
 
         private void dbForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

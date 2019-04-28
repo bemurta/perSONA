@@ -22,7 +22,10 @@ namespace perSONA
         ProcessStartInfo info;
         StreamWriter sw;
         StreamReader sr;
-        string speechFolder;
+
+        string speechFolder = "data/Sounds/Speech/Alcaim1_/F/F0001";
+        string noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+
         string speechSound;
         string noiseSound;
         int speechSource;
@@ -213,7 +216,7 @@ namespace perSONA
             int angle = rnd.Next(360);
             int radius = 2;
 
-            playScene(radius, angle);
+            playScene(radius, angle, trackBar1.Value);
 
         }
 
@@ -272,12 +275,12 @@ namespace perSONA
 
         }
 
-        public void playScene(double radius, double angle)
+        public void playScene(double radius, double angle, double snr)
         {
             double[] radiusList = { radius, radius };
             double[] angleList = { angle, 0 };
 
-            plotGraph(radiusList, angleList);
+            plotGraph(zedGraphControl1.GraphPane, radiusList, angleList);
 
             double xSides = radius * Math.Sin(angle / 180 * Math.PI);
             double zFront = radius * Math.Cos(angle / 180 * Math.PI);
@@ -285,7 +288,7 @@ namespace perSONA
 
             double normalizationFactor = trackBar2.Value / 100.0;
             double powerSpeech = 0.25 * normalizationFactor;
-            double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
+            double linRatio = Math.Pow(10.0, (snr / 20.0));
             double powerNoise = powerSpeech / linRatio;
 
             vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
@@ -314,14 +317,14 @@ namespace perSONA
         {
             int angle = -90;
             int radius = 2;
-            playScene(radius, angle);
+            playScene(radius, angle, trackBar1.Value);
         }
 
         private void speechRight_Click(object sender, EventArgs e)
         {
             int angle = 90;
             int radius = 2;
-            playScene(radius, angle);
+            playScene(radius, angle, trackBar1.Value);
 
         }
 
@@ -329,7 +332,7 @@ namespace perSONA
         {
             int angle = 0;
             int radius = 2;
-            playScene(radius, angle);
+            playScene(radius, angle, trackBar1.Value);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -345,21 +348,16 @@ namespace perSONA
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        public void fillWords(string speechFile, ListBox listbox)
         {
-
-            String speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
-            String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
-            concatText(speechFile);
-            createAcousticScene(speechFile, noiseFile);
-
             string title = getTitle(speechFile);
 
             if (!String.IsNullOrEmpty(title))
             {
                 String[] words = title.Split(null);
-                listBox1.DataSource = words;
-                listBox1.ClearSelected();
+                listbox.DataSource = words;
+                listbox.ClearSelected();
                 concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
             }
             else
@@ -368,11 +366,23 @@ namespace perSONA
                     "Wrong set up of database wav files. Please refer to database edit module to fix and use it in your tests.";
                 const string caption = "Incorrect database format. Metadata required!";
                 var result = MessageBox.Show(message, caption,
-                                        MessageBoxButtons.YesNo,
-                                        MessageBoxIcon.Question);
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
                 concatText(String.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            String speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
+            String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+            concatText(speechFile);
+            createAcousticScene(speechFile, noiseFile);
+
+            fillWords(speechFile, listBox1);
+
 
 
         }
@@ -424,19 +434,19 @@ namespace perSONA
             double[] radius = { radiusSpeech, radiusNoise };
             double[] angle = { angleSpeech, angleNoise };
 
-            plotGraph(radius, angle);
+            plotGraph(zedGraphControl1.GraphPane,radius, angle);
 
 
         }
 
-        private void plotGraph(double[] radius, double[] angle)
+        public void plotGraph(GraphPane graph, double[] radius, double[] angle)
         {
 
             double roomLength = 5;
             double roomWidth = 5;
 
 
-            ZedGraph.GraphPane myPane = zedGraphControl1.GraphPane;
+            ZedGraph.GraphPane myPane = graph;
 
             myPane.CurveList.Clear();
 
@@ -517,6 +527,16 @@ namespace perSONA
         private void button3_Click(object sender, EventArgs e)
         {
             new dbForm(this).Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            double angleSpeech = 0;
+            double angleNoise = 0;
+            double snr = 0;
+            speechPerceptionTest speechTest = new speechPerceptionTest(angleSpeech,angleNoise,speechFolder, noiseFile, "Created Test", snr);
+
+            new testForm(speechTest, this).Show();
         }
     }
 }
