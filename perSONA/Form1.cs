@@ -23,6 +23,8 @@ namespace perSONA
         StreamWriter sw;
         StreamReader sr;
 
+        List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>(); 
+
         string speechFolder = "data/Sounds/Speech/Alcaim1_/F/F0001";
         string noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
 
@@ -534,9 +536,22 @@ namespace perSONA
             double angleSpeech = 0;
             double angleNoise = 0;
             double snr = 0;
-            speechPerceptionTest speechTest = new speechPerceptionTest(angleSpeech,angleNoise,speechFolder, noiseFile, "Created Test", snr);
+            speechPerceptionTest speechTest = new speechPerceptionTest(angleSpeech,angleNoise,speechFolder, noiseFile, "Test one", snr);
 
             new testForm(speechTest, this).Show();
+
+        }
+
+        public void addCompletedTest(speechPerceptionTest test)
+        {
+            completedTests.Add(test);
+            concatText(string.Format("Teste {0} - {1}", completedTests.Count, test.Label));
+            string iterativeString = "Iterative SNR: ";
+            foreach (double d in test.IterativeSNR)
+            {
+                iterativeString += d.ToString() + ", ";
+            }
+            concatText(iterativeString);
         }
     }
 }

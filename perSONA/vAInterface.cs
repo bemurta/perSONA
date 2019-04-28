@@ -12,6 +12,7 @@ namespace perSONA
     {
 
         void playScene(double radius, double angle, double snr);
+        void addCompletedTest(speechPerceptionTest test);
         string getDatabaseFolder();
         void createAcousticScene(string speechFile, string noiseFile);
         string getTitle(string speechFile);

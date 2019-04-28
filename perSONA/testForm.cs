@@ -231,7 +231,11 @@ namespace perSONA
             }
             else
             {
+                test.IterativeSNR = signalToNoiseArray;
+
                 detailsBox.AppendText("/r/n Finished list");
+                vAInterface.addCompletedTest(this.test);
+                this.Close();
             }
 
 
