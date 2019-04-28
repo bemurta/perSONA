@@ -358,7 +358,7 @@ namespace perSONA
                 String[] words = title.Split(null);
                 listbox.DataSource = words;
                 listbox.ClearSelected();
-                concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
+                //concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
             }
             else
             {

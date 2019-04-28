@@ -18,6 +18,7 @@ namespace perSONA
         public double RadiusNoise { get; set; } = 2;
         public double[] PresentingLogic { get; set; } = { 2, 1 };
         public double AcceptanceRule { get; set; } = 0.5;
+        public double SignalToNoiseStep { get; set; } = 4;
 
         public override string ToString()
         {

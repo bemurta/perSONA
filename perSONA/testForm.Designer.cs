@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.testWordsList = new System.Windows.Forms.ListBox();
             this.all_correct = new System.Windows.Forms.Button();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,20 +52,20 @@
             this.computedAudioText = new System.Windows.Forms.TextBox();
             this.totalWordsText = new System.Windows.Forms.TextBox();
             this.continuousTimerText = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.filenameList = new System.Windows.Forms.ListBox();
             this.playCurrentScene = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(31, 198);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listBox1.Size = new System.Drawing.Size(191, 238);
-            this.listBox1.TabIndex = 20;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.testWordsList.FormattingEnabled = true;
+            this.testWordsList.Location = new System.Drawing.Point(31, 198);
+            this.testWordsList.Name = "listBox1";
+            this.testWordsList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.testWordsList.Size = new System.Drawing.Size(191, 238);
+            this.testWordsList.TabIndex = 20;
+            this.testWordsList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // all_correct
             // 
@@ -150,6 +150,7 @@
             this.button2.TabIndex = 28;
             this.button2.Text = "Compute";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -193,6 +194,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "Next sentence";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -275,14 +277,13 @@
             // 
             // listBox2
             // 
-            this.listBox2.Enabled = false;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(31, 19);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.ScrollAlwaysVisible = true;
-            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listBox2.Size = new System.Drawing.Size(191, 173);
-            this.listBox2.TabIndex = 44;
+            this.filenameList.Enabled = false;
+            this.filenameList.FormattingEnabled = true;
+            this.filenameList.Location = new System.Drawing.Point(31, 19);
+            this.filenameList.Name = "listBox2";
+            this.filenameList.ScrollAlwaysVisible = true;
+            this.filenameList.Size = new System.Drawing.Size(191, 173);
+            this.filenameList.TabIndex = 44;
             // 
             // playCurrentScene
             // 
@@ -308,7 +309,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.playCurrentScene);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.filenameList);
             this.Controls.Add(this.continuousTimerText);
             this.Controls.Add(this.totalWordsText);
             this.Controls.Add(this.computedAudioText);
@@ -331,7 +332,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.zedGraphControl1);
             this.Controls.Add(this.all_correct);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.testWordsList);
             this.Name = "testForm";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -341,7 +342,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox testWordsList;
         private System.Windows.Forms.Button all_correct;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private System.Windows.Forms.Label label1;
@@ -364,7 +365,7 @@
         private System.Windows.Forms.TextBox computedAudioText;
         private System.Windows.Forms.TextBox totalWordsText;
         private System.Windows.Forms.TextBox continuousTimerText;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox filenameList;
         private System.Windows.Forms.Button playCurrentScene;
         private System.Windows.Forms.TextBox textBox3;
     }
