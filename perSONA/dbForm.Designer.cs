@@ -59,6 +59,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(428, 91);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 23);
@@ -86,6 +87,7 @@
             // 
             // button4
             // 
+            this.button4.Enabled = false;
             this.button4.Location = new System.Drawing.Point(428, 149);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 23);
@@ -96,6 +98,7 @@
             // 
             // button5
             // 
+            this.button5.Enabled = false;
             this.button5.Location = new System.Drawing.Point(428, 120);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 23);

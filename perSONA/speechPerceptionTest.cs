@@ -27,16 +27,20 @@ namespace perSONA
             return string.Format("Test {0}, Speech: {1} {2}, Noise: {3}, {4}", Label, SpeechFolder, AngleSpeech, NoiseFile, AngleNoise);
         }
 
-        public speechPerceptionTest(double angleSpeech, double angleNoise, string speechFolder, string noiseFile, string Label, double snr)
+        public speechPerceptionTest(
+                                    double angleSpeech, double radiusSpeech, 
+                                    double angleNoise, double radiusNoise,
+                                    string speechFolder, string noiseFile,
+                                    string label, double snr)
         {
             AngleSpeech = angleSpeech;
-            RadiusSpeech = 2;
+            RadiusSpeech = radiusSpeech;
             AngleNoise = angleNoise;
-            RadiusNoise = 2;
+            RadiusNoise = angleNoise;
             SignalToNoise = snr;
             SpeechFolder = speechFolder;
             NoiseFile = noiseFile;
-            this.Label = Label;
+            Label = label;
 
 
         }

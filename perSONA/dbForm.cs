@@ -65,6 +65,7 @@ namespace perSONA
             String[] fileNames = filePaths.Select(System.IO.Path.GetFileName).ToArray();
             listBox1.DataSource = fileNames;
             vAInterface.concatText(speechFolder);
+            button2.Enabled = true;
 
 
         }

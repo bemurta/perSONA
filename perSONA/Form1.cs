@@ -43,6 +43,12 @@ namespace perSONA
                 StartInfo = VAServerProcessInfo()
             };
 
+            String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
+            listBox2.DataSource = fileNames;
+            comboBox3.DataSource = Directory.GetFiles(@"data/Sounds/Noise").Select(Path.GetFileName).ToArray();
+            comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
         }
 
         ~Form1()
@@ -190,6 +196,7 @@ namespace perSONA
 
             String[] filePaths;
             var fileNames = Directory.GetFiles(@"data").Select(Path.GetFileName);
+           
             filePaths = Directory.GetFiles(@speechFolder, "*.wav");
             fileNames = filePaths.Select(Path.GetFileName);
 
@@ -533,10 +540,20 @@ namespace perSONA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            double angleSpeech = 0;
-            double angleNoise = 0;
-            double snr = 0;
-            speechPerceptionTest speechTest = new speechPerceptionTest(angleSpeech,angleNoise,speechFolder, noiseFile, "Test one", snr);
+
+            double[] angles = getSceneAngles();
+            double[] radius = getSceneDistances();
+            double angleSpeech = angles[0];
+            double radiusSpeech = radius[0];
+            double angleNoise = angles[1];
+            double radiusNoise = radius[1];
+            double snr = (double)numericUpDown3.Value;
+
+            speechPerceptionTest speechTest = new speechPerceptionTest(
+                                                    angleSpeech, radiusSpeech, 
+                                                    angleNoise, radiusNoise,
+                                                    speechFolder, noiseFile, 
+                                                    textBox1.Text, snr);
 
             new testForm(speechTest, this).Show();
 
@@ -552,6 +569,93 @@ namespace perSONA
                 iterativeString += d.ToString() + ", ";
             }
             concatText(iterativeString);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private double checkDirection(bool left, bool front, bool right)
+        {
+            if (left)
+            {
+                return -90;
+            }
+            else if (front)
+            {
+                return 0;
+            }
+            else
+            {
+                return 90;
+            }
+        }
+
+        private double[] getSceneAngles()
+        {
+            double angleSpeech = checkDirection(radioButton1.Checked, radioButton2.Checked, radioButton3.Checked);
+            double angleNoise = checkDirection(radioButton4.Checked, radioButton5.Checked, radioButton6.Checked);
+
+            double[] angles = { angleSpeech, angleNoise };
+
+            return angles;
+        }
+
+        private double[] getSceneDistances()
+        {
+            double radiusSpeech = (double)numericUpDown1.Value;
+            double radiusNoise = (double)numericUpDown2.Value;
+
+            double[] radius = { radiusSpeech, radiusNoise };
+
+            return radius;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());            
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());        
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            noiseFile = comboBox3.SelectedText; 
         }
     }
 }

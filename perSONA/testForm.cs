@@ -126,10 +126,13 @@ namespace perSONA
 
             String speechFile = currentFile;
             vAInterface.concatText(speechFile);
-
+            vAInterface.concatText(
+                String.Format("Angle speech: {0}, Angle noise: {1}",test.AngleSpeech, test.AngleNoise));
             vAInterface.createAcousticScene(speechFile, test.NoiseFile);
 
-            vAInterface.playScene(test.AngleSpeech, test.AngleNoise, actualSNR);
+            vAInterface.playScene(test.RadiusSpeech, test.AngleSpeech, actualSNR);
+
+
         }
 
         private void updateIterationGraph(GraphPane graph, double[] signalToNoiseArray)
