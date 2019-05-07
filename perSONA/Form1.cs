@@ -543,10 +543,10 @@ namespace perSONA
 
             double[] angles = getSceneAngles();
             double[] radius = getSceneDistances();
-            double angleSpeech = angles[0];
-            double radiusSpeech = radius[0];
-            double angleNoise = angles[1];
-            double radiusNoise = radius[1];
+            double angleSpeech = checkDirection(radioButton1.Checked, radioButton2.Checked, radioButton3.Checked); ;
+            double radiusSpeech = (double)numericUpDown1.Value;
+            double angleNoise = checkDirection(radioButton4.Checked, radioButton6.Checked, radioButton5.Checked); ;
+            double radiusNoise = (double)numericUpDown2.Value;
             double snr = (double)numericUpDown3.Value;
 
             speechPerceptionTest speechTest = new speechPerceptionTest(
@@ -555,6 +555,8 @@ namespace perSONA
                                                     speechFolder, noiseFile, 
                                                     textBox1.Text, snr);
 
+            concatText(String.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}",
+                            speechTest.Label, radiusSpeech, angleSpeech, radiusNoise, angleNoise));
             new testForm(speechTest, this).Show();
 
         }
@@ -596,7 +598,7 @@ namespace perSONA
         private double[] getSceneAngles()
         {
             double angleSpeech = checkDirection(radioButton1.Checked, radioButton2.Checked, radioButton3.Checked);
-            double angleNoise = checkDirection(radioButton4.Checked, radioButton5.Checked, radioButton6.Checked);
+            double angleNoise = checkDirection(radioButton4.Checked, radioButton6.Checked, radioButton5.Checked);
 
             double[] angles = { angleSpeech, angleNoise };
 

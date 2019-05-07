@@ -8,14 +8,14 @@ namespace perSONA
 {
     public class speechPerceptionTest
     {
-        public string Label { get; set; } = "";
-        public double SignalToNoise { get; set; } = 0;
-        public string SpeechFolder { get; set; } = "N/A";
-        public string NoiseFile { get; set; } = "N/A";
-        public double AngleSpeech { get; set; } = 0;
-        public double RadiusSpeech { get; set; } = 2;
-        public double AngleNoise { get; set; } = 0;
-        public double RadiusNoise { get; set; } = 2;
+        public string Label { get; set; }
+        public double SignalToNoise { get; set; }
+        public string SpeechFolder { get; set; }
+        public string NoiseFile { get; set; }
+        public double AngleSpeech { get; set; }
+        public double RadiusSpeech { get; set; }
+        public double AngleNoise { get; set; }
+        public double RadiusNoise { get; set; }
         public double[] PresentingLogic { get; set; } = { 2, 1 };
         public double[] IterativeSNR { get; set; } = { };
         public double AcceptanceRule { get; set; } = 0.5;
@@ -24,7 +24,7 @@ namespace perSONA
         public override string ToString()
         {
   
-            return string.Format("Test {0}, Speech: {1} {2}, Noise: {3}, {4}", Label, SpeechFolder, AngleSpeech, NoiseFile, AngleNoise);
+            return string.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}", Label, SpeechFolder, AngleSpeech, NoiseFile, AngleNoise);
         }
 
         public speechPerceptionTest(
@@ -36,7 +36,7 @@ namespace perSONA
             AngleSpeech = angleSpeech;
             RadiusSpeech = radiusSpeech;
             AngleNoise = angleNoise;
-            RadiusNoise = angleNoise;
+            RadiusNoise = radiusNoise;
             SignalToNoise = snr;
             SpeechFolder = speechFolder;
             NoiseFile = noiseFile;

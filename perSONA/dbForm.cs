@@ -66,7 +66,8 @@ namespace perSONA
             listBox1.DataSource = fileNames;
             vAInterface.concatText(speechFolder);
             button2.Enabled = true;
-
+            button4.Enabled = true;
+            button5.Enabled = true;
 
         }
 
@@ -129,7 +130,6 @@ namespace perSONA
             vAInterface.createAcousticScene(speechFile, noiseFile);
             string title = vAInterface.getTitle(speechFile);
             updateWordsFromTag(title);
-
         }
     
 

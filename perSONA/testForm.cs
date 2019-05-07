@@ -32,7 +32,7 @@ namespace perSONA
 
             double[] radiusList = { test.RadiusSpeech, test.RadiusNoise };
             double[] angleList = { test.AngleSpeech, test.AngleNoise };
-
+           
             vAInterface.plotGraph(zedGraphControl2.GraphPane, radiusList, angleList);
 
             detailsBox.Text = test.ToString();
@@ -56,9 +56,6 @@ namespace perSONA
 
             signalToNoiseArray = new double[] {actualSNR};
             updateIterationGraph(zedGraphControl1.GraphPane, signalToNoiseArray);
-
-
-
 
         }
 
