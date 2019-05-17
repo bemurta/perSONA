@@ -75,6 +75,9 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.testSetup = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -127,7 +130,7 @@
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox.Size = new System.Drawing.Size(260, 337);
+            this.textBox.Size = new System.Drawing.Size(260, 215);
             this.textBox.TabIndex = 3;
             // 
             // reset
@@ -617,19 +620,52 @@
             // 
             // testSetup
             // 
-            this.testSetup.Location = new System.Drawing.Point(26, 500);
+            this.testSetup.Location = new System.Drawing.Point(26, 488);
             this.testSetup.Name = "testSetup";
-            this.testSetup.Size = new System.Drawing.Size(230, 23);
+            this.testSetup.Size = new System.Drawing.Size(230, 35);
             this.testSetup.TabIndex = 42;
-            this.testSetup.Text = "Test Setup";
+            this.testSetup.Text = "Custom Test Setup";
             this.testSetup.UseVisualStyleBackColor = true;
             this.testSetup.Click += new System.EventHandler(this.testSetup_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(26, 407);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(230, 35);
+            this.button2.TabIndex = 43;
+            this.button2.Text = "Speech Front";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(26, 366);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(230, 35);
+            this.button5.TabIndex = 44;
+            this.button5.Text = "Speech Left";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(26, 447);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(230, 35);
+            this.button6.TabIndex = 45;
+            this.button6.Text = "Speech Right";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 535);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.testSetup);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -708,6 +744,9 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Button testSetup;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

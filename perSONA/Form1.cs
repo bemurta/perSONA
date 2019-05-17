@@ -181,7 +181,10 @@ namespace perSONA
 
         public void concatText(String textToAppend)
         {
-            textBox.Text = String.Concat(textBox.Text, "\r\n");
+
+            string timestamp = DateTime.Now.ToString(@"dd MMMM yyyy HH:mm:ss - ");
+
+            textBox.Text = String.Concat(textBox.Text, "\r\n", timestamp);
 
             textBox.Text = String.Concat(textBox.Text, textToAppend);
 
@@ -502,6 +505,20 @@ namespace perSONA
             speechCurve.Line.IsVisible = false;
             speechCurve.Symbol.Size = 10;
 
+            ArrowObj arrowX = new ArrowObj(Color.Black, 25, -roomLength * 0.45, -roomWidth * 0.45, -roomLength * 0.35, -roomWidth * 0.45);
+            TextObj raTextX = new TextObj("X", -roomLength * 0.3, -roomWidth * 0.45);
+            myPane.GraphObjList.Add(arrowX);
+            myPane.GraphObjList.Add(raTextX);
+            raTextX.FontSpec.Border.IsVisible = false;
+            raTextX.FontSpec.Size = 21;
+
+            ArrowObj arrowZ = new ArrowObj(Color.Black, 25, -roomLength*0.45, -roomWidth*0.45, -roomLength*0.45, -roomWidth*0.35);
+            TextObj raTextZ = new TextObj("Z", -roomLength * 0.45, -roomWidth * 0.3);
+            myPane.GraphObjList.Add(arrowZ);
+            myPane.GraphObjList.Add(raTextZ);
+            raTextZ.FontSpec.Border.IsVisible = false;
+            raTextZ.FontSpec.Size = 21;
+
 
             LineItem noiseCurve = myPane.AddCurve("Noise",
                   noiseList, Color.Red, SymbolType.Circle);
@@ -571,6 +588,8 @@ namespace perSONA
                 iterativeString += d.ToString() + ", ";
             }
             concatText(iterativeString);
+            string[] logText = textBox.Text.Split('\n');
+            File.WriteAllLines(@"data\testlog.txt", logText);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -663,6 +682,24 @@ namespace perSONA
         private void testSetup_Click(object sender, EventArgs e)
         {
             string testTipe = "Default";
+            new testSetup(this, testTipe).Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string testTipe = "Speech Left";
+            new testSetup(this, testTipe).Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string testTipe = "Speech Front";
+            new testSetup(this, testTipe).Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string testTipe = "Speech Right";
             new testSetup(this, testTipe).Show();
         }
     }
