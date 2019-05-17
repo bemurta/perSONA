@@ -19,7 +19,7 @@ namespace perSONA
         TimeSpan getDuration(string speechFile);
         void concatText(String textToAppend);
         VANet getVa();
-        void plotGraph(ZedGraph.GraphPane graph, double[] radius, double[] angle);
+        void plotSceneGraph(ZedGraph.ZedGraphControl graph, double[] radius, double[] angle);
         void fillWords(string speechFile, ListBox listbox);
 
     }

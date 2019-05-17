@@ -103,15 +103,9 @@ namespace perSONA
 
         }
 
-
-
         private void button4_Click(object sender, EventArgs e)
         {
-            String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
-    
-            TagLib.File tagFile = TagLib.File.Create(speechFile);
-            tagFile.Tag.Title = textBox1.Text;
-            tagFile.Save();
+            saveTag();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -130,8 +124,16 @@ namespace perSONA
             vAInterface.createAcousticScene(speechFile, noiseFile);
             string title = vAInterface.getTitle(speechFile);
             updateWordsFromTag(title);
+        }   
+
+        private void saveTag()
+        {
+            String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
+
+            TagLib.File tagFile = TagLib.File.Create(speechFile);
+            tagFile.Tag.Title = textBox1.Text;
+            tagFile.Save();
         }
-    
 
         private void updateWordsFromTag(string title)
         {
@@ -152,8 +154,6 @@ namespace perSONA
                 listBox2.ClearSelected();
             }
         }
-
-
 
         private void dbForm_Load(object sender, EventArgs e)
         {

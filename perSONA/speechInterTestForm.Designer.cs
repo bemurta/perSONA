@@ -1,6 +1,6 @@
 ﻿namespace perSONA
 {
-    partial class testForm
+    partial class speechIterTestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -57,11 +57,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // listBox1
+            // testWordsList
             // 
             this.testWordsList.FormattingEnabled = true;
             this.testWordsList.Location = new System.Drawing.Point(31, 198);
-            this.testWordsList.Name = "listBox1";
+            this.testWordsList.Name = "testWordsList";
             this.testWordsList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.testWordsList.Size = new System.Drawing.Size(191, 238);
             this.testWordsList.TabIndex = 20;
@@ -275,15 +275,16 @@
             this.continuousTimerText.Size = new System.Drawing.Size(112, 20);
             this.continuousTimerText.TabIndex = 43;
             // 
-            // listBox2
+            // filenameList
             // 
             this.filenameList.Enabled = false;
             this.filenameList.FormattingEnabled = true;
             this.filenameList.Location = new System.Drawing.Point(31, 19);
-            this.filenameList.Name = "listBox2";
+            this.filenameList.Name = "filenameList";
             this.filenameList.ScrollAlwaysVisible = true;
             this.filenameList.Size = new System.Drawing.Size(191, 173);
             this.filenameList.TabIndex = 44;
+            this.filenameList.SelectedIndexChanged += new System.EventHandler(this.filenameList_SelectedIndexChanged);
             // 
             // playCurrentScene
             // 

@@ -12,7 +12,7 @@ using ZedGraph;
 
 namespace perSONA
 {
-    public partial class testForm : Form
+    public partial class speechIterTestForm : Form
     {
         private readonly speechPerceptionTest test;
         private readonly IvAInterface vAInterface;
@@ -24,7 +24,7 @@ namespace perSONA
 
         public VANet vA { get; private set; }
 
-        public testForm(speechPerceptionTest test, IvAInterface vAInterface)
+        public speechIterTestForm(speechPerceptionTest test, IvAInterface vAInterface)
         {
             InitializeComponent();
             this.test = test;
@@ -33,7 +33,7 @@ namespace perSONA
             double[] radiusList = { test.RadiusSpeech, test.RadiusNoise };
             double[] angleList = { test.AngleSpeech, test.AngleNoise };
            
-            vAInterface.plotGraph(zedGraphControl2.GraphPane, radiusList, angleList);
+            vAInterface.plotSceneGraph(zedGraphControl2, radiusList, angleList);
 
             detailsBox.Text = test.ToString();
 
@@ -238,6 +238,11 @@ namespace perSONA
                 this.Close();
             }
 
+
+        }
+
+        private void filenameList_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

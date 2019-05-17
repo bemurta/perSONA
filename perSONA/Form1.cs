@@ -48,7 +48,7 @@ namespace perSONA
             listBox2.DataSource = fileNames;
             comboBox3.DataSource = Directory.GetFiles(@"data/Sounds/Noise").Select(Path.GetFileName).ToArray();
             comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         ~Form1()
@@ -289,7 +289,7 @@ namespace perSONA
             double[] radiusList = { radius, radius };
             double[] angleList = { angle, 0 };
 
-            plotGraph(zedGraphControl1.GraphPane, radiusList, angleList);
+            plotSceneGraph(zedGraphControl1, radiusList, angleList);
 
             double xSides = radius * Math.Sin(angle / 180 * Math.PI);
             double zFront = radius * Math.Cos(angle / 180 * Math.PI);
@@ -443,19 +443,19 @@ namespace perSONA
             double[] radius = { radiusSpeech, radiusNoise };
             double[] angle = { angleSpeech, angleNoise };
 
-            plotGraph(zedGraphControl1.GraphPane,radius, angle);
+            plotSceneGraph(zedGraphControl1,radius, angle);
 
 
         }
 
-        public void plotGraph(GraphPane graph, double[] radius, double[] angle)
+        public void plotSceneGraph(ZedGraphControl graph, double[] radius, double[] angle)
         {
 
             double roomLength = 5;
             double roomWidth = 5;
 
 
-            ZedGraph.GraphPane myPane = graph;
+            ZedGraph.GraphPane myPane = graph.GraphPane;
 
             myPane.CurveList.Clear();
 
@@ -522,8 +522,8 @@ namespace perSONA
             myPane.XAxis.Scale.Min = -roomLength / 2;
             myPane.XAxis.Scale.Max = roomLength / 2;
 
-            zedGraphControl1.AxisChange();
-            zedGraphControl1.Refresh();
+            myPane.AxisChange();
+            graph.Refresh();
 
         }
 
@@ -557,7 +557,7 @@ namespace perSONA
 
             concatText(String.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}",
                             speechTest.Label, radiusSpeech, angleSpeech, radiusNoise, angleNoise));
-            new testForm(speechTest, this).Show();
+            new speechIterTestForm(speechTest, this).Show();
 
         }
 
@@ -617,47 +617,53 @@ namespace perSONA
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());            
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());            
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());        
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());        
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            plotGraph(zedGraphControl1.GraphPane, getSceneDistances(), getSceneAngles());
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             noiseFile = comboBox3.SelectedText; 
+        }
+
+        private void testSetup_Click(object sender, EventArgs e)
+        {
+            string testTipe = "Default";
+            new testSetup(this, testTipe).Show();
         }
     }
 }

@@ -24,7 +24,9 @@ namespace perSONA
         public override string ToString()
         {
   
-            return string.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}", Label, SpeechFolder, AngleSpeech, NoiseFile, AngleNoise);
+            return string.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4} \r\n Logic: {5}-down-{6}-up, Criteria:{7}%, SNR:{8}dB SNR step:{9}dB", 
+                                    Label, SpeechFolder, AngleSpeech, NoiseFile, AngleNoise, 
+                                    PresentingLogic[0],PresentingLogic[1], AcceptanceRule*100, SignalToNoise, SignalToNoiseStep);
         }
 
         public speechPerceptionTest(
@@ -43,6 +45,27 @@ namespace perSONA
             Label = label;
 
 
+        }
+
+        public speechPerceptionTest(
+                            double angleSpeech, double radiusSpeech,
+                            double angleNoise, double radiusNoise,
+                            string speechFolder, string noiseFile,
+                            string label, double snr,
+                            double[] presentingLogic,
+                            double acceptanceRule, double signalToNoiseStep)
+        {
+            AngleSpeech = angleSpeech;
+            RadiusSpeech = radiusSpeech;
+            AngleNoise = angleNoise;
+            RadiusNoise = radiusNoise;
+            SignalToNoise = snr;
+            SpeechFolder = speechFolder;
+            NoiseFile = noiseFile;
+            Label = label;
+            PresentingLogic = presentingLogic;
+            AcceptanceRule = acceptanceRule;
+            SignalToNoiseStep = signalToNoiseStep;
         }
 
     }
