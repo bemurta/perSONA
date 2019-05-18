@@ -21,12 +21,20 @@ namespace perSONA
         public bool currentStreak = false;
         private double actualSNR;
         double[] signalToNoiseArray;
+        DateTime tryalStartTime;
 
         public VANet vA { get; private set; }
 
         public speechIterTestForm(speechPerceptionTest test, IvAInterface vAInterface)
         {
+
             InitializeComponent();
+
+            tryalStartTime = DateTime.Now;
+            timer1.Tick += new EventHandler(timer1_Tick);
+            this.timer1.Interval = 1000;
+            this.timer1.Enabled = true;
+
             this.test = test;
             this.vAInterface = vAInterface;
 
@@ -53,9 +61,10 @@ namespace perSONA
             actualSNR = test.SignalToNoise;
             textBox3.Text = string.Format("{0}", actualSNR); 
 
-
             signalToNoiseArray = new double[] {actualSNR};
             updateIterationGraph(zedGraphControl1.GraphPane, signalToNoiseArray);
+
+
 
         }
 
@@ -212,7 +221,10 @@ namespace perSONA
 
 
             actualSNR = getNextSNR(actualSNR, test.SignalToNoiseStep);
+
             
+            vAInterface.concatText(String.Format("{0} - response time: {1}", string.Join(",", testWordsList.Items.Cast<String>()), currentTryal.Text));
+
             if (filenameList.SelectedIndex + 1 < filenameList.Items.Count)
             {
                 filenameList.SelectedIndex = filenameList.SelectedIndex + 1;
@@ -235,15 +247,24 @@ namespace perSONA
 
                 detailsBox.AppendText("/r/n Finished list");
                 vAInterface.addCompletedTest(this.test);
+                vAInterface.concatText(String.Format("Elapsed time: {0}", continuousTimerText.Text));
                 this.Close();
             }
 
 
+            tryalStartTime = DateTime.Now;
         }
 
         private void filenameList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+
+        {
+            this.continuousTimerText.Text = String.Format("{0:hh\\:mm\\:ss}", DateTime.Now - test.TestStart);
+            this.currentTryal.Text = String.Format("{0:mm\\:ss}", DateTime.Now - tryalStartTime);
         }
     }
 

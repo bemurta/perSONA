@@ -55,6 +55,7 @@
             this.filenameList = new System.Windows.Forms.ListBox();
             this.playCurrentScene = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // testWordsList
@@ -117,9 +118,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(397, 269);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Computed audio:";
+            this.label3.Text = "Current audio:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
@@ -127,9 +128,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(397, 308);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 13);
+            this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Total number of words:";
+            this.label4.Text = "Total sentences:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // all_incorrect
@@ -303,7 +304,12 @@
             this.textBox3.Size = new System.Drawing.Size(112, 20);
             this.textBox3.TabIndex = 46;
             // 
-            // testForm
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // speechIterTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -334,7 +340,7 @@
             this.Controls.Add(this.zedGraphControl1);
             this.Controls.Add(this.all_correct);
             this.Controls.Add(this.testWordsList);
-            this.Name = "testForm";
+            this.Name = "speechIterTestForm";
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -369,5 +375,6 @@
         private System.Windows.Forms.ListBox filenameList;
         private System.Windows.Forms.Button playCurrentScene;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

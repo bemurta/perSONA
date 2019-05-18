@@ -20,6 +20,7 @@ namespace perSONA
         public double[] IterativeSNR { get; set; } = { };
         public double AcceptanceRule { get; set; } = 0.5;
         public double SignalToNoiseStep { get; set; } = 4;
+        public DateTime TestStart { get; set; }
 
         public override string ToString()
         {
@@ -43,6 +44,7 @@ namespace perSONA
             SpeechFolder = speechFolder;
             NoiseFile = noiseFile;
             Label = label;
+            TestStart = DateTime.Now;
 
 
         }
@@ -66,6 +68,7 @@ namespace perSONA
             PresentingLogic = presentingLogic;
             AcceptanceRule = acceptanceRule;
             SignalToNoiseStep = signalToNoiseStep;
+            TestStart = DateTime.Now;
         }
 
     }

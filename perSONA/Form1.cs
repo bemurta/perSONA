@@ -405,8 +405,6 @@ namespace perSONA
             
             string title = tagFile.Tag.Title;
 
-            concatText(title);
-
             return title;
         }
         public TimeSpan getDuration(string speechFile)
