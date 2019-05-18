@@ -22,7 +22,12 @@ namespace perSONA
         ProcessStartInfo info;
         StreamWriter sw;
         StreamReader sr;
-        string speechFolder;
+
+        List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>(); 
+
+        string speechFolder = "data/Sounds/Speech/Alcaim1_/F/F0001";
+        string noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+
         string speechSound;
         string noiseSound;
         int speechSource;
@@ -38,6 +43,12 @@ namespace perSONA
                 StartInfo = VAServerProcessInfo()
             };
 
+            String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
+            listBox2.DataSource = fileNames;
+            comboBox3.DataSource = Directory.GetFiles(@"data/Sounds/Noise").Select(Path.GetFileName).ToArray();
+            comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         ~Form1()
@@ -170,7 +181,10 @@ namespace perSONA
 
         public void concatText(String textToAppend)
         {
-            textBox.Text = String.Concat(textBox.Text, "\r\n");
+
+            string timestamp = DateTime.Now.ToString(@"dd MMMM yyyy HH:mm:ss - ");
+
+            textBox.Text = String.Concat(textBox.Text, "\r\n", timestamp);
 
             textBox.Text = String.Concat(textBox.Text, textToAppend);
 
@@ -185,6 +199,7 @@ namespace perSONA
 
             String[] filePaths;
             var fileNames = Directory.GetFiles(@"data").Select(Path.GetFileName);
+           
             filePaths = Directory.GetFiles(@speechFolder, "*.wav");
             fileNames = filePaths.Select(Path.GetFileName);
 
@@ -213,7 +228,7 @@ namespace perSONA
             int angle = rnd.Next(360);
             int radius = 2;
 
-            playScene(radius, angle);
+            playScene(radius, angle, trackBar1.Value);
 
         }
 
@@ -272,12 +287,12 @@ namespace perSONA
 
         }
 
-        public void playScene(double radius, double angle)
+        public void playScene(double radius, double angle, double snr)
         {
             double[] radiusList = { radius, radius };
             double[] angleList = { angle, 0 };
 
-            plotGraph(radiusList, angleList);
+            plotSceneGraph(zedGraphControl1, radiusList, angleList);
 
             double xSides = radius * Math.Sin(angle / 180 * Math.PI);
             double zFront = radius * Math.Cos(angle / 180 * Math.PI);
@@ -285,7 +300,7 @@ namespace perSONA
 
             double normalizationFactor = trackBar2.Value / 100.0;
             double powerSpeech = 0.25 * normalizationFactor;
-            double linRatio = Math.Pow(10.0, (trackBar1.Value / 20.0));
+            double linRatio = Math.Pow(10.0, (snr / 20.0));
             double powerNoise = powerSpeech / linRatio;
 
             vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
@@ -314,14 +329,14 @@ namespace perSONA
         {
             int angle = -90;
             int radius = 2;
-            playScene(radius, angle);
+            playScene(radius, angle, trackBar1.Value);
         }
 
         private void speechRight_Click(object sender, EventArgs e)
         {
             int angle = 90;
             int radius = 2;
-            playScene(radius, angle);
+            playScene(radius, angle, trackBar1.Value);
 
         }
 
@@ -329,7 +344,7 @@ namespace perSONA
         {
             int angle = 0;
             int radius = 2;
-            playScene(radius, angle);
+            playScene(radius, angle, trackBar1.Value);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -345,6 +360,31 @@ namespace perSONA
 
         }
 
+
+        public void fillWords(string speechFile, ListBox listbox)
+        {
+            string title = getTitle(speechFile);
+
+            if (!String.IsNullOrEmpty(title))
+            {
+                String[] words = title.Split(null);
+                listbox.DataSource = words;
+                listbox.ClearSelected();
+                //concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
+            }
+            else
+            {
+                const string message =
+                    "Wrong set up of database wav files. Please refer to database edit module to fix and use it in your tests.";
+                const string caption = "Incorrect database format. Metadata required!";
+                var result = MessageBox.Show(message, caption,
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                concatText(String.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
+
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -353,26 +393,8 @@ namespace perSONA
             concatText(speechFile);
             createAcousticScene(speechFile, noiseFile);
 
-            string title = getTitle(speechFile);
+            fillWords(speechFile, listBox1);
 
-            if (!String.IsNullOrEmpty(title))
-            {
-                String[] words = title.Split(null);
-                listBox1.DataSource = words;
-                listBox1.ClearSelected();
-                concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
-            }
-            else
-            {
-                const string message =
-                    "Wrong set up of database wav files. Please refer to database edit module to fix and use it in your tests.";
-                const string caption = "Incorrect database format. Metadata required!";
-                var result = MessageBox.Show(message, caption,
-                                        MessageBoxButtons.YesNo,
-                                        MessageBoxIcon.Question);
-                concatText(String.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
-
-            }
 
 
         }
@@ -382,8 +404,6 @@ namespace perSONA
             TagLib.File tagFile = TagLib.File.Create(speechFile);
             
             string title = tagFile.Tag.Title;
-
-            concatText(title);
 
             return title;
         }
@@ -424,19 +444,19 @@ namespace perSONA
             double[] radius = { radiusSpeech, radiusNoise };
             double[] angle = { angleSpeech, angleNoise };
 
-            plotGraph(radius, angle);
+            plotSceneGraph(zedGraphControl1,radius, angle);
 
 
         }
 
-        private void plotGraph(double[] radius, double[] angle)
+        public void plotSceneGraph(ZedGraphControl graph, double[] radius, double[] angle)
         {
 
             double roomLength = 5;
             double roomWidth = 5;
 
 
-            ZedGraph.GraphPane myPane = zedGraphControl1.GraphPane;
+            ZedGraph.GraphPane myPane = graph.GraphPane;
 
             myPane.CurveList.Clear();
 
@@ -483,6 +503,20 @@ namespace perSONA
             speechCurve.Line.IsVisible = false;
             speechCurve.Symbol.Size = 10;
 
+            ArrowObj arrowX = new ArrowObj(Color.Black, 25, -roomLength * 0.45, -roomWidth * 0.45, -roomLength * 0.35, -roomWidth * 0.45);
+            TextObj raTextX = new TextObj("X", -roomLength * 0.3, -roomWidth * 0.45);
+            myPane.GraphObjList.Add(arrowX);
+            myPane.GraphObjList.Add(raTextX);
+            raTextX.FontSpec.Border.IsVisible = false;
+            raTextX.FontSpec.Size = 21;
+
+            ArrowObj arrowZ = new ArrowObj(Color.Black, 25, -roomLength*0.45, -roomWidth*0.45, -roomLength*0.45, -roomWidth*0.35);
+            TextObj raTextZ = new TextObj("Z", -roomLength * 0.45, -roomWidth * 0.3);
+            myPane.GraphObjList.Add(arrowZ);
+            myPane.GraphObjList.Add(raTextZ);
+            raTextZ.FontSpec.Border.IsVisible = false;
+            raTextZ.FontSpec.Size = 21;
+
 
             LineItem noiseCurve = myPane.AddCurve("Noise",
                   noiseList, Color.Red, SymbolType.Circle);
@@ -503,8 +537,8 @@ namespace perSONA
             myPane.XAxis.Scale.Min = -roomLength / 2;
             myPane.XAxis.Scale.Max = roomLength / 2;
 
-            zedGraphControl1.AxisChange();
-            zedGraphControl1.Refresh();
+            myPane.AxisChange();
+            graph.Refresh();
 
         }
 
@@ -517,6 +551,154 @@ namespace perSONA
         private void button3_Click(object sender, EventArgs e)
         {
             new dbForm(this).Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            double[] angles = getSceneAngles();
+            double[] radius = getSceneDistances();
+            double angleSpeech = checkDirection(radioButton1.Checked, radioButton2.Checked, radioButton3.Checked); ;
+            double radiusSpeech = (double)numericUpDown1.Value;
+            double angleNoise = checkDirection(radioButton4.Checked, radioButton6.Checked, radioButton5.Checked); ;
+            double radiusNoise = (double)numericUpDown2.Value;
+            double snr = (double)numericUpDown3.Value;
+
+            speechPerceptionTest speechTest = new speechPerceptionTest(
+                                                    angleSpeech, radiusSpeech, 
+                                                    angleNoise, radiusNoise,
+                                                    speechFolder, noiseFile, 
+                                                    textBox1.Text, snr);
+
+            concatText(String.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}",
+                            speechTest.Label, radiusSpeech, angleSpeech, radiusNoise, angleNoise));
+            new speechIterTestForm(speechTest, this).Show();
+
+        }
+
+        public void addCompletedTest(speechPerceptionTest test)
+        {
+            completedTests.Add(test);
+            concatText(string.Format("Teste {0} - {1}", completedTests.Count, test.Label));
+            string iterativeString = "Iterative SNR: ";
+            foreach (double d in test.IterativeSNR)
+            {
+                iterativeString += d.ToString() + ", ";
+            }
+            concatText(iterativeString);
+            string[] logText = textBox.Text.Split('\n');
+            File.WriteAllLines(@"data\testlog.txt", logText);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private double checkDirection(bool left, bool front, bool right)
+        {
+            if (left)
+            {
+                return -90;
+            }
+            else if (front)
+            {
+                return 0;
+            }
+            else
+            {
+                return 90;
+            }
+        }
+
+        private double[] getSceneAngles()
+        {
+            double angleSpeech = checkDirection(radioButton1.Checked, radioButton2.Checked, radioButton3.Checked);
+            double angleNoise = checkDirection(radioButton4.Checked, radioButton6.Checked, radioButton5.Checked);
+
+            double[] angles = { angleSpeech, angleNoise };
+
+            return angles;
+        }
+
+        private double[] getSceneDistances()
+        {
+            double radiusSpeech = (double)numericUpDown1.Value;
+            double radiusNoise = (double)numericUpDown2.Value;
+
+            double[] radius = { radiusSpeech, radiusNoise };
+
+            return radius;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());            
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());        
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            noiseFile = comboBox3.SelectedText; 
+        }
+
+        private void testSetup_Click(object sender, EventArgs e)
+        {
+            string testTipe = "Default";
+            new testSetup(this, testTipe).Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string testTipe = "Speech Left";
+            new testSetup(this, testTipe).Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string testTipe = "Speech Front";
+            new testSetup(this, testTipe).Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string testTipe = "Speech Right";
+            new testSetup(this, testTipe).Show();
         }
     }
 }
