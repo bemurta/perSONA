@@ -176,7 +176,6 @@
     <None Include="data\License.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="data\Noise\Highpass_ori_17s.mat" />
     <None Include="data\Singer.v17.ms.daff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -481,21 +480,6 @@
     <Content Include="data\HD650_all_inv.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Noise\4talker-babble_ISTS.wav" />
-    <Content Include="data\Noise\cafeteria_babble.wav" />
-    <Content Include="data\Noise\Cafeteria_Babble_16kHz_21s.wav" />
-    <Content Include="data\Noise\cafeteria_babble_1_3-23_min_bte_front.wav" />
-    <Content Include="data\Noise\cafeteria_babble_1_3-23_min_bte_front_16kHz.wav" />
-    <Content Include="data\Noise\cafeteria_babble_loizou_16kHz_21s.wav" />
-    <Content Include="data\Noise\FX_Bus_Engine_001_16kHz_12s.wav" />
-    <Content Include="data\Noise\FX_Bus_Engine_002_16kHz_12s.wav" />
-    <Content Include="data\Noise\Honda_Bike_Start_Up_2_16kHz_12s.wav" />
-    <Content Include="data\Noise\ICRA_No01_16kHz_118s.wav" />
-    <Content Include="data\Noise\ICRA_No01_16kHz_21s.wav" />
-    <Content Include="data\Noise\ICRA_No06_16kHz_21s.wav" />
-    <Content Include="data\Noise\ICRA_No07_16kHz_21s.wav" />
-    <Content Include="data\Noise\SSN_IEEE.wav" />
-    <Content Include="data\Noise\street_noise_louzu_16kHz_21s.wav" />
     <Content Include="data\Sounds\1kHzTone_60dB_SPL.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -508,45 +492,23 @@
     <Content Include="data\Sounds\Noise\cafeteria_babble.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Noise\Cafeteria_Babble_16kHz_21s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front_16kHz.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Noise\cafeteria_babble_loizou_16kHz_21s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Noise\FX_Bus_Engine_001_16kHz_12s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\Sounds\Noise\Cafeteria_Babble_16kHz_21s.wav" />
+    <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front.wav" />
+    <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front_16kHz.wav" />
+    <Content Include="data\Sounds\Noise\cafeteria_babble_loizou_16kHz_21s.wav" />
+    <Content Include="data\Sounds\Noise\FX_Bus_Engine_001_16kHz_12s.wav" />
     <Content Include="data\Sounds\Noise\FX_Bus_Engine_002_16kHz_12s.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Noise\Honda_Bike_Start_Up_2_16kHz_12s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_118s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_21s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Noise\ICRA_No06_16kHz_21s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\Sounds\Noise\ICRA_No07_16kHz_21s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\Sounds\Noise\Honda_Bike_Start_Up_2_16kHz_12s.wav" />
+    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_118s.wav" />
+    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_21s.wav" />
+    <Content Include="data\Sounds\Noise\ICRA_No06_16kHz_21s.wav" />
+    <Content Include="data\Sounds\Noise\ICRA_No07_16kHz_21s.wav" />
     <Content Include="data\Sounds\Noise\SSN_IEEE.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Noise\street_noise_louzu_16kHz_21s.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="data\Sounds\Noise\street_noise_louzu_16kHz_21s.wav" />
     <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001001.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -923,6 +885,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="License-LGPL.txt" />
+    <Content Include="msvcp120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcr120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="VABase.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

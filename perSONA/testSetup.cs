@@ -71,9 +71,9 @@ namespace perSONA
             double angleNoise = checkDirection(noiseLeft.Checked, noiseFront.Checked, noiseRight.Checked); ;
             double radiusNoise = (double)noiseDistance.Value;
             double snr = (double)initialSnr.Value;
-            string noiseFile = comboBox3.SelectedItem.ToString();
+            string noiseFile = Path.Combine(noiseFolder, comboBox3.SelectedItem.ToString());
 
-            string procedureString = (string)comboBox1.SelectedItem;
+            string procedureString =  (string)comboBox1.SelectedItem;
 
             double[] presentingLogic = {double.Parse(procedureString.Split('-')[0]), double.Parse(procedureString.Split('-')[2]) };
             double[] iterativeSNR = { };

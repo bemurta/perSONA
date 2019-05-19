@@ -27,7 +27,7 @@ namespace perSONA
 
         string speechFolder = "data/Sounds/Speech/Alcaim1_/F/F0001";
         string noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
-
+        string noiseFolder = "data/Sounds/Noise";
         string speechSound;
         string noiseSound;
         int speechSource;
@@ -46,7 +46,7 @@ namespace perSONA
             String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
             String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
             listBox2.DataSource = fileNames;
-            comboBox3.DataSource = Directory.GetFiles(@"data/Sounds/Noise").Select(Path.GetFileName).ToArray();
+            comboBox3.DataSource = Directory.GetFiles(@noiseFolder).Select(Path.GetFileName).ToArray();
             comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
             plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
@@ -674,7 +674,7 @@ namespace perSONA
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            noiseFile = comboBox3.SelectedText; 
+            noiseFile = Path.Combine(noiseFolder,comboBox3.SelectedText.ToString()); 
         }
 
         private void testSetup_Click(object sender, EventArgs e)
