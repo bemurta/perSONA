@@ -179,7 +179,6 @@
     <None Include="data\Singer.v17.ms.daff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="data\Sounds\Noise\Highpass_ori_17s.mat" />
     <None Include="data\Trumpet1.v17.ms.daff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -495,13 +494,9 @@
     <Content Include="data\Sounds\Noise\Cafeteria_Babble_16kHz_21s.wav" />
     <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front.wav" />
     <Content Include="data\Sounds\Noise\cafeteria_babble_1_3-23_min_bte_front_16kHz.wav" />
-    <Content Include="data\Sounds\Noise\cafeteria_babble_loizou_16kHz_21s.wav" />
-    <Content Include="data\Sounds\Noise\FX_Bus_Engine_001_16kHz_12s.wav" />
     <Content Include="data\Sounds\Noise\FX_Bus_Engine_002_16kHz_12s.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Noise\Honda_Bike_Start_Up_2_16kHz_12s.wav" />
-    <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_118s.wav" />
     <Content Include="data\Sounds\Noise\ICRA_No01_16kHz_21s.wav" />
     <Content Include="data\Sounds\Noise\ICRA_No06_16kHz_21s.wav" />
     <Content Include="data\Sounds\Noise\ICRA_No07_16kHz_21s.wav" />

@@ -418,7 +418,7 @@ namespace perSONA
         }
 
         public void createAcousticScene(string speechFile, string noiseFile)
-        {
+        { 
 
 
             speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
@@ -426,6 +426,8 @@ namespace perSONA
 
             noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
             noiseSource = vA.CreateSoundSource("Noise");
+            int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+            vA.SetSoundSourceDirectivity(speechSource, humanDirectivity);
 
             concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
                                      speechSource, Path.GetFileName(speechFile),
