@@ -189,6 +189,7 @@ namespace perSONA
             if (answer / totalWords < test.AcceptanceRule)
             {
                 nextSNR = currentSNR + snrStep;
+                currentStreak = false;
                 streakText.Text = "False";
             }
             else
