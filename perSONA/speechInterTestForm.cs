@@ -45,7 +45,7 @@ namespace perSONA
 
             detailsBox.Text = test.ToString();
 
-            String[] filePaths = System.IO.Directory.GetFiles(test.SpeechFolder, "*.wav");
+            string[] filePaths = System.IO.Directory.GetFiles(test.SpeechFolder, "*.wav");
             speechFiles = filePaths.Select(System.IO.Path.GetFileName).ToArray();
 
             filenameList.DataSource = speechFiles;
@@ -124,16 +124,16 @@ namespace perSONA
 
             vA.SetSoundReceiverPosition(receiverId, receiverPosition);
             vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU);
-            vAInterface.concatText(String.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
+            vAInterface.concatText(string.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
                                      xSides, zFront, yHeight, receiverId));
 
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
 
-            String speechFile = currentFile;
+            string speechFile = currentFile;
             vAInterface.concatText(speechFile);
             vAInterface.concatText(
-                String.Format("Angle speech: {0}, Angle noise: {1}",test.AngleSpeech, test.AngleNoise));
+                string.Format("Angle speech: {0}, Angle noise: {1}",test.AngleSpeech, test.AngleNoise));
             vAInterface.createAcousticScene(speechFile, test.NoiseFile);
 
             vAInterface.playScene(test.RadiusSpeech, test.AngleSpeech, actualSNR);
@@ -224,7 +224,7 @@ namespace perSONA
             actualSNR = getNextSNR(actualSNR, test.SignalToNoiseStep);
 
             
-            vAInterface.concatText(String.Format("{0} - response time: {1}", string.Join(",", testWordsList.Items.Cast<String>()), currentTryal.Text));
+            vAInterface.concatText(string.Format("{0} - response time: {1}", string.Join(",", testWordsList.Items.Cast<string>()), currentTryal.Text));
 
             if (filenameList.SelectedIndex + 1 < filenameList.Items.Count)
             {
@@ -248,7 +248,7 @@ namespace perSONA
 
                 detailsBox.AppendText("/r/n Finished list");
                 vAInterface.addCompletedTest(this.test);
-                vAInterface.concatText(String.Format("Elapsed time: {0}", continuousTimerText.Text));
+                vAInterface.concatText(string.Format("Elapsed time: {0}", continuousTimerText.Text));
                 this.Close();
             }
 
@@ -264,8 +264,8 @@ namespace perSONA
         private void timer1_Tick(object sender, EventArgs e)
 
         {
-            this.continuousTimerText.Text = String.Format("{0:hh\\:mm\\:ss}", DateTime.Now - test.TestStart);
-            this.currentTryal.Text = String.Format("{0:mm\\:ss}", DateTime.Now - tryalStartTime);
+            this.continuousTimerText.Text = string.Format("{0:hh\\:mm\\:ss}", DateTime.Now - test.TestStart);
+            this.currentTryal.Text = string.Format("{0:mm\\:ss}", DateTime.Now - tryalStartTime);
         }
     }
 

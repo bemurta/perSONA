@@ -34,5 +34,17 @@ namespace perSONA.Properties {
                 this["RESULTS_FOLDER"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("25")]
+        public int USERVOLUME {
+            get {
+                return ((int)(this["USERVOLUME"]));
+            }
+            set {
+                this["USERVOLUME"] = value;
+            }
+        }
     }
 }

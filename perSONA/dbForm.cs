@@ -43,16 +43,16 @@ namespace perSONA
 
             vA.SetSoundReceiverPosition(receiverId, receiverPosition);
             vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU);
-            vAInterface.concatText(String.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
+            vAInterface.concatText(string.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
                                      xSides, zFront, yHeight, receiverId));
 
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
 
-            String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
+            string speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
             vAInterface.concatText(speechFile);
 
-            String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+            string noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
             vAInterface.createAcousticScene(speechFile, noiseFile);
 
             vAInterface.playScene(2, 0, 50);
@@ -61,8 +61,8 @@ namespace perSONA
         private void button1_Click(object sender, EventArgs e)
         {
             speechFolder = vAInterface.getDatabaseFolder();
-            String[] filePaths = System.IO.Directory.GetFiles(@speechFolder, "*.wav");
-            String[] fileNames = filePaths.Select(System.IO.Path.GetFileName).ToArray();
+            string[] filePaths = System.IO.Directory.GetFiles(@speechFolder, "*.wav");
+            string[] fileNames = filePaths.Select(System.IO.Path.GetFileName).ToArray();
             listBox1.DataSource = fileNames;
             vAInterface.concatText(speechFolder);
             button2.Enabled = true;
@@ -73,7 +73,7 @@ namespace perSONA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
+            string speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
             vAInterface.concatText(speechFile);
 
             //String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
@@ -83,10 +83,10 @@ namespace perSONA
             string title = vAInterface.getTitle(speechFile);
 
 
-            if (!String.IsNullOrEmpty(title))
+            if (!string.IsNullOrEmpty(title))
             {
                 textBox1.Text = title;
-                String[] words = title.Split(null);
+                string[] words = title.Split(null);
                 listBox2.DataSource = words;
                 listBox2.ClearSelected();
 
@@ -117,10 +117,10 @@ namespace perSONA
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
+            string speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
             vAInterface.concatText(speechFile);
 
-            String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+            string noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
             vAInterface.createAcousticScene(speechFile, noiseFile);
             string title = vAInterface.getTitle(speechFile);
             updateWordsFromTag(title);
@@ -128,7 +128,7 @@ namespace perSONA
 
         private void saveTag()
         {
-            String speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
+            string speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
 
             TagLib.File tagFile = TagLib.File.Create(speechFile);
             tagFile.Tag.Title = textBox1.Text;
@@ -140,10 +140,10 @@ namespace perSONA
             
 
 
-            if (!String.IsNullOrEmpty(title))
+            if (!string.IsNullOrEmpty(title))
             {
                 textBox1.Text = title;
-                String[] words = title.Split(null);
+                string[] words = title.Split(null);
                 listBox2.DataSource = words;
                 listBox2.ClearSelected();
             }
