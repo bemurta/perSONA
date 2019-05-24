@@ -589,7 +589,9 @@ namespace perSONA
             }
             concatText(iterativeString);
             string[] logText = textBox.Text.Split('\n');
-            File.WriteAllLines(@"data\testlog.txt", logText);
+            concatText(String.Format("Saved logs at {0}", Properties.Settings.Default.RESULTS_FOLDER));
+            File.WriteAllLines(@String.Format("{0}/testlog-{1}.txt", 
+                                Properties.Settings.Default.RESULTS_FOLDER,DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss")), logText);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -701,6 +703,16 @@ namespace perSONA
         {
             string testTipe = "Speech Right";
             new testSetup(this, testTipe).Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form2(this).Show();
         }
     }
 }
