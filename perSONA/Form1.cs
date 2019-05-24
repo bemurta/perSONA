@@ -25,9 +25,9 @@ namespace perSONA
 
         List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>(); 
 
-        string speechFolder = "data/Sounds/Speech/Alcaim1_/F/F0001";
-        string noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
-        string noiseFolder = "data/Sounds/Noise";
+        string speechFolder = "data\\Sounds\\Speech\\Alcaim1_\\F\\F0001";
+        string noiseFile = "data\\Sounds\\Noise\\4talker-babble_ISTS.wav";
+        string noiseFolder = "data\\Sounds\\Noise";
         string speechSound;
         string noiseSound;
         int speechSource;
@@ -43,8 +43,10 @@ namespace perSONA
                 StartInfo = VAServerProcessInfo()
             };
 
-            String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-            String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
+            trackBar2.Value = Properties.Settings.Default.USERVOLUME;
+
+            string[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            string[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
             listBox2.DataSource = fileNames;
             comboBox3.DataSource = Directory.GetFiles(@noiseFolder).Select(Path.GetFileName).ToArray();
             comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
@@ -173,20 +175,20 @@ namespace perSONA
 
             vA.SetSoundReceiverPosition(receiverId, receiverPosition);
             vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU);
-            concatText(String.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
+            concatText(string.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
                                      xSides, zFront, yHeight, receiverId));
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
         }
 
-        public void concatText(String textToAppend)
+        public void concatText(string textToAppend)
         {
 
             string timestamp = DateTime.Now.ToString(@"dd MMMM yyyy HH:mm:ss - ");
 
-            textBox.Text = String.Concat(textBox.Text, "\r\n", timestamp);
+            textBox.Text = string.Concat(textBox.Text, "\r\n", timestamp);
 
-            textBox.Text = String.Concat(textBox.Text, textToAppend);
+            textBox.Text = string.Concat(textBox.Text, textToAppend);
 
             textBox.SelectionStart = textBox.Text.Length;
             textBox.ScrollToCaret();
@@ -197,7 +199,7 @@ namespace perSONA
         {
 
 
-            String[] filePaths;
+            string[] filePaths;
             var fileNames = Directory.GetFiles(@"data").Select(Path.GetFileName);
            
             filePaths = Directory.GetFiles(@speechFolder, "*.wav");
@@ -208,17 +210,17 @@ namespace perSONA
             // Generate a random index less than the size of the array.  
             int index = rand.Next(filePaths.Length);
 
-            String speechFile = filePaths[index];
-            String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+            string speechFile = filePaths[index];
+
 
             createAcousticScene(speechFile, noiseFile);
 
             string title = getTitle(speechFile);
-            String[] words = title.Split(null);
+            string[] words = title.Split(null);
 
             listBox1.DataSource = words;
             listBox1.ClearSelected();
-            concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
+            concatText(string.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
         }
 
         private void play2_Click(object sender, EventArgs e)
@@ -240,7 +242,7 @@ namespace perSONA
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
 
-            label1.Text = String.Format("SNR: {0} dB", trackBar1.Value);
+            label1.Text = string.Format("SNR: {0} dB", trackBar1.Value);
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -254,15 +256,17 @@ namespace perSONA
         }
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            label2.Text = String.Format("Volume: {0} %", trackBar2.Value);
+            label2.Text = string.Format("Volume: {0} %", trackBar2.Value);
+            Properties.Settings.Default.USERVOLUME = trackBar2.Value;
+            concatText(string.Format("Changed default volume to {0} % ", trackBar2.Value));
         }
 
         private void getFolder_Click(object sender, EventArgs e)
         {
             speechFolder = getDatabaseFolder();
             this.TopMost = true;
-            String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-            String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
+            string[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            string[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
             listBox2.DataSource = fileNames;
         }
 
@@ -312,12 +316,12 @@ namespace perSONA
             vA.SetSoundSourceSoundPower(noiseSource, powerNoise);
             vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
 
-            concatText(String.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward",
+            concatText(string.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward",
                        xSides, zFront, yHeight, speechSource));
-
-            concatText(String.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %",
+            concatText("Selected Speech: " + Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem)));
+            concatText(string.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %",
                        powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
-
+            concatText("Selected Noise: " + noiseFile);
             vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
             Thread.Sleep(3000);
@@ -351,7 +355,7 @@ namespace perSONA
         {
             double answer = listBox1.SelectedItems.Count;
             double totalWords = listBox1.Items.Count;
-            textBox2.Text = String.Format("Answer {0}/{1}= {2}% ", answer, totalWords, 100.0 * (answer / totalWords));
+            textBox2.Text = string.Format("Answer {0}/{1}= {2}% ", answer, totalWords, 100.0 * (answer / totalWords));
 
         }
 
@@ -365,9 +369,9 @@ namespace perSONA
         {
             string title = getTitle(speechFile);
 
-            if (!String.IsNullOrEmpty(title))
+            if (!string.IsNullOrEmpty(title))
             {
-                String[] words = title.Split(null);
+                string[] words = title.Split(null);
                 listbox.DataSource = words;
                 listbox.ClearSelected();
                 //concatText(String.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
@@ -380,7 +384,7 @@ namespace perSONA
                 var result = MessageBox.Show(message, caption,
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
-                concatText(String.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
+                concatText(string.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
 
             }
         }
@@ -388,8 +392,8 @@ namespace perSONA
         private void button1_Click(object sender, EventArgs e)
         {
 
-            String speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
-            String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
+            string speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
+
             concatText(speechFile);
             createAcousticScene(speechFile, noiseFile);
 
@@ -429,7 +433,7 @@ namespace perSONA
             int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
             vA.SetSoundSourceDirectivity(speechSource, humanDirectivity);
 
-            concatText(String.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
+            concatText(string.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
                                      speechSource, Path.GetFileName(speechFile),
                                      noiseSource, Path.GetFileName(noiseFile)));
         }
@@ -572,7 +576,7 @@ namespace perSONA
                                                     speechFolder, noiseFile, 
                                                     textBox1.Text, snr);
 
-            concatText(String.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}",
+            concatText(string.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}",
                             speechTest.Label, radiusSpeech, angleSpeech, radiusNoise, angleNoise));
             new speechIterTestForm(speechTest, this).Show();
 
@@ -589,7 +593,9 @@ namespace perSONA
             }
             concatText(iterativeString);
             string[] logText = textBox.Text.Split('\n');
-            File.WriteAllLines(@"data\testlog.txt", logText);
+            concatText(string.Format("Saved logs at {0}", Properties.Settings.Default.RESULTS_FOLDER));
+            File.WriteAllLines(string.Format("{0}/testlog-{1}.txt", 
+                                Properties.Settings.Default.RESULTS_FOLDER,DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss")), logText);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -676,7 +682,9 @@ namespace perSONA
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            noiseFile = Path.Combine(noiseFolder,comboBox3.SelectedText.ToString()); 
+            noiseFile = Path.Combine(noiseFolder,comboBox3.SelectedItem.ToString());
+
+            concatText("Selected Noise: " + noiseFile);
         }
 
         private void testSetup_Click(object sender, EventArgs e)
@@ -701,6 +709,16 @@ namespace perSONA
         {
             string testTipe = "Speech Right";
             new testSetup(this, testTipe).Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form2(this).Show();
         }
     }
 }

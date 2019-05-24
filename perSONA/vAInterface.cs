@@ -17,7 +17,7 @@ namespace perSONA
         void createAcousticScene(string speechFile, string noiseFile);
         string getTitle(string speechFile);
         TimeSpan getDuration(string speechFile);
-        void concatText(String textToAppend);
+        void concatText(string textToAppend);
         VANet getVa();
         void plotSceneGraph(ZedGraph.ZedGraphControl graph, double[] radius, double[] angle);
         void fillWords(string speechFile, ListBox listbox);

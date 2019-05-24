@@ -26,12 +26,12 @@ namespace perSONA
 
             this.vAInterface = vAInterface;
 
-            String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-            String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
+            string[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            string[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
             listBox2.DataSource = fileNames;
             comboBox3.DataSource = Directory.GetFiles(noiseFolder).Select(Path.GetFileName).ToArray();
             comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
-            String[] procedureList = { "2-down-1-up", "1-down-1-up" };
+            string[] procedureList = { "2-down-1-up", "1-down-1-up" };
             comboBox1.DataSource = procedureList;
             comboBox1.SelectedItem = comboBox1.Items.IndexOf("2-down-1-up");
             vAInterface.plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
@@ -98,8 +98,8 @@ namespace perSONA
 
             speechFolder = vAInterface.getDatabaseFolder();
             this.TopMost = true;
-            String[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
-            String[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
+            string[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            string[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
             listBox2.DataSource = fileNames;
         }
 
