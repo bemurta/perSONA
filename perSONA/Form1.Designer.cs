@@ -182,7 +182,7 @@
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(133, 219);
-            this.trackBar1.Maximum = 20;
+            this.trackBar1.Maximum = 40;
             this.trackBar1.Minimum = -40;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(104, 45);
@@ -687,14 +687,14 @@
             // resultsFolderToolStripMenuItem
             // 
             this.resultsFolderToolStripMenuItem.Name = "resultsFolderToolStripMenuItem";
-            this.resultsFolderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resultsFolderToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.resultsFolderToolStripMenuItem.Text = "Results folder";
             this.resultsFolderToolStripMenuItem.Click += new System.EventHandler(this.resultsFolderToolStripMenuItem_Click);
             // 
             // vASettingsToolStripMenuItem
             // 
             this.vASettingsToolStripMenuItem.Name = "vASettingsToolStripMenuItem";
-            this.vASettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vASettingsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.vASettingsToolStripMenuItem.Text = "VA settings";
             // 
             // helpToolStripMenuItem

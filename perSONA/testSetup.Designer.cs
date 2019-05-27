@@ -198,13 +198,13 @@
             this.groupBox5.Size = new System.Drawing.Size(230, 44);
             this.groupBox5.TabIndex = 43;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Initial Signal to Noise Ratio";
+            this.groupBox5.Text = "Initial Signal to Noise Ratio (40 = no noise)";
             // 
             // initialSnr
             // 
             this.initialSnr.Location = new System.Drawing.Point(6, 18);
             this.initialSnr.Maximum = new decimal(new int[] {
-            20,
+            40,
             0,
             0,
             0});

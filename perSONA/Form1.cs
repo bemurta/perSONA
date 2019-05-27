@@ -44,6 +44,7 @@ namespace perSONA
             };
 
             trackBar2.Value = Properties.Settings.Default.USERVOLUME;
+            label2.Text = string.Format("Volume: {0} %", trackBar2.Value);
 
             string[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
             string[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
@@ -51,6 +52,8 @@ namespace perSONA
             comboBox3.DataSource = Directory.GetFiles(@noiseFolder).Select(Path.GetFileName).ToArray();
             comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
             plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+            textBox.Text = "Started perSONA";
+            concatText("New Session started.");
         }
 
         ~Form1()
@@ -153,7 +156,7 @@ namespace perSONA
 
         private void reset_Click(object sender, EventArgs e)
         {
-            textBox.Text = "Reset scene";
+            concatText("Reset scene");
 
             vA.Reset();
         }
@@ -241,8 +244,10 @@ namespace perSONA
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-
-            label1.Text = string.Format("SNR: {0} dB", trackBar1.Value);
+            if (trackBar1.Value < 40)
+                label1.Text = string.Format("SNR: {0} dB", trackBar1.Value);
+            else
+                label1.Text = string.Format("SNR: INF", trackBar1.Value);
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -304,8 +309,15 @@ namespace perSONA
 
             double normalizationFactor = trackBar2.Value / 100.0;
             double powerSpeech = 0.25 * normalizationFactor;
+
             double linRatio = Math.Pow(10.0, (snr / 20.0));
             double powerNoise = powerSpeech / linRatio;
+
+            if (snr == 40)
+            {
+                powerNoise = 0;
+
+            }
 
             vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
             vA.SetSoundSourcePosition(noiseSource, new VAVec3(0, 1.7, radius));
