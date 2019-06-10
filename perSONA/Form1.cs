@@ -732,5 +732,10 @@ namespace perSONA
         {
             new Form2(this).Show();
         }
+
+        private void patientAreaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form3().Show();
+        }
     }
 }

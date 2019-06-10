@@ -83,6 +83,7 @@
             this.resultsFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vASettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.patientAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -668,7 +669,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.helpToolStripMenuItem,
+            this.patientAreaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(837, 24);
@@ -704,6 +706,13 @@
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
+            // patientAreaToolStripMenuItem
+            // 
+            this.patientAreaToolStripMenuItem.Name = "patientAreaToolStripMenuItem";
+            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.patientAreaToolStripMenuItem.Text = "Patient area";
+            this.patientAreaToolStripMenuItem.Click += new System.EventHandler(this.patientAreaToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -720,7 +729,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "perSona";
+            this.Text = "perSONA 1.0.4";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
@@ -802,6 +811,7 @@
         private System.Windows.Forms.ToolStripMenuItem resultsFolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vASettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem patientAreaToolStripMenuItem;
     }
 }
 
