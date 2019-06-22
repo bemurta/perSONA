@@ -50,9 +50,22 @@ namespace perSONA
                 Properties.Settings.Default.RESULTS_FOLDER = textBox1.Text;
                 Properties.Settings.Default.Save();
             }
-            catch (Exception)
+            catch (DirectoryNotFoundException)
             {
-
+                try
+                {
+                    string dir = textBox1.Text;
+                    Directory.CreateDirectory(dir);
+                }
+                catch (Exception)
+                {
+                    const string message =
+                   "Error ocurred. Couldn't set a results folder, reseting to default.";
+                    const string caption = "Incorrect database format. Metadata required!";
+                    var result = MessageBox.Show(message, caption,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
             Close();
         }

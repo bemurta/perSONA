@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,8 @@ namespace perSONA
 
         public Form1()
         {
+
+
             InitializeComponent();
             vA = new VANet();
             this.process = new Process
@@ -54,6 +57,20 @@ namespace perSONA
             plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
             textBox.Text = "Started perSONA";
             concatText("New Session started.");
+
+
+
+            try
+            {
+                updatePatientList();
+            }
+            catch (Exception)
+            {
+
+                patientBox.Text = "No previously selected patients";
+
+            }
+            
         }
 
         ~Form1()
@@ -87,6 +104,14 @@ namespace perSONA
                 sw.Write(e.Message);
                 return false;
             }
+        }
+
+        public void updatePatientList()
+        {
+            string patientDir = string.Format("{0}/patients", Properties.Settings.Default.RESULTS_FOLDER);
+            string[] patients = Directory.GetFiles(patientDir, "*.json");
+            string[] patientNames = patients.Select(Path.GetFileNameWithoutExtension).ToArray();
+            patientBox.DataSource = patientNames;
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)
@@ -605,9 +630,67 @@ namespace perSONA
             }
             concatText(iterativeString);
             string[] logText = textBox.Text.Split('\n');
+            string testJson = Newtonsoft.Json.JsonConvert.SerializeObject(test);
+
+            string timestamp = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
+
             concatText(string.Format("Saved logs at {0}", Properties.Settings.Default.RESULTS_FOLDER));
-            File.WriteAllLines(string.Format("{0}/testlog-{1}.txt", 
-                                Properties.Settings.Default.RESULTS_FOLDER,DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss")), logText);
+            concatText(testJson);
+
+            updatePatientTest(test.PatientName, timestamp);
+
+            try
+            {
+                File.WriteAllText(string.Format("{0}/tests/test-{1}.json",
+                                Properties.Settings.Default.RESULTS_FOLDER,
+                                timestamp), testJson);
+
+            }
+            catch (DirectoryNotFoundException)
+            {
+                string dir = string.Format("{0}/tests", Properties.Settings.Default.RESULTS_FOLDER);
+                Directory.CreateDirectory(dir);
+                File.WriteAllText(string.Format("{0}/tests/test-{1}.json",
+                                Properties.Settings.Default.RESULTS_FOLDER,
+                                timestamp), testJson);
+            }
+
+            try
+            {
+                File.WriteAllLines(string.Format("{0}/logs/testlog-{1}.txt",
+                                    Properties.Settings.Default.RESULTS_FOLDER,
+                                    DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss")), logText);
+
+            }
+            catch (DirectoryNotFoundException)
+            {
+                string dir = string.Format("{0}/logs", Properties.Settings.Default.RESULTS_FOLDER);
+                Directory.CreateDirectory(dir);
+                File.WriteAllLines(string.Format("{0}/logs/testlog-{1}.txt",
+                                    Properties.Settings.Default.RESULTS_FOLDER,
+                                    DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss")), logText);
+
+            }
+
+
+        }
+
+        public void updatePatientTest(string patientName, string timestamp)
+        {
+            string jsonFile = string.Format("{0}/patients/{1}.json",
+                Properties.Settings.Default.RESULTS_FOLDER,
+                patientBox.SelectedItem.ToString());
+            string json = File.ReadAllText(jsonFile);
+            Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(json);
+
+
+            List<string> tests = patient.Tests.OfType<string>().ToList();
+
+            tests.Add(timestamp);
+            patient.Tests = tests.ToArray();
+            concatText("All tests: "+string.Join(", ", tests.ToArray()));
+            string output = Newtonsoft.Json.JsonConvert.SerializeObject(patient);
+            File.WriteAllText(jsonFile, output);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -702,30 +785,34 @@ namespace perSONA
         private void testSetup_Click(object sender, EventArgs e)
         {
             string testTipe = "Default";
-            new testSetup(this, testTipe).Show();
+            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
+            new testSetup(this, testTipe, subjects).Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             string testTipe = "Speech Left";
-            new testSetup(this, testTipe).Show();
+            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
+            new testSetup(this, testTipe, subjects).Show();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             string testTipe = "Speech Front";
-            new testSetup(this, testTipe).Show();
+            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
+            new testSetup(this, testTipe, subjects).Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             string testTipe = "Speech Right";
-            new testSetup(this, testTipe).Show();
+            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
+            new testSetup(this, testTipe, subjects).Show();
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new Form4().Show();
         }
 
         private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -735,7 +822,31 @@ namespace perSONA
 
         private void patientAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new Form3(this).Show();
+        }
+
+        private void audioDatabaseEditorAreaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new dbForm(this).Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new Form3(this).Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string jsonFile = string.Format("{0}/patients/{1}.json",
+                Properties.Settings.Default.RESULTS_FOLDER,
+                patientBox.SelectedItem.ToString());
+            concatText(jsonFile);
+
+            var patientJson = File.ReadAllText(jsonFile);
+            Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(patientJson);
+
+            new Form3(this, patient).Show();
+
         }
     }
 }

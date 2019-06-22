@@ -18,11 +18,15 @@ namespace perSONA
         private readonly IvAInterface vAInterface;
         string speechFolder = "data/Sounds/Speech/Alcaim1_/F/F0001";
         string noiseFolder = "data/Sounds/Noise";
+        string[] subjects;
 
-        public testSetup(IvAInterface vAInterface, string testTipe)
+        public testSetup(IvAInterface vAInterface, string testTipe, string[] subjects)
         {
 
             InitializeComponent();
+            this.subjects = subjects;
+            applicatorLabel.Text = subjects[0];
+            patientLabel.Text = subjects[1];
 
             this.vAInterface = vAInterface;
 
@@ -86,7 +90,8 @@ namespace perSONA
                                                     speechFolder, noiseFile,
                                                     textBox1.Text, snr,
                                                     presentingLogic,
-                                                    acceptanceRule/100, signalToNoiseStep);
+                                                    acceptanceRule/100, signalToNoiseStep,
+                                                    subjects[0], subjects[1]);
             string testString = speechTest.ToString();
             vAInterface.concatText(testString);
             new speechIterTestForm(speechTest, vAInterface).Show();

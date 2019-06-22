@@ -21,6 +21,7 @@ namespace perSONA
         VANet getVa();
         void plotSceneGraph(ZedGraph.ZedGraphControl graph, double[] radius, double[] angle);
         void fillWords(string speechFile, ListBox listbox);
+        void updatePatientList();
 
     }
 }

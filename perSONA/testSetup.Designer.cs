@@ -58,6 +58,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.patientLabel = new System.Windows.Forms.Label();
+            this.applicatorLabel = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stepSnr)).BeginInit();
@@ -77,6 +81,10 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.patientLabel);
+            this.panel2.Controls.Add(this.applicatorLabel);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.zedGraphControl1);
             this.panel2.Controls.Add(this.groupBox10);
             this.panel2.Controls.Add(this.groupBox8);
@@ -93,14 +101,14 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(28, 37);
+            this.panel2.Location = new System.Drawing.Point(28, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(533, 529);
+            this.panel2.Size = new System.Drawing.Size(533, 554);
             this.panel2.TabIndex = 41;
             // 
             // zedGraphControl1
             // 
-            this.zedGraphControl1.Location = new System.Drawing.Point(14, 275);
+            this.zedGraphControl1.Location = new System.Drawing.Point(14, 281);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
             this.zedGraphControl1.ScrollMaxX = 0D;
@@ -116,7 +124,7 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.stepSnr);
-            this.groupBox10.Location = new System.Drawing.Point(287, 414);
+            this.groupBox10.Location = new System.Drawing.Point(287, 419);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(230, 44);
             this.groupBox10.TabIndex = 45;
@@ -149,7 +157,7 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.numericRule);
-            this.groupBox8.Location = new System.Drawing.Point(287, 304);
+            this.groupBox8.Location = new System.Drawing.Point(287, 309);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(230, 44);
             this.groupBox8.TabIndex = 44;
@@ -173,7 +181,7 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.comboBox1);
-            this.groupBox6.Location = new System.Drawing.Point(287, 243);
+            this.groupBox6.Location = new System.Drawing.Point(287, 248);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(230, 44);
             this.groupBox6.TabIndex = 44;
@@ -193,7 +201,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.initialSnr);
-            this.groupBox5.Location = new System.Drawing.Point(287, 359);
+            this.groupBox5.Location = new System.Drawing.Point(287, 364);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(230, 44);
             this.groupBox5.TabIndex = 43;
@@ -221,7 +229,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.noiseDistance);
-            this.groupBox4.Location = new System.Drawing.Point(287, 187);
+            this.groupBox4.Location = new System.Drawing.Point(287, 192);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(230, 44);
             this.groupBox4.TabIndex = 42;
@@ -261,7 +269,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.speechDistance);
-            this.groupBox3.Location = new System.Drawing.Point(287, 77);
+            this.groupBox3.Location = new System.Drawing.Point(287, 82);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(230, 44);
             this.groupBox3.TabIndex = 41;
@@ -303,7 +311,7 @@
             this.groupBox2.Controls.Add(this.noiseLeft);
             this.groupBox2.Controls.Add(this.noiseRight);
             this.groupBox2.Controls.Add(this.noiseFront);
-            this.groupBox2.Location = new System.Drawing.Point(287, 132);
+            this.groupBox2.Location = new System.Drawing.Point(287, 137);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(230, 44);
             this.groupBox2.TabIndex = 40;
@@ -350,7 +358,7 @@
             this.groupBox1.Controls.Add(this.speechLeft);
             this.groupBox1.Controls.Add(this.speechRight);
             this.groupBox1.Controls.Add(this.speechFront);
-            this.groupBox1.Location = new System.Drawing.Point(287, 22);
+            this.groupBox1.Location = new System.Drawing.Point(287, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(230, 44);
             this.groupBox1.TabIndex = 39;
@@ -394,7 +402,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(287, 469);
+            this.button4.Location = new System.Drawing.Point(287, 474);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(230, 33);
             this.button4.TabIndex = 26;
@@ -405,7 +413,7 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(14, 114);
+            this.listBox2.Location = new System.Drawing.Point(14, 120);
             this.listBox2.Name = "listBox2";
             this.listBox2.ScrollAlwaysVisible = true;
             this.listBox2.Size = new System.Drawing.Size(230, 108);
@@ -413,7 +421,7 @@
             // 
             // getFolder
             // 
-            this.getFolder.Location = new System.Drawing.Point(14, 84);
+            this.getFolder.Location = new System.Drawing.Point(14, 90);
             this.getFolder.Name = "getFolder";
             this.getFolder.Size = new System.Drawing.Size(230, 23);
             this.getFolder.TabIndex = 15;
@@ -424,14 +432,14 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(14, 245);
+            this.comboBox3.Location = new System.Drawing.Point(14, 251);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(230, 21);
             this.comboBox3.TabIndex = 29;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 43);
+            this.textBox1.Location = new System.Drawing.Point(14, 64);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 20);
             this.textBox1.TabIndex = 30;
@@ -441,7 +449,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(85, 27);
+            this.label6.Location = new System.Drawing.Point(85, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 34;
@@ -450,11 +458,47 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(91, 229);
+            this.label5.Location = new System.Drawing.Point(91, 235);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 33;
             this.label5.Text = "Noise signal";
+            // 
+            // patientLabel
+            // 
+            this.patientLabel.AutoSize = true;
+            this.patientLabel.Location = new System.Drawing.Point(71, 30);
+            this.patientLabel.Name = "patientLabel";
+            this.patientLabel.Size = new System.Drawing.Size(54, 13);
+            this.patientLabel.TabIndex = 50;
+            this.patientLabel.Text = "Aplicador:";
+            // 
+            // applicatorLabel
+            // 
+            this.applicatorLabel.AutoSize = true;
+            this.applicatorLabel.Location = new System.Drawing.Point(71, 6);
+            this.applicatorLabel.Name = "applicatorLabel";
+            this.applicatorLabel.Size = new System.Drawing.Size(54, 13);
+            this.applicatorLabel.TabIndex = 49;
+            this.applicatorLabel.Text = "Aplicador:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(11, 30);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 48;
+            this.label10.Text = "Paciente:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(11, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "Aplicador:";
             // 
             // testSetup
             // 
@@ -516,5 +560,9 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.ComboBox comboBox1;
         private ZedGraph.ZedGraphControl zedGraphControl1;
+        private System.Windows.Forms.Label patientLabel;
+        private System.Windows.Forms.Label applicatorLabel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -21,6 +21,7 @@ namespace perSONA
         public bool currentStreak = false;
         private double actualSNR;
         double[] signalToNoiseArray;
+        List<string> iteractiveResponseTime;
         DateTime tryalStartTime;
 
         public VANet vA { get; private set; }
@@ -29,6 +30,9 @@ namespace perSONA
         {
 
             InitializeComponent();
+
+            patientLabel.Text = test.PatientName;
+            applicatorLabel.Text = test.Applicator;
 
             tryalStartTime = DateTime.Now;
             timer1.Tick += new EventHandler(timer1_Tick);
@@ -63,7 +67,7 @@ namespace perSONA
 
             signalToNoiseArray = new double[] {actualSNR};
             updateIterationGraph(zedGraphControl1.GraphPane, signalToNoiseArray);
-
+            iteractiveResponseTime = new List<string> { };
 
 
         }
@@ -223,8 +227,8 @@ namespace perSONA
 
             actualSNR = getNextSNR(actualSNR, test.SignalToNoiseStep);
 
-            
-            vAInterface.concatText(string.Format("{0} - response time: {1}", string.Join(",", testWordsList.Items.Cast<string>()), currentTryal.Text));
+            string responseTime = currentTryal.Text;
+            vAInterface.concatText(string.Format("{0} - response time: {1}", string.Join(",", testWordsList.Items.Cast<string>()), responseTime));
 
             if (filenameList.SelectedIndex + 1 < filenameList.Items.Count)
             {
@@ -239,6 +243,7 @@ namespace perSONA
                 totalWordsText.Text = string.Format("{0}", filenameList.Items.Count);
 
                 signalToNoiseArray =  signalToNoiseArray.Concat(new double[] { actualSNR }).ToArray();
+                iteractiveResponseTime.Add(responseTime);
                 textBox3.Text = string.Format("{0}", actualSNR);
                 updateIterationGraph(zedGraphControl1.GraphPane, signalToNoiseArray);
             }
@@ -247,8 +252,20 @@ namespace perSONA
                 test.IterativeSNR = signalToNoiseArray;
 
                 detailsBox.AppendText("/r/n Finished list");
+                test.TotalDuration = continuousTimerText.Text;
+                test.IterativeDuration = iteractiveResponseTime.ToArray();
                 vAInterface.addCompletedTest(this.test);
-                vAInterface.concatText(string.Format("Elapsed time: {0}", continuousTimerText.Text));
+                vAInterface.concatText(string.Format("Elapsed time: {0}", test.TotalDuration));
+
+                string completedTestMessage = string.Format(
+                    "Avaliação finalizada. SNR de convergência: {0} dB, Número de iterações: {1}, duração total: {2}",
+                    actualSNR, signalToNoiseArray.Length, test.TotalDuration);
+
+                string message = completedTestMessage;
+                const string caption = "Fim da avaliação";
+                var result = MessageBox.Show(message, caption,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
                 this.Close();
             }
 

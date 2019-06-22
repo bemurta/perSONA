@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.all_incorrect = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -56,21 +55,27 @@
             this.playCurrentScene = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.applicatorLabel = new System.Windows.Forms.Label();
+            this.patientLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // testWordsList
             // 
             this.testWordsList.FormattingEnabled = true;
-            this.testWordsList.Location = new System.Drawing.Point(31, 198);
+            this.testWordsList.Location = new System.Drawing.Point(31, 237);
             this.testWordsList.Name = "testWordsList";
             this.testWordsList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.testWordsList.Size = new System.Drawing.Size(191, 238);
+            this.testWordsList.Size = new System.Drawing.Size(191, 199);
             this.testWordsList.TabIndex = 20;
             this.testWordsList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // all_correct
             // 
-            this.all_correct.Location = new System.Drawing.Point(231, 238);
+            this.all_correct.Location = new System.Drawing.Point(231, 273);
             this.all_correct.Name = "all_correct";
             this.all_correct.Size = new System.Drawing.Size(112, 23);
             this.all_correct.TabIndex = 21;
@@ -135,7 +140,7 @@
             // 
             // all_incorrect
             // 
-            this.all_incorrect.Location = new System.Drawing.Point(231, 267);
+            this.all_incorrect.Location = new System.Drawing.Point(231, 302);
             this.all_incorrect.Name = "all_incorrect";
             this.all_incorrect.Size = new System.Drawing.Size(112, 23);
             this.all_incorrect.TabIndex = 27;
@@ -143,20 +148,10 @@
             this.all_incorrect.UseVisualStyleBackColor = true;
             this.all_incorrect.Click += new System.EventHandler(this.all_incorrect_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(231, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 23);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Compute";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(244, 331);
+            this.label5.Location = new System.Drawing.Point(244, 371);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 30;
@@ -167,7 +162,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(236, 295);
+            this.label6.Location = new System.Drawing.Point(236, 335);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 13);
             this.label6.TabIndex = 29;
@@ -175,14 +170,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 311);
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(231, 351);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 20);
             this.textBox1.TabIndex = 31;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(231, 346);
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(231, 386);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(112, 20);
             this.textBox2.TabIndex = 32;
@@ -220,10 +217,10 @@
             // 
             // detailsBox
             // 
-            this.detailsBox.Location = new System.Drawing.Point(231, 17);
+            this.detailsBox.Location = new System.Drawing.Point(231, 80);
             this.detailsBox.Multiline = true;
             this.detailsBox.Name = "detailsBox";
-            this.detailsBox.Size = new System.Drawing.Size(112, 175);
+            this.detailsBox.Size = new System.Drawing.Size(112, 147);
             this.detailsBox.TabIndex = 36;
             // 
             // zedGraphControl2
@@ -243,6 +240,7 @@
             // 
             // currentTryal
             // 
+            this.currentTryal.Enabled = false;
             this.currentTryal.Location = new System.Drawing.Point(400, 375);
             this.currentTryal.Name = "currentTryal";
             this.currentTryal.Size = new System.Drawing.Size(112, 20);
@@ -250,6 +248,7 @@
             // 
             // streakText
             // 
+            this.streakText.Enabled = false;
             this.streakText.Location = new System.Drawing.Point(400, 246);
             this.streakText.Name = "streakText";
             this.streakText.Size = new System.Drawing.Size(112, 20);
@@ -257,6 +256,7 @@
             // 
             // computedAudioText
             // 
+            this.computedAudioText.Enabled = false;
             this.computedAudioText.Location = new System.Drawing.Point(400, 285);
             this.computedAudioText.Name = "computedAudioText";
             this.computedAudioText.Size = new System.Drawing.Size(112, 20);
@@ -264,6 +264,7 @@
             // 
             // totalWordsText
             // 
+            this.totalWordsText.Enabled = false;
             this.totalWordsText.Location = new System.Drawing.Point(400, 321);
             this.totalWordsText.Name = "totalWordsText";
             this.totalWordsText.Size = new System.Drawing.Size(112, 20);
@@ -271,6 +272,7 @@
             // 
             // continuousTimerText
             // 
+            this.continuousTimerText.Enabled = false;
             this.continuousTimerText.Location = new System.Drawing.Point(400, 414);
             this.continuousTimerText.Name = "continuousTimerText";
             this.continuousTimerText.Size = new System.Drawing.Size(112, 20);
@@ -280,16 +282,16 @@
             // 
             this.filenameList.Enabled = false;
             this.filenameList.FormattingEnabled = true;
-            this.filenameList.Location = new System.Drawing.Point(31, 19);
+            this.filenameList.Location = new System.Drawing.Point(31, 80);
             this.filenameList.Name = "filenameList";
             this.filenameList.ScrollAlwaysVisible = true;
-            this.filenameList.Size = new System.Drawing.Size(191, 173);
+            this.filenameList.Size = new System.Drawing.Size(191, 147);
             this.filenameList.TabIndex = 44;
             this.filenameList.SelectedIndexChanged += new System.EventHandler(this.filenameList_SelectedIndexChanged);
             // 
             // playCurrentScene
             // 
-            this.playCurrentScene.Location = new System.Drawing.Point(231, 198);
+            this.playCurrentScene.Location = new System.Drawing.Point(231, 238);
             this.playCurrentScene.Name = "playCurrentScene";
             this.playCurrentScene.Size = new System.Drawing.Size(112, 23);
             this.playCurrentScene.TabIndex = 45;
@@ -299,6 +301,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(400, 207);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(112, 20);
@@ -309,11 +312,59 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.patientLabel);
+            this.panel1.Controls.Add(this.applicatorLabel);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Location = new System.Drawing.Point(31, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(312, 62);
+            this.panel1.TabIndex = 47;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Aplicador:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Paciente:";
+            // 
+            // applicatorLabel
+            // 
+            this.applicatorLabel.AutoSize = true;
+            this.applicatorLabel.Location = new System.Drawing.Point(75, 15);
+            this.applicatorLabel.Name = "applicatorLabel";
+            this.applicatorLabel.Size = new System.Drawing.Size(54, 13);
+            this.applicatorLabel.TabIndex = 26;
+            this.applicatorLabel.Text = "Aplicador:";
+            // 
+            // patientLabel
+            // 
+            this.patientLabel.AutoSize = true;
+            this.patientLabel.Location = new System.Drawing.Point(75, 39);
+            this.patientLabel.Name = "patientLabel";
+            this.patientLabel.Size = new System.Drawing.Size(54, 13);
+            this.patientLabel.TabIndex = 27;
+            this.patientLabel.Text = "Aplicador:";
+            // 
             // speechIterTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.playCurrentScene);
             this.Controls.Add(this.filenameList);
@@ -331,7 +382,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.all_incorrect);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -342,6 +392,8 @@
             this.Controls.Add(this.testWordsList);
             this.Name = "speechIterTestForm";
             this.Text = "Form2";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,7 +409,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button all_incorrect;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
@@ -376,5 +427,10 @@
         private System.Windows.Forms.Button playCurrentScene;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label patientLabel;
+        private System.Windows.Forms.Label applicatorLabel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
