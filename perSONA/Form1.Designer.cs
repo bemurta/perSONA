@@ -90,13 +90,13 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.applicatorBox = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.patientBox = new System.Windows.Forms.ListBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.patientBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -795,6 +795,14 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Paciente";
             // 
+            // patientBox
+            // 
+            this.patientBox.FormattingEnabled = true;
+            this.patientBox.Location = new System.Drawing.Point(12, 19);
+            this.patientBox.Name = "patientBox";
+            this.patientBox.Size = new System.Drawing.Size(239, 160);
+            this.patientBox.TabIndex = 46;
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(268, 18);
@@ -857,14 +865,6 @@
             this.tabPage1.Text = "Test Area";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // patientBox
-            // 
-            this.patientBox.FormattingEnabled = true;
-            this.patientBox.Location = new System.Drawing.Point(12, 19);
-            this.patientBox.Name = "patientBox";
-            this.patientBox.Size = new System.Drawing.Size(239, 160);
-            this.patientBox.TabIndex = 46;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -876,7 +876,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "perSONA 1.0.4";
+            this.Text = "perSONA 1.1.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
