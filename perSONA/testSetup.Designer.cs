@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.patientLabel = new System.Windows.Forms.Label();
+            this.applicatorLabel = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.stepSnr = new System.Windows.Forms.NumericUpDown();
@@ -58,10 +62,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.patientLabel = new System.Windows.Forms.Label();
-            this.applicatorLabel = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stepSnr)).BeginInit();
@@ -106,6 +106,42 @@
             this.panel2.Size = new System.Drawing.Size(533, 554);
             this.panel2.TabIndex = 41;
             // 
+            // patientLabel
+            // 
+            this.patientLabel.AutoSize = true;
+            this.patientLabel.Location = new System.Drawing.Point(71, 30);
+            this.patientLabel.Name = "patientLabel";
+            this.patientLabel.Size = new System.Drawing.Size(54, 13);
+            this.patientLabel.TabIndex = 50;
+            this.patientLabel.Text = "Aplicador:";
+            // 
+            // applicatorLabel
+            // 
+            this.applicatorLabel.AutoSize = true;
+            this.applicatorLabel.Location = new System.Drawing.Point(71, 6);
+            this.applicatorLabel.Name = "applicatorLabel";
+            this.applicatorLabel.Size = new System.Drawing.Size(54, 13);
+            this.applicatorLabel.TabIndex = 49;
+            this.applicatorLabel.Text = "Aplicador:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(11, 30);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 48;
+            this.label10.Text = "Paciente:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(11, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "Aplicador:";
+            // 
             // zedGraphControl1
             // 
             this.zedGraphControl1.Location = new System.Drawing.Point(14, 281);
@@ -129,7 +165,7 @@
             this.groupBox10.Size = new System.Drawing.Size(230, 44);
             this.groupBox10.TabIndex = 45;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Signal to Noise Ratio step";
+            this.groupBox10.Text = "Passo de SNR";
             // 
             // stepSnr
             // 
@@ -162,7 +198,7 @@
             this.groupBox8.Size = new System.Drawing.Size(230, 44);
             this.groupBox8.TabIndex = 44;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Acceptance rule percentage";
+            this.groupBox8.Text = "Critério de aceitação (% de acertos)";
             // 
             // numericRule
             // 
@@ -186,7 +222,7 @@
             this.groupBox6.Size = new System.Drawing.Size(230, 44);
             this.groupBox6.TabIndex = 44;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Procedure";
+            this.groupBox6.Text = "Procedimento";
             // 
             // comboBox1
             // 
@@ -206,7 +242,7 @@
             this.groupBox5.Size = new System.Drawing.Size(230, 44);
             this.groupBox5.TabIndex = 43;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Initial Signal to Noise Ratio (40 = no noise)";
+            this.groupBox5.Text = "SNR inicial";
             // 
             // initialSnr
             // 
@@ -234,7 +270,7 @@
             this.groupBox4.Size = new System.Drawing.Size(230, 44);
             this.groupBox4.TabIndex = 42;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Noise distance";
+            this.groupBox4.Text = "Distância da fonte sonora de ruído [metros]";
             // 
             // noiseDistance
             // 
@@ -274,7 +310,7 @@
             this.groupBox3.Size = new System.Drawing.Size(230, 44);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Speech distance";
+            this.groupBox3.Text = "Distância da fonte sonora da fala [metros]";
             // 
             // speechDistance
             // 
@@ -316,27 +352,27 @@
             this.groupBox2.Size = new System.Drawing.Size(230, 44);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Noise souce direction";
+            this.groupBox2.Text = "Localização do sinal de ruído";
             // 
             // noiseLeft
             // 
             this.noiseLeft.AutoSize = true;
             this.noiseLeft.Location = new System.Drawing.Point(6, 19);
             this.noiseLeft.Name = "noiseLeft";
-            this.noiseLeft.Size = new System.Drawing.Size(43, 17);
+            this.noiseLeft.Size = new System.Drawing.Size(70, 17);
             this.noiseLeft.TabIndex = 2;
-            this.noiseLeft.Text = "Left";
+            this.noiseLeft.Text = "Esquerda";
             this.noiseLeft.UseVisualStyleBackColor = true;
             this.noiseLeft.CheckedChanged += new System.EventHandler(this.noiseLeft_CheckedChanged);
             // 
             // noiseRight
             // 
             this.noiseRight.AutoSize = true;
-            this.noiseRight.Location = new System.Drawing.Point(174, 19);
+            this.noiseRight.Location = new System.Drawing.Point(167, 19);
             this.noiseRight.Name = "noiseRight";
-            this.noiseRight.Size = new System.Drawing.Size(50, 17);
+            this.noiseRight.Size = new System.Drawing.Size(55, 17);
             this.noiseRight.TabIndex = 1;
-            this.noiseRight.Text = "Right";
+            this.noiseRight.Text = "Direita";
             this.noiseRight.UseVisualStyleBackColor = true;
             this.noiseRight.CheckedChanged += new System.EventHandler(this.noiseRight_CheckedChanged);
             // 
@@ -344,12 +380,12 @@
             // 
             this.noiseFront.AutoSize = true;
             this.noiseFront.Checked = true;
-            this.noiseFront.Location = new System.Drawing.Point(87, 19);
+            this.noiseFront.Location = new System.Drawing.Point(94, 19);
             this.noiseFront.Name = "noiseFront";
-            this.noiseFront.Size = new System.Drawing.Size(49, 17);
+            this.noiseFront.Size = new System.Drawing.Size(55, 17);
             this.noiseFront.TabIndex = 0;
             this.noiseFront.TabStop = true;
-            this.noiseFront.Text = "Front";
+            this.noiseFront.Text = "Frente";
             this.noiseFront.UseVisualStyleBackColor = true;
             this.noiseFront.CheckedChanged += new System.EventHandler(this.noiseFront_CheckedChanged);
             // 
@@ -363,7 +399,7 @@
             this.groupBox1.Size = new System.Drawing.Size(230, 44);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Speech souce direction";
+            this.groupBox1.Text = "Localização do sinal de fala";
             // 
             // speechLeft
             // 
@@ -371,32 +407,32 @@
             this.speechLeft.Checked = true;
             this.speechLeft.Location = new System.Drawing.Point(6, 19);
             this.speechLeft.Name = "speechLeft";
-            this.speechLeft.Size = new System.Drawing.Size(43, 17);
+            this.speechLeft.Size = new System.Drawing.Size(70, 17);
             this.speechLeft.TabIndex = 2;
             this.speechLeft.TabStop = true;
-            this.speechLeft.Text = "Left";
+            this.speechLeft.Text = "Esquerda";
             this.speechLeft.UseVisualStyleBackColor = true;
             this.speechLeft.CheckedChanged += new System.EventHandler(this.speechLeft_CheckedChanged);
             // 
             // speechRight
             // 
             this.speechRight.AutoSize = true;
-            this.speechRight.Location = new System.Drawing.Point(174, 19);
+            this.speechRight.Location = new System.Drawing.Point(167, 19);
             this.speechRight.Name = "speechRight";
-            this.speechRight.Size = new System.Drawing.Size(50, 17);
+            this.speechRight.Size = new System.Drawing.Size(55, 17);
             this.speechRight.TabIndex = 1;
-            this.speechRight.Text = "Right";
+            this.speechRight.Text = "Direita";
             this.speechRight.UseVisualStyleBackColor = true;
             this.speechRight.CheckedChanged += new System.EventHandler(this.speechRight_CheckedChanged);
             // 
             // speechFront
             // 
             this.speechFront.AutoSize = true;
-            this.speechFront.Location = new System.Drawing.Point(87, 19);
+            this.speechFront.Location = new System.Drawing.Point(94, 19);
             this.speechFront.Name = "speechFront";
-            this.speechFront.Size = new System.Drawing.Size(49, 17);
+            this.speechFront.Size = new System.Drawing.Size(55, 17);
             this.speechFront.TabIndex = 0;
-            this.speechFront.Text = "Front";
+            this.speechFront.Text = "Frente";
             this.speechFront.UseVisualStyleBackColor = true;
             this.speechFront.CheckedChanged += new System.EventHandler(this.speechFront_CheckedChanged);
             // 
@@ -406,7 +442,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(230, 33);
             this.button4.TabIndex = 26;
-            this.button4.Text = "Start test";
+            this.button4.Text = "Iniciar Teste";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -425,7 +461,7 @@
             this.getFolder.Name = "getFolder";
             this.getFolder.Size = new System.Drawing.Size(230, 23);
             this.getFolder.TabIndex = 15;
-            this.getFolder.Text = "Load test list";
+            this.getFolder.Text = "Selecionar lista";
             this.getFolder.UseVisualStyleBackColor = true;
             this.getFolder.Click += new System.EventHandler(this.getFolder_Click);
             // 
@@ -451,54 +487,18 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(85, 48);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 13);
+            this.label6.Size = new System.Drawing.Size(106, 13);
             this.label6.TabIndex = 34;
-            this.label6.Text = "Speech test label";
+            this.label6.Text = "Informações do teste";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(91, 235);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.Size = new System.Drawing.Size(95, 13);
             this.label5.TabIndex = 33;
-            this.label5.Text = "Noise signal";
-            // 
-            // patientLabel
-            // 
-            this.patientLabel.AutoSize = true;
-            this.patientLabel.Location = new System.Drawing.Point(71, 30);
-            this.patientLabel.Name = "patientLabel";
-            this.patientLabel.Size = new System.Drawing.Size(54, 13);
-            this.patientLabel.TabIndex = 50;
-            this.patientLabel.Text = "Aplicador:";
-            // 
-            // applicatorLabel
-            // 
-            this.applicatorLabel.AutoSize = true;
-            this.applicatorLabel.Location = new System.Drawing.Point(71, 6);
-            this.applicatorLabel.Name = "applicatorLabel";
-            this.applicatorLabel.Size = new System.Drawing.Size(54, 13);
-            this.applicatorLabel.TabIndex = 49;
-            this.applicatorLabel.Text = "Aplicador:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 13);
-            this.label10.TabIndex = 48;
-            this.label10.Text = "Paciente:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(11, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "Aplicador:";
+            this.label5.Text = "Ruído mascarador";
             // 
             // testSetup
             // 
@@ -507,7 +507,7 @@
             this.ClientSize = new System.Drawing.Size(592, 578);
             this.Controls.Add(this.panel2);
             this.Name = "testSetup";
-            this.Text = "Form2";
+            this.Text = "perSONA 1.2.1 - Módulo de configuração de ensaio";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox10.ResumeLayout(false);

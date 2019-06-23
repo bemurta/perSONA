@@ -34,6 +34,7 @@ namespace perSONA
         int speechSource;
         int noiseSource;
         int selectedFolder = 0;
+        int waitTimeMS = 3000;
 
         public Form1()
         {
@@ -45,6 +46,12 @@ namespace perSONA
             {
                 StartInfo = VAServerProcessInfo()
             };
+
+            startServer();
+            Cursor.Current = Cursors.WaitCursor;
+            Thread.Sleep(waitTimeMS);
+            connectToVA();
+
 
             trackBar2.Value = Properties.Settings.Default.USERVOLUME;
             label2.Text = string.Format("Volume: {0} %", trackBar2.Value);
@@ -114,7 +121,7 @@ namespace perSONA
             patientBox.DataSource = patientNames;
         }
 
-        private void buttonConnect_Click(object sender, EventArgs e)
+        private void connectToVA()
         {
             Cursor.Current = Cursors.WaitCursor;
             Thread.Sleep(1000);
@@ -131,8 +138,15 @@ namespace perSONA
                 concatText("Couldn't get a connection to VA");
             }
             Cursor.Current = Cursors.Default;
-
         }
+
+        private void buttonConnect_Click(object sender, EventArgs e)
+        {
+
+            connectToVA();
+        }
+
+
 
         private void buttonDisconnect_Click(object sender, EventArgs e)
         {
@@ -173,6 +187,13 @@ namespace perSONA
         }
 
         private void openServer_Click(object sender, EventArgs e)
+        {
+            startServer();
+            Cursor.Current = Cursors.WaitCursor;
+            Thread.Sleep(3000);
+        }
+
+        private void startServer()
         {
             this.process.Start();
             buttonConnect.Enabled = true;
@@ -415,12 +436,12 @@ namespace perSONA
             }
             else
             {
-                const string message =
-                    "Wrong set up of database wav files. Please refer to database edit module to fix and use it in your tests.";
-                const string caption = "Incorrect database format. Metadata required!";
+                const string MSGINFO = "Sinal de fala não contém as palavras cadastradas. Utlize a Área de edição de arquivos de áudio, acessível pelo menu superior para configurar seus arquivos.";
+                const string message = MSGINFO;
+                const string caption = "Detectado erro de configuração!";
                 var result = MessageBox.Show(message, caption,
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 concatText(string.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
 
             }
@@ -537,11 +558,11 @@ namespace perSONA
                 speakers.Add(radiusSpekers * Math.Sin(i), radiusSpekers * Math.Cos(i));
             }
 
-            LineItem speakersCurve = myPane.AddCurve("Speakers",
+            LineItem speakersCurve = myPane.AddCurve("AF-S",
                    speakers, Color.Black, SymbolType.Star);
             speakersCurve.Line.IsVisible = false;
 
-            LineItem speechCurve = myPane.AddCurve("Speech",
+            LineItem speechCurve = myPane.AddCurve("Fala",
                    speechList, Color.Blue, SymbolType.Diamond);
             speechCurve.Line.IsVisible = false;
             speechCurve.Symbol.Size = 10;
@@ -561,7 +582,7 @@ namespace perSONA
             raTextZ.FontSpec.Size = 21;
 
 
-            LineItem noiseCurve = myPane.AddCurve("Noise",
+            LineItem noiseCurve = myPane.AddCurve("Ruído",
                   noiseList, Color.Red, SymbolType.Circle);
             noiseCurve.Line.IsVisible = false;
             noiseCurve.Symbol.Size = 10;

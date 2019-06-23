@@ -79,6 +79,7 @@
             this.nameBox = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
@@ -117,11 +118,10 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.testInfo = new System.Windows.Forms.TextBox();
             this.testsGraph = new ZedGraph.ZedGraphControl();
             this.testsBox = new System.Windows.Forms.ListBox();
-            this.testInfo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox22.SuspendLayout();
             this.groupBox21.SuspendLayout();
@@ -699,6 +699,16 @@
             this.tabPage1.Text = "Dados do paciente";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 439);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(773, 35);
+            this.button3.TabIndex = 56;
+            this.button3.Text = "Salvar alterações";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel3);
@@ -1053,16 +1063,6 @@
             this.zedGraphControl2.TabIndex = 0;
             this.zedGraphControl2.UseExtendedPrintDialog = true;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 439);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(773, 35);
-            this.button3.TabIndex = 56;
-            this.button3.Text = "Salvar alterações";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.testInfo);
@@ -1074,6 +1074,14 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Histórico de avaliações";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // testInfo
+            // 
+            this.testInfo.Location = new System.Drawing.Point(7, 247);
+            this.testInfo.Multiline = true;
+            this.testInfo.Name = "testInfo";
+            this.testInfo.Size = new System.Drawing.Size(772, 227);
+            this.testInfo.TabIndex = 3;
             // 
             // testsGraph
             // 
@@ -1101,14 +1109,6 @@
             this.testsBox.TabIndex = 2;
             this.testsBox.SelectedIndexChanged += new System.EventHandler(this.testsBox_SelectedIndexChanged);
             // 
-            // testInfo
-            // 
-            this.testInfo.Location = new System.Drawing.Point(7, 247);
-            this.testInfo.Multiline = true;
-            this.testInfo.Name = "testInfo";
-            this.testInfo.Size = new System.Drawing.Size(772, 227);
-            this.testInfo.TabIndex = 3;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1116,7 +1116,7 @@
             this.ClientSize = new System.Drawing.Size(797, 508);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form3";
-            this.Text = "Gerenciador de paciente";
+            this.Text = "perSONA 1.2.1 - Módulo de gerenciamento de pacientes";
             this.panel1.ResumeLayout(false);
             this.groupBox22.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);

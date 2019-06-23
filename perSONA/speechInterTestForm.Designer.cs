@@ -56,10 +56,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.applicatorLabel = new System.Windows.Forms.Label();
             this.patientLabel = new System.Windows.Forms.Label();
+            this.applicatorLabel = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,11 +75,11 @@
             // 
             // all_correct
             // 
-            this.all_correct.Location = new System.Drawing.Point(231, 273);
+            this.all_correct.Location = new System.Drawing.Point(244, 273);
             this.all_correct.Name = "all_correct";
             this.all_correct.Size = new System.Drawing.Size(112, 23);
             this.all_correct.TabIndex = 21;
-            this.all_correct.Text = "All correct";
+            this.all_correct.Text = "Todas corretas";
             this.all_correct.UseVisualStyleBackColor = true;
             this.all_correct.Click += new System.EventHandler(this.all_correct_Click);
             // 
@@ -112,9 +112,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(397, 230);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(106, 13);
             this.label2.TabIndex = 24;
-            this.label2.Text = "Streak:";
+            this.label2.Text = "Sequência de acerto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -123,9 +123,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(397, 269);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Current audio:";
+            this.label3.Text = "Sentença atual";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
@@ -133,45 +133,45 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(397, 308);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Total sentences:";
+            this.label4.Text = "Total de sentenças";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // all_incorrect
             // 
-            this.all_incorrect.Location = new System.Drawing.Point(231, 302);
+            this.all_incorrect.Location = new System.Drawing.Point(244, 302);
             this.all_incorrect.Name = "all_incorrect";
             this.all_incorrect.Size = new System.Drawing.Size(112, 23);
             this.all_incorrect.TabIndex = 27;
-            this.all_incorrect.Text = "None correct";
+            this.all_incorrect.Text = "Nenhum acerto";
             this.all_incorrect.UseVisualStyleBackColor = true;
             this.all_incorrect.Click += new System.EventHandler(this.all_incorrect_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(244, 371);
+            this.label5.Location = new System.Drawing.Point(244, 370);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.Size = new System.Drawing.Size(118, 13);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Correct words";
+            this.label5.Text = "Porcentagem de acerto";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(236, 335);
+            this.label6.Location = new System.Drawing.Point(256, 335);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 13);
+            this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 29;
-            this.label6.Text = "Correct words count";
+            this.label6.Text = "Palavras corretas";
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(231, 351);
+            this.textBox1.Location = new System.Drawing.Point(244, 351);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 20);
             this.textBox1.TabIndex = 31;
@@ -179,14 +179,14 @@
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(231, 386);
+            this.textBox2.Location = new System.Drawing.Point(244, 386);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(112, 20);
             this.textBox2.TabIndex = 32;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(231, 413);
+            this.button1.Location = new System.Drawing.Point(244, 413);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 23);
             this.button1.TabIndex = 33;
@@ -199,9 +199,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(397, 359);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 13);
+            this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 34;
-            this.label7.Text = "Current response time";
+            this.label7.Text = "Tempo de resposta";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
@@ -210,18 +210,19 @@
             this.label8.Location = new System.Drawing.Point(397, 398);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(92, 13);
+            this.label8.Size = new System.Drawing.Size(97, 13);
             this.label8.TabIndex = 35;
-            this.label8.Text = "Total test duration";
+            this.label8.Text = "Duração do ensaio";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // detailsBox
             // 
-            this.detailsBox.Location = new System.Drawing.Point(231, 80);
+            this.detailsBox.Location = new System.Drawing.Point(244, 80);
             this.detailsBox.Multiline = true;
             this.detailsBox.Name = "detailsBox";
             this.detailsBox.Size = new System.Drawing.Size(112, 147);
             this.detailsBox.TabIndex = 36;
+            this.detailsBox.Visible = false;
             // 
             // zedGraphControl2
             // 
@@ -291,11 +292,11 @@
             // 
             // playCurrentScene
             // 
-            this.playCurrentScene.Location = new System.Drawing.Point(231, 238);
+            this.playCurrentScene.Location = new System.Drawing.Point(244, 238);
             this.playCurrentScene.Name = "playCurrentScene";
             this.playCurrentScene.Size = new System.Drawing.Size(112, 23);
             this.playCurrentScene.TabIndex = 45;
-            this.playCurrentScene.Text = "Play audio";
+            this.playCurrentScene.Text = "Reproduzir áudio";
             this.playCurrentScene.UseVisualStyleBackColor = true;
             this.playCurrentScene.Click += new System.EventHandler(this.playCurrentScene_Click);
             // 
@@ -320,26 +321,17 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(31, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 62);
+            this.panel1.Size = new System.Drawing.Size(325, 62);
             this.panel1.TabIndex = 47;
             // 
-            // label9
+            // patientLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Aplicador:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 39);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 13);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Paciente:";
+            this.patientLabel.AutoSize = true;
+            this.patientLabel.Location = new System.Drawing.Point(75, 39);
+            this.patientLabel.Name = "patientLabel";
+            this.patientLabel.Size = new System.Drawing.Size(54, 13);
+            this.patientLabel.TabIndex = 27;
+            this.patientLabel.Text = "Aplicador:";
             // 
             // applicatorLabel
             // 
@@ -350,14 +342,23 @@
             this.applicatorLabel.TabIndex = 26;
             this.applicatorLabel.Text = "Aplicador:";
             // 
-            // patientLabel
+            // label10
             // 
-            this.patientLabel.AutoSize = true;
-            this.patientLabel.Location = new System.Drawing.Point(75, 39);
-            this.patientLabel.Name = "patientLabel";
-            this.patientLabel.Size = new System.Drawing.Size(54, 13);
-            this.patientLabel.TabIndex = 27;
-            this.patientLabel.Text = "Aplicador:";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Paciente:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Aplicador:";
             // 
             // speechIterTestForm
             // 
@@ -391,7 +392,7 @@
             this.Controls.Add(this.all_correct);
             this.Controls.Add(this.testWordsList);
             this.Name = "speechIterTestForm";
-            this.Text = "Form2";
+            this.Text = "perSONA 1.2.1 - Módulo de aplicação de ensaio";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

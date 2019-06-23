@@ -97,6 +97,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -126,7 +127,7 @@
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(112, 23);
             this.buttonConnect.TabIndex = 0;
-            this.buttonConnect.Text = "Connect";
+            this.buttonConnect.Text = "Conectar ao VA";
             this.buttonConnect.UseVisualStyleBackColor = true;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
@@ -136,7 +137,7 @@
             this.buttonDisconnect.Name = "buttonDisconnect";
             this.buttonDisconnect.Size = new System.Drawing.Size(112, 23);
             this.buttonDisconnect.TabIndex = 1;
-            this.buttonDisconnect.Text = "Disconnect";
+            this.buttonDisconnect.Text = "Disconectar o VA";
             this.buttonDisconnect.UseVisualStyleBackColor = true;
             this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
             // 
@@ -146,7 +147,7 @@
             this.openServer.Name = "openServer";
             this.openServer.Size = new System.Drawing.Size(230, 23);
             this.openServer.TabIndex = 2;
-            this.openServer.Text = "StartServer";
+            this.openServer.Text = "Iniciar VA";
             this.openServer.UseVisualStyleBackColor = true;
             this.openServer.Click += new System.EventHandler(this.openServer_Click);
             // 
@@ -337,7 +338,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(230, 23);
             this.button3.TabIndex = 25;
-            this.button3.Text = "Database Editor Module";
+            this.button3.Text = "Configuração de arquivos de audio";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -688,8 +689,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
+            this.patientAreaToolStripMenuItem,
             this.helpToolStripMenuItem,
-            this.patientAreaToolStripMenuItem});
+            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(837, 24);
@@ -699,45 +701,45 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.audioDatabaseEditorAreaToolStripMenuItem,
             this.resultsFolderToolStripMenuItem,
-            this.vASettingsToolStripMenuItem,
-            this.audioDatabaseEditorAreaToolStripMenuItem});
+            this.vASettingsToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.settingsToolStripMenuItem.Text = "Configurações";
             // 
             // resultsFolderToolStripMenuItem
             // 
             this.resultsFolderToolStripMenuItem.Name = "resultsFolderToolStripMenuItem";
-            this.resultsFolderToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.resultsFolderToolStripMenuItem.Text = "Results folder";
+            this.resultsFolderToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.resultsFolderToolStripMenuItem.Text = "Pasta destino dos resultados";
             this.resultsFolderToolStripMenuItem.Click += new System.EventHandler(this.resultsFolderToolStripMenuItem_Click);
             // 
             // vASettingsToolStripMenuItem
             // 
             this.vASettingsToolStripMenuItem.Name = "vASettingsToolStripMenuItem";
-            this.vASettingsToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.vASettingsToolStripMenuItem.Text = "VA settings";
+            this.vASettingsToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.vASettingsToolStripMenuItem.Text = "Configurações do VA";
             // 
             // audioDatabaseEditorAreaToolStripMenuItem
             // 
             this.audioDatabaseEditorAreaToolStripMenuItem.Name = "audioDatabaseEditorAreaToolStripMenuItem";
-            this.audioDatabaseEditorAreaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.audioDatabaseEditorAreaToolStripMenuItem.Text = "Audio Database Editor Area";
+            this.audioDatabaseEditorAreaToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.audioDatabaseEditorAreaToolStripMenuItem.Text = "Área de edição de arquivos de áudio";
             this.audioDatabaseEditorAreaToolStripMenuItem.Click += new System.EventHandler(this.audioDatabaseEditorAreaToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.helpToolStripMenuItem.Text = "Sobre";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // patientAreaToolStripMenuItem
             // 
             this.patientAreaToolStripMenuItem.Name = "patientAreaToolStripMenuItem";
-            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.patientAreaToolStripMenuItem.Text = "Patient area";
+            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.patientAreaToolStripMenuItem.Text = "Novo paciente";
             this.patientAreaToolStripMenuItem.Click += new System.EventHandler(this.patientAreaToolStripMenuItem_Click);
             // 
             // tabControl1
@@ -760,7 +762,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(528, 515);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Clinic Area";
+            this.tabPage2.Text = "Área Clínica";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox8
@@ -862,8 +864,13 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(528, 515);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Test Area";
+            this.tabPage1.Text = "Área de teste";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem
+            // 
+            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Name = "áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem";
+            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // Form1
             // 
@@ -876,7 +883,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "perSONA 1.1.0";
+            this.Text = "perSONA 1.2.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
@@ -979,6 +986,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.ListBox patientBox;
+        private System.Windows.Forms.ToolStripMenuItem áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem;
     }
 }
 
