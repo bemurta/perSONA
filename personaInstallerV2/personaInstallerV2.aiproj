@@ -2,23 +2,23 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>79d772cc-104c-48fe-b804-9cafa632660b</ProjectGuid>
+    <ProjectGuid>9ca69616-6f84-4d7b-a885-4a1546c65479</ProjectGuid>
     <OutputType>msi</OutputType>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>perSONA Installer.aip</StartupFile>
+    <StartupFile>personaInstallerV2.aip</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <IsWindowsApplication>True</IsWindowsApplication>
-    <AssemblyName>perSONA Installer</AssemblyName>
-    <Name>perSONA Installer</Name>
-    <RootNamespace>perSONA Installer</RootNamespace>
+    <AssemblyName>personaInstallerV2</AssemblyName>
+    <Name>personaInstallerV2</Name>
+    <RootNamespace>personaInstallerV2</RootNamespace>
     <LoadFromTemplate>
     </LoadFromTemplate>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' " />
   <ItemGroup>
-    <Compile Include="perSONA Installer.aip">
+    <Compile Include="personaInstallerV2.aip">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,7 +27,7 @@
       <Name>perSONA</Name>
       <Project>{5367335c-1379-40f5-84be-1b7a8d750cef}</Project>
       <Private>True</Private>
-      <OutputsToImport>PrimaryOutput</OutputsToImport>
+      <OutputsToImport>PrimaryOutput;References</OutputsToImport>
     </ProjectReference>
   </ItemGroup>
   <Target Name="Build">

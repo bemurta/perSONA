@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="16.0" version="16.0" Modules="simple" RootPath="." Language="en" Id="{ABD7320D-1FCA-4936-9F32-D2B3BEF17D86}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PATH_VALIDATION_OPT" Value="2"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll" Value="..\packages\Newtonsoft.Json.12.0.2\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.Buffers.dll" Value="..\packages\System.Buffers.4.4.0\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_TagLibSharp.dll" Value="..\packages\TagLibSharp-Lidarr.2.2.0.6\lib\netstandard2.0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ZedGraph.dll" Value="..\packages\ZedGraph.5.1.7\lib\net35-Client"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_perSONA.exe" Value="..\perSONA\bin\x64\Release"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_perSONA.exe.config" Value="..\perSONA\bin\x64\Release"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll" Value="Newtonsoft.Json.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll" Value="System.Buffers.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_TagLibSharp.dll" Value="TagLibSharp.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ZedGraph.dll" Value="ZedGraph.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" Value="perSONA.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe.config" Value="perSONA.exe.config"/>
+    <ROW Property="AI_RUN_AS_ADMIN" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="per_short_Scp_icon.exe" Type="8"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="Manufacturer" Value="LVA-UFSC"/>
+    <ROW Property="ProductCode" Value="1033:{31CCC086-3561-43F1-8B61-472E267BAD00} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Persona-LITE"/>
+    <ROW Property="ProductVersion" Value="1.2.3" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{2E351919-0754-48EA-9BCC-7450A9453229}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT" MultiBuildValue="DefaultBuild:Windows 9x/ME/NT/2000/XP/Vista/Windows 7/Windows 8 x86/Windows 8.1 x86/Windows 10 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNTDisplay" MultiBuildValue="DefaultBuild:32-bit Windows versions" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="AirTrafficNoise_Dir" Directory_Parent="Binaural_Dir" DefaultDir="AIRTRA~1|AirTrafficNoise"/>
+    <ROW Directory="Alcaim1__Dir" Directory_Parent="Speech_Dir" DefaultDir="Alcaim1_"/>
+    <ROW Directory="Ambient_Dir" Directory_Parent="Rendering_Dir" DefaultDir="Ambient"/>
+    <ROW Directory="Ambisonics_2_Dir" Directory_Parent="Reproduction_Dir" DefaultDir="AMBISO~1|Ambisonics"/>
+    <ROW Directory="Ambisonics_Dir" Directory_Parent="Rendering_Dir" DefaultDir="AMBISO~1|Ambisonics"/>
+    <ROW Directory="ArtificialReverb_Dir" Directory_Parent="Binaural_Dir" DefaultDir="ARTIFI~1|ArtificialReverb"/>
+    <ROW Directory="Audio_Dir" Directory_Parent="Drivers_Dir" DefaultDir="Audio"/>
+    <ROW Directory="Audiosignals_Dir" Directory_Parent="include_Dir" DefaultDir="AUDIOS~1|Audiosignals"/>
+    <ROW Directory="Binaural_2_Dir" Directory_Parent="Reproduction_Dir" DefaultDir="Binaural"/>
+    <ROW Directory="Binaural_Dir" Directory_Parent="Rendering_Dir" DefaultDir="Binaural"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="Drivers_Dir" Directory_Parent="include_Dir" DefaultDir="Drivers"/>
+    <ROW Directory="Dummy_Dir" Directory_Parent="Prototyping_Dir" DefaultDir="Dummy"/>
+    <ROW Directory="F0001_Dir" Directory_Parent="F_Dir" DefaultDir="F0001"/>
+    <ROW Directory="F0002_Dir" Directory_Parent="F_Dir" DefaultDir="F0002"/>
+    <ROW Directory="F0003_Dir" Directory_Parent="F_Dir" DefaultDir="F0003"/>
+    <ROW Directory="F0004_Dir" Directory_Parent="F_Dir" DefaultDir="F0004"/>
+    <ROW Directory="F0005_Dir" Directory_Parent="F_Dir" DefaultDir="F0005"/>
+    <ROW Directory="F0006_Dir" Directory_Parent="F_Dir" DefaultDir="F0006"/>
+    <ROW Directory="F0007_Dir" Directory_Parent="F_Dir" DefaultDir="F0007"/>
+    <ROW Directory="F0008_Dir" Directory_Parent="F_Dir" DefaultDir="F0008"/>
+    <ROW Directory="F0009_Dir" Directory_Parent="F_Dir" DefaultDir="F0009"/>
+    <ROW Directory="F0010_Dir" Directory_Parent="F_Dir" DefaultDir="F0010"/>
+    <ROW Directory="F_Dir" Directory_Parent="Alcaim1__Dir" DefaultDir="F"/>
+    <ROW Directory="Filtering_Dir" Directory_Parent="include_Dir" DefaultDir="FILTER~1|Filtering"/>
+    <ROW Directory="FreeField_2_Dir" Directory_Parent="Prototyping_Dir" DefaultDir="FREEFI~1|FreeField"/>
+    <ROW Directory="FreeField_Dir" Directory_Parent="Binaural_Dir" DefaultDir="FREEFI~1|FreeField"/>
+    <ROW Directory="Freefield_2_Dir" Directory_Parent="VBAP_Dir" DefaultDir="FREEFI~1|Freefield"/>
+    <ROW Directory="Freefield_Dir" Directory_Parent="Ambisonics_Dir" DefaultDir="FREEFI~1|Freefield"/>
+    <ROW Directory="GenericPath_Dir" Directory_Parent="Prototyping_Dir" DefaultDir="GENERI~1|GenericPath"/>
+    <ROW Directory="HearingAid_Dir" Directory_Parent="Prototyping_Dir" DefaultDir="HEARIN~1|HearingAid"/>
+    <ROW Directory="Lista1A_1_Dir" Directory_Parent="Trainning_Dir" DefaultDir="LISTA1~1|Lista 1A"/>
+    <ROW Directory="Lista1A_Dir" Directory_Parent="MCosta_Dir" DefaultDir="LISTA1~1|Lista 1A"/>
+    <ROW Directory="Lista1B_Dir" Directory_Parent="MCosta_Dir" DefaultDir="LISTA1~2|Lista 1B"/>
+    <ROW Directory="Lista2B_Dir" Directory_Parent="MCosta_Dir" DefaultDir="LISTA2~1|Lista 2B"/>
+    <ROW Directory="Lista3B_Dir" Directory_Parent="MCosta_Dir" DefaultDir="LISTA3~1|Lista 3B"/>
+    <ROW Directory="Lista4B_Dir" Directory_Parent="MCosta_Dir" DefaultDir="LISTA4~1|Lista 4B"/>
+    <ROW Directory="Lista5B_Dir" Directory_Parent="MCosta_Dir" DefaultDir="LISTA5~1|Lista 5B"/>
+    <ROW Directory="Lista6B_Dir" Directory_Parent="MCosta_Dir" DefaultDir="LISTA6~1|Lista 6B"/>
+    <ROW Directory="Lista7B_Dir" Directory_Parent="MCosta_Dir" DefaultDir="LISTA7~1|Lista 7B"/>
+    <ROW Directory="M0001_Dir" Directory_Parent="M_Dir" DefaultDir="M0001"/>
+    <ROW Directory="M0002_Dir" Directory_Parent="M_Dir" DefaultDir="M0002"/>
+    <ROW Directory="M0003_Dir" Directory_Parent="M_Dir" DefaultDir="M0003"/>
+    <ROW Directory="M0004_Dir" Directory_Parent="M_Dir" DefaultDir="M0004"/>
+    <ROW Directory="M0005_Dir" Directory_Parent="M_Dir" DefaultDir="M0005"/>
+    <ROW Directory="M0006_Dir" Directory_Parent="M_Dir" DefaultDir="M0006"/>
+    <ROW Directory="M0007_Dir" Directory_Parent="M_Dir" DefaultDir="M0007"/>
+    <ROW Directory="M0008_Dir" Directory_Parent="M_Dir" DefaultDir="M0008"/>
+    <ROW Directory="M0009_Dir" Directory_Parent="M_Dir" DefaultDir="M0009"/>
+    <ROW Directory="M0010_Dir" Directory_Parent="M_Dir" DefaultDir="M0010"/>
+    <ROW Directory="MCosta_Dir" Directory_Parent="Speech_Dir" DefaultDir="MCosta"/>
+    <ROW Directory="M_Dir" Directory_Parent="Alcaim1__Dir" DefaultDir="M"/>
+    <ROW Directory="Medium_Dir" Directory_Parent="include_Dir" DefaultDir="Medium"/>
+    <ROW Directory="Mixer_2_Dir" Directory_Parent="Reproduction_Dir" DefaultDir="Mixer"/>
+    <ROW Directory="Mixer_Dir" Directory_Parent="Ambient_Dir" DefaultDir="Mixer"/>
+    <ROW Directory="Motion_Dir" Directory_Parent="include_Dir" DefaultDir="Motion"/>
+    <ROW Directory="Noise_Dir" Directory_Parent="Sounds_Dir" DefaultDir="Noise"/>
+    <ROW Directory="OutdoorNoise_Dir" Directory_Parent="Binaural_Dir" DefaultDir="OUTDOO~1|OutdoorNoise"/>
+    <ROW Directory="Prototyping_Dir" Directory_Parent="Rendering_Dir" DefaultDir="PROTOT~1|Prototyping"/>
+    <ROW Directory="Rendering_Dir" Directory_Parent="include_Dir" DefaultDir="RENDER~1|Rendering"/>
+    <ROW Directory="Reproduction_Dir" Directory_Parent="include_Dir" DefaultDir="REPROD~1|Reproduction"/>
+    <ROW Directory="RoomAcoustics_Dir" Directory_Parent="Binaural_Dir" DefaultDir="ROOMAC~1|RoomAcoustics"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="Scene_Dir" Directory_Parent="include_Dir" DefaultDir="Scene"/>
+    <ROW Directory="Sounds_Dir" Directory_Parent="data_Dir" DefaultDir="Sounds"/>
+    <ROW Directory="Speech_Dir" Directory_Parent="Sounds_Dir" DefaultDir="Speech"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="Talkthrough_Dir" Directory_Parent="Reproduction_Dir" DefaultDir="TALKTH~1|Talkthrough"/>
+    <ROW Directory="Trainning_Dir" Directory_Parent="Speech_Dir" DefaultDir="TRAINN~1|Trainning"/>
+    <ROW Directory="Utils_Dir" Directory_Parent="include_Dir" DefaultDir="Utils"/>
+    <ROW Directory="VBAP_Dir" Directory_Parent="Rendering_Dir" DefaultDir="VBAP"/>
+    <ROW Directory="bin_Dir" Directory_Parent="perSONA_Dir" DefaultDir="bin"/>
+    <ROW Directory="conf_Dir" Directory_Parent="perSONA_Dir" DefaultDir="conf"/>
+    <ROW Directory="core_Dir" Directory_Parent="include_Dir" DefaultDir="core"/>
+    <ROW Directory="csharp_Dir" Directory_Parent="perSONA_Dir" DefaultDir="csharp"/>
+    <ROW Directory="data_Dir" Directory_Parent="perSONA_Dir" DefaultDir="data"/>
+    <ROW Directory="directivities_Dir" Directory_Parent="include_Dir" DefaultDir="DIRECT~1|directivities"/>
+    <ROW Directory="include_Dir" Directory_Parent="perSONA_Dir" DefaultDir="include"/>
+    <ROW Directory="perSONA_Dir" Directory_Parent="APPDIR" DefaultDir="perSONA"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" ComponentId="{91C08A18-C122-4006-896B-3FC05ADB166A}" Directory_="perSONA_Dir" Attributes="256" KeyPath="perSONA.exe"/>
+    <ROW Component="COPYING" ComponentId="{2790BF3A-755A-4D52-8651-0D3E1AD03907}" Directory_="perSONA_Dir" Attributes="0" KeyPath="COPYING" Type="0"/>
+    <ROW Component="DAFF.dll" ComponentId="{01B414AE-F1B2-426D-B4FB-83083B9DC0B2}" Directory_="bin_Dir" Attributes="256" KeyPath="DAFF.dll"/>
+    <ROW Component="DAFFViz.dll" ComponentId="{508D8BDE-5D31-44FF-B98A-56A61DDCB9FA}" Directory_="bin_Dir" Attributes="256" KeyPath="DAFFViz.dll"/>
+    <ROW Component="F0001001.wav" ComponentId="{6C68CD82-F883-4712-8784-802DD1893161}" Directory_="F0001_Dir" Attributes="0" KeyPath="F0001001.wav" Type="0"/>
+    <ROW Component="F0002001.wav" ComponentId="{CB872A1F-F09E-4333-9EB3-DB311C09CF7D}" Directory_="F0002_Dir" Attributes="0" KeyPath="F0002001.wav" Type="0"/>
+    <ROW Component="F0003001.wav" ComponentId="{9A1CB856-EA71-4A45-B7A1-3EBF67CBDF83}" Directory_="F0003_Dir" Attributes="0" KeyPath="F0003001.wav" Type="0"/>
+    <ROW Component="F0004001.wav" ComponentId="{9F46017E-878E-4199-8ACC-7A9C650A828D}" Directory_="F0004_Dir" Attributes="0" KeyPath="F0004001.wav" Type="0"/>
+    <ROW Component="F0005001.wav" ComponentId="{D2296D06-735C-46D5-BEE0-7830DF968AFA}" Directory_="F0005_Dir" Attributes="0" KeyPath="F0005001.wav" Type="0"/>
+    <ROW Component="F0006001.wav" ComponentId="{21D49DD9-9743-48CE-96A4-1712945111BE}" Directory_="F0006_Dir" Attributes="0" KeyPath="F0006001.wav" Type="0"/>
+    <ROW Component="F0007001.wav" ComponentId="{1FD091A0-4283-41F5-98AA-FEF8A8250AE5}" Directory_="F0007_Dir" Attributes="0" KeyPath="F0007001.wav" Type="0"/>
+    <ROW Component="F0008001.wav" ComponentId="{EFF600B2-A44A-4363-B59C-B62B22A7BA31}" Directory_="F0008_Dir" Attributes="0" KeyPath="F0008001.wav" Type="0"/>
+    <ROW Component="F0009001.wav" ComponentId="{186B51BE-FE79-45CC-9C76-833CE2958829}" Directory_="F0009_Dir" Attributes="0" KeyPath="F0009001.wav" Type="0"/>
+    <ROW Component="F0010001.WAV" ComponentId="{CE5A388F-0FF1-44D8-B5C4-C778AF3EDB54}" Directory_="F0010_Dir" Attributes="0" KeyPath="F0010001.WAV" Type="0"/>
+    <ROW Component="ITABase.dll" ComponentId="{DD72D1B6-876C-4506-B0E0-4FD73AB7492A}" Directory_="bin_Dir" Attributes="256" KeyPath="ITABase.dll"/>
+    <ROW Component="ITACTC.dll" ComponentId="{52ABFAEF-344B-4D21-9CB1-EED80D4EA85F}" Directory_="bin_Dir" Attributes="256" KeyPath="ITACTC.dll"/>
+    <ROW Component="ITAConvolution.dll" ComponentId="{D88D3A7C-46A4-4A4D-8C6E-F3B30C4E25C8}" Directory_="bin_Dir" Attributes="256" KeyPath="ITAConvolution.dll"/>
+    <ROW Component="ITADSP.dll" ComponentId="{17BCB245-F937-4673-BF01-1998F49F4EDB}" Directory_="bin_Dir" Attributes="256" KeyPath="ITADSP.dll"/>
+    <ROW Component="ITADataSources.dll" ComponentId="{3AAF0E2D-203D-4E5F-93D3-98CADAFEBE06}" Directory_="bin_Dir" Attributes="256" KeyPath="ITADataSources.dll"/>
+    <ROW Component="ITAFFT.dll" ComponentId="{5BB26E99-C0C2-4601-8F24-3F44F704422C}" Directory_="bin_Dir" Attributes="256" KeyPath="ITAFFT.dll"/>
+    <ROW Component="ITAQtWidgets.dll" ComponentId="{BF2B4053-1062-4648-BD06-A5D1C4E68C30}" Directory_="bin_Dir" Attributes="256" KeyPath="ITAQtWidgets.dll"/>
+    <ROW Component="ITASampler.dll" ComponentId="{3831EB08-180E-4AFE-97C3-E8B72456C11F}" Directory_="bin_Dir" Attributes="256" KeyPath="ITASampler.dll"/>
+    <ROW Component="Lista1A_frase1.wav" ComponentId="{480B4A1B-95A6-4759-B828-8553F83932EB}" Directory_="Lista1A_Dir" Attributes="0" KeyPath="Lista1A_frase1.wav" Type="0"/>
+    <ROW Component="Lista1A_frase1.wav_1" ComponentId="{070C862E-E85C-49EE-8227-85798487881E}" Directory_="Lista1A_1_Dir" Attributes="0" KeyPath="Lista1A_frase1.wav_1" Type="0"/>
+    <ROW Component="Lista1B_frase1.wav" ComponentId="{50731877-0EEE-48E5-BB23-9AF02B4FA43A}" Directory_="Lista1B_Dir" Attributes="0" KeyPath="Lista1B_frase1.wav" Type="0"/>
+    <ROW Component="Lista2B_frase1.wav" ComponentId="{1FB1C48C-AA4C-4D6F-AD80-254469CD0535}" Directory_="Lista2B_Dir" Attributes="0" KeyPath="Lista2B_frase1.wav" Type="0"/>
+    <ROW Component="Lista3B_frase1.wav" ComponentId="{919982E1-318F-46D6-B62C-1D9D58645C2F}" Directory_="Lista3B_Dir" Attributes="0" KeyPath="Lista3B_frase1.wav" Type="0"/>
+    <ROW Component="Lista4B_frase1.wav" ComponentId="{C18E87A1-F1EF-4AE3-A35A-4237A0DE6CD2}" Directory_="Lista4B_Dir" Attributes="0" KeyPath="Lista4B_frase1.wav" Type="0"/>
+    <ROW Component="Lista5B_frase1.wav" ComponentId="{E14B42CD-FD40-4B52-A19F-D9765F8613D1}" Directory_="Lista5B_Dir" Attributes="0" KeyPath="Lista5B_frase1.wav" Type="0"/>
+    <ROW Component="Lista6B_frase1.wav" ComponentId="{4818B578-2961-4A90-A563-6E062BEA0EE2}" Directory_="Lista6B_Dir" Attributes="0" KeyPath="Lista6B_frase1.wav" Type="0"/>
+    <ROW Component="Lista7B_frase1.wav" ComponentId="{6760A246-52A8-40E6-8DC9-83F11D68D7DD}" Directory_="Lista7B_Dir" Attributes="0" KeyPath="Lista7B_frase1.wav" Type="0"/>
+    <ROW Component="M0001001.WAV" ComponentId="{33C35B97-5BD7-46D8-AD57-EA87092D7DE4}" Directory_="M0001_Dir" Attributes="0" KeyPath="M0001001.WAV" Type="0"/>
+    <ROW Component="M0002001.WAV" ComponentId="{D6B4675D-9065-4CD0-951D-967B5A49E1CA}" Directory_="M0002_Dir" Attributes="0" KeyPath="M0002001.WAV" Type="0"/>
+    <ROW Component="M0003001.WAV" ComponentId="{47DC626F-D32E-4C2F-9416-68FC0F1F809F}" Directory_="M0003_Dir" Attributes="0" KeyPath="M0003001.WAV" Type="0"/>
+    <ROW Component="M0004001.WAV" ComponentId="{9C6FFB3C-B819-4945-871F-E917BFE25EB5}" Directory_="M0004_Dir" Attributes="0" KeyPath="M0004001.WAV" Type="0"/>
+    <ROW Component="M0005001.WAV" ComponentId="{7F3F9653-06A3-4FAB-AE44-270EC6EC170B}" Directory_="M0005_Dir" Attributes="0" KeyPath="M0005001.WAV" Type="0"/>
+    <ROW Component="M0006001.WAV" ComponentId="{71D38DB7-CF30-4ACB-91DA-C8A3B99C43B6}" Directory_="M0006_Dir" Attributes="0" KeyPath="M0006001.WAV" Type="0"/>
+    <ROW Component="M0007001.WAV" ComponentId="{C2235A3F-7270-4CBD-8E63-D7A82D8B68C2}" Directory_="M0007_Dir" Attributes="0" KeyPath="M0007001.WAV" Type="0"/>
+    <ROW Component="M0008001.WAV" ComponentId="{9079D7FA-D9F6-46B7-8683-17D85724C2A3}" Directory_="M0008_Dir" Attributes="0" KeyPath="M0008001.WAV" Type="0"/>
+    <ROW Component="M0009001.WAV" ComponentId="{AF0F612D-98CE-45EC-8BD9-CB3995325CB3}" Directory_="M0009_Dir" Attributes="0" KeyPath="M0009001.WAV" Type="0"/>
+    <ROW Component="M0010001.WAV" ComponentId="{8864D456-BBDE-4FA1-9CAE-D77057C7BE72}" Directory_="M0010_Dir" Attributes="0" KeyPath="M0010001.WAV" Type="0"/>
+    <ROW Component="NatNetLib.dll" ComponentId="{D1D33F65-D055-4475-B81B-B253EDAF4AA0}" Directory_="bin_Dir" Attributes="256" KeyPath="NatNetLib.dll"/>
+    <ROW Component="NatNetML.dll" ComponentId="{B3B0EF4E-2CCD-47BE-BB56-675369A94C46}" Directory_="bin_Dir" Attributes="256" KeyPath="NatNetML.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{3279A4CC-EB0E-4F15-AE50-8F44C110E64B}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="Qt5Core.dll" ComponentId="{A35B6253-2855-4EAB-837E-AC883C77D0D1}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Core.dll"/>
+    <ROW Component="Qt5Gui.dll" ComponentId="{77C8FD53-808E-4651-AD15-FFA2ED2C952B}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Gui.dll"/>
+    <ROW Component="Qt5Sql.dll" ComponentId="{7F85E3B6-ED28-493A-AFED-AA2BC84A3B4A}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Sql.dll"/>
+    <ROW Component="Qt5Svg.dll" ComponentId="{17727AC3-F794-45A1-9203-FFF48097C37F}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Svg.dll"/>
+    <ROW Component="Qt5Widgets.dll" ComponentId="{BF70D186-3866-4257-A6D3-1E0B209A21DB}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Widgets.dll"/>
+    <ROW Component="Redstart.exe" ComponentId="{3B3EDD96-5F23-459B-BF62-CC9F36AE501F}" Directory_="bin_Dir" Attributes="256" KeyPath="Redstart.exe"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{6A65937C-67C3-4AD9-BE2C-B3B8313C82AF}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SPLINE.dll" ComponentId="{8EDC58E0-ABA3-4A4F-A578-A590A2DF7025}" Directory_="bin_Dir" Attributes="256" KeyPath="SPLINE.dll"/>
+    <ROW Component="VA.h" ComponentId="{6B22ABF8-F253-44EE-92AC-A715BA4FECC4}" Directory_="include_Dir" Attributes="0" KeyPath="VA.h" Type="0"/>
+    <ROW Component="VAASIOBackend.h" ComponentId="{B753313A-B477-4DFE-8E19-91D1BCAF08CB}" Directory_="Audio_Dir" Attributes="0" KeyPath="VAASIOBackend.h" Type="0"/>
+    <ROW Component="VAAirTrafficNoiseAudioRenderer.h" ComponentId="{D55FB75A-6DB5-4A07-8B30-7EB7B7383244}" Directory_="AirTrafficNoise_Dir" Attributes="0" KeyPath="VAAirTrafficNoiseAudioRenderer.h" Type="0"/>
+    <ROW Component="VAAmbientMixerAudioRenderer.h" ComponentId="{D2182B03-BE94-40DA-86F5-0B08935B5876}" Directory_="Mixer_Dir" Attributes="0" KeyPath="VAAmbientMixerAudioRenderer.h" Type="0"/>
+    <ROW Component="VAAmbisonicsBinauralMixdownReproduction.h" ComponentId="{792B0408-13A4-476B-ABD6-E60B7E53D047}" Directory_="Binaural_2_Dir" Attributes="0" KeyPath="VAAmbisonicsBinauralMixdownReproduction.h" Type="0"/>
+    <ROW Component="VAAmbisonicsFreefieldAudioRenderer.h" ComponentId="{DCC33FE6-F48E-416F-89AF-2976ACFA33E9}" Directory_="Freefield_Dir" Attributes="0" KeyPath="VAAmbisonicsFreefieldAudioRenderer.h" Type="0"/>
+    <ROW Component="VAAmbisonicsReproduction.h" ComponentId="{CA1D6341-533C-447F-B3C0-8D5EF67E34CA}" Directory_="Ambisonics_2_Dir" Attributes="0" KeyPath="VAAmbisonicsReproduction.h" Type="0"/>
+    <ROW Component="VAAtmosphere.h" ComponentId="{AC11EFBC-A809-47E8-8DE7-F7E12A8C6BAE}" Directory_="Filtering_Dir" Attributes="0" KeyPath="VAAtmosphere.h" Type="0"/>
+    <ROW Component="VAAudioRenderer.h" ComponentId="{5B0E1D6F-AFC2-4716-BA24-FCCB3477BAFA}" Directory_="Rendering_Dir" Attributes="0" KeyPath="VAAudioRenderer.h" Type="0"/>
+    <ROW Component="VAAudioReproduction.h" ComponentId="{FB3D6D3E-30B2-409F-96E7-FC0ED3A12F39}" Directory_="Reproduction_Dir" Attributes="0" KeyPath="VAAudioReproduction.h" Type="0"/>
+    <ROW Component="VAAudiofileSignalSource.h" ComponentId="{A0E6FCEA-9F2F-46DC-8E0F-26558BD5061D}" Directory_="Audiosignals_Dir" Attributes="0" KeyPath="VAAudiofileSignalSource.h" Type="0"/>
+    <ROW Component="VABase.dll" ComponentId="{63A1F015-9767-4E92-9FF9-F5C9CFD60E9F}" Directory_="csharp_Dir" Attributes="256" KeyPath="VABase.dll"/>
+    <ROW Component="VABase.dll_1" ComponentId="{F6EAEEAE-E095-4EEF-ADBB-7B045A6167C5}" Directory_="bin_Dir" Attributes="256" KeyPath="VABase.dll_1"/>
+    <ROW Component="VABinauralArtificialReverb.h" ComponentId="{C77601C6-8DB4-4E7F-9B89-63D075F9019A}" Directory_="ArtificialReverb_Dir" Attributes="0" KeyPath="VABinauralArtificialReverb.h" Type="0"/>
+    <ROW Component="VABinauralFreefieldAudioRenderer.h" ComponentId="{401DE949-249D-49EA-82B2-48255E02B41D}" Directory_="FreeField_Dir" Attributes="0" KeyPath="VABinauralFreefieldAudioRenderer.h" Type="0"/>
+    <ROW Component="VABinauralOutdoorNoiseAudioRenderer.h" ComponentId="{93EBDE4C-9734-41A3-835B-D756E43E5E40}" Directory_="OutdoorNoise_Dir" Attributes="0" KeyPath="VABinauralOutdoorNoiseAudioRenderer.h" Type="0"/>
+    <ROW Component="VACS.cs" ComponentId="{3C677578-62A6-4FDA-8D9E-31C972B4E53A}" Directory_="csharp_Dir" Attributes="0" KeyPath="VACS.cs_2" Type="0"/>
+    <ROW Component="VACSDummyWrapper.dll" ComponentId="{B5F8A72B-6799-4FBA-B7E1-938E5412EF86}" Directory_="bin_Dir" Attributes="256" KeyPath="VACSDummyWrapper.dll"/>
+    <ROW Component="VAContainerState.h" ComponentId="{F5ECACF2-933F-4B89-AA6E-D8CFB7F1923F}" Directory_="Scene_Dir" Attributes="0" KeyPath="VAContainerState.h" Type="0"/>
+    <ROW Component="VACore.dll" ComponentId="{A76AAD95-3829-4265-99AA-18FCD261523D}" Directory_="bin_Dir" Attributes="256" KeyPath="VACore.dll"/>
+    <ROW Component="VACore.experimental.ini" ComponentId="{C5C8AD94-35C0-4C04-9BA7-1DE6A00091BF}" Directory_="conf_Dir" Attributes="0" KeyPath="VACore.experimental.ini" Type="0"/>
+    <ROW Component="VADebug.h" ComponentId="{9C0DECC6-646F-4B3B-B824-5810D3D8AF69}" Directory_="Utils_Dir" Attributes="0" KeyPath="VADebug.h" Type="0"/>
+    <ROW Component="VADirectivity.h" ComponentId="{993A14E2-A518-42F8-A5EF-33E634101909}" Directory_="directivities_Dir" Attributes="0" KeyPath="VADirectivity.h" Type="0"/>
+    <ROW Component="VAHomogeneousMedium.h" ComponentId="{D81E27B0-A5DA-47BA-92BF-855F4BDDE8B6}" Directory_="Medium_Dir" Attributes="0" KeyPath="VAHomogeneousMedium.h" Type="0"/>
+    <ROW Component="VALua.dll" ComponentId="{FAFC2E5F-F7CE-4EA1-91B2-04715C2B2B15}" Directory_="bin_Dir" Attributes="256" KeyPath="VALua.dll"/>
+    <ROW Component="VAMatlab.mexw64" ComponentId="{E4C7B115-3F0B-468B-A6D4-85C9FE6F56C8}" Directory_="bin_Dir" Attributes="256" KeyPath="VAMatlab.mexw64" Type="0"/>
+    <ROW Component="VAMotionModel.h" ComponentId="{01DDBEA1-7DBB-486D-A501-482C8AC4FF25}" Directory_="Motion_Dir" Attributes="0" KeyPath="VAMotionModel.h" Type="0"/>
+    <ROW Component="VANet.dll" ComponentId="{2987B85D-F59F-4775-81F1-8CF66AE0A5DD}" Directory_="csharp_Dir" Attributes="256" KeyPath="VANet.dll"/>
+    <ROW Component="VANet.dll_1" ComponentId="{30404D29-F281-45F7-8428-F12055EE6F53}" Directory_="bin_Dir" Attributes="256" KeyPath="VANet.dll_1"/>
+    <ROW Component="VANetCSWrapper.dll" ComponentId="{D51848EB-CE29-4E2E-99C4-7A9A2E861AEB}" Directory_="csharp_Dir" Attributes="256" KeyPath="VANetCSWrapper.dll"/>
+    <ROW Component="VANetCSWrapper.dll_1" ComponentId="{F2A9B20D-5E6F-4AEA-B558-1979EE9549D0}" Directory_="bin_Dir" Attributes="256" KeyPath="VANetCSWrapper.dll_1"/>
+    <ROW Component="VAPTDummyAudioRenderer.h" ComponentId="{64AD88D8-37CD-492E-8558-545CC523FD27}" Directory_="Dummy_Dir" Attributes="0" KeyPath="VAPTDummyAudioRenderer.h" Type="0"/>
+    <ROW Component="VAPTGenericPathAudioRenderer.h" ComponentId="{64AE26F1-1419-40DD-A059-5FDA2D7E0263}" Directory_="GenericPath_Dir" Attributes="0" KeyPath="VAPTGenericPathAudioRenderer.h" Type="0"/>
+    <ROW Component="VAPTHearingAidRenderer.h" ComponentId="{991F25FF-820F-487D-A3D9-CF378063EB00}" Directory_="HearingAid_Dir" Attributes="0" KeyPath="VAPTHearingAidRenderer.h" Type="0"/>
+    <ROW Component="VAPrototypeFreeFieldAudioRenderer.h" ComponentId="{4E03A00E-8EFD-49C6-A662-C11D44B4228D}" Directory_="FreeField_2_Dir" Attributes="0" KeyPath="VAPrototypeFreeFieldAudioRenderer.h" Type="0"/>
+    <ROW Component="VAReproductionLowFrequencyMixer.h" ComponentId="{ABA08FBF-5BE7-41DE-BA77-78995CE64E3D}" Directory_="Mixer_2_Dir" Attributes="0" KeyPath="VAReproductionLowFrequencyMixer.h" Type="0"/>
+    <ROW Component="VAReproductionTalkthrough.h" ComponentId="{F7D9BF3B-3284-49B3-B84E-5A2A78717386}" Directory_="Talkthrough_Dir" Attributes="0" KeyPath="VAReproductionTalkthrough.h" Type="0"/>
+    <ROW Component="VARoomAcousticsAudioRenderer.h" ComponentId="{BBEFED31-779B-4AD8-BDED-95C5FD5781B6}" Directory_="RoomAcoustics_Dir" Attributes="0" KeyPath="VARoomAcousticsAudioRenderer.h" Type="0"/>
+    <ROW Component="VAServer.exe" ComponentId="{BCDF9619-FCA8-4497-A19A-2E464A4F96D2}" Directory_="bin_Dir" Attributes="256" KeyPath="VAServer.exe"/>
+    <ROW Component="VAVBAPFreefieldAudioRenderer.h" ComponentId="{02D1CF30-04DC-48EC-839C-15F55F07B736}" Directory_="Freefield_2_Dir" Attributes="0" KeyPath="VAVBAPFreefieldAudioRenderer.h" Type="0"/>
+    <ROW Component="VistaAspects.dll" ComponentId="{3E8936AF-2444-454F-A9C4-2B9EE52FB4B6}" Directory_="csharp_Dir" Attributes="256" KeyPath="VistaAspects.dll"/>
+    <ROW Component="VistaAspects.dll_1" ComponentId="{4141233D-7B2E-4836-8370-7BC848339276}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaAspects.dll_1"/>
+    <ROW Component="VistaBase.dll" ComponentId="{F6189731-B53E-4963-99B7-90F7E2E7CACB}" Directory_="csharp_Dir" Attributes="256" KeyPath="VistaBase.dll"/>
+    <ROW Component="VistaBase.dll_1" ComponentId="{27B353B1-5177-4A68-B56A-08D8675EAC84}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaBase.dll_1"/>
+    <ROW Component="VistaCyberGloveDriver.dll" ComponentId="{E1B18CCB-5006-4912-8207-AE045122731D}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaCyberGloveDriver.dll"/>
+    <ROW Component="VistaCyberGlovePlugin.dll" ComponentId="{5717C414-A0C8-494D-A32E-984405624BDF}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaCyberGlovePlugin.dll"/>
+    <ROW Component="VistaCyberGloveTranscoder.dll" ComponentId="{0DFBA2DB-4DA1-444C-91FB-6C57906292E3}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaCyberGloveTranscoder.dll"/>
+    <ROW Component="VistaDTrackDriver.dll" ComponentId="{5B791705-7CB8-473A-8171-E8933B0A564F}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDTrackDriver.dll"/>
+    <ROW Component="VistaDTrackPlugin.dll" ComponentId="{99BB8A79-9E01-4EBA-8BB1-814557D78D83}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDTrackPlugin.dll"/>
+    <ROW Component="VistaDTrackTranscoder.dll" ComponentId="{C7006053-EFA6-4165-98FD-9E4935BBBE1F}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDTrackTranscoder.dll"/>
+    <ROW Component="VistaDataFlowNet.dll" ComponentId="{D5CAAFA8-B2A2-4EB8-90D9-DBFE6886609C}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDataFlowNet.dll"/>
+    <ROW Component="VistaDeviceDriversBase.dll" ComponentId="{06D8A07B-ED71-44E7-BC0D-69D0A3749167}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDeviceDriversBase.dll"/>
+    <ROW Component="VistaFastrakDriver.dll" ComponentId="{4041DE55-BA8A-4BD1-B2AA-F7FC853313ED}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaFastrakDriver.dll"/>
+    <ROW Component="VistaFastrakPlugin.dll" ComponentId="{8EF2624A-D63E-45CB-977D-1A5B164CDDD0}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaFastrakPlugin.dll"/>
+    <ROW Component="VistaFastrakTranscoder.dll" ComponentId="{FF799C7E-62FE-46D3-A95A-1C706F03570A}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaFastrakTranscoder.dll"/>
+    <ROW Component="VistaGlutJoystickDriver.dll" ComponentId="{2DE7B252-A3C7-454D-8BAD-95A8E83C0195}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutJoystickDriver.dll"/>
+    <ROW Component="VistaGlutJoystickPlugin.dll" ComponentId="{5079FC8F-A2CE-4BDF-9560-DF872E3DF39B}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutJoystickPlugin.dll"/>
+    <ROW Component="VistaGlutJoystickTranscoder.dll" ComponentId="{A38F4047-0D86-431E-88EE-9942490472B0}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutJoystickTranscoder.dll"/>
+    <ROW Component="VistaGlutKeyboardDriver.dll" ComponentId="{B0B81E45-6F31-4978-A786-027338544444}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutKeyboardDriver.dll"/>
+    <ROW Component="VistaGlutKeyboardPlugin.dll" ComponentId="{978D3964-51C9-4A9D-81EA-CA2F0E05873D}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutKeyboardPlugin.dll"/>
+    <ROW Component="VistaGlutKeyboardTranscoder.dll" ComponentId="{56835A5D-4C38-4FD8-A8AB-A5B2D75E5244}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutKeyboardTranscoder.dll"/>
+    <ROW Component="VistaGlutMouseDriver.dll" ComponentId="{62E4FB29-B605-4D38-A5DB-2D7087062CEC}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutMouseDriver.dll"/>
+    <ROW Component="VistaGlutMousePlugin.dll" ComponentId="{87BCC5CB-5C22-41A5-BEB0-FCD5F91FB43D}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutMousePlugin.dll"/>
+    <ROW Component="VistaGlutMouseTranscoder.dll" ComponentId="{8459FB7E-CCF8-4F8E-98E0-6B1C2AABB2DA}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutMouseTranscoder.dll"/>
+    <ROW Component="VistaHIDDriver.dll" ComponentId="{AC780A7E-6D9D-4537-9906-4AB0EBDE1CD9}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHIDDriver.dll"/>
+    <ROW Component="VistaHIDPlugin.dll" ComponentId="{B2769010-306E-4900-A071-B45965962FED}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHIDPlugin.dll"/>
+    <ROW Component="VistaHIDTranscoder.dll" ComponentId="{150956FE-171C-4369-AB2C-3F3BC4BD8FC0}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHIDTranscoder.dll"/>
+    <ROW Component="VistaHapticDeviceEmulatorDriver.dll" ComponentId="{67AD03D4-86C2-48FE-9631-3B8635B8680B}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorDriver.dll"/>
+    <ROW Component="VistaHapticDeviceEmulatorPlugin.dll" ComponentId="{7BE9205F-519F-449D-953C-49F83DE304A7}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorPlugin.dll"/>
+    <ROW Component="VistaHapticDeviceEmulatorTranscoder.dll" ComponentId="{5F462417-6703-4E4A-B23D-48DED865668E}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorTranscoder.dll"/>
+    <ROW Component="VistaIRManDriver.dll" ComponentId="{3BC26C71-288D-4FB6-A59A-DEFA431EFBD9}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaIRManDriver.dll"/>
+    <ROW Component="VistaIRManPlugin.dll" ComponentId="{C49CBD11-0034-48AF-A7AE-D4373CA77720}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaIRManPlugin.dll"/>
+    <ROW Component="VistaIRManTranscoder.dll" ComponentId="{37C9B1D9-713D-4CC9-AD9E-D2B3F1905DC8}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaIRManTranscoder.dll"/>
+    <ROW Component="VistaInterProcComm.dll" ComponentId="{F3FED355-1C26-404A-942A-EE4AFD476766}" Directory_="csharp_Dir" Attributes="256" KeyPath="VistaInterProcComm.dll"/>
+    <ROW Component="VistaInterProcComm.dll_1" ComponentId="{1101F252-278C-4775-8AF6-486D708FA2BE}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaInterProcComm.dll_1"/>
+    <ROW Component="VistaKernel.dll" ComponentId="{5FCE8576-DA22-419C-B5E1-F4895341BA43}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaKernel.dll"/>
+    <ROW Component="VistaKernelOpenSGExt.dll" ComponentId="{A5D85FAF-DB86-432D-8EA0-F0B1DCF07EDC}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaKernelOpenSGExt.dll"/>
+    <ROW Component="VistaMIDIDriver.dll" ComponentId="{7C389AF7-62C5-47CC-B8FF-402FF13B2114}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaMIDIDriver.dll"/>
+    <ROW Component="VistaMIDIPlugin.dll" ComponentId="{74A376B6-5521-43AF-B927-30121F01C46B}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaMIDIPlugin.dll"/>
+    <ROW Component="VistaMIDITranscoder.dll" ComponentId="{73E29232-7617-40FC-B7BD-5FC8FE6BC5BA}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaMIDITranscoder.dll"/>
+    <ROW Component="VistaMath.dll" ComponentId="{E8DCD3D6-5BA0-4082-ACCB-D0638F39A908}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaMath.dll"/>
+    <ROW Component="VistaOGLExt.dll" ComponentId="{8DF55C4C-04C8-49B3-AC72-B808C88A591C}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaOGLExt.dll"/>
+    <ROW Component="VistaPhantomServerDriver.dll" ComponentId="{8B7C64BC-A04E-44C1-B6F3-0551A91C53CE}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaPhantomServerDriver.dll"/>
+    <ROW Component="VistaPhantomServerPlugin.dll" ComponentId="{AFF85274-08E3-4009-A235-F56484D5B7BA}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaPhantomServerPlugin.dll"/>
+    <ROW Component="VistaPhantomServerTranscoder.dll" ComponentId="{57D2B9AF-A678-4B55-BECE-5175BF322447}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaPhantomServerTranscoder.dll"/>
+    <ROW Component="VistaSpaceMouseDriver.dll" ComponentId="{BB175A98-1B64-4624-B873-9AF21A74614B}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaSpaceMouseDriver.dll"/>
+    <ROW Component="VistaSpaceMousePlugin.dll" ComponentId="{8FBEA86E-79B3-4D22-AF8A-B42C1E854821}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaSpaceMousePlugin.dll"/>
+    <ROW Component="VistaSpaceMouseTranscoder.dll" ComponentId="{C375BEC6-974C-4B51-B8A1-74D10E983C85}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaSpaceMouseTranscoder.dll"/>
+    <ROW Component="VistaTools.dll" ComponentId="{D08B6522-1798-451E-A2C9-8F6A7FF5AB24}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaTools.dll"/>
+    <ROW Component="alcaim_f.WAV" ComponentId="{5F9FC00A-CD04-4DBC-AAEB-965469737F76}" Directory_="Speech_Dir" Attributes="0" KeyPath="alcaim_f.WAV" Type="0"/>
+    <ROW Component="core.h" ComponentId="{F213B760-AEF4-4436-ACA5-6F325C5188FD}" Directory_="core_Dir" Attributes="0" KeyPath="core.h" Type="0"/>
+    <ROW Component="kHzTone_60dB_SPL.wav" ComponentId="{9BE18036-3B54-48D6-BF66-C121D0D5C2A9}" Directory_="Sounds_Dir" Attributes="0" KeyPath="kHzTone_60dB_SPL.wav" Type="0"/>
+    <ROW Component="libEGL.DLL" ComponentId="{7E94DB7C-E8EA-48CF-8AEB-6C0BF55E6F64}" Directory_="bin_Dir" Attributes="256" KeyPath="libEGL.DLL"/>
+    <ROW Component="libfftw33.dll" ComponentId="{70862E67-73F0-4830-9093-1A550F36C3A6}" Directory_="bin_Dir" Attributes="256" KeyPath="libfftw33.dll"/>
+    <ROW Component="libfftw3f3.dll" ComponentId="{C90DEBFF-E29D-49A9-A294-BBE5B868CD17}" Directory_="bin_Dir" Attributes="256" KeyPath="libfftw3f3.dll"/>
+    <ROW Component="libfftw3l3.dll" ComponentId="{255F85A4-2469-4B9D-B142-438575BC5384}" Directory_="bin_Dir" Attributes="256" KeyPath="libfftw3l3.dll"/>
+    <ROW Component="libsamplerate0.dll" ComponentId="{18D200D1-5F27-4635-A477-A9657FB5F974}" Directory_="bin_Dir" Attributes="256" KeyPath="libsamplerate0.dll"/>
+    <ROW Component="libsndfile1.dll" ComponentId="{65FADB7C-6328-4A24-A60A-90DB03CA3268}" Directory_="bin_Dir" Attributes="256" KeyPath="libsndfile1.dll"/>
+    <ROW Component="lista.gif" ComponentId="{B84023B0-1F58-47FF-B6F7-9357E84DFAC1}" Directory_="Trainning_Dir" Attributes="0" KeyPath="lista.gif" Type="0"/>
+    <ROW Component="msvcp120.dll" ComponentId="{9D5EFFE2-BA22-493F-B85E-E11682FFF462}" Directory_="csharp_Dir" Attributes="256" KeyPath="msvcp120.dll"/>
+    <ROW Component="msvcp120.dll_1" ComponentId="{711B7053-1C6B-40C0-9B48-1BE9FE502131}" Directory_="bin_Dir" Attributes="256" KeyPath="msvcp120.dll_1"/>
+    <ROW Component="msvcr120.dll" ComponentId="{D4E99A33-ABF6-4FC8-8A6A-A29E1E858AD6}" Directory_="csharp_Dir" Attributes="256" KeyPath="msvcr120.dll"/>
+    <ROW Component="msvcr120.dll_1" ComponentId="{15F3C407-9F02-4B46-B3E4-E8A4B3509A1D}" Directory_="bin_Dir" Attributes="256" KeyPath="msvcr120.dll_1"/>
+    <ROW Component="perSONA_References" ComponentId="{5A14A600-734D-4316-996C-475BF5A3C575}" Directory_="perSONA_Dir" Attributes="0" KeyPath="ZedGraph.dll"/>
+    <ROW Component="portaudio_x64.dll" ComponentId="{5B538A42-B790-454C-95B0-093DD06A7E77}" Directory_="bin_Dir" Attributes="256" KeyPath="portaudio_x64.dll"/>
+    <ROW Component="portaudiod_x64.dll" ComponentId="{5CB7F9AC-852B-4D7D-9805-0E80557D6B96}" Directory_="bin_Dir" Attributes="256" KeyPath="portaudiod_x64.dll"/>
+    <ROW Component="talkerbabble_ISTS.wav" ComponentId="{DDF7CA17-CDD3-4B41-84CE-AFF44397C58E}" Directory_="Noise_Dir" Attributes="0" KeyPath="talkerbabble_ISTS.wav" Type="0"/>
+    <ROW Component="tbb.dll" ComponentId="{FDAAE28F-0318-40E0-BCE6-2AB1C1784FA0}" Directory_="bin_Dir" Attributes="256" KeyPath="tbb.dll"/>
+    <ROW Component="tbb_debug.dll" ComponentId="{5BF6196C-BBEB-4C94-AF95-02461EDC03DC}" Directory_="bin_Dir" Attributes="256" KeyPath="tbb_debug.dll"/>
+    <ROW Component="tbb_preview.dll" ComponentId="{4A48403C-8240-4738-A818-2BD80A3A9A34}" Directory_="bin_Dir" Attributes="256" KeyPath="tbb_preview.dll"/>
+    <ROW Component="tbb_preview_debug.dll" ComponentId="{40289C7A-FD30-49AA-AFCF-36E13E732C77}" Directory_="bin_Dir" Attributes="256" KeyPath="tbb_preview_debug.dll"/>
+    <ROW Component="tbbmalloc.dll" ComponentId="{2C3F8CEB-FD4D-4D0C-A56E-E345183BD38F}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc.dll"/>
+    <ROW Component="tbbmalloc_debug.dll" ComponentId="{EE9075C1-6202-4540-A767-C52667BA47FB}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc_debug.dll"/>
+    <ROW Component="tbbmalloc_proxy.dll" ComponentId="{11B522CC-FE14-4AE2-9934-ABBAB60C842A}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc_proxy.dll"/>
+    <ROW Component="tbbmalloc_proxy_debug.dll" ComponentId="{8FEBE9EA-A24A-44E6-8890-C07C6902EFC5}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc_proxy_debug.dll"/>
+    <ROW Component="wav" ComponentId="{9AA2EFEE-8158-4EAA-B076-9AF1270400CE}" Directory_="data_Dir" Attributes="0" KeyPath="wav" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="perSONA.exe" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_perSONA.exe&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="perSONA.exe.config" Component_="COPYING" FileName="PERSON~1.CON|[|AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe.config]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_perSONA.exe.config&gt;" SelfReg="false"/>
+    <ROW File="LicenseLGPL.txt" Component_="COPYING" FileName="LICENS~1.TXT|License-LGPL.txt" Attributes="0" SourcePath="..\perSONA\License-LGPL.txt" SelfReg="false"/>
+    <ROW File="coordinateSystem.txt" Component_="COPYING" FileName="COORDI~1.TXT|coordinateSystem.txt" Attributes="0" SourcePath="..\perSONA\coordinateSystem.txt" SelfReg="false"/>
+    <ROW File="run_Redstart.bat" Component_="COPYING" FileName="RUN_RE~1.BAT|run_Redstart.bat" Attributes="0" SourcePath="..\perSONA\run_Redstart.bat" SelfReg="false"/>
+    <ROW File="run_VAServer.bat" Component_="COPYING" FileName="RUN_VA~1.BAT|run_VAServer.bat" Attributes="0" SourcePath="..\perSONA\run_VAServer.bat" SelfReg="false"/>
+    <ROW File="run_VAServer_experimental.bat" Component_="COPYING" FileName="RUN_VA~2.BAT|run_VAServer_experimental.bat" Attributes="0" SourcePath="..\perSONA\run_VAServer_experimental.bat" SelfReg="false"/>
+    <ROW File="COPYING" Component_="COPYING" FileName="COPYING" Attributes="0" SourcePath="..\perSONA\COPYING" SelfReg="false"/>
+    <ROW File="README.md" Component_="COPYING" FileName="README.md" Attributes="0" SourcePath="..\perSONA\README.md" SelfReg="false"/>
+    <ROW File="VA_full.v2018b.win32x64.vc12.zip" Component_="COPYING" FileName="VA_FUL~1.ZIP|VA_full.v2018b.win32-x64.vc12.zip" Attributes="0" SourcePath="..\perSONA\VA_full.v2018b.win32-x64.vc12.zip" SelfReg="false"/>
+    <ROW File="VACS.cs" Component_="COPYING" FileName="VACS.cs" Attributes="0" SourcePath="..\perSONA\VACS.cs" SelfReg="false"/>
+    <ROW File="Program.cs" Component_="COPYING" FileName="Program.cs" Attributes="0" SourcePath="..\perSONA\Program.cs" SelfReg="false"/>
+    <ROW File="VACore.experimental.ini" Component_="VACore.experimental.ini" FileName="VACORE~1.INI|VACore.experimental.ini" Attributes="0" SourcePath="..\perSONA\conf\VACore.experimental.ini" SelfReg="false"/>
+    <ROW File="VACore.ini" Component_="VACore.experimental.ini" FileName="VACore.ini" Attributes="0" SourcePath="..\perSONA\conf\VACore.ini" SelfReg="false"/>
+    <ROW File="VACore.recording.ini" Component_="VACore.experimental.ini" FileName="VACORE~2.INI|VACore.recording.ini" Attributes="0" SourcePath="..\perSONA\conf\VACore.recording.ini" SelfReg="false"/>
+    <ROW File="VACore.UnityAmbisonics.ini" Component_="VACore.experimental.ini" FileName="VACORE~3.INI|VACore.UnityAmbisonics.ini" Attributes="0" SourcePath="..\perSONA\conf\VACore.UnityAmbisonics.ini" SelfReg="false"/>
+    <ROW File="VASetup.aixCAVE.ini" Component_="VACore.experimental.ini" FileName="VASETU~1.INI|VASetup.aixCAVE.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.aixCAVE.ini" SelfReg="false"/>
+    <ROW File="VASetup.Desktop.ini" Component_="VACore.experimental.ini" FileName="VASETU~2.INI|VASetup.Desktop.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.Desktop.ini" SelfReg="false"/>
+    <ROW File="VASetup.HK.ini" Component_="VACore.experimental.ini" FileName="VASETU~3.INI|VASetup.HK.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.HK.ini" SelfReg="false"/>
+    <ROW File="VASetup.HOAIdeal.ini" Component_="VACore.experimental.ini" FileName="VASETU~4.INI|VASetup.HOAIdeal.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.HOAIdeal.ini" SelfReg="false"/>
+    <ROW File="VASetup.VRLab.ini" Component_="VACore.experimental.ini" FileName="VASETU~5.INI|VASetup.VRLab.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.VRLab.ini" SelfReg="false"/>
+    <ROW File="msvcp120.dll" Component_="msvcp120.dll" FileName="msvcp120.dll" Attributes="0" SourcePath="..\perSONA\csharp\msvcp120.dll" SelfReg="false"/>
+    <ROW File="msvcr120.dll" Component_="msvcr120.dll" FileName="msvcr120.dll" Attributes="0" SourcePath="..\perSONA\csharp\msvcr120.dll" SelfReg="false"/>
+    <ROW File="VABase.dll" Component_="VABase.dll" FileName="VABase.dll" Attributes="0" SourcePath="..\perSONA\csharp\VABase.dll" SelfReg="false"/>
+    <ROW File="VACS.cs_2" Component_="VACS.cs" FileName="VACS.cs" Attributes="0" SourcePath="..\perSONA\csharp\VACS.cs" SelfReg="false"/>
+    <ROW File="VANet.dll" Component_="VANet.dll" FileName="VANet.dll" Attributes="0" SourcePath="..\perSONA\csharp\VANet.dll" SelfReg="false"/>
+    <ROW File="VANetCSWrapper.dll" Component_="VANetCSWrapper.dll" FileName="VANETC~1.DLL|VANetCSWrapper.dll" Attributes="0" SourcePath="..\perSONA\csharp\VANetCSWrapper.dll" SelfReg="false"/>
+    <ROW File="VistaAspects.dll" Component_="VistaAspects.dll" FileName="VISTAA~1.DLL|VistaAspects.dll" Attributes="0" SourcePath="..\perSONA\csharp\VistaAspects.dll" SelfReg="false"/>
+    <ROW File="VistaBase.dll" Component_="VistaBase.dll" FileName="VISTAB~1.DLL|VistaBase.dll" Attributes="0" SourcePath="..\perSONA\csharp\VistaBase.dll" SelfReg="false"/>
+    <ROW File="VistaInterProcComm.dll" Component_="VistaInterProcComm.dll" FileName="VISTAI~1.DLL|VistaInterProcComm.dll" Attributes="0" SourcePath="..\perSONA\csharp\VistaInterProcComm.dll" SelfReg="false"/>
+    <ROW File="wav" Component_="wav" FileName="1.wav" Attributes="0" SourcePath="..\perSONA\data\1.wav" SelfReg="false"/>
+    <ROW File="wav_1" Component_="wav" FileName="2.wav" Attributes="0" SourcePath="..\perSONA\data\2.wav" SelfReg="false"/>
+    <ROW File="ambeo_rir_ita_doorway.wav" Component_="wav" FileName="AMBEO_~1.WAV|ambeo_rir_ita_doorway.wav" Attributes="0" SourcePath="..\perSONA\data\ambeo_rir_ita_doorway.wav" SelfReg="false"/>
+    <ROW File="HD650_all_inv.wav" Component_="wav" FileName="HD650_~1.WAV|HD650_all_inv.wav" Attributes="0" SourcePath="..\perSONA\data\HD650_all_inv.wav" SelfReg="false"/>
+    <ROW File="ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff" Component_="wav" FileName="ITA_AR~1.DAF|ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff" Attributes="0" SourcePath="..\perSONA\data\ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff" SelfReg="false"/>
+    <ROW File="License.md" Component_="wav" FileName="License.md" Attributes="0" SourcePath="..\perSONA\data\License.md" SelfReg="false"/>
+    <ROW File="persona_short_v3.png" Component_="wav" FileName="PERSON~1.PNG|persona_short_v3.png" Attributes="0" SourcePath="..\perSONA\data\persona_short_v3.png" SelfReg="false"/>
+    <ROW File="Singer.v17.ms.daff" Component_="wav" FileName="SINGER~1.DAF|Singer.v17.ms.daff" Attributes="0" SourcePath="..\perSONA\data\Singer.v17.ms.daff" SelfReg="false"/>
+    <ROW File="kHzTone_60dB_SPL.wav" Component_="kHzTone_60dB_SPL.wav" FileName="1KHZTO~1.WAV|1kHzTone_60dB_SPL.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\1kHzTone_60dB_SPL.wav" SelfReg="false"/>
+    <ROW File="asa.wav" Component_="kHzTone_60dB_SPL.wav" FileName="asa.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\asa.wav" SelfReg="false"/>
+    <ROW File="Choice.wav" Component_="kHzTone_60dB_SPL.wav" FileName="Choice.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Choice.wav" SelfReg="false"/>
+    <ROW File="L001s04r.wav" Component_="kHzTone_60dB_SPL.wav" FileName="L001s04r.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\L001s04r.wav" SelfReg="false"/>
+    <ROW File="talkerbabble_ISTS.wav" Component_="talkerbabble_ISTS.wav" FileName="4TALKE~1.WAV|4talker-babble_ISTS.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\4talker-babble_ISTS.wav" SelfReg="false"/>
+    <ROW File="cafeteria_babble.wav" Component_="talkerbabble_ISTS.wav" FileName="CAFETE~1.WAV|cafeteria_babble.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\cafeteria_babble.wav" SelfReg="false"/>
+    <ROW File="Cafeteria_Babble_16kHz_21s.wav" Component_="talkerbabble_ISTS.wav" FileName="CAFETE~2.WAV|Cafeteria_Babble_16kHz_21s.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\Cafeteria_Babble_16kHz_21s.wav" SelfReg="false"/>
+    <ROW File="FX_Bus_Engine_002_16kHz_12s.wav" Component_="talkerbabble_ISTS.wav" FileName="FX_BUS~1.WAV|FX_Bus_Engine_002_16kHz_12s.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\FX_Bus_Engine_002_16kHz_12s.wav" SelfReg="false"/>
+    <ROW File="ICRA_No01_16kHz_21s.wav" Component_="talkerbabble_ISTS.wav" FileName="ICRA_N~1.WAV|ICRA_No01_16kHz_21s.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\ICRA_No01_16kHz_21s.wav" SelfReg="false"/>
+    <ROW File="ICRA_No06_16kHz_21s.wav" Component_="talkerbabble_ISTS.wav" FileName="ICRA_N~2.WAV|ICRA_No06_16kHz_21s.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\ICRA_No06_16kHz_21s.wav" SelfReg="false"/>
+    <ROW File="ICRA_No07_16kHz_21s.wav" Component_="talkerbabble_ISTS.wav" FileName="ICRA_N~3.WAV|ICRA_No07_16kHz_21s.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\ICRA_No07_16kHz_21s.wav" SelfReg="false"/>
+    <ROW File="SSN_IEEE.wav" Component_="talkerbabble_ISTS.wav" FileName="SSN_IEEE.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\SSN_IEEE.wav" SelfReg="false"/>
+    <ROW File="street_noise_louzu_16kHz_21s.wav" Component_="talkerbabble_ISTS.wav" FileName="STREET~1.WAV|street_noise_louzu_16kHz_21s.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Noise\street_noise_louzu_16kHz_21s.wav" SelfReg="false"/>
+    <ROW File="F0001001.wav" Component_="F0001001.wav" FileName="F0001001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001001.wav" SelfReg="false"/>
+    <ROW File="F0001002.WAV" Component_="F0001001.wav" FileName="F0001002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001002.WAV" SelfReg="false"/>
+    <ROW File="F0001003.WAV" Component_="F0001001.wav" FileName="F0001003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001003.WAV" SelfReg="false"/>
+    <ROW File="F0001004.WAV" Component_="F0001001.wav" FileName="F0001004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001004.WAV" SelfReg="false"/>
+    <ROW File="F0001005.WAV" Component_="F0001001.wav" FileName="F0001005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001005.WAV" SelfReg="false"/>
+    <ROW File="F0001006.WAV" Component_="F0001001.wav" FileName="F0001006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001006.WAV" SelfReg="false"/>
+    <ROW File="F0001007.WAV" Component_="F0001001.wav" FileName="F0001007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001007.WAV" SelfReg="false"/>
+    <ROW File="F0001008.WAV" Component_="F0001001.wav" FileName="F0001008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001008.WAV" SelfReg="false"/>
+    <ROW File="F0001009.WAV" Component_="F0001001.wav" FileName="F0001009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001009.WAV" SelfReg="false"/>
+    <ROW File="F0001010.WAV" Component_="F0001001.wav" FileName="F0001010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0001\F0001010.WAV" SelfReg="false"/>
+    <ROW File="F0002001.wav" Component_="F0002001.wav" FileName="F0002001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002001.wav" SelfReg="false"/>
+    <ROW File="F0002002.WAV" Component_="F0002001.wav" FileName="F0002002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002002.WAV" SelfReg="false"/>
+    <ROW File="F0002003.WAV" Component_="F0002001.wav" FileName="F0002003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002003.WAV" SelfReg="false"/>
+    <ROW File="F0002004.WAV" Component_="F0002001.wav" FileName="F0002004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002004.WAV" SelfReg="false"/>
+    <ROW File="F0002005.WAV" Component_="F0002001.wav" FileName="F0002005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002005.WAV" SelfReg="false"/>
+    <ROW File="F0002006.WAV" Component_="F0002001.wav" FileName="F0002006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002006.WAV" SelfReg="false"/>
+    <ROW File="F0002007.WAV" Component_="F0002001.wav" FileName="F0002007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002007.WAV" SelfReg="false"/>
+    <ROW File="F0002008.WAV" Component_="F0002001.wav" FileName="F0002008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002008.WAV" SelfReg="false"/>
+    <ROW File="F0002009.WAV" Component_="F0002001.wav" FileName="F0002009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002009.WAV" SelfReg="false"/>
+    <ROW File="F0002010.WAV" Component_="F0002001.wav" FileName="F0002010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0002\F0002010.WAV" SelfReg="false"/>
+    <ROW File="F0003001.wav" Component_="F0003001.wav" FileName="F0003001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003001.wav" SelfReg="false"/>
+    <ROW File="F0003002.WAV" Component_="F0003001.wav" FileName="F0003002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003002.WAV" SelfReg="false"/>
+    <ROW File="F0003003.WAV" Component_="F0003001.wav" FileName="F0003003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003003.WAV" SelfReg="false"/>
+    <ROW File="F0003004.WAV" Component_="F0003001.wav" FileName="F0003004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003004.WAV" SelfReg="false"/>
+    <ROW File="F0003005.WAV" Component_="F0003001.wav" FileName="F0003005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003005.WAV" SelfReg="false"/>
+    <ROW File="F0003006.WAV" Component_="F0003001.wav" FileName="F0003006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003006.WAV" SelfReg="false"/>
+    <ROW File="F0003007.WAV" Component_="F0003001.wav" FileName="F0003007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003007.WAV" SelfReg="false"/>
+    <ROW File="F0003008.WAV" Component_="F0003001.wav" FileName="F0003008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003008.WAV" SelfReg="false"/>
+    <ROW File="F0003009.WAV" Component_="F0003001.wav" FileName="F0003009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003009.WAV" SelfReg="false"/>
+    <ROW File="F0003010.WAV" Component_="F0003001.wav" FileName="F0003010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0003\F0003010.WAV" SelfReg="false"/>
+    <ROW File="F0004001.wav" Component_="F0004001.wav" FileName="F0004001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004001.wav" SelfReg="false"/>
+    <ROW File="F0004002.WAV" Component_="F0004001.wav" FileName="F0004002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004002.WAV" SelfReg="false"/>
+    <ROW File="F0004003.WAV" Component_="F0004001.wav" FileName="F0004003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004003.WAV" SelfReg="false"/>
+    <ROW File="F0004004.WAV" Component_="F0004001.wav" FileName="F0004004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004004.WAV" SelfReg="false"/>
+    <ROW File="F0004005.WAV" Component_="F0004001.wav" FileName="F0004005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004005.WAV" SelfReg="false"/>
+    <ROW File="F0004006.WAV" Component_="F0004001.wav" FileName="F0004006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004006.WAV" SelfReg="false"/>
+    <ROW File="F0004007.WAV" Component_="F0004001.wav" FileName="F0004007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004007.WAV" SelfReg="false"/>
+    <ROW File="F0004008.WAV" Component_="F0004001.wav" FileName="F0004008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004008.WAV" SelfReg="false"/>
+    <ROW File="F0004009.WAV" Component_="F0004001.wav" FileName="F0004009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004009.WAV" SelfReg="false"/>
+    <ROW File="F0004010.WAV" Component_="F0004001.wav" FileName="F0004010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0004\F0004010.WAV" SelfReg="false"/>
+    <ROW File="F0005001.wav" Component_="F0005001.wav" FileName="F0005001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005001.wav" SelfReg="false"/>
+    <ROW File="F0005002.WAV" Component_="F0005001.wav" FileName="F0005002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005002.WAV" SelfReg="false"/>
+    <ROW File="F0005003.WAV" Component_="F0005001.wav" FileName="F0005003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005003.WAV" SelfReg="false"/>
+    <ROW File="F0005004.WAV" Component_="F0005001.wav" FileName="F0005004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005004.WAV" SelfReg="false"/>
+    <ROW File="F0005005.WAV" Component_="F0005001.wav" FileName="F0005005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005005.WAV" SelfReg="false"/>
+    <ROW File="F0005006.WAV" Component_="F0005001.wav" FileName="F0005006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005006.WAV" SelfReg="false"/>
+    <ROW File="F0005007.WAV" Component_="F0005001.wav" FileName="F0005007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005007.WAV" SelfReg="false"/>
+    <ROW File="F0005008.WAV" Component_="F0005001.wav" FileName="F0005008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005008.WAV" SelfReg="false"/>
+    <ROW File="F0005009.WAV" Component_="F0005001.wav" FileName="F0005009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005009.WAV" SelfReg="false"/>
+    <ROW File="F0005010.WAV" Component_="F0005001.wav" FileName="F0005010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0005\F0005010.WAV" SelfReg="false"/>
+    <ROW File="F0006001.wav" Component_="F0006001.wav" FileName="F0006001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006001.wav" SelfReg="false"/>
+    <ROW File="F0006002.WAV" Component_="F0006001.wav" FileName="F0006002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006002.WAV" SelfReg="false"/>
+    <ROW File="F0006003.WAV" Component_="F0006001.wav" FileName="F0006003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006003.WAV" SelfReg="false"/>
+    <ROW File="F0006004.WAV" Component_="F0006001.wav" FileName="F0006004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006004.WAV" SelfReg="false"/>
+    <ROW File="F0006005.WAV" Component_="F0006001.wav" FileName="F0006005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006005.WAV" SelfReg="false"/>
+    <ROW File="F0006006.WAV" Component_="F0006001.wav" FileName="F0006006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006006.WAV" SelfReg="false"/>
+    <ROW File="F0006007.WAV" Component_="F0006001.wav" FileName="F0006007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006007.WAV" SelfReg="false"/>
+    <ROW File="F0006008.WAV" Component_="F0006001.wav" FileName="F0006008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006008.WAV" SelfReg="false"/>
+    <ROW File="F0006009.WAV" Component_="F0006001.wav" FileName="F0006009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006009.WAV" SelfReg="false"/>
+    <ROW File="F0006010.WAV" Component_="F0006001.wav" FileName="F0006010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0006\F0006010.WAV" SelfReg="false"/>
+    <ROW File="F0007001.wav" Component_="F0007001.wav" FileName="F0007001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007001.wav" SelfReg="false"/>
+    <ROW File="F0007002.WAV" Component_="F0007001.wav" FileName="F0007002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007002.WAV" SelfReg="false"/>
+    <ROW File="F0007003.WAV" Component_="F0007001.wav" FileName="F0007003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007003.WAV" SelfReg="false"/>
+    <ROW File="F0007004.WAV" Component_="F0007001.wav" FileName="F0007004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007004.WAV" SelfReg="false"/>
+    <ROW File="F0007005.WAV" Component_="F0007001.wav" FileName="F0007005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007005.WAV" SelfReg="false"/>
+    <ROW File="F0007006.WAV" Component_="F0007001.wav" FileName="F0007006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007006.WAV" SelfReg="false"/>
+    <ROW File="F0007007.WAV" Component_="F0007001.wav" FileName="F0007007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007007.WAV" SelfReg="false"/>
+    <ROW File="F0007008.WAV" Component_="F0007001.wav" FileName="F0007008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007008.WAV" SelfReg="false"/>
+    <ROW File="F0007009.WAV" Component_="F0007001.wav" FileName="F0007009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007009.WAV" SelfReg="false"/>
+    <ROW File="F0007010.WAV" Component_="F0007001.wav" FileName="F0007010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0007\F0007010.WAV" SelfReg="false"/>
+    <ROW File="F0008001.wav" Component_="F0008001.wav" FileName="F0008001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008001.wav" SelfReg="false"/>
+    <ROW File="F0008002.WAV" Component_="F0008001.wav" FileName="F0008002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008002.WAV" SelfReg="false"/>
+    <ROW File="F0008003.WAV" Component_="F0008001.wav" FileName="F0008003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008003.WAV" SelfReg="false"/>
+    <ROW File="F0008004.WAV" Component_="F0008001.wav" FileName="F0008004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008004.WAV" SelfReg="false"/>
+    <ROW File="F0008005.WAV" Component_="F0008001.wav" FileName="F0008005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008005.WAV" SelfReg="false"/>
+    <ROW File="F0008006.WAV" Component_="F0008001.wav" FileName="F0008006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008006.WAV" SelfReg="false"/>
+    <ROW File="F0008007.WAV" Component_="F0008001.wav" FileName="F0008007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008007.WAV" SelfReg="false"/>
+    <ROW File="F0008008.WAV" Component_="F0008001.wav" FileName="F0008008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008008.WAV" SelfReg="false"/>
+    <ROW File="F0008009.WAV" Component_="F0008001.wav" FileName="F0008009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008009.WAV" SelfReg="false"/>
+    <ROW File="F0008010.WAV" Component_="F0008001.wav" FileName="F0008010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0008\F0008010.WAV" SelfReg="false"/>
+    <ROW File="F0009001.wav" Component_="F0009001.wav" FileName="F0009001.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009001.wav" SelfReg="false"/>
+    <ROW File="F0009002.WAV" Component_="F0009001.wav" FileName="F0009002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009002.WAV" SelfReg="false"/>
+    <ROW File="F0009003.WAV" Component_="F0009001.wav" FileName="F0009003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009003.WAV" SelfReg="false"/>
+    <ROW File="F0009004.WAV" Component_="F0009001.wav" FileName="F0009004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009004.WAV" SelfReg="false"/>
+    <ROW File="F0009005.WAV" Component_="F0009001.wav" FileName="F0009005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009005.WAV" SelfReg="false"/>
+    <ROW File="F0009006.WAV" Component_="F0009001.wav" FileName="F0009006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009006.WAV" SelfReg="false"/>
+    <ROW File="F0009007.WAV" Component_="F0009001.wav" FileName="F0009007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009007.WAV" SelfReg="false"/>
+    <ROW File="F0009008.WAV" Component_="F0009001.wav" FileName="F0009008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009008.WAV" SelfReg="false"/>
+    <ROW File="F0009009.WAV" Component_="F0009001.wav" FileName="F0009009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009009.WAV" SelfReg="false"/>
+    <ROW File="F0009010.WAV" Component_="F0009001.wav" FileName="F0009010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0009\F0009010.WAV" SelfReg="false"/>
+    <ROW File="F0010001.WAV" Component_="F0010001.WAV" FileName="F0010001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010001.WAV" SelfReg="false"/>
+    <ROW File="F0010002.WAV" Component_="F0010001.WAV" FileName="F0010002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010002.WAV" SelfReg="false"/>
+    <ROW File="F0010003.WAV" Component_="F0010001.WAV" FileName="F0010003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010003.WAV" SelfReg="false"/>
+    <ROW File="F0010004.WAV" Component_="F0010001.WAV" FileName="F0010004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010004.WAV" SelfReg="false"/>
+    <ROW File="F0010005.WAV" Component_="F0010001.WAV" FileName="F0010005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010005.WAV" SelfReg="false"/>
+    <ROW File="F0010006.WAV" Component_="F0010001.WAV" FileName="F0010006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010006.WAV" SelfReg="false"/>
+    <ROW File="F0010007.WAV" Component_="F0010001.WAV" FileName="F0010007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010007.WAV" SelfReg="false"/>
+    <ROW File="F0010008.WAV" Component_="F0010001.WAV" FileName="F0010008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010008.WAV" SelfReg="false"/>
+    <ROW File="F0010009.WAV" Component_="F0010001.WAV" FileName="F0010009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010009.WAV" SelfReg="false"/>
+    <ROW File="F0010010.WAV" Component_="F0010001.WAV" FileName="F0010010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\F\F0010\F0010010.WAV" SelfReg="false"/>
+    <ROW File="M0001001.WAV" Component_="M0001001.WAV" FileName="M0001001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001001.WAV" SelfReg="false"/>
+    <ROW File="M0001002.WAV" Component_="M0001001.WAV" FileName="M0001002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001002.WAV" SelfReg="false"/>
+    <ROW File="M0001003.WAV" Component_="M0001001.WAV" FileName="M0001003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001003.WAV" SelfReg="false"/>
+    <ROW File="M0001004.WAV" Component_="M0001001.WAV" FileName="M0001004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001004.WAV" SelfReg="false"/>
+    <ROW File="M0001005.WAV" Component_="M0001001.WAV" FileName="M0001005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001005.WAV" SelfReg="false"/>
+    <ROW File="M0001006.WAV" Component_="M0001001.WAV" FileName="M0001006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001006.WAV" SelfReg="false"/>
+    <ROW File="M0001007.WAV" Component_="M0001001.WAV" FileName="M0001007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001007.WAV" SelfReg="false"/>
+    <ROW File="M0001008.WAV" Component_="M0001001.WAV" FileName="M0001008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001008.WAV" SelfReg="false"/>
+    <ROW File="M0001009.WAV" Component_="M0001001.WAV" FileName="M0001009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001009.WAV" SelfReg="false"/>
+    <ROW File="M0001010.WAV" Component_="M0001001.WAV" FileName="M0001010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0001\M0001010.WAV" SelfReg="false"/>
+    <ROW File="M0002001.WAV" Component_="M0002001.WAV" FileName="M0002001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002001.WAV" SelfReg="false"/>
+    <ROW File="M0002002.WAV" Component_="M0002001.WAV" FileName="M0002002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002002.WAV" SelfReg="false"/>
+    <ROW File="M0002003.WAV" Component_="M0002001.WAV" FileName="M0002003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002003.WAV" SelfReg="false"/>
+    <ROW File="M0002004.WAV" Component_="M0002001.WAV" FileName="M0002004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002004.WAV" SelfReg="false"/>
+    <ROW File="M0002005.WAV" Component_="M0002001.WAV" FileName="M0002005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002005.WAV" SelfReg="false"/>
+    <ROW File="M0002006.WAV" Component_="M0002001.WAV" FileName="M0002006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002006.WAV" SelfReg="false"/>
+    <ROW File="M0002007.WAV" Component_="M0002001.WAV" FileName="M0002007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002007.WAV" SelfReg="false"/>
+    <ROW File="M0002008.WAV" Component_="M0002001.WAV" FileName="M0002008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002008.WAV" SelfReg="false"/>
+    <ROW File="M0002009.WAV" Component_="M0002001.WAV" FileName="M0002009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002009.WAV" SelfReg="false"/>
+    <ROW File="M0002010.WAV" Component_="M0002001.WAV" FileName="M0002010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0002\M0002010.WAV" SelfReg="false"/>
+    <ROW File="M0003001.WAV" Component_="M0003001.WAV" FileName="M0003001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003001.WAV" SelfReg="false"/>
+    <ROW File="M0003002.WAV" Component_="M0003001.WAV" FileName="M0003002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003002.WAV" SelfReg="false"/>
+    <ROW File="M0003003.WAV" Component_="M0003001.WAV" FileName="M0003003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003003.WAV" SelfReg="false"/>
+    <ROW File="M0003004.WAV" Component_="M0003001.WAV" FileName="M0003004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003004.WAV" SelfReg="false"/>
+    <ROW File="M0003005.WAV" Component_="M0003001.WAV" FileName="M0003005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003005.WAV" SelfReg="false"/>
+    <ROW File="M0003006.WAV" Component_="M0003001.WAV" FileName="M0003006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003006.WAV" SelfReg="false"/>
+    <ROW File="M0003007.WAV" Component_="M0003001.WAV" FileName="M0003007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003007.WAV" SelfReg="false"/>
+    <ROW File="M0003008.WAV" Component_="M0003001.WAV" FileName="M0003008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003008.WAV" SelfReg="false"/>
+    <ROW File="M0003009.WAV" Component_="M0003001.WAV" FileName="M0003009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003009.WAV" SelfReg="false"/>
+    <ROW File="M0003010.WAV" Component_="M0003001.WAV" FileName="M0003010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0003\M0003010.WAV" SelfReg="false"/>
+    <ROW File="M0004001.WAV" Component_="M0004001.WAV" FileName="M0004001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004001.WAV" SelfReg="false"/>
+    <ROW File="M0004002.WAV" Component_="M0004001.WAV" FileName="M0004002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004002.WAV" SelfReg="false"/>
+    <ROW File="M0004003.WAV" Component_="M0004001.WAV" FileName="M0004003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004003.WAV" SelfReg="false"/>
+    <ROW File="M0004004.WAV" Component_="M0004001.WAV" FileName="M0004004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004004.WAV" SelfReg="false"/>
+    <ROW File="M0004005.WAV" Component_="M0004001.WAV" FileName="M0004005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004005.WAV" SelfReg="false"/>
+    <ROW File="M0004006.WAV" Component_="M0004001.WAV" FileName="M0004006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004006.WAV" SelfReg="false"/>
+    <ROW File="M0004007.WAV" Component_="M0004001.WAV" FileName="M0004007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004007.WAV" SelfReg="false"/>
+    <ROW File="M0004008.WAV" Component_="M0004001.WAV" FileName="M0004008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004008.WAV" SelfReg="false"/>
+    <ROW File="M0004009.WAV" Component_="M0004001.WAV" FileName="M0004009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004009.WAV" SelfReg="false"/>
+    <ROW File="M0004010.WAV" Component_="M0004001.WAV" FileName="M0004010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0004\M0004010.WAV" SelfReg="false"/>
+    <ROW File="M0005001.WAV" Component_="M0005001.WAV" FileName="M0005001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005001.WAV" SelfReg="false"/>
+    <ROW File="M0005002.WAV" Component_="M0005001.WAV" FileName="M0005002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005002.WAV" SelfReg="false"/>
+    <ROW File="M0005003.WAV" Component_="M0005001.WAV" FileName="M0005003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005003.WAV" SelfReg="false"/>
+    <ROW File="M0005004.WAV" Component_="M0005001.WAV" FileName="M0005004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005004.WAV" SelfReg="false"/>
+    <ROW File="M0005005.WAV" Component_="M0005001.WAV" FileName="M0005005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005005.WAV" SelfReg="false"/>
+    <ROW File="M0005006.WAV" Component_="M0005001.WAV" FileName="M0005006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005006.WAV" SelfReg="false"/>
+    <ROW File="M0005007.WAV" Component_="M0005001.WAV" FileName="M0005007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005007.WAV" SelfReg="false"/>
+    <ROW File="M0005008.WAV" Component_="M0005001.WAV" FileName="M0005008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005008.WAV" SelfReg="false"/>
+    <ROW File="M0005009.WAV" Component_="M0005001.WAV" FileName="M0005009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005009.WAV" SelfReg="false"/>
+    <ROW File="M0005010.WAV" Component_="M0005001.WAV" FileName="M0005010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0005\M0005010.WAV" SelfReg="false"/>
+    <ROW File="M0006001.WAV" Component_="M0006001.WAV" FileName="M0006001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006001.WAV" SelfReg="false"/>
+    <ROW File="M0006002.WAV" Component_="M0006001.WAV" FileName="M0006002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006002.WAV" SelfReg="false"/>
+    <ROW File="M0006003.WAV" Component_="M0006001.WAV" FileName="M0006003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006003.WAV" SelfReg="false"/>
+    <ROW File="M0006004.WAV" Component_="M0006001.WAV" FileName="M0006004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006004.WAV" SelfReg="false"/>
+    <ROW File="M0006005.WAV" Component_="M0006001.WAV" FileName="M0006005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006005.WAV" SelfReg="false"/>
+    <ROW File="M0006006.WAV" Component_="M0006001.WAV" FileName="M0006006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006006.WAV" SelfReg="false"/>
+    <ROW File="M0006007.WAV" Component_="M0006001.WAV" FileName="M0006007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006007.WAV" SelfReg="false"/>
+    <ROW File="M0006008.WAV" Component_="M0006001.WAV" FileName="M0006008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006008.WAV" SelfReg="false"/>
+    <ROW File="M0006009.WAV" Component_="M0006001.WAV" FileName="M0006009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006009.WAV" SelfReg="false"/>
+    <ROW File="M0006010.WAV" Component_="M0006001.WAV" FileName="M0006010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0006\M0006010.WAV" SelfReg="false"/>
+    <ROW File="M0007001.WAV" Component_="M0007001.WAV" FileName="M0007001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007001.WAV" SelfReg="false"/>
+    <ROW File="M0007002.WAV" Component_="M0007001.WAV" FileName="M0007002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007002.WAV" SelfReg="false"/>
+    <ROW File="M0007003.WAV" Component_="M0007001.WAV" FileName="M0007003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007003.WAV" SelfReg="false"/>
+    <ROW File="M0007004.WAV" Component_="M0007001.WAV" FileName="M0007004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007004.WAV" SelfReg="false"/>
+    <ROW File="M0007005.WAV" Component_="M0007001.WAV" FileName="M0007005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007005.WAV" SelfReg="false"/>
+    <ROW File="M0007006.WAV" Component_="M0007001.WAV" FileName="M0007006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007006.WAV" SelfReg="false"/>
+    <ROW File="M0007007.WAV" Component_="M0007001.WAV" FileName="M0007007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007007.WAV" SelfReg="false"/>
+    <ROW File="M0007008.WAV" Component_="M0007001.WAV" FileName="M0007008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007008.WAV" SelfReg="false"/>
+    <ROW File="M0007009.WAV" Component_="M0007001.WAV" FileName="M0007009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007009.WAV" SelfReg="false"/>
+    <ROW File="M0007010.WAV" Component_="M0007001.WAV" FileName="M0007010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0007\M0007010.WAV" SelfReg="false"/>
+    <ROW File="M0008001.WAV" Component_="M0008001.WAV" FileName="M0008001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008001.WAV" SelfReg="false"/>
+    <ROW File="M0008002.WAV" Component_="M0008001.WAV" FileName="M0008002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008002.WAV" SelfReg="false"/>
+    <ROW File="M0008003.WAV" Component_="M0008001.WAV" FileName="M0008003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008003.WAV" SelfReg="false"/>
+    <ROW File="M0008004.WAV" Component_="M0008001.WAV" FileName="M0008004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008004.WAV" SelfReg="false"/>
+    <ROW File="M0008005.WAV" Component_="M0008001.WAV" FileName="M0008005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008005.WAV" SelfReg="false"/>
+    <ROW File="M0008006.WAV" Component_="M0008001.WAV" FileName="M0008006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008006.WAV" SelfReg="false"/>
+    <ROW File="M0008007.WAV" Component_="M0008001.WAV" FileName="M0008007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008007.WAV" SelfReg="false"/>
+    <ROW File="M0008008.WAV" Component_="M0008001.WAV" FileName="M0008008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008008.WAV" SelfReg="false"/>
+    <ROW File="M0008009.WAV" Component_="M0008001.WAV" FileName="M0008009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008009.WAV" SelfReg="false"/>
+    <ROW File="M0008010.WAV" Component_="M0008001.WAV" FileName="M0008010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0008\M0008010.WAV" SelfReg="false"/>
+    <ROW File="M0009001.WAV" Component_="M0009001.WAV" FileName="M0009001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009001.WAV" SelfReg="false"/>
+    <ROW File="M0009002.WAV" Component_="M0009001.WAV" FileName="M0009002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009002.WAV" SelfReg="false"/>
+    <ROW File="M0009003.WAV" Component_="M0009001.WAV" FileName="M0009003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009003.WAV" SelfReg="false"/>
+    <ROW File="M0009004.WAV" Component_="M0009001.WAV" FileName="M0009004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009004.WAV" SelfReg="false"/>
+    <ROW File="M0009005.WAV" Component_="M0009001.WAV" FileName="M0009005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009005.WAV" SelfReg="false"/>
+    <ROW File="M0009006.WAV" Component_="M0009001.WAV" FileName="M0009006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009006.WAV" SelfReg="false"/>
+    <ROW File="M0009007.WAV" Component_="M0009001.WAV" FileName="M0009007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009007.WAV" SelfReg="false"/>
+    <ROW File="M0009008.WAV" Component_="M0009001.WAV" FileName="M0009008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009008.WAV" SelfReg="false"/>
+    <ROW File="M0009009.WAV" Component_="M0009001.WAV" FileName="M0009009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009009.WAV" SelfReg="false"/>
+    <ROW File="M0009010.WAV" Component_="M0009001.WAV" FileName="M0009010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0009\M0009010.WAV" SelfReg="false"/>
+    <ROW File="M0010001.WAV" Component_="M0010001.WAV" FileName="M0010001.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010001.WAV" SelfReg="false"/>
+    <ROW File="M0010002.WAV" Component_="M0010001.WAV" FileName="M0010002.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010002.WAV" SelfReg="false"/>
+    <ROW File="M0010003.WAV" Component_="M0010001.WAV" FileName="M0010003.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010003.WAV" SelfReg="false"/>
+    <ROW File="M0010004.WAV" Component_="M0010001.WAV" FileName="M0010004.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010004.WAV" SelfReg="false"/>
+    <ROW File="M0010005.WAV" Component_="M0010001.WAV" FileName="M0010005.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010005.WAV" SelfReg="false"/>
+    <ROW File="M0010006.WAV" Component_="M0010001.WAV" FileName="M0010006.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010006.WAV" SelfReg="false"/>
+    <ROW File="M0010007.WAV" Component_="M0010001.WAV" FileName="M0010007.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010007.WAV" SelfReg="false"/>
+    <ROW File="M0010008.WAV" Component_="M0010001.WAV" FileName="M0010008.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010008.WAV" SelfReg="false"/>
+    <ROW File="M0010009.WAV" Component_="M0010001.WAV" FileName="M0010009.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010009.WAV" SelfReg="false"/>
+    <ROW File="M0010010.WAV" Component_="M0010001.WAV" FileName="M0010010.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Alcaim1_\M\M0010\M0010010.WAV" SelfReg="false"/>
+    <ROW File="alcaim_f.WAV" Component_="alcaim_f.WAV" FileName="alcaim_f.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\alcaim_f.WAV" SelfReg="false"/>
+    <ROW File="alcaim_m.WAV" Component_="alcaim_f.WAV" FileName="alcaim_m.WAV" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\alcaim_m.WAV" SelfReg="false"/>
+    <ROW File="Lista1A_frase1.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~1.WAV|Lista 1A_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase10.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~2.WAV|Lista 1A_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase11.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~3.WAV|Lista 1A_frase11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase11.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase12.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~4.WAV|Lista 1A_frase12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase12.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase13.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~5.WAV|Lista 1A_frase13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase13.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase14.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~6.WAV|Lista 1A_frase14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase14.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase15.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~7.WAV|Lista 1A_frase15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase15.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase16.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~8.WAV|Lista 1A_frase16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase16.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase17.wav" Component_="Lista1A_frase1.wav" FileName="LISTA1~9.WAV|Lista 1A_frase17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase17.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase18.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~10.WAV|Lista 1A_frase18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase18.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase19.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~11.WAV|Lista 1A_frase19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase19.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase2.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~12.WAV|Lista 1A_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase20.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~13.WAV|Lista 1A_frase20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase20.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase21.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~14.WAV|Lista 1A_frase21.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase21.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase22.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~15.WAV|Lista 1A_frase22.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase22.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase23.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~16.WAV|Lista 1A_frase23.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase23.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase24.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~17.WAV|Lista 1A_frase24.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase24.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase25.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~18.WAV|Lista 1A_frase25.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase25.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase3.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~19.WAV|Lista 1A_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase4.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~20.WAV|Lista 1A_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase5.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~21.WAV|Lista 1A_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase6.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~22.WAV|Lista 1A_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase7.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~23.WAV|Lista 1A_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase8.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~24.WAV|Lista 1A_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase9.wav" Component_="Lista1A_frase1.wav" FileName="LISTA~25.WAV|Lista 1A_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1A\Lista 1A_frase9.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase1.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~1.WAV|Lista1B_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase10.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~2.WAV|Lista1B_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase2.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~3.WAV|Lista1B_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase3.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~4.WAV|Lista1B_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase4.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~5.WAV|Lista1B_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase5.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~6.WAV|Lista1B_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase6.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~7.WAV|Lista1B_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase7.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~8.WAV|Lista1B_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase8.wav" Component_="Lista1B_frase1.wav" FileName="LISTA1~9.WAV|Lista1B_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista1B_frase9.wav" Component_="Lista1B_frase1.wav" FileName="LISTA~10.WAV|Lista1B_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 1B\Lista1B_frase9.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase1.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~1.WAV|Lista2B_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase10.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~2.WAV|Lista2B_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase2.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~3.WAV|Lista2B_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase3.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~4.WAV|Lista2B_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase4.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~5.WAV|Lista2B_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase5.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~6.WAV|Lista2B_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase6.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~7.WAV|Lista2B_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase7.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~8.WAV|Lista2B_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase8.wav" Component_="Lista2B_frase1.wav" FileName="LISTA2~9.WAV|Lista2B_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista2B_frase9.wav" Component_="Lista2B_frase1.wav" FileName="LISTA~10.WAV|Lista2B_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 2B\Lista2B_frase9.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase1.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~1.WAV|Lista3B_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase10.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~2.WAV|Lista3B_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase2.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~3.WAV|Lista3B_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase3.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~4.WAV|Lista3B_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase4.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~5.WAV|Lista3B_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase5.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~6.WAV|Lista3B_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase6.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~7.WAV|Lista3B_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase7.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~8.WAV|Lista3B_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase8.wav" Component_="Lista3B_frase1.wav" FileName="LISTA3~9.WAV|Lista3B_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista3B_frase9.wav" Component_="Lista3B_frase1.wav" FileName="LISTA~10.WAV|Lista3B_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 3B\Lista3B_frase9.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase1.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~1.WAV|Lista4B_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase10.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~2.WAV|Lista4B_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase2.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~3.WAV|Lista4B_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase3.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~4.WAV|Lista4B_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase4.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~5.WAV|Lista4B_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase5.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~6.WAV|Lista4B_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase6.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~7.WAV|Lista4B_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase7.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~8.WAV|Lista4B_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase8.wav" Component_="Lista4B_frase1.wav" FileName="LISTA4~9.WAV|Lista4B_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista4B_frase9.wav" Component_="Lista4B_frase1.wav" FileName="LISTA~10.WAV|Lista4B_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 4B\Lista4B_frase9.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase1.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~1.WAV|Lista5B_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase10.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~2.WAV|Lista5B_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase2.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~3.WAV|Lista5B_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase3.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~4.WAV|Lista5B_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase4.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~5.WAV|Lista5B_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase5.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~6.WAV|Lista5B_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase6.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~7.WAV|Lista5B_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase7.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~8.WAV|Lista5B_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase8.wav" Component_="Lista5B_frase1.wav" FileName="LISTA5~9.WAV|Lista5B_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista5B_frase9.wav" Component_="Lista5B_frase1.wav" FileName="LISTA~10.WAV|Lista5B_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 5B\Lista5B_frase9.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase1.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~1.WAV|Lista6B_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase10.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~2.WAV|Lista6B_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase2.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~3.WAV|Lista6B_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase3.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~4.WAV|Lista6B_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase4.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~5.WAV|Lista6B_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase5.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~6.WAV|Lista6B_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase6.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~7.WAV|Lista6B_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase7.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~8.WAV|Lista6B_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase8.wav" Component_="Lista6B_frase1.wav" FileName="LISTA6~9.WAV|Lista6B_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista6B_frase9.wav" Component_="Lista6B_frase1.wav" FileName="LISTA~10.WAV|Lista6B_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 6B\Lista6B_frase9.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase1.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~1.WAV|Lista7B_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase10.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~2.WAV|Lista7B_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase2.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~3.WAV|Lista7B_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase3.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~4.WAV|Lista7B_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase4.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~5.WAV|Lista7B_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase5.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~6.WAV|Lista7B_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase6.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~7.WAV|Lista7B_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase7.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~8.WAV|Lista7B_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase8.wav" Component_="Lista7B_frase1.wav" FileName="LISTA7~9.WAV|Lista7B_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista7B_frase9.wav" Component_="Lista7B_frase1.wav" FileName="LISTA~10.WAV|Lista7B_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\MCosta\Lista 7B\Lista7B_frase9.wav" SelfReg="false"/>
+    <ROW File="mcosta_1.wav" Component_="alcaim_f.WAV" FileName="mcosta_1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\mcosta_1.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase1.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~1.WAV|Lista 1A_frase1.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase1.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase10.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~2.WAV|Lista 1A_frase10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase10.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase11.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~3.WAV|Lista 1A_frase11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase11.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase12.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~4.WAV|Lista 1A_frase12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase12.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase13.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~5.WAV|Lista 1A_frase13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase13.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase14.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~6.WAV|Lista 1A_frase14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase14.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase15.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~7.WAV|Lista 1A_frase15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase15.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase16.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~8.WAV|Lista 1A_frase16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase16.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase17.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA1~9.WAV|Lista 1A_frase17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase17.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase18.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~10.WAV|Lista 1A_frase18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase18.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase19.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~11.WAV|Lista 1A_frase19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase19.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase2.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~12.WAV|Lista 1A_frase2.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase2.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase20.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~13.WAV|Lista 1A_frase20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase20.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase21.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~14.WAV|Lista 1A_frase21.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase21.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase22.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~15.WAV|Lista 1A_frase22.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase22.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase23.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~16.WAV|Lista 1A_frase23.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase23.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase24.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~17.WAV|Lista 1A_frase24.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase24.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase25.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~18.WAV|Lista 1A_frase25.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase25.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase3.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~19.WAV|Lista 1A_frase3.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase3.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase4.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~20.WAV|Lista 1A_frase4.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase4.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase5.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~21.WAV|Lista 1A_frase5.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase5.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase6.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~22.WAV|Lista 1A_frase6.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase6.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase7.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~23.WAV|Lista 1A_frase7.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase7.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase8.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~24.WAV|Lista 1A_frase8.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase8.wav" SelfReg="false"/>
+    <ROW File="Lista1A_frase9.wav_1" Component_="Lista1A_frase1.wav_1" FileName="LISTA~25.WAV|Lista 1A_frase9.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase9.wav" SelfReg="false"/>
+    <ROW File="lista.gif" Component_="lista.gif" FileName="lista.gif" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Trainning\lista.gif" SelfReg="false"/>
+    <ROW File="S_01_01.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_01.wav" SelfReg="false"/>
+    <ROW File="S_01_02.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_02.wav" SelfReg="false"/>
+    <ROW File="S_01_03.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_03.wav" SelfReg="false"/>
+    <ROW File="S_01_04.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_04.wav" SelfReg="false"/>
+    <ROW File="S_01_05.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_05.wav" SelfReg="false"/>
+    <ROW File="S_01_06.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_06.wav" SelfReg="false"/>
+    <ROW File="S_01_07.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_07.wav" SelfReg="false"/>
+    <ROW File="S_01_08.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_08.wav" SelfReg="false"/>
+    <ROW File="S_01_09.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_09.wav" SelfReg="false"/>
+    <ROW File="S_01_10.wav" Component_="kHzTone_60dB_SPL.wav" FileName="S_01_10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\S_01_10.wav" SelfReg="false"/>
+    <ROW File="tapestry.wav" Component_="kHzTone_60dB_SPL.wav" FileName="tapestry.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\tapestry.wav" SelfReg="false"/>
+    <ROW File="Trumpet1.v17.ms.daff" Component_="wav" FileName="TRUMPE~1.DAF|Trumpet1.v17.ms.daff" Attributes="0" SourcePath="..\perSONA\data\Trumpet1.v17.ms.daff" SelfReg="false"/>
+    <ROW File="WelcomeToVA.wav" Component_="wav" FileName="WELCOM~1.WAV|WelcomeToVA.wav" Attributes="0" SourcePath="..\perSONA\data\WelcomeToVA.wav" SelfReg="false"/>
+    <ROW File="VAAudiofileSignalSource.h" Component_="VAAudiofileSignalSource.h" FileName="VAAUDI~1.H|VAAudiofileSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\Audiosignals\VAAudiofileSignalSource.h" SelfReg="false"/>
+    <ROW File="VAAudioSignalSourceManager.h" Component_="VAAudiofileSignalSource.h" FileName="VAAUDI~2.H|VAAudioSignalSourceManager.h" Attributes="0" SourcePath="..\perSONA\include\Audiosignals\VAAudioSignalSourceManager.h" SelfReg="false"/>
+    <ROW File="VADeviceInputSignalSource.h" Component_="VAAudiofileSignalSource.h" FileName="VADEVI~1.H|VADeviceInputSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\Audiosignals\VADeviceInputSignalSource.h" SelfReg="false"/>
+    <ROW File="VAEngineSignalSource.h" Component_="VAAudiofileSignalSource.h" FileName="VAENGI~1.H|VAEngineSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\Audiosignals\VAEngineSignalSource.h" SelfReg="false"/>
+    <ROW File="VAMachineSignalSource.h" Component_="VAAudiofileSignalSource.h" FileName="VAMACH~1.H|VAMachineSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\Audiosignals\VAMachineSignalSource.h" SelfReg="false"/>
+    <ROW File="VANetstreamSignalSource.h" Component_="VAAudiofileSignalSource.h" FileName="VANETS~1.H|VANetstreamSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\Audiosignals\VANetstreamSignalSource.h" SelfReg="false"/>
+    <ROW File="VASequencerSignalSource.h" Component_="VAAudiofileSignalSource.h" FileName="VASEQU~1.H|VASequencerSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\Audiosignals\VASequencerSignalSource.h" SelfReg="false"/>
+    <ROW File="VATextToSpeechSignalSource.h" Component_="VAAudiofileSignalSource.h" FileName="VATEXT~1.H|VATextToSpeechSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\Audiosignals\VATextToSpeechSignalSource.h" SelfReg="false"/>
+    <ROW File="core.h" Component_="core.h" FileName="core.h" Attributes="0" SourcePath="..\perSONA\include\core\core.h" SelfReg="false"/>
+    <ROW File="VADirectivity.h" Component_="VADirectivity.h" FileName="VADIRE~1.H|VADirectivity.h" Attributes="0" SourcePath="..\perSONA\include\directivities\VADirectivity.h" SelfReg="false"/>
+    <ROW File="VADirectivityDAFFEnergetic.h" Component_="VADirectivity.h" FileName="VADIRE~2.H|VADirectivityDAFFEnergetic.h" Attributes="0" SourcePath="..\perSONA\include\directivities\VADirectivityDAFFEnergetic.h" SelfReg="false"/>
+    <ROW File="VADirectivityDAFFHATOHRIR.h" Component_="VADirectivity.h" FileName="VADIRE~3.H|VADirectivityDAFFHATOHRIR.h" Attributes="0" SourcePath="..\perSONA\include\directivities\VADirectivityDAFFHATOHRIR.h" SelfReg="false"/>
+    <ROW File="VADirectivityDAFFHRIR.h" Component_="VADirectivity.h" FileName="VADIRE~4.H|VADirectivityDAFFHRIR.h" Attributes="0" SourcePath="..\perSONA\include\directivities\VADirectivityDAFFHRIR.h" SelfReg="false"/>
+    <ROW File="VADirectivityManager.h" Component_="VADirectivity.h" FileName="VADIRE~5.H|VADirectivityManager.h" Attributes="0" SourcePath="..\perSONA\include\directivities\VADirectivityManager.h" SelfReg="false"/>
+    <ROW File="VAASIOBackend.h" Component_="VAASIOBackend.h" FileName="VAASIO~1.H|VAASIOBackend.h" Attributes="0" SourcePath="..\perSONA\include\Drivers\Audio\VAASIOBackend.h" SelfReg="false"/>
+    <ROW File="VAAudioDriverBackend.h" Component_="VAASIOBackend.h" FileName="VAAUDI~1.H|VAAudioDriverBackend.h" Attributes="0" SourcePath="..\perSONA\include\Drivers\Audio\VAAudioDriverBackend.h" SelfReg="false"/>
+    <ROW File="VAAudioDriverConfig.h" Component_="VAASIOBackend.h" FileName="VAAUDI~2.H|VAAudioDriverConfig.h" Attributes="0" SourcePath="..\perSONA\include\Drivers\Audio\VAAudioDriverConfig.h" SelfReg="false"/>
+    <ROW File="VAPortaudioBackend.h" Component_="VAASIOBackend.h" FileName="VAPORT~1.H|VAPortaudioBackend.h" Attributes="0" SourcePath="..\perSONA\include\Drivers\Audio\VAPortaudioBackend.h" SelfReg="false"/>
+    <ROW File="VAVirtualAudioDriverBackend.h" Component_="VAASIOBackend.h" FileName="VAVIRT~1.H|VAVirtualAudioDriverBackend.h" Attributes="0" SourcePath="..\perSONA\include\Drivers\Audio\VAVirtualAudioDriverBackend.h" SelfReg="false"/>
+    <ROW File="VAAtmosphere.h" Component_="VAAtmosphere.h" FileName="VAATMO~1.H|VAAtmosphere.h" Attributes="0" SourcePath="..\perSONA\include\Filtering\VAAtmosphere.h" SelfReg="false"/>
+    <ROW File="VATemporalVariations.h" Component_="VAAtmosphere.h" FileName="VATEMP~1.H|VATemporalVariations.h" Attributes="0" SourcePath="..\perSONA\include\Filtering\VATemporalVariations.h" SelfReg="false"/>
+    <ROW File="VAHomogeneousMedium.h" Component_="VAHomogeneousMedium.h" FileName="VAHOMO~1.H|VAHomogeneousMedium.h" Attributes="0" SourcePath="..\perSONA\include\Medium\VAHomogeneousMedium.h" SelfReg="false"/>
+    <ROW File="VAMotionModel.h" Component_="VAMotionModel.h" FileName="VAMOTI~1.H|VAMotionModel.h" Attributes="0" SourcePath="..\perSONA\include\Motion\VAMotionModel.h" SelfReg="false"/>
+    <ROW File="VAMotionModelBase.h" Component_="VAMotionModel.h" FileName="VAMOTI~2.H|VAMotionModelBase.h" Attributes="0" SourcePath="..\perSONA\include\Motion\VAMotionModelBase.h" SelfReg="false"/>
+    <ROW File="VASampleAndHoldMotionModel.h" Component_="VAMotionModel.h" FileName="VASAMP~1.H|VASampleAndHoldMotionModel.h" Attributes="0" SourcePath="..\perSONA\include\Motion\VASampleAndHoldMotionModel.h" SelfReg="false"/>
+    <ROW File="VASharedMotionModel.h" Component_="VAMotionModel.h" FileName="VASHAR~1.H|VASharedMotionModel.h" Attributes="0" SourcePath="..\perSONA\include\Motion\VASharedMotionModel.h" SelfReg="false"/>
+    <ROW File="VAAmbientMixerAudioRenderer.h" Component_="VAAmbientMixerAudioRenderer.h" FileName="VAAMBI~1.H|VAAmbientMixerAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Ambient\Mixer\VAAmbientMixerAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VAAmbisonicsFreefieldAudioRenderer.h" Component_="VAAmbisonicsFreefieldAudioRenderer.h" FileName="VAAMBI~1.H|VAAmbisonicsFreefieldAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Ambisonics\Freefield\VAAmbisonicsFreefieldAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VAAirTrafficNoiseAudioRenderer.h" Component_="VAAirTrafficNoiseAudioRenderer.h" FileName="VAAIRT~1.H|VAAirTrafficNoiseAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\AirTrafficNoise\VAAirTrafficNoiseAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VABinauralArtificialReverb.h" Component_="VABinauralArtificialReverb.h" FileName="VABINA~1.H|VABinauralArtificialReverb.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\ArtificialReverb\VABinauralArtificialReverb.h" SelfReg="false"/>
+    <ROW File="VABinauralFreefieldAudioRenderer.h" Component_="VABinauralFreefieldAudioRenderer.h" FileName="VABINA~1.H|VABinauralFreefieldAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\FreeField\VABinauralFreefieldAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VABinauralOutdoorNoiseAudioRenderer.h" Component_="VABinauralOutdoorNoiseAudioRenderer.h" FileName="VABINA~1.H|VABinauralOutdoorNoiseAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\OutdoorNoise\VABinauralOutdoorNoiseAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VARoomAcousticsAudioRenderer.h" Component_="VARoomAcousticsAudioRenderer.h" FileName="VAROOM~1.H|VARoomAcousticsAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\RoomAcoustics\VARoomAcousticsAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VARoomAcousticsAudioRendererConfig.h" Component_="VARoomAcousticsAudioRenderer.h" FileName="VAROOM~2.H|VARoomAcousticsAudioRendererConfig.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\RoomAcoustics\VARoomAcousticsAudioRendererConfig.h" SelfReg="false"/>
+    <ROW File="VARoomAcousticsClusterScheduler.h" Component_="VARoomAcousticsAudioRenderer.h" FileName="VAROOM~3.H|VARoomAcousticsClusterScheduler.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\RoomAcoustics\VARoomAcousticsClusterScheduler.h" SelfReg="false"/>
+    <ROW File="VARoomAcousticsHybridScheduler.h" Component_="VARoomAcousticsAudioRenderer.h" FileName="VAROOM~4.H|VARoomAcousticsHybridScheduler.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\RoomAcoustics\VARoomAcousticsHybridScheduler.h" SelfReg="false"/>
+    <ROW File="VARoomAcousticsLocalScheduler.h" Component_="VARoomAcousticsAudioRenderer.h" FileName="VAROOM~5.H|VARoomAcousticsLocalScheduler.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\RoomAcoustics\VARoomAcousticsLocalScheduler.h" SelfReg="false"/>
+    <ROW File="VARoomAcousticsRemoteScheduler.h" Component_="VARoomAcousticsAudioRenderer.h" FileName="VAROOM~6.H|VARoomAcousticsRemoteScheduler.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\RoomAcoustics\VARoomAcousticsRemoteScheduler.h" SelfReg="false"/>
+    <ROW File="VARoomAcousticsScheduler.h" Component_="VARoomAcousticsAudioRenderer.h" FileName="VAROOM~7.H|VARoomAcousticsScheduler.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Binaural\RoomAcoustics\VARoomAcousticsScheduler.h" SelfReg="false"/>
+    <ROW File="VAPTDummyAudioRenderer.h" Component_="VAPTDummyAudioRenderer.h" FileName="VAPTDU~1.H|VAPTDummyAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Prototyping\Dummy\VAPTDummyAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VAPrototypeFreeFieldAudioRenderer.h" Component_="VAPrototypeFreeFieldAudioRenderer.h" FileName="VAPROT~1.H|VAPrototypeFreeFieldAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Prototyping\FreeField\VAPrototypeFreeFieldAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VAPTGenericPathAudioRenderer.h" Component_="VAPTGenericPathAudioRenderer.h" FileName="VAPTGE~1.H|VAPTGenericPathAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Prototyping\GenericPath\VAPTGenericPathAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VAPTHearingAidRenderer.h" Component_="VAPTHearingAidRenderer.h" FileName="VAPTHE~1.H|VAPTHearingAidRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\Prototyping\HearingAid\VAPTHearingAidRenderer.h" SelfReg="false"/>
+    <ROW File="VAAudioRenderer.h" Component_="VAAudioRenderer.h" FileName="VAAUDI~1.H|VAAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\VAAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VAAudioRendererRegistry.h" Component_="VAAudioRenderer.h" FileName="VAAUDI~2.H|VAAudioRendererRegistry.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\VAAudioRendererRegistry.h" SelfReg="false"/>
+    <ROW File="VAVBAPFreefieldAudioRenderer.h" Component_="VAVBAPFreefieldAudioRenderer.h" FileName="VAVBAP~1.H|VAVBAPFreefieldAudioRenderer.h" Attributes="0" SourcePath="..\perSONA\include\Rendering\VBAP\Freefield\VAVBAPFreefieldAudioRenderer.h" SelfReg="false"/>
+    <ROW File="VAAmbisonicsReproduction.h" Component_="VAAmbisonicsReproduction.h" FileName="VAAMBI~1.H|VAAmbisonicsReproduction.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\Ambisonics\VAAmbisonicsReproduction.h" SelfReg="false"/>
+    <ROW File="VAAmbisonicsBinauralMixdownReproduction.h" Component_="VAAmbisonicsBinauralMixdownReproduction.h" FileName="VAAMBI~1.H|VAAmbisonicsBinauralMixdownReproduction.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\Binaural\VAAmbisonicsBinauralMixdownReproduction.h" SelfReg="false"/>
+    <ROW File="VABinauralMixdownReproduction.h" Component_="VAAmbisonicsBinauralMixdownReproduction.h" FileName="VABINA~1.H|VABinauralMixdownReproduction.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\Binaural\VABinauralMixdownReproduction.h" SelfReg="false"/>
+    <ROW File="VACTC4Reproduction.h" Component_="VAAmbisonicsBinauralMixdownReproduction.h" FileName="VACTC4~1.H|VACTC4Reproduction.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\Binaural\VACTC4Reproduction.h" SelfReg="false"/>
+    <ROW File="VAHeadphonesReproduction.h" Component_="VAAmbisonicsBinauralMixdownReproduction.h" FileName="VAHEAD~1.H|VAHeadphonesReproduction.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\Binaural\VAHeadphonesReproduction.h" SelfReg="false"/>
+    <ROW File="VANCTCReproduction.h" Component_="VAAmbisonicsBinauralMixdownReproduction.h" FileName="VANCTC~1.H|VANCTCReproduction.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\Binaural\VANCTCReproduction.h" SelfReg="false"/>
+    <ROW File="VAReproductionLowFrequencyMixer.h" Component_="VAReproductionLowFrequencyMixer.h" FileName="VAREPR~1.H|VAReproductionLowFrequencyMixer.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\Mixer\VAReproductionLowFrequencyMixer.h" SelfReg="false"/>
+    <ROW File="VAReproductionTalkthrough.h" Component_="VAReproductionTalkthrough.h" FileName="VAREPR~1.H|VAReproductionTalkthrough.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\Talkthrough\VAReproductionTalkthrough.h" SelfReg="false"/>
+    <ROW File="VAAudioReproduction.h" Component_="VAAudioReproduction.h" FileName="VAAUDI~1.H|VAAudioReproduction.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\VAAudioReproduction.h" SelfReg="false"/>
+    <ROW File="VAAudioReproductionRegistry.h" Component_="VAAudioReproduction.h" FileName="VAAUDI~2.H|VAAudioReproductionRegistry.h" Attributes="0" SourcePath="..\perSONA\include\Reproduction\VAAudioReproductionRegistry.h" SelfReg="false"/>
+    <ROW File="VAContainerState.h" Component_="VAContainerState.h" FileName="VACONT~1.H|VAContainerState.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VAContainerState.h" SelfReg="false"/>
+    <ROW File="VAListenerDesc.h" Component_="VAContainerState.h" FileName="VALIST~1.H|VAListenerDesc.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VAListenerDesc.h" SelfReg="false"/>
+    <ROW File="VAListenerState.h" Component_="VAContainerState.h" FileName="VALIST~2.H|VAListenerState.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VAListenerState.h" SelfReg="false"/>
+    <ROW File="VAMotionState.h" Component_="VAContainerState.h" FileName="VAMOTI~1.H|VAMotionState.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VAMotionState.h" SelfReg="false"/>
+    <ROW File="VAPortalDesc.h" Component_="VAContainerState.h" FileName="VAPORT~1.H|VAPortalDesc.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VAPortalDesc.h" SelfReg="false"/>
+    <ROW File="VAPortalState.h" Component_="VAContainerState.h" FileName="VAPORT~2.H|VAPortalState.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VAPortalState.h" SelfReg="false"/>
+    <ROW File="VAScene.h" Component_="VAContainerState.h" FileName="VAScene.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VAScene.h" SelfReg="false"/>
+    <ROW File="VASceneManager.h" Component_="VAContainerState.h" FileName="VASCEN~1.H|VASceneManager.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VASceneManager.h" SelfReg="false"/>
+    <ROW File="VASceneState.h" Component_="VAContainerState.h" FileName="VASCEN~2.H|VASceneState.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VASceneState.h" SelfReg="false"/>
+    <ROW File="VASceneStateBase.h" Component_="VAContainerState.h" FileName="VASCEN~3.H|VASceneStateBase.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VASceneStateBase.h" SelfReg="false"/>
+    <ROW File="VASceneVariables.h" Component_="VAContainerState.h" FileName="VASCEN~4.H|VASceneVariables.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VASceneVariables.h" SelfReg="false"/>
+    <ROW File="VASoundSourceDesc.h" Component_="VAContainerState.h" FileName="VASOUN~1.H|VASoundSourceDesc.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VASoundSourceDesc.h" SelfReg="false"/>
+    <ROW File="VASoundSourceState.h" Component_="VAContainerState.h" FileName="VASOUN~2.H|VASoundSourceState.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VASoundSourceState.h" SelfReg="false"/>
+    <ROW File="VASurfaceState.h" Component_="VAContainerState.h" FileName="VASURF~1.H|VASurfaceState.h" Attributes="0" SourcePath="..\perSONA\include\Scene\VASurfaceState.h" SelfReg="false"/>
+    <ROW File="VADebug.h" Component_="VADebug.h" FileName="VADebug.h" Attributes="0" SourcePath="..\perSONA\include\Utils\VADebug.h" SelfReg="false"/>
+    <ROW File="VAUtils.h" Component_="VADebug.h" FileName="VAUtils.h" Attributes="0" SourcePath="..\perSONA\include\Utils\VAUtils.h" SelfReg="false"/>
+    <ROW File="VA.h" Component_="VA.h" FileName="VA.h" Attributes="0" SourcePath="..\perSONA\include\VA.h" SelfReg="false"/>
+    <ROW File="VAAudioSignalSource.h" Component_="VA.h" FileName="VAAUDI~1.H|VAAudioSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\VAAudioSignalSource.h" SelfReg="false"/>
+    <ROW File="VAAudiostreamTracker.h" Component_="VA.h" FileName="VAAUDI~2.H|VAAudiostreamTracker.h" Attributes="0" SourcePath="..\perSONA\include\VAAudiostreamTracker.h" SelfReg="false"/>
+    <ROW File="VABase.h" Component_="VA.h" FileName="VABase.h" Attributes="0" SourcePath="..\perSONA\include\VABase.h" SelfReg="false"/>
+    <ROW File="VABaseDefinitions.h" Component_="VA.h" FileName="VABASE~1.H|VABaseDefinitions.h" Attributes="0" SourcePath="..\perSONA\include\VABaseDefinitions.h" SelfReg="false"/>
+    <ROW File="VACore.h" Component_="VA.h" FileName="VACore.h" Attributes="0" SourcePath="..\perSONA\include\VACore.h" SelfReg="false"/>
+    <ROW File="VACoreConfig.h" Component_="VA.h" FileName="VACORE~1.H|VACoreConfig.h" Attributes="0" SourcePath="..\perSONA\include\VACoreConfig.h" SelfReg="false"/>
+    <ROW File="VACoreDefinitions.h" Component_="VA.h" FileName="VACORE~2.H|VACoreDefinitions.h" Attributes="0" SourcePath="..\perSONA\include\VACoreDefinitions.h" SelfReg="false"/>
+    <ROW File="VACoreEventHandlerRegistry.h" Component_="VA.h" FileName="VACORE~3.H|VACoreEventHandlerRegistry.h" Attributes="0" SourcePath="..\perSONA\include\VACoreEventHandlerRegistry.h" SelfReg="false"/>
+    <ROW File="VACoreEventManager.h" Component_="VA.h" FileName="VACORE~4.H|VACoreEventManager.h" Attributes="0" SourcePath="..\perSONA\include\VACoreEventManager.h" SelfReg="false"/>
+    <ROW File="VACoreFactory.h" Component_="VA.h" FileName="VACORE~5.H|VACoreFactory.h" Attributes="0" SourcePath="..\perSONA\include\VACoreFactory.h" SelfReg="false"/>
+    <ROW File="VACoreImpl.h" Component_="VA.h" FileName="VACORE~6.H|VACoreImpl.h" Attributes="0" SourcePath="..\perSONA\include\VACoreImpl.h" SelfReg="false"/>
+    <ROW File="VACoreThread.h" Component_="VA.h" FileName="VACORE~7.H|VACoreThread.h" Attributes="0" SourcePath="..\perSONA\include\VACoreThread.h" SelfReg="false"/>
+    <ROW File="VACSDefinitions.h" Component_="VA.h" FileName="VACSDE~1.H|VACSDefinitions.h" Attributes="0" SourcePath="..\perSONA\include\VACSDefinitions.h" SelfReg="false"/>
+    <ROW File="VAEvent.h" Component_="VA.h" FileName="VAEvent.h" Attributes="0" SourcePath="..\perSONA\include\VAEvent.h" SelfReg="false"/>
+    <ROW File="VAEventHandlerGlobalLock.h" Component_="VA.h" FileName="VAEVEN~1.H|VAEventHandlerGlobalLock.h" Attributes="0" SourcePath="..\perSONA\include\VAEventHandlerGlobalLock.h" SelfReg="false"/>
+    <ROW File="VAException.h" Component_="VA.h" FileName="VAEXCE~1.H|VAException.h" Attributes="0" SourcePath="..\perSONA\include\VAException.h" SelfReg="false"/>
+    <ROW File="VAHardwareSetup.h" Component_="VA.h" FileName="VAHARD~1.H|VAHardwareSetup.h" Attributes="0" SourcePath="..\perSONA\include\VAHardwareSetup.h" SelfReg="false"/>
+    <ROW File="VAInterface.h" Component_="VA.h" FileName="VAINTE~1.H|VAInterface.h" Attributes="0" SourcePath="..\perSONA\include\VAInterface.h" SelfReg="false"/>
+    <ROW File="VALockfreeObjectPool.h" Component_="VA.h" FileName="VALOCK~1.H|VALockfreeObjectPool.h" Attributes="0" SourcePath="..\perSONA\include\VALockfreeObjectPool.h" SelfReg="false"/>
+    <ROW File="VALog.h" Component_="VA.h" FileName="VALog.h" Attributes="0" SourcePath="..\perSONA\include\VALog.h" SelfReg="false"/>
+    <ROW File="VAMacroMap.h" Component_="VA.h" FileName="VAMACR~1.H|VAMacroMap.h" Attributes="0" SourcePath="..\perSONA\include\VAMacroMap.h" SelfReg="false"/>
+    <ROW File="VAMatlabConnection.h" Component_="VA.h" FileName="VAMATL~1.H|VAMatlabConnection.h" Attributes="0" SourcePath="..\perSONA\include\VAMatlabConnection.h" SelfReg="false"/>
+    <ROW File="VAMatlabFunctionMapping.h" Component_="VA.h" FileName="VAMATL~2.H|VAMatlabFunctionMapping.h" Attributes="0" SourcePath="..\perSONA\include\VAMatlabFunctionMapping.h" SelfReg="false"/>
+    <ROW File="VAMatlabHelpers.h" Component_="VA.h" FileName="VAMATL~3.H|VAMatlabHelpers.h" Attributes="0" SourcePath="..\perSONA\include\VAMatlabHelpers.h" SelfReg="false"/>
+    <ROW File="VAMatlabTracking.h" Component_="VA.h" FileName="VAMATL~4.H|VAMatlabTracking.h" Attributes="0" SourcePath="..\perSONA\include\VAMatlabTracking.h" SelfReg="false"/>
+    <ROW File="VANet.h" Component_="VA.h" FileName="VANet.h" Attributes="0" SourcePath="..\perSONA\include\VANet.h" SelfReg="false"/>
+    <ROW File="VANetAudioStreamServer.h" Component_="VA.h" FileName="VANETA~1.H|VANetAudioStreamServer.h" Attributes="0" SourcePath="..\perSONA\include\VANetAudioStreamServer.h" SelfReg="false"/>
+    <ROW File="VANetAudioStreamServerImpl.h" Component_="VA.h" FileName="VANETA~2.H|VANetAudioStreamServerImpl.h" Attributes="0" SourcePath="..\perSONA\include\VANetAudioStreamServerImpl.h" SelfReg="false"/>
+    <ROW File="VANetClient.h" Component_="VA.h" FileName="VANETC~1.H|VANetClient.h" Attributes="0" SourcePath="..\perSONA\include\VANetClient.h" SelfReg="false"/>
+    <ROW File="VANetClientImpl.h" Component_="VA.h" FileName="VANETC~2.H|VANetClientImpl.h" Attributes="0" SourcePath="..\perSONA\include\VANetClientImpl.h" SelfReg="false"/>
+    <ROW File="VANetCSWrapper.h" Component_="VA.h" FileName="VANETC~3.H|VANetCSWrapper.h" Attributes="0" SourcePath="..\perSONA\include\VANetCSWrapper.h" SelfReg="false"/>
+    <ROW File="VANetDefinitions.h" Component_="VA.h" FileName="VANETD~1.H|VANetDefinitions.h" Attributes="0" SourcePath="..\perSONA\include\VANetDefinitions.h" SelfReg="false"/>
+    <ROW File="VANetMessage.h" Component_="VA.h" FileName="VANETM~1.H|VANetMessage.h" Attributes="0" SourcePath="..\perSONA\include\VANetMessage.h" SelfReg="false"/>
+    <ROW File="VANetNetworkProtocol.h" Component_="VA.h" FileName="VANETN~1.H|VANetNetworkProtocol.h" Attributes="0" SourcePath="..\perSONA\include\VANetNetworkProtocol.h" SelfReg="false"/>
+    <ROW File="VANetServer.h" Component_="VA.h" FileName="VANETS~1.H|VANetServer.h" Attributes="0" SourcePath="..\perSONA\include\VANetServer.h" SelfReg="false"/>
+    <ROW File="VANetServerImpl.h" Component_="VA.h" FileName="VANETS~2.H|VANetServerImpl.h" Attributes="0" SourcePath="..\perSONA\include\VANetServerImpl.h" SelfReg="false"/>
+    <ROW File="VANetUtils.h" Component_="VA.h" FileName="VANETU~1.H|VANetUtils.h" Attributes="0" SourcePath="..\perSONA\include\VANetUtils.h" SelfReg="false"/>
+    <ROW File="VANetVersion.h" Component_="VA.h" FileName="VANETV~1.H|VANetVersion.h" Attributes="0" SourcePath="..\perSONA\include\VANetVersion.h" SelfReg="false"/>
+    <ROW File="VANetVistaCompatibility.h" Component_="VA.h" FileName="VANETV~2.H|VANetVistaCompatibility.h" Attributes="0" SourcePath="..\perSONA\include\VANetVistaCompatibility.h" SelfReg="false"/>
+    <ROW File="VANetworkStreamAudioSignalSource.h" Component_="VA.h" FileName="VANETW~1.H|VANetworkStreamAudioSignalSource.h" Attributes="0" SourcePath="..\perSONA\include\VANetworkStreamAudioSignalSource.h" SelfReg="false"/>
+    <ROW File="VAObject.h" Component_="VA.h" FileName="VAObject.h" Attributes="0" SourcePath="..\perSONA\include\VAObject.h" SelfReg="false"/>
+    <ROW File="VAObjectContainer.h" Component_="VA.h" FileName="VAOBJE~1.H|VAObjectContainer.h" Attributes="0" SourcePath="..\perSONA\include\VAObjectContainer.h" SelfReg="false"/>
+    <ROW File="VAObjectPool.h" Component_="VA.h" FileName="VAOBJE~2.H|VAObjectPool.h" Attributes="0" SourcePath="..\perSONA\include\VAObjectPool.h" SelfReg="false"/>
+    <ROW File="VAObjectRegistry.h" Component_="VA.h" FileName="VAOBJE~3.H|VAObjectRegistry.h" Attributes="0" SourcePath="..\perSONA\include\VAObjectRegistry.h" SelfReg="false"/>
+    <ROW File="VAPoolObject.h" Component_="VA.h" FileName="VAPOOL~1.H|VAPoolObject.h" Attributes="0" SourcePath="..\perSONA\include\VAPoolObject.h" SelfReg="false"/>
+    <ROW File="VAProfiler.h" Component_="VA.h" FileName="VAPROF~1.H|VAProfiler.h" Attributes="0" SourcePath="..\perSONA\include\VAProfiler.h" SelfReg="false"/>
+    <ROW File="VAReferenceableObject.h" Component_="VA.h" FileName="VAREFE~1.H|VAReferenceableObject.h" Attributes="0" SourcePath="..\perSONA\include\VAReferenceableObject.h" SelfReg="false"/>
+    <ROW File="VASamples.h" Component_="VA.h" FileName="VASAMP~1.H|VASamples.h" Attributes="0" SourcePath="..\perSONA\include\VASamples.h" SelfReg="false"/>
+    <ROW File="VASourceListenerMetrics.h" Component_="VA.h" FileName="VASOUR~1.H|VASourceListenerMetrics.h" Attributes="0" SourcePath="..\perSONA\include\VASourceListenerMetrics.h" SelfReg="false"/>
+    <ROW File="VAStringtable.h" Component_="VA.h" FileName="VASTRI~1.H|VAStringtable.h" Attributes="0" SourcePath="..\perSONA\include\VAStringtable.h" SelfReg="false"/>
+    <ROW File="VAStruct.h" Component_="VA.h" FileName="VAStruct.h" Attributes="0" SourcePath="..\perSONA\include\VAStruct.h" SelfReg="false"/>
+    <ROW File="VAUncopyable.h" Component_="VA.h" FileName="VAUNCO~1.H|VAUncopyable.h" Attributes="0" SourcePath="..\perSONA\include\VAUncopyable.h" SelfReg="false"/>
+    <ROW File="VAVersion.h" Component_="VA.h" FileName="VAVERS~1.H|VAVersion.h" Attributes="0" SourcePath="..\perSONA\include\VAVersion.h" SelfReg="false"/>
+    <ROW File="DAFF.dll" Component_="DAFF.dll" FileName="DAFF.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\DAFF.dll" SelfReg="false"/>
+    <ROW File="DAFFViz.dll" Component_="DAFFViz.dll" FileName="DAFFViz.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\DAFFViz.dll" SelfReg="false"/>
+    <ROW File="ITABase.dll" Component_="ITABase.dll" FileName="ITABase.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITABase.dll" SelfReg="false"/>
+    <ROW File="ITAConvolution.dll" Component_="ITAConvolution.dll" FileName="ITACON~1.DLL|ITAConvolution.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITAConvolution.dll" SelfReg="false"/>
+    <ROW File="ITACTC.dll" Component_="ITACTC.dll" FileName="ITACTC.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITACTC.dll" SelfReg="false"/>
+    <ROW File="ITADataSources.dll" Component_="ITADataSources.dll" FileName="ITADAT~1.DLL|ITADataSources.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITADataSources.dll" SelfReg="false"/>
+    <ROW File="ITADSP.dll" Component_="ITADSP.dll" FileName="ITADSP.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITADSP.dll" SelfReg="false"/>
+    <ROW File="ITAFFT.dll" Component_="ITAFFT.dll" FileName="ITAFFT.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITAFFT.dll" SelfReg="false"/>
+    <ROW File="ITAQtWidgets.dll" Component_="ITAQtWidgets.dll" FileName="ITAQTW~1.DLL|ITAQtWidgets.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITAQtWidgets.dll" SelfReg="false"/>
+    <ROW File="ITASampler.dll" Component_="ITASampler.dll" FileName="ITASAM~1.DLL|ITASampler.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITASampler.dll" SelfReg="false"/>
+    <ROW File="libEGL.DLL" Component_="libEGL.DLL" FileName="libEGL.DLL" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libEGL.DLL" SelfReg="false"/>
+    <ROW File="libfftw33.dll" Component_="libfftw33.dll" FileName="LIBFFT~1.DLL|libfftw3-3.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libfftw3-3.dll" SelfReg="false"/>
+    <ROW File="libfftw3f3.dll" Component_="libfftw3f3.dll" FileName="LIBFFT~2.DLL|libfftw3f-3.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libfftw3f-3.dll" SelfReg="false"/>
+    <ROW File="libfftw3l3.dll" Component_="libfftw3l3.dll" FileName="LIBFFT~3.DLL|libfftw3l-3.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libfftw3l-3.dll" SelfReg="false"/>
+    <ROW File="libsamplerate0.dll" Component_="libsamplerate0.dll" FileName="LIBSAM~1.DLL|libsamplerate-0.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libsamplerate-0.dll" SelfReg="false"/>
+    <ROW File="libsndfile1.dll" Component_="libsndfile1.dll" FileName="LIBSND~1.DLL|libsndfile-1.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libsndfile-1.dll" SelfReg="false"/>
+    <ROW File="msvcp120.dll_1" Component_="msvcp120.dll_1" FileName="msvcp120.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\msvcp120.dll" SelfReg="false"/>
+    <ROW File="msvcr120.dll_1" Component_="msvcr120.dll_1" FileName="msvcr120.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\msvcr120.dll" SelfReg="false"/>
+    <ROW File="NatNetLib.dll" Component_="NatNetLib.dll" FileName="NATNET~1.DLL|NatNetLib.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\NatNetLib.dll" SelfReg="false"/>
+    <ROW File="NatNetML.dll" Component_="NatNetML.dll" FileName="NatNetML.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\NatNetML.dll" SelfReg="false"/>
+    <ROW File="portaudio_x64.dll" Component_="portaudio_x64.dll" FileName="PORTAU~1.DLL|portaudio_x64.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\portaudio_x64.dll" SelfReg="false"/>
+    <ROW File="portaudiod_x64.dll" Component_="portaudiod_x64.dll" FileName="PORTAU~2.DLL|portaudiod_x64.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\portaudiod_x64.dll" SelfReg="false"/>
+    <ROW File="Qt5Core.dll" Component_="Qt5Core.dll" FileName="Qt5Core.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Core.dll" SelfReg="false"/>
+    <ROW File="Qt5Gui.dll" Component_="Qt5Gui.dll" FileName="Qt5Gui.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Gui.dll" SelfReg="false"/>
+    <ROW File="Qt5Sql.dll" Component_="Qt5Sql.dll" FileName="Qt5Sql.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Sql.dll" SelfReg="false"/>
+    <ROW File="Qt5Svg.dll" Component_="Qt5Svg.dll" FileName="Qt5Svg.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Svg.dll" SelfReg="false"/>
+    <ROW File="Qt5Widgets.dll" Component_="Qt5Widgets.dll" FileName="QT5WID~1.DLL|Qt5Widgets.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Widgets.dll" SelfReg="false"/>
+    <ROW File="Redstart.exe" Component_="Redstart.exe" FileName="Redstart.exe" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Redstart.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="SPLINE.dll" Component_="SPLINE.dll" FileName="SPLINE.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\SPLINE.dll" SelfReg="false"/>
+    <ROW File="tbb.dll" Component_="tbb.dll" FileName="tbb.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbb.dll" SelfReg="false"/>
+    <ROW File="tbb_debug.dll" Component_="tbb_debug.dll" FileName="TBB_DE~1.DLL|tbb_debug.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbb_debug.dll" SelfReg="false"/>
+    <ROW File="tbb_preview.dll" Component_="tbb_preview.dll" FileName="TBB_PR~1.DLL|tbb_preview.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbb_preview.dll" SelfReg="false"/>
+    <ROW File="tbb_preview_debug.dll" Component_="tbb_preview_debug.dll" FileName="TBB_PR~2.DLL|tbb_preview_debug.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbb_preview_debug.dll" SelfReg="false"/>
+    <ROW File="tbbmalloc.dll" Component_="tbbmalloc.dll" FileName="TBBMAL~1.DLL|tbbmalloc.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbbmalloc.dll" SelfReg="false"/>
+    <ROW File="tbbmalloc_debug.dll" Component_="tbbmalloc_debug.dll" FileName="TBBMAL~2.DLL|tbbmalloc_debug.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbbmalloc_debug.dll" SelfReg="false"/>
+    <ROW File="tbbmalloc_proxy.dll" Component_="tbbmalloc_proxy.dll" FileName="TBBMAL~3.DLL|tbbmalloc_proxy.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbbmalloc_proxy.dll" SelfReg="false"/>
+    <ROW File="tbbmalloc_proxy_debug.dll" Component_="tbbmalloc_proxy_debug.dll" FileName="TBBMAL~4.DLL|tbbmalloc_proxy_debug.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbbmalloc_proxy_debug.dll" SelfReg="false"/>
+    <ROW File="VABase.dll_1" Component_="VABase.dll_1" FileName="VABase.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VABase.dll" SelfReg="false"/>
+    <ROW File="VACore.dll" Component_="VACore.dll" FileName="VACore.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VACore.dll" SelfReg="false"/>
+    <ROW File="VACSDummyWrapper.dll" Component_="VACSDummyWrapper.dll" FileName="VACSDU~1.DLL|VACSDummyWrapper.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VACSDummyWrapper.dll" SelfReg="false"/>
+    <ROW File="VALua.dll" Component_="VALua.dll" FileName="VALua.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VALua.dll" SelfReg="false"/>
+    <ROW File="VAMatlab.mexw64" Component_="VAMatlab.mexw64" FileName="VAMATL~1.MEX|VAMatlab.mexw64" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VAMatlab.mexw64" SelfReg="false"/>
+    <ROW File="VANet.dll_1" Component_="VANet.dll_1" FileName="VANet.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VANet.dll" SelfReg="false"/>
+    <ROW File="VANetCSWrapper.dll_1" Component_="VANetCSWrapper.dll_1" FileName="VANETC~1.DLL|VANetCSWrapper.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VANetCSWrapper.dll" SelfReg="false"/>
+    <ROW File="VAServer.exe" Component_="VAServer.exe" FileName="VAServer.exe" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VAServer.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="VistaAspects.dll_1" Component_="VistaAspects.dll_1" FileName="VISTAA~1.DLL|VistaAspects.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaAspects.dll" SelfReg="false"/>
+    <ROW File="VistaBase.dll_1" Component_="VistaBase.dll_1" FileName="VISTAB~1.DLL|VistaBase.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaBase.dll" SelfReg="false"/>
+    <ROW File="VistaCyberGloveDriver.dll" Component_="VistaCyberGloveDriver.dll" FileName="VISTAC~1.DLL|VistaCyberGloveDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaCyberGloveDriver.dll" SelfReg="false"/>
+    <ROW File="VistaCyberGlovePlugin.dll" Component_="VistaCyberGlovePlugin.dll" FileName="VISTAC~2.DLL|VistaCyberGlovePlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaCyberGlovePlugin.dll" SelfReg="false"/>
+    <ROW File="VistaCyberGloveTranscoder.dll" Component_="VistaCyberGloveTranscoder.dll" FileName="VISTAC~3.DLL|VistaCyberGloveTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaCyberGloveTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaDataFlowNet.dll" Component_="VistaDataFlowNet.dll" FileName="VISTAD~1.DLL|VistaDataFlowNet.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDataFlowNet.dll" SelfReg="false"/>
+    <ROW File="VistaDeviceDriversBase.dll" Component_="VistaDeviceDriversBase.dll" FileName="VISTAD~2.DLL|VistaDeviceDriversBase.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDeviceDriversBase.dll" SelfReg="false"/>
+    <ROW File="VistaDTrackDriver.dll" Component_="VistaDTrackDriver.dll" FileName="VISTAD~3.DLL|VistaDTrackDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDTrackDriver.dll" SelfReg="false"/>
+    <ROW File="VistaDTrackPlugin.dll" Component_="VistaDTrackPlugin.dll" FileName="VISTAD~4.DLL|VistaDTrackPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDTrackPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaDTrackTranscoder.dll" Component_="VistaDTrackTranscoder.dll" FileName="VISTAD~5.DLL|VistaDTrackTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDTrackTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaFastrakDriver.dll" Component_="VistaFastrakDriver.dll" FileName="VISTAF~1.DLL|VistaFastrakDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaFastrakDriver.dll" SelfReg="false"/>
+    <ROW File="VistaFastrakPlugin.dll" Component_="VistaFastrakPlugin.dll" FileName="VISTAF~2.DLL|VistaFastrakPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaFastrakPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaFastrakTranscoder.dll" Component_="VistaFastrakTranscoder.dll" FileName="VISTAF~3.DLL|VistaFastrakTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaFastrakTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaGlutJoystickDriver.dll" Component_="VistaGlutJoystickDriver.dll" FileName="VISTAG~1.DLL|VistaGlutJoystickDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutJoystickDriver.dll" SelfReg="false"/>
+    <ROW File="VistaGlutJoystickPlugin.dll" Component_="VistaGlutJoystickPlugin.dll" FileName="VISTAG~2.DLL|VistaGlutJoystickPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutJoystickPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaGlutJoystickTranscoder.dll" Component_="VistaGlutJoystickTranscoder.dll" FileName="VISTAG~3.DLL|VistaGlutJoystickTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutJoystickTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaGlutKeyboardDriver.dll" Component_="VistaGlutKeyboardDriver.dll" FileName="VISTAG~4.DLL|VistaGlutKeyboardDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutKeyboardDriver.dll" SelfReg="false"/>
+    <ROW File="VistaGlutKeyboardPlugin.dll" Component_="VistaGlutKeyboardPlugin.dll" FileName="VISTAG~5.DLL|VistaGlutKeyboardPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutKeyboardPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaGlutKeyboardTranscoder.dll" Component_="VistaGlutKeyboardTranscoder.dll" FileName="VISTAG~6.DLL|VistaGlutKeyboardTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutKeyboardTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaGlutMouseDriver.dll" Component_="VistaGlutMouseDriver.dll" FileName="VISTAG~7.DLL|VistaGlutMouseDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutMouseDriver.dll" SelfReg="false"/>
+    <ROW File="VistaGlutMousePlugin.dll" Component_="VistaGlutMousePlugin.dll" FileName="VISTAG~8.DLL|VistaGlutMousePlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutMousePlugin.dll" SelfReg="false"/>
+    <ROW File="VistaGlutMouseTranscoder.dll" Component_="VistaGlutMouseTranscoder.dll" FileName="VISTAG~9.DLL|VistaGlutMouseTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutMouseTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaHapticDeviceEmulatorDriver.dll" Component_="VistaHapticDeviceEmulatorDriver.dll" FileName="VISTAH~1.DLL|VistaHapticDeviceEmulatorDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHapticDeviceEmulatorDriver.dll" SelfReg="false"/>
+    <ROW File="VistaHapticDeviceEmulatorPlugin.dll" Component_="VistaHapticDeviceEmulatorPlugin.dll" FileName="VISTAH~2.DLL|VistaHapticDeviceEmulatorPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHapticDeviceEmulatorPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaHapticDeviceEmulatorTranscoder.dll" Component_="VistaHapticDeviceEmulatorTranscoder.dll" FileName="VISTAH~3.DLL|VistaHapticDeviceEmulatorTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHapticDeviceEmulatorTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaHIDDriver.dll" Component_="VistaHIDDriver.dll" FileName="VISTAH~4.DLL|VistaHIDDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHIDDriver.dll" SelfReg="false"/>
+    <ROW File="VistaHIDPlugin.dll" Component_="VistaHIDPlugin.dll" FileName="VISTAH~5.DLL|VistaHIDPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHIDPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaHIDTranscoder.dll" Component_="VistaHIDTranscoder.dll" FileName="VISTAH~6.DLL|VistaHIDTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHIDTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaInterProcComm.dll_1" Component_="VistaInterProcComm.dll_1" FileName="VISTAI~1.DLL|VistaInterProcComm.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaInterProcComm.dll" SelfReg="false"/>
+    <ROW File="VistaIRManDriver.dll" Component_="VistaIRManDriver.dll" FileName="VISTAI~2.DLL|VistaIRManDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaIRManDriver.dll" SelfReg="false"/>
+    <ROW File="VistaIRManPlugin.dll" Component_="VistaIRManPlugin.dll" FileName="VISTAI~3.DLL|VistaIRManPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaIRManPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaIRManTranscoder.dll" Component_="VistaIRManTranscoder.dll" FileName="VISTAI~4.DLL|VistaIRManTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaIRManTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaKernel.dll" Component_="VistaKernel.dll" FileName="VISTAK~1.DLL|VistaKernel.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaKernel.dll" SelfReg="false"/>
+    <ROW File="VistaKernelOpenSGExt.dll" Component_="VistaKernelOpenSGExt.dll" FileName="VISTAK~2.DLL|VistaKernelOpenSGExt.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaKernelOpenSGExt.dll" SelfReg="false"/>
+    <ROW File="VistaMath.dll" Component_="VistaMath.dll" FileName="VISTAM~1.DLL|VistaMath.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaMath.dll" SelfReg="false"/>
+    <ROW File="VistaMIDIDriver.dll" Component_="VistaMIDIDriver.dll" FileName="VISTAM~2.DLL|VistaMIDIDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaMIDIDriver.dll" SelfReg="false"/>
+    <ROW File="VistaMIDIPlugin.dll" Component_="VistaMIDIPlugin.dll" FileName="VISTAM~3.DLL|VistaMIDIPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaMIDIPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaMIDITranscoder.dll" Component_="VistaMIDITranscoder.dll" FileName="VISTAM~4.DLL|VistaMIDITranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaMIDITranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaOGLExt.dll" Component_="VistaOGLExt.dll" FileName="VISTAO~1.DLL|VistaOGLExt.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaOGLExt.dll" SelfReg="false"/>
+    <ROW File="VistaPhantomServerDriver.dll" Component_="VistaPhantomServerDriver.dll" FileName="VISTAP~1.DLL|VistaPhantomServerDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaPhantomServerDriver.dll" SelfReg="false"/>
+    <ROW File="VistaPhantomServerPlugin.dll" Component_="VistaPhantomServerPlugin.dll" FileName="VISTAP~2.DLL|VistaPhantomServerPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaPhantomServerPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaPhantomServerTranscoder.dll" Component_="VistaPhantomServerTranscoder.dll" FileName="VISTAP~3.DLL|VistaPhantomServerTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaPhantomServerTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaSpaceMouseDriver.dll" Component_="VistaSpaceMouseDriver.dll" FileName="VISTAS~1.DLL|VistaSpaceMouseDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMouseDriver.dll" SelfReg="false"/>
+    <ROW File="VistaSpaceMousePlugin.dll" Component_="VistaSpaceMousePlugin.dll" FileName="VISTAS~2.DLL|VistaSpaceMousePlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMousePlugin.dll" SelfReg="false"/>
+    <ROW File="VistaSpaceMouseTranscoder.dll" Component_="VistaSpaceMouseTranscoder.dll" FileName="VISTAS~3.DLL|VistaSpaceMouseTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMouseTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaTools.dll" Component_="VistaTools.dll" FileName="VISTAT~1.DLL|VistaTools.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaTools.dll" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="perSONA_References" FileName="NEWTON~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Newtonsoft.Json.dll&gt;" SelfReg="false"/>
+    <ROW File="System.Buffers.dll" Component_="perSONA_References" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Buffers.dll&gt;" SelfReg="false"/>
+    <ROW File="TagLibSharp.dll" Component_="perSONA_References" FileName="TAGLIB~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_TagLibSharp.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_TagLibSharp.dll&gt;" SelfReg="false"/>
+    <ROW File="ZedGraph.dll" Component_="perSONA_References" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ZedGraph.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ZedGraph.dll&gt;" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.Buffers.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.Buffers.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_TagLibSharp.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_TagLibSharp.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_TagLibSharp.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ZedGraph.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_ZedGraph.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_ZedGraph.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_perSONA.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_perSONA.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_perSONA.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_perSONA.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe.config]" Type="2" Content="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="." PackageFileName="perSONA-Installer-LITE" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL AND (NOT AI_PATH_VALIDATION_FAILED)" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="DoAction" Argument="AI_ValidateInstallPath" Condition="AI_INSTALL" Ordering="199"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#perSONA.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_ValidateInstallPath" Type="1" Source="aicustact.dll" Target="ValidateInstallFolder" WithoutSeq="true"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="VACore.experimental.ini"/>
+    <ROW Feature_="MainFeature" Component_="msvcp120.dll"/>
+    <ROW Feature_="MainFeature" Component_="msvcr120.dll"/>
+    <ROW Feature_="MainFeature" Component_="VABase.dll"/>
+    <ROW Feature_="MainFeature" Component_="VACS.cs"/>
+    <ROW Feature_="MainFeature" Component_="VANet.dll"/>
+    <ROW Feature_="MainFeature" Component_="VANetCSWrapper.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaAspects.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaBase.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaInterProcComm.dll"/>
+    <ROW Feature_="MainFeature" Component_="wav"/>
+    <ROW Feature_="MainFeature" Component_="kHzTone_60dB_SPL.wav"/>
+    <ROW Feature_="MainFeature" Component_="talkerbabble_ISTS.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0001001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0002001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0003001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0004001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0005001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0006001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0007001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0008001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0009001.wav"/>
+    <ROW Feature_="MainFeature" Component_="F0010001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0001001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0002001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0003001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0004001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0005001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0006001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0007001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0008001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0009001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="M0010001.WAV"/>
+    <ROW Feature_="MainFeature" Component_="alcaim_f.WAV"/>
+    <ROW Feature_="MainFeature" Component_="Lista1A_frase1.wav"/>
+    <ROW Feature_="MainFeature" Component_="Lista1B_frase1.wav"/>
+    <ROW Feature_="MainFeature" Component_="Lista2B_frase1.wav"/>
+    <ROW Feature_="MainFeature" Component_="Lista3B_frase1.wav"/>
+    <ROW Feature_="MainFeature" Component_="Lista4B_frase1.wav"/>
+    <ROW Feature_="MainFeature" Component_="Lista5B_frase1.wav"/>
+    <ROW Feature_="MainFeature" Component_="Lista6B_frase1.wav"/>
+    <ROW Feature_="MainFeature" Component_="Lista7B_frase1.wav"/>
+    <ROW Feature_="MainFeature" Component_="Lista1A_frase1.wav_1"/>
+    <ROW Feature_="MainFeature" Component_="lista.gif"/>
+    <ROW Feature_="MainFeature" Component_="VAAudiofileSignalSource.h"/>
+    <ROW Feature_="MainFeature" Component_="core.h"/>
+    <ROW Feature_="MainFeature" Component_="VADirectivity.h"/>
+    <ROW Feature_="MainFeature" Component_="VAASIOBackend.h"/>
+    <ROW Feature_="MainFeature" Component_="VAAtmosphere.h"/>
+    <ROW Feature_="MainFeature" Component_="VAHomogeneousMedium.h"/>
+    <ROW Feature_="MainFeature" Component_="VAMotionModel.h"/>
+    <ROW Feature_="MainFeature" Component_="VAAmbientMixerAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAAmbisonicsFreefieldAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAAirTrafficNoiseAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VABinauralArtificialReverb.h"/>
+    <ROW Feature_="MainFeature" Component_="VABinauralFreefieldAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VABinauralOutdoorNoiseAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VARoomAcousticsAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAPTDummyAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAPrototypeFreeFieldAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAPTGenericPathAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAPTHearingAidRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAVBAPFreefieldAudioRenderer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAAmbisonicsReproduction.h"/>
+    <ROW Feature_="MainFeature" Component_="VAAmbisonicsBinauralMixdownReproduction.h"/>
+    <ROW Feature_="MainFeature" Component_="VAReproductionLowFrequencyMixer.h"/>
+    <ROW Feature_="MainFeature" Component_="VAReproductionTalkthrough.h"/>
+    <ROW Feature_="MainFeature" Component_="VAAudioReproduction.h"/>
+    <ROW Feature_="MainFeature" Component_="VAContainerState.h"/>
+    <ROW Feature_="MainFeature" Component_="VADebug.h"/>
+    <ROW Feature_="MainFeature" Component_="VA.h"/>
+    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe"/>
+    <ROW Feature_="MainFeature" Component_="COPYING"/>
+    <ROW Feature_="MainFeature" Component_="DAFF.dll"/>
+    <ROW Feature_="MainFeature" Component_="DAFFViz.dll"/>
+    <ROW Feature_="MainFeature" Component_="ITABase.dll"/>
+    <ROW Feature_="MainFeature" Component_="ITAConvolution.dll"/>
+    <ROW Feature_="MainFeature" Component_="ITACTC.dll"/>
+    <ROW Feature_="MainFeature" Component_="ITADataSources.dll"/>
+    <ROW Feature_="MainFeature" Component_="ITADSP.dll"/>
+    <ROW Feature_="MainFeature" Component_="ITAFFT.dll"/>
+    <ROW Feature_="MainFeature" Component_="ITAQtWidgets.dll"/>
+    <ROW Feature_="MainFeature" Component_="ITASampler.dll"/>
+    <ROW Feature_="MainFeature" Component_="libEGL.DLL"/>
+    <ROW Feature_="MainFeature" Component_="libfftw33.dll"/>
+    <ROW Feature_="MainFeature" Component_="libfftw3f3.dll"/>
+    <ROW Feature_="MainFeature" Component_="libfftw3l3.dll"/>
+    <ROW Feature_="MainFeature" Component_="libsamplerate0.dll"/>
+    <ROW Feature_="MainFeature" Component_="libsndfile1.dll"/>
+    <ROW Feature_="MainFeature" Component_="msvcp120.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="msvcr120.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="NatNetLib.dll"/>
+    <ROW Feature_="MainFeature" Component_="NatNetML.dll"/>
+    <ROW Feature_="MainFeature" Component_="portaudio_x64.dll"/>
+    <ROW Feature_="MainFeature" Component_="portaudiod_x64.dll"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Gui.dll"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Sql.dll"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Svg.dll"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Widgets.dll"/>
+    <ROW Feature_="MainFeature" Component_="Redstart.exe"/>
+    <ROW Feature_="MainFeature" Component_="SPLINE.dll"/>
+    <ROW Feature_="MainFeature" Component_="tbb.dll"/>
+    <ROW Feature_="MainFeature" Component_="tbb_debug.dll"/>
+    <ROW Feature_="MainFeature" Component_="tbb_preview.dll"/>
+    <ROW Feature_="MainFeature" Component_="tbb_preview_debug.dll"/>
+    <ROW Feature_="MainFeature" Component_="tbbmalloc.dll"/>
+    <ROW Feature_="MainFeature" Component_="tbbmalloc_debug.dll"/>
+    <ROW Feature_="MainFeature" Component_="tbbmalloc_proxy.dll"/>
+    <ROW Feature_="MainFeature" Component_="tbbmalloc_proxy_debug.dll"/>
+    <ROW Feature_="MainFeature" Component_="VABase.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VACore.dll"/>
+    <ROW Feature_="MainFeature" Component_="VACSDummyWrapper.dll"/>
+    <ROW Feature_="MainFeature" Component_="VALua.dll"/>
+    <ROW Feature_="MainFeature" Component_="VAMatlab.mexw64"/>
+    <ROW Feature_="MainFeature" Component_="VANet.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VANetCSWrapper.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VAServer.exe"/>
+    <ROW Feature_="MainFeature" Component_="VistaAspects.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaBase.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaCyberGloveDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaCyberGlovePlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaCyberGloveTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaDataFlowNet.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaDeviceDriversBase.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaDTrackDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaDTrackPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaDTrackTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaFastrakDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaFastrakPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaFastrakTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutJoystickDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutJoystickPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutJoystickTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutKeyboardDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutKeyboardPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutKeyboardTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutMouseDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutMousePlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutMouseTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaHapticDeviceEmulatorDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaHapticDeviceEmulatorPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaHapticDeviceEmulatorTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaHIDDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaHIDPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaHIDTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaInterProcComm.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaIRManDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaIRManPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaIRManTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaKernel.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaKernelOpenSGExt.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaMath.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaMIDIDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaMIDIPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaMIDITranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaOGLExt.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaPhantomServerDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaPhantomServerPlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaPhantomServerTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaSpaceMouseDriver.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaSpaceMousePlugin.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaSpaceMouseTranscoder.dll"/>
+    <ROW Feature_="MainFeature" Component_="VistaTools.dll"/>
+    <ROW Feature_="MainFeature" Component_="perSONA_References"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
+    <ROW Name="per_short_Scp_icon.exe" SourcePath="..\..\..\..\Downloads\per_short_Scp_icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="( Version9X OR VersionNT64 )" Description="[ProductName] cannot be installed on [WindowsTypeNTDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT64 OR ((VersionNT &lt;&gt; 501) OR (ServicePackLevel = 3))) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel = 2))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="Privileged" Description="[ProductName] requires administrative privileges to install." DescriptionLocId="AI.LaunchCondition.Privileged" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="UninstallperSONA" Directory_="perSONA_Dir" Name="UNINST~1|Uninstall perSONA" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="UninstallperSONA_1" Directory_="SHORTCUTDIR" Name="UNINST~1|Uninstall perSONA" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="perSONALITE" Directory_="DesktopFolder" Name="PERSON~1|perSONA-LITE" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" Target="[#perSONA.exe]" Hotkey="0" Icon_="per_short_Scp_icon.exe" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
+    <ROW ProjectId="{5367335c-1379-40f5-84be-1b7a8d750cef}" ProjectName="perSONA" OutputGroup="PrimaryOutput" OutputFile="perSONA.exe" OutputFileShortcut="perSONALITE"/>
+    <ROW ProjectId="{5367335c-1379-40f5-84be-1b7a8d750cef}" ProjectName="perSONA" OutputGroup="PrimaryOutput" OutputFile="perSONA.exe.config"/>
+    <ROW ProjectId="{5367335c-1379-40f5-84be-1b7a8d750cef}" ProjectName="perSONA" OutputGroup="References" OutputFile="Newtonsoft.Json.dll"/>
+    <ROW ProjectId="{5367335c-1379-40f5-84be-1b7a8d750cef}" ProjectName="perSONA" OutputGroup="References" OutputFile="System.Buffers.dll"/>
+    <ROW ProjectId="{5367335c-1379-40f5-84be-1b7a8d750cef}" ProjectName="perSONA" OutputGroup="References" OutputFile="TagLibSharp.dll"/>
+    <ROW ProjectId="{5367335c-1379-40f5-84be-1b7a8d750cef}" ProjectName="perSONA" OutputGroup="References" OutputFile="ZedGraph.dll"/>
+  </COMPONENT>
+</DOCUMENT>

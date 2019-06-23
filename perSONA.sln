@@ -5,17 +5,22 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "perSONA", "perSONA\perSONA.csproj", "{5367335C-1379-40F5-84BE-1B7A8D750CEF}"
 EndProject
-Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "perSONA Installer", "perSONA Installer\perSONA Installer.aiproj", "{79D772CC-104C-48FE-B804-9CAFA632660B}"
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "personaInstallerV2", "personaInstallerV2\personaInstallerV2.aiproj", "{9CA69616-6F84-4D7B-A885-4A1546C65479}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|x64 = All|x64
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5367335C-1379-40F5-84BE-1B7A8D750CEF}.All|x64.ActiveCfg = Debug|x64
+		{5367335C-1379-40F5-84BE-1B7A8D750CEF}.All|x64.Build.0 = Debug|x64
 		{5367335C-1379-40F5-84BE-1B7A8D750CEF}.Release|x64.ActiveCfg = Release|x64
 		{5367335C-1379-40F5-84BE-1B7A8D750CEF}.Release|x64.Build.0 = Release|x64
-		{79D772CC-104C-48FE-B804-9CAFA632660B}.Release|x64.ActiveCfg = DefaultBuild
-		{79D772CC-104C-48FE-B804-9CAFA632660B}.Release|x64.Build.0 = DefaultBuild
+		{9CA69616-6F84-4D7B-A885-4A1546C65479}.All|x64.ActiveCfg = DefaultBuild
+		{9CA69616-6F84-4D7B-A885-4A1546C65479}.All|x64.Build.0 = DefaultBuild
+		{9CA69616-6F84-4D7B-A885-4A1546C65479}.Release|x64.ActiveCfg = DefaultBuild
+		{9CA69616-6F84-4D7B-A885-4A1546C65479}.Release|x64.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
