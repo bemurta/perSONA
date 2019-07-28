@@ -130,7 +130,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Name = "dbForm";
-            this.Text = "perSONA 1.2.1 - Módulo de edição de arquivos de audio";
+            this.Text = "perSONA 1.3.0 - Módulo de edição de arquivos de audio";
             this.Load += new System.EventHandler(this.dbForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -80,11 +80,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioDatabaseEditorAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resultsFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vASettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.audioDatabaseEditorAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -97,7 +98,6 @@
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -708,6 +708,13 @@
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.settingsToolStripMenuItem.Text = "Configurações";
             // 
+            // audioDatabaseEditorAreaToolStripMenuItem
+            // 
+            this.audioDatabaseEditorAreaToolStripMenuItem.Name = "audioDatabaseEditorAreaToolStripMenuItem";
+            this.audioDatabaseEditorAreaToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.audioDatabaseEditorAreaToolStripMenuItem.Text = "Área de edição de arquivos de áudio";
+            this.audioDatabaseEditorAreaToolStripMenuItem.Click += new System.EventHandler(this.audioDatabaseEditorAreaToolStripMenuItem_Click);
+            // 
             // resultsFolderToolStripMenuItem
             // 
             this.resultsFolderToolStripMenuItem.Name = "resultsFolderToolStripMenuItem";
@@ -721,12 +728,12 @@
             this.vASettingsToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.vASettingsToolStripMenuItem.Text = "Configurações do VA";
             // 
-            // audioDatabaseEditorAreaToolStripMenuItem
+            // patientAreaToolStripMenuItem
             // 
-            this.audioDatabaseEditorAreaToolStripMenuItem.Name = "audioDatabaseEditorAreaToolStripMenuItem";
-            this.audioDatabaseEditorAreaToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.audioDatabaseEditorAreaToolStripMenuItem.Text = "Área de edição de arquivos de áudio";
-            this.audioDatabaseEditorAreaToolStripMenuItem.Click += new System.EventHandler(this.audioDatabaseEditorAreaToolStripMenuItem_Click);
+            this.patientAreaToolStripMenuItem.Name = "patientAreaToolStripMenuItem";
+            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.patientAreaToolStripMenuItem.Text = "Novo paciente";
+            this.patientAreaToolStripMenuItem.Click += new System.EventHandler(this.patientAreaToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -735,12 +742,10 @@
             this.helpToolStripMenuItem.Text = "Sobre";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
-            // patientAreaToolStripMenuItem
+            // áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem
             // 
-            this.patientAreaToolStripMenuItem.Name = "patientAreaToolStripMenuItem";
-            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.patientAreaToolStripMenuItem.Text = "Novo paciente";
-            this.patientAreaToolStripMenuItem.Click += new System.EventHandler(this.patientAreaToolStripMenuItem_Click);
+            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Name = "áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem";
+            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // tabControl1
             // 
@@ -867,11 +872,6 @@
             this.tabPage1.Text = "Área de teste";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem
-            // 
-            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Name = "áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem";
-            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -883,7 +883,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "perSONA 1.2.1";
+            this.Text = "perSONA 1.3.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();

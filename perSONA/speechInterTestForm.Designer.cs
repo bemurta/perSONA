@@ -97,6 +97,7 @@
             this.zedGraphControl1.Size = new System.Drawing.Size(367, 175);
             this.zedGraphControl1.TabIndex = 22;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
+            this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
             // label1
             // 
@@ -392,7 +393,7 @@
             this.Controls.Add(this.all_correct);
             this.Controls.Add(this.testWordsList);
             this.Name = "speechIterTestForm";
-            this.Text = "perSONA 1.2.1 - Módulo de aplicação de ensaio";
+            this.Text = "perSONA 1.3.0 - Módulo de aplicação de ensaio";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

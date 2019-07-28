@@ -29,18 +29,24 @@ namespace perSONA
         string speechFolder = "data\\Sounds\\Speech\\Alcaim1_\\F\\F0001";
         string noiseFile = "data\\Sounds\\Noise\\4talker-babble_ISTS.wav";
         string noiseFolder = "data\\Sounds\\Noise";
+        string confFile = "conf/VACore.ini";
         string speechSound;
         string noiseSound;
         int speechSource;
         int noiseSource;
         int selectedFolder = 0;
         int waitTimeMS = 3000;
+        int sourceIndex;
 
-        public Form1()
+        public Form1(string confFile, int sourceIndex)
         {
 
 
             InitializeComponent();
+            this.confFile = confFile;
+
+            this.sourceIndex = sourceIndex;
+
             vA = new VANet();
             this.process = new Process
             {
@@ -63,7 +69,30 @@ namespace perSONA
             comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
             plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
             textBox.Text = "Started perSONA";
-            concatText("New Session started.");
+            concatText("New VA Session started.");
+
+
+            switch (confFile)
+            {
+
+                case "conf/VACore.ini":
+                    concatText("Headphone binaural reproduction");
+                    break;
+
+                case "conf/VACore_CLINIC_CTC.ini":
+                    concatText("Clinic 2-speaker array CTC reproduction");
+                    break;
+
+                case "conf/VACore_UFSC_CTC.ini":
+                    concatText("LVA 8-Speaker Array N-CTC reproduction");
+                    break;
+
+                default:
+                    concatText("Headphone binaural reproduction");
+                    break;
+
+
+            }
 
 
 
@@ -93,7 +122,7 @@ namespace perSONA
             //info.RedirectStandardOutput = true;
             info.UseShellExecute = false;
             info.CreateNoWindow = true;
-            info.Arguments = "localhost:12340 conf/VACore.ini";
+            info.Arguments = string.Format("localhost:12340 {0}", confFile);
             return info;
         }
 
@@ -184,6 +213,7 @@ namespace perSONA
             {
                 Console.WriteLine("Closed application");
             }
+            Application.Exit();
         }
 
         private void openServer_Click(object sender, EventArgs e)
@@ -374,8 +404,8 @@ namespace perSONA
             vA.SetSoundSourceSoundPower(noiseSource, powerNoise);
             vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
 
-            concatText(string.Format("\r\nCreated Source: {3} at position: {0},{1},{2}, looking forward",
-                       xSides, zFront, yHeight, speechSource));
+            //concatText(string.Format("Created Source: {3} at position: {0},{1},{2}, looking forward",
+                       //xSides, zFront, yHeight, speechSource));
             concatText("Selected Speech: " + Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem)));
             concatText(string.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %",
                        powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
@@ -464,7 +494,13 @@ namespace perSONA
         public string getTitle(string speechFile)
         {
             TagLib.File tagFile = TagLib.File.Create(speechFile);
-            
+
+            int channels = tagFile.Properties.AudioChannels;
+            int bitrate = tagFile.Properties.AudioBitrate;
+            int sampleRate = tagFile.Properties.AudioSampleRate;
+
+            concatText(string.Format("channels: {0}, bitrate: {1}, sampleRate:{2}, n-bits={3}",
+                channels, bitrate, sampleRate, 1000*bitrate / (sampleRate * channels)));
             string title = tagFile.Tag.Title;
 
             return title;
@@ -516,14 +552,9 @@ namespace perSONA
         public void plotSceneGraph(ZedGraphControl graph, double[] radius, double[] angle)
         {
 
-            double roomLength = 5;
-            double roomWidth = 5;
 
-
-            ZedGraph.GraphPane myPane = graph.GraphPane;
-
+            GraphPane myPane = graph.GraphPane;
             myPane.CurveList.Clear();
-
 
             PointPairList speechList = new PointPairList();
             PointPairList noiseList = new PointPairList();
@@ -531,6 +562,44 @@ namespace perSONA
             PointPairList head = new PointPairList();
             PointPairList speakers = new PointPairList();
             PointPairList nose = new PointPairList();
+
+            double roomLength = 5;
+            double roomWidth = 5;
+            double radiusSpekers = 0.2;
+
+            switch (sourceIndex)
+            {
+                case 0:                    
+                    for (double i =-Math.PI/2; i <= Math.PI/2; i += Math.PI)
+                    {
+                        speakers.Add(radiusSpekers * Math.Sin(i), radiusSpekers * Math.Cos(i));
+                    }
+                    break;
+
+                case 1:
+                    //roomLength = 1.81;
+                    //roomWidth = 1.81;
+                    radiusSpekers = 1;
+                    for (double i = -Math.PI/4; i <= Math.PI/4; i += Math.PI / 2)
+                    {
+                        speakers.Add(radiusSpekers * Math.Sin(i), radiusSpekers * Math.Cos(i));
+                    }
+                    break;
+
+                case 2:
+                    //roomLength = 2.81;
+                    //roomWidth = 3.43;
+                    radiusSpekers = 1.3;
+                    for (double i = 0; i < 2 * Math.PI; i += Math.PI / 4)
+                    {
+                        speakers.Add(radiusSpekers * Math.Sin(i), radiusSpekers * Math.Cos(i));
+                    }
+                    break;
+
+            }
+
+
+
 
             speechList.Add(radius[0] * Math.Sin(angle[0] / 180 * Math.PI), radius[0] * Math.Cos(angle[0] / 180 * Math.PI));
             noiseList.Add(radius[1] * Math.Sin(angle[1] / 180 * Math.PI), radius[1] * Math.Cos(angle[1] / 180 * Math.PI));
@@ -552,11 +621,8 @@ namespace perSONA
             LineItem headCurve = myPane.AddCurve("",
                    head, Color.Black, SymbolType.None);
 
-            double radiusSpekers = 1.3;
-            for (double i = 0; i < 2 * Math.PI; i += Math.PI / 4)
-            {
-                speakers.Add(radiusSpekers * Math.Sin(i), radiusSpekers * Math.Cos(i));
-            }
+            
+            
 
             LineItem speakersCurve = myPane.AddCurve("AF-S",
                    speakers, Color.Black, SymbolType.Star);
@@ -638,6 +704,37 @@ namespace perSONA
                             speechTest.Label, radiusSpeech, angleSpeech, radiusNoise, angleNoise));
             new speechIterTestForm(speechTest, this).Show();
 
+        }
+
+
+        public double getMeanSRT(double[] iterativeSNR)
+        {
+            List<double> changed = new List<double>();
+            bool currentInclination = false;
+            bool lastInclination = false;
+            for (int i = 0; i < iterativeSNR.Length - 2; i++)
+            {
+
+                if (iterativeSNR[i + 1] - iterativeSNR[i] >= 0)
+                {
+                    currentInclination = true;
+                }
+                else
+                {
+                    currentInclination = false;
+                }
+
+                if (lastInclination ^ currentInclination)
+                {
+                    changed.Add(iterativeSNR[i]);
+                }
+                lastInclination = currentInclination;
+
+
+            }
+            concatText(string.Format("{0} inversions, SRT: {1}.", changed.Count, changed.Sum() / changed.Count));
+
+            return changed.Sum() / changed.Count;
         }
 
         public void addCompletedTest(speechPerceptionTest test)

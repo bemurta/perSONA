@@ -22,6 +22,6 @@ namespace perSONA
         void plotSceneGraph(ZedGraph.ZedGraphControl graph, double[] radius, double[] angle);
         void fillWords(string speechFile, ListBox listbox);
         void updatePatientList();
-
+        double getMeanSRT(double[] iterativeSNR);
     }
 }

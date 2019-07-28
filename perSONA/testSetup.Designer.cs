@@ -507,7 +507,7 @@
             this.ClientSize = new System.Drawing.Size(592, 578);
             this.Controls.Add(this.panel2);
             this.Name = "testSetup";
-            this.Text = "perSONA 1.2.1 - Módulo de configuração de ensaio";
+            this.Text = "perSONA 1.3.0 - Módulo de configuração de ensaio";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox10.ResumeLayout(false);

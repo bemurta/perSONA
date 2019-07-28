@@ -21,13 +21,14 @@
     <ROW Property="AI_RUN_AS_ADMIN" Value="0"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPCONTACT" Value="bernardo.murta@lva.ufsc.br"/>
     <ROW Property="ARPPRODUCTICON" Value="per_short_Scp_icon.exe" Type="8"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="LVA-UFSC"/>
-    <ROW Property="ProductCode" Value="1033:{31CCC086-3561-43F1-8B61-472E267BAD00} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{8BA2FC3C-4A05-48C2-A2D7-2EB638547E27} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Persona-LITE"/>
-    <ROW Property="ProductVersion" Value="1.2.3" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.3.1" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{2E351919-0754-48EA-9BCC-7450A9453229}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -907,6 +908,9 @@
     <ROW File="System.Buffers.dll" Component_="perSONA_References" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.Buffers.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.Buffers.dll&gt;" SelfReg="false"/>
     <ROW File="TagLibSharp.dll" Component_="perSONA_References" FileName="TAGLIB~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_TagLibSharp.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_TagLibSharp.dll&gt;" SelfReg="false"/>
     <ROW File="ZedGraph.dll" Component_="perSONA_References" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ZedGraph.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ZedGraph.dll&gt;" SelfReg="false"/>
+    <ROW File="VASetup.CLINIC.ini" Component_="VACore.experimental.ini" FileName="VASETU~6.INI|VASetup.CLINIC.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.CLINIC.ini" SelfReg="false"/>
+    <ROW File="VACore_CLINIC_CTC.ini" Component_="VACore.experimental.ini" FileName="VACORE~4.INI|VACore_CLINIC_CTC.ini" Attributes="0" SourcePath="..\perSONA\conf\VACore_CLINIC_CTC.ini" SelfReg="false"/>
+    <ROW File="VASetup.USFC.ini" Component_="VACore.experimental.ini" FileName="VASETU~7.INI|VASetup.USFC.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.USFC.ini" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>

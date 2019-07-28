@@ -22,6 +22,7 @@ namespace perSONA
         private double actualSNR;
         double[] signalToNoiseArray;
         List<string> iteractiveResponseTime;
+        List<string> iteractiveResponsePercentage;
         DateTime tryalStartTime;
 
         public VANet vA { get; private set; }
@@ -33,6 +34,8 @@ namespace perSONA
 
             patientLabel.Text = test.PatientName;
             applicatorLabel.Text = test.Applicator;
+
+
 
             tryalStartTime = DateTime.Now;
             timer1.Tick += new EventHandler(timer1_Tick);
@@ -68,7 +71,7 @@ namespace perSONA
             signalToNoiseArray = new double[] {actualSNR};
             updateIterationGraph(zedGraphControl1.GraphPane, signalToNoiseArray);
             iteractiveResponseTime = new List<string> { };
-
+            iteractiveResponsePercentage = new List<string> { };
 
         }
 
@@ -128,7 +131,7 @@ namespace perSONA
 
             vA.SetSoundReceiverPosition(receiverId, receiverPosition);
             vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU);
-            vAInterface.concatText(string.Format("\r\nCreated Receiver: {3} at position: {0},{1},{2}, looking forward ",
+            vAInterface.concatText(string.Format("Receiver: {3} at position: {0},{1},{2}, looking forward ",
                                      xSides, zFront, yHeight, receiverId));
 
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
@@ -159,7 +162,7 @@ namespace perSONA
             }
 
             snrArray.Add(indexes.ToArray(), signalToNoiseArray);
-            LineItem snrCurve = myPane.AddCurve("Iterative SNR", snrArray, Color.Blue, SymbolType.XCross);
+            LineItem snrCurve = myPane.AddCurve("SNR Adaptativa", snrArray, Color.Blue, SymbolType.XCross);
             snrCurve.Line.IsVisible = true;
             snrCurve.Line.Width = 2;
             snrCurve.Symbol.Size = 20;
@@ -170,15 +173,34 @@ namespace perSONA
             myPane.XAxis.Title.FontSpec.Size = 21;
             myPane.XAxis.Scale.FontSpec.Size = 21;
 
+
             myPane.YAxis.Title.FontSpec.Size = 21;
             myPane.YAxis.Scale.FontSpec.Size = 21;
 
             myPane.XAxis.Scale.MaxAuto = false;
             myPane.XAxis.Scale.MinAuto = false;
-            myPane.YAxis.Scale.Min = -30;
-            myPane.YAxis.Scale.Max = 30;
+            myPane.YAxis.Scale.Min = -20;
+            myPane.YAxis.Scale.Max = 0;
+
+            if (indexes.Max() > 0)
+            {
+                myPane.YAxis.Scale.Max = (indexes.Max() + 5);
+            }
+
+            if (indexes.Min() < -20)
+            {
+                myPane.YAxis.Scale.Min = indexes.Min() - 5;
+            }
+
             myPane.XAxis.Scale.Min = 0;
             myPane.XAxis.Scale.Max = signalToNoiseArray.Length + 3;
+            
+            myPane.XAxis.Title.Text = "Iterações";
+            myPane.YAxis.Title.Text = "SNR";
+            myPane.Title.Text = "Razões sinal-ruído apresentadas";
+            myPane.XAxis.Title.FontSpec.Size = 25;
+            myPane.Title.FontSpec.Size = 25;
+            myPane.YAxis.Title.FontSpec.Size = 25;
 
             zedGraphControl1.AxisChange();
             zedGraphControl1.Refresh();
@@ -228,6 +250,9 @@ namespace perSONA
             actualSNR = getNextSNR(actualSNR, test.SignalToNoiseStep);
 
             string responseTime = currentTryal.Text;
+            double answer = testWordsList.SelectedItems.Count;
+            double totalWords = testWordsList.Items.Count;
+            string responsePercentage = string.Format("{0}%", Math.Round(100*(answer / totalWords)));
             vAInterface.concatText(string.Format("{0} - response time: {1}", string.Join(",", testWordsList.Items.Cast<string>()), responseTime));
 
             if (filenameList.SelectedIndex + 1 < filenameList.Items.Count)
@@ -244,6 +269,7 @@ namespace perSONA
 
                 signalToNoiseArray =  signalToNoiseArray.Concat(new double[] { actualSNR }).ToArray();
                 iteractiveResponseTime.Add(responseTime);
+                iteractiveResponsePercentage.Add(responsePercentage);
                 textBox3.Text = string.Format("{0}", actualSNR);
                 updateIterationGraph(zedGraphControl1.GraphPane, signalToNoiseArray);
             }
@@ -254,24 +280,30 @@ namespace perSONA
                 detailsBox.AppendText("/r/n Finished list");
                 test.TotalDuration = continuousTimerText.Text;
                 test.IterativeDuration = iteractiveResponseTime.ToArray();
-                vAInterface.addCompletedTest(this.test);
+                test.IterativePercentage = iteractiveResponsePercentage.ToArray();
+
                 vAInterface.concatText(string.Format("Elapsed time: {0}", test.TotalDuration));
 
+                double meanSRT = vAInterface.getMeanSRT(test.IterativeSNR);
+
                 string completedTestMessage = string.Format(
-                    "Avaliação finalizada. SNR de convergência: {0} dB, Número de iterações: {1}, duração total: {2}",
-                    actualSNR, signalToNoiseArray.Length, test.TotalDuration);
+                    "Avaliação finalizada. SNR de convergência: {0} dB - Média {3} dB, Número de iterações: {1}, duração total: {2}",
+                    actualSNR, signalToNoiseArray.Length, test.TotalDuration, meanSRT);
 
                 string message = completedTestMessage;
                 const string caption = "Fim da avaliação";
                 var result = MessageBox.Show(message, caption,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+                vAInterface.addCompletedTest(test);
                 this.Close();
             }
 
 
             tryalStartTime = DateTime.Now;
         }
+
+      
 
         private void filenameList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -283,6 +315,11 @@ namespace perSONA
         {
             this.continuousTimerText.Text = string.Format("{0:hh\\:mm\\:ss}", DateTime.Now - test.TestStart);
             this.currentTryal.Text = string.Format("{0:mm\\:ss}", DateTime.Now - tryalStartTime);
+        }
+
+        private void zedGraphControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
