@@ -793,11 +793,63 @@ namespace perSONA
 
         }
 
+
+
+        public void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName)
+        {
+          
+
+            string AudiometryJson = Newtonsoft.Json.JsonConvert.SerializeObject(Audiometry);
+
+            string timestamp = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
+
+            concatText(AudiometryJson);
+
+            try
+            {
+                File.WriteAllText(string.Format("{0}/audiometry/test-{1}.json",
+                                Properties.Settings.Default.RESULTS_FOLDER,
+                                timestamp), AudiometryJson);
+            }
+            catch (DirectoryNotFoundException)
+            {
+                string dir = string.Format("{0}/audiometry", Properties.Settings.Default.RESULTS_FOLDER);
+                Directory.CreateDirectory(dir);
+                File.WriteAllText(string.Format("{0}/audiometry/test-{1}.json",
+                                Properties.Settings.Default.RESULTS_FOLDER,
+                                timestamp), AudiometryJson);
+            }
+
+            updatePatientAudiometry(patientName, timestamp);
+
+
+        }
+
+
+        public void updatePatientAudiometry(string patientName, string timestamp)
+        {
+            string jsonFile = string.Format("{0}/patients/{1}.json",
+                                            Properties.Settings.Default.RESULTS_FOLDER,
+                                            patientName);
+            string json = File.ReadAllText(jsonFile);
+            Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(json);
+
+
+            List<string> tests = patient.Audiometrys.OfType<string>().ToList();
+
+            tests.Add(timestamp);
+            patient.Audiometrys = tests.ToArray();
+            concatText("All audiometrys: " + string.Join(", ", tests.ToArray()));
+            string output = Newtonsoft.Json.JsonConvert.SerializeObject(patient);
+            File.WriteAllText(jsonFile, output);
+        }
+
+
         public void updatePatientTest(string patientName, string timestamp)
         {
             string jsonFile = string.Format("{0}/patients/{1}.json",
-                Properties.Settings.Default.RESULTS_FOLDER,
-                patientBox.SelectedItem.ToString());
+                                            Properties.Settings.Default.RESULTS_FOLDER,
+                                            patientName);
             string json = File.ReadAllText(jsonFile);
             Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(json);
 
@@ -806,7 +858,7 @@ namespace perSONA
 
             tests.Add(timestamp);
             patient.Tests = tests.ToArray();
-            concatText("All tests: "+string.Join(", ", tests.ToArray()));
+            concatText("All tests: " + string.Join(", ", tests.ToArray()));
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(patient);
             File.WriteAllText(jsonFile, output);
         }
@@ -935,12 +987,14 @@ namespace perSONA
 
         private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             new Form2(this).Show();
+            updatePatientList();
         }
 
         private void patientAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form3(this).Show();
+            new patientManagement(this).Show();
         }
 
         private void audioDatabaseEditorAreaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -950,7 +1004,7 @@ namespace perSONA
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new Form3(this).Show();
+            new patientManagement(this).Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -963,8 +1017,40 @@ namespace perSONA
             var patientJson = File.ReadAllText(jsonFile);
             Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(patientJson);
 
-            new Form3(this, patient).Show();
+            new patientManagement(this, patient).Show();
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string jsonFile = string.Format("{0}/patients/{1}.json",
+                Properties.Settings.Default.RESULTS_FOLDER,
+                patientBox.SelectedItem.ToString());
+
+            if (MessageBox.Show("Deseja deletar paciente?", patientBox.SelectedItem.ToString(), 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, 
+                MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+
+            {
+                File.Delete(jsonFile);
+                concatText(string.Format("Deleted patient: {0}", patientBox.SelectedItem.ToString()));
+            }
+            updatePatientList();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (panel3.Visible)
+            {
+                panel3.Visible = false;
+                textBox.Visible = false;
+
+            }
+            else
+            {
+                panel3.Visible = true;
+                textBox.Visible = true;
+            }
         }
     }
 }

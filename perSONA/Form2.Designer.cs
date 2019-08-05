@@ -94,7 +94,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form2";
-            this.Text = "perSONA 1.3.0 - Edição de db";
+            this.Text = "perSONA 1.4.0 - Edição de db";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

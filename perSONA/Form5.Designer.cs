@@ -74,7 +74,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form5";
-            this.Text = "perSONA 1.3.0 - Select Hardware";
+            this.Text = "perSONA 1.4.0 - Select Hardware";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

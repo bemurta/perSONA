@@ -23,5 +23,6 @@ namespace perSONA
         void fillWords(string speechFile, ListBox listbox);
         void updatePatientList();
         double getMeanSRT(double[] iterativeSNR);
+        void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName);
     }
 }

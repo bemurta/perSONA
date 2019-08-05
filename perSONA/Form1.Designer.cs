@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.openServer = new System.Windows.Forms.Button();
@@ -94,10 +95,11 @@
             this.patientBox = new System.Windows.Forms.ListBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -118,12 +120,13 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonConnect
             // 
             this.buttonConnect.Enabled = false;
-            this.buttonConnect.Location = new System.Drawing.Point(13, 36);
+            this.buttonConnect.Location = new System.Drawing.Point(13, 38);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(112, 23);
             this.buttonConnect.TabIndex = 0;
@@ -133,17 +136,17 @@
             // 
             // buttonDisconnect
             // 
-            this.buttonDisconnect.Location = new System.Drawing.Point(131, 36);
+            this.buttonDisconnect.Location = new System.Drawing.Point(131, 38);
             this.buttonDisconnect.Name = "buttonDisconnect";
             this.buttonDisconnect.Size = new System.Drawing.Size(112, 23);
             this.buttonDisconnect.TabIndex = 1;
-            this.buttonDisconnect.Text = "Disconectar o VA";
+            this.buttonDisconnect.Text = "Desconectar o VA";
             this.buttonDisconnect.UseVisualStyleBackColor = true;
             this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
             // 
             // openServer
             // 
-            this.openServer.Location = new System.Drawing.Point(13, 9);
+            this.openServer.Location = new System.Drawing.Point(13, 11);
             this.openServer.Name = "openServer";
             this.openServer.Size = new System.Drawing.Size(230, 23);
             this.openServer.TabIndex = 2;
@@ -159,6 +162,7 @@
             this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox.Size = new System.Drawing.Size(260, 394);
             this.textBox.TabIndex = 3;
+            this.textBox.Visible = false;
             // 
             // reset
             // 
@@ -334,7 +338,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(13, 85);
+            this.button3.Location = new System.Drawing.Point(13, 67);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(230, 23);
             this.button3.TabIndex = 25;
@@ -640,49 +644,54 @@
             this.panel3.Controls.Add(this.buttonConnect);
             this.panel3.Controls.Add(this.buttonDisconnect);
             this.panel3.Controls.Add(this.openServer);
-            this.panel3.Location = new System.Drawing.Point(12, 41);
+            this.panel3.Location = new System.Drawing.Point(12, 74);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(260, 121);
+            this.panel3.Size = new System.Drawing.Size(260, 95);
             this.panel3.TabIndex = 41;
+            this.panel3.Visible = false;
             // 
             // testSetup
             // 
+            this.testSetup.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.testSetup.Location = new System.Drawing.Point(6, 141);
             this.testSetup.Name = "testSetup";
             this.testSetup.Size = new System.Drawing.Size(486, 35);
             this.testSetup.TabIndex = 42;
             this.testSetup.Text = "Avaliação customizada";
-            this.testSetup.UseVisualStyleBackColor = true;
+            this.testSetup.UseVisualStyleBackColor = false;
             this.testSetup.Click += new System.EventHandler(this.testSetup_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Location = new System.Drawing.Point(6, 60);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(486, 35);
             this.button2.TabIndex = 43;
             this.button2.Text = "Fala a frente, Ruído a frente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button5.Location = new System.Drawing.Point(6, 19);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(486, 35);
             this.button5.TabIndex = 44;
             this.button5.Text = "Fala a esquerda Ruído a frente";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button6.Location = new System.Drawing.Point(6, 100);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(486, 35);
             this.button6.TabIndex = 45;
             this.button6.Text = "Fala a direita, Ruído a direita";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // menuStrip1
@@ -793,7 +802,6 @@
             this.groupBox7.Controls.Add(this.patientBox);
             this.groupBox7.Controls.Add(this.button7);
             this.groupBox7.Controls.Add(this.button8);
-            this.groupBox7.Controls.Add(this.button9);
             this.groupBox7.Controls.Add(this.button10);
             this.groupBox7.Location = new System.Drawing.Point(6, 6);
             this.groupBox7.Name = "groupBox7";
@@ -812,40 +820,36 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button7.Location = new System.Drawing.Point(268, 18);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(230, 35);
             this.button7.TabIndex = 44;
             this.button7.Text = "Criar Paciente";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button8.Location = new System.Drawing.Point(268, 60);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(230, 35);
             this.button8.TabIndex = 43;
             this.button8.Text = "Ver dados do Paciente";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(268, 102);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(230, 35);
-            this.button9.TabIndex = 45;
-            this.button9.Text = "Adicionar audiometria";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button10.Location = new System.Drawing.Point(268, 144);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(230, 35);
             this.button10.TabIndex = 42;
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Text = "Deletar paciente";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // groupBox6
             // 
@@ -872,18 +876,38 @@
             this.tabPage1.Text = "Área de teste";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(3, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(254, 23);
+            this.button9.TabIndex = 26;
+            this.button9.Text = "Mostrar/Esconder painel de controle";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.Controls.Add(this.button9);
+            this.panel4.Location = new System.Drawing.Point(12, 27);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(260, 542);
+            this.panel4.TabIndex = 48;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 589);
+            this.Controls.Add(this.textBox);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel4);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "perSONA 1.3.0";
+            this.Text = "perSONA 1.4.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
@@ -911,6 +935,7 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -983,10 +1008,11 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.ListBox patientBox;
         private System.Windows.Forms.ToolStripMenuItem áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 

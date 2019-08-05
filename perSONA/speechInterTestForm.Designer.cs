@@ -393,7 +393,7 @@
             this.Controls.Add(this.all_correct);
             this.Controls.Add(this.testWordsList);
             this.Name = "speechIterTestForm";
-            this.Text = "perSONA 1.3.0 - Módulo de aplicação de ensaio";
+            this.Text = "perSONA 1.4.0 - Módulo de aplicação de ensaio";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

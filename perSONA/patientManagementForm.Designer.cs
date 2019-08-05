@@ -1,6 +1,6 @@
 ﻿namespace perSONA
 {
-    partial class Form3
+    partial class patientManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -30,47 +30,49 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.otherCoditions = new System.Windows.Forms.TextBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.leftHearingLoss = new System.Windows.Forms.ComboBox();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.rightHearingLoss = new System.Windows.Forms.ComboBox();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.rightPrivationYears = new System.Windows.Forms.NumericUpDown();
             this.groupBox38 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
+            this.rightDiagnosis = new System.Windows.Forms.DateTimePicker();
             this.groupBox39 = new System.Windows.Forms.GroupBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.rightPostLingual = new System.Windows.Forms.ComboBox();
             this.groupBox40 = new System.Windows.Forms.GroupBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.rightLossDegree = new System.Windows.Forms.ComboBox();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.leftPrivationYears = new System.Windows.Forms.NumericUpDown();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.leftDiagnosis = new System.Windows.Forms.DateTimePicker();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.leftPostLingual = new System.Windows.Forms.ComboBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.leftLossDegree = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.rightActivationDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.rightModel = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.rightManufacturer = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.rightDevice = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.leftActivationDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.leftModel = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.leftManufacturer = new System.Windows.Forms.ComboBox();
+            this.leftEarDevice = new System.Windows.Forms.GroupBox();
+            this.leftDevice = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.work = new System.Windows.Forms.ComboBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.observationBox = new System.Windows.Forms.TextBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
@@ -97,27 +99,27 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.freq8 = new System.Windows.Forms.NumericUpDown();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.freq7 = new System.Windows.Forms.NumericUpDown();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.freq4 = new System.Windows.Forms.NumericUpDown();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.freq6 = new System.Windows.Forms.NumericUpDown();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.freq3 = new System.Windows.Forms.NumericUpDown();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.freq2 = new System.Windows.Forms.NumericUpDown();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.freq1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.masking = new System.Windows.Forms.ComboBox();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.audiometrySide = new System.Windows.Forms.ComboBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.Conduction = new System.Windows.Forms.ComboBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.audiometryDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.audiometryLists = new System.Windows.Forms.ListBox();
             this.audiometryGraph = new ZedGraph.ZedGraphControl();
@@ -130,12 +132,12 @@
             this.groupBox19.SuspendLayout();
             this.groupBox36.SuspendLayout();
             this.groupBox37.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightPrivationYears)).BeginInit();
             this.groupBox38.SuspendLayout();
             this.groupBox39.SuspendLayout();
             this.groupBox40.SuspendLayout();
             this.groupBox21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftPrivationYears)).BeginInit();
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -146,7 +148,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.leftEarDevice.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox22.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -163,19 +165,19 @@
             this.panel3.SuspendLayout();
             this.groupBox23.SuspendLayout();
             this.groupBox35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq8)).BeginInit();
             this.groupBox33.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq7)).BeginInit();
             this.groupBox31.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq4)).BeginInit();
             this.groupBox34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq6)).BeginInit();
             this.groupBox32.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq3)).BeginInit();
             this.groupBox29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq2)).BeginInit();
             this.groupBox28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq1)).BeginInit();
             this.groupBox27.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.groupBox25.SuspendLayout();
@@ -186,6 +188,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.groupBox41);
             this.panel1.Controls.Add(this.groupBox19);
             this.panel1.Controls.Add(this.groupBox36);
@@ -204,118 +208,135 @@
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.leftEarDevice);
             this.panel1.Location = new System.Drawing.Point(315, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(486, 426);
             this.panel1.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(346, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "Lado direito";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(114, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Lado esquerdo";
+            // 
             // groupBox41
             // 
-            this.groupBox41.Controls.Add(this.textBox1);
-            this.groupBox41.Location = new System.Drawing.Point(18, 317);
+            this.groupBox41.Controls.Add(this.otherCoditions);
+            this.groupBox41.Location = new System.Drawing.Point(18, 330);
             this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Size = new System.Drawing.Size(447, 100);
+            this.groupBox41.Size = new System.Drawing.Size(447, 87);
             this.groupBox41.TabIndex = 62;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Outras condições";
-            this.groupBox41.Enter += new System.EventHandler(this.groupBox41_Enter);
             // 
-            // textBox1
+            // otherCoditions
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 18);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(435, 67);
-            this.textBox1.TabIndex = 0;
+            this.otherCoditions.Location = new System.Drawing.Point(6, 18);
+            this.otherCoditions.Multiline = true;
+            this.otherCoditions.Name = "otherCoditions";
+            this.otherCoditions.Size = new System.Drawing.Size(435, 67);
+            this.otherCoditions.TabIndex = 0;
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.comboBox13);
-            this.groupBox19.Location = new System.Drawing.Point(18, 12);
+            this.groupBox19.Controls.Add(this.leftHearingLoss);
+            this.groupBox19.Location = new System.Drawing.Point(18, 33);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(226, 44);
             this.groupBox19.TabIndex = 60;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Tipo de perda";
             // 
-            // comboBox13
+            // leftHearingLoss
             // 
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Items.AddRange(new object[] {
-            "Meningite",
-            "Subita",
-            "Nascimento",
-            "Acidente",
+            this.leftHearingLoss.FormattingEnabled = true;
+            this.leftHearingLoss.Items.AddRange(new object[] {
+            "Sem perda",
+            "Perda auditiva Condutiva",
+            "Perda auditiva sensório-neural",
+            "Perda auditiva mista",
             "Outro"});
-            this.comboBox13.Location = new System.Drawing.Point(6, 17);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(214, 21);
-            this.comboBox13.TabIndex = 1;
+            this.leftHearingLoss.Location = new System.Drawing.Point(6, 17);
+            this.leftHearingLoss.Name = "leftHearingLoss";
+            this.leftHearingLoss.Size = new System.Drawing.Size(214, 21);
+            this.leftHearingLoss.TabIndex = 1;
             // 
             // groupBox36
             // 
-            this.groupBox36.Controls.Add(this.comboBox16);
-            this.groupBox36.Location = new System.Drawing.Point(250, 12);
+            this.groupBox36.Controls.Add(this.rightHearingLoss);
+            this.groupBox36.Location = new System.Drawing.Point(250, 33);
             this.groupBox36.Name = "groupBox36";
             this.groupBox36.Size = new System.Drawing.Size(226, 44);
             this.groupBox36.TabIndex = 61;
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Tipo de perda";
             // 
-            // comboBox16
+            // rightHearingLoss
             // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Items.AddRange(new object[] {
-            "Meningite",
-            "Subita",
-            "Nascimento",
-            "Acidente",
+            this.rightHearingLoss.FormattingEnabled = true;
+            this.rightHearingLoss.Items.AddRange(new object[] {
+            "Sem perda",
+            "Perda auditiva Condutiva",
+            "Perda auditiva sensório-neural",
+            "Perda auditiva mista",
             "Outro"});
-            this.comboBox16.Location = new System.Drawing.Point(6, 17);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(214, 21);
-            this.comboBox16.TabIndex = 1;
+            this.rightHearingLoss.Location = new System.Drawing.Point(6, 17);
+            this.rightHearingLoss.Name = "rightHearingLoss";
+            this.rightHearingLoss.Size = new System.Drawing.Size(214, 21);
+            this.rightHearingLoss.TabIndex = 1;
             // 
             // groupBox37
             // 
-            this.groupBox37.Controls.Add(this.numericUpDown9);
-            this.groupBox37.Location = new System.Drawing.Point(363, 163);
+            this.groupBox37.Controls.Add(this.rightPrivationYears);
+            this.groupBox37.Location = new System.Drawing.Point(363, 184);
             this.groupBox37.Name = "groupBox37";
             this.groupBox37.Size = new System.Drawing.Size(109, 44);
             this.groupBox37.TabIndex = 59;
             this.groupBox37.TabStop = false;
             this.groupBox37.Text = "Anos de privação";
             // 
-            // numericUpDown9
+            // rightPrivationYears
             // 
-            this.numericUpDown9.Location = new System.Drawing.Point(3, 16);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(99, 20);
-            this.numericUpDown9.TabIndex = 0;
+            this.rightPrivationYears.Location = new System.Drawing.Point(3, 16);
+            this.rightPrivationYears.Name = "rightPrivationYears";
+            this.rightPrivationYears.Size = new System.Drawing.Size(99, 20);
+            this.rightPrivationYears.TabIndex = 0;
             // 
             // groupBox38
             // 
-            this.groupBox38.Controls.Add(this.dateTimePicker7);
-            this.groupBox38.Location = new System.Drawing.Point(248, 163);
+            this.groupBox38.Controls.Add(this.rightDiagnosis);
+            this.groupBox38.Location = new System.Drawing.Point(248, 184);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Size = new System.Drawing.Size(109, 44);
             this.groupBox38.TabIndex = 58;
             this.groupBox38.TabStop = false;
             this.groupBox38.Text = "Diagnóstico";
             // 
-            // dateTimePicker7
+            // rightDiagnosis
             // 
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker7.Location = new System.Drawing.Point(7, 19);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(95, 20);
-            this.dateTimePicker7.TabIndex = 46;
+            this.rightDiagnosis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.rightDiagnosis.Location = new System.Drawing.Point(7, 19);
+            this.rightDiagnosis.Name = "rightDiagnosis";
+            this.rightDiagnosis.Size = new System.Drawing.Size(95, 20);
+            this.rightDiagnosis.TabIndex = 46;
             // 
             // groupBox39
             // 
-            this.groupBox39.Controls.Add(this.comboBox7);
-            this.groupBox39.Location = new System.Drawing.Point(250, 112);
+            this.groupBox39.Controls.Add(this.rightPostLingual);
+            this.groupBox39.Location = new System.Drawing.Point(250, 133);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Size = new System.Drawing.Size(226, 44);
             this.groupBox39.TabIndex = 57;
@@ -323,101 +344,103 @@
             this.groupBox39.Text = "Pré ou pós lingual?";
             this.groupBox39.Enter += new System.EventHandler(this.groupBox39_Enter);
             // 
-            // comboBox7
+            // rightPostLingual
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.rightPostLingual.FormattingEnabled = true;
+            this.rightPostLingual.Items.AddRange(new object[] {
             "Pré-Lingual",
             "Pós-Lingual"});
-            this.comboBox7.Location = new System.Drawing.Point(6, 17);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(214, 21);
-            this.comboBox7.TabIndex = 1;
+            this.rightPostLingual.Location = new System.Drawing.Point(6, 17);
+            this.rightPostLingual.Name = "rightPostLingual";
+            this.rightPostLingual.Size = new System.Drawing.Size(214, 21);
+            this.rightPostLingual.TabIndex = 1;
             // 
             // groupBox40
             // 
-            this.groupBox40.Controls.Add(this.comboBox8);
-            this.groupBox40.Location = new System.Drawing.Point(250, 62);
+            this.groupBox40.Controls.Add(this.rightLossDegree);
+            this.groupBox40.Location = new System.Drawing.Point(250, 83);
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Size = new System.Drawing.Size(226, 44);
             this.groupBox40.TabIndex = 56;
             this.groupBox40.TabStop = false;
             this.groupBox40.Text = "Grau da perda";
             // 
-            // comboBox8
+            // rightLossDegree
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "Meningite",
-            "Subita",
-            "Nascimento",
-            "Acidente",
+            this.rightLossDegree.FormattingEnabled = true;
+            this.rightLossDegree.Items.AddRange(new object[] {
+            "Audição normal",
+            "Leve",
+            "Moderado",
+            "Moderadamente severo",
+            "Severo",
+            "Profundo",
             "Outro"});
-            this.comboBox8.Location = new System.Drawing.Point(6, 17);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(214, 21);
-            this.comboBox8.TabIndex = 1;
+            this.rightLossDegree.Location = new System.Drawing.Point(6, 17);
+            this.rightLossDegree.Name = "rightLossDegree";
+            this.rightLossDegree.Size = new System.Drawing.Size(214, 21);
+            this.rightLossDegree.TabIndex = 1;
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.numericUpDown1);
-            this.groupBox21.Location = new System.Drawing.Point(133, 163);
+            this.groupBox21.Controls.Add(this.leftPrivationYears);
+            this.groupBox21.Location = new System.Drawing.Point(133, 184);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(109, 44);
             this.groupBox21.TabIndex = 53;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Anos de privação";
             // 
-            // numericUpDown1
+            // leftPrivationYears
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 16);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(99, 20);
-            this.numericUpDown1.TabIndex = 0;
+            this.leftPrivationYears.Location = new System.Drawing.Point(3, 16);
+            this.leftPrivationYears.Name = "leftPrivationYears";
+            this.leftPrivationYears.Size = new System.Drawing.Size(99, 20);
+            this.leftPrivationYears.TabIndex = 0;
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.dateTimePicker4);
-            this.groupBox15.Location = new System.Drawing.Point(18, 163);
+            this.groupBox15.Controls.Add(this.leftDiagnosis);
+            this.groupBox15.Location = new System.Drawing.Point(18, 184);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(109, 44);
             this.groupBox15.TabIndex = 51;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Diagnóstico";
             // 
-            // dateTimePicker4
+            // leftDiagnosis
             // 
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(7, 19);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(95, 20);
-            this.dateTimePicker4.TabIndex = 46;
+            this.leftDiagnosis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.leftDiagnosis.Location = new System.Drawing.Point(7, 19);
+            this.leftDiagnosis.Name = "leftDiagnosis";
+            this.leftDiagnosis.Size = new System.Drawing.Size(95, 20);
+            this.leftDiagnosis.TabIndex = 46;
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.comboBox14);
-            this.groupBox16.Location = new System.Drawing.Point(18, 112);
+            this.groupBox16.Controls.Add(this.leftPostLingual);
+            this.groupBox16.Location = new System.Drawing.Point(18, 133);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(226, 44);
             this.groupBox16.TabIndex = 50;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Pré ou pós lingual?";
             // 
-            // comboBox14
+            // leftPostLingual
             // 
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Items.AddRange(new object[] {
+            this.leftPostLingual.FormattingEnabled = true;
+            this.leftPostLingual.Items.AddRange(new object[] {
             "Pré-Lingual",
             "Pós-Lingual"});
-            this.comboBox14.Location = new System.Drawing.Point(6, 17);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(214, 21);
-            this.comboBox14.TabIndex = 1;
+            this.leftPostLingual.Location = new System.Drawing.Point(6, 17);
+            this.leftPostLingual.Name = "leftPostLingual";
+            this.leftPostLingual.Size = new System.Drawing.Size(214, 21);
+            this.leftPostLingual.TabIndex = 1;
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.comboBox15);
-            this.groupBox17.Location = new System.Drawing.Point(18, 62);
+            this.groupBox17.Controls.Add(this.leftLossDegree);
+            this.groupBox17.Location = new System.Drawing.Point(18, 83);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(226, 44);
             this.groupBox17.TabIndex = 49;
@@ -425,173 +448,175 @@
             this.groupBox17.Text = "Grau da perda";
             this.groupBox17.Enter += new System.EventHandler(this.groupBox17_Enter);
             // 
-            // comboBox15
+            // leftLossDegree
             // 
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Items.AddRange(new object[] {
-            "Meningite",
-            "Subita",
-            "Nascimento",
-            "Acidente",
+            this.leftLossDegree.FormattingEnabled = true;
+            this.leftLossDegree.Items.AddRange(new object[] {
+            "Audição normal",
+            "Leve",
+            "Moderado",
+            "Moderadamente severo",
+            "Severo",
+            "Profundo",
             "Outro"});
-            this.comboBox15.Location = new System.Drawing.Point(6, 17);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(214, 21);
-            this.comboBox15.TabIndex = 1;
+            this.leftLossDegree.Location = new System.Drawing.Point(6, 17);
+            this.leftLossDegree.Name = "leftLossDegree";
+            this.leftLossDegree.Size = new System.Drawing.Size(214, 21);
+            this.leftLossDegree.TabIndex = 1;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dateTimePicker2);
-            this.groupBox5.Location = new System.Drawing.Point(365, 213);
+            this.groupBox5.Controls.Add(this.rightActivationDate);
+            this.groupBox5.Location = new System.Drawing.Point(365, 234);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(109, 44);
             this.groupBox5.TabIndex = 48;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Data de Ativação";
             // 
-            // dateTimePicker2
+            // rightActivationDate
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(8, 18);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(96, 20);
-            this.dateTimePicker2.TabIndex = 45;
+            this.rightActivationDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.rightActivationDate.Location = new System.Drawing.Point(8, 18);
+            this.rightActivationDate.Name = "rightActivationDate";
+            this.rightActivationDate.Size = new System.Drawing.Size(96, 20);
+            this.rightActivationDate.TabIndex = 45;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.comboBox4);
-            this.groupBox6.Location = new System.Drawing.Point(251, 263);
+            this.groupBox6.Controls.Add(this.rightModel);
+            this.groupBox6.Location = new System.Drawing.Point(251, 284);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(109, 44);
             this.groupBox6.TabIndex = 46;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Model";
+            this.groupBox6.Text = "Modelo";
             // 
-            // comboBox4
+            // rightModel
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(7, 16);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(96, 21);
-            this.comboBox4.TabIndex = 0;
+            this.rightModel.FormattingEnabled = true;
+            this.rightModel.Location = new System.Drawing.Point(7, 16);
+            this.rightModel.Name = "rightModel";
+            this.rightModel.Size = new System.Drawing.Size(96, 21);
+            this.rightModel.TabIndex = 0;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.comboBox5);
-            this.groupBox7.Location = new System.Drawing.Point(366, 263);
+            this.groupBox7.Controls.Add(this.rightManufacturer);
+            this.groupBox7.Location = new System.Drawing.Point(366, 284);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(109, 44);
             this.groupBox7.TabIndex = 47;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Manufacturer";
+            this.groupBox7.Text = "Marca";
             // 
-            // comboBox5
+            // rightManufacturer
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(6, 17);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(96, 21);
-            this.comboBox5.TabIndex = 1;
+            this.rightManufacturer.FormattingEnabled = true;
+            this.rightManufacturer.Location = new System.Drawing.Point(6, 17);
+            this.rightManufacturer.Name = "rightManufacturer";
+            this.rightManufacturer.Size = new System.Drawing.Size(96, 21);
+            this.rightManufacturer.TabIndex = 1;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.comboBox6);
-            this.groupBox8.Location = new System.Drawing.Point(251, 213);
+            this.groupBox8.Controls.Add(this.rightDevice);
+            this.groupBox8.Location = new System.Drawing.Point(251, 234);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(109, 44);
             this.groupBox8.TabIndex = 45;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Right Ear Device";
+            this.groupBox8.Text = "Dispositivo";
             // 
-            // comboBox6
+            // rightDevice
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "None",
+            this.rightDevice.FormattingEnabled = true;
+            this.rightDevice.Items.AddRange(new object[] {
+            "Nenhum",
             "AASI",
             "IC",
             "BIMODAL"});
-            this.comboBox6.Location = new System.Drawing.Point(6, 17);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(96, 21);
-            this.comboBox6.TabIndex = 1;
+            this.rightDevice.Location = new System.Drawing.Point(6, 17);
+            this.rightDevice.Name = "rightDevice";
+            this.rightDevice.Size = new System.Drawing.Size(96, 21);
+            this.rightDevice.TabIndex = 1;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dateTimePicker1);
-            this.groupBox4.Location = new System.Drawing.Point(18, 213);
+            this.groupBox4.Controls.Add(this.leftActivationDate);
+            this.groupBox4.Location = new System.Drawing.Point(18, 234);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(109, 44);
             this.groupBox4.TabIndex = 44;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Data de Ativação";
             // 
-            // dateTimePicker1
+            // leftActivationDate
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(8, 18);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(96, 20);
-            this.dateTimePicker1.TabIndex = 45;
+            this.leftActivationDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.leftActivationDate.Location = new System.Drawing.Point(8, 18);
+            this.leftActivationDate.Name = "leftActivationDate";
+            this.leftActivationDate.Size = new System.Drawing.Size(96, 20);
+            this.leftActivationDate.TabIndex = 45;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(136, 263);
+            this.groupBox2.Controls.Add(this.leftModel);
+            this.groupBox2.Location = new System.Drawing.Point(136, 284);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(109, 44);
             this.groupBox2.TabIndex = 43;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Model";
+            this.groupBox2.Text = "Modelo";
             // 
-            // comboBox1
+            // leftModel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(96, 21);
-            this.comboBox1.TabIndex = 0;
+            this.leftModel.FormattingEnabled = true;
+            this.leftModel.Location = new System.Drawing.Point(7, 16);
+            this.leftModel.Name = "leftModel";
+            this.leftModel.Size = new System.Drawing.Size(96, 21);
+            this.leftModel.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Location = new System.Drawing.Point(18, 263);
+            this.groupBox1.Controls.Add(this.leftManufacturer);
+            this.groupBox1.Location = new System.Drawing.Point(18, 284);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(109, 44);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Manufacturer";
+            this.groupBox1.Text = "Marca";
             // 
-            // comboBox2
+            // leftManufacturer
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 17);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(96, 21);
-            this.comboBox2.TabIndex = 1;
+            this.leftManufacturer.FormattingEnabled = true;
+            this.leftManufacturer.Location = new System.Drawing.Point(6, 17);
+            this.leftManufacturer.Name = "leftManufacturer";
+            this.leftManufacturer.Size = new System.Drawing.Size(96, 21);
+            this.leftManufacturer.TabIndex = 1;
             // 
-            // groupBox3
+            // leftEarDevice
             // 
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Location = new System.Drawing.Point(136, 213);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(109, 44);
-            this.groupBox3.TabIndex = 42;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Left Ear Device";
+            this.leftEarDevice.Controls.Add(this.leftDevice);
+            this.leftEarDevice.Location = new System.Drawing.Point(136, 234);
+            this.leftEarDevice.Name = "leftEarDevice";
+            this.leftEarDevice.Size = new System.Drawing.Size(109, 44);
+            this.leftEarDevice.TabIndex = 42;
+            this.leftEarDevice.TabStop = false;
+            this.leftEarDevice.Text = "Dispositivo";
             // 
-            // comboBox3
+            // leftDevice
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "None",
+            this.leftDevice.FormattingEnabled = true;
+            this.leftDevice.Items.AddRange(new object[] {
+            "Nenhum",
             "AASI",
             "IC",
             "BIMODAL"});
-            this.comboBox3.Location = new System.Drawing.Point(6, 17);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(96, 21);
-            this.comboBox3.TabIndex = 1;
+            this.leftDevice.Location = new System.Drawing.Point(6, 17);
+            this.leftDevice.Name = "leftDevice";
+            this.leftDevice.Size = new System.Drawing.Size(96, 21);
+            this.leftDevice.TabIndex = 1;
             // 
             // panel2
             // 
@@ -611,7 +636,7 @@
             // 
             // groupBox22
             // 
-            this.groupBox22.Controls.Add(this.comboBox10);
+            this.groupBox22.Controls.Add(this.work);
             this.groupBox22.Location = new System.Drawing.Point(14, 300);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(261, 44);
@@ -619,21 +644,21 @@
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Profissão";
             // 
-            // comboBox10
+            // work
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "Preocupado",
-            "Confiante",
-            "Disposto",
-            "Frustrado",
-            "Empolgado",
-            "Isolado",
-            "Incluído"});
-            this.comboBox10.Location = new System.Drawing.Point(6, 17);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(249, 21);
-            this.comboBox10.TabIndex = 1;
+            this.work.FormattingEnabled = true;
+            this.work.Items.AddRange(new object[] {
+            "Engenharia",
+            "Fonoaudiologia",
+            "Estudante",
+            "Professor",
+            "Construtor",
+            "Serviço Público",
+            "Programador"});
+            this.work.Location = new System.Drawing.Point(6, 17);
+            this.work.Name = "work";
+            this.work.Size = new System.Drawing.Size(249, 21);
+            this.work.TabIndex = 1;
             // 
             // groupBox20
             // 
@@ -849,10 +874,10 @@
             // 
             // audiometryTextBox
             // 
-            this.audiometryTextBox.Location = new System.Drawing.Point(305, 242);
+            this.audiometryTextBox.Location = new System.Drawing.Point(305, 373);
             this.audiometryTextBox.Multiline = true;
             this.audiometryTextBox.Name = "audiometryTextBox";
-            this.audiometryTextBox.Size = new System.Drawing.Size(475, 231);
+            this.audiometryTextBox.Size = new System.Drawing.Size(475, 100);
             this.audiometryTextBox.TabIndex = 4;
             // 
             // panel3
@@ -908,7 +933,7 @@
             // 
             // groupBox35
             // 
-            this.groupBox35.Controls.Add(this.numericUpDown8);
+            this.groupBox35.Controls.Add(this.freq8);
             this.groupBox35.Location = new System.Drawing.Point(7, 266);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Size = new System.Drawing.Size(124, 44);
@@ -916,16 +941,21 @@
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "8000 Hz";
             // 
-            // numericUpDown8
+            // freq8
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(6, 16);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(110, 20);
-            this.numericUpDown8.TabIndex = 0;
+            this.freq8.Location = new System.Drawing.Point(6, 16);
+            this.freq8.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.freq8.Name = "freq8";
+            this.freq8.Size = new System.Drawing.Size(110, 20);
+            this.freq8.TabIndex = 0;
             // 
             // groupBox33
             // 
-            this.groupBox33.Controls.Add(this.numericUpDown6);
+            this.groupBox33.Controls.Add(this.freq7);
             this.groupBox33.Location = new System.Drawing.Point(139, 218);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Size = new System.Drawing.Size(124, 44);
@@ -933,16 +963,21 @@
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "4000 Hz";
             // 
-            // numericUpDown6
+            // freq7
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(8, 16);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(110, 20);
-            this.numericUpDown6.TabIndex = 0;
+            this.freq7.Location = new System.Drawing.Point(8, 16);
+            this.freq7.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.freq7.Name = "freq7";
+            this.freq7.Size = new System.Drawing.Size(110, 20);
+            this.freq7.TabIndex = 0;
             // 
             // groupBox31
             // 
-            this.groupBox31.Controls.Add(this.numericUpDown4);
+            this.groupBox31.Controls.Add(this.freq4);
             this.groupBox31.Location = new System.Drawing.Point(138, 168);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Size = new System.Drawing.Size(124, 44);
@@ -950,16 +985,21 @@
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "1000 Hz";
             // 
-            // numericUpDown4
+            // freq4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(8, 16);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(110, 20);
-            this.numericUpDown4.TabIndex = 0;
+            this.freq4.Location = new System.Drawing.Point(8, 16);
+            this.freq4.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.freq4.Name = "freq4";
+            this.freq4.Size = new System.Drawing.Size(110, 20);
+            this.freq4.TabIndex = 0;
             // 
             // groupBox34
             // 
-            this.groupBox34.Controls.Add(this.numericUpDown7);
+            this.groupBox34.Controls.Add(this.freq6);
             this.groupBox34.Location = new System.Drawing.Point(7, 218);
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.Size = new System.Drawing.Size(124, 44);
@@ -967,16 +1007,21 @@
             this.groupBox34.TabStop = false;
             this.groupBox34.Text = "2000 Hz";
             // 
-            // numericUpDown7
+            // freq6
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(6, 16);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(110, 20);
-            this.numericUpDown7.TabIndex = 0;
+            this.freq6.Location = new System.Drawing.Point(6, 16);
+            this.freq6.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.freq6.Name = "freq6";
+            this.freq6.Size = new System.Drawing.Size(110, 20);
+            this.freq6.TabIndex = 0;
             // 
             // groupBox32
             // 
-            this.groupBox32.Controls.Add(this.numericUpDown5);
+            this.groupBox32.Controls.Add(this.freq3);
             this.groupBox32.Location = new System.Drawing.Point(6, 168);
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Size = new System.Drawing.Size(124, 44);
@@ -984,16 +1029,21 @@
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "500  Hz";
             // 
-            // numericUpDown5
+            // freq3
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(6, 16);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(110, 20);
-            this.numericUpDown5.TabIndex = 0;
+            this.freq3.Location = new System.Drawing.Point(6, 16);
+            this.freq3.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.freq3.Name = "freq3";
+            this.freq3.Size = new System.Drawing.Size(110, 20);
+            this.freq3.TabIndex = 0;
             // 
             // groupBox29
             // 
-            this.groupBox29.Controls.Add(this.numericUpDown3);
+            this.groupBox29.Controls.Add(this.freq2);
             this.groupBox29.Location = new System.Drawing.Point(139, 118);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Size = new System.Drawing.Size(124, 44);
@@ -1001,16 +1051,21 @@
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "250 Hz";
             // 
-            // numericUpDown3
+            // freq2
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(8, 16);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(110, 20);
-            this.numericUpDown3.TabIndex = 0;
+            this.freq2.Location = new System.Drawing.Point(8, 16);
+            this.freq2.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.freq2.Name = "freq2";
+            this.freq2.Size = new System.Drawing.Size(110, 20);
+            this.freq2.TabIndex = 0;
             // 
             // groupBox28
             // 
-            this.groupBox28.Controls.Add(this.numericUpDown2);
+            this.groupBox28.Controls.Add(this.freq1);
             this.groupBox28.Location = new System.Drawing.Point(7, 118);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.Size = new System.Drawing.Size(124, 44);
@@ -1018,16 +1073,21 @@
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "125 Hz";
             // 
-            // numericUpDown2
+            // freq1
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(6, 16);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(110, 20);
-            this.numericUpDown2.TabIndex = 0;
+            this.freq1.Location = new System.Drawing.Point(6, 16);
+            this.freq1.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
+            this.freq1.Name = "freq1";
+            this.freq1.Size = new System.Drawing.Size(110, 20);
+            this.freq1.TabIndex = 0;
             // 
             // groupBox27
             // 
-            this.groupBox27.Controls.Add(this.comboBox12);
+            this.groupBox27.Controls.Add(this.masking);
             this.groupBox27.Location = new System.Drawing.Point(139, 69);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Size = new System.Drawing.Size(124, 44);
@@ -1035,41 +1095,41 @@
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Mascaramento";
             // 
-            // comboBox12
+            // masking
             // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
+            this.masking.FormattingEnabled = true;
+            this.masking.Items.AddRange(new object[] {
             "Não",
             "Sim"});
-            this.comboBox12.Location = new System.Drawing.Point(8, 17);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(110, 21);
-            this.comboBox12.TabIndex = 1;
+            this.masking.Location = new System.Drawing.Point(8, 17);
+            this.masking.Name = "masking";
+            this.masking.Size = new System.Drawing.Size(110, 21);
+            this.masking.TabIndex = 1;
             // 
             // groupBox26
             // 
-            this.groupBox26.Controls.Add(this.comboBox11);
+            this.groupBox26.Controls.Add(this.audiometrySide);
             this.groupBox26.Location = new System.Drawing.Point(7, 68);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Size = new System.Drawing.Size(124, 44);
             this.groupBox26.TabIndex = 55;
             this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "Orelha";
+            this.groupBox26.Text = "Lado";
             // 
-            // comboBox11
+            // audiometrySide
             // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
+            this.audiometrySide.FormattingEnabled = true;
+            this.audiometrySide.Items.AddRange(new object[] {
             "Esquerdo",
             "Direito"});
-            this.comboBox11.Location = new System.Drawing.Point(6, 18);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(110, 21);
-            this.comboBox11.TabIndex = 0;
+            this.audiometrySide.Location = new System.Drawing.Point(6, 18);
+            this.audiometrySide.Name = "audiometrySide";
+            this.audiometrySide.Size = new System.Drawing.Size(110, 21);
+            this.audiometrySide.TabIndex = 0;
             // 
             // groupBox25
             // 
-            this.groupBox25.Controls.Add(this.comboBox9);
+            this.groupBox25.Controls.Add(this.Conduction);
             this.groupBox25.Location = new System.Drawing.Point(139, 19);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(124, 44);
@@ -1077,22 +1137,22 @@
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Via";
             // 
-            // comboBox9
+            // Conduction
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
+            this.Conduction.FormattingEnabled = true;
+            this.Conduction.Items.AddRange(new object[] {
             "Aérea",
             "Óssea",
             "Aérea c/ AASI",
             "Aérea c/ IC"});
-            this.comboBox9.Location = new System.Drawing.Point(8, 17);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(110, 21);
-            this.comboBox9.TabIndex = 1;
+            this.Conduction.Location = new System.Drawing.Point(6, 17);
+            this.Conduction.Name = "Conduction";
+            this.Conduction.Size = new System.Drawing.Size(110, 21);
+            this.Conduction.TabIndex = 1;
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.dateTimePicker5);
+            this.groupBox24.Controls.Add(this.audiometryDate);
             this.groupBox24.Location = new System.Drawing.Point(7, 19);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(124, 44);
@@ -1100,13 +1160,13 @@
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Data de realização";
             // 
-            // dateTimePicker5
+            // audiometryDate
             // 
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker5.Location = new System.Drawing.Point(6, 19);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(110, 20);
-            this.dateTimePicker5.TabIndex = 46;
+            this.audiometryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.audiometryDate.Location = new System.Drawing.Point(6, 19);
+            this.audiometryDate.Name = "audiometryDate";
+            this.audiometryDate.Size = new System.Drawing.Size(110, 20);
+            this.audiometryDate.TabIndex = 46;
             // 
             // groupBox30
             // 
@@ -1139,7 +1199,7 @@
             this.audiometryGraph.ScrollMinX = 0D;
             this.audiometryGraph.ScrollMinY = 0D;
             this.audiometryGraph.ScrollMinY2 = 0D;
-            this.audiometryGraph.Size = new System.Drawing.Size(476, 229);
+            this.audiometryGraph.Size = new System.Drawing.Size(476, 361);
             this.audiometryGraph.TabIndex = 0;
             this.audiometryGraph.UseExtendedPrintDialog = true;
             // 
@@ -1190,26 +1250,27 @@
             this.testsBox.TabIndex = 2;
             this.testsBox.SelectedIndexChanged += new System.EventHandler(this.testsBox_SelectedIndexChanged);
             // 
-            // Form3
+            // patientManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 508);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form3";
-            this.Text = "perSONA 1.3.0 - Módulo de gerenciamento de pacientes";
+            this.Name = "patientManagement";
+            this.Text = "perSONA 1.4.0 - Módulo de gerenciamento de pacientes";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox41.ResumeLayout(false);
             this.groupBox41.PerformLayout();
             this.groupBox19.ResumeLayout(false);
             this.groupBox36.ResumeLayout(false);
             this.groupBox37.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightPrivationYears)).EndInit();
             this.groupBox38.ResumeLayout(false);
             this.groupBox39.ResumeLayout(false);
             this.groupBox40.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftPrivationYears)).EndInit();
             this.groupBox15.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
@@ -1220,7 +1281,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.leftEarDevice.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox22.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
@@ -1242,19 +1303,19 @@
             this.panel3.ResumeLayout(false);
             this.groupBox23.ResumeLayout(false);
             this.groupBox35.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq8)).EndInit();
             this.groupBox33.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq7)).EndInit();
             this.groupBox31.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq4)).EndInit();
             this.groupBox34.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq6)).EndInit();
             this.groupBox32.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq3)).EndInit();
             this.groupBox29.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq2)).EndInit();
             this.groupBox28.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.freq1)).EndInit();
             this.groupBox27.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
@@ -1270,25 +1331,25 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox leftEarDevice;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker leftActivationDate;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker rightActivationDate;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox rightModel;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox rightManufacturer;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox rightDevice;
+        private System.Windows.Forms.ComboBox leftModel;
+        private System.Windows.Forms.ComboBox leftManufacturer;
+        private System.Windows.Forms.ComboBox leftDevice;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.ComboBox leftPostLingual;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.ComboBox leftLossDegree;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.TextBox observationBox;
@@ -1305,8 +1366,8 @@
         private System.Windows.Forms.DateTimePicker bornDate;
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.NumericUpDown leftPrivationYears;
+        private System.Windows.Forms.DateTimePicker leftDiagnosis;
         private System.Windows.Forms.TextBox addressBox;
         private System.Windows.Forms.TextBox phoneBox;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1316,52 +1377,54 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.GroupBox groupBox26;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox audiometrySide;
         private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox Conduction;
         private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private System.Windows.Forms.DateTimePicker audiometryDate;
         private System.Windows.Forms.GroupBox groupBox30;
         private System.Windows.Forms.ListBox audiometryLists;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox35;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown freq8;
         private System.Windows.Forms.GroupBox groupBox33;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown freq7;
         private System.Windows.Forms.GroupBox groupBox31;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown freq4;
         private System.Windows.Forms.GroupBox groupBox34;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown freq6;
         private System.Windows.Forms.GroupBox groupBox32;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown freq3;
         private System.Windows.Forms.GroupBox groupBox29;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown freq2;
         private System.Windows.Forms.GroupBox groupBox28;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown freq1;
         private System.Windows.Forms.GroupBox groupBox27;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox masking;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage3;
         private ZedGraph.ZedGraphControl testsGraph;
         private System.Windows.Forms.ListBox testsBox;
         private System.Windows.Forms.TextBox testInfo;
         private System.Windows.Forms.GroupBox groupBox37;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.NumericUpDown rightPrivationYears;
         private System.Windows.Forms.GroupBox groupBox38;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
+        private System.Windows.Forms.DateTimePicker rightDiagnosis;
         private System.Windows.Forms.GroupBox groupBox39;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox rightPostLingual;
         private System.Windows.Forms.GroupBox groupBox40;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox rightLossDegree;
         private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox work;
         private System.Windows.Forms.TextBox audiometryTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.ComboBox leftHearingLoss;
         private System.Windows.Forms.GroupBox groupBox36;
-        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.ComboBox rightHearingLoss;
         private System.Windows.Forms.GroupBox groupBox41;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox otherCoditions;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
