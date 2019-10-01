@@ -25,10 +25,10 @@
     <ROW Property="ARPPRODUCTICON" Value="per_short_Scp_icon.exe" Type="8"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="LVA-UFSC"/>
-    <ROW Property="ProductCode" Value="1033:{5A744D8D-81DB-4063-BCF1-26BF7979AEA1} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{AA4A388E-D4A0-4CA1-84AE-92615F5B35B9} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="perSONA-BETA"/>
-    <ROW Property="ProductVersion" Value="1.4.1" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.4.2" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{2E351919-0754-48EA-9BCC-7450A9453229}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -128,7 +128,9 @@
     <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" ComponentId="{91C08A18-C122-4006-896B-3FC05ADB166A}" Directory_="perSONA_Dir" Attributes="256" KeyPath="perSONA.exe"/>
     <ROW Component="COPYING" ComponentId="{2790BF3A-755A-4D52-8651-0D3E1AD03907}" Directory_="perSONA_Dir" Attributes="0" KeyPath="COPYING" Type="0"/>
     <ROW Component="DAFF.dll" ComponentId="{01B414AE-F1B2-426D-B4FB-83083B9DC0B2}" Directory_="bin_Dir" Attributes="256" KeyPath="DAFF.dll"/>
+    <ROW Component="DAFF.dll_1" ComponentId="{A80A64A8-4407-470F-A60C-EBCDE6FE1A1B}" Directory_="perSONA_Dir" Attributes="256" KeyPath="DAFF.dll_1"/>
     <ROW Component="DAFFViz.dll" ComponentId="{508D8BDE-5D31-44FF-B98A-56A61DDCB9FA}" Directory_="bin_Dir" Attributes="256" KeyPath="DAFFViz.dll"/>
+    <ROW Component="DAFFViz.dll_1" ComponentId="{EFACC2F8-F092-499C-B6E6-5D0EC81C8ACB}" Directory_="perSONA_Dir" Attributes="256" KeyPath="DAFFViz.dll_1"/>
     <ROW Component="F0001001.wav" ComponentId="{6C68CD82-F883-4712-8784-802DD1893161}" Directory_="F0001_Dir" Attributes="0" KeyPath="F0001001.wav" Type="0"/>
     <ROW Component="F0002001.wav" ComponentId="{CB872A1F-F09E-4333-9EB3-DB311C09CF7D}" Directory_="F0002_Dir" Attributes="0" KeyPath="F0002001.wav" Type="0"/>
     <ROW Component="F0003001.wav" ComponentId="{9A1CB856-EA71-4A45-B7A1-3EBF67CBDF83}" Directory_="F0003_Dir" Attributes="0" KeyPath="F0003001.wav" Type="0"/>
@@ -140,13 +142,21 @@
     <ROW Component="F0009001.wav" ComponentId="{186B51BE-FE79-45CC-9C76-833CE2958829}" Directory_="F0009_Dir" Attributes="0" KeyPath="F0009001.wav" Type="0"/>
     <ROW Component="F0010001.WAV" ComponentId="{CE5A388F-0FF1-44D8-B5C4-C778AF3EDB54}" Directory_="F0010_Dir" Attributes="0" KeyPath="F0010001.WAV" Type="0"/>
     <ROW Component="ITABase.dll" ComponentId="{DD72D1B6-876C-4506-B0E0-4FD73AB7492A}" Directory_="bin_Dir" Attributes="256" KeyPath="ITABase.dll"/>
+    <ROW Component="ITABase.dll_1" ComponentId="{6A661F02-9F45-42A1-B948-B3FFB16214DA}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITABase.dll_1"/>
     <ROW Component="ITACTC.dll" ComponentId="{52ABFAEF-344B-4D21-9CB1-EED80D4EA85F}" Directory_="bin_Dir" Attributes="256" KeyPath="ITACTC.dll"/>
+    <ROW Component="ITACTC.dll_1" ComponentId="{E00ADBDD-36F3-4CFD-AF1C-CFF8E53FB19C}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITACTC.dll_1"/>
     <ROW Component="ITAConvolution.dll" ComponentId="{D88D3A7C-46A4-4A4D-8C6E-F3B30C4E25C8}" Directory_="bin_Dir" Attributes="256" KeyPath="ITAConvolution.dll"/>
+    <ROW Component="ITAConvolution.dll_1" ComponentId="{60FB699B-38CF-4E54-AAF3-9CE0769E1854}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITAConvolution.dll_1"/>
     <ROW Component="ITADSP.dll" ComponentId="{17BCB245-F937-4673-BF01-1998F49F4EDB}" Directory_="bin_Dir" Attributes="256" KeyPath="ITADSP.dll"/>
+    <ROW Component="ITADSP.dll_1" ComponentId="{18FAB035-45EA-4AE2-8500-58ABBECAD784}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITADSP.dll_1"/>
     <ROW Component="ITADataSources.dll" ComponentId="{3AAF0E2D-203D-4E5F-93D3-98CADAFEBE06}" Directory_="bin_Dir" Attributes="256" KeyPath="ITADataSources.dll"/>
+    <ROW Component="ITADataSources.dll_1" ComponentId="{B2CBA9E9-8F94-410B-9002-43CB72095490}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITADataSources.dll_1"/>
     <ROW Component="ITAFFT.dll" ComponentId="{5BB26E99-C0C2-4601-8F24-3F44F704422C}" Directory_="bin_Dir" Attributes="256" KeyPath="ITAFFT.dll"/>
+    <ROW Component="ITAFFT.dll_1" ComponentId="{A9AA7B01-9A41-48FC-AFB3-022AFAD2B495}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITAFFT.dll_1"/>
     <ROW Component="ITAQtWidgets.dll" ComponentId="{BF2B4053-1062-4648-BD06-A5D1C4E68C30}" Directory_="bin_Dir" Attributes="256" KeyPath="ITAQtWidgets.dll"/>
+    <ROW Component="ITAQtWidgets.dll_1" ComponentId="{D746B0CD-EAF7-4704-9C9A-57A043B14636}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITAQtWidgets.dll_1"/>
     <ROW Component="ITASampler.dll" ComponentId="{3831EB08-180E-4AFE-97C3-E8B72456C11F}" Directory_="bin_Dir" Attributes="256" KeyPath="ITASampler.dll"/>
+    <ROW Component="ITASampler.dll_1" ComponentId="{FE2536B3-126D-4986-96EA-6D877C80F7EB}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITASampler.dll_1"/>
     <ROW Component="Lista1A_frase1.wav" ComponentId="{480B4A1B-95A6-4759-B828-8553F83932EB}" Directory_="Lista1A_Dir" Attributes="0" KeyPath="Lista1A_frase1.wav" Type="0"/>
     <ROW Component="Lista1A_frase1.wav_1" ComponentId="{070C862E-E85C-49EE-8227-85798487881E}" Directory_="Lista1A_1_Dir" Attributes="0" KeyPath="Lista1A_frase1.wav_1" Type="0"/>
     <ROW Component="Lista1B_frase1.wav" ComponentId="{50731877-0EEE-48E5-BB23-9AF02B4FA43A}" Directory_="Lista1B_Dir" Attributes="0" KeyPath="Lista1B_frase1.wav" Type="0"/>
@@ -167,16 +177,24 @@
     <ROW Component="M0009001.WAV" ComponentId="{AF0F612D-98CE-45EC-8BD9-CB3995325CB3}" Directory_="M0009_Dir" Attributes="0" KeyPath="M0009001.WAV" Type="0"/>
     <ROW Component="M0010001.WAV" ComponentId="{8864D456-BBDE-4FA1-9CAE-D77057C7BE72}" Directory_="M0010_Dir" Attributes="0" KeyPath="M0010001.WAV" Type="0"/>
     <ROW Component="NatNetLib.dll" ComponentId="{D1D33F65-D055-4475-B81B-B253EDAF4AA0}" Directory_="bin_Dir" Attributes="256" KeyPath="NatNetLib.dll"/>
+    <ROW Component="NatNetLib.dll_1" ComponentId="{9E185CFD-5D6B-4EF6-924A-E9919B5ECACC}" Directory_="perSONA_Dir" Attributes="256" KeyPath="NatNetLib.dll_1"/>
     <ROW Component="NatNetML.dll" ComponentId="{B3B0EF4E-2CCD-47BE-BB56-675369A94C46}" Directory_="bin_Dir" Attributes="256" KeyPath="NatNetML.dll"/>
+    <ROW Component="NatNetML.dll_1" ComponentId="{C2DF6CD5-31D7-4639-9F6A-61404192A519}" Directory_="perSONA_Dir" Attributes="256" KeyPath="NatNetML.dll_1"/>
     <ROW Component="ProductInformation" ComponentId="{3279A4CC-EB0E-4F15-AE50-8F44C110E64B}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
     <ROW Component="Qt5Core.dll" ComponentId="{A35B6253-2855-4EAB-837E-AC883C77D0D1}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Core.dll"/>
+    <ROW Component="Qt5Core.dll_1" ComponentId="{094C1777-2BE3-4D88-8D99-765D4B74BC13}" Directory_="perSONA_Dir" Attributes="256" KeyPath="Qt5Core.dll_1"/>
     <ROW Component="Qt5Gui.dll" ComponentId="{77C8FD53-808E-4651-AD15-FFA2ED2C952B}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Gui.dll"/>
+    <ROW Component="Qt5Gui.dll_1" ComponentId="{CE27ADF9-3419-4872-9A72-0674A9475679}" Directory_="perSONA_Dir" Attributes="256" KeyPath="Qt5Gui.dll_1"/>
     <ROW Component="Qt5Sql.dll" ComponentId="{7F85E3B6-ED28-493A-AFED-AA2BC84A3B4A}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Sql.dll"/>
+    <ROW Component="Qt5Sql.dll_1" ComponentId="{46F369D8-D89D-4ACE-9571-6350CF6C99BB}" Directory_="perSONA_Dir" Attributes="256" KeyPath="Qt5Sql.dll_1"/>
     <ROW Component="Qt5Svg.dll" ComponentId="{17727AC3-F794-45A1-9203-FFF48097C37F}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Svg.dll"/>
+    <ROW Component="Qt5Svg.dll_1" ComponentId="{7A78B252-B7C6-4A24-A891-651AEF2F84CB}" Directory_="perSONA_Dir" Attributes="256" KeyPath="Qt5Svg.dll_1"/>
     <ROW Component="Qt5Widgets.dll" ComponentId="{BF70D186-3866-4257-A6D3-1E0B209A21DB}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Widgets.dll"/>
+    <ROW Component="Qt5Widgets.dll_1" ComponentId="{FA54F4AB-5638-4CA7-BA7F-E0D0193BE30B}" Directory_="perSONA_Dir" Attributes="256" KeyPath="Qt5Widgets.dll_1"/>
     <ROW Component="Redstart.exe" ComponentId="{3B3EDD96-5F23-459B-BF62-CC9F36AE501F}" Directory_="bin_Dir" Attributes="256" KeyPath="Redstart.exe"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{6A65937C-67C3-4AD9-BE2C-B3B8313C82AF}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="SPLINE.dll" ComponentId="{8EDC58E0-ABA3-4A4F-A578-A590A2DF7025}" Directory_="bin_Dir" Attributes="256" KeyPath="SPLINE.dll"/>
+    <ROW Component="SPLINE.dll_1" ComponentId="{DB2F6BDE-CC86-476C-A1A2-7F3408634DD5}" Directory_="perSONA_Dir" Attributes="256" KeyPath="SPLINE.dll_1"/>
     <ROW Component="VA.h" ComponentId="{6B22ABF8-F253-44EE-92AC-A715BA4FECC4}" Directory_="include_Dir" Attributes="0" KeyPath="VA.h" Type="0"/>
     <ROW Component="VAASIOBackend.h" ComponentId="{B753313A-B477-4DFE-8E19-91D1BCAF08CB}" Directory_="Audio_Dir" Attributes="0" KeyPath="VAASIOBackend.h" Type="0"/>
     <ROW Component="VAAirTrafficNoiseAudioRenderer.h" ComponentId="{D55FB75A-6DB5-4A07-8B30-7EB7B7383244}" Directory_="AirTrafficNoise_Dir" Attributes="0" KeyPath="VAAirTrafficNoiseAudioRenderer.h" Type="0"/>
@@ -190,24 +208,30 @@
     <ROW Component="VAAudiofileSignalSource.h" ComponentId="{A0E6FCEA-9F2F-46DC-8E0F-26558BD5061D}" Directory_="Audiosignals_Dir" Attributes="0" KeyPath="VAAudiofileSignalSource.h" Type="0"/>
     <ROW Component="VABase.dll" ComponentId="{63A1F015-9767-4E92-9FF9-F5C9CFD60E9F}" Directory_="csharp_Dir" Attributes="256" KeyPath="VABase.dll"/>
     <ROW Component="VABase.dll_1" ComponentId="{F6EAEEAE-E095-4EEF-ADBB-7B045A6167C5}" Directory_="bin_Dir" Attributes="256" KeyPath="VABase.dll_1"/>
+    <ROW Component="VABase.dll_2" ComponentId="{EF9F631E-A0B5-4251-A0CC-F0351515EEC6}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VABase.dll_2"/>
     <ROW Component="VABinauralArtificialReverb.h" ComponentId="{C77601C6-8DB4-4E7F-9B89-63D075F9019A}" Directory_="ArtificialReverb_Dir" Attributes="0" KeyPath="VABinauralArtificialReverb.h" Type="0"/>
     <ROW Component="VABinauralFreefieldAudioRenderer.h" ComponentId="{401DE949-249D-49EA-82B2-48255E02B41D}" Directory_="FreeField_Dir" Attributes="0" KeyPath="VABinauralFreefieldAudioRenderer.h" Type="0"/>
     <ROW Component="VABinauralOutdoorNoiseAudioRenderer.h" ComponentId="{93EBDE4C-9734-41A3-835B-D756E43E5E40}" Directory_="OutdoorNoise_Dir" Attributes="0" KeyPath="VABinauralOutdoorNoiseAudioRenderer.h" Type="0"/>
     <ROW Component="VACS.cs" ComponentId="{3C677578-62A6-4FDA-8D9E-31C972B4E53A}" Directory_="csharp_Dir" Attributes="0" KeyPath="VACS.cs_2" Type="0"/>
     <ROW Component="VACSDummyWrapper.dll" ComponentId="{B5F8A72B-6799-4FBA-B7E1-938E5412EF86}" Directory_="bin_Dir" Attributes="256" KeyPath="VACSDummyWrapper.dll"/>
+    <ROW Component="VACSDummyWrapper.dll_1" ComponentId="{3BF07592-A317-49FF-9743-BA1F959ABD73}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VACSDummyWrapper.dll_1"/>
     <ROW Component="VAContainerState.h" ComponentId="{F5ECACF2-933F-4B89-AA6E-D8CFB7F1923F}" Directory_="Scene_Dir" Attributes="0" KeyPath="VAContainerState.h" Type="0"/>
     <ROW Component="VACore.dll" ComponentId="{A76AAD95-3829-4265-99AA-18FCD261523D}" Directory_="bin_Dir" Attributes="256" KeyPath="VACore.dll"/>
+    <ROW Component="VACore.dll_1" ComponentId="{237B6E65-261F-4C53-9BE9-A093B5D6AB52}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VACore.dll_1"/>
     <ROW Component="VACore.experimental.ini" ComponentId="{C5C8AD94-35C0-4C04-9BA7-1DE6A00091BF}" Directory_="conf_Dir" Attributes="0" KeyPath="VACore.experimental.ini" Type="0"/>
     <ROW Component="VADebug.h" ComponentId="{9C0DECC6-646F-4B3B-B824-5810D3D8AF69}" Directory_="Utils_Dir" Attributes="0" KeyPath="VADebug.h" Type="0"/>
     <ROW Component="VADirectivity.h" ComponentId="{993A14E2-A518-42F8-A5EF-33E634101909}" Directory_="directivities_Dir" Attributes="0" KeyPath="VADirectivity.h" Type="0"/>
     <ROW Component="VAHomogeneousMedium.h" ComponentId="{D81E27B0-A5DA-47BA-92BF-855F4BDDE8B6}" Directory_="Medium_Dir" Attributes="0" KeyPath="VAHomogeneousMedium.h" Type="0"/>
     <ROW Component="VALua.dll" ComponentId="{FAFC2E5F-F7CE-4EA1-91B2-04715C2B2B15}" Directory_="bin_Dir" Attributes="256" KeyPath="VALua.dll"/>
+    <ROW Component="VALua.dll_1" ComponentId="{EFC42465-CEBF-4079-87BF-B382575A6745}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VALua.dll_1"/>
     <ROW Component="VAMatlab.mexw64" ComponentId="{E4C7B115-3F0B-468B-A6D4-85C9FE6F56C8}" Directory_="bin_Dir" Attributes="256" KeyPath="VAMatlab.mexw64" Type="0"/>
     <ROW Component="VAMotionModel.h" ComponentId="{01DDBEA1-7DBB-486D-A501-482C8AC4FF25}" Directory_="Motion_Dir" Attributes="0" KeyPath="VAMotionModel.h" Type="0"/>
     <ROW Component="VANet.dll" ComponentId="{2987B85D-F59F-4775-81F1-8CF66AE0A5DD}" Directory_="csharp_Dir" Attributes="256" KeyPath="VANet.dll"/>
     <ROW Component="VANet.dll_1" ComponentId="{30404D29-F281-45F7-8428-F12055EE6F53}" Directory_="bin_Dir" Attributes="256" KeyPath="VANet.dll_1"/>
+    <ROW Component="VANet.dll_2" ComponentId="{97B6CBA2-5F0B-422A-9005-B8B1AB755064}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VANet.dll_2"/>
     <ROW Component="VANetCSWrapper.dll" ComponentId="{D51848EB-CE29-4E2E-99C4-7A9A2E861AEB}" Directory_="csharp_Dir" Attributes="256" KeyPath="VANetCSWrapper.dll"/>
     <ROW Component="VANetCSWrapper.dll_1" ComponentId="{F2A9B20D-5E6F-4AEA-B558-1979EE9549D0}" Directory_="bin_Dir" Attributes="256" KeyPath="VANetCSWrapper.dll_1"/>
+    <ROW Component="VANetCSWrapper.dll_2" ComponentId="{2142AB7A-85B3-4EC3-A460-FAE7D8A88AB8}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VANetCSWrapper.dll_2"/>
     <ROW Component="VAPTDummyAudioRenderer.h" ComponentId="{64AD88D8-37CD-492E-8558-545CC523FD27}" Directory_="Dummy_Dir" Attributes="0" KeyPath="VAPTDummyAudioRenderer.h" Type="0"/>
     <ROW Component="VAPTGenericPathAudioRenderer.h" ComponentId="{64AE26F1-1419-40DD-A059-5FDA2D7E0263}" Directory_="GenericPath_Dir" Attributes="0" KeyPath="VAPTGenericPathAudioRenderer.h" Type="0"/>
     <ROW Component="VAPTHearingAidRenderer.h" ComponentId="{991F25FF-820F-487D-A3D9-CF378063EB00}" Directory_="HearingAid_Dir" Attributes="0" KeyPath="VAPTHearingAidRenderer.h" Type="0"/>
@@ -219,80 +243,144 @@
     <ROW Component="VAVBAPFreefieldAudioRenderer.h" ComponentId="{02D1CF30-04DC-48EC-839C-15F55F07B736}" Directory_="Freefield_2_Dir" Attributes="0" KeyPath="VAVBAPFreefieldAudioRenderer.h" Type="0"/>
     <ROW Component="VistaAspects.dll" ComponentId="{3E8936AF-2444-454F-A9C4-2B9EE52FB4B6}" Directory_="csharp_Dir" Attributes="256" KeyPath="VistaAspects.dll"/>
     <ROW Component="VistaAspects.dll_1" ComponentId="{4141233D-7B2E-4836-8370-7BC848339276}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaAspects.dll_1"/>
+    <ROW Component="VistaAspects.dll_2" ComponentId="{E853973A-C60F-4F48-8C4B-DA85A9B56130}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaAspects.dll_2"/>
     <ROW Component="VistaBase.dll" ComponentId="{F6189731-B53E-4963-99B7-90F7E2E7CACB}" Directory_="csharp_Dir" Attributes="256" KeyPath="VistaBase.dll"/>
     <ROW Component="VistaBase.dll_1" ComponentId="{27B353B1-5177-4A68-B56A-08D8675EAC84}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaBase.dll_1"/>
+    <ROW Component="VistaBase.dll_2" ComponentId="{BE67371F-4BED-4FB7-9353-02114A02A5BB}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaBase.dll_2"/>
     <ROW Component="VistaCyberGloveDriver.dll" ComponentId="{E1B18CCB-5006-4912-8207-AE045122731D}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaCyberGloveDriver.dll"/>
+    <ROW Component="VistaCyberGloveDriver.dll_1" ComponentId="{C08EFF45-4DA5-429D-940D-06BCD7E9A702}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaCyberGloveDriver.dll_1"/>
     <ROW Component="VistaCyberGlovePlugin.dll" ComponentId="{5717C414-A0C8-494D-A32E-984405624BDF}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaCyberGlovePlugin.dll"/>
+    <ROW Component="VistaCyberGlovePlugin.dll_1" ComponentId="{1E7C71E0-E7CD-4952-BBA4-FE82A5BA3BCD}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaCyberGlovePlugin.dll_1"/>
     <ROW Component="VistaCyberGloveTranscoder.dll" ComponentId="{0DFBA2DB-4DA1-444C-91FB-6C57906292E3}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaCyberGloveTranscoder.dll"/>
+    <ROW Component="VistaCyberGloveTranscoder.dll_1" ComponentId="{AF09A3F4-E2D0-40A8-AA8A-450E95D5F9B8}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaCyberGloveTranscoder.dll_1"/>
     <ROW Component="VistaDTrackDriver.dll" ComponentId="{5B791705-7CB8-473A-8171-E8933B0A564F}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDTrackDriver.dll"/>
+    <ROW Component="VistaDTrackDriver.dll_1" ComponentId="{FAF2E16A-0333-4C3A-9DF9-49EEBD83A41D}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaDTrackDriver.dll_1"/>
     <ROW Component="VistaDTrackPlugin.dll" ComponentId="{99BB8A79-9E01-4EBA-8BB1-814557D78D83}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDTrackPlugin.dll"/>
+    <ROW Component="VistaDTrackPlugin.dll_1" ComponentId="{6C7966FC-7FDB-47B8-B461-702C32EBB23B}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaDTrackPlugin.dll_1"/>
     <ROW Component="VistaDTrackTranscoder.dll" ComponentId="{C7006053-EFA6-4165-98FD-9E4935BBBE1F}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDTrackTranscoder.dll"/>
+    <ROW Component="VistaDTrackTranscoder.dll_1" ComponentId="{DA652B62-8DE0-43F5-A976-DD5C4F56B802}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaDTrackTranscoder.dll_1"/>
     <ROW Component="VistaDataFlowNet.dll" ComponentId="{D5CAAFA8-B2A2-4EB8-90D9-DBFE6886609C}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDataFlowNet.dll"/>
+    <ROW Component="VistaDataFlowNet.dll_1" ComponentId="{6030EAF1-EBD7-44DD-897D-7D44F692507B}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaDataFlowNet.dll_1"/>
     <ROW Component="VistaDeviceDriversBase.dll" ComponentId="{06D8A07B-ED71-44E7-BC0D-69D0A3749167}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaDeviceDriversBase.dll"/>
+    <ROW Component="VistaDeviceDriversBase.dll_1" ComponentId="{46910D13-2E07-4F4D-BF53-00A34C4B5ED5}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaDeviceDriversBase.dll_1"/>
     <ROW Component="VistaFastrakDriver.dll" ComponentId="{4041DE55-BA8A-4BD1-B2AA-F7FC853313ED}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaFastrakDriver.dll"/>
+    <ROW Component="VistaFastrakDriver.dll_1" ComponentId="{2F548B30-EBD8-42EC-A019-98A008875CEC}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaFastrakDriver.dll_1"/>
     <ROW Component="VistaFastrakPlugin.dll" ComponentId="{8EF2624A-D63E-45CB-977D-1A5B164CDDD0}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaFastrakPlugin.dll"/>
+    <ROW Component="VistaFastrakPlugin.dll_1" ComponentId="{F9EF739F-0B7C-47E8-8117-7F2E452742AB}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaFastrakPlugin.dll_1"/>
     <ROW Component="VistaFastrakTranscoder.dll" ComponentId="{FF799C7E-62FE-46D3-A95A-1C706F03570A}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaFastrakTranscoder.dll"/>
+    <ROW Component="VistaFastrakTranscoder.dll_1" ComponentId="{D46567F7-817C-4395-B76E-966C3E6EE798}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaFastrakTranscoder.dll_1"/>
     <ROW Component="VistaGlutJoystickDriver.dll" ComponentId="{2DE7B252-A3C7-454D-8BAD-95A8E83C0195}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutJoystickDriver.dll"/>
+    <ROW Component="VistaGlutJoystickDriver.dll_1" ComponentId="{7B97906D-CC20-4076-B7E7-C2BBE0CDDD3D}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutJoystickDriver.dll_1"/>
     <ROW Component="VistaGlutJoystickPlugin.dll" ComponentId="{5079FC8F-A2CE-4BDF-9560-DF872E3DF39B}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutJoystickPlugin.dll"/>
+    <ROW Component="VistaGlutJoystickPlugin.dll_1" ComponentId="{0FD05419-F957-4C23-8FD2-A8984217F80F}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutJoystickPlugin.dll_1"/>
     <ROW Component="VistaGlutJoystickTranscoder.dll" ComponentId="{A38F4047-0D86-431E-88EE-9942490472B0}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutJoystickTranscoder.dll"/>
+    <ROW Component="VistaGlutJoystickTranscoder.dll_1" ComponentId="{1CFAE907-CE00-47BF-982E-75E09BF2A6FA}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutJoystickTranscoder.dll_1"/>
     <ROW Component="VistaGlutKeyboardDriver.dll" ComponentId="{B0B81E45-6F31-4978-A786-027338544444}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutKeyboardDriver.dll"/>
+    <ROW Component="VistaGlutKeyboardDriver.dll_1" ComponentId="{9EC00960-7C19-4DD2-A58B-136AFD326FE8}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutKeyboardDriver.dll_1"/>
     <ROW Component="VistaGlutKeyboardPlugin.dll" ComponentId="{978D3964-51C9-4A9D-81EA-CA2F0E05873D}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutKeyboardPlugin.dll"/>
+    <ROW Component="VistaGlutKeyboardPlugin.dll_1" ComponentId="{D4828F74-F3A2-4C79-AC5F-5514F38AC278}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutKeyboardPlugin.dll_1"/>
     <ROW Component="VistaGlutKeyboardTranscoder.dll" ComponentId="{56835A5D-4C38-4FD8-A8AB-A5B2D75E5244}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutKeyboardTranscoder.dll"/>
+    <ROW Component="VistaGlutKeyboardTranscoder.dll_1" ComponentId="{89EB9247-A67F-4C98-A306-55ACF26FB2AF}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutKeyboardTranscoder.dll_1"/>
     <ROW Component="VistaGlutMouseDriver.dll" ComponentId="{62E4FB29-B605-4D38-A5DB-2D7087062CEC}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutMouseDriver.dll"/>
+    <ROW Component="VistaGlutMouseDriver.dll_1" ComponentId="{EDE34191-0382-4FE2-A7E9-EE332AA5F266}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutMouseDriver.dll_1"/>
     <ROW Component="VistaGlutMousePlugin.dll" ComponentId="{87BCC5CB-5C22-41A5-BEB0-FCD5F91FB43D}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutMousePlugin.dll"/>
+    <ROW Component="VistaGlutMousePlugin.dll_1" ComponentId="{59C98462-B29A-4C12-9E00-290D51CB6B84}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutMousePlugin.dll_1"/>
     <ROW Component="VistaGlutMouseTranscoder.dll" ComponentId="{8459FB7E-CCF8-4F8E-98E0-6B1C2AABB2DA}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaGlutMouseTranscoder.dll"/>
+    <ROW Component="VistaGlutMouseTranscoder.dll_1" ComponentId="{E612531A-D16D-4EB1-9100-7A673CB5247E}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaGlutMouseTranscoder.dll_1"/>
     <ROW Component="VistaHIDDriver.dll" ComponentId="{AC780A7E-6D9D-4537-9906-4AB0EBDE1CD9}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHIDDriver.dll"/>
+    <ROW Component="VistaHIDDriver.dll_1" ComponentId="{FC141232-A66E-4D56-B767-FECBB3E471C5}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaHIDDriver.dll_1"/>
     <ROW Component="VistaHIDPlugin.dll" ComponentId="{B2769010-306E-4900-A071-B45965962FED}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHIDPlugin.dll"/>
+    <ROW Component="VistaHIDPlugin.dll_1" ComponentId="{450EC1EA-E9CF-486C-914D-B3F340952A02}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaHIDPlugin.dll_1"/>
     <ROW Component="VistaHIDTranscoder.dll" ComponentId="{150956FE-171C-4369-AB2C-3F3BC4BD8FC0}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHIDTranscoder.dll"/>
+    <ROW Component="VistaHIDTranscoder.dll_1" ComponentId="{EF46B301-A96E-4FE2-A309-36B89F4147CE}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaHIDTranscoder.dll_1"/>
     <ROW Component="VistaHapticDeviceEmulatorDriver.dll" ComponentId="{67AD03D4-86C2-48FE-9631-3B8635B8680B}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorDriver.dll"/>
+    <ROW Component="VistaHapticDeviceEmulatorDriver.dll_1" ComponentId="{834F94FA-22A4-4ED8-BF53-4CD5EC727BE7}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorDriver.dll_1"/>
     <ROW Component="VistaHapticDeviceEmulatorPlugin.dll" ComponentId="{7BE9205F-519F-449D-953C-49F83DE304A7}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorPlugin.dll"/>
+    <ROW Component="VistaHapticDeviceEmulatorPlugin.dll_1" ComponentId="{61645A0E-A2FC-4681-AD25-A23B2D402D80}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorPlugin.dll_1"/>
     <ROW Component="VistaHapticDeviceEmulatorTranscoder.dll" ComponentId="{5F462417-6703-4E4A-B23D-48DED865668E}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorTranscoder.dll"/>
+    <ROW Component="VistaHapticDeviceEmulatorTranscoder.dll_1" ComponentId="{3EEFD56A-CF12-424E-8941-2A161C9492C9}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaHapticDeviceEmulatorTranscoder.dll_1"/>
     <ROW Component="VistaIRManDriver.dll" ComponentId="{3BC26C71-288D-4FB6-A59A-DEFA431EFBD9}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaIRManDriver.dll"/>
+    <ROW Component="VistaIRManDriver.dll_1" ComponentId="{F7E78DA5-5610-47D4-9747-22A0D2F6161A}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaIRManDriver.dll_1"/>
     <ROW Component="VistaIRManPlugin.dll" ComponentId="{C49CBD11-0034-48AF-A7AE-D4373CA77720}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaIRManPlugin.dll"/>
+    <ROW Component="VistaIRManPlugin.dll_1" ComponentId="{10B5EEB5-D383-44F6-80FA-45D21FA9B272}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaIRManPlugin.dll_1"/>
     <ROW Component="VistaIRManTranscoder.dll" ComponentId="{37C9B1D9-713D-4CC9-AD9E-D2B3F1905DC8}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaIRManTranscoder.dll"/>
+    <ROW Component="VistaIRManTranscoder.dll_1" ComponentId="{27E46B56-6DCB-40F5-8293-4F3F4BFC522B}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaIRManTranscoder.dll_1"/>
     <ROW Component="VistaInterProcComm.dll" ComponentId="{F3FED355-1C26-404A-942A-EE4AFD476766}" Directory_="csharp_Dir" Attributes="256" KeyPath="VistaInterProcComm.dll"/>
     <ROW Component="VistaInterProcComm.dll_1" ComponentId="{1101F252-278C-4775-8AF6-486D708FA2BE}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaInterProcComm.dll_1"/>
+    <ROW Component="VistaInterProcComm.dll_2" ComponentId="{CCB70E7D-B7DA-4356-9472-7608D5C2FAA0}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaInterProcComm.dll_2"/>
     <ROW Component="VistaKernel.dll" ComponentId="{5FCE8576-DA22-419C-B5E1-F4895341BA43}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaKernel.dll"/>
+    <ROW Component="VistaKernel.dll_1" ComponentId="{BEDFFC21-101C-4937-9D64-36F581FD3660}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaKernel.dll_1"/>
     <ROW Component="VistaKernelOpenSGExt.dll" ComponentId="{A5D85FAF-DB86-432D-8EA0-F0B1DCF07EDC}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaKernelOpenSGExt.dll"/>
+    <ROW Component="VistaKernelOpenSGExt.dll_1" ComponentId="{FCA096EB-540C-4E9D-9DAF-C42C9DDFE284}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaKernelOpenSGExt.dll_1"/>
     <ROW Component="VistaMIDIDriver.dll" ComponentId="{7C389AF7-62C5-47CC-B8FF-402FF13B2114}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaMIDIDriver.dll"/>
+    <ROW Component="VistaMIDIDriver.dll_1" ComponentId="{8BBCAE13-1F42-4983-8035-FDFC6A9D7350}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaMIDIDriver.dll_1"/>
     <ROW Component="VistaMIDIPlugin.dll" ComponentId="{74A376B6-5521-43AF-B927-30121F01C46B}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaMIDIPlugin.dll"/>
+    <ROW Component="VistaMIDIPlugin.dll_1" ComponentId="{2D7F0567-E240-4965-BE15-E9C67AA61005}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaMIDIPlugin.dll_1"/>
     <ROW Component="VistaMIDITranscoder.dll" ComponentId="{73E29232-7617-40FC-B7BD-5FC8FE6BC5BA}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaMIDITranscoder.dll"/>
+    <ROW Component="VistaMIDITranscoder.dll_1" ComponentId="{789529D2-AD16-4DFF-81B8-3AFD59E501AA}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaMIDITranscoder.dll_1"/>
     <ROW Component="VistaMath.dll" ComponentId="{E8DCD3D6-5BA0-4082-ACCB-D0638F39A908}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaMath.dll"/>
+    <ROW Component="VistaMath.dll_1" ComponentId="{D5C32B3C-E649-4F27-95EC-B726AC957354}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaMath.dll_1"/>
     <ROW Component="VistaOGLExt.dll" ComponentId="{8DF55C4C-04C8-49B3-AC72-B808C88A591C}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaOGLExt.dll"/>
+    <ROW Component="VistaOGLExt.dll_1" ComponentId="{88A1C60A-32AB-4657-A612-C282B8A1EA12}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaOGLExt.dll_1"/>
     <ROW Component="VistaPhantomServerDriver.dll" ComponentId="{8B7C64BC-A04E-44C1-B6F3-0551A91C53CE}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaPhantomServerDriver.dll"/>
+    <ROW Component="VistaPhantomServerDriver.dll_1" ComponentId="{9B06C8B3-243F-461B-8063-2891C3200FFA}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaPhantomServerDriver.dll_1"/>
     <ROW Component="VistaPhantomServerPlugin.dll" ComponentId="{AFF85274-08E3-4009-A235-F56484D5B7BA}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaPhantomServerPlugin.dll"/>
+    <ROW Component="VistaPhantomServerPlugin.dll_1" ComponentId="{7AC511CE-11D4-4DD5-92BC-E766C9237144}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaPhantomServerPlugin.dll_1"/>
     <ROW Component="VistaPhantomServerTranscoder.dll" ComponentId="{57D2B9AF-A678-4B55-BECE-5175BF322447}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaPhantomServerTranscoder.dll"/>
+    <ROW Component="VistaPhantomServerTranscoder.dll_1" ComponentId="{4841448F-3B1E-41C8-82B1-40A6C0AE96D2}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaPhantomServerTranscoder.dll_1"/>
     <ROW Component="VistaSpaceMouseDriver.dll" ComponentId="{BB175A98-1B64-4624-B873-9AF21A74614B}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaSpaceMouseDriver.dll"/>
+    <ROW Component="VistaSpaceMouseDriver.dll_1" ComponentId="{74A4579A-B8DE-4140-8B12-1D72F41024CE}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaSpaceMouseDriver.dll_1"/>
     <ROW Component="VistaSpaceMousePlugin.dll" ComponentId="{8FBEA86E-79B3-4D22-AF8A-B42C1E854821}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaSpaceMousePlugin.dll"/>
+    <ROW Component="VistaSpaceMousePlugin.dll_1" ComponentId="{79490380-2344-402B-9B7B-E7C774227C1D}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaSpaceMousePlugin.dll_1"/>
     <ROW Component="VistaSpaceMouseTranscoder.dll" ComponentId="{C375BEC6-974C-4B51-B8A1-74D10E983C85}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaSpaceMouseTranscoder.dll"/>
+    <ROW Component="VistaSpaceMouseTranscoder.dll_1" ComponentId="{896E7929-4221-435C-8C33-6E4541B21349}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaSpaceMouseTranscoder.dll_1"/>
     <ROW Component="VistaTools.dll" ComponentId="{D08B6522-1798-451E-A2C9-8F6A7FF5AB24}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaTools.dll"/>
+    <ROW Component="VistaTools.dll_1" ComponentId="{2D33CFA6-221B-47BB-B76C-BA973880A569}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaTools.dll_1"/>
     <ROW Component="alcaim_f.WAV" ComponentId="{5F9FC00A-CD04-4DBC-AAEB-965469737F76}" Directory_="Speech_Dir" Attributes="0" KeyPath="alcaim_f.WAV" Type="0"/>
     <ROW Component="core.h" ComponentId="{F213B760-AEF4-4436-ACA5-6F325C5188FD}" Directory_="core_Dir" Attributes="0" KeyPath="core.h" Type="0"/>
     <ROW Component="kHzTone_60dB_SPL.wav" ComponentId="{9BE18036-3B54-48D6-BF66-C121D0D5C2A9}" Directory_="Sounds_Dir" Attributes="0" KeyPath="kHzTone_60dB_SPL.wav" Type="0"/>
     <ROW Component="libEGL.DLL" ComponentId="{7E94DB7C-E8EA-48CF-8AEB-6C0BF55E6F64}" Directory_="bin_Dir" Attributes="256" KeyPath="libEGL.DLL"/>
+    <ROW Component="libEGL.DLL_1" ComponentId="{2B04E85C-BA89-4BF4-979B-89F66DBF5A07}" Directory_="perSONA_Dir" Attributes="256" KeyPath="libEGL.DLL_1"/>
     <ROW Component="libfftw33.dll" ComponentId="{70862E67-73F0-4830-9093-1A550F36C3A6}" Directory_="bin_Dir" Attributes="256" KeyPath="libfftw33.dll"/>
+    <ROW Component="libfftw33.dll_1" ComponentId="{F80B0507-9060-4265-AA85-59F9DF599707}" Directory_="perSONA_Dir" Attributes="256" KeyPath="libfftw33.dll_1"/>
     <ROW Component="libfftw3f3.dll" ComponentId="{C90DEBFF-E29D-49A9-A294-BBE5B868CD17}" Directory_="bin_Dir" Attributes="256" KeyPath="libfftw3f3.dll"/>
+    <ROW Component="libfftw3f3.dll_1" ComponentId="{EDD838F2-1995-4559-8D69-60082B1B61BB}" Directory_="perSONA_Dir" Attributes="256" KeyPath="libfftw3f3.dll_1"/>
     <ROW Component="libfftw3l3.dll" ComponentId="{255F85A4-2469-4B9D-B142-438575BC5384}" Directory_="bin_Dir" Attributes="256" KeyPath="libfftw3l3.dll"/>
+    <ROW Component="libfftw3l3.dll_1" ComponentId="{46C30D86-BB9D-4048-BE00-A038DC421877}" Directory_="perSONA_Dir" Attributes="256" KeyPath="libfftw3l3.dll_1"/>
     <ROW Component="libsamplerate0.dll" ComponentId="{18D200D1-5F27-4635-A477-A9657FB5F974}" Directory_="bin_Dir" Attributes="256" KeyPath="libsamplerate0.dll"/>
+    <ROW Component="libsamplerate0.dll_1" ComponentId="{C5421D24-FC9A-43C7-BDCF-35D42E784445}" Directory_="perSONA_Dir" Attributes="256" KeyPath="libsamplerate0.dll_1"/>
     <ROW Component="libsndfile1.dll" ComponentId="{65FADB7C-6328-4A24-A60A-90DB03CA3268}" Directory_="bin_Dir" Attributes="256" KeyPath="libsndfile1.dll"/>
+    <ROW Component="libsndfile1.dll_1" ComponentId="{47D7F61E-B8BF-438E-9E91-75D75334DBF7}" Directory_="perSONA_Dir" Attributes="256" KeyPath="libsndfile1.dll_1"/>
     <ROW Component="lista.gif" ComponentId="{B84023B0-1F58-47FF-B6F7-9357E84DFAC1}" Directory_="Trainning_Dir" Attributes="0" KeyPath="lista.gif" Type="0"/>
     <ROW Component="msvcp120.dll" ComponentId="{9D5EFFE2-BA22-493F-B85E-E11682FFF462}" Directory_="csharp_Dir" Attributes="256" KeyPath="msvcp120.dll"/>
     <ROW Component="msvcp120.dll_1" ComponentId="{711B7053-1C6B-40C0-9B48-1BE9FE502131}" Directory_="bin_Dir" Attributes="256" KeyPath="msvcp120.dll_1"/>
+    <ROW Component="msvcp120.dll_2" ComponentId="{ED5154C3-D537-43A6-9992-51F795189D35}" Directory_="perSONA_Dir" Attributes="256" KeyPath="msvcp120.dll_2"/>
     <ROW Component="msvcr120.dll" ComponentId="{D4E99A33-ABF6-4FC8-8A6A-A29E1E858AD6}" Directory_="csharp_Dir" Attributes="256" KeyPath="msvcr120.dll"/>
     <ROW Component="msvcr120.dll_1" ComponentId="{15F3C407-9F02-4B46-B3E4-E8A4B3509A1D}" Directory_="bin_Dir" Attributes="256" KeyPath="msvcr120.dll_1"/>
+    <ROW Component="msvcr120.dll_2" ComponentId="{B87D8DC9-5EF5-40D5-BADF-304C6870BBDF}" Directory_="perSONA_Dir" Attributes="256" KeyPath="msvcr120.dll_2"/>
     <ROW Component="perSONA_References" ComponentId="{5A14A600-734D-4316-996C-475BF5A3C575}" Directory_="perSONA_Dir" Attributes="0" KeyPath="ZedGraph.dll"/>
     <ROW Component="portaudio_x64.dll" ComponentId="{5B538A42-B790-454C-95B0-093DD06A7E77}" Directory_="bin_Dir" Attributes="256" KeyPath="portaudio_x64.dll"/>
+    <ROW Component="portaudio_x64.dll_1" ComponentId="{03F6DF02-A949-4BB1-80C4-F06EB2148B8C}" Directory_="perSONA_Dir" Attributes="256" KeyPath="portaudio_x64.dll_1"/>
     <ROW Component="portaudiod_x64.dll" ComponentId="{5CB7F9AC-852B-4D7D-9805-0E80557D6B96}" Directory_="bin_Dir" Attributes="256" KeyPath="portaudiod_x64.dll"/>
+    <ROW Component="portaudiod_x64.dll_1" ComponentId="{B2A2A325-7364-4FE5-95CA-EDF6793370AB}" Directory_="perSONA_Dir" Attributes="256" KeyPath="portaudiod_x64.dll_1"/>
     <ROW Component="run_VAServer.bat" ComponentId="{E1AF61A3-285F-42BF-A7BD-7C05E8C80ED7}" Directory_="perSONA_Dir" Attributes="0" KeyPath="run_VAServer.bat"/>
     <ROW Component="talkerbabble_ISTS.wav" ComponentId="{DDF7CA17-CDD3-4B41-84CE-AFF44397C58E}" Directory_="Noise_Dir" Attributes="0" KeyPath="talkerbabble_ISTS.wav" Type="0"/>
     <ROW Component="tbb.dll" ComponentId="{FDAAE28F-0318-40E0-BCE6-2AB1C1784FA0}" Directory_="bin_Dir" Attributes="256" KeyPath="tbb.dll"/>
+    <ROW Component="tbb.dll_1" ComponentId="{11168379-3A2A-490D-BD57-CB65CDF8A933}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbb.dll_1"/>
     <ROW Component="tbb_debug.dll" ComponentId="{5BF6196C-BBEB-4C94-AF95-02461EDC03DC}" Directory_="bin_Dir" Attributes="256" KeyPath="tbb_debug.dll"/>
+    <ROW Component="tbb_debug.dll_1" ComponentId="{D4130AA0-CA21-4035-9922-B81B8B73A31E}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbb_debug.dll_1"/>
     <ROW Component="tbb_preview.dll" ComponentId="{4A48403C-8240-4738-A818-2BD80A3A9A34}" Directory_="bin_Dir" Attributes="256" KeyPath="tbb_preview.dll"/>
+    <ROW Component="tbb_preview.dll_1" ComponentId="{5DA7EDB8-2CD1-420B-ADF4-C11DD3FDA770}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbb_preview.dll_1"/>
     <ROW Component="tbb_preview_debug.dll" ComponentId="{40289C7A-FD30-49AA-AFCF-36E13E732C77}" Directory_="bin_Dir" Attributes="256" KeyPath="tbb_preview_debug.dll"/>
+    <ROW Component="tbb_preview_debug.dll_1" ComponentId="{D1CB86B6-E75F-4232-B56B-430223BBEEAE}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbb_preview_debug.dll_1"/>
     <ROW Component="tbbmalloc.dll" ComponentId="{2C3F8CEB-FD4D-4D0C-A56E-E345183BD38F}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc.dll"/>
+    <ROW Component="tbbmalloc.dll_1" ComponentId="{CEC66668-66A6-49CF-98CD-F37308964533}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbbmalloc.dll_1"/>
     <ROW Component="tbbmalloc_debug.dll" ComponentId="{EE9075C1-6202-4540-A767-C52667BA47FB}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc_debug.dll"/>
+    <ROW Component="tbbmalloc_debug.dll_1" ComponentId="{0C066B53-6B51-4421-B3DA-72E41922AD1D}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbbmalloc_debug.dll_1"/>
     <ROW Component="tbbmalloc_proxy.dll" ComponentId="{11B522CC-FE14-4AE2-9934-ABBAB60C842A}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc_proxy.dll"/>
+    <ROW Component="tbbmalloc_proxy.dll_1" ComponentId="{F6B83ED1-D1F8-429D-9AC2-EB13BB2BEF06}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbbmalloc_proxy.dll_1"/>
     <ROW Component="tbbmalloc_proxy_debug.dll" ComponentId="{8FEBE9EA-A24A-44E6-8890-C07C6902EFC5}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc_proxy_debug.dll"/>
+    <ROW Component="tbbmalloc_proxy_debug.dll_1" ComponentId="{40236B56-C0E4-4AD2-9A51-CBD2700D59C2}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbbmalloc_proxy_debug.dll_1"/>
     <ROW Component="wav" ComponentId="{9AA2EFEE-8158-4EAA-B076-9AF1270400CE}" Directory_="data_Dir" Attributes="0" KeyPath="wav" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
@@ -912,6 +1000,94 @@
     <ROW File="VASetup.CLINIC.ini" Component_="VACore.experimental.ini" FileName="VASETU~6.INI|VASetup.CLINIC.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.CLINIC.ini" SelfReg="false"/>
     <ROW File="VACore_CLINIC_CTC.ini" Component_="VACore.experimental.ini" FileName="VACORE~4.INI|VACore_CLINIC_CTC.ini" Attributes="0" SourcePath="..\perSONA\conf\VACore_CLINIC_CTC.ini" SelfReg="false"/>
     <ROW File="VASetup.USFC.ini" Component_="VACore.experimental.ini" FileName="VASETU~7.INI|VASetup.USFC.ini" Attributes="0" SourcePath="..\perSONA\conf\VASetup.USFC.ini" SelfReg="false"/>
+    <ROW File="DAFF.dll_1" Component_="DAFF.dll_1" FileName="DAFF.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\DAFF.dll" SelfReg="false"/>
+    <ROW File="DAFFViz.dll_1" Component_="DAFFViz.dll_1" FileName="DAFFViz.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\DAFFViz.dll" SelfReg="false"/>
+    <ROW File="ITABase.dll_1" Component_="ITABase.dll_1" FileName="ITABase.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITABase.dll" SelfReg="false"/>
+    <ROW File="ITAConvolution.dll_1" Component_="ITAConvolution.dll_1" FileName="ITACON~1.DLL|ITAConvolution.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITAConvolution.dll" SelfReg="false"/>
+    <ROW File="ITACTC.dll_1" Component_="ITACTC.dll_1" FileName="ITACTC.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITACTC.dll" SelfReg="false"/>
+    <ROW File="ITADataSources.dll_1" Component_="ITADataSources.dll_1" FileName="ITADAT~1.DLL|ITADataSources.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITADataSources.dll" SelfReg="false"/>
+    <ROW File="ITADSP.dll_1" Component_="ITADSP.dll_1" FileName="ITADSP.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITADSP.dll" SelfReg="false"/>
+    <ROW File="ITAFFT.dll_1" Component_="ITAFFT.dll_1" FileName="ITAFFT.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITAFFT.dll" SelfReg="false"/>
+    <ROW File="ITAQtWidgets.dll_1" Component_="ITAQtWidgets.dll_1" FileName="ITAQTW~1.DLL|ITAQtWidgets.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITAQtWidgets.dll" SelfReg="false"/>
+    <ROW File="ITASampler.dll_1" Component_="ITASampler.dll_1" FileName="ITASAM~1.DLL|ITASampler.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\ITASampler.dll" SelfReg="false"/>
+    <ROW File="libEGL.DLL_1" Component_="libEGL.DLL_1" FileName="libEGL.DLL" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libEGL.DLL" SelfReg="false"/>
+    <ROW File="libfftw33.dll_1" Component_="libfftw33.dll_1" FileName="LIBFFT~1.DLL|libfftw3-3.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libfftw3-3.dll" SelfReg="false"/>
+    <ROW File="libfftw3f3.dll_1" Component_="libfftw3f3.dll_1" FileName="LIBFFT~2.DLL|libfftw3f-3.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libfftw3f-3.dll" SelfReg="false"/>
+    <ROW File="libfftw3l3.dll_1" Component_="libfftw3l3.dll_1" FileName="LIBFFT~3.DLL|libfftw3l-3.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libfftw3l-3.dll" SelfReg="false"/>
+    <ROW File="libsamplerate0.dll_1" Component_="libsamplerate0.dll_1" FileName="LIBSAM~1.DLL|libsamplerate-0.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libsamplerate-0.dll" SelfReg="false"/>
+    <ROW File="libsndfile1.dll_1" Component_="libsndfile1.dll_1" FileName="LIBSND~1.DLL|libsndfile-1.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\libsndfile-1.dll" SelfReg="false"/>
+    <ROW File="msvcp120.dll_2" Component_="msvcp120.dll_2" FileName="msvcp120.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\msvcp120.dll" SelfReg="false"/>
+    <ROW File="msvcr120.dll_2" Component_="msvcr120.dll_2" FileName="msvcr120.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\msvcr120.dll" SelfReg="false"/>
+    <ROW File="NatNetLib.dll_1" Component_="NatNetLib.dll_1" FileName="NATNET~1.DLL|NatNetLib.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\NatNetLib.dll" SelfReg="false"/>
+    <ROW File="NatNetML.dll_1" Component_="NatNetML.dll_1" FileName="NatNetML.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\NatNetML.dll" SelfReg="false"/>
+    <ROW File="portaudio_x64.dll_1" Component_="portaudio_x64.dll_1" FileName="PORTAU~1.DLL|portaudio_x64.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\portaudio_x64.dll" SelfReg="false"/>
+    <ROW File="portaudiod_x64.dll_1" Component_="portaudiod_x64.dll_1" FileName="PORTAU~2.DLL|portaudiod_x64.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\portaudiod_x64.dll" SelfReg="false"/>
+    <ROW File="Qt5Core.dll_1" Component_="Qt5Core.dll_1" FileName="Qt5Core.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Core.dll" SelfReg="false"/>
+    <ROW File="Qt5Gui.dll_1" Component_="Qt5Gui.dll_1" FileName="Qt5Gui.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Gui.dll" SelfReg="false"/>
+    <ROW File="Qt5Sql.dll_1" Component_="Qt5Sql.dll_1" FileName="Qt5Sql.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Sql.dll" SelfReg="false"/>
+    <ROW File="Qt5Svg.dll_1" Component_="Qt5Svg.dll_1" FileName="Qt5Svg.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Svg.dll" SelfReg="false"/>
+    <ROW File="Qt5Widgets.dll_1" Component_="Qt5Widgets.dll_1" FileName="QT5WID~1.DLL|Qt5Widgets.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\Qt5Widgets.dll" SelfReg="false"/>
+    <ROW File="SPLINE.dll_1" Component_="SPLINE.dll_1" FileName="SPLINE.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\SPLINE.dll" SelfReg="false"/>
+    <ROW File="tbb.dll_1" Component_="tbb.dll_1" FileName="tbb.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbb.dll" SelfReg="false"/>
+    <ROW File="tbb_debug.dll_1" Component_="tbb_debug.dll_1" FileName="TBB_DE~1.DLL|tbb_debug.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbb_debug.dll" SelfReg="false"/>
+    <ROW File="tbb_preview.dll_1" Component_="tbb_preview.dll_1" FileName="TBB_PR~1.DLL|tbb_preview.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbb_preview.dll" SelfReg="false"/>
+    <ROW File="tbb_preview_debug.dll_1" Component_="tbb_preview_debug.dll_1" FileName="TBB_PR~2.DLL|tbb_preview_debug.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbb_preview_debug.dll" SelfReg="false"/>
+    <ROW File="tbbmalloc.dll_1" Component_="tbbmalloc.dll_1" FileName="TBBMAL~1.DLL|tbbmalloc.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbbmalloc.dll" SelfReg="false"/>
+    <ROW File="tbbmalloc_debug.dll_1" Component_="tbbmalloc_debug.dll_1" FileName="TBBMAL~2.DLL|tbbmalloc_debug.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbbmalloc_debug.dll" SelfReg="false"/>
+    <ROW File="tbbmalloc_proxy.dll_1" Component_="tbbmalloc_proxy.dll_1" FileName="TBBMAL~3.DLL|tbbmalloc_proxy.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbbmalloc_proxy.dll" SelfReg="false"/>
+    <ROW File="tbbmalloc_proxy_debug.dll_1" Component_="tbbmalloc_proxy_debug.dll_1" FileName="TBBMAL~4.DLL|tbbmalloc_proxy_debug.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\tbbmalloc_proxy_debug.dll" SelfReg="false"/>
+    <ROW File="VABase.dll_2" Component_="VABase.dll_2" FileName="VABase.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VABase.dll" SelfReg="false"/>
+    <ROW File="VACore.dll_1" Component_="VACore.dll_1" FileName="VACore.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VACore.dll" SelfReg="false"/>
+    <ROW File="VACSDummyWrapper.dll_1" Component_="VACSDummyWrapper.dll_1" FileName="VACSDU~1.DLL|VACSDummyWrapper.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VACSDummyWrapper.dll" SelfReg="false"/>
+    <ROW File="VALua.dll_1" Component_="VALua.dll_1" FileName="VALua.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VALua.dll" SelfReg="false"/>
+    <ROW File="VANet.dll_2" Component_="VANet.dll_2" FileName="VANet.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VANet.dll" SelfReg="false"/>
+    <ROW File="VANetCSWrapper.dll_2" Component_="VANetCSWrapper.dll_2" FileName="VANETC~1.DLL|VANetCSWrapper.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VANetCSWrapper.dll" SelfReg="false"/>
+    <ROW File="VistaAspects.dll_2" Component_="VistaAspects.dll_2" FileName="VISTAA~1.DLL|VistaAspects.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaAspects.dll" SelfReg="false"/>
+    <ROW File="VistaBase.dll_2" Component_="VistaBase.dll_2" FileName="VISTAB~1.DLL|VistaBase.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaBase.dll" SelfReg="false"/>
+    <ROW File="VistaCyberGloveDriver.dll_1" Component_="VistaCyberGloveDriver.dll_1" FileName="VISTAC~1.DLL|VistaCyberGloveDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaCyberGloveDriver.dll" SelfReg="false"/>
+    <ROW File="VistaCyberGlovePlugin.dll_1" Component_="VistaCyberGlovePlugin.dll_1" FileName="VISTAC~2.DLL|VistaCyberGlovePlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaCyberGlovePlugin.dll" SelfReg="false"/>
+    <ROW File="VistaCyberGloveTranscoder.dll_1" Component_="VistaCyberGloveTranscoder.dll_1" FileName="VISTAC~3.DLL|VistaCyberGloveTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaCyberGloveTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaDataFlowNet.dll_1" Component_="VistaDataFlowNet.dll_1" FileName="VISTAD~1.DLL|VistaDataFlowNet.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDataFlowNet.dll" SelfReg="false"/>
+    <ROW File="VistaDeviceDriversBase.dll_1" Component_="VistaDeviceDriversBase.dll_1" FileName="VISTAD~2.DLL|VistaDeviceDriversBase.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDeviceDriversBase.dll" SelfReg="false"/>
+    <ROW File="VistaDTrackDriver.dll_1" Component_="VistaDTrackDriver.dll_1" FileName="VISTAD~3.DLL|VistaDTrackDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDTrackDriver.dll" SelfReg="false"/>
+    <ROW File="VistaDTrackPlugin.dll_1" Component_="VistaDTrackPlugin.dll_1" FileName="VISTAD~4.DLL|VistaDTrackPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDTrackPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaDTrackTranscoder.dll_1" Component_="VistaDTrackTranscoder.dll_1" FileName="VISTAD~5.DLL|VistaDTrackTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaDTrackTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaFastrakDriver.dll_1" Component_="VistaFastrakDriver.dll_1" FileName="VISTAF~1.DLL|VistaFastrakDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaFastrakDriver.dll" SelfReg="false"/>
+    <ROW File="VistaFastrakPlugin.dll_1" Component_="VistaFastrakPlugin.dll_1" FileName="VISTAF~2.DLL|VistaFastrakPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaFastrakPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaFastrakTranscoder.dll_1" Component_="VistaFastrakTranscoder.dll_1" FileName="VISTAF~3.DLL|VistaFastrakTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaFastrakTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaGlutJoystickDriver.dll_1" Component_="VistaGlutJoystickDriver.dll_1" FileName="VISTAG~1.DLL|VistaGlutJoystickDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutJoystickDriver.dll" SelfReg="false"/>
+    <ROW File="VistaGlutJoystickPlugin.dll_1" Component_="VistaGlutJoystickPlugin.dll_1" FileName="VISTAG~2.DLL|VistaGlutJoystickPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutJoystickPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaGlutJoystickTranscoder.dll_1" Component_="VistaGlutJoystickTranscoder.dll_1" FileName="VISTAG~3.DLL|VistaGlutJoystickTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutJoystickTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaGlutKeyboardDriver.dll_1" Component_="VistaGlutKeyboardDriver.dll_1" FileName="VISTAG~4.DLL|VistaGlutKeyboardDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutKeyboardDriver.dll" SelfReg="false"/>
+    <ROW File="VistaGlutKeyboardPlugin.dll_1" Component_="VistaGlutKeyboardPlugin.dll_1" FileName="VISTAG~5.DLL|VistaGlutKeyboardPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutKeyboardPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaGlutKeyboardTranscoder.dll_1" Component_="VistaGlutKeyboardTranscoder.dll_1" FileName="VISTAG~6.DLL|VistaGlutKeyboardTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutKeyboardTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaGlutMouseDriver.dll_1" Component_="VistaGlutMouseDriver.dll_1" FileName="VISTAG~7.DLL|VistaGlutMouseDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutMouseDriver.dll" SelfReg="false"/>
+    <ROW File="VistaGlutMousePlugin.dll_1" Component_="VistaGlutMousePlugin.dll_1" FileName="VISTAG~8.DLL|VistaGlutMousePlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutMousePlugin.dll" SelfReg="false"/>
+    <ROW File="VistaGlutMouseTranscoder.dll_1" Component_="VistaGlutMouseTranscoder.dll_1" FileName="VISTAG~9.DLL|VistaGlutMouseTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaGlutMouseTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaHapticDeviceEmulatorDriver.dll_1" Component_="VistaHapticDeviceEmulatorDriver.dll_1" FileName="VISTAH~1.DLL|VistaHapticDeviceEmulatorDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHapticDeviceEmulatorDriver.dll" SelfReg="false"/>
+    <ROW File="VistaHapticDeviceEmulatorPlugin.dll_1" Component_="VistaHapticDeviceEmulatorPlugin.dll_1" FileName="VISTAH~2.DLL|VistaHapticDeviceEmulatorPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHapticDeviceEmulatorPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaHapticDeviceEmulatorTranscoder.dll_1" Component_="VistaHapticDeviceEmulatorTranscoder.dll_1" FileName="VISTAH~3.DLL|VistaHapticDeviceEmulatorTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHapticDeviceEmulatorTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaHIDDriver.dll_1" Component_="VistaHIDDriver.dll_1" FileName="VISTAH~4.DLL|VistaHIDDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHIDDriver.dll" SelfReg="false"/>
+    <ROW File="VistaHIDPlugin.dll_1" Component_="VistaHIDPlugin.dll_1" FileName="VISTAH~5.DLL|VistaHIDPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHIDPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaHIDTranscoder.dll_1" Component_="VistaHIDTranscoder.dll_1" FileName="VISTAH~6.DLL|VistaHIDTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaHIDTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaInterProcComm.dll_2" Component_="VistaInterProcComm.dll_2" FileName="VISTAI~1.DLL|VistaInterProcComm.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaInterProcComm.dll" SelfReg="false"/>
+    <ROW File="VistaIRManDriver.dll_1" Component_="VistaIRManDriver.dll_1" FileName="VISTAI~2.DLL|VistaIRManDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaIRManDriver.dll" SelfReg="false"/>
+    <ROW File="VistaIRManPlugin.dll_1" Component_="VistaIRManPlugin.dll_1" FileName="VISTAI~3.DLL|VistaIRManPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaIRManPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaIRManTranscoder.dll_1" Component_="VistaIRManTranscoder.dll_1" FileName="VISTAI~4.DLL|VistaIRManTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaIRManTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaKernel.dll_1" Component_="VistaKernel.dll_1" FileName="VISTAK~1.DLL|VistaKernel.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaKernel.dll" SelfReg="false"/>
+    <ROW File="VistaKernelOpenSGExt.dll_1" Component_="VistaKernelOpenSGExt.dll_1" FileName="VISTAK~2.DLL|VistaKernelOpenSGExt.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaKernelOpenSGExt.dll" SelfReg="false"/>
+    <ROW File="VistaMath.dll_1" Component_="VistaMath.dll_1" FileName="VISTAM~1.DLL|VistaMath.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaMath.dll" SelfReg="false"/>
+    <ROW File="VistaMIDIDriver.dll_1" Component_="VistaMIDIDriver.dll_1" FileName="VISTAM~2.DLL|VistaMIDIDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaMIDIDriver.dll" SelfReg="false"/>
+    <ROW File="VistaMIDIPlugin.dll_1" Component_="VistaMIDIPlugin.dll_1" FileName="VISTAM~3.DLL|VistaMIDIPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaMIDIPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaMIDITranscoder.dll_1" Component_="VistaMIDITranscoder.dll_1" FileName="VISTAM~4.DLL|VistaMIDITranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaMIDITranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaOGLExt.dll_1" Component_="VistaOGLExt.dll_1" FileName="VISTAO~1.DLL|VistaOGLExt.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaOGLExt.dll" SelfReg="false"/>
+    <ROW File="VistaPhantomServerDriver.dll_1" Component_="VistaPhantomServerDriver.dll_1" FileName="VISTAP~1.DLL|VistaPhantomServerDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaPhantomServerDriver.dll" SelfReg="false"/>
+    <ROW File="VistaPhantomServerPlugin.dll_1" Component_="VistaPhantomServerPlugin.dll_1" FileName="VISTAP~2.DLL|VistaPhantomServerPlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaPhantomServerPlugin.dll" SelfReg="false"/>
+    <ROW File="VistaPhantomServerTranscoder.dll_1" Component_="VistaPhantomServerTranscoder.dll_1" FileName="VISTAP~3.DLL|VistaPhantomServerTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaPhantomServerTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaSpaceMouseDriver.dll_1" Component_="VistaSpaceMouseDriver.dll_1" FileName="VISTAS~1.DLL|VistaSpaceMouseDriver.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMouseDriver.dll" SelfReg="false"/>
+    <ROW File="VistaSpaceMousePlugin.dll_1" Component_="VistaSpaceMousePlugin.dll_1" FileName="VISTAS~2.DLL|VistaSpaceMousePlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMousePlugin.dll" SelfReg="false"/>
+    <ROW File="VistaSpaceMouseTranscoder.dll_1" Component_="VistaSpaceMouseTranscoder.dll_1" FileName="VISTAS~3.DLL|VistaSpaceMouseTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMouseTranscoder.dll" SelfReg="false"/>
+    <ROW File="VistaTools.dll_1" Component_="VistaTools.dll_1" FileName="VISTAT~1.DLL|VistaTools.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaTools.dll" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>
@@ -1162,6 +1338,94 @@
     <ROW Feature_="MainFeature" Component_="VistaTools.dll"/>
     <ROW Feature_="MainFeature" Component_="perSONA_References"/>
     <ROW Feature_="MainFeature" Component_="run_VAServer.bat"/>
+    <ROW Feature_="MainFeature" Component_="DAFF.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DAFFViz.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ITABase.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ITAConvolution.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ITACTC.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ITADataSources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ITADSP.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ITAFFT.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ITAQtWidgets.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ITASampler.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="libEGL.DLL_1"/>
+    <ROW Feature_="MainFeature" Component_="libfftw33.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="libfftw3f3.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="libfftw3l3.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="libsamplerate0.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="libsndfile1.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="msvcp120.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="msvcr120.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="NatNetLib.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="NatNetML.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="portaudio_x64.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="portaudiod_x64.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Core.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Gui.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Sql.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Svg.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Qt5Widgets.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="SPLINE.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="tbb.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="tbb_debug.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="tbb_preview.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="tbb_preview_debug.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="tbbmalloc.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="tbbmalloc_debug.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="tbbmalloc_proxy.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="tbbmalloc_proxy_debug.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VABase.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="VACore.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VACSDummyWrapper.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VALua.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VANet.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="VANetCSWrapper.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="VistaAspects.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="VistaBase.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="VistaCyberGloveDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaCyberGlovePlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaCyberGloveTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaDataFlowNet.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaDeviceDriversBase.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaDTrackDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaDTrackPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaDTrackTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaFastrakDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaFastrakPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaFastrakTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutJoystickDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutJoystickPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutJoystickTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutKeyboardDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutKeyboardPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutKeyboardTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutMouseDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutMousePlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaGlutMouseTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaHapticDeviceEmulatorDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaHapticDeviceEmulatorPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaHapticDeviceEmulatorTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaHIDDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaHIDPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaHIDTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaInterProcComm.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="VistaIRManDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaIRManPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaIRManTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaKernel.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaKernelOpenSGExt.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaMath.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaMIDIDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaMIDIPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaMIDITranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaOGLExt.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaPhantomServerDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaPhantomServerPlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaPhantomServerTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaSpaceMouseDriver.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaSpaceMousePlugin.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaSpaceMouseTranscoder.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="VistaTools.dll_1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
