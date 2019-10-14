@@ -2,7 +2,16 @@
 
 ## Description
 
-Software suite developed to help audiologists in assessment of cochlear implant candidates and user's speech inteligibilit with competing noise spatilly distributed
+Software suite developed to help audiologists in assessment of cochlear implant candidates and user's speech inteligibilit with competing noise spatilly distributed sound sources. 
+
+Software is in intial development stage, requring a lot of features to stabilize and become a clinic ready program. Feel free to get in touch and start attending to couple issues. 
+
+## Dependencies
+- Virtual Acoustics (http://virtualacoustics.org/)
+- ZedGraph
+- Newtonsoft Json
+- TagLib
+- Advanced Installer
 
 ## Installer
 
