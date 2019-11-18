@@ -24,7 +24,7 @@ namespace perSONA
         StreamWriter sw;
         StreamReader sr;
 
-        List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>(); 
+        List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>();
 
         string speechFolder = "data\\Sounds\\Speech\\Alcaim1_\\F\\F0001";
         string noiseFile = "data\\Sounds\\Noise\\4talker-babble_ISTS.wav";
@@ -40,7 +40,6 @@ namespace perSONA
 
         public Form1(string confFile, int sourceIndex)
         {
-
 
             InitializeComponent();
             this.confFile = confFile;
@@ -106,7 +105,7 @@ namespace perSONA
                 patientBox.Text = "No previously selected patients";
 
             }
-            
+
         }
 
         ~Form1()
@@ -280,7 +279,7 @@ namespace perSONA
 
             string[] filePaths;
             var fileNames = Directory.GetFiles(@"data").Select(Path.GetFileName);
-           
+
             filePaths = Directory.GetFiles(@speechFolder, "*.wav");
             fileNames = filePaths.Select(Path.GetFileName);
 
@@ -405,7 +404,7 @@ namespace perSONA
             vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
 
             //concatText(string.Format("Created Source: {3} at position: {0},{1},{2}, looking forward",
-                       //xSides, zFront, yHeight, speechSource));
+            //xSides, zFront, yHeight, speechSource));
             concatText("Selected Speech: " + Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem)));
             concatText(string.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %",
                        powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
@@ -500,7 +499,7 @@ namespace perSONA
             int sampleRate = tagFile.Properties.AudioSampleRate;
 
             concatText(string.Format("channels: {0}, bitrate: {1}, sampleRate:{2}, n-bits={3}",
-                channels, bitrate, sampleRate, 1000*bitrate / (sampleRate * channels)));
+                channels, bitrate, sampleRate, 1000 * bitrate / (sampleRate * channels)));
             string title = tagFile.Tag.Title;
 
             return title;
@@ -516,7 +515,7 @@ namespace perSONA
         }
 
         public void createAcousticScene(string speechFile, string noiseFile)
-        { 
+        {
 
 
             speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
@@ -544,7 +543,7 @@ namespace perSONA
             double[] radius = { radiusSpeech, radiusNoise };
             double[] angle = { angleSpeech, angleNoise };
 
-            plotSceneGraph(zedGraphControl1,radius, angle);
+            plotSceneGraph(zedGraphControl1, radius, angle);
 
 
         }
@@ -569,8 +568,8 @@ namespace perSONA
 
             switch (sourceIndex)
             {
-                case 0:                    
-                    for (double i =-Math.PI/2; i <= Math.PI/2; i += Math.PI)
+                case 0:
+                    for (double i = -Math.PI / 2; i <= Math.PI / 2; i += Math.PI)
                     {
                         speakers.Add(radiusSpekers * Math.Sin(i), radiusSpekers * Math.Cos(i));
                     }
@@ -580,7 +579,7 @@ namespace perSONA
                     //roomLength = 1.81;
                     //roomWidth = 1.81;
                     radiusSpekers = 1;
-                    for (double i = -Math.PI/4; i <= Math.PI/4; i += Math.PI / 2)
+                    for (double i = -Math.PI / 4; i <= Math.PI / 4; i += Math.PI / 2)
                     {
                         speakers.Add(radiusSpekers * Math.Sin(i), radiusSpekers * Math.Cos(i));
                     }
@@ -621,8 +620,8 @@ namespace perSONA
             LineItem headCurve = myPane.AddCurve("",
                    head, Color.Black, SymbolType.None);
 
-            
-            
+
+
 
             LineItem speakersCurve = myPane.AddCurve("AF-S",
                    speakers, Color.Black, SymbolType.Star);
@@ -640,7 +639,7 @@ namespace perSONA
             raTextX.FontSpec.Border.IsVisible = false;
             raTextX.FontSpec.Size = 21;
 
-            ArrowObj arrowZ = new ArrowObj(Color.Black, 25, -roomLength*0.45, -roomWidth*0.45, -roomLength*0.45, -roomWidth*0.35);
+            ArrowObj arrowZ = new ArrowObj(Color.Black, 25, -roomLength * 0.45, -roomWidth * 0.45, -roomLength * 0.45, -roomWidth * 0.35);
             TextObj raTextZ = new TextObj("Z", -roomLength * 0.45, -roomWidth * 0.3);
             myPane.GraphObjList.Add(arrowZ);
             myPane.GraphObjList.Add(raTextZ);
@@ -695,9 +694,9 @@ namespace perSONA
             double snr = (double)numericUpDown3.Value;
 
             speechPerceptionTest speechTest = new speechPerceptionTest(
-                                                    angleSpeech, radiusSpeech, 
+                                                    angleSpeech, radiusSpeech,
                                                     angleNoise, radiusNoise,
-                                                    speechFolder, noiseFile, 
+                                                    speechFolder, noiseFile,
                                                     textBox1.Text, snr);
 
             concatText(string.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}",
@@ -797,7 +796,7 @@ namespace perSONA
 
         public void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName)
         {
-          
+
 
             string AudiometryJson = Newtonsoft.Json.JsonConvert.SerializeObject(Audiometry);
 
@@ -912,12 +911,12 @@ namespace perSONA
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());            
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());        
+            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -947,7 +946,7 @@ namespace perSONA
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            noiseFile = Path.Combine(noiseFolder,comboBox3.SelectedItem.ToString());
+            noiseFile = Path.Combine(noiseFolder, comboBox3.SelectedItem.ToString());
 
             concatText("Selected Noise: " + noiseFile);
         }
@@ -1027,8 +1026,8 @@ namespace perSONA
                 Properties.Settings.Default.RESULTS_FOLDER,
                 patientBox.SelectedItem.ToString());
 
-            if (MessageBox.Show("Deseja deletar paciente?", patientBox.SelectedItem.ToString(), 
-                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, 
+            if (MessageBox.Show("Deseja deletar paciente?", patientBox.SelectedItem.ToString(),
+                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1) == DialogResult.Yes)
 
             {

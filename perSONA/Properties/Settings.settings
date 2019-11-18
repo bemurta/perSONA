@@ -8,5 +8,17 @@
     <Setting Name="USERVOLUME" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">25</Value>
     </Setting>
+    <Setting Name="SERIAL_KEY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PTMGF-28VKB-2W934-482QH-98623</Value>
+    </Setting>
+    <Setting Name="DEMO_VERSION" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FIRST_USE_DATA" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2019-11-17</Value>
+    </Setting>
+    <Setting Name="FIRST_USE" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

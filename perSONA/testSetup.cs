@@ -186,5 +186,10 @@ namespace perSONA
         {
             vAInterface.plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
         }
+
+        private void testSetup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
