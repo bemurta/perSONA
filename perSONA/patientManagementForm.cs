@@ -93,7 +93,7 @@ namespace perSONA
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            label3.Text = "Alterações salvas!";
             Patient person = new Patient()
             {
                 Name = nameBox.Text,
@@ -471,7 +471,30 @@ namespace perSONA
             bindPatient(person);
             
         }
-   
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leftHearingLoss_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leftLossDegree_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox16_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

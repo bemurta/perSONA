@@ -43,8 +43,8 @@ namespace perSONA
             }
 
             Properties.Settings.Default.FIRST_USE = firstUse;
-//            Properties.Settings.Default.FIRST_USE = true;
-//            Properties.Settings.Default.DEMO_VERSION = true;
+     //       Properties.Settings.Default.FIRST_USE = true;
+     //       Properties.Settings.Default.DEMO_VERSION = true;
             Properties.Settings.Default.Save();
 
         }

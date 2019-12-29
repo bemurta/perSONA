@@ -37,9 +37,11 @@
             // 
             // verifySerialKey
             // 
-            this.verifySerialKey.Location = new System.Drawing.Point(552, 165);
+            this.verifySerialKey.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.verifySerialKey.Location = new System.Drawing.Point(667, 173);
+            this.verifySerialKey.Margin = new System.Windows.Forms.Padding(4);
             this.verifySerialKey.Name = "verifySerialKey";
-            this.verifySerialKey.Size = new System.Drawing.Size(75, 23);
+            this.verifySerialKey.Size = new System.Drawing.Size(94, 29);
             this.verifySerialKey.TabIndex = 0;
             this.verifySerialKey.Text = "OK";
             this.verifySerialKey.UseVisualStyleBackColor = true;
@@ -47,10 +49,12 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(688, 81);
+            this.label1.Size = new System.Drawing.Size(771, 89);
             this.label1.TabIndex = 2;
             this.label1.Text = "Por favor, responda o questionario abaixo (link) para continuar utilizando perSON" +
     "A. Após isso um código (serial key) que deve ser escrito abaixo será enviado par" +
@@ -60,9 +64,11 @@
             // 
             // linkLabel1
             // 
-            this.linkLabel1.Location = new System.Drawing.Point(158, 90);
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.linkLabel1.Location = new System.Drawing.Point(174, 99);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(391, 48);
+            this.linkLabel1.Size = new System.Drawing.Size(489, 60);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://docs.google.com/forms/d/e/1FAIpQLSd7COM0ic-StEBNQFFBUqfiw6rShIg5I8GzXUFxf" +
@@ -71,32 +77,39 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 166);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox1.Location = new System.Drawing.Point(27, 173);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(407, 22);
+            this.textBox1.Size = new System.Drawing.Size(550, 27);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(539, 191);
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Location = new System.Drawing.Point(650, 205);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.Size = new System.Drawing.Size(125, 29);
             this.label2.TabIndex = 6;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // licenseExpirationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 225);
+            this.ClientSize = new System.Drawing.Size(797, 243);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.verifySerialKey);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "licenseExpirationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "licenseExpirationForm";
             this.Load += new System.EventHandler(this.licenseExpirationForm_Load);
             this.ResumeLayout(false);

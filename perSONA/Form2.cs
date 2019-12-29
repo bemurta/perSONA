@@ -76,5 +76,10 @@ namespace perSONA
             textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
             Properties.Settings.Default.Save();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
