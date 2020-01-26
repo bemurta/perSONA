@@ -1051,5 +1051,10 @@ namespace perSONA
                 textBox.Visible = true;
             }
         }
+
+        private void patientBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

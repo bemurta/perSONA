@@ -917,6 +917,7 @@ namespace perSONA
             this.patientBox.Name = "patientBox";
             this.patientBox.Size = new System.Drawing.Size(348, 184);
             this.patientBox.TabIndex = 46;
+            this.patientBox.SelectedIndexChanged += new System.EventHandler(this.patientBox_SelectedIndexChanged);
             // 
             // button7
             // 

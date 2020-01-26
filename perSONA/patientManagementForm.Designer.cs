@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.rightHearingEtiology = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.leftHearingEtiology = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
@@ -129,6 +133,8 @@
             this.testsGraph = new ZedGraph.ZedGraphControl();
             this.testsBox = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
+            this.groupBox42.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox41.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox36.SuspendLayout();
@@ -191,6 +197,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.groupBox42);
+            this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.groupBox41);
@@ -218,11 +226,90 @@
             this.panel1.Size = new System.Drawing.Size(810, 655);
             this.panel1.TabIndex = 1;
             // 
+            // groupBox42
+            // 
+            this.groupBox42.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox42.Controls.Add(this.rightHearingEtiology);
+            this.groupBox42.Location = new System.Drawing.Point(417, 102);
+            this.groupBox42.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox42.Name = "groupBox42";
+            this.groupBox42.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox42.Size = new System.Drawing.Size(376, 65);
+            this.groupBox42.TabIndex = 66;
+            this.groupBox42.TabStop = false;
+            this.groupBox42.Text = "Etiologia";
+            // 
+            // rightHearingEtiology
+            // 
+            this.rightHearingEtiology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rightHearingEtiology.FormattingEnabled = true;
+            this.rightHearingEtiology.Items.AddRange(new object[] {
+            "Alcoolismo materno ",
+            "Anóxia / hipóxia",
+            "Desordens genéticas ou hereditárias",
+            "Doenças infectocontagiosa (rubéola, sífilis, herpes, etc)",
+            "Exposição contínua a ruídos ou sons muito altos",
+            "Hipertensão / diabetes",
+            "Infecções (meningite, sarampo, caxumba, etc)",
+            "Medicamentos ototóxicos ",
+            "Prematuridade ",
+            "Sífilis adquirida",
+            "Traumatismos cranianos",
+            "Uso de drogas durante a gravidez",
+            "Outros",
+            "Nenhum"});
+            this.rightHearingEtiology.Location = new System.Drawing.Point(10, 26);
+            this.rightHearingEtiology.Margin = new System.Windows.Forms.Padding(5);
+            this.rightHearingEtiology.Name = "rightHearingEtiology";
+            this.rightHearingEtiology.Size = new System.Drawing.Size(354, 28);
+            this.rightHearingEtiology.TabIndex = 1;
+            this.rightHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.rightHearingEtiology_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox3.Controls.Add(this.leftHearingEtiology);
+            this.groupBox3.Location = new System.Drawing.Point(20, 102);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox3.Size = new System.Drawing.Size(376, 65);
+            this.groupBox3.TabIndex = 65;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Etiologia";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // leftHearingEtiology
+            // 
+            this.leftHearingEtiology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.leftHearingEtiology.FormattingEnabled = true;
+            this.leftHearingEtiology.Items.AddRange(new object[] {
+            "Alcoolismo materno ",
+            "Anóxia / hipóxia",
+            "Desordens genéticas ou hereditárias",
+            "Doenças infectocontagiosa (rubéola, sífilis, herpes, etc)",
+            "Exposição contínua a ruídos ou sons muito altos",
+            "Hipertensão / diabetes",
+            "Infecções (meningite, sarampo, caxumba, etc)",
+            "Medicamentos ototóxicos ",
+            "Prematuridade ",
+            "Sífilis adquirida",
+            "Traumatismos cranianos",
+            "Uso de drogas durante a gravidez",
+            "Outros",
+            "Nenhum"});
+            this.leftHearingEtiology.Location = new System.Drawing.Point(10, 26);
+            this.leftHearingEtiology.Margin = new System.Windows.Forms.Padding(5);
+            this.leftHearingEtiology.Name = "leftHearingEtiology";
+            this.leftHearingEtiology.Size = new System.Drawing.Size(354, 28);
+            this.leftHearingEtiology.TabIndex = 57;
+            this.leftHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.leftHearingEtiology_SelectedIndexChanged);
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(577, 2);
+            this.label2.Location = new System.Drawing.Point(550, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 20);
@@ -233,7 +320,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(191, 2);
+            this.label1.Location = new System.Drawing.Point(150, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 20);
@@ -244,11 +331,11 @@
             // 
             this.groupBox41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox41.Controls.Add(this.otherCoditions);
-            this.groupBox41.Location = new System.Drawing.Point(20, 516);
+            this.groupBox41.Location = new System.Drawing.Point(20, 536);
             this.groupBox41.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox41.Size = new System.Drawing.Size(771, 135);
+            this.groupBox41.Size = new System.Drawing.Size(771, 115);
             this.groupBox41.TabIndex = 62;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Outras condições";
@@ -256,11 +343,11 @@
             // otherCoditions
             // 
             this.otherCoditions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.otherCoditions.Location = new System.Drawing.Point(10, 26);
+            this.otherCoditions.Location = new System.Drawing.Point(10, 28);
             this.otherCoditions.Margin = new System.Windows.Forms.Padding(5);
             this.otherCoditions.Multiline = true;
             this.otherCoditions.Name = "otherCoditions";
-            this.otherCoditions.Size = new System.Drawing.Size(748, 102);
+            this.otherCoditions.Size = new System.Drawing.Size(748, 80);
             this.otherCoditions.TabIndex = 0;
             // 
             // groupBox19
@@ -281,11 +368,11 @@
             this.leftHearingLoss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.leftHearingLoss.FormattingEnabled = true;
             this.leftHearingLoss.Items.AddRange(new object[] {
-            "Sem perda",
             "Perda auditiva Condutiva",
             "Perda auditiva sensório-neural",
             "Perda auditiva mista",
-            "Outro"});
+            "Outro",
+            "Nenhum"});
             this.leftHearingLoss.Location = new System.Drawing.Point(10, 26);
             this.leftHearingLoss.Margin = new System.Windows.Forms.Padding(5);
             this.leftHearingLoss.Name = "leftHearingLoss";
@@ -311,22 +398,23 @@
             this.rightHearingLoss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rightHearingLoss.FormattingEnabled = true;
             this.rightHearingLoss.Items.AddRange(new object[] {
-            "Sem perda",
             "Perda auditiva Condutiva",
             "Perda auditiva sensório-neural",
             "Perda auditiva mista",
-            "Outro"});
+            "Outro",
+            "Nenhum"});
             this.rightHearingLoss.Location = new System.Drawing.Point(10, 26);
             this.rightHearingLoss.Margin = new System.Windows.Forms.Padding(5);
             this.rightHearingLoss.Name = "rightHearingLoss";
             this.rightHearingLoss.Size = new System.Drawing.Size(354, 28);
             this.rightHearingLoss.TabIndex = 1;
+            this.rightHearingLoss.SelectedIndexChanged += new System.EventHandler(this.rightHearingLoss_SelectedIndexChanged);
             // 
             // groupBox37
             // 
             this.groupBox37.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox37.Controls.Add(this.rightPrivationYears);
-            this.groupBox37.Location = new System.Drawing.Point(610, 297);
+            this.groupBox37.Location = new System.Drawing.Point(610, 327);
             this.groupBox37.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox37.Name = "groupBox37";
             this.groupBox37.Padding = new System.Windows.Forms.Padding(5);
@@ -348,7 +436,7 @@
             // 
             this.groupBox38.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox38.Controls.Add(this.rightDiagnosis);
-            this.groupBox38.Location = new System.Drawing.Point(419, 297);
+            this.groupBox38.Location = new System.Drawing.Point(419, 327);
             this.groupBox38.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Padding = new System.Windows.Forms.Padding(5);
@@ -371,7 +459,7 @@
             // 
             this.groupBox39.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox39.Controls.Add(this.rightPostLingual);
-            this.groupBox39.Location = new System.Drawing.Point(417, 226);
+            this.groupBox39.Location = new System.Drawing.Point(417, 252);
             this.groupBox39.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Padding = new System.Windows.Forms.Padding(5);
@@ -387,7 +475,8 @@
             this.rightPostLingual.FormattingEnabled = true;
             this.rightPostLingual.Items.AddRange(new object[] {
             "Pré-Lingual",
-            "Pós-Lingual"});
+            "Pós-Lingual",
+            "Nenhum"});
             this.rightPostLingual.Location = new System.Drawing.Point(10, 26);
             this.rightPostLingual.Margin = new System.Windows.Forms.Padding(5);
             this.rightPostLingual.Name = "rightPostLingual";
@@ -398,7 +487,7 @@
             // 
             this.groupBox40.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox40.Controls.Add(this.rightLossDegree);
-            this.groupBox40.Location = new System.Drawing.Point(417, 149);
+            this.groupBox40.Location = new System.Drawing.Point(417, 177);
             this.groupBox40.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Padding = new System.Windows.Forms.Padding(5);
@@ -412,24 +501,25 @@
             this.rightLossDegree.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rightLossDegree.FormattingEnabled = true;
             this.rightLossDegree.Items.AddRange(new object[] {
-            "Audição normal",
             "Leve",
             "Moderado",
             "Moderadamente severo",
             "Severo",
             "Profundo",
-            "Outro"});
+            "Outro",
+            "Nenhum"});
             this.rightLossDegree.Location = new System.Drawing.Point(10, 26);
             this.rightLossDegree.Margin = new System.Windows.Forms.Padding(5);
             this.rightLossDegree.Name = "rightLossDegree";
             this.rightLossDegree.Size = new System.Drawing.Size(354, 28);
             this.rightLossDegree.TabIndex = 1;
+            this.rightLossDegree.SelectedIndexChanged += new System.EventHandler(this.rightLossDegree_SelectedIndexChanged);
             // 
             // groupBox21
             // 
             this.groupBox21.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox21.Controls.Add(this.leftPrivationYears);
-            this.groupBox21.Location = new System.Drawing.Point(226, 297);
+            this.groupBox21.Location = new System.Drawing.Point(226, 327);
             this.groupBox21.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Padding = new System.Windows.Forms.Padding(5);
@@ -451,7 +541,7 @@
             // 
             this.groupBox15.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox15.Controls.Add(this.leftDiagnosis);
-            this.groupBox15.Location = new System.Drawing.Point(20, 297);
+            this.groupBox15.Location = new System.Drawing.Point(20, 327);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(5);
@@ -474,7 +564,7 @@
             // 
             this.groupBox16.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox16.Controls.Add(this.leftPostLingual);
-            this.groupBox16.Location = new System.Drawing.Point(20, 226);
+            this.groupBox16.Location = new System.Drawing.Point(20, 252);
             this.groupBox16.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(5);
@@ -490,7 +580,8 @@
             this.leftPostLingual.FormattingEnabled = true;
             this.leftPostLingual.Items.AddRange(new object[] {
             "Pré-Lingual",
-            "Pós-Lingual"});
+            "Pós-Lingual",
+            "Nenhum"});
             this.leftPostLingual.Location = new System.Drawing.Point(10, 26);
             this.leftPostLingual.Margin = new System.Windows.Forms.Padding(5);
             this.leftPostLingual.Name = "leftPostLingual";
@@ -501,7 +592,7 @@
             // 
             this.groupBox17.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox17.Controls.Add(this.leftLossDegree);
-            this.groupBox17.Location = new System.Drawing.Point(20, 149);
+            this.groupBox17.Location = new System.Drawing.Point(20, 177);
             this.groupBox17.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Padding = new System.Windows.Forms.Padding(5);
@@ -516,13 +607,13 @@
             this.leftLossDegree.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.leftLossDegree.FormattingEnabled = true;
             this.leftLossDegree.Items.AddRange(new object[] {
-            "Audição normal",
             "Leve",
             "Moderado",
             "Moderadamente severo",
             "Severo",
             "Profundo",
-            "Outro"});
+            "Outro",
+            "Nenhum"});
             this.leftLossDegree.Location = new System.Drawing.Point(10, 26);
             this.leftLossDegree.Margin = new System.Windows.Forms.Padding(5);
             this.leftLossDegree.Name = "leftLossDegree";
@@ -534,7 +625,7 @@
             // 
             this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox5.Controls.Add(this.rightActivationDate);
-            this.groupBox5.Location = new System.Drawing.Point(609, 372);
+            this.groupBox5.Location = new System.Drawing.Point(609, 402);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(5);
@@ -557,7 +648,7 @@
             // 
             this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox6.Controls.Add(this.rightModel);
-            this.groupBox6.Location = new System.Drawing.Point(419, 441);
+            this.groupBox6.Location = new System.Drawing.Point(419, 471);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(5);
@@ -580,7 +671,7 @@
             // 
             this.groupBox7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox7.Controls.Add(this.rightManufacturer);
-            this.groupBox7.Location = new System.Drawing.Point(610, 441);
+            this.groupBox7.Location = new System.Drawing.Point(610, 471);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(5);
@@ -603,7 +694,7 @@
             // 
             this.groupBox8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox8.Controls.Add(this.rightDevice);
-            this.groupBox8.Location = new System.Drawing.Point(419, 372);
+            this.groupBox8.Location = new System.Drawing.Point(419, 402);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(5);
@@ -617,10 +708,10 @@
             this.rightDevice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rightDevice.FormattingEnabled = true;
             this.rightDevice.Items.AddRange(new object[] {
-            "Nenhum",
             "AASI",
             "IC",
-            "BIMODAL"});
+            "BIMODAL",
+            "Nenhum"});
             this.rightDevice.Location = new System.Drawing.Point(10, 26);
             this.rightDevice.Margin = new System.Windows.Forms.Padding(5);
             this.rightDevice.Name = "rightDevice";
@@ -631,7 +722,7 @@
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox4.Controls.Add(this.leftActivationDate);
-            this.groupBox4.Location = new System.Drawing.Point(20, 372);
+            this.groupBox4.Location = new System.Drawing.Point(20, 402);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(5);
@@ -654,7 +745,7 @@
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox2.Controls.Add(this.leftModel);
-            this.groupBox2.Location = new System.Drawing.Point(226, 441);
+            this.groupBox2.Location = new System.Drawing.Point(226, 471);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
@@ -677,7 +768,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox1.Controls.Add(this.leftManufacturer);
-            this.groupBox1.Location = new System.Drawing.Point(20, 441);
+            this.groupBox1.Location = new System.Drawing.Point(20, 471);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
@@ -700,7 +791,7 @@
             // 
             this.leftEarDevice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.leftEarDevice.Controls.Add(this.leftDevice);
-            this.leftEarDevice.Location = new System.Drawing.Point(226, 372);
+            this.leftEarDevice.Location = new System.Drawing.Point(226, 402);
             this.leftEarDevice.Margin = new System.Windows.Forms.Padding(5);
             this.leftEarDevice.Name = "leftEarDevice";
             this.leftEarDevice.Padding = new System.Windows.Forms.Padding(5);
@@ -714,10 +805,10 @@
             this.leftDevice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.leftDevice.FormattingEnabled = true;
             this.leftDevice.Items.AddRange(new object[] {
-            "Nenhum",
             "AASI",
             "IC",
-            "BIMODAL"});
+            "BIMODAL",
+            "Nenhum"});
             this.leftDevice.Location = new System.Drawing.Point(10, 26);
             this.leftDevice.Margin = new System.Windows.Forms.Padding(5);
             this.leftDevice.Name = "leftDevice";
@@ -796,6 +887,7 @@
             this.observationBox.Name = "observationBox";
             this.observationBox.Size = new System.Drawing.Size(410, 76);
             this.observationBox.TabIndex = 0;
+            this.observationBox.TextChanged += new System.EventHandler(this.observationBox_TextChanged);
             // 
             // groupBox18
             // 
@@ -1512,6 +1604,8 @@
             this.Text = "perSONA 1.4.0 - Módulo de gerenciamento de pacientes";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox42.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox41.ResumeLayout(false);
             this.groupBox41.PerformLayout();
             this.groupBox19.ResumeLayout(false);
@@ -1679,5 +1773,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox42;
+        private System.Windows.Forms.ComboBox rightHearingEtiology;
+        private System.Windows.Forms.ComboBox leftHearingEtiology;
     }
 }

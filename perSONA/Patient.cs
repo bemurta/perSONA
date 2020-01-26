@@ -42,7 +42,7 @@ namespace perSONA
         public string RightModel { get; set; }
         public string RightPostLingual { get; set; }
         public string RightPrivationYears { get; set; }
-
-
+        public string RightHearingEtiology { get; set; }
+        public string LeftHearingEtiology { get; set; }
     }
 }
