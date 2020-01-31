@@ -142,6 +142,12 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sende-mailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sende-mailForm.Designer.cs">
+      <DependentUpon>Sende-mailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="testSetup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sende-mailForm.resx">
+      <DependentUpon>Sende-mailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testSetup.resx">
       <DependentUpon>testSetup.cs</DependentUpon>

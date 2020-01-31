@@ -1056,5 +1056,15 @@ namespace perSONA
         {
 
         }
+
+        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Sende_mailForm().Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,7 +42,7 @@
             this.verifySerialKey.Margin = new System.Windows.Forms.Padding(4);
             this.verifySerialKey.Name = "verifySerialKey";
             this.verifySerialKey.Size = new System.Drawing.Size(94, 29);
-            this.verifySerialKey.TabIndex = 0;
+            this.verifySerialKey.TabIndex = 3;
             this.verifySerialKey.Text = "OK";
             this.verifySerialKey.UseVisualStyleBackColor = true;
             this.verifySerialKey.Click += new System.EventHandler(this.button1_Click);
@@ -55,7 +55,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(771, 89);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Por favor, responda o questionario abaixo (link) para continuar utilizando perSON" +
     "A. Após isso um código (serial key) que deve ser escrito abaixo será enviado par" +
     "a o seu e-mail.";
@@ -69,7 +69,7 @@
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(489, 60);
-            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://docs.google.com/forms/d/e/1FAIpQLSd7COM0ic-StEBNQFFBUqfiw6rShIg5I8GzXUFxf" +
     "ZgfE87z9g/viewform";
@@ -82,7 +82,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(550, 27);
-            this.textBox1.TabIndex = 5;
+            this.textBox1.TabIndex = 2;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -93,7 +93,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 29);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 4;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // licenseExpirationForm
@@ -110,7 +110,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "licenseExpirationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "licenseExpirationForm";
+            this.Text = "Licensa expirada";
             this.Load += new System.EventHandler(this.licenseExpirationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

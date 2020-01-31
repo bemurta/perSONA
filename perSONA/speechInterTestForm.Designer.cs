@@ -73,7 +73,7 @@
             this.testWordsList.Name = "testWordsList";
             this.testWordsList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.testWordsList.Size = new System.Drawing.Size(315, 304);
-            this.testWordsList.TabIndex = 20;
+            this.testWordsList.TabIndex = 3;
             this.testWordsList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // all_correct
@@ -83,7 +83,7 @@
             this.all_correct.Margin = new System.Windows.Forms.Padding(5);
             this.all_correct.Name = "all_correct";
             this.all_correct.Size = new System.Drawing.Size(186, 35);
-            this.all_correct.TabIndex = 21;
+            this.all_correct.TabIndex = 5;
             this.all_correct.Text = "Todas corretas";
             this.all_correct.UseVisualStyleBackColor = true;
             this.all_correct.Click += new System.EventHandler(this.all_correct_Click);
@@ -102,7 +102,7 @@
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
             this.zedGraphControl1.Size = new System.Drawing.Size(611, 269);
-            this.zedGraphControl1.TabIndex = 22;
+            this.zedGraphControl1.TabIndex = 12;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
             this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
@@ -114,7 +114,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 20);
-            this.label1.TabIndex = 23;
+            this.label1.TabIndex = 13;
             this.label1.Text = "SNR:";
             // 
             // label2
@@ -125,7 +125,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 20);
-            this.label2.TabIndex = 24;
+            this.label2.TabIndex = 15;
             this.label2.Text = "Sequência de acerto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -138,7 +138,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 20);
-            this.label3.TabIndex = 25;
+            this.label3.TabIndex = 17;
             this.label3.Text = "Sentença atual";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -150,7 +150,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 20);
-            this.label4.TabIndex = 26;
+            this.label4.TabIndex = 19;
             this.label4.Text = "Total de sentenças";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -161,7 +161,7 @@
             this.all_incorrect.Margin = new System.Windows.Forms.Padding(5);
             this.all_incorrect.Name = "all_incorrect";
             this.all_incorrect.Size = new System.Drawing.Size(186, 35);
-            this.all_incorrect.TabIndex = 27;
+            this.all_incorrect.TabIndex = 6;
             this.all_incorrect.Text = "Nenhum acerto";
             this.all_incorrect.UseVisualStyleBackColor = true;
             this.all_incorrect.Click += new System.EventHandler(this.all_incorrect_Click);
@@ -174,7 +174,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 20);
-            this.label5.TabIndex = 30;
+            this.label5.TabIndex = 9;
             this.label5.Text = "Porcentagem de acerto";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -187,7 +187,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 20);
-            this.label6.TabIndex = 29;
+            this.label6.TabIndex = 7;
             this.label6.Text = "Palavras corretas";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
@@ -199,7 +199,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(186, 27);
-            this.textBox1.TabIndex = 31;
+            this.textBox1.TabIndex = 8;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -210,7 +210,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(186, 27);
-            this.textBox2.TabIndex = 32;
+            this.textBox2.TabIndex = 10;
             // 
             // button1
             // 
@@ -219,7 +219,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 35);
-            this.button1.TabIndex = 33;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Próxima sentença";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -232,7 +232,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 20);
-            this.label7.TabIndex = 34;
+            this.label7.TabIndex = 21;
             this.label7.Text = "Tempo de resposta";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -245,7 +245,7 @@
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(150, 20);
-            this.label8.TabIndex = 35;
+            this.label8.TabIndex = 23;
             this.label8.Text = "Duração do ensaio";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -257,7 +257,7 @@
             this.detailsBox.Multiline = true;
             this.detailsBox.Name = "detailsBox";
             this.detailsBox.Size = new System.Drawing.Size(186, 224);
-            this.detailsBox.TabIndex = 36;
+            this.detailsBox.TabIndex = 2;
             this.detailsBox.Visible = false;
             this.detailsBox.TextChanged += new System.EventHandler(this.detailsBox_TextChanged);
             // 
@@ -275,7 +275,7 @@
             this.zedGraphControl2.ScrollMinY = 0D;
             this.zedGraphControl2.ScrollMinY2 = 0D;
             this.zedGraphControl2.Size = new System.Drawing.Size(394, 362);
-            this.zedGraphControl2.TabIndex = 37;
+            this.zedGraphControl2.TabIndex = 25;
             this.zedGraphControl2.UseExtendedPrintDialog = true;
             // 
             // currentTryal
@@ -286,7 +286,7 @@
             this.currentTryal.Margin = new System.Windows.Forms.Padding(5);
             this.currentTryal.Name = "currentTryal";
             this.currentTryal.Size = new System.Drawing.Size(184, 27);
-            this.currentTryal.TabIndex = 38;
+            this.currentTryal.TabIndex = 22;
             // 
             // streakText
             // 
@@ -296,7 +296,7 @@
             this.streakText.Margin = new System.Windows.Forms.Padding(5);
             this.streakText.Name = "streakText";
             this.streakText.Size = new System.Drawing.Size(184, 27);
-            this.streakText.TabIndex = 40;
+            this.streakText.TabIndex = 16;
             // 
             // computedAudioText
             // 
@@ -306,7 +306,7 @@
             this.computedAudioText.Margin = new System.Windows.Forms.Padding(5);
             this.computedAudioText.Name = "computedAudioText";
             this.computedAudioText.Size = new System.Drawing.Size(184, 27);
-            this.computedAudioText.TabIndex = 41;
+            this.computedAudioText.TabIndex = 18;
             // 
             // totalWordsText
             // 
@@ -316,7 +316,7 @@
             this.totalWordsText.Margin = new System.Windows.Forms.Padding(5);
             this.totalWordsText.Name = "totalWordsText";
             this.totalWordsText.Size = new System.Drawing.Size(184, 27);
-            this.totalWordsText.TabIndex = 42;
+            this.totalWordsText.TabIndex = 20;
             // 
             // continuousTimerText
             // 
@@ -326,7 +326,7 @@
             this.continuousTimerText.Margin = new System.Windows.Forms.Padding(5);
             this.continuousTimerText.Name = "continuousTimerText";
             this.continuousTimerText.Size = new System.Drawing.Size(184, 27);
-            this.continuousTimerText.TabIndex = 43;
+            this.continuousTimerText.TabIndex = 24;
             // 
             // filenameList
             // 
@@ -339,7 +339,7 @@
             this.filenameList.Name = "filenameList";
             this.filenameList.ScrollAlwaysVisible = true;
             this.filenameList.Size = new System.Drawing.Size(315, 224);
-            this.filenameList.TabIndex = 44;
+            this.filenameList.TabIndex = 1;
             this.filenameList.SelectedIndexChanged += new System.EventHandler(this.filenameList_SelectedIndexChanged);
             // 
             // playCurrentScene
@@ -349,7 +349,7 @@
             this.playCurrentScene.Margin = new System.Windows.Forms.Padding(5);
             this.playCurrentScene.Name = "playCurrentScene";
             this.playCurrentScene.Size = new System.Drawing.Size(186, 35);
-            this.playCurrentScene.TabIndex = 45;
+            this.playCurrentScene.TabIndex = 4;
             this.playCurrentScene.Text = "Reproduzir áudio";
             this.playCurrentScene.UseVisualStyleBackColor = true;
             this.playCurrentScene.Click += new System.EventHandler(this.playCurrentScene_Click);
@@ -362,7 +362,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(184, 27);
-            this.textBox3.TabIndex = 46;
+            this.textBox3.TabIndex = 14;
             // 
             // timer1
             // 
@@ -379,7 +379,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(541, 95);
-            this.panel1.TabIndex = 47;
+            this.panel1.TabIndex = 0;
             // 
             // patientLabel
             // 
@@ -388,7 +388,7 @@
             this.patientLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.patientLabel.Name = "patientLabel";
             this.patientLabel.Size = new System.Drawing.Size(84, 20);
-            this.patientLabel.TabIndex = 27;
+            this.patientLabel.TabIndex = 3;
             this.patientLabel.Text = "Aplicador:";
             // 
             // applicatorLabel
@@ -398,7 +398,7 @@
             this.applicatorLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.applicatorLabel.Name = "applicatorLabel";
             this.applicatorLabel.Size = new System.Drawing.Size(84, 20);
-            this.applicatorLabel.TabIndex = 26;
+            this.applicatorLabel.TabIndex = 1;
             this.applicatorLabel.Text = "Aplicador:";
             // 
             // label10
@@ -408,7 +408,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 20);
-            this.label10.TabIndex = 25;
+            this.label10.TabIndex = 2;
             this.label10.Text = "Paciente:";
             // 
             // label9
@@ -418,7 +418,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 20);
-            this.label9.TabIndex = 24;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Aplicador:";
             // 
             // speechIterTestForm

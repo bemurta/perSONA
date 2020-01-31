@@ -235,7 +235,7 @@
             this.groupBox42.Name = "groupBox42";
             this.groupBox42.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox42.Size = new System.Drawing.Size(376, 65);
-            this.groupBox42.TabIndex = 66;
+            this.groupBox42.TabIndex = 4;
             this.groupBox42.TabStop = false;
             this.groupBox42.Text = "Etiologia";
             // 
@@ -262,7 +262,7 @@
             this.rightHearingEtiology.Margin = new System.Windows.Forms.Padding(5);
             this.rightHearingEtiology.Name = "rightHearingEtiology";
             this.rightHearingEtiology.Size = new System.Drawing.Size(354, 28);
-            this.rightHearingEtiology.TabIndex = 1;
+            this.rightHearingEtiology.TabIndex = 0;
             this.rightHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.rightHearingEtiology_SelectedIndexChanged);
             // 
             // groupBox3
@@ -274,7 +274,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox3.Size = new System.Drawing.Size(376, 65);
-            this.groupBox3.TabIndex = 65;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Etiologia";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
@@ -302,7 +302,7 @@
             this.leftHearingEtiology.Margin = new System.Windows.Forms.Padding(5);
             this.leftHearingEtiology.Name = "leftHearingEtiology";
             this.leftHearingEtiology.Size = new System.Drawing.Size(354, 28);
-            this.leftHearingEtiology.TabIndex = 57;
+            this.leftHearingEtiology.TabIndex = 0;
             this.leftHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.leftHearingEtiology_SelectedIndexChanged);
             // 
             // label2
@@ -313,7 +313,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 20);
-            this.label2.TabIndex = 64;
+            this.label2.TabIndex = 22;
             this.label2.Text = "Lado direito";
             // 
             // label1
@@ -324,7 +324,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 63;
+            this.label1.TabIndex = 22;
             this.label1.Text = "Lado esquerdo";
             // 
             // groupBox41
@@ -336,7 +336,7 @@
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox41.Size = new System.Drawing.Size(771, 115);
-            this.groupBox41.TabIndex = 62;
+            this.groupBox41.TabIndex = 21;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Outras condições";
             // 
@@ -359,7 +359,7 @@
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox19.Size = new System.Drawing.Size(376, 65);
-            this.groupBox19.TabIndex = 60;
+            this.groupBox19.TabIndex = 1;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Tipo de perda";
             // 
@@ -377,7 +377,7 @@
             this.leftHearingLoss.Margin = new System.Windows.Forms.Padding(5);
             this.leftHearingLoss.Name = "leftHearingLoss";
             this.leftHearingLoss.Size = new System.Drawing.Size(354, 28);
-            this.leftHearingLoss.TabIndex = 1;
+            this.leftHearingLoss.TabIndex = 0;
             this.leftHearingLoss.SelectedIndexChanged += new System.EventHandler(this.leftHearingLoss_SelectedIndexChanged);
             // 
             // groupBox36
@@ -389,7 +389,7 @@
             this.groupBox36.Name = "groupBox36";
             this.groupBox36.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox36.Size = new System.Drawing.Size(376, 65);
-            this.groupBox36.TabIndex = 61;
+            this.groupBox36.TabIndex = 2;
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Tipo de perda";
             // 
@@ -407,7 +407,7 @@
             this.rightHearingLoss.Margin = new System.Windows.Forms.Padding(5);
             this.rightHearingLoss.Name = "rightHearingLoss";
             this.rightHearingLoss.Size = new System.Drawing.Size(354, 28);
-            this.rightHearingLoss.TabIndex = 1;
+            this.rightHearingLoss.TabIndex = 0;
             this.rightHearingLoss.SelectedIndexChanged += new System.EventHandler(this.rightHearingLoss_SelectedIndexChanged);
             // 
             // groupBox37
@@ -419,7 +419,7 @@
             this.groupBox37.Name = "groupBox37";
             this.groupBox37.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox37.Size = new System.Drawing.Size(181, 65);
-            this.groupBox37.TabIndex = 59;
+            this.groupBox37.TabIndex = 12;
             this.groupBox37.TabStop = false;
             this.groupBox37.Text = "Anos de privação";
             // 
@@ -441,7 +441,7 @@
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox38.Size = new System.Drawing.Size(181, 65);
-            this.groupBox38.TabIndex = 58;
+            this.groupBox38.TabIndex = 10;
             this.groupBox38.TabStop = false;
             this.groupBox38.Text = "Diagnóstico";
             // 
@@ -453,7 +453,7 @@
             this.rightDiagnosis.Margin = new System.Windows.Forms.Padding(5);
             this.rightDiagnosis.Name = "rightDiagnosis";
             this.rightDiagnosis.Size = new System.Drawing.Size(158, 27);
-            this.rightDiagnosis.TabIndex = 46;
+            this.rightDiagnosis.TabIndex = 0;
             // 
             // groupBox39
             // 
@@ -464,7 +464,7 @@
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox39.Size = new System.Drawing.Size(376, 65);
-            this.groupBox39.TabIndex = 57;
+            this.groupBox39.TabIndex = 8;
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "Pré ou pós lingual?";
             this.groupBox39.Enter += new System.EventHandler(this.groupBox39_Enter);
@@ -481,7 +481,7 @@
             this.rightPostLingual.Margin = new System.Windows.Forms.Padding(5);
             this.rightPostLingual.Name = "rightPostLingual";
             this.rightPostLingual.Size = new System.Drawing.Size(354, 28);
-            this.rightPostLingual.TabIndex = 1;
+            this.rightPostLingual.TabIndex = 0;
             // 
             // groupBox40
             // 
@@ -492,7 +492,7 @@
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox40.Size = new System.Drawing.Size(376, 65);
-            this.groupBox40.TabIndex = 56;
+            this.groupBox40.TabIndex = 6;
             this.groupBox40.TabStop = false;
             this.groupBox40.Text = "Grau da perda";
             // 
@@ -512,7 +512,7 @@
             this.rightLossDegree.Margin = new System.Windows.Forms.Padding(5);
             this.rightLossDegree.Name = "rightLossDegree";
             this.rightLossDegree.Size = new System.Drawing.Size(354, 28);
-            this.rightLossDegree.TabIndex = 1;
+            this.rightLossDegree.TabIndex = 0;
             this.rightLossDegree.SelectedIndexChanged += new System.EventHandler(this.rightLossDegree_SelectedIndexChanged);
             // 
             // groupBox21
@@ -524,7 +524,7 @@
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox21.Size = new System.Drawing.Size(181, 65);
-            this.groupBox21.TabIndex = 53;
+            this.groupBox21.TabIndex = 11;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Anos de privação";
             // 
@@ -546,7 +546,7 @@
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox15.Size = new System.Drawing.Size(181, 65);
-            this.groupBox15.TabIndex = 51;
+            this.groupBox15.TabIndex = 9;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Diagnóstico";
             // 
@@ -558,7 +558,7 @@
             this.leftDiagnosis.Margin = new System.Windows.Forms.Padding(5);
             this.leftDiagnosis.Name = "leftDiagnosis";
             this.leftDiagnosis.Size = new System.Drawing.Size(158, 27);
-            this.leftDiagnosis.TabIndex = 46;
+            this.leftDiagnosis.TabIndex = 0;
             // 
             // groupBox16
             // 
@@ -569,7 +569,7 @@
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox16.Size = new System.Drawing.Size(376, 65);
-            this.groupBox16.TabIndex = 50;
+            this.groupBox16.TabIndex = 7;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Pré ou pós lingual?";
             this.groupBox16.Enter += new System.EventHandler(this.groupBox16_Enter);
@@ -586,7 +586,7 @@
             this.leftPostLingual.Margin = new System.Windows.Forms.Padding(5);
             this.leftPostLingual.Name = "leftPostLingual";
             this.leftPostLingual.Size = new System.Drawing.Size(354, 28);
-            this.leftPostLingual.TabIndex = 1;
+            this.leftPostLingual.TabIndex = 0;
             // 
             // groupBox17
             // 
@@ -597,7 +597,7 @@
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox17.Size = new System.Drawing.Size(376, 65);
-            this.groupBox17.TabIndex = 49;
+            this.groupBox17.TabIndex = 5;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Grau da perda";
             this.groupBox17.Enter += new System.EventHandler(this.groupBox17_Enter);
@@ -618,7 +618,7 @@
             this.leftLossDegree.Margin = new System.Windows.Forms.Padding(5);
             this.leftLossDegree.Name = "leftLossDegree";
             this.leftLossDegree.Size = new System.Drawing.Size(354, 28);
-            this.leftLossDegree.TabIndex = 1;
+            this.leftLossDegree.TabIndex = 0;
             this.leftLossDegree.SelectedIndexChanged += new System.EventHandler(this.leftLossDegree_SelectedIndexChanged);
             // 
             // groupBox5
@@ -630,7 +630,7 @@
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox5.Size = new System.Drawing.Size(181, 65);
-            this.groupBox5.TabIndex = 48;
+            this.groupBox5.TabIndex = 14;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Data de Ativação";
             // 
@@ -642,7 +642,7 @@
             this.rightActivationDate.Margin = new System.Windows.Forms.Padding(5);
             this.rightActivationDate.Name = "rightActivationDate";
             this.rightActivationDate.Size = new System.Drawing.Size(158, 27);
-            this.rightActivationDate.TabIndex = 45;
+            this.rightActivationDate.TabIndex = 0;
             // 
             // groupBox6
             // 
@@ -653,7 +653,7 @@
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox6.Size = new System.Drawing.Size(181, 65);
-            this.groupBox6.TabIndex = 46;
+            this.groupBox6.TabIndex = 20;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Modelo";
             // 
@@ -676,7 +676,7 @@
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox7.Size = new System.Drawing.Size(181, 65);
-            this.groupBox7.TabIndex = 47;
+            this.groupBox7.TabIndex = 18;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Marca";
             // 
@@ -688,7 +688,7 @@
             this.rightManufacturer.Margin = new System.Windows.Forms.Padding(5);
             this.rightManufacturer.Name = "rightManufacturer";
             this.rightManufacturer.Size = new System.Drawing.Size(158, 28);
-            this.rightManufacturer.TabIndex = 1;
+            this.rightManufacturer.TabIndex = 0;
             // 
             // groupBox8
             // 
@@ -699,7 +699,7 @@
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox8.Size = new System.Drawing.Size(181, 65);
-            this.groupBox8.TabIndex = 45;
+            this.groupBox8.TabIndex = 16;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Dispositivo";
             // 
@@ -716,7 +716,7 @@
             this.rightDevice.Margin = new System.Windows.Forms.Padding(5);
             this.rightDevice.Name = "rightDevice";
             this.rightDevice.Size = new System.Drawing.Size(158, 28);
-            this.rightDevice.TabIndex = 1;
+            this.rightDevice.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -727,7 +727,7 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox4.Size = new System.Drawing.Size(181, 65);
-            this.groupBox4.TabIndex = 44;
+            this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Data de Ativação";
             // 
@@ -739,7 +739,7 @@
             this.leftActivationDate.Margin = new System.Windows.Forms.Padding(5);
             this.leftActivationDate.Name = "leftActivationDate";
             this.leftActivationDate.Size = new System.Drawing.Size(158, 27);
-            this.leftActivationDate.TabIndex = 45;
+            this.leftActivationDate.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -750,7 +750,7 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox2.Size = new System.Drawing.Size(181, 65);
-            this.groupBox2.TabIndex = 43;
+            this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modelo";
             // 
@@ -773,7 +773,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox1.Size = new System.Drawing.Size(181, 65);
-            this.groupBox1.TabIndex = 43;
+            this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marca";
             // 
@@ -785,7 +785,7 @@
             this.leftManufacturer.Margin = new System.Windows.Forms.Padding(5);
             this.leftManufacturer.Name = "leftManufacturer";
             this.leftManufacturer.Size = new System.Drawing.Size(158, 28);
-            this.leftManufacturer.TabIndex = 1;
+            this.leftManufacturer.TabIndex = 0;
             // 
             // leftEarDevice
             // 
@@ -796,7 +796,7 @@
             this.leftEarDevice.Name = "leftEarDevice";
             this.leftEarDevice.Padding = new System.Windows.Forms.Padding(5);
             this.leftEarDevice.Size = new System.Drawing.Size(181, 65);
-            this.leftEarDevice.TabIndex = 42;
+            this.leftEarDevice.TabIndex = 15;
             this.leftEarDevice.TabStop = false;
             this.leftEarDevice.Text = "Dispositivo";
             // 
@@ -813,7 +813,7 @@
             this.leftDevice.Margin = new System.Windows.Forms.Padding(5);
             this.leftDevice.Name = "leftDevice";
             this.leftDevice.Size = new System.Drawing.Size(158, 28);
-            this.leftDevice.TabIndex = 1;
+            this.leftDevice.TabIndex = 0;
             // 
             // panel2
             // 
@@ -831,7 +831,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(475, 655);
-            this.panel2.TabIndex = 2;
+            this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // groupBox22
@@ -843,7 +843,7 @@
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox22.Size = new System.Drawing.Size(435, 65);
-            this.groupBox22.TabIndex = 54;
+            this.groupBox22.TabIndex = 7;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Profissão";
             // 
@@ -863,7 +863,7 @@
             this.work.Margin = new System.Windows.Forms.Padding(5);
             this.work.Name = "work";
             this.work.Size = new System.Drawing.Size(410, 28);
-            this.work.TabIndex = 1;
+            this.work.TabIndex = 0;
             // 
             // groupBox20
             // 
@@ -874,9 +874,9 @@
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox20.Size = new System.Drawing.Size(435, 115);
-            this.groupBox20.TabIndex = 53;
+            this.groupBox20.TabIndex = 8;
             this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Observações";
+            this.groupBox20.Text = "Observações (exposição a medicações, ruído...)";
             // 
             // observationBox
             // 
@@ -898,7 +898,7 @@
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox18.Size = new System.Drawing.Size(435, 65);
-            this.groupBox18.TabIndex = 52;
+            this.groupBox18.TabIndex = 6;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Motivação";
             // 
@@ -918,7 +918,7 @@
             this.motivationBox.Margin = new System.Windows.Forms.Padding(5);
             this.motivationBox.Name = "motivationBox";
             this.motivationBox.Size = new System.Drawing.Size(410, 28);
-            this.motivationBox.TabIndex = 1;
+            this.motivationBox.TabIndex = 0;
             this.motivationBox.SelectedIndexChanged += new System.EventHandler(this.motivationBox_SelectedIndexChanged);
             // 
             // groupBox14
@@ -930,7 +930,7 @@
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox14.Size = new System.Drawing.Size(435, 65);
-            this.groupBox14.TabIndex = 44;
+            this.groupBox14.TabIndex = 5;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Cidade/Estado onde reside";
             // 
@@ -941,7 +941,7 @@
             this.addressBox.Margin = new System.Windows.Forms.Padding(5);
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(410, 27);
-            this.addressBox.TabIndex = 1;
+            this.addressBox.TabIndex = 0;
             // 
             // groupBox13
             // 
@@ -952,7 +952,7 @@
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox13.Size = new System.Drawing.Size(435, 65);
-            this.groupBox13.TabIndex = 44;
+            this.groupBox13.TabIndex = 4;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Telefone";
             // 
@@ -963,7 +963,7 @@
             this.phoneBox.Margin = new System.Windows.Forms.Padding(5);
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(410, 27);
-            this.phoneBox.TabIndex = 1;
+            this.phoneBox.TabIndex = 0;
             // 
             // groupBox12
             // 
@@ -974,7 +974,7 @@
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox12.Size = new System.Drawing.Size(194, 68);
-            this.groupBox12.TabIndex = 44;
+            this.groupBox12.TabIndex = 3;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Sexo";
             // 
@@ -991,7 +991,7 @@
             this.sexTab.Margin = new System.Windows.Forms.Padding(5);
             this.sexTab.Name = "sexTab";
             this.sexTab.Size = new System.Drawing.Size(169, 28);
-            this.sexTab.TabIndex = 1;
+            this.sexTab.TabIndex = 0;
             // 
             // groupBox11
             // 
@@ -1002,7 +1002,7 @@
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox11.Size = new System.Drawing.Size(194, 68);
-            this.groupBox11.TabIndex = 45;
+            this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Data de nascimento";
             // 
@@ -1014,7 +1014,7 @@
             this.bornDate.Margin = new System.Windows.Forms.Padding(5);
             this.bornDate.Name = "bornDate";
             this.bornDate.Size = new System.Drawing.Size(170, 27);
-            this.bornDate.TabIndex = 46;
+            this.bornDate.TabIndex = 0;
             // 
             // groupBox10
             // 
@@ -1025,7 +1025,7 @@
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox10.Size = new System.Drawing.Size(435, 65);
-            this.groupBox10.TabIndex = 44;
+            this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Escolaridade";
             // 
@@ -1047,7 +1047,7 @@
             this.scholarBox.Margin = new System.Windows.Forms.Padding(5);
             this.scholarBox.Name = "scholarBox";
             this.scholarBox.Size = new System.Drawing.Size(410, 28);
-            this.scholarBox.TabIndex = 1;
+            this.scholarBox.TabIndex = 0;
             // 
             // groupBox9
             // 
@@ -1057,7 +1057,7 @@
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox9.Size = new System.Drawing.Size(435, 65);
-            this.groupBox9.TabIndex = 43;
+            this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Nome completo";
             // 
@@ -1080,7 +1080,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1346, 767);
-            this.tabControl1.TabIndex = 56;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -1105,7 +1105,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 54);
-            this.label3.TabIndex = 57;
+            this.label3.TabIndex = 3;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -1117,7 +1117,7 @@
             this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(1115, 54);
-            this.button3.TabIndex = 56;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Salvar alterações";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -1144,7 +1144,7 @@
             this.audiometryTextBox.Multiline = true;
             this.audiometryTextBox.Name = "audiometryTextBox";
             this.audiometryTextBox.Size = new System.Drawing.Size(789, 135);
-            this.audiometryTextBox.TabIndex = 4;
+            this.audiometryTextBox.TabIndex = 2;
             // 
             // panel3
             // 
@@ -1155,7 +1155,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(476, 724);
-            this.panel3.TabIndex = 3;
+            this.panel3.TabIndex = 0;
             // 
             // groupBox23
             // 
@@ -1178,7 +1178,7 @@
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox23.Size = new System.Drawing.Size(450, 532);
-            this.groupBox23.TabIndex = 53;
+            this.groupBox23.TabIndex = 1;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Adicionar nova audiometria";
             // 
@@ -1188,7 +1188,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(420, 31);
-            this.button1.TabIndex = 63;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Cadastrar audiometria";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -1200,7 +1200,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 31);
-            this.button2.TabIndex = 62;
+            this.button2.TabIndex = 12;
             this.button2.Text = "Pré-Visualização";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -1214,7 +1214,7 @@
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox35.Size = new System.Drawing.Size(200, 68);
-            this.groupBox35.TabIndex = 61;
+            this.groupBox35.TabIndex = 11;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "8000 Hz";
             // 
@@ -1241,7 +1241,7 @@
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox33.Size = new System.Drawing.Size(200, 68);
-            this.groupBox33.TabIndex = 60;
+            this.groupBox33.TabIndex = 10;
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "4000 Hz";
             // 
@@ -1268,7 +1268,7 @@
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox31.Size = new System.Drawing.Size(200, 68);
-            this.groupBox31.TabIndex = 60;
+            this.groupBox31.TabIndex = 8;
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "1000 Hz";
             // 
@@ -1295,7 +1295,7 @@
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox34.Size = new System.Drawing.Size(200, 68);
-            this.groupBox34.TabIndex = 59;
+            this.groupBox34.TabIndex = 9;
             this.groupBox34.TabStop = false;
             this.groupBox34.Text = "2000 Hz";
             // 
@@ -1322,7 +1322,7 @@
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox32.Size = new System.Drawing.Size(200, 68);
-            this.groupBox32.TabIndex = 59;
+            this.groupBox32.TabIndex = 7;
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "500  Hz";
             // 
@@ -1349,7 +1349,7 @@
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox29.Size = new System.Drawing.Size(200, 68);
-            this.groupBox29.TabIndex = 58;
+            this.groupBox29.TabIndex = 6;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "250 Hz";
             // 
@@ -1376,7 +1376,7 @@
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox28.Size = new System.Drawing.Size(200, 68);
-            this.groupBox28.TabIndex = 57;
+            this.groupBox28.TabIndex = 5;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "125 Hz";
             // 
@@ -1403,7 +1403,7 @@
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox27.Size = new System.Drawing.Size(200, 68);
-            this.groupBox27.TabIndex = 56;
+            this.groupBox27.TabIndex = 4;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Mascaramento";
             // 
@@ -1418,7 +1418,7 @@
             this.masking.Margin = new System.Windows.Forms.Padding(5);
             this.masking.Name = "masking";
             this.masking.Size = new System.Drawing.Size(180, 28);
-            this.masking.TabIndex = 1;
+            this.masking.TabIndex = 0;
             // 
             // groupBox26
             // 
@@ -1429,7 +1429,7 @@
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox26.Size = new System.Drawing.Size(200, 68);
-            this.groupBox26.TabIndex = 55;
+            this.groupBox26.TabIndex = 3;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Lado";
             // 
@@ -1455,7 +1455,7 @@
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox25.Size = new System.Drawing.Size(200, 68);
-            this.groupBox25.TabIndex = 53;
+            this.groupBox25.TabIndex = 2;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Via";
             // 
@@ -1472,7 +1472,7 @@
             this.Conduction.Margin = new System.Windows.Forms.Padding(5);
             this.Conduction.Name = "Conduction";
             this.Conduction.Size = new System.Drawing.Size(180, 28);
-            this.Conduction.TabIndex = 1;
+            this.Conduction.TabIndex = 0;
             // 
             // groupBox24
             // 
@@ -1483,7 +1483,7 @@
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox24.Size = new System.Drawing.Size(200, 68);
-            this.groupBox24.TabIndex = 52;
+            this.groupBox24.TabIndex = 1;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Data de realização";
             // 
@@ -1495,7 +1495,7 @@
             this.audiometryDate.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryDate.Name = "audiometryDate";
             this.audiometryDate.Size = new System.Drawing.Size(180, 27);
-            this.audiometryDate.TabIndex = 46;
+            this.audiometryDate.TabIndex = 0;
             // 
             // groupBox30
             // 
@@ -1505,7 +1505,7 @@
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox30.Size = new System.Drawing.Size(450, 150);
-            this.groupBox30.TabIndex = 43;
+            this.groupBox30.TabIndex = 0;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Audiometrias cadastradas";
             // 
@@ -1535,7 +1535,7 @@
             this.audiometryGraph.ScrollMinY = 0D;
             this.audiometryGraph.ScrollMinY2 = 0D;
             this.audiometryGraph.Size = new System.Drawing.Size(794, 555);
-            this.audiometryGraph.TabIndex = 0;
+            this.audiometryGraph.TabIndex = 1;
             this.audiometryGraph.UseExtendedPrintDialog = true;
             // 
             // tabPage3
@@ -1559,7 +1559,7 @@
             this.testInfo.Name = "testInfo";
             this.testInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.testInfo.Size = new System.Drawing.Size(580, 349);
-            this.testInfo.TabIndex = 3;
+            this.testInfo.TabIndex = 1;
             // 
             // testsGraph
             // 
@@ -1575,7 +1575,7 @@
             this.testsGraph.ScrollMinY = 0D;
             this.testsGraph.ScrollMinY2 = 0D;
             this.testsGraph.Size = new System.Drawing.Size(694, 708);
-            this.testsGraph.TabIndex = 1;
+            this.testsGraph.TabIndex = 2;
             this.testsGraph.UseExtendedPrintDialog = true;
             // 
             // testsBox
@@ -1588,7 +1588,7 @@
             this.testsBox.ScrollAlwaysVisible = true;
             this.testsBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.testsBox.Size = new System.Drawing.Size(583, 344);
-            this.testsBox.TabIndex = 2;
+            this.testsBox.TabIndex = 0;
             this.testsBox.SelectedIndexChanged += new System.EventHandler(this.testsBox_SelectedIndexChanged);
             // 
             // patientManagement
@@ -1601,7 +1601,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "patientManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.4.0 - Módulo de gerenciamento de pacientes";
+            this.Text = "z";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox42.ResumeLayout(false);

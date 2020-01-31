@@ -102,6 +102,7 @@ namespace perSONA
             this.vASettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -147,7 +148,7 @@ namespace perSONA
             this.buttonConnect.Margin = new System.Windows.Forms.Padding(5);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(170, 35);
-            this.buttonConnect.TabIndex = 0;
+            this.buttonConnect.TabIndex = 1;
             this.buttonConnect.Text = "Conectar ao VA";
             this.buttonConnect.UseVisualStyleBackColor = true;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
@@ -159,7 +160,7 @@ namespace perSONA
             this.buttonDisconnect.Margin = new System.Windows.Forms.Padding(5);
             this.buttonDisconnect.Name = "buttonDisconnect";
             this.buttonDisconnect.Size = new System.Drawing.Size(170, 35);
-            this.buttonDisconnect.TabIndex = 1;
+            this.buttonDisconnect.TabIndex = 2;
             this.buttonDisconnect.Text = "Desconectar o VA";
             this.buttonDisconnect.UseVisualStyleBackColor = true;
             this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
@@ -171,7 +172,7 @@ namespace perSONA
             this.openServer.Margin = new System.Windows.Forms.Padding(5);
             this.openServer.Name = "openServer";
             this.openServer.Size = new System.Drawing.Size(350, 35);
-            this.openServer.TabIndex = 2;
+            this.openServer.TabIndex = 0;
             this.openServer.Text = "Iniciar VA";
             this.openServer.UseVisualStyleBackColor = true;
             this.openServer.Click += new System.EventHandler(this.openServer_Click);
@@ -185,7 +186,7 @@ namespace perSONA
             this.textBox.Name = "textBox";
             this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox.Size = new System.Drawing.Size(360, 536);
-            this.textBox.TabIndex = 3;
+            this.textBox.TabIndex = 2;
             this.textBox.Visible = false;
             // 
             // reset
@@ -194,7 +195,7 @@ namespace perSONA
             this.reset.Margin = new System.Windows.Forms.Padding(5);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(170, 30);
-            this.reset.TabIndex = 4;
+            this.reset.TabIndex = 9;
             this.reset.Text = "Reset Scene";
             this.reset.UseVisualStyleBackColor = true;
             this.reset.Click += new System.EventHandler(this.reset_Click);
@@ -205,7 +206,7 @@ namespace perSONA
             this.createReceiver.Margin = new System.Windows.Forms.Padding(5);
             this.createReceiver.Name = "createReceiver";
             this.createReceiver.Size = new System.Drawing.Size(170, 30);
-            this.createReceiver.TabIndex = 6;
+            this.createReceiver.TabIndex = 8;
             this.createReceiver.Text = "create receiver";
             this.createReceiver.UseVisualStyleBackColor = true;
             this.createReceiver.Click += new System.EventHandler(this.createReceiver_Click);
@@ -216,7 +217,7 @@ namespace perSONA
             this.createSource2.Margin = new System.Windows.Forms.Padding(5);
             this.createSource2.Name = "createSource2";
             this.createSource2.Size = new System.Drawing.Size(170, 30);
-            this.createSource2.TabIndex = 8;
+            this.createSource2.TabIndex = 3;
             this.createSource2.Text = "Random signal";
             this.createSource2.UseVisualStyleBackColor = true;
             this.createSource2.Click += new System.EventHandler(this.createSource2_Click);
@@ -227,7 +228,7 @@ namespace perSONA
             this.play2.Margin = new System.Windows.Forms.Padding(5);
             this.play2.Name = "play2";
             this.play2.Size = new System.Drawing.Size(170, 30);
-            this.play2.TabIndex = 9;
+            this.play2.TabIndex = 7;
             this.play2.Text = "Random angle";
             this.play2.UseVisualStyleBackColor = true;
             this.play2.Click += new System.EventHandler(this.play2_Click);
@@ -240,7 +241,7 @@ namespace perSONA
             this.trackBar1.Minimum = -40;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(170, 56);
-            this.trackBar1.TabIndex = 10;
+            this.trackBar1.TabIndex = 11;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label1
@@ -250,7 +251,7 @@ namespace perSONA
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 20);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 13;
             this.label1.Text = "SNR: 0 dB";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -261,7 +262,7 @@ namespace perSONA
             this.trackBar2.Maximum = 100;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(170, 56);
-            this.trackBar2.TabIndex = 12;
+            this.trackBar2.TabIndex = 10;
             this.trackBar2.Value = 1;
             this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
@@ -272,7 +273,7 @@ namespace perSONA
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 13;
+            this.label2.TabIndex = 12;
             this.label2.Text = "Volume:1";
             // 
             // getFolder
@@ -281,7 +282,7 @@ namespace perSONA
             this.getFolder.Margin = new System.Windows.Forms.Padding(5);
             this.getFolder.Name = "getFolder";
             this.getFolder.Size = new System.Drawing.Size(380, 35);
-            this.getFolder.TabIndex = 15;
+            this.getFolder.TabIndex = 0;
             this.getFolder.Text = "Load test list";
             this.getFolder.UseVisualStyleBackColor = true;
             this.getFolder.Click += new System.EventHandler(this.getFolder_Click);
@@ -292,7 +293,7 @@ namespace perSONA
             this.speechRight.Margin = new System.Windows.Forms.Padding(5);
             this.speechRight.Name = "speechRight";
             this.speechRight.Size = new System.Drawing.Size(170, 30);
-            this.speechRight.TabIndex = 16;
+            this.speechRight.TabIndex = 5;
             this.speechRight.Text = "SR,NF";
             this.speechRight.UseVisualStyleBackColor = true;
             this.speechRight.Click += new System.EventHandler(this.speechRight_Click);
@@ -303,7 +304,7 @@ namespace perSONA
             this.speechFront.Margin = new System.Windows.Forms.Padding(5);
             this.speechFront.Name = "speechFront";
             this.speechFront.Size = new System.Drawing.Size(170, 30);
-            this.speechFront.TabIndex = 17;
+            this.speechFront.TabIndex = 6;
             this.speechFront.Text = "SF,NF";
             this.speechFront.UseVisualStyleBackColor = true;
             this.speechFront.Click += new System.EventHandler(this.speechFront_Click);
@@ -314,7 +315,7 @@ namespace perSONA
             this.speechLeft.Margin = new System.Windows.Forms.Padding(5);
             this.speechLeft.Name = "speechLeft";
             this.speechLeft.Size = new System.Drawing.Size(170, 30);
-            this.speechLeft.TabIndex = 18;
+            this.speechLeft.TabIndex = 4;
             this.speechLeft.Text = "SL,NF";
             this.speechLeft.UseVisualStyleBackColor = true;
             this.speechLeft.Click += new System.EventHandler(this.speechLeft_Click);
@@ -328,7 +329,7 @@ namespace perSONA
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBox1.Size = new System.Drawing.Size(170, 184);
-            this.listBox1.TabIndex = 19;
+            this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // textBox2
@@ -337,7 +338,7 @@ namespace perSONA
             this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(170, 27);
-            this.textBox2.TabIndex = 20;
+            this.textBox2.TabIndex = 2;
             // 
             // listBox2
             // 
@@ -348,7 +349,7 @@ namespace perSONA
             this.listBox2.Name = "listBox2";
             this.listBox2.ScrollAlwaysVisible = true;
             this.listBox2.Size = new System.Drawing.Size(380, 144);
-            this.listBox2.TabIndex = 21;
+            this.listBox2.TabIndex = 1;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // button1
@@ -357,7 +358,7 @@ namespace perSONA
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 30);
-            this.button1.TabIndex = 22;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Select signal";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -375,7 +376,7 @@ namespace perSONA
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
             this.zedGraphControl1.Size = new System.Drawing.Size(356, 340);
-            this.zedGraphControl1.TabIndex = 23;
+            this.zedGraphControl1.TabIndex = 14;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
             this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
@@ -386,7 +387,7 @@ namespace perSONA
             this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(348, 35);
-            this.button3.TabIndex = 25;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Configuração de arquivos de audio";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -397,7 +398,7 @@ namespace perSONA
             this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(384, 35);
-            this.button4.TabIndex = 26;
+            this.button4.TabIndex = 11;
             this.button4.Text = "Start test";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -409,7 +410,7 @@ namespace perSONA
             this.comboBox3.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(380, 28);
-            this.comboBox3.TabIndex = 29;
+            this.comboBox3.TabIndex = 3;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // textBox1
@@ -418,7 +419,7 @@ namespace perSONA
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(380, 27);
-            this.textBox1.TabIndex = 30;
+            this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Test one";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -429,7 +430,7 @@ namespace perSONA
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 20);
-            this.label5.TabIndex = 33;
+            this.label5.TabIndex = 2;
             this.label5.Text = "Noise signal";
             // 
             // label6
@@ -439,7 +440,7 @@ namespace perSONA
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(138, 20);
-            this.label6.TabIndex = 34;
+            this.label6.TabIndex = 4;
             this.label6.Text = "Speech test label";
             // 
             // panel1
@@ -464,7 +465,7 @@ namespace perSONA
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(376, 699);
-            this.panel1.TabIndex = 39;
+            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -485,7 +486,7 @@ namespace perSONA
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(403, 699);
-            this.panel2.TabIndex = 40;
+            this.panel2.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -495,7 +496,7 @@ namespace perSONA
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox5.Size = new System.Drawing.Size(384, 68);
-            this.groupBox5.TabIndex = 43;
+            this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Starting Signal to Noise Ratio";
             // 
@@ -526,7 +527,7 @@ namespace perSONA
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox4.Size = new System.Drawing.Size(186, 68);
-            this.groupBox4.TabIndex = 42;
+            this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Noise distance";
             // 
@@ -552,7 +553,7 @@ namespace perSONA
             0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(161, 27);
-            this.numericUpDown2.TabIndex = 1;
+            this.numericUpDown2.TabIndex = 0;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDown2.Value = new decimal(new int[] {
             15,
@@ -569,7 +570,7 @@ namespace perSONA
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox3.Size = new System.Drawing.Size(181, 68);
-            this.groupBox3.TabIndex = 41;
+            this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Speech distance";
             // 
@@ -614,7 +615,7 @@ namespace perSONA
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox2.Size = new System.Drawing.Size(384, 68);
-            this.groupBox2.TabIndex = 40;
+            this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Noise souce direction";
             // 
@@ -625,7 +626,7 @@ namespace perSONA
             this.radioButton4.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(59, 24);
-            this.radioButton4.TabIndex = 2;
+            this.radioButton4.TabIndex = 0;
             this.radioButton4.Text = "Left";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
@@ -637,7 +638,7 @@ namespace perSONA
             this.radioButton5.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(69, 24);
-            this.radioButton5.TabIndex = 1;
+            this.radioButton5.TabIndex = 2;
             this.radioButton5.Text = "Right";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
@@ -650,7 +651,7 @@ namespace perSONA
             this.radioButton6.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(69, 24);
-            this.radioButton6.TabIndex = 0;
+            this.radioButton6.TabIndex = 1;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Front";
             this.radioButton6.UseVisualStyleBackColor = true;
@@ -666,7 +667,7 @@ namespace perSONA
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox1.Size = new System.Drawing.Size(380, 68);
-            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Speech souce direction";
             // 
@@ -677,7 +678,7 @@ namespace perSONA
             this.radioButton1.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(59, 24);
-            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabIndex = 0;
             this.radioButton1.Text = "Left";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
@@ -689,7 +690,7 @@ namespace perSONA
             this.radioButton3.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(69, 24);
-            this.radioButton3.TabIndex = 1;
+            this.radioButton3.TabIndex = 2;
             this.radioButton3.Text = "Right";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
@@ -702,7 +703,7 @@ namespace perSONA
             this.radioButton2.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(69, 24);
-            this.radioButton2.TabIndex = 0;
+            this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Front";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -721,7 +722,7 @@ namespace perSONA
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(360, 151);
-            this.panel3.TabIndex = 41;
+            this.panel3.TabIndex = 1;
             this.panel3.Visible = false;
             // 
             // testSetup
@@ -731,7 +732,7 @@ namespace perSONA
             this.testSetup.Margin = new System.Windows.Forms.Padding(5);
             this.testSetup.Name = "testSetup";
             this.testSetup.Size = new System.Drawing.Size(750, 35);
-            this.testSetup.TabIndex = 42;
+            this.testSetup.TabIndex = 3;
             this.testSetup.Text = "Avaliação customizada";
             this.testSetup.UseVisualStyleBackColor = false;
             this.testSetup.Click += new System.EventHandler(this.testSetup_Click);
@@ -744,7 +745,7 @@ namespace perSONA
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(750, 35);
-            this.button2.TabIndex = 43;
+            this.button2.TabIndex = 1;
             this.button2.Text = "Fala a frente, Ruído a frente";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -757,7 +758,7 @@ namespace perSONA
             this.button5.Margin = new System.Windows.Forms.Padding(5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(750, 35);
-            this.button5.TabIndex = 44;
+            this.button5.TabIndex = 0;
             this.button5.Text = "Fala a esquerda Ruído a frente";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -770,7 +771,7 @@ namespace perSONA
             this.button6.Margin = new System.Windows.Forms.Padding(5);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(750, 35);
-            this.button6.TabIndex = 45;
+            this.button6.TabIndex = 2;
             this.button6.Text = "Fala a direita, Ruído a direita";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -782,12 +783,13 @@ namespace perSONA
             this.settingsToolStripMenuItem,
             this.patientAreaToolStripMenuItem,
             this.helpToolStripMenuItem,
+            this.contactToolStripMenuItem,
             this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1210, 31);
-            this.menuStrip1.TabIndex = 46;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // settingsToolStripMenuItem
@@ -837,6 +839,14 @@ namespace perSONA
             this.helpToolStripMenuItem.Text = "Sobre";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
+            // contactToolStripMenuItem
+            // 
+            this.contactToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(86, 27);
+            this.contactToolStripMenuItem.Text = "Contato";
+            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
+            // 
             // áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem
             // 
             this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Name = "áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem";
@@ -852,7 +862,7 @@ namespace perSONA
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(806, 740);
-            this.tabControl1.TabIndex = 47;
+            this.tabControl1.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -877,7 +887,7 @@ namespace perSONA
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox8.Size = new System.Drawing.Size(781, 76);
-            this.groupBox8.TabIndex = 47;
+            this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Aplicador";
             // 
@@ -903,7 +913,7 @@ namespace perSONA
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox7.Size = new System.Drawing.Size(781, 229);
-            this.groupBox7.TabIndex = 47;
+            this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Paciente";
             // 
@@ -916,7 +926,7 @@ namespace perSONA
             this.patientBox.Margin = new System.Windows.Forms.Padding(5);
             this.patientBox.Name = "patientBox";
             this.patientBox.Size = new System.Drawing.Size(348, 184);
-            this.patientBox.TabIndex = 46;
+            this.patientBox.TabIndex = 0;
             this.patientBox.SelectedIndexChanged += new System.EventHandler(this.patientBox_SelectedIndexChanged);
             // 
             // button7
@@ -927,7 +937,7 @@ namespace perSONA
             this.button7.Margin = new System.Windows.Forms.Padding(5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(370, 35);
-            this.button7.TabIndex = 44;
+            this.button7.TabIndex = 1;
             this.button7.Text = "Criar Paciente";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -940,7 +950,7 @@ namespace perSONA
             this.button8.Margin = new System.Windows.Forms.Padding(5);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(370, 35);
-            this.button8.TabIndex = 43;
+            this.button8.TabIndex = 2;
             this.button8.Text = "Ver dados do Paciente";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -953,7 +963,7 @@ namespace perSONA
             this.button10.Margin = new System.Windows.Forms.Padding(5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(370, 35);
-            this.button10.TabIndex = 42;
+            this.button10.TabIndex = 3;
             this.button10.Text = "Deletar paciente";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
@@ -970,7 +980,7 @@ namespace perSONA
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox6.Size = new System.Drawing.Size(781, 206);
-            this.groupBox6.TabIndex = 46;
+            this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Avaliaçao de percepção de fala";
             // 
@@ -993,7 +1003,7 @@ namespace perSONA
             this.button9.Margin = new System.Windows.Forms.Padding(5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(350, 35);
-            this.button9.TabIndex = 26;
+            this.button9.TabIndex = 0;
             this.button9.Text = "Mostrar/Esconder painel de controle";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -1010,7 +1020,7 @@ namespace perSONA
             this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(360, 736);
-            this.panel4.TabIndex = 48;
+            this.panel4.TabIndex = 1;
             // 
             // Form1
             // 
@@ -1027,6 +1037,7 @@ namespace perSONA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "perSONA 1.4.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -1132,6 +1143,7 @@ namespace perSONA
         private System.Windows.Forms.ToolStripMenuItem áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel4;
+        private ToolStripMenuItem contactToolStripMenuItem;
     }
 }
 

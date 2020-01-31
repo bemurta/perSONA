@@ -48,7 +48,7 @@
             this.listBox1.Margin = new System.Windows.Forms.Padding(5);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(419, 284);
-            this.listBox1.TabIndex = 0;
+            this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button1
@@ -57,7 +57,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(424, 35);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Selecionar Lista para configuração";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -70,7 +70,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(201, 35);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Reproduzir áudio";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.playAudioButton_Click);
@@ -95,7 +95,7 @@
             this.listBox2.Margin = new System.Windows.Forms.Padding(5);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(204, 244);
-            this.listBox2.TabIndex = 4;
+            this.listBox2.TabIndex = 7;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // button4
@@ -106,7 +106,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(201, 35);
-            this.button4.TabIndex = 7;
+            this.button4.TabIndex = 6;
             this.button4.Text = "Salvar modificações";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -119,7 +119,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(201, 35);
-            this.button5.TabIndex = 8;
+            this.button5.TabIndex = 5;
             this.button5.Text = "Pré-visualização";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -132,7 +132,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(422, 20);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Digite a sentença contida na fala";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

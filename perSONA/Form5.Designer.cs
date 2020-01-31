@@ -45,7 +45,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(309, 81);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Iniciar perSONA";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -61,7 +61,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox1.Size = new System.Drawing.Size(309, 70);
-            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selecione modo de reprodução";
             // 
@@ -79,7 +79,7 @@
             this.selectReproduction.Margin = new System.Windows.Forms.Padding(5);
             this.selectReproduction.Name = "selectReproduction";
             this.selectReproduction.Size = new System.Drawing.Size(287, 28);
-            this.selectReproduction.TabIndex = 9;
+            this.selectReproduction.TabIndex = 0;
             // 
             // label1
             // 
