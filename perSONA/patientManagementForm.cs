@@ -68,6 +68,7 @@ namespace perSONA
                 leftDiagnosis.Value = person.LeftDiagnosis;
                 leftDevice.Text = person.LeftEarDevice;
                 leftHearingLoss.Text = person.LeftHearingLoss;
+                leftHearingEtiology.Text = person.LeftHearingEtiology;
                 leftLossDegree.Text = person.LeftLossDegree;
                 leftManufacturer.Text = person.LeftManufacturer;
                 leftModel.Text = person.LeftModel;
@@ -77,6 +78,7 @@ namespace perSONA
                 rightDiagnosis.Value = person.RightDiagnosis;
                 rightDevice.Text = person.RightEarDevice;
                 rightHearingLoss.Text = person.RightHearingLoss;
+                rightHearingEtiology.Text = person.RightHearingEtiology;
                 rightLossDegree.Text = person.RightLossDegree;
                 rightManufacturer.Text = person.RightManufacturer;
                 rightModel.Text = person.RightModel;
@@ -93,7 +95,7 @@ namespace perSONA
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            label3.Text = "Alterações salvas!";
             Patient person = new Patient()
             {
                 Name = nameBox.Text,
@@ -111,6 +113,7 @@ namespace perSONA
                 LeftDiagnosis = leftDiagnosis.Value,
                 LeftEarDevice = leftDevice.Text,
                 LeftHearingLoss = leftHearingLoss.Text,
+                LeftHearingEtiology = leftHearingEtiology.Text,
                 LeftLossDegree = leftLossDegree.Text,
                 LeftManufacturer = leftManufacturer.Text,
                 LeftModel = leftModel.Text,
@@ -120,6 +123,7 @@ namespace perSONA
                 RightDiagnosis = rightDiagnosis.Value,
                 RightEarDevice = rightDevice.Text,
                 RightHearingLoss = rightHearingLoss.Text,
+                RightHearingEtiology = rightHearingEtiology.Text,
                 RightLossDegree = rightLossDegree.Text,
                 RightManufacturer = rightManufacturer.Text,
                 RightModel = rightModel.Text,
@@ -471,7 +475,65 @@ namespace perSONA
             bindPatient(person);
             
         }
-   
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leftHearingLoss_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leftLossDegree_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox16_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rightLossDegree_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rightHearingEtiology_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leftHearingEtiology_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rightHearingLoss_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void observationBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
