@@ -565,6 +565,9 @@
     <Content Include="data\persona_short_v3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="data\readmeEditfield.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\Sounds\1kHzTone_60dB_SPL.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
