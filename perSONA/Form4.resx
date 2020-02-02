@@ -125,25 +125,25 @@ na página inicial, ou em "Novo Paciente"
 localizado no rodapé da página inicial;
 
 2. Uma nova tela chamada "Módulo de 
-Gerenciamento de Paciente" ira se abrir;
+Gerenciamento de Paciente" irá se abrir;
 
 3. Agora basta preencher os dados do paciente 
 e salvar as alterações.
 
              Ver dados ou deletar pacientes:             
 
-1. Selecione o paciente que desejar na lista da 
-página inicial que está localizada ao lado 
-esquerdo dos botões de criar, ver e deletar 
-paciente;
+1. Selecione o paciente que desejar na lista 
+localizada na página inicial, ao lado esquerdo 
+dos botões de criar, ver e deletar paciente;
 
-2. Clique em no botão que indica a ação que 
-queira realizar.
+2. Clique em "Ver Dados do Paciente" ou em
+"Deletar Paciente", dependendo da ação que
+ queira realizar.
 
 3. É importante ressaltar que ao ver dados de
 paciente podemos navegar pelo cabeçalho da
-página, vendo os resultados de exames já
-realizados pelo mesmo</value>
+página que irá se abrir, vendo os resultados 
+de exames já realizados pelo mesmo</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>                Cornfigurar arquivos de audio:             
@@ -156,7 +156,7 @@ clique em "Área de  edição de arquivos de áudio";
 (os áudios devem estar no formato waw);
 
 3. A direita do botão de seleção do arquivo de 
-áudio podemos digitar a sentença do áudio;
+áudio podemos digitar a sentença do apresentada;
 
          Altera pasta de destino dos resultados:        
 
@@ -184,7 +184,7 @@ acústicas) deve estar conectado;
 clique em "Mostrar / Esconde painel de controle"
 
 3. Se o botão "Conectar VA" estiver na cor verde,
-VA conectado,  se estiver vermelho, siga os 
+VA conectado, caso esteja vermelho, siga os 
 próximos passos;
 
 4. Clique em "Inicia VA"
@@ -193,14 +193,14 @@ próximos passos;
 
                     Realização de testes:
 
-1. Abra a página  inicial e escolher um dos 
+1. Abra a página inicial e escolha um dos 
 itens da "Avaliação de percepção de fala" 
 localizada no canto inferior direito da página;
 
 2. Realize as configurações básicas da fala e 
-ruido, após isso inicie os testes;
+ruido, após isso, inicie os testes;
 
-3. Reproduza os áudios escolhidos e em seguida
+3. Reproduza os áudios escolhidos, em seguida
 selecione as sentenças que o paciente acertou.</value>
   </data>
 </root>
