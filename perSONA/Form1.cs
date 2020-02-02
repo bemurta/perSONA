@@ -26,7 +26,8 @@ namespace perSONA
 
         List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>();
 
-        string speechFolder = "data\\Sounds";
+        string speechFolder = "data\\Sounds\\Speech\\Alcaim1_\\F\\F0001";
+        string testFolder = "data\\Sounds";
         string noiseFile = "data\\Sounds\\Noise\\4talker-babble_ISTS.wav";
         string noiseFolder = "data\\Sounds\\Noise";
         string confFile = "conf/VACore.ini";
@@ -61,7 +62,7 @@ namespace perSONA
             trackBar2.Value = Properties.Settings.Default.USERVOLUME;
             label2.Text = string.Format("Volume: {0} %", trackBar2.Value);
 
-            string[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            string[] filePaths = Directory.GetFiles(@testFolder, "*.wav");
             string[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
             listBox2.DataSource = fileNames;
             comboBox3.DataSource = Directory.GetFiles(@noiseFolder).Select(Path.GetFileName).ToArray();

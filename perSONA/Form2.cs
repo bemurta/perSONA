@@ -81,5 +81,10 @@ namespace perSONA
         {
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            TopMost = true;
+        }
     }
 }

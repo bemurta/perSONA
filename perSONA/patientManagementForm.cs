@@ -545,5 +545,10 @@ namespace perSONA
         {
 
         }
+
+        private void patientManagement_Load(object sender, EventArgs e)
+        {
+            TopMost = true;
+        }
     }
 }

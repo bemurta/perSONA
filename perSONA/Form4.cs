@@ -19,7 +19,7 @@ namespace perSONA
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            
+            TopMost = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
