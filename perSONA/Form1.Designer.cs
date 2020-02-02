@@ -45,11 +45,6 @@ namespace perSONA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.buttonConnect = new System.Windows.Forms.Button();
-            this.buttonDisconnect = new System.Windows.Forms.Button();
-            this.openServer = new System.Windows.Forms.Button();
-            this.textBox = new System.Windows.Forms.TextBox();
             this.reset = new System.Windows.Forms.Button();
             this.createReceiver = new System.Windows.Forms.Button();
             this.createSource2 = new System.Windows.Forms.Button();
@@ -66,9 +61,8 @@ namespace perSONA
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.testSetup = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -94,21 +88,25 @@ namespace perSONA
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cond4 = new System.Windows.Forms.CheckBox();
+            this.cond3 = new System.Windows.Forms.CheckBox();
+            this.cond2 = new System.Windows.Forms.CheckBox();
+            this.cond1 = new System.Windows.Forms.CheckBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.getFolder = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cond1 = new System.Windows.Forms.CheckBox();
-            this.cond2 = new System.Windows.Forms.CheckBox();
-            this.cond3 = new System.Windows.Forms.CheckBox();
-            this.cond4 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.openServer = new System.Windows.Forms.Button();
+            this.buttonDisconnect = new System.Windows.Forms.Button();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -118,56 +116,8 @@ namespace perSONA
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonConnect
-            // 
-            this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonConnect.Enabled = false;
-            this.buttonConnect.Location = new System.Drawing.Point(5, 59);
-            this.buttonConnect.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(170, 35);
-            this.buttonConnect.TabIndex = 1;
-            this.buttonConnect.Text = "Conectar ao VA";
-            this.buttonConnect.UseVisualStyleBackColor = true;
-            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
-            // 
-            // buttonDisconnect
-            // 
-            this.buttonDisconnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonDisconnect.Location = new System.Drawing.Point(183, 59);
-            this.buttonDisconnect.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonDisconnect.Name = "buttonDisconnect";
-            this.buttonDisconnect.Size = new System.Drawing.Size(170, 35);
-            this.buttonDisconnect.TabIndex = 2;
-            this.buttonDisconnect.Text = "Desconectar o VA";
-            this.buttonDisconnect.UseVisualStyleBackColor = true;
-            this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
-            // 
-            // openServer
-            // 
-            this.openServer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.openServer.Location = new System.Drawing.Point(4, 14);
-            this.openServer.Margin = new System.Windows.Forms.Padding(5);
-            this.openServer.Name = "openServer";
-            this.openServer.Size = new System.Drawing.Size(350, 35);
-            this.openServer.TabIndex = 0;
-            this.openServer.Text = "Iniciar VA";
-            this.openServer.UseVisualStyleBackColor = true;
-            this.openServer.Click += new System.EventHandler(this.openServer_Click);
-            // 
-            // textBox
-            // 
-            this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox.Location = new System.Drawing.Point(0, 200);
-            this.textBox.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox.Multiline = true;
-            this.textBox.Name = "textBox";
-            this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox.Size = new System.Drawing.Size(360, 536);
-            this.textBox.TabIndex = 2;
-            this.textBox.Visible = false;
             // 
             // reset
             // 
@@ -198,7 +148,7 @@ namespace perSONA
             this.createSource2.Name = "createSource2";
             this.createSource2.Size = new System.Drawing.Size(177, 30);
             this.createSource2.TabIndex = 3;
-            this.createSource2.Text = "Random signal";
+            this.createSource2.Text = "Sinal aleatório";
             this.createSource2.UseVisualStyleBackColor = true;
             this.createSource2.Click += new System.EventHandler(this.createSource2_Click);
             // 
@@ -341,18 +291,6 @@ namespace perSONA
             this.zedGraphControl1.UseExtendedPrintDialog = true;
             this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.Location = new System.Drawing.Point(5, 104);
-            this.button3.Margin = new System.Windows.Forms.Padding(5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(348, 35);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Configuração de arquivos de audio";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -372,21 +310,15 @@ namespace perSONA
             this.panel1.Size = new System.Drawing.Size(376, 684);
             this.panel1.TabIndex = 1;
             // 
-            // panel3
+            // label3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.buttonConnect);
-            this.panel3.Controls.Add(this.buttonDisconnect);
-            this.panel3.Controls.Add(this.openServer);
-            this.panel3.Location = new System.Drawing.Point(0, 50);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(360, 151);
-            this.panel3.TabIndex = 1;
-            this.panel3.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(129, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(129, 25);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Reprodução";
             // 
             // testSetup
             // 
@@ -683,6 +615,52 @@ namespace perSONA
             this.panel2.Size = new System.Drawing.Size(403, 684);
             this.panel2.TabIndex = 0;
             // 
+            // cond4
+            // 
+            this.cond4.AutoSize = true;
+            this.cond4.Enabled = false;
+            this.cond4.Location = new System.Drawing.Point(330, 642);
+            this.cond4.Name = "cond4";
+            this.cond4.Size = new System.Drawing.Size(60, 21);
+            this.cond4.TabIndex = 9;
+            this.cond4.Text = "Cena";
+            this.cond4.UseVisualStyleBackColor = true;
+            // 
+            // cond3
+            // 
+            this.cond3.AutoSize = true;
+            this.cond3.Enabled = false;
+            this.cond3.Location = new System.Drawing.Point(208, 642);
+            this.cond3.Name = "cond3";
+            this.cond3.Size = new System.Drawing.Size(85, 21);
+            this.cond3.TabIndex = 8;
+            this.cond3.Text = "Receptor";
+            this.cond3.UseVisualStyleBackColor = true;
+            // 
+            // cond2
+            // 
+            this.cond2.AutoSize = true;
+            this.cond2.Checked = true;
+            this.cond2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cond2.Enabled = false;
+            this.cond2.Location = new System.Drawing.Point(107, 642);
+            this.cond2.Name = "cond2";
+            this.cond2.Size = new System.Drawing.Size(64, 21);
+            this.cond2.TabIndex = 7;
+            this.cond2.Text = "Ruído";
+            this.cond2.UseVisualStyleBackColor = true;
+            // 
+            // cond1
+            // 
+            this.cond1.AutoSize = true;
+            this.cond1.Enabled = false;
+            this.cond1.Location = new System.Drawing.Point(12, 642);
+            this.cond1.Name = "cond1";
+            this.cond1.Size = new System.Drawing.Size(58, 21);
+            this.cond1.TabIndex = 6;
+            this.cond1.Text = "Sinal";
+            this.cond1.UseVisualStyleBackColor = true;
+            // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
@@ -741,7 +719,8 @@ namespace perSONA
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackColor = System.Drawing.SystemColors.Window;
+            this.panel4.BackgroundImage = global::perSONA.Properties.Resources.resized_help;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel4.Controls.Add(this.textBox);
             this.panel4.Controls.Add(this.panel3);
@@ -752,61 +731,83 @@ namespace perSONA
             this.panel4.Size = new System.Drawing.Size(360, 736);
             this.panel4.TabIndex = 1;
             // 
-            // cond1
+            // textBox
             // 
-            this.cond1.AutoSize = true;
-            this.cond1.Enabled = false;
-            this.cond1.Location = new System.Drawing.Point(12, 642);
-            this.cond1.Name = "cond1";
-            this.cond1.Size = new System.Drawing.Size(58, 21);
-            this.cond1.TabIndex = 6;
-            this.cond1.Text = "Sinal";
-            this.cond1.UseVisualStyleBackColor = true;
+            this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox.Location = new System.Drawing.Point(0, 200);
+            this.textBox.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox.Multiline = true;
+            this.textBox.Name = "textBox";
+            this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox.Size = new System.Drawing.Size(360, 536);
+            this.textBox.TabIndex = 2;
+            this.textBox.Visible = false;
             // 
-            // cond2
+            // openServer
             // 
-            this.cond2.AutoSize = true;
-            this.cond2.Checked = true;
-            this.cond2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cond2.Enabled = false;
-            this.cond2.Location = new System.Drawing.Point(107, 642);
-            this.cond2.Name = "cond2";
-            this.cond2.Size = new System.Drawing.Size(64, 21);
-            this.cond2.TabIndex = 7;
-            this.cond2.Text = "Ruído";
-            this.cond2.UseVisualStyleBackColor = true;
+            this.openServer.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.openServer.Location = new System.Drawing.Point(4, 14);
+            this.openServer.Margin = new System.Windows.Forms.Padding(5);
+            this.openServer.Name = "openServer";
+            this.openServer.Size = new System.Drawing.Size(350, 35);
+            this.openServer.TabIndex = 0;
+            this.openServer.Text = "Iniciar VA";
+            this.openServer.UseVisualStyleBackColor = true;
+            this.openServer.Click += new System.EventHandler(this.openServer_Click);
             // 
-            // cond3
+            // buttonDisconnect
             // 
-            this.cond3.AutoSize = true;
-            this.cond3.Enabled = false;
-            this.cond3.Location = new System.Drawing.Point(208, 642);
-            this.cond3.Name = "cond3";
-            this.cond3.Size = new System.Drawing.Size(85, 21);
-            this.cond3.TabIndex = 8;
-            this.cond3.Text = "Receptor";
-            this.cond3.UseVisualStyleBackColor = true;
+            this.buttonDisconnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonDisconnect.Location = new System.Drawing.Point(183, 59);
+            this.buttonDisconnect.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonDisconnect.Name = "buttonDisconnect";
+            this.buttonDisconnect.Size = new System.Drawing.Size(170, 35);
+            this.buttonDisconnect.TabIndex = 2;
+            this.buttonDisconnect.Text = "Desconectar o VA";
+            this.buttonDisconnect.UseVisualStyleBackColor = true;
+            this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
             // 
-            // cond4
+            // buttonConnect
             // 
-            this.cond4.AutoSize = true;
-            this.cond4.Enabled = false;
-            this.cond4.Location = new System.Drawing.Point(330, 642);
-            this.cond4.Name = "cond4";
-            this.cond4.Size = new System.Drawing.Size(60, 21);
-            this.cond4.TabIndex = 9;
-            this.cond4.Text = "Cena";
-            this.cond4.UseVisualStyleBackColor = true;
+            this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonConnect.Enabled = false;
+            this.buttonConnect.Location = new System.Drawing.Point(5, 59);
+            this.buttonConnect.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(170, 35);
+            this.buttonConnect.TabIndex = 1;
+            this.buttonConnect.Text = "Conectar ao VA";
+            this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
-            // label3
+            // button3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(129, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 25);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Reprodução";
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button3.Location = new System.Drawing.Point(5, 104);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(348, 35);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Configuração de arquivos de audio";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.BackColor = System.Drawing.SystemColors.Window;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.buttonConnect);
+            this.panel3.Controls.Add(this.buttonDisconnect);
+            this.panel3.Controls.Add(this.openServer);
+            this.panel3.Location = new System.Drawing.Point(0, 50);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(360, 151);
+            this.panel3.TabIndex = 1;
+            this.panel3.Visible = false;
             // 
             // Form1
             // 
@@ -828,7 +829,6 @@ namespace perSONA
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -842,17 +842,13 @@ namespace perSONA
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonConnect;
-        private System.Windows.Forms.Button buttonDisconnect;
-        private System.Windows.Forms.Button openServer;
-        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Button createReceiver;
         private System.Windows.Forms.Button createSource2;
@@ -869,9 +865,7 @@ namespace perSONA
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private ZedGraph.ZedGraphControl zedGraphControl1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button testSetup;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
@@ -908,6 +902,12 @@ namespace perSONA
         private CheckBox cond2;
         private CheckBox cond1;
         private System.Windows.Forms.Label label3;
+        private TextBox textBox;
+        private Panel panel3;
+        private Button button3;
+        private Button buttonConnect;
+        private Button buttonDisconnect;
+        private Button openServer;
     }
 }
 

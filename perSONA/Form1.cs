@@ -26,7 +26,7 @@ namespace perSONA
 
         List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>();
 
-        string speechFolder = "data\\Sounds\\Speech\\Alcaim1_\\F\\F0001";
+        string speechFolder = "data\\Sounds";
         string noiseFile = "data\\Sounds\\Noise\\4talker-babble_ISTS.wav";
         string noiseFolder = "data\\Sounds\\Noise";
         string confFile = "conf/VACore.ini";
