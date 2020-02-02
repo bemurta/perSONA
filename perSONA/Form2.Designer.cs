@@ -118,7 +118,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.4.0 - Edição de DB";
+            this.Text = "Edição de DB";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
