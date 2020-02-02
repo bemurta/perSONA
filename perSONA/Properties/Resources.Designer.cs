@@ -61,6 +61,26 @@ namespace perSONA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap new_help {
+            get {
+                object obj = ResourceManager.GetObject("new_help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap resized_help {
+            get {
+                object obj = ResourceManager.GetObject("resized_help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to data/.
         /// </summary>
         public static string RESULTSFOLDER {

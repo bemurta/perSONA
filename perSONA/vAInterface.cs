@@ -20,7 +20,7 @@ namespace perSONA
         void concatText(string textToAppend);
         VANet getVa();
         void plotSceneGraph(ZedGraph.ZedGraphControl graph, double[] radius, double[] angle);
-        void fillWords(string speechFile, ListBox listbox);
+        void fillWords(string speechFile, ListBox listbox, bool test=false);
         void updatePatientList();
         double getMeanSRT(double[] iterativeSNR);
         void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName);

@@ -26,7 +26,7 @@ namespace perSONA
 
         List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>();
 
-        string speechFolder = "data\\Sounds\\Speech\\Alcaim1_\\F\\F0001";
+        string speechFolder = "data\\Sounds";
         string noiseFile = "data\\Sounds\\Noise\\4talker-babble_ISTS.wav";
         string noiseFolder = "data\\Sounds\\Noise";
         string confFile = "conf/VACore.ini";
@@ -66,7 +66,7 @@ namespace perSONA
             listBox2.DataSource = fileNames;
             comboBox3.DataSource = Directory.GetFiles(@noiseFolder).Select(Path.GetFileName).ToArray();
             comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+            plotSceneGraph(zedGraphControl1, new double[] { 2, 4 }, new double[] { 90, -90});
             textBox.Text = "Started perSONA";
             concatText("New VA Session started.");
 
@@ -232,7 +232,9 @@ namespace perSONA
         private void reset_Click(object sender, EventArgs e)
         {
             concatText("Reset scene");
-
+            cond1.Checked = false;
+            cond3.Checked = false;
+            cond4.Checked = false;
             vA.Reset();
         }
 
@@ -257,6 +259,9 @@ namespace perSONA
                                      xSides, zFront, yHeight, receiverId));
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
+
+            cond3.Checked = true;
+            checkValidScene();
         }
 
         public void concatText(string textToAppend)
@@ -293,12 +298,12 @@ namespace perSONA
 
             createAcousticScene(speechFile, noiseFile);
 
-            string title = getTitle(speechFile);
-            string[] words = title.Split(null);
-
-            listBox1.DataSource = words;
-            listBox1.ClearSelected();
+            fillWords(speechFile, listBox1, true);
+            cond1.Checked = true;
+            checkValidScene();
             concatText(string.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
+
+
         }
 
         private void play2_Click(object sender, EventArgs e)
@@ -373,6 +378,14 @@ namespace perSONA
 
         public void playScene(double radius, double angle, double snr)
         {
+
+            if (!cond4.Checked)
+                {
+                    concatText(String.Format("Scene not ok. Signal: {0}, Noise {1}, Receiver: {2}",
+                                         cond1.Checked, cond2.Checked, cond3.Checked));
+                    
+                }
+
             double[] radiusList = { radius, radius };
             double[] angleList = { angle, 0 };
 
@@ -452,7 +465,7 @@ namespace perSONA
         }
 
 
-        public void fillWords(string speechFile, ListBox listbox)
+        public void fillWords(string speechFile, ListBox listbox, bool test=false)
         {
             string title = getTitle(speechFile);
 
@@ -465,13 +478,20 @@ namespace perSONA
             }
             else
             {
-                const string MSGINFO = "Sinal de fala não contém as palavras cadastradas. Utlize a Área de edição de arquivos de áudio, acessível pelo menu superior para configurar seus arquivos.";
-                const string message = MSGINFO;
-                const string caption = "Detectado erro de configuração!";
-                var result = MessageBox.Show(message, caption,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                concatText(string.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
+                if (test)
+                {
+                    listbox.DataSource = new string[] { "Sinal de teste ou não cadastrado" };
+                }
+                else
+                {
+                    const string MSGINFO = "Sinal de fala não contém as palavras cadastradas. Utlize a Área de edição de arquivos de áudio, acessível pelo menu superior para configurar seus arquivos.";
+                    const string message = MSGINFO;
+                    const string caption = "Detectado erro de configuração!";
+                    var result = MessageBox.Show(message, caption,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    concatText(string.Format("Wrong database format detected - tag: {0}, dur: {1}", getTitle(speechFile), getDuration(speechFile)));
+                }
 
             }
         }
@@ -480,12 +500,12 @@ namespace perSONA
         {
 
             string speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
-
             concatText(speechFile);
             createAcousticScene(speechFile, noiseFile);
 
-            fillWords(speechFile, listBox1);
-
+            fillWords(speechFile, listBox1, true);
+            cond1.Checked = true;
+            checkValidScene();
 
 
         }
@@ -682,30 +702,6 @@ namespace perSONA
             new dbForm(this).Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            double[] angles = getSceneAngles();
-            double[] radius = getSceneDistances();
-            double angleSpeech = checkDirection(radioButton1.Checked, radioButton2.Checked, radioButton3.Checked); ;
-            double radiusSpeech = (double)numericUpDown1.Value;
-            double angleNoise = checkDirection(radioButton4.Checked, radioButton6.Checked, radioButton5.Checked); ;
-            double radiusNoise = (double)numericUpDown2.Value;
-            double snr = (double)numericUpDown3.Value;
-
-            speechPerceptionTest speechTest = new speechPerceptionTest(
-                                                    angleSpeech, radiusSpeech,
-                                                    angleNoise, radiusNoise,
-                                                    speechFolder, noiseFile,
-                                                    textBox1.Text, snr);
-
-            concatText(string.Format("New test: {0}\r\nSpeech R:{1} A:{2}\r\nNoise R:{3} A:{4}",
-                            speechTest.Label, radiusSpeech, angleSpeech, radiusNoise, angleNoise));
-            new speechIterTestForm(speechTest, this).Show();
-
-        }
-
-
         public double getMeanSRT(double[] iterativeSNR)
         {
             List<double> changed = new List<double>();
@@ -884,64 +880,12 @@ namespace perSONA
             }
         }
 
-        private double[] getSceneAngles()
+        private bool checkValidScene()
         {
-            double angleSpeech = checkDirection(radioButton1.Checked, radioButton2.Checked, radioButton3.Checked);
-            double angleNoise = checkDirection(radioButton4.Checked, radioButton6.Checked, radioButton5.Checked);
 
-            double[] angles = { angleSpeech, angleNoise };
+            cond4.Checked = (cond1.Checked & cond2.Checked & cond3.Checked);
 
-            return angles;
-        }
-
-        private double[] getSceneDistances()
-        {
-            double radiusSpeech = (double)numericUpDown1.Value;
-            double radiusNoise = (double)numericUpDown2.Value;
-
-            double[] radius = { radiusSpeech, radiusNoise };
-
-            return radius;
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-            plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+            return cond4.Checked;
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -1066,5 +1010,6 @@ namespace perSONA
         {
 
         }
+
     }
 }
