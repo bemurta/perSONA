@@ -572,7 +572,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "testSetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.4.0 - Módulo de configuração de ensaio";
+            this.Text = "Módulo de Configuração de Ensaio";
             this.Load += new System.EventHandler(this.testSetup_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -456,7 +456,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "speechIterTestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.4.0 - Módulo de aplicação de ensaio";
+            this.Text = "Módulo de Aplicação de Ensaio";
             this.Load += new System.EventHandler(this.speechIterTestForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -535,5 +535,15 @@ namespace perSONA
         {
 
         }
+
+        private void rightDevice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void work_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

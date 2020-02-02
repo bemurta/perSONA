@@ -153,7 +153,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "dbForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.4.0 - Módulo de edição de arquivos de audio";
+            this.Text = "Módulo de Edição de Arquivos de Áudio";
             this.Load += new System.EventHandler(this.dbForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

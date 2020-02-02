@@ -388,7 +388,7 @@ namespace perSONA
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(348, 35);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Configuração de arquivos de audio";
+            this.button3.Text = "Configuração de Arquivos de Áudio";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -827,8 +827,8 @@ namespace perSONA
             // 
             this.patientAreaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientAreaToolStripMenuItem.Name = "patientAreaToolStripMenuItem";
-            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(135, 27);
-            this.patientAreaToolStripMenuItem.Text = "Novo paciente";
+            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
+            this.patientAreaToolStripMenuItem.Text = "Novo Paciente";
             this.patientAreaToolStripMenuItem.Click += new System.EventHandler(this.patientAreaToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
@@ -836,7 +836,7 @@ namespace perSONA
             this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(68, 27);
-            this.helpToolStripMenuItem.Text = "Sobre";
+            this.helpToolStripMenuItem.Text = "Ajuda";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // contactToolStripMenuItem
@@ -951,7 +951,7 @@ namespace perSONA
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(370, 35);
             this.button8.TabIndex = 2;
-            this.button8.Text = "Ver dados do Paciente";
+            this.button8.Text = "Ver Dados do Paciente";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -964,7 +964,7 @@ namespace perSONA
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(370, 35);
             this.button10.TabIndex = 3;
-            this.button10.Text = "Deletar paciente";
+            this.button10.Text = "Deletar Paciente";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -1035,7 +1035,7 @@ namespace perSONA
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.4.0";
+            this.Text = "perSONA 1.5  BETA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();

@@ -110,7 +110,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "licenseExpirationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Licensa expirada";
+            this.Text = "Licensa Expirada";
             this.Load += new System.EventHandler(this.licenseExpirationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

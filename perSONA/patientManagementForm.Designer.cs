@@ -235,7 +235,7 @@
             this.groupBox42.Name = "groupBox42";
             this.groupBox42.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox42.Size = new System.Drawing.Size(376, 65);
-            this.groupBox42.TabIndex = 4;
+            this.groupBox42.TabIndex = 3;
             this.groupBox42.TabStop = false;
             this.groupBox42.Text = "Etiologia";
             // 
@@ -244,18 +244,18 @@
             this.rightHearingEtiology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rightHearingEtiology.FormattingEnabled = true;
             this.rightHearingEtiology.Items.AddRange(new object[] {
-            "Alcoolismo materno ",
-            "Anóxia / hipóxia",
-            "Desordens genéticas ou hereditárias",
-            "Doenças infectocontagiosa (rubéola, sífilis, herpes, etc)",
-            "Exposição contínua a ruídos ou sons muito altos",
-            "Hipertensão / diabetes",
+            "Alcoolismo Materno ",
+            "Anóxia / Hipóxia",
+            "Desordens Genéticas ou Hereditárias",
+            "Doenças Infectocontagiosa (rubéola, sífilis, herpes, etc)",
+            "Exposição Contínua a Ruídos ou Sons Muito Altos",
+            "Hipertensão / Diabetes",
             "Infecções (meningite, sarampo, caxumba, etc)",
-            "Medicamentos ototóxicos ",
+            "Medicamentos Ototóxicos ",
             "Prematuridade ",
-            "Sífilis adquirida",
-            "Traumatismos cranianos",
-            "Uso de drogas durante a gravidez",
+            "Sífilis Adquirida",
+            "Traumatismos Cranianos",
+            "Uso de Drogas Durante a Gravidez",
             "Outros",
             "Nenhum"});
             this.rightHearingEtiology.Location = new System.Drawing.Point(10, 26);
@@ -274,7 +274,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox3.Size = new System.Drawing.Size(376, 65);
-            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Etiologia";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
@@ -284,18 +284,18 @@
             this.leftHearingEtiology.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.leftHearingEtiology.FormattingEnabled = true;
             this.leftHearingEtiology.Items.AddRange(new object[] {
-            "Alcoolismo materno ",
-            "Anóxia / hipóxia",
-            "Desordens genéticas ou hereditárias",
-            "Doenças infectocontagiosa (rubéola, sífilis, herpes, etc)",
-            "Exposição contínua a ruídos ou sons muito altos",
-            "Hipertensão / diabetes",
+            "Alcoolismo Materno ",
+            "Anóxia / Hipóxia",
+            "Desordens Genéticas ou Hereditárias",
+            "Doenças Infectocontagiosa (rubéola, sífilis, herpes, etc)",
+            "Exposição Contínua a Ruídos ou Sons Muito Altos",
+            "Hipertensão / Diabetes",
             "Infecções (meningite, sarampo, caxumba, etc)",
-            "Medicamentos ototóxicos ",
+            "Medicamentos Ototóxicos ",
             "Prematuridade ",
-            "Sífilis adquirida",
-            "Traumatismos cranianos",
-            "Uso de drogas durante a gravidez",
+            "Sífilis Adquirida",
+            "Traumatismos Cranianos",
+            "Uso de Drogas Durante a Gravidez",
             "Outros",
             "Nenhum"});
             this.leftHearingEtiology.Location = new System.Drawing.Point(10, 26);
@@ -324,7 +324,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 22;
+            this.label1.TabIndex = 21;
             this.label1.Text = "Lado esquerdo";
             // 
             // groupBox41
@@ -336,7 +336,7 @@
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox41.Size = new System.Drawing.Size(771, 115);
-            this.groupBox41.TabIndex = 21;
+            this.groupBox41.TabIndex = 20;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Outras condições";
             // 
@@ -359,7 +359,7 @@
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox19.Size = new System.Drawing.Size(376, 65);
-            this.groupBox19.TabIndex = 1;
+            this.groupBox19.TabIndex = 0;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Tipo de perda";
             // 
@@ -368,9 +368,9 @@
             this.leftHearingLoss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.leftHearingLoss.FormattingEnabled = true;
             this.leftHearingLoss.Items.AddRange(new object[] {
-            "Perda auditiva Condutiva",
-            "Perda auditiva sensório-neural",
-            "Perda auditiva mista",
+            "Perda Auditiva Condutiva",
+            "Perda Auditiva Sensório-Neural",
+            "Perda Auditiva Mista",
             "Outro",
             "Nenhum"});
             this.leftHearingLoss.Location = new System.Drawing.Point(10, 26);
@@ -389,7 +389,7 @@
             this.groupBox36.Name = "groupBox36";
             this.groupBox36.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox36.Size = new System.Drawing.Size(376, 65);
-            this.groupBox36.TabIndex = 2;
+            this.groupBox36.TabIndex = 1;
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Tipo de perda";
             // 
@@ -398,9 +398,9 @@
             this.rightHearingLoss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rightHearingLoss.FormattingEnabled = true;
             this.rightHearingLoss.Items.AddRange(new object[] {
-            "Perda auditiva Condutiva",
-            "Perda auditiva sensório-neural",
-            "Perda auditiva mista",
+            "Perda Auditiva Condutiva",
+            "Perda Auditiva Sensório-Neural",
+            "Perda Auditiva Mista",
             "Outro",
             "Nenhum"});
             this.rightHearingLoss.Location = new System.Drawing.Point(10, 26);
@@ -414,12 +414,12 @@
             // 
             this.groupBox37.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox37.Controls.Add(this.rightPrivationYears);
-            this.groupBox37.Location = new System.Drawing.Point(610, 327);
+            this.groupBox37.Location = new System.Drawing.Point(612, 327);
             this.groupBox37.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox37.Name = "groupBox37";
             this.groupBox37.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox37.Size = new System.Drawing.Size(181, 65);
-            this.groupBox37.TabIndex = 12;
+            this.groupBox37.TabIndex = 11;
             this.groupBox37.TabStop = false;
             this.groupBox37.Text = "Anos de privação";
             // 
@@ -436,12 +436,12 @@
             // 
             this.groupBox38.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox38.Controls.Add(this.rightDiagnosis);
-            this.groupBox38.Location = new System.Drawing.Point(419, 327);
+            this.groupBox38.Location = new System.Drawing.Point(417, 327);
             this.groupBox38.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox38.Size = new System.Drawing.Size(181, 65);
-            this.groupBox38.TabIndex = 10;
+            this.groupBox38.TabIndex = 9;
             this.groupBox38.TabStop = false;
             this.groupBox38.Text = "Diagnóstico";
             // 
@@ -464,7 +464,7 @@
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox39.Size = new System.Drawing.Size(376, 65);
-            this.groupBox39.TabIndex = 8;
+            this.groupBox39.TabIndex = 7;
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "Pré ou pós lingual?";
             this.groupBox39.Enter += new System.EventHandler(this.groupBox39_Enter);
@@ -492,7 +492,7 @@
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox40.Size = new System.Drawing.Size(376, 65);
-            this.groupBox40.TabIndex = 6;
+            this.groupBox40.TabIndex = 5;
             this.groupBox40.TabStop = false;
             this.groupBox40.Text = "Grau da perda";
             // 
@@ -506,7 +506,6 @@
             "Moderadamente severo",
             "Severo",
             "Profundo",
-            "Outro",
             "Nenhum"});
             this.rightLossDegree.Location = new System.Drawing.Point(10, 26);
             this.rightLossDegree.Margin = new System.Windows.Forms.Padding(5);
@@ -519,12 +518,12 @@
             // 
             this.groupBox21.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox21.Controls.Add(this.leftPrivationYears);
-            this.groupBox21.Location = new System.Drawing.Point(226, 327);
+            this.groupBox21.Location = new System.Drawing.Point(215, 327);
             this.groupBox21.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox21.Size = new System.Drawing.Size(181, 65);
-            this.groupBox21.TabIndex = 11;
+            this.groupBox21.TabIndex = 10;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Anos de privação";
             // 
@@ -546,7 +545,7 @@
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox15.Size = new System.Drawing.Size(181, 65);
-            this.groupBox15.TabIndex = 9;
+            this.groupBox15.TabIndex = 8;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Diagnóstico";
             // 
@@ -569,7 +568,7 @@
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox16.Size = new System.Drawing.Size(376, 65);
-            this.groupBox16.TabIndex = 7;
+            this.groupBox16.TabIndex = 6;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Pré ou pós lingual?";
             this.groupBox16.Enter += new System.EventHandler(this.groupBox16_Enter);
@@ -597,7 +596,7 @@
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox17.Size = new System.Drawing.Size(376, 65);
-            this.groupBox17.TabIndex = 5;
+            this.groupBox17.TabIndex = 4;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Grau da perda";
             this.groupBox17.Enter += new System.EventHandler(this.groupBox17_Enter);
@@ -612,7 +611,6 @@
             "Moderadamente severo",
             "Severo",
             "Profundo",
-            "Outro",
             "Nenhum"});
             this.leftLossDegree.Location = new System.Drawing.Point(10, 26);
             this.leftLossDegree.Margin = new System.Windows.Forms.Padding(5);
@@ -625,12 +623,12 @@
             // 
             this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox5.Controls.Add(this.rightActivationDate);
-            this.groupBox5.Location = new System.Drawing.Point(609, 402);
+            this.groupBox5.Location = new System.Drawing.Point(612, 402);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox5.Size = new System.Drawing.Size(181, 65);
-            this.groupBox5.TabIndex = 14;
+            this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Data de Ativação";
             // 
@@ -648,12 +646,12 @@
             // 
             this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox6.Controls.Add(this.rightModel);
-            this.groupBox6.Location = new System.Drawing.Point(419, 471);
+            this.groupBox6.Location = new System.Drawing.Point(612, 471);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox6.Size = new System.Drawing.Size(181, 65);
-            this.groupBox6.TabIndex = 20;
+            this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Modelo";
             // 
@@ -661,6 +659,23 @@
             // 
             this.rightModel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rightModel.FormattingEnabled = true;
+            this.rightModel.Items.AddRange(new object[] {
+            "AASI Intra Canal - CIC",
+            "AASI Intra Canal - ITC",
+            "AASI Invisível - IIC",
+            "AASI Open Fit",
+            "AASI Receptor no Canal - RIC",
+            "AASI Retro – BTE",
+            "IC Kanso",
+            "IC Naída CI Q90",
+            "IC Neptune",
+            "IC Neuro 2",
+            "IC Nucleus 6",
+            "IC Nucleus 7",
+            "IC RONDO 2",
+            "IC SONNET",
+            "Outro",
+            "Nenhum"});
             this.rightModel.Location = new System.Drawing.Point(10, 26);
             this.rightModel.Margin = new System.Windows.Forms.Padding(5);
             this.rightModel.Name = "rightModel";
@@ -671,12 +686,12 @@
             // 
             this.groupBox7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox7.Controls.Add(this.rightManufacturer);
-            this.groupBox7.Location = new System.Drawing.Point(610, 471);
+            this.groupBox7.Location = new System.Drawing.Point(417, 471);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox7.Size = new System.Drawing.Size(181, 65);
-            this.groupBox7.TabIndex = 18;
+            this.groupBox7.TabIndex = 17;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Marca";
             // 
@@ -684,6 +699,24 @@
             // 
             this.rightManufacturer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.rightManufacturer.FormattingEnabled = true;
+            this.rightManufacturer.Items.AddRange(new object[] {
+            "AASI Beltone",
+            "AASI Bernafon",
+            "AASI Maico",
+            "AASI Oticon",
+            "AASI Phonak",
+            "AASI ReSound",
+            "AASI Rexton",
+            "AASI Signia",
+            "AASI Starkey",
+            "AASI Unitron",
+            "AASI Widex",
+            "IC Advanced Bionics",
+            "IC Cochlear",
+            "IC Med-El",
+            "IC Oticon Medical",
+            "Outra",
+            "Nenhum"});
             this.rightManufacturer.Location = new System.Drawing.Point(10, 26);
             this.rightManufacturer.Margin = new System.Windows.Forms.Padding(5);
             this.rightManufacturer.Name = "rightManufacturer";
@@ -694,12 +727,12 @@
             // 
             this.groupBox8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox8.Controls.Add(this.rightDevice);
-            this.groupBox8.Location = new System.Drawing.Point(419, 402);
+            this.groupBox8.Location = new System.Drawing.Point(417, 402);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox8.Size = new System.Drawing.Size(181, 65);
-            this.groupBox8.TabIndex = 16;
+            this.groupBox8.TabIndex = 13;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Dispositivo";
             // 
@@ -709,25 +742,26 @@
             this.rightDevice.FormattingEnabled = true;
             this.rightDevice.Items.AddRange(new object[] {
             "AASI",
+            "Bimodal",
             "IC",
-            "BIMODAL",
             "Nenhum"});
             this.rightDevice.Location = new System.Drawing.Point(10, 26);
             this.rightDevice.Margin = new System.Windows.Forms.Padding(5);
             this.rightDevice.Name = "rightDevice";
             this.rightDevice.Size = new System.Drawing.Size(158, 28);
             this.rightDevice.TabIndex = 0;
+            this.rightDevice.SelectedIndexChanged += new System.EventHandler(this.rightDevice_SelectedIndexChanged);
             // 
             // groupBox4
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox4.Controls.Add(this.leftActivationDate);
-            this.groupBox4.Location = new System.Drawing.Point(20, 402);
+            this.groupBox4.Location = new System.Drawing.Point(215, 402);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox4.Size = new System.Drawing.Size(181, 65);
-            this.groupBox4.TabIndex = 13;
+            this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Data de Ativação";
             // 
@@ -745,12 +779,12 @@
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox2.Controls.Add(this.leftModel);
-            this.groupBox2.Location = new System.Drawing.Point(226, 471);
+            this.groupBox2.Location = new System.Drawing.Point(215, 471);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox2.Size = new System.Drawing.Size(181, 65);
-            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modelo";
             // 
@@ -758,6 +792,23 @@
             // 
             this.leftModel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.leftModel.FormattingEnabled = true;
+            this.leftModel.Items.AddRange(new object[] {
+            "AASI Intra Canal - CIC",
+            "AASI Intra Canal - ITC",
+            "AASI Invisível - IIC",
+            "AASI Open Fit",
+            "AASI Receptor no Canal - RIC",
+            "AASI Retro – BTE",
+            "IC Kanso",
+            "IC Naída CI Q90",
+            "IC Neptune",
+            "IC Neuro 2",
+            "IC Nucleus 6",
+            "IC Nucleus 7",
+            "IC RONDO 2",
+            "IC SONNET",
+            "Outro",
+            "Nenhum"});
             this.leftModel.Location = new System.Drawing.Point(10, 26);
             this.leftModel.Margin = new System.Windows.Forms.Padding(5);
             this.leftModel.Name = "leftModel";
@@ -773,7 +824,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox1.Size = new System.Drawing.Size(181, 65);
-            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marca";
             // 
@@ -781,6 +832,24 @@
             // 
             this.leftManufacturer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.leftManufacturer.FormattingEnabled = true;
+            this.leftManufacturer.Items.AddRange(new object[] {
+            "AASI Beltone",
+            "AASI Bernafon",
+            "AASI Maico",
+            "AASI Oticon",
+            "AASI Phonak",
+            "AASI ReSound",
+            "AASI Rexton",
+            "AASI Signia",
+            "AASI Starkey",
+            "AASI Unitron",
+            "AASI Widex",
+            "IC Advanced Bionics",
+            "IC Cochlear",
+            "IC Med-El",
+            "IC Oticon Medical",
+            "Outra",
+            "Nenhum"});
             this.leftManufacturer.Location = new System.Drawing.Point(10, 26);
             this.leftManufacturer.Margin = new System.Windows.Forms.Padding(5);
             this.leftManufacturer.Name = "leftManufacturer";
@@ -791,12 +860,12 @@
             // 
             this.leftEarDevice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.leftEarDevice.Controls.Add(this.leftDevice);
-            this.leftEarDevice.Location = new System.Drawing.Point(226, 402);
+            this.leftEarDevice.Location = new System.Drawing.Point(20, 402);
             this.leftEarDevice.Margin = new System.Windows.Forms.Padding(5);
             this.leftEarDevice.Name = "leftEarDevice";
             this.leftEarDevice.Padding = new System.Windows.Forms.Padding(5);
             this.leftEarDevice.Size = new System.Drawing.Size(181, 65);
-            this.leftEarDevice.TabIndex = 15;
+            this.leftEarDevice.TabIndex = 12;
             this.leftEarDevice.TabStop = false;
             this.leftEarDevice.Text = "Dispositivo";
             // 
@@ -806,8 +875,8 @@
             this.leftDevice.FormattingEnabled = true;
             this.leftDevice.Items.AddRange(new object[] {
             "AASI",
+            "Bimodal",
             "IC",
-            "BIMODAL",
             "Nenhum"});
             this.leftDevice.Location = new System.Drawing.Point(10, 26);
             this.leftDevice.Margin = new System.Windows.Forms.Padding(5);
@@ -852,18 +921,21 @@
             this.work.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.work.FormattingEnabled = true;
             this.work.Items.AddRange(new object[] {
-            "Engenharia",
-            "Fonoaudiologia",
-            "Estudante",
-            "Professor",
+            "Área da Saúde",
+            "Área de Engenharia",
+            "Comerciante",
             "Construtor",
-            "Serviço Público",
-            "Programador"});
+            "Estudante",
+            "Operário em Fábricas",
+            "Servidor Público",
+            "Trabalho de Escritório",
+            "Outro"});
             this.work.Location = new System.Drawing.Point(10, 26);
             this.work.Margin = new System.Windows.Forms.Padding(5);
             this.work.Name = "work";
             this.work.Size = new System.Drawing.Size(410, 28);
             this.work.TabIndex = 0;
+            this.work.SelectedIndexChanged += new System.EventHandler(this.work_SelectedIndexChanged);
             // 
             // groupBox20
             // 
@@ -907,13 +979,13 @@
             this.motivationBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.motivationBox.FormattingEnabled = true;
             this.motivationBox.Items.AddRange(new object[] {
-            "Preocupado",
             "Confiante",
             "Disposto",
-            "Frustrado",
             "Empolgado",
+            "Frustrado",
+            "Incluído",
             "Isolado",
-            "Incluído"});
+            "Preocupado"});
             this.motivationBox.Location = new System.Drawing.Point(10, 26);
             this.motivationBox.Margin = new System.Windows.Forms.Padding(5);
             this.motivationBox.Name = "motivationBox";
@@ -985,7 +1057,7 @@
             this.sexTab.Items.AddRange(new object[] {
             "Masculino",
             "Feminino",
-            "Prefere não informar",
+            "Prefere Não Informar",
             "Outro"});
             this.sexTab.Location = new System.Drawing.Point(10, 26);
             this.sexTab.Margin = new System.Windows.Forms.Padding(5);
@@ -1438,8 +1510,8 @@
             this.audiometrySide.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.audiometrySide.FormattingEnabled = true;
             this.audiometrySide.Items.AddRange(new object[] {
-            "Esquerdo",
-            "Direito"});
+            "Direito",
+            "Esquerdo"});
             this.audiometrySide.Location = new System.Drawing.Point(10, 26);
             this.audiometrySide.Margin = new System.Windows.Forms.Padding(5);
             this.audiometrySide.Name = "audiometrySide";
@@ -1465,9 +1537,9 @@
             this.Conduction.FormattingEnabled = true;
             this.Conduction.Items.AddRange(new object[] {
             "Aérea",
-            "Óssea",
             "Aérea c/ AASI",
-            "Aérea c/ IC"});
+            "Aérea c/ IC",
+            "Óssea"});
             this.Conduction.Location = new System.Drawing.Point(10, 26);
             this.Conduction.Margin = new System.Windows.Forms.Padding(5);
             this.Conduction.Name = "Conduction";
@@ -1601,7 +1673,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "patientManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "z";
+            this.Text = "Módulo de Gerenciamento de Paciente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox42.ResumeLayout(false);

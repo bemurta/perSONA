@@ -105,7 +105,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.4.0 - Select Hardware";
+            this.Text = "Seleção de Hardware";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
