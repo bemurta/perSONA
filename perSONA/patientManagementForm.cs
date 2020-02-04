@@ -54,6 +54,7 @@ namespace perSONA
             bornDate.Value = person.BornDate;
             motivationBox.SelectedItem = person.Motivation;
             observationBox.Text = person.Observations;
+            DDIBox.Text = person.DDI;
             phoneBox.Text = person.PhoneNumber;
             scholarBox.Text = person.Scolarity;
             sexTab.Text = person.Sex;
@@ -103,6 +104,7 @@ namespace perSONA
                 BornDate = bornDate.Value,
                 Motivation = motivationBox.SelectedItem.ToString(),
                 Observations = observationBox.Text,
+                DDI = DDIBox.Text,
                 PhoneNumber = phoneBox.Text,
                 Scolarity = scholarBox.Text,
                 Sex = sexTab.Text,
