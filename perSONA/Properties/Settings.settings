@@ -15,7 +15,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="FIRST_USE_DATA" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2019-11-17</Value>
+      <Value Profile="(Default)">2019-10-07</Value>
     </Setting>
     <Setting Name="FIRST_USE" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

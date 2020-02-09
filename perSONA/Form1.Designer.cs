@@ -99,11 +99,11 @@ namespace perSONA
             this.button9 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.openServer = new System.Windows.Forms.Button();
-            this.buttonDisconnect = new System.Windows.Forms.Button();
-            this.buttonConnect = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.buttonDisconnect = new System.Windows.Forms.Button();
+            this.openServer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -270,7 +270,7 @@ namespace perSONA
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 30);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Select signal";
+            this.button1.Text = "Usar sinal selecionado";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -422,7 +422,7 @@ namespace perSONA
             // 
             this.patientAreaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientAreaToolStripMenuItem.Name = "patientAreaToolStripMenuItem";
-            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
+            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(109, 23);
             this.patientAreaToolStripMenuItem.Text = "Novo Paciente";
             this.patientAreaToolStripMenuItem.Click += new System.EventHandler(this.patientAreaToolStripMenuItem_Click);
             // 
@@ -430,7 +430,7 @@ namespace perSONA
             // 
             this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(68, 27);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 23);
             this.helpToolStripMenuItem.Text = "Ajuda";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
@@ -743,55 +743,6 @@ namespace perSONA
             this.textBox.TabIndex = 2;
             this.textBox.Visible = false;
             // 
-            // openServer
-            // 
-            this.openServer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.openServer.Location = new System.Drawing.Point(4, 14);
-            this.openServer.Margin = new System.Windows.Forms.Padding(5);
-            this.openServer.Name = "openServer";
-            this.openServer.Size = new System.Drawing.Size(350, 35);
-            this.openServer.TabIndex = 0;
-            this.openServer.Text = "Iniciar VA";
-            this.openServer.UseVisualStyleBackColor = true;
-            this.openServer.Click += new System.EventHandler(this.openServer_Click);
-            // 
-            // buttonDisconnect
-            // 
-            this.buttonDisconnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonDisconnect.Location = new System.Drawing.Point(183, 59);
-            this.buttonDisconnect.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonDisconnect.Name = "buttonDisconnect";
-            this.buttonDisconnect.Size = new System.Drawing.Size(170, 35);
-            this.buttonDisconnect.TabIndex = 2;
-            this.buttonDisconnect.Text = "Desconectar o VA";
-            this.buttonDisconnect.UseVisualStyleBackColor = true;
-            this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
-            // 
-            // buttonConnect
-            // 
-            this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonConnect.Enabled = false;
-            this.buttonConnect.Location = new System.Drawing.Point(5, 59);
-            this.buttonConnect.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(170, 35);
-            this.buttonConnect.TabIndex = 1;
-            this.buttonConnect.Text = "Conectar ao VA";
-            this.buttonConnect.UseVisualStyleBackColor = true;
-            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.Location = new System.Drawing.Point(5, 104);
-            this.button3.Margin = new System.Windows.Forms.Padding(5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(348, 35);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Configuração de arquivos de audio";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -808,6 +759,55 @@ namespace perSONA
             this.panel3.Size = new System.Drawing.Size(360, 151);
             this.panel3.TabIndex = 1;
             this.panel3.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button3.Location = new System.Drawing.Point(5, 104);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(348, 35);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Configuração de arquivos de audio";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // buttonConnect
+            // 
+            this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonConnect.Enabled = false;
+            this.buttonConnect.Location = new System.Drawing.Point(5, 59);
+            this.buttonConnect.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(170, 35);
+            this.buttonConnect.TabIndex = 1;
+            this.buttonConnect.Text = "Conectar ao VA";
+            this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            // 
+            // buttonDisconnect
+            // 
+            this.buttonDisconnect.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonDisconnect.Location = new System.Drawing.Point(183, 59);
+            this.buttonDisconnect.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonDisconnect.Name = "buttonDisconnect";
+            this.buttonDisconnect.Size = new System.Drawing.Size(170, 35);
+            this.buttonDisconnect.TabIndex = 2;
+            this.buttonDisconnect.Text = "Desconectar o VA";
+            this.buttonDisconnect.UseVisualStyleBackColor = true;
+            this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
+            // 
+            // openServer
+            // 
+            this.openServer.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.openServer.Location = new System.Drawing.Point(4, 14);
+            this.openServer.Margin = new System.Windows.Forms.Padding(5);
+            this.openServer.Name = "openServer";
+            this.openServer.Size = new System.Drawing.Size(350, 35);
+            this.openServer.TabIndex = 0;
+            this.openServer.Text = "Iniciar VA";
+            this.openServer.UseVisualStyleBackColor = true;
+            this.openServer.Click += new System.EventHandler(this.openServer_Click);
             // 
             // Form1
             // 

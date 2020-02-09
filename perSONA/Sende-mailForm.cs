@@ -23,9 +23,9 @@ namespace perSONA
         {
 
             System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
-            mail.Bcc.Add (From.Text);                              // put the from address here
             
             mail.To.Add("softwarepersona@gmail.com") ;             // put to address here
+            mail.Bcc.Add (From.Text);                              // put the from address here
             
             mail.Subject = Subject.Text;                           // put subject here	
             mail.SubjectEncoding = System.Text.Encoding.UTF8;      // change text to type UTF8
@@ -48,14 +48,17 @@ namespace perSONA
 
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 Client.Send(mail);
                 MessageBox.Show("Mensagem Enviada");
             }
             catch (Exception) 
             {
+                Cursor.Current = Cursors.WaitCursor;
                 MessageBox.Show("Erro no Envio");
             }
-
+            Cursor.Current = Cursors.Default;
+            Close();
             // In case of doubt -> https://www.youtube.com/watch?v=WKyVqmbCVc0   and    https://www.hostinger.com.br/tutoriais/aprenda-a-utilizar-o-smtp-google/
         }
 
