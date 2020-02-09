@@ -132,6 +132,7 @@
             this.testInfo = new System.Windows.Forms.TextBox();
             this.testsGraph = new ZedGraph.ZedGraphControl();
             this.testsBox = new System.Windows.Forms.ListBox();
+            this.DDIBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox42.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -261,7 +262,7 @@
             this.rightHearingEtiology.Location = new System.Drawing.Point(10, 26);
             this.rightHearingEtiology.Margin = new System.Windows.Forms.Padding(5);
             this.rightHearingEtiology.Name = "rightHearingEtiology";
-            this.rightHearingEtiology.Size = new System.Drawing.Size(354, 25);
+            this.rightHearingEtiology.Size = new System.Drawing.Size(354, 28);
             this.rightHearingEtiology.TabIndex = 0;
             this.rightHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.rightHearingEtiology_SelectedIndexChanged);
             // 
@@ -301,7 +302,7 @@
             this.leftHearingEtiology.Location = new System.Drawing.Point(10, 26);
             this.leftHearingEtiology.Margin = new System.Windows.Forms.Padding(5);
             this.leftHearingEtiology.Name = "leftHearingEtiology";
-            this.leftHearingEtiology.Size = new System.Drawing.Size(354, 25);
+            this.leftHearingEtiology.Size = new System.Drawing.Size(354, 28);
             this.leftHearingEtiology.TabIndex = 0;
             this.leftHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.leftHearingEtiology_SelectedIndexChanged);
             // 
@@ -312,7 +313,7 @@
             this.label2.Location = new System.Drawing.Point(550, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 17);
+            this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "Lado direito";
             // 
@@ -323,7 +324,7 @@
             this.label1.Location = new System.Drawing.Point(150, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 17);
+            this.label1.Size = new System.Drawing.Size(120, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Lado esquerdo";
             // 
@@ -371,12 +372,11 @@
             "Perda Auditiva Condutiva",
             "Perda Auditiva Sensório-Neural",
             "Perda Auditiva Mista",
-            "Outro",
             "Nenhum"});
             this.leftHearingLoss.Location = new System.Drawing.Point(10, 26);
             this.leftHearingLoss.Margin = new System.Windows.Forms.Padding(5);
             this.leftHearingLoss.Name = "leftHearingLoss";
-            this.leftHearingLoss.Size = new System.Drawing.Size(354, 25);
+            this.leftHearingLoss.Size = new System.Drawing.Size(354, 28);
             this.leftHearingLoss.TabIndex = 0;
             this.leftHearingLoss.SelectedIndexChanged += new System.EventHandler(this.leftHearingLoss_SelectedIndexChanged);
             // 
@@ -401,12 +401,11 @@
             "Perda Auditiva Condutiva",
             "Perda Auditiva Sensório-Neural",
             "Perda Auditiva Mista",
-            "Outro",
             "Nenhum"});
             this.rightHearingLoss.Location = new System.Drawing.Point(10, 26);
             this.rightHearingLoss.Margin = new System.Windows.Forms.Padding(5);
             this.rightHearingLoss.Name = "rightHearingLoss";
-            this.rightHearingLoss.Size = new System.Drawing.Size(354, 25);
+            this.rightHearingLoss.Size = new System.Drawing.Size(354, 28);
             this.rightHearingLoss.TabIndex = 0;
             this.rightHearingLoss.SelectedIndexChanged += new System.EventHandler(this.rightHearingLoss_SelectedIndexChanged);
             // 
@@ -429,7 +428,7 @@
             this.rightPrivationYears.Location = new System.Drawing.Point(10, 26);
             this.rightPrivationYears.Margin = new System.Windows.Forms.Padding(5);
             this.rightPrivationYears.Name = "rightPrivationYears";
-            this.rightPrivationYears.Size = new System.Drawing.Size(158, 23);
+            this.rightPrivationYears.Size = new System.Drawing.Size(158, 27);
             this.rightPrivationYears.TabIndex = 0;
             // 
             // groupBox38
@@ -452,7 +451,7 @@
             this.rightDiagnosis.Location = new System.Drawing.Point(10, 26);
             this.rightDiagnosis.Margin = new System.Windows.Forms.Padding(5);
             this.rightDiagnosis.Name = "rightDiagnosis";
-            this.rightDiagnosis.Size = new System.Drawing.Size(158, 23);
+            this.rightDiagnosis.Size = new System.Drawing.Size(158, 27);
             this.rightDiagnosis.TabIndex = 0;
             // 
             // groupBox39
@@ -480,7 +479,7 @@
             this.rightPostLingual.Location = new System.Drawing.Point(10, 26);
             this.rightPostLingual.Margin = new System.Windows.Forms.Padding(5);
             this.rightPostLingual.Name = "rightPostLingual";
-            this.rightPostLingual.Size = new System.Drawing.Size(354, 25);
+            this.rightPostLingual.Size = new System.Drawing.Size(354, 28);
             this.rightPostLingual.TabIndex = 0;
             // 
             // groupBox40
@@ -510,7 +509,7 @@
             this.rightLossDegree.Location = new System.Drawing.Point(10, 26);
             this.rightLossDegree.Margin = new System.Windows.Forms.Padding(5);
             this.rightLossDegree.Name = "rightLossDegree";
-            this.rightLossDegree.Size = new System.Drawing.Size(354, 25);
+            this.rightLossDegree.Size = new System.Drawing.Size(354, 28);
             this.rightLossDegree.TabIndex = 0;
             this.rightLossDegree.SelectedIndexChanged += new System.EventHandler(this.rightLossDegree_SelectedIndexChanged);
             // 
@@ -533,7 +532,7 @@
             this.leftPrivationYears.Location = new System.Drawing.Point(10, 26);
             this.leftPrivationYears.Margin = new System.Windows.Forms.Padding(5);
             this.leftPrivationYears.Name = "leftPrivationYears";
-            this.leftPrivationYears.Size = new System.Drawing.Size(158, 23);
+            this.leftPrivationYears.Size = new System.Drawing.Size(158, 27);
             this.leftPrivationYears.TabIndex = 0;
             // 
             // groupBox15
@@ -556,7 +555,7 @@
             this.leftDiagnosis.Location = new System.Drawing.Point(10, 26);
             this.leftDiagnosis.Margin = new System.Windows.Forms.Padding(5);
             this.leftDiagnosis.Name = "leftDiagnosis";
-            this.leftDiagnosis.Size = new System.Drawing.Size(158, 23);
+            this.leftDiagnosis.Size = new System.Drawing.Size(158, 27);
             this.leftDiagnosis.TabIndex = 0;
             // 
             // groupBox16
@@ -584,7 +583,7 @@
             this.leftPostLingual.Location = new System.Drawing.Point(10, 26);
             this.leftPostLingual.Margin = new System.Windows.Forms.Padding(5);
             this.leftPostLingual.Name = "leftPostLingual";
-            this.leftPostLingual.Size = new System.Drawing.Size(354, 25);
+            this.leftPostLingual.Size = new System.Drawing.Size(354, 28);
             this.leftPostLingual.TabIndex = 0;
             // 
             // groupBox17
@@ -615,7 +614,7 @@
             this.leftLossDegree.Location = new System.Drawing.Point(10, 26);
             this.leftLossDegree.Margin = new System.Windows.Forms.Padding(5);
             this.leftLossDegree.Name = "leftLossDegree";
-            this.leftLossDegree.Size = new System.Drawing.Size(354, 25);
+            this.leftLossDegree.Size = new System.Drawing.Size(354, 28);
             this.leftLossDegree.TabIndex = 0;
             this.leftLossDegree.SelectedIndexChanged += new System.EventHandler(this.leftLossDegree_SelectedIndexChanged);
             // 
@@ -639,7 +638,7 @@
             this.rightActivationDate.Location = new System.Drawing.Point(10, 26);
             this.rightActivationDate.Margin = new System.Windows.Forms.Padding(5);
             this.rightActivationDate.Name = "rightActivationDate";
-            this.rightActivationDate.Size = new System.Drawing.Size(158, 23);
+            this.rightActivationDate.Size = new System.Drawing.Size(158, 27);
             this.rightActivationDate.TabIndex = 0;
             // 
             // groupBox6
@@ -679,7 +678,7 @@
             this.rightModel.Location = new System.Drawing.Point(10, 26);
             this.rightModel.Margin = new System.Windows.Forms.Padding(5);
             this.rightModel.Name = "rightModel";
-            this.rightModel.Size = new System.Drawing.Size(158, 25);
+            this.rightModel.Size = new System.Drawing.Size(158, 28);
             this.rightModel.TabIndex = 0;
             // 
             // groupBox7
@@ -720,7 +719,7 @@
             this.rightManufacturer.Location = new System.Drawing.Point(10, 26);
             this.rightManufacturer.Margin = new System.Windows.Forms.Padding(5);
             this.rightManufacturer.Name = "rightManufacturer";
-            this.rightManufacturer.Size = new System.Drawing.Size(158, 25);
+            this.rightManufacturer.Size = new System.Drawing.Size(158, 28);
             this.rightManufacturer.TabIndex = 0;
             // 
             // groupBox8
@@ -748,7 +747,7 @@
             this.rightDevice.Location = new System.Drawing.Point(10, 26);
             this.rightDevice.Margin = new System.Windows.Forms.Padding(5);
             this.rightDevice.Name = "rightDevice";
-            this.rightDevice.Size = new System.Drawing.Size(158, 25);
+            this.rightDevice.Size = new System.Drawing.Size(158, 28);
             this.rightDevice.TabIndex = 0;
             this.rightDevice.SelectedIndexChanged += new System.EventHandler(this.rightDevice_SelectedIndexChanged);
             // 
@@ -772,7 +771,7 @@
             this.leftActivationDate.Location = new System.Drawing.Point(10, 28);
             this.leftActivationDate.Margin = new System.Windows.Forms.Padding(5);
             this.leftActivationDate.Name = "leftActivationDate";
-            this.leftActivationDate.Size = new System.Drawing.Size(158, 23);
+            this.leftActivationDate.Size = new System.Drawing.Size(158, 27);
             this.leftActivationDate.TabIndex = 0;
             // 
             // groupBox2
@@ -812,7 +811,7 @@
             this.leftModel.Location = new System.Drawing.Point(10, 26);
             this.leftModel.Margin = new System.Windows.Forms.Padding(5);
             this.leftModel.Name = "leftModel";
-            this.leftModel.Size = new System.Drawing.Size(158, 25);
+            this.leftModel.Size = new System.Drawing.Size(158, 28);
             this.leftModel.TabIndex = 0;
             // 
             // groupBox1
@@ -853,7 +852,7 @@
             this.leftManufacturer.Location = new System.Drawing.Point(10, 26);
             this.leftManufacturer.Margin = new System.Windows.Forms.Padding(5);
             this.leftManufacturer.Name = "leftManufacturer";
-            this.leftManufacturer.Size = new System.Drawing.Size(158, 25);
+            this.leftManufacturer.Size = new System.Drawing.Size(158, 28);
             this.leftManufacturer.TabIndex = 0;
             // 
             // leftEarDevice
@@ -881,7 +880,7 @@
             this.leftDevice.Location = new System.Drawing.Point(10, 26);
             this.leftDevice.Margin = new System.Windows.Forms.Padding(5);
             this.leftDevice.Name = "leftDevice";
-            this.leftDevice.Size = new System.Drawing.Size(158, 25);
+            this.leftDevice.Size = new System.Drawing.Size(158, 28);
             this.leftDevice.TabIndex = 0;
             // 
             // panel2
@@ -927,13 +926,14 @@
             "Construtor",
             "Estudante",
             "Operário em Fábricas",
+            "Professor",
             "Servidor Público",
             "Trabalho de Escritório",
             "Outro"});
             this.work.Location = new System.Drawing.Point(10, 26);
             this.work.Margin = new System.Windows.Forms.Padding(5);
             this.work.Name = "work";
-            this.work.Size = new System.Drawing.Size(410, 25);
+            this.work.Size = new System.Drawing.Size(410, 28);
             this.work.TabIndex = 0;
             this.work.SelectedIndexChanged += new System.EventHandler(this.work_SelectedIndexChanged);
             // 
@@ -989,7 +989,7 @@
             this.motivationBox.Location = new System.Drawing.Point(10, 26);
             this.motivationBox.Margin = new System.Windows.Forms.Padding(5);
             this.motivationBox.Name = "motivationBox";
-            this.motivationBox.Size = new System.Drawing.Size(410, 25);
+            this.motivationBox.Size = new System.Drawing.Size(410, 28);
             this.motivationBox.TabIndex = 0;
             this.motivationBox.SelectedIndexChanged += new System.EventHandler(this.motivationBox_SelectedIndexChanged);
             // 
@@ -1012,12 +1012,13 @@
             this.addressBox.Location = new System.Drawing.Point(10, 26);
             this.addressBox.Margin = new System.Windows.Forms.Padding(5);
             this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(410, 23);
+            this.addressBox.Size = new System.Drawing.Size(410, 27);
             this.addressBox.TabIndex = 0;
             // 
             // groupBox13
             // 
             this.groupBox13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox13.Controls.Add(this.DDIBox);
             this.groupBox13.Controls.Add(this.phoneBox);
             this.groupBox13.Location = new System.Drawing.Point(20, 252);
             this.groupBox13.Margin = new System.Windows.Forms.Padding(5);
@@ -1026,15 +1027,15 @@
             this.groupBox13.Size = new System.Drawing.Size(435, 65);
             this.groupBox13.TabIndex = 4;
             this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Telefone";
+            this.groupBox13.Text = "DDD / Telefone";
             // 
             // phoneBox
             // 
             this.phoneBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.phoneBox.Location = new System.Drawing.Point(10, 26);
+            this.phoneBox.Location = new System.Drawing.Point(61, 26);
             this.phoneBox.Margin = new System.Windows.Forms.Padding(5);
             this.phoneBox.Name = "phoneBox";
-            this.phoneBox.Size = new System.Drawing.Size(410, 23);
+            this.phoneBox.Size = new System.Drawing.Size(359, 27);
             this.phoneBox.TabIndex = 0;
             // 
             // groupBox12
@@ -1062,7 +1063,7 @@
             this.sexTab.Location = new System.Drawing.Point(10, 26);
             this.sexTab.Margin = new System.Windows.Forms.Padding(5);
             this.sexTab.Name = "sexTab";
-            this.sexTab.Size = new System.Drawing.Size(169, 25);
+            this.sexTab.Size = new System.Drawing.Size(169, 28);
             this.sexTab.TabIndex = 0;
             // 
             // groupBox11
@@ -1085,7 +1086,7 @@
             this.bornDate.Location = new System.Drawing.Point(10, 26);
             this.bornDate.Margin = new System.Windows.Forms.Padding(5);
             this.bornDate.Name = "bornDate";
-            this.bornDate.Size = new System.Drawing.Size(170, 23);
+            this.bornDate.Size = new System.Drawing.Size(170, 27);
             this.bornDate.TabIndex = 0;
             // 
             // groupBox10
@@ -1118,7 +1119,7 @@
             this.scholarBox.Location = new System.Drawing.Point(10, 26);
             this.scholarBox.Margin = new System.Windows.Forms.Padding(5);
             this.scholarBox.Name = "scholarBox";
-            this.scholarBox.Size = new System.Drawing.Size(410, 25);
+            this.scholarBox.Size = new System.Drawing.Size(410, 28);
             this.scholarBox.TabIndex = 0;
             // 
             // groupBox9
@@ -1138,7 +1139,7 @@
             this.nameBox.Location = new System.Drawing.Point(10, 26);
             this.nameBox.Margin = new System.Windows.Forms.Padding(5);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(410, 23);
+            this.nameBox.Size = new System.Drawing.Size(410, 27);
             this.nameBox.TabIndex = 0;
             // 
             // tabControl1
@@ -1160,11 +1161,11 @@
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(5);
-            this.tabPage1.Size = new System.Drawing.Size(1338, 737);
+            this.tabPage1.Size = new System.Drawing.Size(1338, 734);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados do paciente";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1199,11 +1200,11 @@
             this.tabPage2.Controls.Add(this.audiometryTextBox);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.audiometryGraph);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(5);
-            this.tabPage2.Size = new System.Drawing.Size(1338, 737);
+            this.tabPage2.Size = new System.Drawing.Size(1338, 734);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Histórico de audiometrias";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1301,7 +1302,7 @@
             0,
             -2147483648});
             this.freq8.Name = "freq8";
-            this.freq8.Size = new System.Drawing.Size(180, 23);
+            this.freq8.Size = new System.Drawing.Size(180, 27);
             this.freq8.TabIndex = 0;
             // 
             // groupBox33
@@ -1328,7 +1329,7 @@
             0,
             -2147483648});
             this.freq7.Name = "freq7";
-            this.freq7.Size = new System.Drawing.Size(180, 23);
+            this.freq7.Size = new System.Drawing.Size(180, 27);
             this.freq7.TabIndex = 0;
             // 
             // groupBox31
@@ -1355,7 +1356,7 @@
             0,
             -2147483648});
             this.freq4.Name = "freq4";
-            this.freq4.Size = new System.Drawing.Size(180, 23);
+            this.freq4.Size = new System.Drawing.Size(180, 27);
             this.freq4.TabIndex = 0;
             // 
             // groupBox34
@@ -1382,7 +1383,7 @@
             0,
             -2147483648});
             this.freq6.Name = "freq6";
-            this.freq6.Size = new System.Drawing.Size(180, 23);
+            this.freq6.Size = new System.Drawing.Size(180, 27);
             this.freq6.TabIndex = 0;
             // 
             // groupBox32
@@ -1409,7 +1410,7 @@
             0,
             -2147483648});
             this.freq3.Name = "freq3";
-            this.freq3.Size = new System.Drawing.Size(180, 23);
+            this.freq3.Size = new System.Drawing.Size(180, 27);
             this.freq3.TabIndex = 0;
             // 
             // groupBox29
@@ -1436,7 +1437,7 @@
             0,
             -2147483648});
             this.freq2.Name = "freq2";
-            this.freq2.Size = new System.Drawing.Size(180, 23);
+            this.freq2.Size = new System.Drawing.Size(180, 27);
             this.freq2.TabIndex = 0;
             // 
             // groupBox28
@@ -1463,7 +1464,7 @@
             0,
             -2147483648});
             this.freq1.Name = "freq1";
-            this.freq1.Size = new System.Drawing.Size(180, 23);
+            this.freq1.Size = new System.Drawing.Size(180, 27);
             this.freq1.TabIndex = 0;
             // 
             // groupBox27
@@ -1489,7 +1490,7 @@
             this.masking.Location = new System.Drawing.Point(10, 26);
             this.masking.Margin = new System.Windows.Forms.Padding(5);
             this.masking.Name = "masking";
-            this.masking.Size = new System.Drawing.Size(180, 25);
+            this.masking.Size = new System.Drawing.Size(180, 28);
             this.masking.TabIndex = 0;
             // 
             // groupBox26
@@ -1515,7 +1516,7 @@
             this.audiometrySide.Location = new System.Drawing.Point(10, 26);
             this.audiometrySide.Margin = new System.Windows.Forms.Padding(5);
             this.audiometrySide.Name = "audiometrySide";
-            this.audiometrySide.Size = new System.Drawing.Size(180, 25);
+            this.audiometrySide.Size = new System.Drawing.Size(180, 28);
             this.audiometrySide.TabIndex = 0;
             // 
             // groupBox25
@@ -1543,7 +1544,7 @@
             this.Conduction.Location = new System.Drawing.Point(10, 26);
             this.Conduction.Margin = new System.Windows.Forms.Padding(5);
             this.Conduction.Name = "Conduction";
-            this.Conduction.Size = new System.Drawing.Size(180, 25);
+            this.Conduction.Size = new System.Drawing.Size(180, 28);
             this.Conduction.TabIndex = 0;
             // 
             // groupBox24
@@ -1566,7 +1567,7 @@
             this.audiometryDate.Location = new System.Drawing.Point(10, 26);
             this.audiometryDate.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryDate.Name = "audiometryDate";
-            this.audiometryDate.Size = new System.Drawing.Size(180, 23);
+            this.audiometryDate.Size = new System.Drawing.Size(180, 27);
             this.audiometryDate.TabIndex = 0;
             // 
             // groupBox30
@@ -1584,12 +1585,12 @@
             // audiometryLists
             // 
             this.audiometryLists.FormattingEnabled = true;
-            this.audiometryLists.ItemHeight = 17;
+            this.audiometryLists.ItemHeight = 20;
             this.audiometryLists.Location = new System.Drawing.Point(11, 31);
             this.audiometryLists.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryLists.Name = "audiometryLists";
             this.audiometryLists.ScrollAlwaysVisible = true;
-            this.audiometryLists.Size = new System.Drawing.Size(434, 89);
+            this.audiometryLists.Size = new System.Drawing.Size(434, 84);
             this.audiometryLists.TabIndex = 0;
             this.audiometryLists.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -1615,10 +1616,10 @@
             this.tabPage3.Controls.Add(this.testInfo);
             this.tabPage3.Controls.Add(this.testsGraph);
             this.tabPage3.Controls.Add(this.testsBox);
-            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1338, 737);
+            this.tabPage3.Size = new System.Drawing.Size(1338, 734);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Histórico de avaliações";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1653,7 +1654,7 @@
             // testsBox
             // 
             this.testsBox.FormattingEnabled = true;
-            this.testsBox.ItemHeight = 17;
+            this.testsBox.ItemHeight = 20;
             this.testsBox.Location = new System.Drawing.Point(10, 22);
             this.testsBox.Margin = new System.Windows.Forms.Padding(5);
             this.testsBox.Name = "testsBox";
@@ -1663,9 +1664,16 @@
             this.testsBox.TabIndex = 0;
             this.testsBox.SelectedIndexChanged += new System.EventHandler(this.testsBox_SelectedIndexChanged);
             // 
+            // DDIBox
+            // 
+            this.DDIBox.Location = new System.Drawing.Point(8, 26);
+            this.DDIBox.Name = "DDIBox";
+            this.DDIBox.Size = new System.Drawing.Size(45, 27);
+            this.DDIBox.TabIndex = 1;
+            // 
             // patientManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 766);
             this.Controls.Add(this.tabControl1);
@@ -1850,5 +1858,6 @@
         private System.Windows.Forms.GroupBox groupBox42;
         private System.Windows.Forms.ComboBox rightHearingEtiology;
         private System.Windows.Forms.ComboBox leftHearingEtiology;
+        private System.Windows.Forms.TextBox DDIBox;
     }
 }
