@@ -30,6 +30,7 @@ namespace perSONA
             {
                 Properties.Settings.Default.FIRST_USE_DATA = DateTime.Now;
                 firstUse = false;
+                firstUseData = Properties.Settings.Default.FIRST_USE_DATA;
             }
 
             //if the version is demo and 90 days have passed block program and require Serial key
