@@ -72,7 +72,7 @@ namespace perSONA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.RESULTS_FOLDER = "data/";
+            Properties.Settings.Default.RESULTS_FOLDER = "%DEFAULTUSERPROFILE%/perSONA";
             textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
             Properties.Settings.Default.Save();
         }

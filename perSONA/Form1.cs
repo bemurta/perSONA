@@ -349,9 +349,9 @@ namespace perSONA
 
         private void getFolder_Click(object sender, EventArgs e)
         {
-            speechFolder = getDatabaseFolder();
+            string rootFolder = getDatabaseFolder();
             this.TopMost = true;
-            string[] filePaths = Directory.GetFiles(@speechFolder, "*.wav");
+            string[] filePaths = Directory.GetFiles(@rootFolder, "*.wav");
             string[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
             listBox2.DataSource = fileNames;
         }
@@ -363,16 +363,18 @@ namespace perSONA
                 fbd.SelectedPath = Directory.GetCurrentDirectory();
                 DialogResult result = fbd.ShowDialog();
 
+                string folder = speechFolder;
+
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
                     string[] files = Directory.GetFiles(fbd.SelectedPath);
                     selectedFolder = 1;
-                    speechFolder = fbd.SelectedPath;
+                    folder = fbd.SelectedPath;
                     concatText("Files found: " + files.Length.ToString());
                 }
+          
 
-
-                return speechFolder;
+                return folder;
             }
 
         }
@@ -434,22 +436,48 @@ namespace perSONA
         {
             int angle = -90;
             int radius = 2;
-            playScene(radius, angle, trackBar1.Value);
+            if (cond4.Checked)
+            {
+                playScene(radius, angle, trackBar1.Value);
+            }
+            else
+            {
+                _ = MessageBox.Show("Cena acústica incompleta", "Checar Sinal, Ruído e Receptor.",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+            }
         }
 
         private void speechRight_Click(object sender, EventArgs e)
         {
             int angle = 90;
             int radius = 2;
-            playScene(radius, angle, trackBar1.Value);
-
+            if (cond4.Checked)
+            {
+                playScene(radius, angle, trackBar1.Value);
+            }
+            else
+            {
+                _ = MessageBox.Show("Cena acústica incompleta", "Checar Sinal, Ruído e Receptor.",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+            }
         }
 
         private void speechFront_Click(object sender, EventArgs e)
         {
             int angle = 0;
             int radius = 2;
-            playScene(radius, angle, trackBar1.Value);
+            if (cond4.Checked)
+            {
+                playScene(radius, angle, trackBar1.Value);
+            }
+            else
+            {
+                _ = MessageBox.Show("Cena acústica incompleta", "Checar Sinal, Ruído e Receptor.",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -500,7 +528,7 @@ namespace perSONA
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string speechFile = System.IO.Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem));
+            string speechFile = System.IO.Path.Combine(testFolder, listBox2.GetItemText(listBox2.SelectedItem));
             concatText(speechFile);
             createAcousticScene(speechFile, noiseFile);
 

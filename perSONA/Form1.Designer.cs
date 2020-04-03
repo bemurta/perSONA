@@ -340,7 +340,7 @@ namespace perSONA
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 37);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Select signal";
+            this.button1.Text = "Usar sinal selecionado";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -552,7 +552,7 @@ namespace perSONA
             // 
             this.patientAreaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientAreaToolStripMenuItem.Name = "patientAreaToolStripMenuItem";
-            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
+            this.patientAreaToolStripMenuItem.Size = new System.Drawing.Size(109, 23);
             this.patientAreaToolStripMenuItem.Text = "Novo Paciente";
             this.patientAreaToolStripMenuItem.Click += new System.EventHandler(this.patientAreaToolStripMenuItem_Click);
             // 
@@ -560,7 +560,7 @@ namespace perSONA
             // 
             this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(68, 27);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 23);
             this.helpToolStripMenuItem.Text = "Ajuda";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
@@ -1064,6 +1064,7 @@ namespace perSONA
             this.textBox.TabIndex = 2;
             this.textBox.Visible = false;
             // 
+
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1141,6 +1142,7 @@ namespace perSONA
             this.buttonDisconnect.Text = "Desconectar o VA";
             this.buttonDisconnect.UseVisualStyleBackColor = true;
             this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
+
             // 
             // buttonConnect
             // 
@@ -1174,7 +1176,7 @@ namespace perSONA
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1186, 736);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // panel3
+            // openServer
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
