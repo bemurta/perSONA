@@ -552,5 +552,30 @@ namespace perSONA
         {
             TopMost = true;
         }
+
+        private void nameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scholarBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leftPostLingual_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rightPostLingual_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sexTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
