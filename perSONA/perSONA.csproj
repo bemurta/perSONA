@@ -95,8 +95,7 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>DCE76BB87182433888D9C660570B667C7DE063CB</ManifestCertificateThumbprint>
@@ -1012,6 +1011,7 @@
     <Content Include="data\WelcomeToVA.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="icone.ico" />
     <Content Include="License-LGPL.txt" />
     <Content Include="msvcp120.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1020,6 +1020,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\readmeEditForm.png" />
+    <Content Include="perSONA Icone.ico" />
     <Content Include="VABase.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

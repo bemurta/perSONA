@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(patientManagement));
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.rightHearingEtiology = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -1564,7 +1565,7 @@
             this.groupBox30.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox30.Size = new System.Drawing.Size(460, 139);
+            this.groupBox30.Size = new System.Drawing.Size(460, 137);
             this.groupBox30.TabIndex = 0;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Audiometrias cadastradas";
@@ -1580,7 +1581,7 @@
             this.audiometryLists.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryLists.Name = "audiometryLists";
             this.audiometryLists.ScrollAlwaysVisible = true;
-            this.audiometryLists.Size = new System.Drawing.Size(444, 104);
+            this.audiometryLists.Size = new System.Drawing.Size(444, 64);
             this.audiometryLists.TabIndex = 0;
             this.audiometryLists.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -1590,11 +1591,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox23.Controls.Add(this.tableLayoutPanel5);
-            this.groupBox23.Location = new System.Drawing.Point(5, 172);
+            this.groupBox23.Location = new System.Drawing.Point(5, 170);
             this.groupBox23.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox23.Size = new System.Drawing.Size(460, 539);
+            this.groupBox23.Size = new System.Drawing.Size(460, 541);
             this.groupBox23.TabIndex = 1;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Adicionar nova audiometria";
@@ -1613,7 +1614,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.16466F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.835341F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(441, 503);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(441, 505);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // button1
@@ -1621,7 +1622,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(5, 463);
+            this.button1.Location = new System.Drawing.Point(5, 465);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(431, 35);
@@ -1659,7 +1660,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(435, 452);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(435, 454);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -1676,7 +1677,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 71);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 73);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // button2
@@ -1687,7 +1688,7 @@
             this.button2.Location = new System.Drawing.Point(5, 15);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 39);
+            this.button2.Size = new System.Drawing.Size(202, 41);
             this.button2.TabIndex = 12;
             this.button2.Text = "Pré-Visualização";
             this.button2.UseVisualStyleBackColor = true;
@@ -1760,7 +1761,7 @@
             this.groupBox35.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox35.Size = new System.Drawing.Size(207, 67);
+            this.groupBox35.Size = new System.Drawing.Size(207, 69);
             this.groupBox35.TabIndex = 11;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "8000 Hz";
@@ -2174,6 +2175,7 @@
             this.ClientSize = new System.Drawing.Size(1353, 766);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "patientManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
