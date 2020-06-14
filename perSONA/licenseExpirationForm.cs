@@ -67,5 +67,10 @@ namespace perSONA
         {
 
         }
+
+        private void licenseExpirationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

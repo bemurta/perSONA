@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(speechIterTestForm));
             this.testWordsList = new System.Windows.Forms.ListBox();
             this.all_correct = new System.Windows.Forms.Button();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
@@ -98,7 +99,7 @@
             this.all_correct.Location = new System.Drawing.Point(5, 50);
             this.all_correct.Margin = new System.Windows.Forms.Padding(5);
             this.all_correct.Name = "all_correct";
-            this.all_correct.Size = new System.Drawing.Size(194, 35);
+            this.all_correct.Size = new System.Drawing.Size(195, 35);
             this.all_correct.TabIndex = 5;
             this.all_correct.Text = "Todas corretas";
             this.all_correct.UseVisualStyleBackColor = true;
@@ -110,7 +111,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.zedGraphControl1.Location = new System.Drawing.Point(6, 6);
-            this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(6);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
             this.zedGraphControl1.ScrollMaxX = 0D;
@@ -119,7 +120,7 @@
             this.zedGraphControl1.ScrollMinX = 0D;
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
-            this.zedGraphControl1.Size = new System.Drawing.Size(600, 289);
+            this.zedGraphControl1.Size = new System.Drawing.Size(601, 288);
             this.zedGraphControl1.TabIndex = 12;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
             this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
@@ -133,7 +134,7 @@
             this.label1.Location = new System.Drawing.Point(5, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 20);
+            this.label1.Size = new System.Drawing.Size(217, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "SNR:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,7 +148,7 @@
             this.label2.Location = new System.Drawing.Point(5, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 20);
+            this.label2.Size = new System.Drawing.Size(217, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Sequência de acerto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -162,7 +163,7 @@
             this.label3.Location = new System.Drawing.Point(5, 114);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 20);
+            this.label3.Size = new System.Drawing.Size(217, 20);
             this.label3.TabIndex = 17;
             this.label3.Text = "Sentença atual";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -176,7 +177,7 @@
             this.label4.Location = new System.Drawing.Point(5, 171);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 20);
+            this.label4.Size = new System.Drawing.Size(217, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "Total de sentenças";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -189,7 +190,7 @@
             this.all_incorrect.Location = new System.Drawing.Point(5, 95);
             this.all_incorrect.Margin = new System.Windows.Forms.Padding(5);
             this.all_incorrect.Name = "all_incorrect";
-            this.all_incorrect.Size = new System.Drawing.Size(194, 35);
+            this.all_incorrect.Size = new System.Drawing.Size(195, 35);
             this.all_incorrect.TabIndex = 6;
             this.all_incorrect.Text = "Nenhum acerto";
             this.all_incorrect.UseVisualStyleBackColor = true;
@@ -204,7 +205,7 @@
             this.label5.Location = new System.Drawing.Point(5, 192);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 20);
+            this.label5.Size = new System.Drawing.Size(195, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Porcentagem de acerto";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,7 +220,7 @@
             this.label6.Location = new System.Drawing.Point(5, 135);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(194, 20);
+            this.label6.Size = new System.Drawing.Size(195, 20);
             this.label6.TabIndex = 7;
             this.label6.Text = "Palavras corretas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,7 +235,7 @@
             this.textBox1.Location = new System.Drawing.Point(5, 160);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 27);
+            this.textBox1.Size = new System.Drawing.Size(195, 27);
             this.textBox1.TabIndex = 8;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -247,7 +248,7 @@
             this.textBox2.Location = new System.Drawing.Point(5, 217);
             this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 27);
+            this.textBox2.Size = new System.Drawing.Size(195, 27);
             this.textBox2.TabIndex = 10;
             // 
             // button1
@@ -258,7 +259,7 @@
             this.button1.Location = new System.Drawing.Point(5, 254);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 42);
+            this.button1.Size = new System.Drawing.Size(195, 42);
             this.button1.TabIndex = 11;
             this.button1.Text = "Próxima sentença";
             this.button1.UseVisualStyleBackColor = true;
@@ -273,7 +274,7 @@
             this.label7.Location = new System.Drawing.Point(5, 228);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 20);
+            this.label7.Size = new System.Drawing.Size(217, 20);
             this.label7.TabIndex = 21;
             this.label7.Text = "Tempo de resposta";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -288,7 +289,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(216, 20);
+            this.label8.Size = new System.Drawing.Size(217, 20);
             this.label8.TabIndex = 23;
             this.label8.Text = "Duração do ensaio";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -302,7 +303,7 @@
             this.detailsBox.Margin = new System.Windows.Forms.Padding(5);
             this.detailsBox.Multiline = true;
             this.detailsBox.Name = "detailsBox";
-            this.detailsBox.Size = new System.Drawing.Size(200, 225);
+            this.detailsBox.Size = new System.Drawing.Size(201, 225);
             this.detailsBox.TabIndex = 2;
             this.detailsBox.Visible = false;
             this.detailsBox.TextChanged += new System.EventHandler(this.detailsBox_TextChanged);
@@ -312,8 +313,8 @@
             this.zedGraphControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl2.Location = new System.Drawing.Point(241, 10);
-            this.zedGraphControl2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.zedGraphControl2.Location = new System.Drawing.Point(239, 6);
+            this.zedGraphControl2.Margin = new System.Windows.Forms.Padding(6);
             this.zedGraphControl2.Name = "zedGraphControl2";
             this.zedGraphControl2.ScrollGrace = 0D;
             this.zedGraphControl2.ScrollMaxX = 0D;
@@ -322,7 +323,7 @@
             this.zedGraphControl2.ScrollMinX = 0D;
             this.zedGraphControl2.ScrollMinY = 0D;
             this.zedGraphControl2.ScrollMinY2 = 0D;
-            this.zedGraphControl2.Size = new System.Drawing.Size(365, 362);
+            this.zedGraphControl2.Size = new System.Drawing.Size(362, 332);
             this.zedGraphControl2.TabIndex = 25;
             this.zedGraphControl2.UseExtendedPrintDialog = true;
             // 
@@ -335,7 +336,7 @@
             this.currentTryal.Location = new System.Drawing.Point(5, 253);
             this.currentTryal.Margin = new System.Windows.Forms.Padding(5);
             this.currentTryal.Name = "currentTryal";
-            this.currentTryal.Size = new System.Drawing.Size(216, 27);
+            this.currentTryal.Size = new System.Drawing.Size(217, 27);
             this.currentTryal.TabIndex = 22;
             // 
             // streakText
@@ -347,7 +348,7 @@
             this.streakText.Location = new System.Drawing.Point(5, 82);
             this.streakText.Margin = new System.Windows.Forms.Padding(5);
             this.streakText.Name = "streakText";
-            this.streakText.Size = new System.Drawing.Size(216, 27);
+            this.streakText.Size = new System.Drawing.Size(217, 27);
             this.streakText.TabIndex = 16;
             // 
             // computedAudioText
@@ -359,7 +360,7 @@
             this.computedAudioText.Location = new System.Drawing.Point(5, 139);
             this.computedAudioText.Margin = new System.Windows.Forms.Padding(5);
             this.computedAudioText.Name = "computedAudioText";
-            this.computedAudioText.Size = new System.Drawing.Size(216, 27);
+            this.computedAudioText.Size = new System.Drawing.Size(217, 27);
             this.computedAudioText.TabIndex = 18;
             // 
             // totalWordsText
@@ -371,7 +372,7 @@
             this.totalWordsText.Location = new System.Drawing.Point(5, 196);
             this.totalWordsText.Margin = new System.Windows.Forms.Padding(5);
             this.totalWordsText.Name = "totalWordsText";
-            this.totalWordsText.Size = new System.Drawing.Size(216, 27);
+            this.totalWordsText.Size = new System.Drawing.Size(217, 27);
             this.totalWordsText.TabIndex = 20;
             // 
             // continuousTimerText
@@ -383,7 +384,7 @@
             this.continuousTimerText.Location = new System.Drawing.Point(5, 310);
             this.continuousTimerText.Margin = new System.Windows.Forms.Padding(5);
             this.continuousTimerText.Name = "continuousTimerText";
-            this.continuousTimerText.Size = new System.Drawing.Size(216, 27);
+            this.continuousTimerText.Size = new System.Drawing.Size(217, 27);
             this.continuousTimerText.TabIndex = 24;
             // 
             // filenameList
@@ -410,7 +411,7 @@
             this.playCurrentScene.Location = new System.Drawing.Point(5, 5);
             this.playCurrentScene.Margin = new System.Windows.Forms.Padding(5);
             this.playCurrentScene.Name = "playCurrentScene";
-            this.playCurrentScene.Size = new System.Drawing.Size(194, 35);
+            this.playCurrentScene.Size = new System.Drawing.Size(195, 35);
             this.playCurrentScene.TabIndex = 4;
             this.playCurrentScene.Text = "Reproduzir áudio";
             this.playCurrentScene.UseVisualStyleBackColor = true;
@@ -425,7 +426,7 @@
             this.textBox3.Location = new System.Drawing.Point(5, 25);
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 27);
+            this.textBox3.Size = new System.Drawing.Size(217, 27);
             this.textBox3.TabIndex = 14;
             // 
             // timer1
@@ -515,7 +516,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(204, 301);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(205, 301);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
             // tableLayoutPanel2
@@ -557,7 +558,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.64122F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.18321F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.17558F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(565, 650);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(566, 650);
             this.tableLayoutPanel3.TabIndex = 28;
             // 
             // tableLayoutPanel4
@@ -595,7 +596,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(226, 361);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(227, 338);
             this.tableLayoutPanel4.TabIndex = 29;
             // 
             // tableLayoutPanel5
@@ -608,11 +609,11 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.563F));
             this.tableLayoutPanel5.Controls.Add(this.zedGraphControl2, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 304);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 303);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(606, 343);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(607, 344);
             this.tableLayoutPanel5.TabIndex = 30;
             // 
             // tableLayoutPanel6
@@ -624,12 +625,12 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.zedGraphControl1, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel5, 0, 1);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(574, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(575, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.30769F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.69231F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(612, 650);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(613, 650);
             this.tableLayoutPanel6.TabIndex = 31;
             // 
             // tableLayoutPanel7
@@ -656,10 +657,12 @@
             this.ClientSize = new System.Drawing.Size(1215, 680);
             this.Controls.Add(this.tableLayoutPanel7);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "speechIterTestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Módulo de Aplicação de Ensaio";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.speechIterTestForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

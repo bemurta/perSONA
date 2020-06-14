@@ -954,7 +954,7 @@ namespace perSONA
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form4().Show();
+            new helpForm().Show();
         }
 
         private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1058,6 +1058,11 @@ namespace perSONA
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void calibraçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new calibrationExplanation(this).Show();
         }
     }
 }

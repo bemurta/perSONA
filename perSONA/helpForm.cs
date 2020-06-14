@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace perSONA
 {
-    public partial class Form4 : Form
+    public partial class helpForm : Form
     {
-        public Form4()
+        public helpForm()
         {
             InitializeComponent();
         }

@@ -33,6 +33,17 @@ namespace perSONA
                 firstUseData = Properties.Settings.Default.FIRST_USE_DATA;
             }
 
+
+            Properties.Settings.Default.FIRST_USE = firstUse;
+            Properties.Settings.Default.ITERATOR = 0;
+
+            //Properties.Settings.Default.FIRST_USE = true;
+            //Properties.Settings.Default.DEMO_VERSION = true;
+            //Properties.Settings.Default.CALIBRATION_ID = 1;
+
+            Properties.Settings.Default.Save();
+
+
             //if the version is demo and 90 days have passed block program and require Serial key
             if (demoVersion && (DateTime.Compare(DateTime.Now, firstUseData.AddDays(90)) == 1))
             {
@@ -42,14 +53,6 @@ namespace perSONA
             {
                 Application.Run(new Form5());
             }
-
-            Properties.Settings.Default.FIRST_USE = firstUse;
-
-            //Properties.Settings.Default.FIRST_USE = true;
-            //Properties.Settings.Default.DEMO_VERSION = true;
-
-            Properties.Settings.Default.Save();
-
         }
     }
 }

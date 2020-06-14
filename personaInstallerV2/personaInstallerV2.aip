@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="16.0" version="16.7" Modules="simple" RootPath="." Language="en" Id="{ABD7320D-1FCA-4936-9F32-D2B3BEF17D86}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="16.0" version="16.9" Modules="simple" RootPath="." Language="en" Id="{ABD7320D-1FCA-4936-9F32-D2B3BEF17D86}">
   <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
-    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent"/>
+    <ROW Name="HiddenItems" Value="AppXAppDetailsComponent;FixupComponent;AppXCapabilitiesComponent;AppXDependenciesComponent;AppXProductDetailsComponent;AppXVisualAssetsComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiXDiffComponent"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
@@ -23,7 +23,7 @@
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPCONTACT" Value="be.murta@gmail.com"/>
-    <ROW Property="ARPPRODUCTICON" Value="per_short_Scp_icon.exe" Type="8"/>
+    <ROW Property="ARPPRODUCTICON" Value="icone_perSONA.exe" Type="8"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="LVA-UFSC"/>
     <ROW Property="ProductCode" Value="1033:{2D536EB7-5AE0-401D-B98F-23CB7E36E734} " Type="16"/>
@@ -340,6 +340,7 @@
     <ROW Component="VistaTools.dll_1" ComponentId="{2D33CFA6-221B-47BB-B76C-BA973880A569}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaTools.dll_1"/>
     <ROW Component="alcaim_f.WAV" ComponentId="{5F9FC00A-CD04-4DBC-AAEB-965469737F76}" Directory_="Speech_Dir" Attributes="0" KeyPath="alcaim_f.WAV" Type="0"/>
     <ROW Component="core.h" ComponentId="{F213B760-AEF4-4436-ACA5-6F325C5188FD}" Directory_="core_Dir" Attributes="0" KeyPath="core.h" Type="0"/>
+    <ROW Component="itextsharp.dll" ComponentId="{5C4E8B0C-F36C-479D-8686-7B8F6365851B}" Directory_="perSONA_Dir" Attributes="0" KeyPath="itextsharp.dll"/>
     <ROW Component="kHzTone_60dB_SPL.wav" ComponentId="{9BE18036-3B54-48D6-BF66-C121D0D5C2A9}" Directory_="Sounds_Dir" Attributes="0" KeyPath="kHzTone_60dB_SPL.wav" Type="0"/>
     <ROW Component="libEGL.DLL" ComponentId="{7E94DB7C-E8EA-48CF-8AEB-6C0BF55E6F64}" Directory_="bin_Dir" Attributes="256" KeyPath="libEGL.DLL"/>
     <ROW Component="libEGL.DLL_1" ComponentId="{2B04E85C-BA89-4BF4-979B-89F66DBF5A07}" Directory_="perSONA_Dir" Attributes="256" KeyPath="libEGL.DLL_1"/>
@@ -1090,6 +1091,7 @@
     <ROW File="VistaSpaceMousePlugin.dll_1" Component_="VistaSpaceMousePlugin.dll_1" FileName="VISTAS~2.DLL|VistaSpaceMousePlugin.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMousePlugin.dll" SelfReg="false"/>
     <ROW File="VistaSpaceMouseTranscoder.dll_1" Component_="VistaSpaceMouseTranscoder.dll_1" FileName="VISTAS~3.DLL|VistaSpaceMouseTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMouseTranscoder.dll" SelfReg="false"/>
     <ROW File="VistaTools.dll_1" Component_="VistaTools.dll_1" FileName="VISTAT~1.DLL|VistaTools.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaTools.dll" SelfReg="false"/>
+    <ROW File="itextsharp.dll" Component_="itextsharp.dll" FileName="ITEXTS~1.DLL|itextsharp.dll" Attributes="0" SourcePath="..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>
@@ -1435,11 +1437,12 @@
     <ROW Feature_="MainFeature" Component_="VistaSpaceMouseTranscoder.dll_1"/>
     <ROW Feature_="MainFeature" Component_="VistaTools.dll_1"/>
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="itextsharp.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
-    <ROW Name="per_short_Scp_icon.exe" SourcePath="..\..\..\..\Downloads\per_short_Scp_icon.ico" Index="0"/>
-    <ROW Name="run_VAServer.exe" SourcePath="..\..\..\..\Downloads\va_logo_black_circle_white_BVX_icon.ico" Index="0"/>
+    <ROW Name="icone_perSONA.exe" SourcePath="..\perSONA\logo\icone_perSONA.ico" Index="0"/>
+    <ROW Name="run_VAServer_1.exe" SourcePath="..\perSONA\logo\logo_VA.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
@@ -1472,8 +1475,8 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="UninstallperSONA" Directory_="perSONA_Dir" Name="UNINST~1|Uninstall perSONA" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
     <ROW Shortcut="UninstallperSONA_1" Directory_="SHORTCUTDIR" Name="UNINST~1|Uninstall perSONA" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
-    <ROW Shortcut="perSONALITE" Directory_="DesktopFolder" Name="PERSON~1.0-B|perSONA v1.5.0-BETA" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" Target="[#perSONA.exe]" Hotkey="0" Icon_="per_short_Scp_icon.exe" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
-    <ROW Shortcut="run_VAServer" Directory_="DesktopFolder" Name="VA(PER~1|VA (perSONA)" Component_="run_VAServer.bat" Target="[#run_VAServer.bat]" Hotkey="0" Icon_="run_VAServer.exe" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
+    <ROW Shortcut="perSONALITE" Directory_="DesktopFolder" Name="PERSON~1.8-B|perSONA v1.5.8-BETA" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" Target="[#perSONA.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
+    <ROW Shortcut="run_VAServer" Directory_="DesktopFolder" Name="VA(PER~1|VA (perSONA)" Component_="run_VAServer.bat" Target="[#run_VAServer.bat]" Hotkey="0" Icon_="run_VAServer_1.exe" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
