@@ -702,7 +702,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\Sounds\asa.wav" />
-    <Content Include="data\Sounds\BandPassLimitedWhiteNoise.wav" />
+    <Content Include="data\Sounds\BandPassLimitedWhiteNoise.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\Sounds\Choice.wav" />
     <Content Include="data\Sounds\L001s04r.wav" />
     <Content Include="data\Sounds\Noise\4talker-babble_ISTS.wav">
