@@ -1092,6 +1092,7 @@
     <ROW File="VistaSpaceMouseTranscoder.dll_1" Component_="VistaSpaceMouseTranscoder.dll_1" FileName="VISTAS~3.DLL|VistaSpaceMouseTranscoder.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaSpaceMouseTranscoder.dll" SelfReg="false"/>
     <ROW File="VistaTools.dll_1" Component_="VistaTools.dll_1" FileName="VISTAT~1.DLL|VistaTools.dll" Attributes="0" SourcePath="..\perSONA\bin\x64\Release\bin\VistaTools.dll" SelfReg="false"/>
     <ROW File="itextsharp.dll" Component_="itextsharp.dll" FileName="ITEXTS~1.DLL|itextsharp.dll" Attributes="0" SourcePath="..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll" SelfReg="false"/>
+    <ROW File="BandPassLimitedWhiteNoise.wav" Component_="kHzTone_60dB_SPL.wav" FileName="BANDPA~1.WAV|BandPassLimitedWhiteNoise.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\BandPassLimitedWhiteNoise.wav" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>

@@ -41,7 +41,7 @@ namespace perSONA
                     element.Visible = false;
                 }
                 earphone[0].Visible = true;
-                earphoneLabel.Text = "Fone Esquerdo";
+                earphoneLabel.Text = "Fone Direito";
             }
             else if (i == 1)
             {
@@ -50,7 +50,7 @@ namespace perSONA
                     element.Visible = false;
                 }
                 earphone[1].Visible = true;
-                earphoneLabel.Text = "Fone Direito";
+                earphoneLabel.Text = "Fone Esquerdo";
             }
             else
             {
@@ -73,7 +73,7 @@ namespace perSONA
             {
                 if (i == 0)
                 {
-                    earphoneLabel.Text = "Fone Direito";
+                    earphoneLabel.Text = "Fone Esquerdo";
                     earphone[0].Visible = false;
                     earphone[1].Visible = true;
 
@@ -140,12 +140,6 @@ namespace perSONA
             vA = vAInterface.getVa();
 
             vA.Reset();
-
-            string speechFile = "data\\Sounds\\BandPassLimitedWhiteNoise.wav";
-            vAInterface.concatText(speechFile);
-            vAInterface.concatText(string.Format("Calibration sound angle: {0}", (90 + (i * 180))));
-            vAInterface.createAcousticScene(speechFile, speechFile);
-
             int receiverId = vA.CreateSoundReceiver("Subject");
 
             double xSides = 0;
@@ -164,14 +158,19 @@ namespace perSONA
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
 
+            string speechFile = "data/Sounds/BandPassLimitedWhiteNoise.wav";
+            vAInterface.concatText(speechFile);
+            vAInterface.concatText(string.Format("Calibration sound angle: {0}", (90 + (i * 180))));
+            vAInterface.createAcousticScene(speechFile, speechFile);
+
+
             if (i < 2)
             {
-                vAInterface.playScene(1, (90 + (i * 180)), 40);
+                vAInterface.playScene(1.2 , (90 + (i * 180)), 40);
             }
             else 
             {
-                vAInterface.playScene(1, 90, 40);
-                vAInterface.playScene(1, 270, 40);
+                vAInterface.allSoundPlayersPlayScene(1.2, 2);
             }
         }
 

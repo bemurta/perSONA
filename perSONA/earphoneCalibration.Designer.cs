@@ -60,11 +60,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Location = new System.Drawing.Point(12, 27);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(230, 27);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 357);
+            this.panel1.Size = new System.Drawing.Size(188, 358);
             this.panel1.TabIndex = 95;
             // 
             // pictureBox7
@@ -78,7 +78,7 @@
             this.pictureBox7.Location = new System.Drawing.Point(4, 4);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(178, 349);
+            this.pictureBox7.Size = new System.Drawing.Size(180, 349);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 83;
             this.pictureBox7.TabStop = false;
@@ -106,8 +106,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(230, 27);
+            this.panel2.Controls.Add(this.pictureBox7);
+            this.panel2.Location = new System.Drawing.Point(12, 27);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(188, 358);
@@ -121,10 +121,10 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 349);
+            this.pictureBox1.Size = new System.Drawing.Size(182, 350);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
@@ -180,9 +180,9 @@
             this.earphoneLabel.Location = new System.Drawing.Point(651, 90);
             this.earphoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.earphoneLabel.Name = "earphoneLabel";
-            this.earphoneLabel.Size = new System.Drawing.Size(135, 20);
+            this.earphoneLabel.Size = new System.Drawing.Size(113, 20);
             this.earphoneLabel.TabIndex = 99;
-            this.earphoneLabel.Text = "Lado Esquerdo";
+            this.earphoneLabel.Text = "Lado Direito";
             // 
             // Help
             // 

@@ -1064,5 +1064,54 @@ namespace perSONA
         {
             new calibrationExplanation(this).Show();
         }
+
+
+        public void allSoundPlayersPlayScene(double radius, int numberOfSoundPlayers)
+        {
+            /*
+            List<double> radiusList = new List<double>();
+            List<double> angleList = new List<double>();
+            double soundPlayerAngle;
+
+
+            for (int i = 0; i < numberOfSoundPlayers; i++)
+            {
+                soundPlayerAngle = 45 + (i*(360 / numberOfSoundPlayers));
+                if (soundPlayerAngle >=360) {
+                    soundPlayerAngle = soundPlayerAngle - 360;
+                }
+                radiusList.Add(radius);
+                angleList.Add(soundPlayerAngle);
+            }
+            */
+
+            double soundPlayerAngle;
+            double[] radiusList = new double[numberOfSoundPlayers];
+            double[] angleList = new double[numberOfSoundPlayers];
+
+            for (int i = 0; i < numberOfSoundPlayers; i++)
+            {
+                soundPlayerAngle = 90 + (i * (360 / numberOfSoundPlayers));
+                if (soundPlayerAngle >= 360)
+                {
+                    soundPlayerAngle = soundPlayerAngle - 360;
+                }
+                radiusList[i] = radius;
+                angleList[i] = soundPlayerAngle;
+
+                double xSides = radius * Math.Sin(soundPlayerAngle / 180 * Math.PI);
+                double zFront = radius * Math.Cos(soundPlayerAngle / 180 * Math.PI);
+                double yHeight = 1.7;
+
+                double normalizationFactor = trackBar2.Value / 100.0;
+                double powerSpeech = 0.25 * normalizationFactor;
+
+                vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
+                vA.SetSoundSourceSoundPower(speechSource, powerSpeech);
+                vA.SetSoundSourceSignalSource(speechSource, speechSound);
+                vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
+            }
+            plotSceneGraph(zedGraphControl1, radiusList, angleList);
+        }
     }
 }

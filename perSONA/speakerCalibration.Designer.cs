@@ -79,7 +79,7 @@
             this.SLM_Microphone.ErrorImage = ((System.Drawing.Image)(resources.GetObject("SLM_Microphone.ErrorImage")));
             this.SLM_Microphone.Image = ((System.Drawing.Image)(resources.GetObject("SLM_Microphone.Image")));
             this.SLM_Microphone.InitialImage = ((System.Drawing.Image)(resources.GetObject("SLM_Microphone.InitialImage")));
-            this.SLM_Microphone.Location = new System.Drawing.Point(167, 139);
+            this.SLM_Microphone.Location = new System.Drawing.Point(167, 149);
             this.SLM_Microphone.Margin = new System.Windows.Forms.Padding(4);
             this.SLM_Microphone.Name = "SLM_Microphone";
             this.SLM_Microphone.Size = new System.Drawing.Size(73, 178);
@@ -187,7 +187,7 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.pictureBox7);
-            this.panel8.Location = new System.Drawing.Point(257, 90);
+            this.panel8.Location = new System.Drawing.Point(68, 90);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(81, 75);
@@ -212,7 +212,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(163, 12);
+            this.panel7.Location = new System.Drawing.Point(22, 171);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(81, 75);
@@ -237,7 +237,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(64, 90);
+            this.panel6.Location = new System.Drawing.Point(68, 252);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(81, 75);
@@ -262,7 +262,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(13, 169);
+            this.panel5.Location = new System.Drawing.Point(163, 325);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(81, 75);
@@ -287,7 +287,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(67, 248);
+            this.panel4.Location = new System.Drawing.Point(256, 252);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(81, 75);
@@ -312,7 +312,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(163, 325);
+            this.panel3.Location = new System.Drawing.Point(299, 171);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(81, 75);
@@ -337,7 +337,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox11);
-            this.panel2.Location = new System.Drawing.Point(257, 252);
+            this.panel2.Location = new System.Drawing.Point(256, 90);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(81, 75);
@@ -362,7 +362,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(309, 169);
+            this.panel1.Location = new System.Drawing.Point(163, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(81, 75);

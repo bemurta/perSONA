@@ -175,14 +175,20 @@ namespace perSONA
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
 
-            //criar current file
-            currentFile = "data/Sounds/nome.wav";
-            //vAInterface.concatText(speechFile);
-            //vAInterface.concatText(string.Format("Angle speech: {0}, Angle noise: {1}", test.AngleSpeech, test.AngleNoise));
-            vAInterface.createAcousticScene(currentFile, 0);//test.NoiseFile);
+            string speechFile = "data\\Sounds\\BandPassLimitedWhiteNoise.wav";
+            vAInterface.concatText(speechFile);
+            vAInterface.concatText(string.Format("Calibration sound angle: {0}", (90 + (i * 180))));
+            vAInterface.createAcousticScene(speechFile, speechFile);
 
-            //criar variável radio speak no lugar 120
-            vAInterface.playScene(1.2, (i*45), 40);
+
+            if (i < 2)
+            {
+                vAInterface.playScene(1.2 , (i * 45), 40);
+            }
+            else 
+            {
+                vAInterface.allSoundPlayersPlayScene(1.2, 8);
+            }
             */
         }
 
