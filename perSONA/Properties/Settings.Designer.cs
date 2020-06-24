@@ -37,18 +37,6 @@ namespace perSONA.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("25")]
-        public int USERVOLUME {
-            get {
-                return ((int)(this["USERVOLUME"]));
-            }
-            set {
-                this["USERVOLUME"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("PTMGF-28VKB-2W934-482QH-98623")]
         public string SERIAL_KEY {
             get {
@@ -140,6 +128,30 @@ namespace perSONA.Properties {
             }
             set {
                 this["ITERATOR"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("25")]
+        public int SPEAKER_VOLUME {
+            get {
+                return ((int)(this["SPEAKER_VOLUME"]));
+            }
+            set {
+                this["SPEAKER_VOLUME"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("25")]
+        public int EARPHONE_VOLUME {
+            get {
+                return ((int)(this["EARPHONE_VOLUME"]));
+            }
+            set {
+                this["EARPHONE_VOLUME"] = value;
             }
         }
     }

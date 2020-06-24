@@ -8,15 +8,22 @@ namespace perSONA
 {
     class calibrationData
     {
+        //SLM
         public string SLMBrand { get; set; }
         public string SLMModel { get; set; }
         public string SLMSerialNumber { get; set; }
         public string SLMCalibrationNumber { get; set; }
 
+        //iPhone
         public string IPhoneModel { get; set; }
         public string IOSVersion { get; set; }
         public string ApplicationName { get; set; }
         public string ApplicationVersion { get; set; }
+
+        //Mannequin
+        public string MannequinBrand { get; set; }
+        public string MannequinModel { get; set; }
+        public string MannequinPinnae { get; set; }
 
         //Variáveis que servem para mais de um modo
         public string MicrophoneBrand { get; set; }

@@ -11,7 +11,6 @@ using Newtonsoft.Json;
 using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-
 using VA;
 
 namespace perSONA
@@ -31,6 +30,8 @@ namespace perSONA
         {
             InitializeComponent();
             this.vAInterface = vAInterface;
+            volumeBar.Value = Properties.Settings.Default.SPEAKER_VOLUME;
+            volumeLabel.Text = string.Format("Volume: {0} %", Properties.Settings.Default.SPEAKER_VOLUME);
 
             speakers.Add(panel1);
             speakers.Add(panel2);
@@ -62,7 +63,7 @@ namespace perSONA
             }
             else
             {
-                label1.Text = "Calibre todas as caixas simultaneamente:";
+                label1.Text = "Altere o volume dos reprodutores sonoros" + "\n" + "através da barra da parte inferior da tela";
                 Next.Text = "Finalizar";
                 speakerLabel.Text = "Todas as Caixas";
             }
@@ -102,7 +103,7 @@ namespace perSONA
 
                 else if (i == 7)
                 {
-                    label1.Text = "Calibre todas as caixas simultaneamente:";
+                    label1.Text = "Altere o volume dos reprodutores sonoros" + "\n" + "através da barra da parte inferior da tela";
                     Next.Text = "Finalizar";
                     speakerLabel.Text = "Todas as Caixas";
                     foreach (Panel element in speakers)
@@ -153,7 +154,6 @@ namespace perSONA
 
         private void Sound_Click(object sender, EventArgs e)
         {
-            /*
             vA = vAInterface.getVa();
 
             vA.Reset();
@@ -168,28 +168,26 @@ namespace perSONA
             VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
             VAVec3 receiverOrientationU = new VAVec3(0, 1, 0);
 
-            vA.SetSoundReceiverPosition(receiverId, receiverPosition);
-            vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU);
-            //vAInterface.concatText(string.Format("Receiver: {3} at position: {0},{1},{2}, looking forward ", xSides, zFront, yHeight, receiverId));
+            vA.SetSoundReceiverPosition(receiverId, receiverPosition);      //this receiver have position (xSides, yHeight, zFront)
+            vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU); //this receive look ahead with the top of the head up
+            vAInterface.concatText(string.Format("Receiver: {3} at position: {0},{1},{2}, looking forward ", xSides, zFront, yHeight, receiverId));
 
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
 
-            string speechFile = "data\\Sounds\\BandPassLimitedWhiteNoise.wav";
+            string speechFile = "data/Sounds/BandPassLimitedWhiteNoise.wav";
             vAInterface.concatText(speechFile);
             vAInterface.concatText(string.Format("Calibration sound angle: {0}", (90 + (i * 180))));
-            vAInterface.createAcousticScene(speechFile, speechFile);
-
 
             if (i < 2)
             {
-                vAInterface.playScene(1.2 , (i * 45), 40);
+                vAInterface.createAcousticScene(speechFile, speechFile);
+                vAInterface.playScene(1.7, (i * 45), 40);
             }
-            else 
+            else
             {
-                vAInterface.allSoundPlayersPlayScene(1.2, 8);
+                vAInterface.allSoundPlayersPlayScene(1.7, 8, speechFile);
             }
-            */
         }
 
         static void PDF_Generate(string calibrationStatus)
@@ -338,6 +336,13 @@ namespace perSONA
 
 
 
+        }
+
+        private void volumeBar_Scroll(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.SPEAKER_VOLUME = volumeBar.Value;
+            volumeLabel.Text = string.Format("Volume: {0} %", Properties.Settings.Default.SPEAKER_VOLUME);
+            Properties.Settings.Default.Save();
         }
     }
 }

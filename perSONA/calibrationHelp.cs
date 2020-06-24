@@ -30,7 +30,7 @@ namespace perSONA
                 Caso2.Text = "Etapa 2:" + "\n" + "A) Após a calibração dos reprodutores separadamente é necessária uma calibração a nível global." + "\n" +
                                                  "B) Para isso mantenha o MNPS na mesma posição" + "\n" +
                                                  "C) Para iniciar a calibração conjunta, o sistema reproduzirá o sinal de calibração em todos os reprodutores simultaneamente." + "\n" +
-                                                 "D) Ajuste o volume de todas as caixa simultaneamente até que o MNPS marque 94dB e marque no checkbox." + "\n" +
+                                                 "E) Ajuste o volume de todos os reprodutores simultaneamente através da trackbar da tela de calibração até atingir os 94dB." + "\n" +
                                                  "E) Após isso finalize a calibração";
 
             }
@@ -47,7 +47,7 @@ namespace perSONA
                 Caso2.Text = "Etapa 2:" + "\n" + "A) Após a calibração dos reprodutores separadamente é necessária uma calibração a nível global." + "\n" +
                                                  "B) Para isso mantenha o microfone na mesma posição." + "\n" +
                                                  "C) Para iniciar a calibração conjunta, o sistema reproduzirá o sinal de calibração em todos os reprodutores simultaneamente." + "\n" +
-                                                 "D) Ajuste o volume de todas as caixa simultaneamente até que o aplicativo marque 94dB e marque no checkbox." + "\n" +
+                                                 "D) Ajuste o volume de todos os reprodutores simultaneamente através da trackbar da tela de calibração até atingir os 94dB." + "\n" +
                                                  "E) Após isso finalize a calibração";
             }
             else if (Properties.Settings.Default.CALIBRATION_MODE == "A3")
@@ -65,16 +65,42 @@ namespace perSONA
                                                  "B) Para isso mantenha o microfone na mesma posição" + "\n" +
                                                  "C) Da mesma forma que anteriormente você poderá reproduzir um sinal sonoro" + "\n" +
                                                  "D) O sinal sonoro agora será reproduzido em todas as caixas" + "\n" +
-                                                 "E) Ajuste o volume da caixas simultaneamente até que o calibrador indique que está correto" + "\n" +
+                                                 "E) Ajuste o volume de todos os reprodutores simultaneamente através da trackbar da tela de calibração até atingir os 94dB." + "\n" +
                                                  "F) Após isso a calibração terá sido efetuada com sucesso";
             }
             else if (Properties.Settings.Default.CALIBRATION_MODE == "B1")
             {
                 this.Text = "Ajuda de calibração com orelha artifical";
+                Caso1.Text = "Etapa 1:" + "\n" + "A) Posicione o fone de ouvido na orelha artificial" + "\n" +
+                                                 "B) Para iniciar a calibração, faça o sistema reproduzir o sinal de calibração em cada um dos reprodutores." + "\n" +
+                                                 "C) Ajuste o volume de reprodução individualmente em cada reprodutor até atingir a pressão sonora de 94dB." + "\n" +
+                                                 "D) Para ajustar o volume dos fones individualmente siga os seguintes passos: Clique em \"tecla do windows + R\" ->" + "\n" +
+                                                 "Digite \"mmsys.cpl\" (sem aspas) -> \"Ok\" -> Dê um duplo clique em \"Fones de ouvido\" -> \"Níveis\" -> \"Balanço\"" + "\n" +
+                                                 "E) Você pode reproduzir o sinal sonoro quantas vezes for necessário para você ajustar o NPS em 94 dB." + "\n" +
+                                                 "F) Quando o NPS for 94dB assinale a checkbox correspondente a caixa calibrada e clique em próximo.";
+
+                Caso2.Text = "Etapa 2:" + "\n" + "A) Após a calibração dos reprodutores separadamente é necessária uma calibração a nível global." + "\n" +
+                                                 "B) Para isso mantenha o fone de ouvido na mesma posição" + "\n" +
+                                                 "C) Para iniciar a calibração conjunta, o sistema reproduzirá o sinal de calibração em todos os reprodutores simultaneamente." + "\n" + 
+                                                 "D) Ajuste o volume de todos os reprodutores simultaneamente através da trackbar da tela de calibração até atingir os 94dB." + "\n" +
+                                                 "E) Após isso finalize a calibração";
             }
             else
             {
                 this.Text = "Ajuda de calibração com manequim";
+                Caso1.Text = "Etapa 1:" + "\n" + "A) Posicione o fone de ouvido no manequim" + "\n" +
+                                                 "B) Para iniciar a calibração, faça o sistema reproduzir o sinal de calibração em cada um dos reprodutores." + "\n" +
+                                                 "C) Ajuste o volume de reprodução individualmente em cada reprodutor até atingir a pressão sonora de 94dB." + "\n" +
+                                                 "D) Para ajustar o volume dos fones individualmente siga os seguintes passos: Clique em \"tecla do windows + R\" ->" + "\n" +
+                                                 "Digite \"mmsys.cpl\" (sem aspas) -> \"Ok\" -> Dê um duplo clique em \"Fones de ouvido\" -> \"Níveis\" -> \"Balanço\"" + "\n" +
+                                                 "E) Você pode reproduzir o sinal sonoro quantas vezes for necessário para você ajustar o NPS em 94 dB." + "\n" +
+                                                 "F) Quando o NPS for 94dB assinale a checkbox correspondente a caixa calibrada e clique em próximo.";
+
+                Caso2.Text = "Etapa 2:" + "\n" + "A) Após a calibração dos reprodutores separadamente é necessária uma calibração a nível global." + "\n" +
+                                                 "B) Para isso mantenha o fone de ouvido na mesma posição" + "\n" +
+                                                 "C) Para iniciar a calibração conjunta, o sistema reproduzirá o sinal de calibração em todos os reprodutores simultaneamente." + "\n" +
+                                                 "D) Ajuste o volume de todos os reprodutores simultaneamente através da trackbar da tela de calibração até atingir os 94dB." + "\n" +
+                                                 "E) Após isso finalize a calibração";
             }
         }
 

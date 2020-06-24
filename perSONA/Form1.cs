@@ -58,9 +58,14 @@ namespace perSONA
             Thread.Sleep(waitTimeMS);
             connectToVA();
 
-
-            trackBar2.Value = Properties.Settings.Default.USERVOLUME;
-            label2.Text = string.Format("Volume: {0} %", trackBar2.Value);
+            if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
+            {
+                label2.Text = string.Format("Volume: {0} %", Properties.Settings.Default.EARPHONE_VOLUME);
+            }
+            else
+            {
+                label2.Text = string.Format("Volume: {0} %", Properties.Settings.Default.SPEAKER_VOLUME);
+            }
 
             string[] filePaths = Directory.GetFiles(@testFolder, "*.wav");
             string[] fileNames = filePaths.Select(Path.GetFileName).ToArray();
@@ -90,11 +95,7 @@ namespace perSONA
                 default:
                     concatText("Headphone binaural reproduction");
                     break;
-
-
             }
-
-
 
             try
             {
@@ -102,11 +103,8 @@ namespace perSONA
             }
             catch (Exception)
             {
-
                 patientBox.Text = "No previously selected patients";
-
             }
-
         }
 
         ~Form1()
@@ -171,7 +169,6 @@ namespace perSONA
 
         private void buttonConnect_Click(object sender, EventArgs e)
         {
-
             connectToVA();
         }
 
@@ -239,8 +236,6 @@ namespace perSONA
             vA.Reset();
         }
 
-
-
         private void createReceiver_Click(object sender, EventArgs e)
         {
             int receiverId = vA.CreateSoundReceiver("Subject");
@@ -267,7 +262,6 @@ namespace perSONA
 
         public void concatText(string textToAppend)
         {
-
             string timestamp = DateTime.Now.ToString(@"dd MMMM yyyy HH:mm:ss - ");
 
             textBox.Text = string.Concat(textBox.Text, "\r\n", timestamp);
@@ -276,13 +270,10 @@ namespace perSONA
 
             textBox.SelectionStart = textBox.Text.Length;
             textBox.ScrollToCaret();
-
         }
 
         private void createSource2_Click(object sender, EventArgs e)
         {
-
-
             string[] filePaths;
             var fileNames = Directory.GetFiles(@"data").Select(Path.GetFileName);
 
@@ -303,19 +294,15 @@ namespace perSONA
             cond1.Checked = true;
             checkValidScene();
             concatText(string.Format("Title: {0}, duration: {1}", getTitle(speechFile), getDuration(speechFile)));
-
-
         }
 
         private void play2_Click(object sender, EventArgs e)
         {
-
             Random rnd = new Random();
             int angle = rnd.Next(360);
             int radius = 2;
 
             playScene(radius, angle, trackBar1.Value);
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -339,12 +326,6 @@ namespace perSONA
         public VANet getVa()
         {
             return vA;
-        }
-        private void trackBar2_Scroll(object sender, EventArgs e)
-        {
-            label2.Text = string.Format("Volume: {0} %", trackBar2.Value);
-            Properties.Settings.Default.USERVOLUME = trackBar2.Value;
-            concatText(string.Format("Changed default volume to {0} % ", trackBar2.Value));
         }
 
         private void getFolder_Click(object sender, EventArgs e)
@@ -371,12 +352,9 @@ namespace perSONA
                     selectedFolder = 1;
                     folder = fbd.SelectedPath;
                     concatText("Files found: " + files.Length.ToString());
-                }
-          
-
+                }          
                 return folder;
             }
-
         }
 
         public void playScene(double radius, double angle, double snr)
@@ -385,8 +363,7 @@ namespace perSONA
             if (!cond4.Checked)
                 {
                     concatText(String.Format("Scene not ok. Signal: {0}, Noise {1}, Receiver: {2}",
-                                         cond1.Checked, cond2.Checked, cond3.Checked));
-                    
+                                         cond1.Checked, cond2.Checked, cond3.Checked));                    
                 }
 
             double[] radiusList = { radius, radius };
@@ -398,7 +375,16 @@ namespace perSONA
             double zFront = radius * Math.Cos(angle / 180 * Math.PI);
             double yHeight = 1.7;
 
-            double normalizationFactor = trackBar2.Value / 100.0;
+            //double normalizationFactor = trackBar2.Value / 100.0;
+            double normalizationFactor;
+            if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
+            {
+                normalizationFactor = Properties.Settings.Default.EARPHONE_VOLUME / 100.0;
+            }
+            else 
+            {
+                normalizationFactor = Properties.Settings.Default.SPEAKER_VOLUME / 100.0;
+            }
             double powerSpeech = 0.25 * normalizationFactor;
 
             double linRatio = Math.Pow(10.0, (snr / 20.0));
@@ -407,7 +393,6 @@ namespace perSONA
             if (snr == 40)
             {
                 powerNoise = 0;
-
             }
 
             vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
@@ -429,7 +414,6 @@ namespace perSONA
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
             Thread.Sleep(3000);
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
-
         }
 
         private void speechLeft_Click(object sender, EventArgs e)
@@ -485,7 +469,6 @@ namespace perSONA
             double answer = listBox1.SelectedItems.Count;
             double totalWords = listBox1.Items.Count;
             textBox2.Text = string.Format("Answer {0}/{1}= {2}% ", answer, totalWords, 100.0 * (answer / totalWords));
-
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -527,7 +510,6 @@ namespace perSONA
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             string speechFile = System.IO.Path.Combine(testFolder, listBox2.GetItemText(listBox2.SelectedItem));
             concatText(speechFile);
             createAcousticScene(speechFile, noiseFile);
@@ -535,8 +517,6 @@ namespace perSONA
             fillWords(speechFile, listBox1, true);
             cond1.Checked = true;
             checkValidScene();
-
-
         }
 
         public string getTitle(string speechFile)
@@ -565,8 +545,6 @@ namespace perSONA
 
         public void createAcousticScene(string speechFile, string noiseFile)
         {
-
-
             speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
             speechSource = vA.CreateSoundSource("Speech");
 
@@ -580,9 +558,9 @@ namespace perSONA
                                      noiseSource, Path.GetFileName(noiseFile)));
         }
 
+        //????
         private void button2_Click(object sender, EventArgs e)
         {
-
             int angleSpeech = 45;
             int radiusSpeech = 2;
 
@@ -593,14 +571,10 @@ namespace perSONA
             double[] angle = { angleSpeech, angleNoise };
 
             plotSceneGraph(zedGraphControl1, radius, angle);
-
-
         }
 
         public void plotSceneGraph(ZedGraphControl graph, double[] radius, double[] angle)
         {
-
-
             GraphPane myPane = graph.GraphPane;
             myPane.CurveList.Clear();
 
@@ -811,18 +785,12 @@ namespace perSONA
                 File.WriteAllLines(string.Format("{0}/logs/testlog-{1}.txt",
                                     Properties.Settings.Default.RESULTS_FOLDER,
                                     DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss")), logText);
-
             }
-
-
         }
-
 
 
         public void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName)
         {
-
-
             string AudiometryJson = Newtonsoft.Json.JsonConvert.SerializeObject(Audiometry);
 
             string timestamp = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
@@ -843,10 +811,7 @@ namespace perSONA
                                 Properties.Settings.Default.RESULTS_FOLDER,
                                 timestamp), AudiometryJson);
             }
-
             updatePatientAudiometry(patientName, timestamp);
-
-
         }
 
 
@@ -1066,28 +1031,27 @@ namespace perSONA
         }
 
 
-        public void allSoundPlayersPlayScene(double radius, int numberOfSoundPlayers)
+        public void allSoundPlayersPlayScene(double radius, int numberOfSoundPlayers, string speechFile)
         {
-            /*
-            List<double> radiusList = new List<double>();
-            List<double> angleList = new List<double>();
             double soundPlayerAngle;
-
+            double[] xSidesList = new double[numberOfSoundPlayers];
+            double[] yFrontList = new double[numberOfSoundPlayers];
+            double[] zHeightList = new double[numberOfSoundPlayers];
+            string[] signalBufferList = new string[numberOfSoundPlayers];
+            int[] soundSourceList = new int[numberOfSoundPlayers];
 
             for (int i = 0; i < numberOfSoundPlayers; i++)
             {
-                soundPlayerAngle = 45 + (i*(360 / numberOfSoundPlayers));
-                if (soundPlayerAngle >=360) {
-                    soundPlayerAngle = soundPlayerAngle - 360;
-                }
-                radiusList.Add(radius);
-                angleList.Add(soundPlayerAngle);
+                signalBufferList[i] = vA.CreateSignalSourceBufferFromFile(speechFile);
+                soundSourceList[i] = vA.CreateSoundSource("Speech" + i);
             }
-            */
 
-            double soundPlayerAngle;
-            double[] radiusList = new double[numberOfSoundPlayers];
-            double[] angleList = new double[numberOfSoundPlayers];
+            int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+
+            for (int i = 0; i < numberOfSoundPlayers; i++)
+            {
+                vA.SetSoundSourceDirectivity(soundSourceList[i], humanDirectivity);
+            }
 
             for (int i = 0; i < numberOfSoundPlayers; i++)
             {
@@ -1096,22 +1060,46 @@ namespace perSONA
                 {
                     soundPlayerAngle = soundPlayerAngle - 360;
                 }
-                radiusList[i] = radius;
-                angleList[i] = soundPlayerAngle;
-
-                double xSides = radius * Math.Sin(soundPlayerAngle / 180 * Math.PI);
-                double zFront = radius * Math.Cos(soundPlayerAngle / 180 * Math.PI);
-                double yHeight = 1.7;
-
-                double normalizationFactor = trackBar2.Value / 100.0;
-                double powerSpeech = 0.25 * normalizationFactor;
-
-                vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
-                vA.SetSoundSourceSoundPower(speechSource, powerSpeech);
-                vA.SetSoundSourceSignalSource(speechSource, speechSound);
-                vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
+                xSidesList[i] = radius * Math.Sin(soundPlayerAngle / 180 * Math.PI);
+                yFrontList[i] = radius * Math.Cos(soundPlayerAngle / 180 * Math.PI);
+                zHeightList[i] = 1.7;
             }
-            plotSceneGraph(zedGraphControl1, radiusList, angleList);
+
+            double normalizationFactor;
+            if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
+            {
+                normalizationFactor = Properties.Settings.Default.EARPHONE_VOLUME / 100.0;
+            }
+            else
+            {
+                normalizationFactor = Properties.Settings.Default.SPEAKER_VOLUME / 100.0;
+            }
+            double powerSpeech = 0.25 * normalizationFactor;
+
+
+            for (int i = 0; i < numberOfSoundPlayers; i++)
+            {
+                vA.SetSoundSourcePosition(soundSourceList[i], new VAVec3(xSidesList[i], yFrontList[i], zHeightList[i]));
+                vA.SetSoundSourceSoundPower(soundSourceList[i], powerSpeech);
+                vA.SetSoundSourceSignalSource(soundSourceList[i], signalBufferList[i]);
+            }
+
+            for (int i = 0; i < numberOfSoundPlayers; i++)
+            {
+                vA.SetSignalSourceBufferPlaybackAction(signalBufferList[i], "play");
+            }
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
+            {
+                label2.Text = string.Format("Volume: {0} %", Properties.Settings.Default.EARPHONE_VOLUME);
+            }
+            else
+            {
+                label2.Text = string.Format("Volume: {0} %", Properties.Settings.Default.SPEAKER_VOLUME);
+            }
         }
     }
 }

@@ -31,26 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(earphoneCalibration));
             this.Fail = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Sound = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.calibrated = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.earphoneLabel = new System.Windows.Forms.Label();
             this.Help = new System.Windows.Forms.Button();
+            this.volumeBar = new System.Windows.Forms.TrackBar();
+            this.volumeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.SuspendLayout();
             // 
             // Fail
             // 
-            this.Fail.Location = new System.Drawing.Point(626, 363);
+            this.Fail.Location = new System.Drawing.Point(623, 318);
             this.Fail.Name = "Fail";
             this.Fail.Size = new System.Drawing.Size(188, 35);
             this.Fail.TabIndex = 104;
@@ -61,11 +64,27 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(230, 27);
+            this.panel1.Location = new System.Drawing.Point(227, 27);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 358);
             this.panel1.TabIndex = 95;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 350);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 84;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -85,7 +104,7 @@
             // 
             // Sound
             // 
-            this.Sound.Location = new System.Drawing.Point(426, 207);
+            this.Sound.Location = new System.Drawing.Point(423, 163);
             this.Sound.Margin = new System.Windows.Forms.Padding(4);
             this.Sound.Name = "Sound";
             this.Sound.Size = new System.Drawing.Size(388, 70);
@@ -97,7 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(427, 146);
+            this.label3.Location = new System.Drawing.Point(424, 118);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 20);
@@ -113,35 +132,19 @@
             this.panel2.Size = new System.Drawing.Size(188, 358);
             this.panel2.TabIndex = 94;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 350);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 84;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(427, 90);
+            this.label2.Location = new System.Drawing.Point(424, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 20);
+            this.label2.Size = new System.Drawing.Size(153, 20);
             this.label2.TabIndex = 101;
-            this.label2.Text = "Caixa sendo calibrada:";
+            this.label2.Text = "Reprodutor sonoro:";
             // 
             // Next
             // 
-            this.Next.Location = new System.Drawing.Point(426, 285);
+            this.Next.Location = new System.Drawing.Point(423, 241);
             this.Next.Margin = new System.Windows.Forms.Padding(4);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(388, 70);
@@ -154,7 +157,7 @@
             // 
             this.calibrated.AutoSize = true;
             this.calibrated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.calibrated.Location = new System.Drawing.Point(655, 145);
+            this.calibrated.Location = new System.Drawing.Point(670, 117);
             this.calibrated.Margin = new System.Windows.Forms.Padding(4);
             this.calibrated.Name = "calibrated";
             this.calibrated.Size = new System.Drawing.Size(111, 24);
@@ -169,15 +172,15 @@
             this.label1.Location = new System.Drawing.Point(426, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 20);
+            this.label1.Size = new System.Drawing.Size(269, 20);
             this.label1.TabIndex = 98;
-            this.label1.Text = "Após calibrar o fone clique em \"Calibrado\"";
+            this.label1.Text = "Ajuste o balanço do fone de ouvido";
             // 
             // earphoneLabel
             // 
             this.earphoneLabel.AutoSize = true;
             this.earphoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.earphoneLabel.Location = new System.Drawing.Point(651, 90);
+            this.earphoneLabel.Location = new System.Drawing.Point(666, 73);
             this.earphoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.earphoneLabel.Name = "earphoneLabel";
             this.earphoneLabel.Size = new System.Drawing.Size(113, 20);
@@ -186,7 +189,7 @@
             // 
             // Help
             // 
-            this.Help.Location = new System.Drawing.Point(426, 363);
+            this.Help.Location = new System.Drawing.Point(423, 319);
             this.Help.Margin = new System.Windows.Forms.Padding(4);
             this.Help.Name = "Help";
             this.Help.Size = new System.Drawing.Size(188, 35);
@@ -195,11 +198,35 @@
             this.Help.UseVisualStyleBackColor = true;
             this.Help.Click += new System.EventHandler(this.Help_Click);
             // 
+            // volumeBar
+            // 
+            this.volumeBar.Location = new System.Drawing.Point(423, 361);
+            this.volumeBar.Maximum = 100;
+            this.volumeBar.Minimum = 1;
+            this.volumeBar.Name = "volumeBar";
+            this.volumeBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.volumeBar.Size = new System.Drawing.Size(188, 56);
+            this.volumeBar.TabIndex = 1;
+            this.volumeBar.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.volumeBar.Value = 1;
+            this.volumeBar.Scroll += new System.EventHandler(this.volumeBar_Scroll);
+            // 
+            // volumeLabel
+            // 
+            this.volumeLabel.AutoSize = true;
+            this.volumeLabel.Location = new System.Drawing.Point(666, 366);
+            this.volumeLabel.Name = "volumeLabel";
+            this.volumeLabel.Size = new System.Drawing.Size(102, 20);
+            this.volumeLabel.TabIndex = 105;
+            this.volumeLabel.Text = "Volume: 100";
+            // 
             // earphoneCalibration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 408);
+            this.Controls.Add(this.volumeLabel);
+            this.Controls.Add(this.volumeBar);
             this.Controls.Add(this.Fail);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Sound);
@@ -221,9 +248,10 @@
             this.Text = "Calibração com Fones de Ouvido";
             this.TopMost = true;
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +272,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label earphoneLabel;
         private System.Windows.Forms.Button Help;
+        private System.Windows.Forms.TrackBar volumeBar;
+        private System.Windows.Forms.Label volumeLabel;
     }
 }
