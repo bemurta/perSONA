@@ -23,6 +23,7 @@ namespace perSONA
         public patientManagement(IvAInterface ivAInterface)
         {
             InitializeComponent();
+            this.Text = "Módulo de Gerenciamento de Paciente";
             this.vAInterface = ivAInterface;
             masking.SelectedIndex = 0;
             audiometrySide.SelectedIndex = 0;
@@ -35,6 +36,7 @@ namespace perSONA
         public patientManagement(IvAInterface ivAInterface, Patient person)
         {
             InitializeComponent();
+            this.Text = "Paciente " + person.Name; 
             this.vAInterface = ivAInterface;
             masking.SelectedIndex = 0;
             audiometrySide.SelectedIndex = 0;

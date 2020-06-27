@@ -101,7 +101,6 @@
     <ROW Directory="Mixer_2_Dir" Directory_Parent="Reproduction_Dir" DefaultDir="Mixer"/>
     <ROW Directory="Mixer_Dir" Directory_Parent="Ambient_Dir" DefaultDir="Mixer"/>
     <ROW Directory="Motion_Dir" Directory_Parent="include_Dir" DefaultDir="Motion"/>
-    <ROW Directory="NewFolder_Dir" Directory_Parent="include_Dir" DefaultDir="NEWFOL~1|New Folder"/>
     <ROW Directory="Noise_Dir" Directory_Parent="Sounds_Dir" DefaultDir="Noise"/>
     <ROW Directory="OutdoorNoise_Dir" Directory_Parent="Binaural_Dir" DefaultDir="OUTDOO~1|OutdoorNoise"/>
     <ROW Directory="Prototyping_Dir" Directory_Parent="Rendering_Dir" DefaultDir="PROTOT~1|Prototyping"/>
@@ -183,7 +182,6 @@
     <ROW Component="NatNetLib.dll_1" ComponentId="{9E185CFD-5D6B-4EF6-924A-E9919B5ECACC}" Directory_="perSONA_Dir" Attributes="256" KeyPath="NatNetLib.dll_1"/>
     <ROW Component="NatNetML.dll" ComponentId="{B3B0EF4E-2CCD-47BE-BB56-675369A94C46}" Directory_="bin_Dir" Attributes="256" KeyPath="NatNetML.dll"/>
     <ROW Component="NatNetML.dll_1" ComponentId="{C2DF6CD5-31D7-4639-9F6A-61404192A519}" Directory_="perSONA_Dir" Attributes="256" KeyPath="NatNetML.dll_1"/>
-    <ROW Component="NewFolder" ComponentId="{892D682B-3902-4CC0-8F17-5F433CF09736}" Directory_="NewFolder_Dir" Attributes="0"/>
     <ROW Component="ProductInformation" ComponentId="{3279A4CC-EB0E-4F15-AE50-8F44C110E64B}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
     <ROW Component="Qt5Core.dll" ComponentId="{A35B6253-2855-4EAB-837E-AC883C77D0D1}" Directory_="bin_Dir" Attributes="256" KeyPath="Qt5Core.dll"/>
     <ROW Component="Qt5Core.dll_1" ComponentId="{094C1777-2BE3-4D88-8D99-765D4B74BC13}" Directory_="perSONA_Dir" Attributes="256" KeyPath="Qt5Core.dll_1"/>
@@ -1163,7 +1161,6 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
-    <ROW Directory_="NewFolder_Dir" Component_="NewFolder" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
@@ -1442,7 +1439,6 @@
     <ROW Feature_="MainFeature" Component_="VistaTools.dll_1"/>
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
     <ROW Feature_="MainFeature" Component_="itextsharp.dll"/>
-    <ROW Feature_="MainFeature" Component_="NewFolder"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
