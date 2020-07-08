@@ -51,7 +51,6 @@
             this.Subject.Size = new System.Drawing.Size(401, 27);
             this.Subject.TabIndex = 1;
             this.Subject.Text = "";
-            this.Subject.TextChanged += new System.EventHandler(this.Subject_TextChanged);
             // 
             // label1
             // 
@@ -120,7 +119,6 @@
             this.From.Size = new System.Drawing.Size(401, 27);
             this.From.TabIndex = 0;
             this.From.Text = "";
-            this.From.TextChanged += new System.EventHandler(this.From_TextChanged);
             // 
             // Body
             // 
@@ -170,8 +168,6 @@
             this.Name = "Sende_mailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enviar e-mail";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.Sende_mailForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

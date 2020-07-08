@@ -41,7 +41,6 @@ namespace perSONA
 
         public Form1(string confFile, int sourceIndex)
         {
-
             InitializeComponent();
             this.confFile = confFile;
 
@@ -107,6 +106,7 @@ namespace perSONA
             }
         }
 
+        //??
         ~Form1()
         {
             this.Form1_FormClosing(null, null);
@@ -171,8 +171,6 @@ namespace perSONA
         {
             connectToVA();
         }
-
-
 
         private void buttonDisconnect_Click(object sender, EventArgs e)
         {
@@ -305,10 +303,6 @@ namespace perSONA
             playScene(radius, angle, trackBar1.Value);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -316,11 +310,6 @@ namespace perSONA
                 label1.Text = string.Format("SNR: {0} dB", trackBar1.Value);
             else
                 label1.Text = string.Format("SNR: INF", trackBar1.Value);
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
         }
 
         public VANet getVa()
@@ -471,11 +460,6 @@ namespace perSONA
             textBox2.Text = string.Format("Answer {0}/{1}= {2}% ", answer, totalWords, 100.0 * (answer / totalWords));
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         public void fillWords(string speechFile, ListBox listbox, bool test=false)
         {
@@ -620,9 +604,6 @@ namespace perSONA
 
             }
 
-
-
-
             speechList.Add(radius[0] * Math.Sin(angle[0] / 180 * Math.PI), radius[0] * Math.Cos(angle[0] / 180 * Math.PI));
             noiseList.Add(radius[1] * Math.Sin(angle[1] / 180 * Math.PI), radius[1] * Math.Cos(angle[1] / 180 * Math.PI));
 
@@ -694,11 +675,6 @@ namespace perSONA
 
         }
 
-
-        private void zedGraphControl1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -814,7 +790,6 @@ namespace perSONA
             updatePatientAudiometry(patientName, timestamp);
         }
 
-
         public void updatePatientAudiometry(string patientName, string timestamp)
         {
             string jsonFile = string.Format("{0}/patients/{1}.json",
@@ -852,12 +827,8 @@ namespace perSONA
             File.WriteAllText(jsonFile, output);
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-
+        //??
         private double checkDirection(bool left, bool front, bool right)
         {
             if (left)
@@ -924,7 +895,6 @@ namespace perSONA
 
         private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             new Form2(this).Show();
             updatePatientList();
         }
@@ -990,39 +960,9 @@ namespace perSONA
             }
         }
 
-        private void patientBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Sende_mailForm().Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel12_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void calibraçãoToolStripMenuItem_Click(object sender, EventArgs e)

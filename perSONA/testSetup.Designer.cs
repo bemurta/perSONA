@@ -704,7 +704,6 @@
             0,
             0,
             0});
-            this.numericRule.ValueChanged += new System.EventHandler(this.numericRule_ValueChanged);
             // 
             // groupBox6
             // 
@@ -747,8 +746,6 @@
             this.Name = "testSetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Módulo de Configuração de Ensaio";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.testSetup_Load);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

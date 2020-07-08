@@ -264,7 +264,6 @@
             this.rightHearingEtiology.Name = "rightHearingEtiology";
             this.rightHearingEtiology.Size = new System.Drawing.Size(369, 28);
             this.rightHearingEtiology.TabIndex = 0;
-            this.rightHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.rightHearingEtiology_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -280,7 +279,6 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Etiologia";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // leftHearingEtiology
             // 
@@ -308,7 +306,6 @@
             this.leftHearingEtiology.Name = "leftHearingEtiology";
             this.leftHearingEtiology.Size = new System.Drawing.Size(368, 28);
             this.leftHearingEtiology.TabIndex = 0;
-            this.leftHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.leftHearingEtiology_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -396,7 +393,6 @@
             this.leftHearingLoss.Name = "leftHearingLoss";
             this.leftHearingLoss.Size = new System.Drawing.Size(368, 28);
             this.leftHearingLoss.TabIndex = 0;
-            this.leftHearingLoss.SelectedIndexChanged += new System.EventHandler(this.leftHearingLoss_SelectedIndexChanged);
             // 
             // groupBox36
             // 
@@ -429,7 +425,6 @@
             this.rightHearingLoss.Name = "rightHearingLoss";
             this.rightHearingLoss.Size = new System.Drawing.Size(369, 28);
             this.rightHearingLoss.TabIndex = 0;
-            this.rightHearingLoss.SelectedIndexChanged += new System.EventHandler(this.rightHearingLoss_SelectedIndexChanged);
             // 
             // groupBox37
             // 
@@ -498,7 +493,6 @@
             this.groupBox39.TabIndex = 7;
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "Pré ou pós lingual?";
-            this.groupBox39.Enter += new System.EventHandler(this.groupBox39_Enter);
             // 
             // rightPostLingual
             // 
@@ -515,7 +509,6 @@
             this.rightPostLingual.Name = "rightPostLingual";
             this.rightPostLingual.Size = new System.Drawing.Size(369, 28);
             this.rightPostLingual.TabIndex = 0;
-            this.rightPostLingual.SelectedIndexChanged += new System.EventHandler(this.rightPostLingual_SelectedIndexChanged);
             // 
             // groupBox40
             // 
@@ -550,7 +543,6 @@
             this.rightLossDegree.Name = "rightLossDegree";
             this.rightLossDegree.Size = new System.Drawing.Size(369, 28);
             this.rightLossDegree.TabIndex = 0;
-            this.rightLossDegree.SelectedIndexChanged += new System.EventHandler(this.rightLossDegree_SelectedIndexChanged);
             // 
             // groupBox21
             // 
@@ -619,7 +611,6 @@
             this.groupBox16.TabIndex = 6;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Pré ou pós lingual?";
-            this.groupBox16.Enter += new System.EventHandler(this.groupBox16_Enter);
             // 
             // leftPostLingual
             // 
@@ -636,7 +627,6 @@
             this.leftPostLingual.Name = "leftPostLingual";
             this.leftPostLingual.Size = new System.Drawing.Size(368, 28);
             this.leftPostLingual.TabIndex = 0;
-            this.leftPostLingual.SelectedIndexChanged += new System.EventHandler(this.leftPostLingual_SelectedIndexChanged);
             // 
             // groupBox17
             // 
@@ -652,7 +642,6 @@
             this.groupBox17.TabIndex = 4;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Grau da perda";
-            this.groupBox17.Enter += new System.EventHandler(this.groupBox17_Enter);
             // 
             // leftLossDegree
             // 
@@ -672,7 +661,6 @@
             this.leftLossDegree.Name = "leftLossDegree";
             this.leftLossDegree.Size = new System.Drawing.Size(368, 28);
             this.leftLossDegree.TabIndex = 0;
-            this.leftLossDegree.SelectedIndexChanged += new System.EventHandler(this.leftLossDegree_SelectedIndexChanged);
             // 
             // groupBox5
             // 
@@ -821,7 +809,6 @@
             this.rightDevice.Name = "rightDevice";
             this.rightDevice.Size = new System.Drawing.Size(173, 28);
             this.rightDevice.TabIndex = 0;
-            this.rightDevice.SelectedIndexChanged += new System.EventHandler(this.rightDevice_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -1020,7 +1007,6 @@
             this.sexTab.Name = "sexTab";
             this.sexTab.Size = new System.Drawing.Size(187, 28);
             this.sexTab.TabIndex = 0;
-            this.sexTab.SelectedIndexChanged += new System.EventHandler(this.sexTab_SelectedIndexChanged);
             // 
             // groupBox11
             // 
@@ -1084,7 +1070,6 @@
             this.work.Name = "work";
             this.work.Size = new System.Drawing.Size(429, 28);
             this.work.TabIndex = 0;
-            this.work.SelectedIndexChanged += new System.EventHandler(this.work_SelectedIndexChanged);
             // 
             // groupBox20
             // 
@@ -1112,7 +1097,6 @@
             this.observationBox.Name = "observationBox";
             this.observationBox.Size = new System.Drawing.Size(426, 79);
             this.observationBox.TabIndex = 0;
-            this.observationBox.TextChanged += new System.EventHandler(this.observationBox_TextChanged);
             // 
             // groupBox18
             // 
@@ -1148,7 +1132,6 @@
             this.motivationBox.Name = "motivationBox";
             this.motivationBox.Size = new System.Drawing.Size(429, 28);
             this.motivationBox.TabIndex = 0;
-            this.motivationBox.SelectedIndexChanged += new System.EventHandler(this.motivationBox_SelectedIndexChanged);
             // 
             // groupBox14
             // 
@@ -1248,7 +1231,6 @@
             this.scholarBox.Name = "scholarBox";
             this.scholarBox.Size = new System.Drawing.Size(429, 28);
             this.scholarBox.TabIndex = 0;
-            this.scholarBox.SelectedIndexChanged += new System.EventHandler(this.scholarBox_SelectedIndexChanged);
             // 
             // groupBox9
             // 
@@ -1275,7 +1257,6 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(429, 27);
             this.nameBox.TabIndex = 0;
-            this.nameBox.TextChanged += new System.EventHandler(this.nameBox_TextChanged);
             // 
             // tabControl1
             // 
@@ -1365,7 +1346,6 @@
             this.label3.Size = new System.Drawing.Size(228, 56);
             this.label3.TabIndex = 3;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tableLayoutPanel15
             // 
@@ -1565,7 +1545,7 @@
             this.groupBox30.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox30.Size = new System.Drawing.Size(460, 138);
+            this.groupBox30.Size = new System.Drawing.Size(460, 136);
             this.groupBox30.TabIndex = 0;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Audiometrias cadastradas";
@@ -1581,7 +1561,7 @@
             this.audiometryLists.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryLists.Name = "audiometryLists";
             this.audiometryLists.ScrollAlwaysVisible = true;
-            this.audiometryLists.Size = new System.Drawing.Size(444, 84);
+            this.audiometryLists.Size = new System.Drawing.Size(444, 44);
             this.audiometryLists.TabIndex = 0;
             this.audiometryLists.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -1591,11 +1571,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox23.Controls.Add(this.tableLayoutPanel5);
-            this.groupBox23.Location = new System.Drawing.Point(5, 171);
+            this.groupBox23.Location = new System.Drawing.Point(5, 169);
             this.groupBox23.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox23.Size = new System.Drawing.Size(460, 540);
+            this.groupBox23.Size = new System.Drawing.Size(460, 542);
             this.groupBox23.TabIndex = 1;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Adicionar nova audiometria";
@@ -1614,7 +1594,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.16466F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.835341F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(441, 504);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(441, 506);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // button1
@@ -1622,7 +1602,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(5, 464);
+            this.button1.Location = new System.Drawing.Point(5, 466);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(431, 35);
@@ -1660,7 +1640,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(435, 453);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(435, 455);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -1677,7 +1657,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 72);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 74);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // button2
@@ -1685,10 +1665,10 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(5, 15);
+            this.button2.Location = new System.Drawing.Point(5, 16);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 40);
+            this.button2.Size = new System.Drawing.Size(202, 41);
             this.button2.TabIndex = 12;
             this.button2.Text = "Pré-Visualização";
             this.button2.UseVisualStyleBackColor = true;
@@ -1761,7 +1741,7 @@
             this.groupBox35.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox35.Size = new System.Drawing.Size(207, 68);
+            this.groupBox35.Size = new System.Drawing.Size(207, 70);
             this.groupBox35.TabIndex = 11;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "8000 Hz";
@@ -2180,8 +2160,6 @@
             this.Name = "patientManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Módulo de Gerenciamento de Paciente";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.patientManagement_Load);
             this.groupBox42.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox41.ResumeLayout(false);

@@ -443,8 +443,7 @@
             this.MinimumSize = new System.Drawing.Size(845, 455);
             this.Name = "speakerCalibration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Calibração de Reprodutores Sonoros";
-            this.TopMost = true;
+            this.Text = "Calibração das Caixas de Som";
             ((System.ComponentModel.ISupportInitialize)(this.SLM_Microphone)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

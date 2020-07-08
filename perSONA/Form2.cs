@@ -37,10 +37,7 @@ namespace perSONA
                     textBox1.Text = selectedPath;
                     vAInterface.concatText("Changed default results folder to: " + selectedPath);
                 }
-
             }
-
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -75,16 +72,6 @@ namespace perSONA
             Properties.Settings.Default.RESULTS_FOLDER = "%DEFAULTUSERPROFILE%/perSONA";
             textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
             Properties.Settings.Default.Save();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            TopMost = true;
         }
     }
 }

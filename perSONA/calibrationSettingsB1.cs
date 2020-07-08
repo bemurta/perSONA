@@ -13,11 +13,15 @@ namespace perSONA
     public partial class calibrationSettingsB1 : Form
     {
         private readonly IvAInterface vAInterface;
+        string earphoneBrand;
+        string earphoneModel;
 
-        public calibrationSettingsB1(IvAInterface vAInterface)
+        public calibrationSettingsB1(IvAInterface vAInterface, string calibrationObjectBrand, string calibrationObjectModel)
         {
             InitializeComponent();
             this.vAInterface = vAInterface;
+            earphoneBrand = calibrationObjectBrand;
+            earphoneModel = calibrationObjectModel;
         }
 
         private void Next_Click(object sender, EventArgs e)

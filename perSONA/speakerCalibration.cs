@@ -202,7 +202,7 @@ namespace perSONA
 
             //PDF
             Document doc = new Document(PageSize.A4, 70, 70, 70, 70);
-            PdfWriter.GetInstance(doc, new FileStream(Properties.Settings.Default.RESULTS_FOLDER + "/Relatório de Calibração " + Properties.Settings.Default.CALIBRATION_ID + ".pdf", FileMode.Create));
+            PdfWriter.GetInstance(doc, new FileStream(Properties.Settings.Default.RESULTS_FOLDER + "/Relatório de Calibração " + Properties.Settings.Default.CALIBRATION_ID + DateTime.Now.ToString(" dd-MM-yyyy") + ".pdf", FileMode.Create));
 
             doc.Open();
 
@@ -240,7 +240,7 @@ namespace perSONA
             paragraph.Add(p9);
 
             paragraph[p].Add(new Chunk("Objeto de calibração: ", H2bold));
-            paragraph[p].Add(new Chunk("Sistema de reprodução sonora do perSONA, composto por arranjo de 8 alto-falantes da marca Genelec, modelo 8020C" + "\r\n" + "\r\n", H2));
+            paragraph[p].Add(new Chunk("Sistema de reprodução sonora do perSONA, composto por arranjo de 8 alto-falantes da marca " + calibration.CalibrationObjectBrand + " e modelo " + calibration.CalibrationObjectModel + "\r\n" + "\r\n", H2));
             p++; //New paragraph
 
             paragraph[p].Add(new Chunk("Sinal de calibração: ", H2bold));

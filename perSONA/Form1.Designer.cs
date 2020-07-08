@@ -237,7 +237,6 @@ namespace perSONA
             this.label1.TabIndex = 13;
             this.label1.Text = "SNR: 0 dB";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -376,7 +375,6 @@ namespace perSONA
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.10778F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(377, 668);
             this.tableLayoutPanel12.TabIndex = 17;
-            this.tableLayoutPanel12.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel12_Paint);
             // 
             // tableLayoutPanel16
             // 
@@ -475,7 +473,6 @@ namespace perSONA
             this.zedGraphControl1.Size = new System.Drawing.Size(365, 290);
             this.zedGraphControl1.TabIndex = 14;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
-            this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
             // testSetup
             // 
@@ -695,7 +692,6 @@ namespace perSONA
             this.patientBox.Name = "patientBox";
             this.patientBox.Size = new System.Drawing.Size(348, 204);
             this.patientBox.TabIndex = 0;
-            this.patientBox.SelectedIndexChanged += new System.EventHandler(this.patientBox_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -896,7 +892,6 @@ namespace perSONA
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.94675F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(377, 676);
             this.tableLayoutPanel10.TabIndex = 13;
-            this.tableLayoutPanel10.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel10_Paint);
             // 
             // getFolder
             // 
@@ -1038,7 +1033,6 @@ namespace perSONA
             this.listBox2.ScrollAlwaysVisible = true;
             this.listBox2.Size = new System.Drawing.Size(367, 124);
             this.listBox2.TabIndex = 1;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -1110,7 +1104,6 @@ namespace perSONA
             this.panel3.Size = new System.Drawing.Size(359, 726);
             this.panel3.TabIndex = 1;
             this.panel3.Visible = false;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // tableLayoutPanel14
             // 
@@ -1268,7 +1261,6 @@ namespace perSONA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "perSONA 1.5  BETA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);

@@ -15,11 +15,15 @@ namespace perSONA
     public partial class calibrationSettingsB2 : Form
     {
         private readonly IvAInterface vAInterface;
+        string earphoneBrand;
+        string earphoneModel;
 
-        public calibrationSettingsB2(IvAInterface vAInterface)
+        public calibrationSettingsB2(IvAInterface vAInterface, string calibrationObjectBrand, string calibrationObjectModel)
         {
             InitializeComponent();
             this.vAInterface = vAInterface;
+            earphoneBrand = calibrationObjectBrand;
+            earphoneModel = calibrationObjectModel;
         }
 
         private void mannequinBrandBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,7 +67,7 @@ namespace perSONA
             try
             {
                 //mannequinPicture.Image = Image.FromFile("C:\\Users\\Gustavo Trentin\\Desktop\\perSONA\\perSONA\\logo\\mannequin" + mannequinModelBox.Text + ".png");
-                //mannequinPicture.Image = Image.FromFile("logo/mannequin/" + mannequinModelBox.Text + ".png");
+                mannequinPicture.Image = Image.FromFile("logo/mannequin/" + mannequinModelBox.Text + ".png");
                 //mannequinPicture.ImageLocation = "logo/mannequin/" + mannequinModelBox.Text + ".png";
             }
             catch(FileNotFoundException)
@@ -83,6 +87,8 @@ namespace perSONA
             {
                 calibrationData calibration = new calibrationData()
                 {
+                    CalibrationObjectBrand = earphoneBrand,
+                    CalibrationObjectModel = earphoneModel,
                     MannequinBrand = mannequinBrandBox.Text,
                     MannequinModel = mannequinModelBox.Text,
                     MannequinPinnae = mannequinPinnaeBox.Text,
@@ -96,7 +102,6 @@ namespace perSONA
                     File.WriteAllText(string.Format("{0}/CalibrationData/{1}.json",
                                                   Properties.Settings.Default.RESULTS_FOLDER,
                                                   "Calibration " + Properties.Settings.Default.CALIBRATION_ID), calibrationJson);
-
                 }
                 catch (DirectoryNotFoundException)
                 {

@@ -67,7 +67,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selecione modo de reprodução";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // selectReproduction
             // 
@@ -97,7 +96,6 @@
             this.label1.Size = new System.Drawing.Size(352, 30);
             this.label1.TabIndex = 7;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -117,7 +115,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.18325F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(360, 191);
             this.tableLayoutPanel1.TabIndex = 8;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // Form5
             // 
@@ -131,8 +128,6 @@
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleção de Hardware";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form5_Load);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

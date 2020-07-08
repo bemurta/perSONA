@@ -16,12 +16,17 @@ namespace perSONA
     public partial class calibrationSettingsA1 : Form
     {
         private readonly IvAInterface vAInterface;
+        string speakerBrand;
+        string speakerModel;
 
-        public calibrationSettingsA1(IvAInterface vAInterface)
+        public calibrationSettingsA1(IvAInterface vAInterface, string calibrationObjectBrand, string calibrationObjectModel)
         {
             InitializeComponent();
             this.vAInterface = vAInterface;
+            speakerBrand = calibrationObjectBrand;
+            speakerModel = calibrationObjectModel;
         }
+
         private void Next_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(SLMBrandBox.Text) | string.IsNullOrWhiteSpace(SLMModelBox.Text))
@@ -33,6 +38,8 @@ namespace perSONA
             {
                 calibrationData calibration = new calibrationData()
                 {
+                    CalibrationObjectBrand = speakerBrand,
+                    CalibrationObjectModel = speakerModel,
                     SLMBrand = SLMBrandBox.Text,
                     SLMModel = SLMModelBox.Text,
                     SLMSerialNumber = SLMSerialNumberBox.Text,

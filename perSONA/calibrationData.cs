@@ -26,6 +26,8 @@ namespace perSONA
         public string MannequinPinnae { get; set; }
 
         //Variáveis que servem para mais de um modo
+        public string CalibrationObjectBrand { get; set; }
+        public string CalibrationObjectModel { get; set; }
         public string MicrophoneBrand { get; set; }
         public string MicrophoneModel { get; set; }
         public string MicrophoneSerialNumber { get; set; }

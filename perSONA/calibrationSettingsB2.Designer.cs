@@ -145,6 +145,7 @@
             this.mannequinPicture.Location = new System.Drawing.Point(401, 80);
             this.mannequinPicture.Name = "mannequinPicture";
             this.mannequinPicture.Size = new System.Drawing.Size(165, 165);
+            this.mannequinPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mannequinPicture.TabIndex = 61;
             this.mannequinPicture.TabStop = false;
             // 
@@ -165,7 +166,6 @@
             this.Name = "calibrationSettingsB2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calibração com Manequim";
-            this.TopMost = true;
             this.groupBox6.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

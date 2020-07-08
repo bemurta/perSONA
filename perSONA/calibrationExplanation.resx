@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>Bem-vindo a interface de calibração do perSONA. Lembre-se que calibrar os seu sistema de reprodução
-sonora algo muito importante e deve ser feito com frequência, no mínimo a cada 2 anos. Lembre também
-que cada vez que você faz uma alteração no sistema você terá que recalibrar o sistema.</value>
+    <value>Bem-vindo a interface de calibração do perSONA. Lembre-se que calibrar o sistema de reprodução
+sonora é de extrema relevância e que a calibração deve ser realizada em intervalo mínino de dois anos. 
+Lembre-se também que em casos de alteração no sistema, você deve efetuar a recalibração.</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Para iniciar a calibração precisaremos de algumas informações de seus reprodutores
+    <value>Para a calibração precisaremos de algumas informações de seus reprodutores
 sonoros, bem como, dos aparelhos que deseja utilizar para a calibração.
 
 Após a coleta dessa informações a calibração que será feita em dois passos: 

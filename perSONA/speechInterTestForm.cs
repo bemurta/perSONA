@@ -29,12 +29,10 @@ namespace perSONA
 
         public speechIterTestForm(speechPerceptionTest test, IvAInterface vAInterface)
         {
-
             InitializeComponent();
 
             patientLabel.Text = test.PatientName;
             applicatorLabel.Text = test.Applicator;
-
 
 
             tryalStartTime = DateTime.Now;
@@ -75,11 +73,6 @@ namespace perSONA
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void all_correct_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < testWordsList.Items.Count; i++)
@@ -98,10 +91,6 @@ namespace perSONA
             textBox2.Text = string.Format("{0}%", 100.0 * (answer / totalWords));
 
         }
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -116,7 +105,6 @@ namespace perSONA
         private void playCurrentScene_Click(object sender, EventArgs e)
         {
             vA = vAInterface.getVa();
-
             vA.Reset();
             int receiverId = vA.CreateSoundReceiver("Subject");
 
@@ -150,7 +138,6 @@ namespace perSONA
 
         private void updateIterationGraph(GraphPane graph, double[] signalToNoiseArray)
         {
-
             ZedGraph.GraphPane myPane = graph;
             myPane.CurveList.Clear();
             PointPairList snrArray = new PointPairList();
@@ -237,16 +224,14 @@ namespace perSONA
             return nextSNR;
         }
 
+        //?
         private void button2_Click(object sender, EventArgs e)
-        {
-        
+        {        
             updateIterationGraph(zedGraphControl1.GraphPane , signalToNoiseArray);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             actualSNR = getNextSNR(actualSNR, test.SignalToNoiseStep);
 
             string responseTime = currentTryal.Text;
@@ -298,50 +283,13 @@ namespace perSONA
                 vAInterface.addCompletedTest(test);
                 this.Close();
             }
-
-
             tryalStartTime = DateTime.Now;
         }
 
-      
-
-        private void filenameList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
-
         {
             this.continuousTimerText.Text = string.Format("{0:hh\\:mm\\:ss}", DateTime.Now - test.TestStart);
             this.currentTryal.Text = string.Format("{0:mm\\:ss}", DateTime.Now - tryalStartTime);
         }
-
-        private void zedGraphControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void detailsBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void speechIterTestForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-
-
 }

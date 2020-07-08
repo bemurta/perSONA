@@ -120,7 +120,6 @@
             this.Name = "calibrationSettingsB1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calibração com Orelha Artificial";
-            this.TopMost = true;
             this.ModeloOrelha.ResumeLayout(false);
             this.MarcaOrelha.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -15,11 +15,15 @@ namespace perSONA
     public partial class calibrationSettingsA2 : Form
     {
         private readonly IvAInterface vAInterface;
+        string speakerBrand;
+        string speakerModel;
 
-        public calibrationSettingsA2(IvAInterface vAInterface)
+        public calibrationSettingsA2(IvAInterface vAInterface, string calibrationObjectBrand, string calibrationObjectModel)
         {
             InitializeComponent();
             this.vAInterface = vAInterface;
+            speakerBrand = calibrationObjectBrand;
+            speakerModel = calibrationObjectModel;
         }
 
         private void Next_Click(object sender, EventArgs e)
@@ -32,6 +36,8 @@ namespace perSONA
             {
                 calibrationData calibration = new calibrationData()
                 {
+                    CalibrationObjectBrand = speakerBrand,
+                    CalibrationObjectModel = speakerModel,
                     IPhoneModel = IPhoneModelBox.Text,
                     IOSVersion = IOSVersionBox.Text,
                     MicrophoneBrand = microphoneBrandBox.Text,

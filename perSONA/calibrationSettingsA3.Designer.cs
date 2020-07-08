@@ -266,7 +266,6 @@
             this.Name = "calibrationSettingsA3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calibração com Placa de Som";
-            this.TopMost = true;
             this.groupBox5.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);

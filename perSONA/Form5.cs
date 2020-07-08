@@ -65,25 +65,5 @@ namespace perSONA
             }
             Properties.Settings.Default.Save();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form5_Load(object sender, EventArgs e)
-        {
-            TopMost = true;
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }
