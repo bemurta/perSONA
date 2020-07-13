@@ -13,14 +13,21 @@ namespace perSONA
 {
     public partial class Form2 : Form
     {
+        bool firstUse;
+        DateTime firstUseData;
 
-        private readonly IvAInterface vAInterface;
-
-        public Form2(IvAInterface vAInterface)
+        public Form2()
         {
             InitializeComponent();
-            this.vAInterface = vAInterface;
+            firstUse = Properties.Settings.Default.FIRST_USE;
             textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
+            if (firstUse) 
+            {
+                const string message = "Bem-Vindo ao software perSONA. Antes de começar selecione a pasta que deseja salvar os resultados";
+                const string caption = "Bem-Vindo ao perSONA";
+                var result = MessageBox.Show(message, caption,
+                    MessageBoxButtons.OK);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,9 +40,7 @@ namespace perSONA
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
                     string selectedPath = fbd.SelectedPath.ToString();
-
                     textBox1.Text = selectedPath;
-                    vAInterface.concatText("Changed default results folder to: " + selectedPath);
                 }
             }
         }
@@ -64,14 +69,21 @@ namespace perSONA
                         MessageBoxIcon.Error);
                 }
             }
-            Close();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.RESULTS_FOLDER = "%DEFAULTUSERPROFILE%/perSONA";
-            textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
-            Properties.Settings.Default.Save();
+            if (firstUse == false) 
+            {
+                Close();
+            }
+            else
+            {
+                firstUse = false;
+                firstUseData = DateTime.Now;
+                Properties.Settings.Default.FIRST_USE = firstUse;
+                Properties.Settings.Default.FIRST_USE_DATA = firstUseData;
+                Properties.Settings.Default.Save();
+                new Form5().Show();
+                Hide();
+            }
         }
     }
 }

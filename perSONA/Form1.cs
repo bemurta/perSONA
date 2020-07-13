@@ -895,7 +895,7 @@ namespace perSONA
 
         private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form2(this).Show();
+            new Form2().Show();
             updatePatientList();
         }
 
