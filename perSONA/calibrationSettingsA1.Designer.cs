@@ -250,16 +250,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SLMBrandBox.FormattingEnabled = true;
-            this.SLMBrandBox.Items.AddRange(new object[] {
-            "01 dB",
-            "Brüel and Kjaer",
-            "CESVA",
-            "Criffer",
-            "Instrutherm",
-            "Larson Davis",
-            "Minipa",
-            "Norsonic",
-            "NTI"});
             this.SLMBrandBox.Location = new System.Drawing.Point(7, 21);
             this.SLMBrandBox.Margin = new System.Windows.Forms.Padding(4);
             this.SLMBrandBox.Name = "SLMBrandBox";

@@ -45,6 +45,7 @@
             this.volumeBar = new System.Windows.Forms.TrackBar();
             this.volumeLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PhoneBalanceAdjusting = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,9 +56,9 @@
             // 
             // Fail
             // 
-            this.Fail.Location = new System.Drawing.Point(623, 318);
+            this.Fail.Location = new System.Drawing.Point(424, 282);
             this.Fail.Name = "Fail";
-            this.Fail.Size = new System.Drawing.Size(188, 35);
+            this.Fail.Size = new System.Drawing.Size(188, 53);
             this.Fail.TabIndex = 104;
             this.Fail.Text = "Falha";
             this.Fail.UseVisualStyleBackColor = true;
@@ -106,10 +107,10 @@
             // 
             // Sound
             // 
-            this.Sound.Location = new System.Drawing.Point(423, 163);
+            this.Sound.Location = new System.Drawing.Point(424, 109);
             this.Sound.Margin = new System.Windows.Forms.Padding(4);
             this.Sound.Name = "Sound";
-            this.Sound.Size = new System.Drawing.Size(388, 70);
+            this.Sound.Size = new System.Drawing.Size(388, 53);
             this.Sound.TabIndex = 103;
             this.Sound.Text = "Gerar Sinal Sonoro";
             this.Sound.UseVisualStyleBackColor = true;
@@ -118,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(424, 118);
+            this.label3.Location = new System.Drawing.Point(422, 240);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 20);
@@ -137,7 +138,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(424, 73);
+            this.label2.Location = new System.Drawing.Point(424, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 20);
@@ -146,10 +147,10 @@
             // 
             // Next
             // 
-            this.Next.Location = new System.Drawing.Point(423, 241);
+            this.Next.Location = new System.Drawing.Point(624, 282);
             this.Next.Margin = new System.Windows.Forms.Padding(4);
             this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(388, 70);
+            this.Next.Size = new System.Drawing.Size(188, 53);
             this.Next.TabIndex = 96;
             this.Next.Text = "Próximo Fone";
             this.Next.UseVisualStyleBackColor = true;
@@ -159,7 +160,7 @@
             // 
             this.calibrated.AutoSize = true;
             this.calibrated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.calibrated.Location = new System.Drawing.Point(670, 117);
+            this.calibrated.Location = new System.Drawing.Point(668, 239);
             this.calibrated.Margin = new System.Windows.Forms.Padding(4);
             this.calibrated.Name = "calibrated";
             this.calibrated.Size = new System.Drawing.Size(111, 24);
@@ -171,7 +172,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(426, 11);
+            this.label1.Location = new System.Drawing.Point(424, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(368, 20);
@@ -182,7 +183,7 @@
             // 
             this.earphoneLabel.AutoSize = true;
             this.earphoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.earphoneLabel.Location = new System.Drawing.Point(666, 73);
+            this.earphoneLabel.Location = new System.Drawing.Point(666, 72);
             this.earphoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.earphoneLabel.Name = "earphoneLabel";
             this.earphoneLabel.Size = new System.Drawing.Size(113, 20);
@@ -191,10 +192,10 @@
             // 
             // Help
             // 
-            this.Help.Location = new System.Drawing.Point(423, 319);
+            this.Help.Location = new System.Drawing.Point(424, 342);
             this.Help.Margin = new System.Windows.Forms.Padding(4);
             this.Help.Name = "Help";
-            this.Help.Size = new System.Drawing.Size(188, 35);
+            this.Help.Size = new System.Drawing.Size(388, 53);
             this.Help.TabIndex = 97;
             this.Help.Text = "Ajuda";
             this.Help.UseVisualStyleBackColor = true;
@@ -202,7 +203,7 @@
             // 
             // volumeBar
             // 
-            this.volumeBar.Location = new System.Drawing.Point(423, 361);
+            this.volumeBar.Location = new System.Drawing.Point(422, 180);
             this.volumeBar.Maximum = 100;
             this.volumeBar.Minimum = 1;
             this.volumeBar.Name = "volumeBar";
@@ -216,7 +217,7 @@
             // volumeLabel
             // 
             this.volumeLabel.AutoSize = true;
-            this.volumeLabel.Location = new System.Drawing.Point(666, 366);
+            this.volumeLabel.Location = new System.Drawing.Point(666, 188);
             this.volumeLabel.Name = "volumeLabel";
             this.volumeLabel.Size = new System.Drawing.Size(102, 20);
             this.volumeLabel.TabIndex = 105;
@@ -224,32 +225,44 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(103, 98);
+            this.pictureBox2.Location = new System.Drawing.Point(101, 141);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 289);
+            this.pictureBox2.Size = new System.Drawing.Size(224, 304);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 106;
             this.pictureBox2.TabStop = false;
+            // 
+            // PhoneBalanceAdjusting
+            // 
+            this.PhoneBalanceAdjusting.Location = new System.Drawing.Point(424, 172);
+            this.PhoneBalanceAdjusting.Name = "PhoneBalanceAdjusting";
+            this.PhoneBalanceAdjusting.Size = new System.Drawing.Size(388, 53);
+            this.PhoneBalanceAdjusting.TabIndex = 107;
+            this.PhoneBalanceAdjusting.Text = "Como ajustar o balanço dos fones de ouvido?";
+            this.PhoneBalanceAdjusting.UseVisualStyleBackColor = true;
+            this.PhoneBalanceAdjusting.Click += new System.EventHandler(this.PhoneBalanceAdjusting_Click);
             // 
             // earphoneCalibration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 408);
+            this.Controls.Add(this.PhoneBalanceAdjusting);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.calibrated);
             this.Controls.Add(this.volumeLabel);
             this.Controls.Add(this.volumeBar);
             this.Controls.Add(this.Fail);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Sound);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Next);
-            this.Controls.Add(this.calibrated);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.earphoneLabel);
             this.Controls.Add(this.Help);
@@ -290,5 +303,6 @@
         private System.Windows.Forms.TrackBar volumeBar;
         private System.Windows.Forms.Label volumeLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button PhoneBalanceAdjusting;
     }
 }

@@ -35,5 +35,8 @@
     <Setting Name="EARPHONE_VOLUME" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">25</Value>
     </Setting>
+    <Setting Name="EQUIPMENTS_TABLE_LOCATION" Type="System.String" Scope="User">
+      <Value Profile="(Default)">data/Equipments.xlsx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

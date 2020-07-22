@@ -31,6 +31,9 @@ namespace perSONA
             InitializeComponent();
             this.vAInterface = vAInterface;
 
+            volumeBar.Visible = false;
+            volumeLabel.Visible = false;
+            PhoneBalanceAdjusting.Visible = true;
 
             volumeBar.Value = Properties.Settings.Default.EARPHONE_VOLUME;
             volumeLabel.Text = string.Format("Volume: {0} %", Properties.Settings.Default.EARPHONE_VOLUME);
@@ -61,6 +64,9 @@ namespace perSONA
             }
             else
             {
+                volumeBar.Visible = true;
+                volumeLabel.Visible = true;
+                PhoneBalanceAdjusting.Visible = false;
                 label1.Text = "Para calibrar altere o volume do fone de ouvido" + "\n" + "através da barra da parte inferior da tela";
                 Next.Text = "Finalizar";
                 earphoneLabel.Text = "Fones de Ouvido";
@@ -90,6 +96,9 @@ namespace perSONA
 
                 else if (i == 1)
                 {
+                    volumeBar.Visible = true;
+                    volumeLabel.Visible = true;
+                    PhoneBalanceAdjusting.Visible = false;
                     label1.Text = "Para calibrar altere o volume do fone de ouvido" + "\n" + "através da barra da parte inferior da tela";
                     Next.Text = "Finalizar";
                     earphoneLabel.Text = "Fone de Ouvido";
@@ -230,7 +239,14 @@ namespace perSONA
             paragraph.Add(p9);
 
             paragraph[p].Add(new Chunk("Objeto de calibração: ", H2bold));
-            paragraph[p].Add(new Chunk("Sistema de reprodução sonora do perSONA, composto por fones de ouvido da marca " + calibration.CalibrationObjectBrand + " e modelo " + calibration.CalibrationObjectModel + "\r\n" + "\r\n", H2));
+            if (calibration.EarphoneQuality == true)
+            {
+                paragraph[p].Add(new Chunk("Sistema de reprodução sonora do perSONA, composto por fones de ouvido da marca " + calibration.CalibrationObjectBrand + " e modelo " + calibration.CalibrationObjectModel + ", desenvolvido para exames audiológicos" + "\r\n" + "\r\n", H2));
+            }
+            else 
+            {
+                paragraph[p].Add(new Chunk("Sistema de reprodução sonora do perSONA, composto por fones de ouvido da marca " + calibration.CalibrationObjectBrand + " e modelo " + calibration.CalibrationObjectModel + ", não desenvolvido para exames audiológicos" + "\r\n" + "\r\n", H2));
+            }
             p++; //New paragraph
 
             paragraph[p].Add(new Chunk("Sinal de calibração: ", H2bold));
@@ -282,11 +298,19 @@ namespace perSONA
             Properties.Settings.Default.CALIBRATION_ID = Properties.Settings.Default.CALIBRATION_ID + 1;
             Properties.Settings.Default.Save();
         }
-            private void volumeBar_Scroll(object sender, EventArgs e)
+        private void volumeBar_Scroll(object sender, EventArgs e)
         {
             Properties.Settings.Default.EARPHONE_VOLUME = volumeBar.Value;
             volumeLabel.Text = string.Format("Volume: {0} %", Properties.Settings.Default.EARPHONE_VOLUME);
             Properties.Settings.Default.Save();
+        }
+
+        private void PhoneBalanceAdjusting_Click(object sender, EventArgs e)
+        {
+             const string message = "Clique em \"tecla do windows + R\" ->" + "\n" + "Digite \"mmsys.cpl\" (sem aspas) -> \"Ok\" -> Dê um duplo clique em \"Fones de ouvido\" -> \"Níveis\" -> \"Balanço\"";
+            const string caption = "Como ajustar o balanço dos fones de ouvido?";
+            var result = MessageBox.Show(message, caption,
+                MessageBoxButtons.OK);
         }
     }
 }

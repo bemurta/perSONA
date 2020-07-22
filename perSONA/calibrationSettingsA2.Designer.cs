@@ -134,6 +134,7 @@
             this.microphoneBrandBox.Name = "microphoneBrandBox";
             this.microphoneBrandBox.Size = new System.Drawing.Size(295, 28);
             this.microphoneBrandBox.TabIndex = 11;
+            this.microphoneBrandBox.SelectedIndexChanged += new System.EventHandler(this.microphoneBrandBox_SelectedIndexChanged);
             // 
             // groupBox8
             // 

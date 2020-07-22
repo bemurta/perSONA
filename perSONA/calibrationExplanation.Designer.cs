@@ -36,18 +36,19 @@
             this.CalibrationObjectModelBox = new System.Windows.Forms.ComboBox();
             this.Brand = new System.Windows.Forms.GroupBox();
             this.CalibrationObjectBrandBox = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.EquipmentsBox = new System.Windows.Forms.ComboBox();
             this.Next = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.EquipmentsBox = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.phoneQualityCheckBox = new System.Windows.Forms.CheckBox();
             this.Model.SuspendLayout();
             this.Brand.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -118,6 +119,7 @@
             this.CalibrationObjectModelBox.Name = "CalibrationObjectModelBox";
             this.CalibrationObjectModelBox.Size = new System.Drawing.Size(223, 28);
             this.CalibrationObjectModelBox.TabIndex = 11;
+            this.CalibrationObjectModelBox.SelectedIndexChanged += new System.EventHandler(this.CalibrationObjectModelBox_SelectedIndexChanged);
             // 
             // Brand
             // 
@@ -147,44 +149,14 @@
             this.CalibrationObjectBrandBox.TabIndex = 11;
             this.CalibrationObjectBrandBox.SelectedIndexChanged += new System.EventHandler(this.CalibrationObjectBrandBox_SelectedIndexChanged);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.EquipmentsBox);
-            this.groupBox1.Location = new System.Drawing.Point(500, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(490, 53);
-            this.groupBox1.TabIndex = 46;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Equipamento(s) de Medição";
-            // 
-            // EquipmentsBox
-            // 
-            this.EquipmentsBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EquipmentsBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.EquipmentsBox.FormattingEnabled = true;
-            this.EquipmentsBox.Items.AddRange(new object[] {
-            "Sistema de microfones, calibrador sonoro e placa de som"});
-            this.EquipmentsBox.Location = new System.Drawing.Point(9, 20);
-            this.EquipmentsBox.Margin = new System.Windows.Forms.Padding(4);
-            this.EquipmentsBox.Name = "EquipmentsBox";
-            this.EquipmentsBox.Size = new System.Drawing.Size(473, 28);
-            this.EquipmentsBox.TabIndex = 11;
-            // 
             // Next
             // 
             this.Next.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Next.Location = new System.Drawing.Point(748, 3);
+            this.Next.Location = new System.Drawing.Point(668, 3);
             this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(243, 57);
+            this.Next.Size = new System.Drawing.Size(323, 57);
             this.Next.TabIndex = 47;
             this.Next.Text = "Prosseguir";
             this.Next.UseVisualStyleBackColor = true;
@@ -215,10 +187,12 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.Next, 1, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel2.Controls.Add(this.Next, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.phoneQualityCheckBox, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 386);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -249,6 +223,52 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1000, 452);
             this.tableLayoutPanel3.TabIndex = 50;
             // 
+            // EquipmentsBox
+            // 
+            this.EquipmentsBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EquipmentsBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EquipmentsBox.FormattingEnabled = true;
+            this.EquipmentsBox.Items.AddRange(new object[] {
+            "Sistema de microfones, calibrador sonoro e placa de som"});
+            this.EquipmentsBox.Location = new System.Drawing.Point(9, 20);
+            this.EquipmentsBox.Margin = new System.Windows.Forms.Padding(4);
+            this.EquipmentsBox.Name = "EquipmentsBox";
+            this.EquipmentsBox.Size = new System.Drawing.Size(473, 28);
+            this.EquipmentsBox.TabIndex = 11;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.EquipmentsBox);
+            this.groupBox1.Location = new System.Drawing.Point(500, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(490, 53);
+            this.groupBox1.TabIndex = 46;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Equipamento(s) de Medição";
+            // 
+            // phoneQualityCheckBox
+            // 
+            this.phoneQualityCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.phoneQualityCheckBox.AutoSize = true;
+            this.phoneQualityCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.phoneQualityCheckBox.Location = new System.Drawing.Point(3, 3);
+            this.phoneQualityCheckBox.Name = "phoneQualityCheckBox";
+            this.phoneQualityCheckBox.Size = new System.Drawing.Size(242, 57);
+            this.phoneQualityCheckBox.TabIndex = 0;
+            this.phoneQualityCheckBox.Text = "Fone de Ouvido Desenvolvido Para Exame Audiológico";
+            this.phoneQualityCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.phoneQualityCheckBox.UseVisualStyleBackColor = true;
+            this.phoneQualityCheckBox.CheckedChanged += new System.EventHandler(this.phoneQualityCheckBox_CheckedChanged);
+            // 
             // calibrationExplanation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -262,14 +282,14 @@
             this.Name = "calibrationExplanation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Explicação Geral";
-            this.TopMost = true;
             this.Model.ResumeLayout(false);
             this.Brand.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -282,11 +302,12 @@
         private System.Windows.Forms.ComboBox CalibrationObjectModelBox;
         private System.Windows.Forms.GroupBox Brand;
         private System.Windows.Forms.ComboBox CalibrationObjectBrandBox;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox EquipmentsBox;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox EquipmentsBox;
+        private System.Windows.Forms.CheckBox phoneQualityCheckBox;
     }
 }

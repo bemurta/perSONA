@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Drawing;
 
 namespace perSONA
 {
@@ -23,39 +25,19 @@ namespace perSONA
             CalibrationObjectModelBox.Items.Clear();
             EquipmentsBox.Items.Clear();
 
+            fillSoundPlayerBrandBox();
             if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
             {
-                Brand.Text = "Marca dos Fones de Ouvido";
-                Model.Text = "Modelo dos Fones de Ouvido";
-                //Brand
-                CalibrationObjectBrandBox.Items.Add("3M");
-                CalibrationObjectBrandBox.Items.Add("Beyer(dynamic)");
-                CalibrationObjectBrandBox.Items.Add("BHM");
-                CalibrationObjectBrandBox.Items.Add("Etymotic");
-                CalibrationObjectBrandBox.Items.Add("Holmco");
-                CalibrationObjectBrandBox.Items.Add("KLH");
-                CalibrationObjectBrandBox.Items.Add("Koss");
-                CalibrationObjectBrandBox.Items.Add("Maico");
-                CalibrationObjectBrandBox.Items.Add("Otometrics");
-                CalibrationObjectBrandBox.Items.Add("Radioear");
-                CalibrationObjectBrandBox.Items.Add("Sennheiser");
-                CalibrationObjectBrandBox.Items.Add("Telephonics");
-          
-                //Equipments
                 EquipmentsBox.Items.Add("Orelha artificial");
                 EquipmentsBox.Items.Add("Manequim");
+                phoneQualityCheckBox.ForeColor = Color.Red;
             }
             else
             {
-                Brand.Text = "Marca das Caixas de Som";
-                Model.Text = "Modelo das Caixas de Som";
-                //Brand
-                CalibrationObjectBrandBox.Items.Add("Genelec");
-
-                //Equipments
                 EquipmentsBox.Items.Add("Medidor de nível de pressão sonora (MNPS)");
                 EquipmentsBox.Items.Add("iPhone com aplicativo e sistema de microfones externos");
                 EquipmentsBox.Items.Add("Sistema de microfones, calibrador sonoro e placa de som");
+                phoneQualityCheckBox.Visible = false;
             }
         }
 
@@ -86,12 +68,12 @@ namespace perSONA
                 else if (EquipmentsBox.Text == "Orelha artificial")
                 {
                     Properties.Settings.Default.CALIBRATION_MODE = "B1";
-                    new calibrationSettingsB1(vAInterface, CalibrationObjectBrandBox.Text, CalibrationObjectModelBox.Text).Show();
+                    new calibrationSettingsB1(vAInterface, CalibrationObjectBrandBox.Text, CalibrationObjectModelBox.Text, phoneQualityCheckBox.Checked).Show();
                 }
                 else
                 {
                     Properties.Settings.Default.CALIBRATION_MODE = "B2";
-                    new calibrationSettingsB2(vAInterface, CalibrationObjectBrandBox.Text, CalibrationObjectModelBox.Text).Show();
+                    new calibrationSettingsB2(vAInterface, CalibrationObjectBrandBox.Text, CalibrationObjectModelBox.Text, phoneQualityCheckBox.Checked).Show();
                 }
                 Properties.Settings.Default.Save();
                 Close();
@@ -100,100 +82,94 @@ namespace perSONA
 
         private void CalibrationObjectBrandBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            phoneQualityCheckBox.Checked = false;
+            CalibrationObjectModelBox.Text = "";
             CalibrationObjectModelBox.Items.Clear();
+
+            var wb = new XLWorkbook(Properties.Settings.Default.EQUIPMENTS_TABLE_LOCATION);
+
+            var Table = wb.Worksheet(2);
+            //if earphone, change table
             if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
             {
-                Earphone_Models();
+                Table = wb.Worksheet(1);
+            }
+
+            var linha = 2;
+
+            while (true)
+            {
+                var ModelColumnCell = Table.Cell("B" + linha.ToString()).Value.ToString();
+                var BrandColumnCell = Table.Cell("A" + linha.ToString()).Value.ToString();
+
+                if (string.IsNullOrEmpty(BrandColumnCell)) break;
+
+                if (CalibrationObjectBrandBox.Text == BrandColumnCell)
+                {
+                    CalibrationObjectModelBox.Items.Add(ModelColumnCell);
+                }
+                linha++;
+            }
+            wb.Dispose();
+        }
+
+        private void fillSoundPlayerBrandBox()
+        {
+            var wb = new XLWorkbook(Properties.Settings.Default.EQUIPMENTS_TABLE_LOCATION);
+            
+            var Table = wb.Worksheet(2);
+            //if earphone, change table
+            if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
+            {
+                Table = wb.Worksheet(1);
+            }
+            var linha = 2;
+            string previousCell = "";
+
+            while (true)
+            {
+                var BrandColumnCell = Table.Cell("A" + linha.ToString()).Value.ToString();
+                if (string.IsNullOrEmpty(BrandColumnCell)) break;
+                if (previousCell != BrandColumnCell)
+                {
+                    CalibrationObjectBrandBox.Items.Add(BrandColumnCell);
+                }
+                linha++;
+                previousCell = BrandColumnCell;
+            }
+            wb.Dispose();
+        }
+
+        private void CalibrationObjectModelBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var wb = new XLWorkbook(Properties.Settings.Default.EQUIPMENTS_TABLE_LOCATION);
+
+            var Table = wb.Worksheet(1);
+            var linha = 2;
+
+            while (true)
+            {
+                var ModelColumnCell = Table.Cell("B" + linha.ToString()).Value.ToString();
+                if (string.IsNullOrEmpty(ModelColumnCell)) break;
+                if (CalibrationObjectModelBox.Text == ModelColumnCell)
+                {
+                    phoneQualityCheckBox.Checked = true;
+                }
+                linha++;
+            }
+            wb.Dispose();
+        }
+
+        private void phoneQualityCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (phoneQualityCheckBox.Checked == true)
+            {
+                phoneQualityCheckBox.ForeColor = Color.Green;
             }
             else
             {
-                Speaker_Models();
+                phoneQualityCheckBox.ForeColor = Color.Red;
             }
-        }
-
-        private void Earphone_Models() 
-        {
-            if (CalibrationObjectBrandBox.Text == "3M")
-            {
-                CalibrationObjectModelBox.Items.Add("Ear Tone 3A");
-                CalibrationObjectModelBox.Items.Add("Ear Tone 5A");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Beyer(dynamic)")
-            {
-                CalibrationObjectModelBox.Items.Add("AT1350");
-                CalibrationObjectModelBox.Items.Add("DT 48A");
-                CalibrationObjectModelBox.Items.Add("T50p");
-                CalibrationObjectModelBox.Items.Add("T51");
-            }
-            else if (CalibrationObjectBrandBox.Text == "BHM")
-            {
-                CalibrationObjectModelBox.Items.Add("BC2");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Etymotic")
-            {
-                CalibrationObjectModelBox.Items.Add("ER1");
-                CalibrationObjectModelBox.Items.Add("ER1-02");
-                CalibrationObjectModelBox.Items.Add("ER2");
-                CalibrationObjectModelBox.Items.Add("ER3");
-                CalibrationObjectModelBox.Items.Add("ER3C");
-                CalibrationObjectModelBox.Items.Add("ER3-04");
-                CalibrationObjectModelBox.Items.Add("ER3-06");
-                CalibrationObjectModelBox.Items.Add("ER3-21");
-                CalibrationObjectModelBox.Items.Add("ER-7");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Holmco")
-            {
-                CalibrationObjectModelBox.Items.Add("PD81");
-                CalibrationObjectModelBox.Items.Add("PD95");
-            }
-            else if (CalibrationObjectBrandBox.Text == "KLH")
-            {
-                CalibrationObjectModelBox.Items.Add("KLH96");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Koss")
-            {
-                CalibrationObjectModelBox.Items.Add("Pró");
-                CalibrationObjectModelBox.Items.Add("R80");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Maico")
-            {
-                CalibrationObjectModelBox.Items.Add("MA25");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Otometrics")
-            {
-                CalibrationObjectModelBox.Items.Add("NB71");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Radioear")
-            {
-                CalibrationObjectModelBox.Items.Add("IP30");
-                CalibrationObjectModelBox.Items.Add("DD45");
-                CalibrationObjectModelBox.Items.Add("DD45C");
-                CalibrationObjectModelBox.Items.Add("DD450");
-                CalibrationObjectModelBox.Items.Add("B71");
-                CalibrationObjectModelBox.Items.Add("B81");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Sennheiser")
-            {
-                CalibrationObjectModelBox.Items.Add("HDA200");
-                CalibrationObjectModelBox.Items.Add("HDA280");
-                CalibrationObjectModelBox.Items.Add("HDA300");
-            }
-            else if (CalibrationObjectBrandBox.Text == "Telephonics")
-            {
-                CalibrationObjectModelBox.Items.Add("TDH-39");
-                CalibrationObjectModelBox.Items.Add("TDH-40");
-                CalibrationObjectModelBox.Items.Add("TDH-49P");
-                CalibrationObjectModelBox.Items.Add("TDH-50P");
-            }
-        }
-
-        private void Speaker_Models()
-        {
-            if (CalibrationObjectBrandBox.Text == "Genelec")
-            {
-                CalibrationObjectModelBox.Items.Add("8020C");
-            }
-
         }
     }
 }

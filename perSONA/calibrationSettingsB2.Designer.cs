@@ -71,8 +71,6 @@
             // mannequinPinnaeBox
             // 
             this.mannequinPinnaeBox.FormattingEnabled = true;
-            this.mannequinPinnaeBox.Items.AddRange(new object[] {
-            "Sem Pinna"});
             this.mannequinPinnaeBox.Location = new System.Drawing.Point(7, 20);
             this.mannequinPinnaeBox.Name = "mannequinPinnaeBox";
             this.mannequinPinnaeBox.Size = new System.Drawing.Size(286, 28);
@@ -115,10 +113,6 @@
             // mannequinBrandBox
             // 
             this.mannequinBrandBox.FormattingEnabled = true;
-            this.mannequinBrandBox.Items.AddRange(new object[] {
-            "01 dB",
-            "Bruel and Kjaer",
-            "Neumann"});
             this.mannequinBrandBox.Location = new System.Drawing.Point(9, 20);
             this.mannequinBrandBox.Margin = new System.Windows.Forms.Padding(4);
             this.mannequinBrandBox.Name = "mannequinBrandBox";

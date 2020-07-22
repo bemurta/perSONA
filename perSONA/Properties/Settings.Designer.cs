@@ -154,5 +154,17 @@ namespace perSONA.Properties {
                 this["EARPHONE_VOLUME"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("data/Equipments.xlsx")]
+        public string EQUIPMENTS_TABLE_LOCATION {
+            get {
+                return ((string)(this["EQUIPMENTS_TABLE_LOCATION"]));
+            }
+            set {
+                this["EQUIPMENTS_TABLE_LOCATION"] = value;
+            }
+        }
     }
 }

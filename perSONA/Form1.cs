@@ -862,70 +862,111 @@ namespace perSONA
 
         private void testSetup_Click(object sender, EventArgs e)
         {
-            string testTipe = "Default";
-            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-            new testSetup(this, testTipe, subjects).Show();
+            if (Application.OpenForms["testSetup"] == null)
+            {
+                string testTipe = "Default";
+                string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
+                new testSetup(this, testTipe, subjects).Show();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string testTipe = "Speech Left";
-            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-            new testSetup(this, testTipe, subjects).Show();
+            if (Application.OpenForms["testSetup"] == null)
+            {
+                string testTipe = "Speech Left";
+                string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
+                new testSetup(this, testTipe, subjects).Show();
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string testTipe = "Speech Front";
-            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-            new testSetup(this, testTipe, subjects).Show();
+            if (Application.OpenForms["testSetup"] == null)
+            {
+                string testTipe = "Speech Front";
+                string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
+                new testSetup(this, testTipe, subjects).Show();
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string testTipe = "Speech Right";
-            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-            new testSetup(this, testTipe, subjects).Show();
+            if (Application.OpenForms["testSetup"] == null)
+            {
+                string testTipe = "Speech Right";
+                string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
+                new testSetup(this, testTipe, subjects).Show();
+            }
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new helpForm().Show();
+            if (Application.OpenForms["helpForm"] == null)
+            {
+                new helpForm().Show();
+            }
         }
 
         private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form2().Show();
-            updatePatientList();
+            if (Application.OpenForms["Form2"] == null)
+            {
+                new Form2().Show();
+                updatePatientList();
+
+                /*
+                try
+                {
+                    updatePatientList();
+                }
+                catch(Exception)
+                {
+                    patientBox.DataSource = null;
+                    //patientBox.Items.Clear();
+                }
+                */                
+            }
         }
 
         private void patientAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new patientManagement(this).Show();
+            if (Application.OpenForms["patientManagement"] == null)
+            {
+                new patientManagement(this).Show();
+            }
         }
 
         private void audioDatabaseEditorAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new dbForm(this).Show();
+            if (Application.OpenForms["dbForm"] == null)
+            {
+                new dbForm(this).Show();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new patientManagement(this).Show();
+            if (Application.OpenForms["patientManagement"] == null)
+            {
+                new patientManagement(this).Show();
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            string jsonFile = string.Format("{0}/patients/{1}.json",
-                Properties.Settings.Default.RESULTS_FOLDER,
-                patientBox.SelectedItem.ToString());
-            concatText(jsonFile);
+            if (Application.OpenForms["patientManagement"] == null)
+            {
+                string jsonFile = string.Format("{0}/patients/{1}.json",
+                    Properties.Settings.Default.RESULTS_FOLDER,
+                    patientBox.SelectedItem.ToString());
+                concatText(jsonFile);
 
-            var patientJson = File.ReadAllText(jsonFile);
-            Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(patientJson);
+                var patientJson = File.ReadAllText(jsonFile);
+                Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(patientJson);
 
-            new patientManagement(this, patient).Show();
-
+                new patientManagement(this, patient).Show();
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -962,12 +1003,18 @@ namespace perSONA
 
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Sende_mailForm().Show();
+            if (Application.OpenForms["Sende_mailForm"] == null)
+            {
+                new Sende_mailForm().Show();
+            }
         }
 
         private void calibraçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new calibrationExplanation(this).Show();
+            if (Application.OpenForms["calibrationExplanation"] == null)
+            {
+                new calibrationExplanation(this).Show();
+            }
         }
 
 

@@ -44,6 +44,10 @@ namespace perSONA
 
             speakerLabel.BackColor = System.Drawing.Color.Yellow;
 
+            volumeBar.Visible = false;
+            volumeLabel.Visible = false;
+            VolumeLabelAdjusting.Visible = true;
+
             if (i == 0)
             {
                 foreach (Panel element in speakers)
@@ -66,6 +70,9 @@ namespace perSONA
                 label1.Text = "Altere o volume dos reprodutores sonoros" + "\n" + "através da barra da parte inferior da tela";
                 Next.Text = "Finalizar";
                 speakerLabel.Text = "Todas as Caixas";
+                volumeBar.Visible = true;
+                volumeLabel.Visible = true;
+                VolumeLabelAdjusting.Visible = false;
             }
 
             if (Properties.Settings.Default.CALIBRATION_MODE == "A1")
@@ -112,6 +119,9 @@ namespace perSONA
                     }
                     i = i + 1;
                     Properties.Settings.Default.ITERATOR = i;
+                    volumeBar.Visible = true;
+                    volumeLabel.Visible = true;
+                    VolumeLabelAdjusting.Visible = false;
                 }
                 else if (i == 8)
                 {
