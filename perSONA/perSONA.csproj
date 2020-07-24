@@ -168,6 +168,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applicator.cs" />
+    <Compile Include="applicatorManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applicatorManagementForm.Designer.cs">
+      <DependentUpon>applicatorManagementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="calibrationData.cs" />
     <Compile Include="calibrationExplanation.cs">
       <SubType>Form</SubType>
@@ -290,6 +297,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VACS.cs" />
+    <EmbeddedResource Include="applicatorManagementForm.resx">
+      <DependentUpon>applicatorManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="calibrationExplanation.resx">
       <DependentUpon>calibrationExplanation.cs</DependentUpon>
     </EmbeddedResource>

@@ -23,6 +23,7 @@ namespace perSONA
         void plotSceneGraph(ZedGraph.ZedGraphControl graph, double[] radius, double[] angle);
         void fillWords(string speechFile, ListBox listbox, bool test=false);
         void updatePatientList();
+        void updateApplicatorList();
         double getMeanSRT(double[] iterativeSNR);
         void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName);
     }

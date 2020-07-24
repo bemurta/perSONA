@@ -99,6 +99,7 @@ namespace perSONA
             try
             {
                 updatePatientList();
+                updateApplicatorList();
             }
             catch (Exception)
             {
@@ -862,41 +863,41 @@ namespace perSONA
 
         private void testSetup_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["testSetup"] == null)
-            {
-                string testTipe = "Default";
-                string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-                new testSetup(this, testTipe, subjects).Show();
-            }
+            openTestForm("Default");
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["testSetup"] == null)
-            {
-                string testTipe = "Speech Left";
-                string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-                new testSetup(this, testTipe, subjects).Show();
-            }
+            openTestForm("Speech Left");
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (Application.OpenForms["testSetup"] == null)
-            {
-                string testTipe = "Speech Front";
-                string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-                new testSetup(this, testTipe, subjects).Show();
-            }
+            openTestForm("Speech Front");
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            openTestForm("Speech Right");
+        }
+
+        public void openTestForm(string testTipe)
+        {
             if (Application.OpenForms["testSetup"] == null)
             {
-                string testTipe = "Speech Right";
-                string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-                new testSetup(this, testTipe, subjects).Show();
+                try
+                {
+                    string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
+                    new testSetup(this, testTipe, subjects).Show();
+                }
+                catch (Exception)
+                {
+                    const string message = "Erro";
+                    const string caption = "Selecione um paciente e um aplicador para prosseguir";
+                    var result = MessageBox.Show(message, caption,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -914,6 +915,7 @@ namespace perSONA
             {
                 new Form2().Show();
                 updatePatientList();
+                updateApplicatorList();
 
                 /*
                 try
@@ -1086,6 +1088,53 @@ namespace perSONA
             else
             {
                 label2.Text = string.Format("Volume: {0} %", Properties.Settings.Default.SPEAKER_VOLUME);
+            }
+        }
+
+        private void CreateApplicator_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["applicatorManagementForm"] == null)
+            {
+                new applicatorManagementForm(this).Show();
+            }
+        }
+
+        private void DeleteApplicator_Click(object sender, EventArgs e)
+        {
+            string jsonFile = string.Format("{0}/Applicators/{1}.json",
+                                            Properties.Settings.Default.RESULTS_FOLDER,
+                                            applicatorBox.SelectedItem.ToString());
+
+            if (MessageBox.Show("Deseja deletar paciente?", applicatorBox.SelectedItem.ToString(),
+                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                File.Delete(jsonFile);
+                concatText(string.Format("Deleted applicator: {0}", applicatorBox.SelectedItem.ToString()));
+            }
+            updateApplicatorList();
+        }
+        public void updateApplicatorList()
+        {
+            string applicatorDir = string.Format("{0}/Applicators", Properties.Settings.Default.RESULTS_FOLDER);
+            string[] applicators = Directory.GetFiles(applicatorDir, "*.json");
+            string[] applicatorsNames = applicators.Select(Path.GetFileNameWithoutExtension).ToArray();
+            applicatorBox.DataSource = applicatorsNames;
+        }
+
+        private void ShowApplicatorData_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["applicatorManagementForm"] == null)
+            {
+                string jsonFile = string.Format("{0}/Applicators/{1}.json",
+                    Properties.Settings.Default.RESULTS_FOLDER,
+                    applicatorBox.SelectedItem.ToString());
+                concatText(jsonFile);
+
+                var applicatorJson = File.ReadAllText(jsonFile);
+                Applicator applicator = Newtonsoft.Json.JsonConvert.DeserializeObject<Applicator>(applicatorJson);
+
+                new applicatorManagementForm(this, applicator).Show();
             }
         }
     }
