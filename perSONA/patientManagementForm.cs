@@ -99,6 +99,7 @@ namespace perSONA
         private void button3_Click(object sender, EventArgs e)
         {
             label3.Text = "Alterações salvas!";
+
             Patient person = new Patient()
             {
                 Name = nameBox.Text,

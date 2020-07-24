@@ -25,9 +25,14 @@ namespace perSONA
             firstUse = Properties.Settings.Default.FIRST_USE;
             firstUseData = Properties.Settings.Default.FIRST_USE_DATA;
 
-            // if fisrt time use persona, save first use data // 
+            // if fisrt time use persona, save first use date // 
             if (firstUse)
             {
+                //Set destiny result folder
+                String UserName = System.Environment.UserName;
+                Properties.Settings.Default.RESULTS_FOLDER = "C:/Users/" + UserName + "/Documents/perSONA";
+
+                //Set today date
                 Properties.Settings.Default.FIRST_USE_DATA = DateTime.Now;
                 firstUse = false;
                 firstUseData = Properties.Settings.Default.FIRST_USE_DATA;
