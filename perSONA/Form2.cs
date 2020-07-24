@@ -72,7 +72,8 @@ namespace perSONA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.RESULTS_FOLDER = "%DEFAULTUSERPROFILE%/perSONA";
+            String UserName = System.Environment.UserName;
+            Properties.Settings.Default.RESULTS_FOLDER = "C:/Users/" + UserName + "/Documents/perSONA";
             textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
             Properties.Settings.Default.Save();
         }
