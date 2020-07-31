@@ -121,7 +121,7 @@
             this.groupBox6.Size = new System.Drawing.Size(311, 60);
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Marca do Microfone Externo";
+            this.groupBox6.Text = "Marca do microfone externo";
             // 
             // microphoneBrandBox
             // 
@@ -149,7 +149,7 @@
             this.groupBox8.Size = new System.Drawing.Size(311, 60);
             this.groupBox8.TabIndex = 21;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Versão do iOS (ex: IOS 12.4.1)";
+            this.groupBox8.Text = "Versão do IOS (ex: IOS 12.4.1)";
             // 
             // IOSVersionBox
             // 
@@ -175,7 +175,7 @@
             this.groupBox1.Size = new System.Drawing.Size(311, 60);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Modelo do IPhone";
+            this.groupBox1.Text = "Modelo do iPhone";
             // 
             // IPhoneModelBox
             // 
@@ -235,7 +235,7 @@
             this.groupBox5.Size = new System.Drawing.Size(311, 62);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Nome do Aplicativo";
+            this.groupBox5.Text = "Nome do aplicativo";
             // 
             // applicationNameBox
             // 
@@ -262,7 +262,7 @@
             this.groupBox4.Size = new System.Drawing.Size(311, 62);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Versão do Aplicativo";
+            this.groupBox4.Text = "Versão do aplicativo";
             // 
             // applicationVersionBox
             // 
@@ -336,7 +336,7 @@
             this.groupBox2.Size = new System.Drawing.Size(311, 60);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Modelo do Microfone Externo";
+            this.groupBox2.Text = "Modelo do microfone externo";
             // 
             // microphoneModelBox
             // 
@@ -363,7 +363,7 @@
             this.groupBox3.Size = new System.Drawing.Size(311, 60);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "N.º de Série do Microfone Externo";
+            this.groupBox3.Text = "N.º de série do microfone externo";
             // 
             // microphoneSerialNumberBox
             // 
@@ -389,7 +389,7 @@
             this.groupBox7.Size = new System.Drawing.Size(311, 60);
             this.groupBox7.TabIndex = 18;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Data da Última Calibração";
+            this.groupBox7.Text = "Data da última calibração";
             // 
             // tableLayoutPanel3
             // 
@@ -428,7 +428,7 @@
             this.notCalibrateCheckbox.Name = "notCalibrateCheckbox";
             this.notCalibrateCheckbox.Size = new System.Drawing.Size(141, 27);
             this.notCalibrateCheckbox.TabIndex = 17;
-            this.notCalibrateCheckbox.Text = "Não Calibrado";
+            this.notCalibrateCheckbox.Text = "Não calibrado";
             this.notCalibrateCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.notCalibrateCheckbox.UseVisualStyleBackColor = true;
             // 

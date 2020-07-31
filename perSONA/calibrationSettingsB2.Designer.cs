@@ -86,7 +86,7 @@
             this.groupBox8.Size = new System.Drawing.Size(300, 56);
             this.groupBox8.TabIndex = 57;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Modelo do Manequim";
+            this.groupBox8.Text = "Modelo do manequim";
             // 
             // mannequinModelBox
             // 
@@ -108,7 +108,7 @@
             this.groupBox1.Size = new System.Drawing.Size(300, 56);
             this.groupBox1.TabIndex = 55;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Marca do Manequim";
+            this.groupBox1.Text = "Marca do manequim";
             // 
             // mannequinBrandBox
             // 

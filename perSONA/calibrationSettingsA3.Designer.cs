@@ -67,7 +67,7 @@
             this.groupBox5.Size = new System.Drawing.Size(300, 56);
             this.groupBox5.TabIndex = 58;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Modelo da Placa de Som";
+            this.groupBox5.Text = "Modelo da placa de som";
             // 
             // ModeloPlacaSom
             // 
@@ -88,7 +88,7 @@
             this.groupBox7.Size = new System.Drawing.Size(300, 56);
             this.groupBox7.TabIndex = 57;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Marca da Placa de Som";
+            this.groupBox7.Text = "Marca da placa de som";
             // 
             // MarcaPlacaSom
             // 
@@ -109,7 +109,7 @@
             this.groupBox4.Size = new System.Drawing.Size(300, 56);
             this.groupBox4.TabIndex = 56;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "N.º de Série do Microfone Externo";
+            this.groupBox4.Text = "N.º de série do microfone externo";
             // 
             // NmrSerieMicrofone
             // 
@@ -140,7 +140,7 @@
             this.groupBox6.Size = new System.Drawing.Size(300, 56);
             this.groupBox6.TabIndex = 51;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "N.º de Série do Calibradro Sonoro";
+            this.groupBox6.Text = "N.º de série do calibradro sonoro";
             // 
             // NmrSerieCalibrador
             // 
@@ -160,7 +160,7 @@
             this.groupBox8.Size = new System.Drawing.Size(300, 56);
             this.groupBox8.TabIndex = 52;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Modelo do Calibrador Sonoro";
+            this.groupBox8.Text = "Modelo do calibrador sonoro";
             // 
             // ModeloCalibrador
             // 
@@ -181,7 +181,7 @@
             this.groupBox3.Size = new System.Drawing.Size(300, 56);
             this.groupBox3.TabIndex = 54;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Modelo do Microfone Externo";
+            this.groupBox3.Text = "Modelo do microfone externo";
             // 
             // ModeloMicrofone
             // 
@@ -202,7 +202,7 @@
             this.groupBox2.Size = new System.Drawing.Size(300, 56);
             this.groupBox2.TabIndex = 53;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Marca do Microfone Externo";
+            this.groupBox2.Text = "Marca do microfone externo";
             // 
             // MarcaMicrofone
             // 
@@ -223,7 +223,7 @@
             this.groupBox1.Size = new System.Drawing.Size(300, 56);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Marca do Calibrador Sonoro";
+            this.groupBox1.Text = "Marca do calibrador sonoro";
             // 
             // MarcaCalibrador
             // 

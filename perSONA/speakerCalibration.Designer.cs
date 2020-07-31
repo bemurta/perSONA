@@ -108,7 +108,7 @@
             this.Sound.Name = "Sound";
             this.Sound.Size = new System.Drawing.Size(388, 53);
             this.Sound.TabIndex = 108;
-            this.Sound.Text = "Gerar Sinal Sonoro";
+            this.Sound.Text = "Gerar sinal sonoro";
             this.Sound.UseVisualStyleBackColor = true;
             this.Sound.Click += new System.EventHandler(this.Sound_Click);
             // 
@@ -185,7 +185,7 @@
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(188, 53);
             this.Next.TabIndex = 101;
-            this.Next.Text = "Próxima Caixa";
+            this.Next.Text = "Próxima caixa";
             this.Next.UseVisualStyleBackColor = true;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 

@@ -23,6 +23,8 @@ namespace perSONA
         public patientManagement(IvAInterface ivAInterface)
         {
             InitializeComponent();
+            tabControl1.TabPages.Remove(tabPage2);
+            tabControl1.TabPages.Remove(tabPage3);
             this.vAInterface = ivAInterface;
             masking.SelectedIndex = 0;
             audiometrySide.SelectedIndex = 0;
@@ -43,6 +45,7 @@ namespace perSONA
             motivationBox.SelectedIndex = 0;
             work.SelectedIndex = 0;
             bindPatient(person);
+            this.Text = "Paciente: " + person.Name;
             this.person = person;
         }
 

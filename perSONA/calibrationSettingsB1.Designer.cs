@@ -60,7 +60,7 @@
             this.ModeloOrelha.Size = new System.Drawing.Size(300, 56);
             this.ModeloOrelha.TabIndex = 43;
             this.ModeloOrelha.TabStop = false;
-            this.ModeloOrelha.Text = "Modelo da Orelha Artificial";
+            this.ModeloOrelha.Text = "Modelo da orelha artificial";
             // 
             // artificialEarModelBox
             // 
@@ -81,7 +81,7 @@
             this.MarcaOrelha.Size = new System.Drawing.Size(300, 56);
             this.MarcaOrelha.TabIndex = 42;
             this.MarcaOrelha.TabStop = false;
-            this.MarcaOrelha.Text = "Marca da Orelha Artificial";
+            this.MarcaOrelha.Text = "Marca da orelha artificial";
             // 
             // artificialEarBrandBox
             // 

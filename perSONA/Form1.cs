@@ -95,16 +95,8 @@ namespace perSONA
                     concatText("Headphone binaural reproduction");
                     break;
             }
-
-            try
-            {
-                updatePatientList();
-                updateApplicatorList();
-            }
-            catch (Exception)
-            {
-                patientBox.Text = "No previously selected patients";
-            }
+            updatePatientList();
+            updateApplicatorList();
         }
 
         //??
@@ -143,10 +135,19 @@ namespace perSONA
 
         public void updatePatientList()
         {
-            string patientDir = string.Format("{0}/patients", Properties.Settings.Default.RESULTS_FOLDER);
-            string[] patients = Directory.GetFiles(patientDir, "*.json");
-            string[] patientNames = patients.Select(Path.GetFileNameWithoutExtension).ToArray();
-            patientBox.DataSource = patientNames;
+            try
+            {
+                string patientDir = string.Format("{0}/patients", Properties.Settings.Default.RESULTS_FOLDER);
+                string[] patients = Directory.GetFiles(patientDir, "*.json");
+                string[] patientNames = patients.Select(Path.GetFileNameWithoutExtension).ToArray();
+                patientBox.DataSource = patientNames;
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                string patientDir = string.Format("{0}/patients", Properties.Settings.Default.RESULTS_FOLDER);
+                Directory.CreateDirectory(patientDir);
+                updatePatientList();
+            }
         }
 
         private void connectToVA()
@@ -892,8 +893,8 @@ namespace perSONA
                 }
                 catch (Exception)
                 {
-                    const string message = "Erro";
-                    const string caption = "Selecione um paciente e um aplicador para prosseguir";
+                    const string message = "Selecione um paciente e um aplicador para prosseguir";
+                    const string caption = "Erro";
                     var result = MessageBox.Show(message, caption,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -913,21 +914,7 @@ namespace perSONA
         {
             if (Application.OpenForms["Form2"] == null)
             {
-                new Form2().Show();
-                updatePatientList();
-                updateApplicatorList();
-
-                /*
-                try
-                {
-                    updatePatientList();
-                }
-                catch(Exception)
-                {
-                    patientBox.DataSource = null;
-                    //patientBox.Items.Clear();
-                }
-                */                
+                new Form2(this).Show();       
             }
         }
 
@@ -1116,10 +1103,19 @@ namespace perSONA
         }
         public void updateApplicatorList()
         {
-            string applicatorDir = string.Format("{0}/Applicators", Properties.Settings.Default.RESULTS_FOLDER);
-            string[] applicators = Directory.GetFiles(applicatorDir, "*.json");
-            string[] applicatorsNames = applicators.Select(Path.GetFileNameWithoutExtension).ToArray();
-            applicatorBox.DataSource = applicatorsNames;
+            try
+            {
+                string applicatorDir = string.Format("{0}/Applicators", Properties.Settings.Default.RESULTS_FOLDER);
+                string[] applicators = Directory.GetFiles(applicatorDir, "*.json");
+                string[] applicatorsNames = applicators.Select(Path.GetFileNameWithoutExtension).ToArray();
+                applicatorBox.DataSource = applicatorsNames;
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                string applicatorDir = string.Format("{0}/Applicators", Properties.Settings.Default.RESULTS_FOLDER);
+                Directory.CreateDirectory(applicatorDir);
+                updateApplicatorList();
+            }
         }
 
         private void ShowApplicatorData_Click(object sender, EventArgs e)

@@ -112,7 +112,7 @@
             this.Sound.Name = "Sound";
             this.Sound.Size = new System.Drawing.Size(388, 53);
             this.Sound.TabIndex = 103;
-            this.Sound.Text = "Gerar Sinal Sonoro";
+            this.Sound.Text = "Gerar sinal sonoro";
             this.Sound.UseVisualStyleBackColor = true;
             this.Sound.Click += new System.EventHandler(this.Sound_Click);
             // 
@@ -152,7 +152,7 @@
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(188, 53);
             this.Next.TabIndex = 96;
-            this.Next.Text = "Próximo Fone";
+            this.Next.Text = "Próximo fone";
             this.Next.UseVisualStyleBackColor = true;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
@@ -186,9 +186,9 @@
             this.earphoneLabel.Location = new System.Drawing.Point(666, 72);
             this.earphoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.earphoneLabel.Name = "earphoneLabel";
-            this.earphoneLabel.Size = new System.Drawing.Size(113, 20);
+            this.earphoneLabel.Size = new System.Drawing.Size(109, 20);
             this.earphoneLabel.TabIndex = 99;
-            this.earphoneLabel.Text = "Lado Direito";
+            this.earphoneLabel.Text = "Lado direito";
             // 
             // Help
             // 

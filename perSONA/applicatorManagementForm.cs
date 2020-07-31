@@ -28,6 +28,7 @@ namespace perSONA
             InitializeComponent();
             this.vAInterface = ivAInterface;
             bindApplicator(person);
+            this.Text = "Aplicador: " + person.Name;
             this.person = person;
         }
 
@@ -42,7 +43,6 @@ namespace perSONA
                 Name = nameBox.Text,
                 CRFa = CRFaBox.Text,
                 BornDate = bornDate.Value,
-                Sex = sexTab.Text,
                 DDI = DDIBox.Text,
                 PhoneNumber = phoneBox.Text,
                 Address = addressBox.Text,
@@ -74,7 +74,6 @@ namespace perSONA
             nameBox.Text = person.Name;
             CRFaBox.Text = person.CRFa;
             bornDate.Value = person.BornDate;
-            sexTab.Text = person.Sex;
             DDIBox.Text = person.DDI;
             phoneBox.Text = person.PhoneNumber;
             addressBox.Text = person.Address;

@@ -51,7 +51,7 @@ namespace perSONA
                     element.Visible = false;
                 }
                 earphone[0].Visible = true;
-                earphoneLabel.Text = "Fone Direito";
+                earphoneLabel.Text = "Fone direito";
             }
             else if (i == 1)
             {
@@ -60,7 +60,7 @@ namespace perSONA
                     element.Visible = false;
                 }
                 earphone[1].Visible = true;
-                earphoneLabel.Text = "Fone Esquerdo";
+                earphoneLabel.Text = "Fone esquerdo";
             }
             else
             {
@@ -69,7 +69,7 @@ namespace perSONA
                 PhoneBalanceAdjusting.Visible = false;
                 label1.Text = "Para calibrar altere o volume do fone de ouvido" + "\n" + "através da barra da parte inferior da tela";
                 Next.Text = "Finalizar";
-                earphoneLabel.Text = "Fones de Ouvido";
+                earphoneLabel.Text = "Fones de ouvido";
             }
         }
         private void Next_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace perSONA
             {
                 if (i == 0)
                 {
-                    earphoneLabel.Text = "Fone Esquerdo";
+                    earphoneLabel.Text = "Fone esquerdo";
                     earphone[0].Visible = false;
                     earphone[1].Visible = true;
 
@@ -101,7 +101,7 @@ namespace perSONA
                     PhoneBalanceAdjusting.Visible = false;
                     label1.Text = "Para calibrar altere o volume do fone de ouvido" + "\n" + "através da barra da parte inferior da tela";
                     Next.Text = "Finalizar";
-                    earphoneLabel.Text = "Fone de Ouvido";
+                    earphoneLabel.Text = "Fone de ouvido";
                     foreach (Panel element in earphone)
                     {
                         element.Visible = true;

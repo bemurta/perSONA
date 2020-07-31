@@ -152,7 +152,7 @@
             this.notCalibrateCheckbox.Name = "notCalibrateCheckbox";
             this.notCalibrateCheckbox.Size = new System.Drawing.Size(140, 32);
             this.notCalibrateCheckbox.TabIndex = 16;
-            this.notCalibrateCheckbox.Text = "Não Calibrado";
+            this.notCalibrateCheckbox.Text = "Não calibrado";
             this.notCalibrateCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.notCalibrateCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -297,7 +297,7 @@
             this.groupBox3.Size = new System.Drawing.Size(313, 60);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "N.º de Série";
+            this.groupBox3.Text = "N.º de série";
             // 
             // SLMSerialNumberBox
             // 

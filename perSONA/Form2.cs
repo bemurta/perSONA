@@ -15,20 +15,27 @@ namespace perSONA
     {
         bool firstUse;
         DateTime firstUseData;
+        private readonly IvAInterface vAInterface;
 
         public Form2()
         {
             InitializeComponent();
             firstUse = Properties.Settings.Default.FIRST_USE;
             textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
-            if (firstUse) 
-            {
-                const string message = "Bem-Vindo ao software perSONA. Antes de começar selecione a pasta que deseja salvar os resultados";
-                const string caption = "Bem-Vindo ao perSONA";
-                var result = MessageBox.Show(message, caption,
-                    MessageBoxButtons.OK);
-            }
+
+            const string message = "Bem-Vindo ao software perSONA. Antes de começar selecione a pasta que deseja salvar os resultados";
+            const string caption = "Bem-Vindo ao perSONA";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.OK);
         }
+
+        public Form2(IvAInterface ivAInterface)
+        {
+            InitializeComponent();
+            this.vAInterface = ivAInterface;
+            firstUse = Properties.Settings.Default.FIRST_USE;
+            textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -61,8 +68,7 @@ namespace perSONA
                 }
                 catch (Exception)
                 {
-                    const string message =
-                   "Error ocurred. Couldn't set a results folder, reseting to default.";
+                    const string message = "Error ocurred. Couldn't set a results folder, reseting to default.";
                     const string caption = "Incorrect database format. Metadata required!";
                     var result = MessageBox.Show(message, caption,
                         MessageBoxButtons.OK,
@@ -72,6 +78,8 @@ namespace perSONA
 
             if (firstUse == false) 
             {
+                vAInterface.updateApplicatorList();
+                vAInterface.updatePatientList();
                 Close();
             }
             else
