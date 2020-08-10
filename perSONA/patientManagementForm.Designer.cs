@@ -123,6 +123,7 @@
             this.Conduction = new System.Windows.Forms.ComboBox();
             this.previewAudiometryButton = new System.Windows.Forms.Button();
             this.saveAudiometryButton = new System.Windows.Forms.Button();
+            this.deleteAudiometryButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.audiometryGraph = new ZedGraph.ZedGraphControl();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
@@ -172,7 +173,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.testsBox = new System.Windows.Forms.ListBox();
             this.testInfo = new System.Windows.Forms.TextBox();
-            this.deleteAudiometryButton = new System.Windows.Forms.Button();
             this.groupBox42.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox41.SuspendLayout();
@@ -1780,6 +1780,19 @@
             this.saveAudiometryButton.UseVisualStyleBackColor = true;
             this.saveAudiometryButton.Click += new System.EventHandler(this.saveAudiometryButton_Click);
             // 
+            // deleteAudiometryButton
+            // 
+            this.deleteAudiometryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteAudiometryButton.Location = new System.Drawing.Point(156, 177);
+            this.deleteAudiometryButton.Name = "deleteAudiometryButton";
+            this.deleteAudiometryButton.Size = new System.Drawing.Size(147, 83);
+            this.deleteAudiometryButton.TabIndex = 13;
+            this.deleteAudiometryButton.Text = "Deletar audiometria";
+            this.deleteAudiometryButton.UseVisualStyleBackColor = true;
+            this.deleteAudiometryButton.Click += new System.EventHandler(this.deleteAudiometryButton_Click);
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2648,19 +2661,6 @@
             this.testInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.testInfo.Size = new System.Drawing.Size(578, 334);
             this.testInfo.TabIndex = 1;
-            // 
-            // deleteAudiometryButton
-            // 
-            this.deleteAudiometryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteAudiometryButton.Location = new System.Drawing.Point(156, 177);
-            this.deleteAudiometryButton.Name = "deleteAudiometryButton";
-            this.deleteAudiometryButton.Size = new System.Drawing.Size(147, 83);
-            this.deleteAudiometryButton.TabIndex = 13;
-            this.deleteAudiometryButton.Text = "Deletar audiometria";
-            this.deleteAudiometryButton.UseVisualStyleBackColor = true;
-            this.deleteAudiometryButton.Click += new System.EventHandler(this.deleteAudiometryButton_Click);
             // 
             // patientManagement
             // 

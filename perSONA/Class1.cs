@@ -46,7 +46,7 @@ namespace perSONA
                         else ViaAirREMaskedNoReply(zgc, Freq, dB);
                     }
                 }
-                else if (Via == "Bone (Mastoid)")
+                else if (Via == "Bone (mastoid)")
                 {
                     if (NoReply == false)
                     {
@@ -59,7 +59,7 @@ namespace perSONA
                         else ViaBoneMREMaskedNoReply(zgc, Freq, dB);
                     }
                 }
-                else if (Via == "Bone (Forehead)")
+                else if (Via == "Bone (forehead)")
                 {
                     if (NoReply == false)
                     {
@@ -101,7 +101,7 @@ namespace perSONA
                         else ViaAirLEMaskedNoReply(zgc, Freq, dB);
                     }
                 }
-                else if (Via == "Bone (Mastoid)")
+                else if (Via == "Bone (mastoid)")
                 {
                     if (NoReply == false)
                     {
@@ -114,7 +114,7 @@ namespace perSONA
                         else ViaBoneMLEMaskedNoReply(zgc, Freq, dB);
                     }
                 }
-                else if (Via == "Bone (Forehead)")
+                else if (Via == "Bone (forehead)")
                 {
                     if (NoReply == false)
                     {

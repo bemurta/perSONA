@@ -391,7 +391,7 @@ namespace perSONA
             }
             else if (Conduction.Text == "Óssea (fronte)")
             {
-                Audiometry.Via = "Bone (Forehead)";
+                Audiometry.Via = "Bone (forehead)";
             }
             else
             {
