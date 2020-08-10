@@ -960,16 +960,29 @@ namespace perSONA
 
         private void button10_Click(object sender, EventArgs e)
         {
-            string jsonFile = string.Format("{0}/patients/{1}.json",
-                Properties.Settings.Default.RESULTS_FOLDER,
-                patientBox.SelectedItem.ToString());
-
             if (MessageBox.Show("Deseja deletar paciente?", patientBox.SelectedItem.ToString(),
                 MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1) == DialogResult.Yes)
 
             {
-                File.Delete(jsonFile);
+                string jsonPatientFile = string.Format("{0}/patients/{1}.json",
+                                Properties.Settings.Default.RESULTS_FOLDER,
+                                patientBox.SelectedItem.ToString());
+                string json = File.ReadAllText(jsonPatientFile);
+                Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(json);
+
+                List<string> tests = patient.Audiometrys.OfType<string>().ToList();
+
+                //delete patient audiometrys
+                foreach (string audiometry in tests)
+                {
+                    string jsonAudiometryFile = string.Format("{0}/audiometry/{1}.json",
+                                                Properties.Settings.Default.RESULTS_FOLDER,
+                                                "test-" + audiometry);
+                    File.Delete(jsonAudiometryFile);
+                }
+                //delet patient
+                File.Delete(jsonPatientFile);
                 concatText(string.Format("Deleted patient: {0}", patientBox.SelectedItem.ToString()));
             }
             updatePatientList();
@@ -1092,7 +1105,7 @@ namespace perSONA
                                             Properties.Settings.Default.RESULTS_FOLDER,
                                             applicatorBox.SelectedItem.ToString());
 
-            if (MessageBox.Show("Deseja deletar paciente?", applicatorBox.SelectedItem.ToString(),
+            if (MessageBox.Show("Deseja deletar aplicador?", applicatorBox.SelectedItem.ToString(),
                 MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {

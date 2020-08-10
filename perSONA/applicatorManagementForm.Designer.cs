@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.CRFaBox = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.bornDate = new System.Windows.Forms.DateTimePicker();
             this.save = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.addressBox = new System.Windows.Forms.TextBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.emailBox = new System.Windows.Forms.TextBox();
+            this.CRFaBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel9.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -121,17 +121,6 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CRFa";
-            // 
-            // CRFaBox
-            // 
-            this.CRFaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CRFaBox.Location = new System.Drawing.Point(12, 34);
-            this.CRFaBox.Margin = new System.Windows.Forms.Padding(6);
-            this.CRFaBox.Name = "CRFaBox";
-            this.CRFaBox.Size = new System.Drawing.Size(362, 27);
-            this.CRFaBox.TabIndex = 0;
             // 
             // groupBox11
             // 
@@ -263,6 +252,20 @@
             this.emailBox.Size = new System.Drawing.Size(363, 27);
             this.emailBox.TabIndex = 11;
             // 
+            // CRFaBox
+            // 
+            this.CRFaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CRFaBox.FormattingEnabled = true;
+            this.CRFaBox.Items.AddRange(new object[] {
+            "Estudante",
+            "Não é fonoaudiólogo"});
+            this.CRFaBox.Location = new System.Drawing.Point(9, 29);
+            this.CRFaBox.Name = "CRFaBox";
+            this.CRFaBox.Size = new System.Drawing.Size(365, 28);
+            this.CRFaBox.TabIndex = 14;
+            // 
             // applicatorManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -279,7 +282,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
@@ -305,7 +307,7 @@
         private System.Windows.Forms.TextBox addressBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox emailBox;
-        private System.Windows.Forms.TextBox CRFaBox;
         private System.Windows.Forms.Button save;
+        private System.Windows.Forms.ComboBox CRFaBox;
     }
 }

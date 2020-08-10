@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Windows.Forms;
 using ZedGraph;
+using System.Net.Http.Headers;
+using DocumentFormat.OpenXml.Presentation;
 
 namespace perSONA
 {
@@ -26,7 +28,6 @@ namespace perSONA
             tabControl1.TabPages.Remove(tabPage2);
             tabControl1.TabPages.Remove(tabPage3);
             this.vAInterface = ivAInterface;
-            masking.SelectedIndex = 0;
             audiometrySide.SelectedIndex = 0;
             Conduction.SelectedIndex = 0;
             sexTab.SelectedIndex = 0;
@@ -38,13 +39,13 @@ namespace perSONA
         {
             InitializeComponent();
             this.vAInterface = ivAInterface;
-            masking.SelectedIndex = 0;
             audiometrySide.SelectedIndex = 0;
             Conduction.SelectedIndex = 0;
             sexTab.SelectedIndex = 0;
             motivationBox.SelectedIndex = 0;
             work.SelectedIndex = 0;
             bindPatient(person);
+            bindGraph(audiometryGraph);
             this.Text = "Paciente: " + person.Name;
             this.person = person;
         }
@@ -261,20 +262,65 @@ namespace perSONA
         }
 
 
-        //??
-        private void button4_Click(object sender, EventArgs e)
-        {
-            updateIterationGraph(testsGraph);
-        }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             TonalAudiometryTest Audiometry = readAudiometry(audiometryLists.SelectedItem.ToString());
             plotAudiometry(audiometryGraph, Audiometry);
         }
 
-        public void plotAudiometry(ZedGraphControl graph, 
-                TonalAudiometryTest Audiometry)
+
+        public void bindGraph(ZedGraphControl graph)
+        {
+            //To draw the graph we use several curves (1 curve / point for each symbol and 1 without symbols, which
+            //runs through the entire graph). The frequencies of the x-axis are strings, since zedgraph formatting
+            //does not have a graph of that style. We are unable to plot a curve at a specific point (case of symbol curves) 
+            //if the axis is a string, because of that, we use a new invisible axis (x2) to plot the frequencies.            
+            GraphPane myPane = graph.GraphPane;
+            myPane.Legend.IsVisible = false;
+            myPane.Legend.FontSpec.Size = 12;
+            myPane.Legend.Border.IsVisible = false;
+
+
+            myPane.Title.Text = "Audiograma";
+            myPane.Title.FontSpec.Size = 15;
+            myPane.XAxis.Title.Text = "Frequência (Hz)";
+            myPane.XAxis.Title.FontSpec.Size = 15;
+            myPane.XAxis.Scale.FontSpec.Size = 10;
+
+            myPane.YAxis.Title.Text = "Nível de audição (dB)";
+            myPane.YAxis.Title.FontSpec.Size = 15;
+            myPane.YAxis.Scale.FontSpec.Size = 10;
+
+            myPane.XAxis.Scale.MaxAuto = false;
+            myPane.XAxis.Scale.MinAuto = false;
+            myPane.YAxis.MajorGrid.IsVisible = true;
+            myPane.XAxis.MajorGrid.IsVisible = true;
+
+            myPane.YAxis.Scale.MajorStep = 10;
+            myPane.YAxis.Scale.Min = -20;
+            myPane.YAxis.Scale.Max = 120;
+            //reverse YAxis
+            myPane.YAxis.Scale.IsReverse = true;
+
+            myPane.XAxis.Type = AxisType.Text;
+            myPane.XAxis.Scale.Min = 0;
+            myPane.XAxis.Scale.Max = 8;
+            string[] XAxisText = { "125", "250", "500", "1000", "2000", "4000", "8000" };
+            myPane.XAxis.Scale.TextLabels = XAxisText;
+            myPane.XAxis.IsVisible = true;
+
+            //The invisible X2Axis to plot frequencies
+            myPane.X2Axis.Scale.MaxAuto = false;
+            myPane.X2Axis.Scale.MinAuto = false;
+            myPane.X2Axis.Type = AxisType.Linear;
+            myPane.X2Axis.Scale.Min = 0;
+            myPane.X2Axis.Scale.Max = 8;
+            myPane.X2Axis.IsVisible = false;
+
+            graph.AxisChange();
+            graph.Refresh();
+        }
+        public void plotAudiometry(ZedGraphControl graph, TonalAudiometryTest Audiometry)
         {
             GraphPane myPane = graph.GraphPane;
             myPane.CurveList.Clear();
@@ -283,76 +329,45 @@ namespace perSONA
             string audiometryString = "demo";
             string audiometryType = "Air Right Unmasked";
 
-            //foreach (var item in audiometryLists.SelectedItems)
-            //{
-                //speechPerceptionTest test = readTest(timestamp);
-                //double[] signalToNoiseArray = test.IterativeSNR;
-
             audiometryString = string.Concat(audiometryString, "\r\n", "freqs: ");
 
+            for (int i = 0; i < Audiometry.Freqs.Length; i++)
+            {
+                TonalAudiometryTest.drawSymbol(graph, (i+1d), Audiometry.dB[i], Audiometry.Masker[i], Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
+//                TonalAudiometryTest.drawSymbol(graph, Audiometry.Freqs[i], Audiometry.dB[i],Audiometry.Masker[i],Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
+//2^(x-1)*125
+            }
 
             PointPairList audiometry = new PointPairList
             {
-                { freqs, Audiometry.ThisAudiometry }
+                { freqs, Audiometry.dB }
             };
             vAInterface.concatText(audiometryType);
             LineItem audiometryCurve;
 
-            audiometryCurve = myPane.AddCurve(Audiometry.AudiometryType, audiometry,
-                        Audiometry.getColor(), Audiometry.getSymbol());
-            audiometryCurve.Line.IsVisible = true;
-            audiometryCurve.Line.Width = 2;
-            audiometryCurve.Symbol.Size = 20;
-            
+            audiometryCurve = myPane.AddCurve(Audiometry.AudiometryType, audiometry, Audiometry.getColor(), SymbolType.None);
+            Audiometry.changeLine(audiometryCurve.Line);
+
             audiometryTextBox.Text = audiometryString;
-
-            //dataGridView1.Rows.Add(audiometry);
-            //}
-            myPane.Legend.IsVisible = false;
-            myPane.Legend.FontSpec.Size = 18;
-            myPane.Legend.Border.IsVisible = false;
-
-
-            myPane.Title.Text = "Audiograma";
-            myPane.Title.FontSpec.Size = 21;
-            myPane.XAxis.Title.Text = "Frequência em Hertz (Hz)";
-            myPane.XAxis.Title.FontSpec.Size = 21;
-            myPane.XAxis.Scale.FontSpec.Size = 21;
-
-            myPane.YAxis.Title.Text = "Nível de audição em decibels (dB)";
-            myPane.YAxis.Title.FontSpec.Size = 21;
-            myPane.YAxis.Scale.FontSpec.Size = 21;
-
-            myPane.XAxis.Scale.MaxAuto = false;
-            myPane.XAxis.Scale.MinAuto = false;
-            myPane.YAxis.MajorGrid.IsVisible = true;
-            myPane.XAxis.MajorGrid.IsVisible = true;
-            myPane.YAxis.Scale.Min = -10;
-            myPane.YAxis.Scale.Max = 120;
-            myPane.XAxis.Type = AxisType.Text;
-            myPane.XAxis.Scale.Min = 1;
-            myPane.XAxis.Scale.Max = 7;
-            myPane.XAxis.Scale.TextLabels = Audiometry.Freqs.Select(x => x.ToString()).ToArray();
+            audiometryTextBox.Text = String.Format(
+                "{0}\r\n" + "Níveis auditivos: {1}\r\n" + "Frequências: {2}",
+                Audiometry.AudiometryType,
+                string.Join(", ", Audiometry.dB.ToArray()),
+                string.Join(", ", Audiometry.Freqs.ToArray()));
             graph.AxisChange();
             graph.Refresh();
-
-            audiometryTextBox.Text = String.Format(
-                "{0}\r\n Níveis auditivos: {1}\r\n Frequências: {2}",
-                Audiometry.AudiometryType,
-                string.Join(", ", Audiometry.ThisAudiometry.ToArray()),
-                string.Join(", ", Audiometry.Freqs.ToArray()));
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void previewAudiometryButton_Click(object sender, EventArgs e)
         {
-            double[] thisAudiometry = { (double) freq1.Value,
-                                        (double) freq2.Value,
-                                        (double) freq3.Value,
-                                        (double) freq4.Value,
-                                        (double) freq6.Value,
-                                        (double) freq7.Value,
-                                        (double) freq8.Value};
+            double[] decibel = { (double) freq1.Value, (double) freq2.Value, (double) freq3.Value, (double) freq4.Value,
+                                 (double) freq6.Value, (double) freq7.Value, (double) freq8.Value};
 
+            bool[] masking = { (bool) masking1.Checked, (bool) masking2.Checked, (bool) masking3.Checked, (bool) masking4.Checked,
+                               (bool) masking5.Checked, (bool) masking6.Checked, (bool) masking7.Checked};
+
+            bool[] noReply = { (bool) noReply1.Checked, (bool) noReply2.Checked, (bool) noReply3.Checked, (bool) noReply4.Checked,
+                               (bool) noReply5.Checked, (bool) noReply6.Checked, (bool) noReply7.Checked};
 
             double[] freqs = { 125, 250, 500, 1000, 2000, 4000, 8000 };
 
@@ -361,50 +376,47 @@ namespace perSONA
             string audiometryType = "";
             Audiometry.AudiometryType = audiometryType;
             Audiometry.Freqs = freqs;
-            Audiometry.ThisAudiometry = thisAudiometry;
+            Audiometry.dB = decibel;
             Audiometry.Side = audiometrySide.Text == "Esquerdo" ? "Left" : "Right";
-            Audiometry.Masker = masking.Text == "Sim" ? true : false;
-            Audiometry.Via = "Bone";
+            Audiometry.Masker = masking;
+            Audiometry.NoReply = noReply;
 
-            if (Conduction.Text.StartsWith("A"))
+            if (Conduction.Text == "Aérea")
             {
                 Audiometry.Via = "Air";
             }
-
-            if (!Audiometry.Masker && Audiometry.Via == "Air" && Audiometry.Side == "Right")
+            else if (Conduction.Text == "Óssea (mastóide)")
             {
-                Audiometry.AudiometryType = "Orelha Direita, via Aérea, Sem Mascaramento";
+                Audiometry.Via = "Bone (mastoid)";
             }
-            else if (!Audiometry.Masker && Audiometry.Via == "Air" && Audiometry.Side == "Left")
+            else if (Conduction.Text == "Óssea (fronte)")
             {
-                Audiometry.AudiometryType = "Orelha Esquerda, via Aérea, Sem Mascaramento";
-            }
-            else if (Audiometry.Masker && Audiometry.Via == "Air" && Audiometry.Side == "Right")
-            {
-                Audiometry.AudiometryType = "Orelha Direita, via Aérea, Com Mascaramento";
-            }
-            else if (Audiometry.Masker && Audiometry.Via == "Air" && Audiometry.Side == "Left")
-            {
-                Audiometry.AudiometryType = "Orelha Esquerda, via Aérea, Com Mascaramento";
+                Audiometry.Via = "Bone (Forehead)";
             }
             else
             {
-                Audiometry.AudiometryType = "Condução Óssea (Em desenvolvimento)";
+                Audiometry.Via = "Free field";
             }
-        
+
+            audiometryType = "Orelha " + audiometrySide.Text;
+            audiometryType = audiometryType.Remove(audiometryType.Length - 1);
+            audiometryType = audiometryType + "a, Via " + Conduction.Text;
+
+            Audiometry.AudiometryType = audiometryType;
+
             plotAudiometry(audiometryGraph, Audiometry);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void saveAudiometryButton_Click(object sender, EventArgs e)
         {
-            double[] thisAudiometry = { (double) freq1.Value,
-                                        (double) freq2.Value,
-                                        (double) freq3.Value,
-                                        (double) freq4.Value,
-                                        (double) freq6.Value,
-                                        (double) freq7.Value,
-                                        (double) freq8.Value};
+            double[] decibel = { (double) freq1.Value, (double) freq2.Value, (double) freq3.Value, (double) freq4.Value,
+                                 (double) freq6.Value, (double) freq7.Value, (double) freq8.Value};
 
+            bool[] masking = { (bool) masking1.Checked, (bool) masking2.Checked, (bool) masking3.Checked, (bool) masking4.Checked,
+                               (bool) masking5.Checked, (bool) masking6.Checked, (bool) masking7.Checked};
+
+            bool[] noReply = { (bool) noReply1.Checked, (bool) noReply2.Checked, (bool) noReply3.Checked, (bool) noReply4.Checked,
+                               (bool) noReply5.Checked, (bool) noReply6.Checked, (bool) noReply7.Checked};
 
             double[] freqs = { 125, 250, 500, 1000, 2000, 4000, 8000 };
 
@@ -413,37 +425,33 @@ namespace perSONA
             string audiometryType = "";
             Audiometry.AudiometryType = audiometryType;
             Audiometry.Freqs = freqs;
-            Audiometry.ThisAudiometry = thisAudiometry;
+            Audiometry.dB = decibel;
             Audiometry.Side = audiometrySide.Text == "Esquerdo" ? "Left" : "Right";
-            Audiometry.Masker = masking.Text == "Sim" ? true : false;
-            Audiometry.Via = "Bone";
+            Audiometry.Masker = masking;
+            Audiometry.NoReply = noReply;
 
-            if (Conduction.Text.StartsWith("A"))
+            if (Conduction.Text == "Aérea")
             {
                 Audiometry.Via = "Air";
             }
-
-
-            if (!Audiometry.Masker && Audiometry.Via == "Air" && Audiometry.Side == "Right")
+            else if (Conduction.Text == "Óssea (mastóide)")
             {
-                Audiometry.AudiometryType = "Orelha Direita, via Aérea, Sem Mascaramento";
+                Audiometry.Via = "Bone (mastoid)";
             }
-            else if (!Audiometry.Masker && Audiometry.Via == "Air" && Audiometry.Side == "Left")
+            else if (Conduction.Text == "Óssea (fronte)")
             {
-                Audiometry.AudiometryType = "Orelha Esquerda, via Aérea, Sem Mascaramento";
-            }
-            else if (Audiometry.Masker && Audiometry.Via == "Air" && Audiometry.Side == "Right")
-            {
-                Audiometry.AudiometryType = "Orelha Direita, via Aérea, Com Mascaramento";
-            }
-            else if (Audiometry.Masker && Audiometry.Via == "Air" && Audiometry.Side == "Left")
-            {
-                Audiometry.AudiometryType = "Orelha Esquerda, via Aérea, Com Mascaramento";
+                Audiometry.Via = "Bone (Forehead)";
             }
             else
             {
-                Audiometry.AudiometryType = "Condução Óssea (Em desenvolvimento)";
+                Audiometry.Via = "Free field";
             }
+
+            audiometryType = "Orelha " + audiometrySide.Text;
+            audiometryType = audiometryType.Remove(audiometryType.Length - 1);
+            audiometryType = audiometryType + "a, Via " + Conduction.Text;
+
+            Audiometry.AudiometryType = audiometryType;
 
             vAInterface.addCompletedAudiometry(Audiometry, nameBox.Text);
 
@@ -452,9 +460,44 @@ namespace perSONA
                                  nameBox.Text);
             string json = File.ReadAllText(jsonFile);
             person = JsonConvert.DeserializeObject<Patient>(json);
-            
 
-            bindPatient(person);            
+
+            bindPatient(person);
+        }
+
+        private void deleteAudiometryButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja deletar a audiometria?", audiometryLists.SelectedItem.ToString(),
+                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+
+            {
+                string jsonFile = string.Format("{0}/patients/{1}.json",
+                                                Properties.Settings.Default.RESULTS_FOLDER,
+                                                nameBox.Text);
+                string json = File.ReadAllText(jsonFile);
+                Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(json);
+
+
+                List<string> tests = patient.Audiometrys.OfType<string>().ToList();
+                string delete = audiometryLists.SelectedItem.ToString();
+                tests.Remove(delete);
+
+                patient.Audiometrys = tests.ToArray();
+                string output = Newtonsoft.Json.JsonConvert.SerializeObject(patient);
+                File.WriteAllText(jsonFile, output);
+
+
+                json = File.ReadAllText(jsonFile);
+                person = JsonConvert.DeserializeObject<Patient>(json);
+
+                audiometryLists.DataSource = person.Audiometrys;
+
+                jsonFile = string.Format("{0}/audiometry/{1}.json",
+                                            Properties.Settings.Default.RESULTS_FOLDER,
+                                            "test-" + delete);
+                File.Delete(jsonFile);
+            }
         }
     }
 }
