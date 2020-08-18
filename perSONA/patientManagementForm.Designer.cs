@@ -1657,7 +1657,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 71);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 73);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // button2
@@ -1668,7 +1668,7 @@
             this.button2.Location = new System.Drawing.Point(5, 15);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 39);
+            this.button2.Size = new System.Drawing.Size(202, 41);
             this.button2.TabIndex = 12;
             this.button2.Text = "Pré-Visualização";
             this.button2.UseVisualStyleBackColor = true;
@@ -1741,7 +1741,7 @@
             this.groupBox35.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox35.Size = new System.Drawing.Size(207, 67);
+            this.groupBox35.Size = new System.Drawing.Size(207, 69);
             this.groupBox35.TabIndex = 11;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "8000 Hz";
