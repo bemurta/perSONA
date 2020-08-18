@@ -3,10 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="RESULTS_FOLDER" Type="System.String" Scope="User">
-      <Value Profile="(Default)">data/</Value>
-    </Setting>
-    <Setting Name="USERVOLUME" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">25</Value>
+      <Value Profile="(Default)">Selecione uma pasta e salve a alteração</Value>
     </Setting>
     <Setting Name="SERIAL_KEY" Type="System.String" Scope="User">
       <Value Profile="(Default)">PTMGF-28VKB-2W934-482QH-98623</Value>
@@ -19,6 +16,27 @@
     </Setting>
     <Setting Name="FIRST_USE" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CALIBRATION_MODE" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="REPRODUCTION_MODE" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CALIBRATION_ID" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ITERATOR" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SPEAKER_VOLUME" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="EARPHONE_VOLUME" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="EQUIPMENTS_TABLE_LOCATION" Type="System.String" Scope="User">
+      <Value Profile="(Default)">data/Equipments.xlsx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

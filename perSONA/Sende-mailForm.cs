@@ -16,9 +16,7 @@ namespace perSONA
         {
             InitializeComponent();
         }
-
-        
-        
+                
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -60,27 +58,6 @@ namespace perSONA
             Cursor.Current = Cursors.Default;
             Close();
             // In case of doubt -> https://www.youtube.com/watch?v=WKyVqmbCVc0   and    https://www.hostinger.com.br/tutoriais/aprenda-a-utilizar-o-smtp-google/
-        }
-
-
-        private void From_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Subject_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Body_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Sende_mailForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

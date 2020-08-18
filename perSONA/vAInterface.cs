@@ -12,6 +12,7 @@ namespace perSONA
     {
 
         void playScene(double radius, double angle, double snr);
+        void allSoundPlayersPlayScene(double radius, int numberOfSoundPlayers, string speechFile);
         void addCompletedTest(speechPerceptionTest test);
         string getDatabaseFolder();
         void createAcousticScene(string speechFile, string noiseFile);
@@ -22,6 +23,7 @@ namespace perSONA
         void plotSceneGraph(ZedGraph.ZedGraphControl graph, double[] radius, double[] angle);
         void fillWords(string speechFile, ListBox listbox, bool test=false);
         void updatePatientList();
+        void updateApplicatorList();
         double getMeanSRT(double[] iterativeSNR);
         void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName);
     }

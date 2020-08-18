@@ -71,7 +71,6 @@
     "A. Após isso um código (serial key) que deve ser escrito abaixo será enviado par" +
     "a o seu e-mail.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // linkLabel1
             // 
@@ -100,7 +99,6 @@
             this.textBox1.Size = new System.Drawing.Size(441, 27);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -182,7 +180,7 @@
             this.Name = "licenseExpirationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Licensa Expirada";
-            this.Load += new System.EventHandler(this.licenseExpirationForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.licenseExpirationForm_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -123,7 +123,6 @@
             this.zedGraphControl1.Size = new System.Drawing.Size(601, 288);
             this.zedGraphControl1.TabIndex = 12;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
-            this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
             // label1
             // 
@@ -152,7 +151,6 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Sequência de acerto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -209,7 +207,6 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Porcentagem de acerto";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -224,7 +221,6 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Palavras corretas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox1
             // 
@@ -237,7 +233,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 27);
             this.textBox1.TabIndex = 8;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -306,7 +301,6 @@
             this.detailsBox.Size = new System.Drawing.Size(201, 225);
             this.detailsBox.TabIndex = 2;
             this.detailsBox.Visible = false;
-            this.detailsBox.TextChanged += new System.EventHandler(this.detailsBox_TextChanged);
             // 
             // zedGraphControl2
             // 
@@ -401,7 +395,6 @@
             this.filenameList.ScrollAlwaysVisible = true;
             this.filenameList.Size = new System.Drawing.Size(345, 224);
             this.filenameList.TabIndex = 1;
-            this.filenameList.SelectedIndexChanged += new System.EventHandler(this.filenameList_SelectedIndexChanged);
             // 
             // playCurrentScene
             // 
@@ -662,7 +655,6 @@
             this.Name = "speechIterTestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Módulo de Aplicação de Ensaio";
-            this.Load += new System.EventHandler(this.speechIterTestForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

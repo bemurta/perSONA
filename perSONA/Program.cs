@@ -25,21 +25,17 @@ namespace perSONA
             firstUse = Properties.Settings.Default.FIRST_USE;
             firstUseData = Properties.Settings.Default.FIRST_USE_DATA;
 
-            // if fisrt time use persona, save first use date // 
+            Properties.Settings.Default.ITERATOR = 0;
+            Properties.Settings.Default.Save();
+
+
+            //if first Use, select result forder. else if the version is demo and 90 days have passed,
+            //block program and require Serial key, else run normally
             if (firstUse)
             {
-                //Set destiny result folder
-                String UserName = System.Environment.UserName;
-                Properties.Settings.Default.RESULTS_FOLDER = "C:/Users/" + UserName + "/Documents/perSONA";
-
-                //Set today date
-                Properties.Settings.Default.FIRST_USE_DATA = DateTime.Now;
-                firstUse = false;
-                firstUseData = Properties.Settings.Default.FIRST_USE_DATA;
+                Application.Run(new Form2());
             }
-
-            //if the version is demo and 90 days have passed block program and require Serial key
-            if (demoVersion && (DateTime.Compare(DateTime.Now, firstUseData.AddDays(90)) == 1))
+            else if (demoVersion && (DateTime.Compare(DateTime.Now, firstUseData.AddDays(90)) == 1))
             {
                 Application.Run(new licenseExpirationForm());
             }
@@ -47,14 +43,6 @@ namespace perSONA
             {
                 Application.Run(new Form5());
             }
-
-            Properties.Settings.Default.FIRST_USE = firstUse;
-
-            //Properties.Settings.Default.FIRST_USE = true;
-            //Properties.Settings.Default.DEMO_VERSION = true;
-
-            Properties.Settings.Default.Save();
-
         }
     }
 }

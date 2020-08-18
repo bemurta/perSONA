@@ -22,15 +22,9 @@ namespace perSONA
             CompareSerialKey();
         }
 
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://docs.google.com/forms/d/e/1FAIpQLSd7COM0ic-StEBNQFFBUqfiw6rShIg5I8GzXUFxfZgfE87z9g/viewform");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         void CompareSerialKey()
@@ -58,14 +52,9 @@ namespace perSONA
             Properties.Settings.Default.Save();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void licenseExpirationForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void licenseExpirationForm_Load(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }
