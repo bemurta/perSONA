@@ -60,11 +60,6 @@ namespace perSONA
 
         }
 
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -142,11 +137,6 @@ namespace perSONA
             return radius;
         }
 
-        private void numericRule_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void speechLeft_CheckedChanged(object sender, EventArgs e)
         {
             vAInterface.plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
@@ -185,11 +175,6 @@ namespace perSONA
         private void noiseDistance_ValueChanged(object sender, EventArgs e)
         {
             vAInterface.plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
-        }
-
-        private void testSetup_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

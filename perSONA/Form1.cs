@@ -41,7 +41,6 @@ namespace perSONA
 
         public Form1(string confFile, int sourceIndex)
         {
-
             InitializeComponent();
             this.confFile = confFile;
 
@@ -96,17 +95,11 @@ namespace perSONA
                     concatText("Headphone binaural reproduction");
                     break;
             }
-
-            try
-            {
-                updatePatientList();
-            }
-            catch (Exception)
-            {
-                patientBox.Text = "No previously selected patients";
-            }
+            updatePatientList();
+            updateApplicatorList();
         }
 
+        //??
         ~Form1()
         {
             this.Form1_FormClosing(null, null);
@@ -142,10 +135,19 @@ namespace perSONA
 
         public void updatePatientList()
         {
-            string patientDir = string.Format("{0}/patients", Properties.Settings.Default.RESULTS_FOLDER);
-            string[] patients = Directory.GetFiles(patientDir, "*.json");
-            string[] patientNames = patients.Select(Path.GetFileNameWithoutExtension).ToArray();
-            patientBox.DataSource = patientNames;
+            try
+            {
+                string patientDir = string.Format("{0}/patients", Properties.Settings.Default.RESULTS_FOLDER);
+                string[] patients = Directory.GetFiles(patientDir, "*.json");
+                string[] patientNames = patients.Select(Path.GetFileNameWithoutExtension).ToArray();
+                patientBox.DataSource = patientNames;
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                string patientDir = string.Format("{0}/patients", Properties.Settings.Default.RESULTS_FOLDER);
+                Directory.CreateDirectory(patientDir);
+                updatePatientList();
+            }
         }
 
         private void connectToVA()
@@ -171,8 +173,6 @@ namespace perSONA
         {
             connectToVA();
         }
-
-
 
         private void buttonDisconnect_Click(object sender, EventArgs e)
         {
@@ -305,10 +305,6 @@ namespace perSONA
             playScene(radius, angle, trackBar1.Value);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -316,11 +312,6 @@ namespace perSONA
                 label1.Text = string.Format("SNR: {0} dB", trackBar1.Value);
             else
                 label1.Text = string.Format("SNR: INF", trackBar1.Value);
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
         }
 
         public VANet getVa()
@@ -471,11 +462,6 @@ namespace perSONA
             textBox2.Text = string.Format("Answer {0}/{1}= {2}% ", answer, totalWords, 100.0 * (answer / totalWords));
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         public void fillWords(string speechFile, ListBox listbox, bool test=false)
         {
@@ -620,9 +606,6 @@ namespace perSONA
 
             }
 
-
-
-
             speechList.Add(radius[0] * Math.Sin(angle[0] / 180 * Math.PI), radius[0] * Math.Cos(angle[0] / 180 * Math.PI));
             noiseList.Add(radius[1] * Math.Sin(angle[1] / 180 * Math.PI), radius[1] * Math.Cos(angle[1] / 180 * Math.PI));
 
@@ -694,11 +677,6 @@ namespace perSONA
 
         }
 
-
-        private void zedGraphControl1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -814,7 +792,6 @@ namespace perSONA
             updatePatientAudiometry(patientName, timestamp);
         }
 
-
         public void updatePatientAudiometry(string patientName, string timestamp)
         {
             string jsonFile = string.Format("{0}/patients/{1}.json",
@@ -852,12 +829,8 @@ namespace perSONA
             File.WriteAllText(jsonFile, output);
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-
+        //??
         private double checkDirection(bool left, bool front, bool right)
         {
             if (left)
@@ -891,71 +864,98 @@ namespace perSONA
 
         private void testSetup_Click(object sender, EventArgs e)
         {
-            string testTipe = "Default";
-            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-            new testSetup(this, testTipe, subjects).Show();
+            openTestForm("Default");
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string testTipe = "Speech Left";
-            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-            new testSetup(this, testTipe, subjects).Show();
+            openTestForm("Speech Left");
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string testTipe = "Speech Front";
-            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-            new testSetup(this, testTipe, subjects).Show();
+            openTestForm("Speech Front");
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            string testTipe = "Speech Right";
-            string[] subjects = { applicatorBox.Text, patientBox.SelectedItem.ToString() };
-            new testSetup(this, testTipe, subjects).Show();
+            openTestForm("Speech Right");
+        }
+
+        public void openTestForm(string testTipe)
+        {
+            if (Application.OpenForms["testSetup"] == null)
+            {
+                try
+                {
+                    string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
+                    new testSetup(this, testTipe, subjects).Show();
+                }
+                catch (Exception)
+                {
+                    const string message = "Selecione um paciente e um aplicador para prosseguir";
+                    const string caption = "Erro";
+                    var result = MessageBox.Show(message, caption,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new helpForm().Show();
+            if (Application.OpenForms["helpForm"] == null)
+            {
+                new helpForm().Show();
+            }
         }
 
         private void resultsFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            new Form2(this).Show();
-            updatePatientList();
+            if (Application.OpenForms["Form2"] == null)
+            {
+                new Form2(this).Show();       
+            }
         }
 
         private void patientAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new patientManagement(this).Show();
+            if (Application.OpenForms["patientManagement"] == null)
+            {
+                new patientManagement(this).Show();
+            }
         }
 
         private void audioDatabaseEditorAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new dbForm(this).Show();
+            if (Application.OpenForms["dbForm"] == null)
+            {
+                new dbForm(this).Show();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new patientManagement(this).Show();
+            if (Application.OpenForms["patientManagement"] == null)
+            {
+                new patientManagement(this).Show();
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            string jsonFile = string.Format("{0}/patients/{1}.json",
-                Properties.Settings.Default.RESULTS_FOLDER,
-                patientBox.SelectedItem.ToString());
-            concatText(jsonFile);
+            if (Application.OpenForms["patientManagement"] == null)
+            {
+                string jsonFile = string.Format("{0}/patients/{1}.json",
+                    Properties.Settings.Default.RESULTS_FOLDER,
+                    patientBox.SelectedItem.ToString());
+                concatText(jsonFile);
 
-            var patientJson = File.ReadAllText(jsonFile);
-            Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(patientJson);
+                var patientJson = File.ReadAllText(jsonFile);
+                Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(patientJson);
 
-            new patientManagement(this, patient).Show();
-
+                new patientManagement(this, patient).Show();
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -990,44 +990,20 @@ namespace perSONA
             }
         }
 
-        private void patientBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Sende_mailForm().Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel12_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (Application.OpenForms["Sende_mailForm"] == null)
+            {
+                new Sende_mailForm().Show();
+            }
         }
 
         private void calibraçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new calibrationExplanation(this).Show();
+            if (Application.OpenForms["calibrationExplanation"] == null)
+            {
+                new calibrationExplanation(this).Show();
+            }
         }
 
 
@@ -1099,6 +1075,62 @@ namespace perSONA
             else
             {
                 label2.Text = string.Format("Volume: {0} %", Properties.Settings.Default.SPEAKER_VOLUME);
+            }
+        }
+
+        private void CreateApplicator_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["applicatorManagementForm"] == null)
+            {
+                new applicatorManagementForm(this).Show();
+            }
+        }
+
+        private void DeleteApplicator_Click(object sender, EventArgs e)
+        {
+            string jsonFile = string.Format("{0}/Applicators/{1}.json",
+                                            Properties.Settings.Default.RESULTS_FOLDER,
+                                            applicatorBox.SelectedItem.ToString());
+
+            if (MessageBox.Show("Deseja deletar paciente?", applicatorBox.SelectedItem.ToString(),
+                MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                File.Delete(jsonFile);
+                concatText(string.Format("Deleted applicator: {0}", applicatorBox.SelectedItem.ToString()));
+            }
+            updateApplicatorList();
+        }
+        public void updateApplicatorList()
+        {
+            try
+            {
+                string applicatorDir = string.Format("{0}/Applicators", Properties.Settings.Default.RESULTS_FOLDER);
+                string[] applicators = Directory.GetFiles(applicatorDir, "*.json");
+                string[] applicatorsNames = applicators.Select(Path.GetFileNameWithoutExtension).ToArray();
+                applicatorBox.DataSource = applicatorsNames;
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                string applicatorDir = string.Format("{0}/Applicators", Properties.Settings.Default.RESULTS_FOLDER);
+                Directory.CreateDirectory(applicatorDir);
+                updateApplicatorList();
+            }
+        }
+
+        private void ShowApplicatorData_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["applicatorManagementForm"] == null)
+            {
+                string jsonFile = string.Format("{0}/Applicators/{1}.json",
+                    Properties.Settings.Default.RESULTS_FOLDER,
+                    applicatorBox.SelectedItem.ToString());
+                concatText(jsonFile);
+
+                var applicatorJson = File.ReadAllText(jsonFile);
+                Applicator applicator = Newtonsoft.Json.JsonConvert.DeserializeObject<Applicator>(applicatorJson);
+
+                new applicatorManagementForm(this, applicator).Show();
             }
         }
     }

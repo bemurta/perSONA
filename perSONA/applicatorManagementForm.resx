@@ -117,19 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Bem-vindo a interface de calibração do perSONA. Lembre-se que calibrar o sistema de reprodução
-sonora é de extrema relevância e que a calibração deve ser realizada em intervalo mínino de dois anos. 
-Lembre-se também que em casos de alteração no sistema, você deve efetuar a recalibração.</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Para a calibração precisaremos de algumas informações de seus reprodutores
-sonoros, bem como, dos aparelhos que deseja utilizar para a calibração.
-
-Após a coleta dessa informações a calibração que será feita em dois passos: 
-1. Calibração dos reprodutores sonoros separadamente;
-2. Calibração dos reprodutores sonoros juntos.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

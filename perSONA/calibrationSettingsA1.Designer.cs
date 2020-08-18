@@ -152,7 +152,7 @@
             this.notCalibrateCheckbox.Name = "notCalibrateCheckbox";
             this.notCalibrateCheckbox.Size = new System.Drawing.Size(140, 32);
             this.notCalibrateCheckbox.TabIndex = 16;
-            this.notCalibrateCheckbox.Text = "Não Calibrado";
+            this.notCalibrateCheckbox.Text = "Não calibrado";
             this.notCalibrateCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.notCalibrateCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -250,16 +250,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SLMBrandBox.FormattingEnabled = true;
-            this.SLMBrandBox.Items.AddRange(new object[] {
-            "01 dB",
-            "Brüel and Kjaer",
-            "CESVA",
-            "Criffer",
-            "Instrutherm",
-            "Larson Davis",
-            "Minipa",
-            "Norsonic",
-            "NTI"});
             this.SLMBrandBox.Location = new System.Drawing.Point(7, 21);
             this.SLMBrandBox.Margin = new System.Windows.Forms.Padding(4);
             this.SLMBrandBox.Name = "SLMBrandBox";
@@ -307,7 +297,7 @@
             this.groupBox3.Size = new System.Drawing.Size(313, 60);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "N.º de Série";
+            this.groupBox3.Text = "N.º de série";
             // 
             // SLMSerialNumberBox
             // 
@@ -332,7 +322,6 @@
             this.Name = "calibrationSettingsA1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calibração com MNPS";
-            this.TopMost = true;
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -26,7 +26,6 @@ namespace perSONA
 
         private void playAudioButton_Click(object sender, EventArgs e)
         {
-
             vA = vAInterface.getVa();
 
             vA.Reset();
@@ -98,11 +97,6 @@ namespace perSONA
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             saveTag();
@@ -136,10 +130,7 @@ namespace perSONA
         }
 
         private void updateWordsFromTag(string title)
-        {
-            
-
-
+        {            
             if (!string.IsNullOrEmpty(title))
             {
                 textBox1.Text = title;
@@ -153,16 +144,6 @@ namespace perSONA
                 listBox2.DataSource = "Digite Texto na Caixa ao lado".Split(null);
                 listBox2.ClearSelected();
             }
-        }
-
-        private void dbForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -71,8 +71,6 @@
             // mannequinPinnaeBox
             // 
             this.mannequinPinnaeBox.FormattingEnabled = true;
-            this.mannequinPinnaeBox.Items.AddRange(new object[] {
-            "Sem Pinna"});
             this.mannequinPinnaeBox.Location = new System.Drawing.Point(7, 20);
             this.mannequinPinnaeBox.Name = "mannequinPinnaeBox";
             this.mannequinPinnaeBox.Size = new System.Drawing.Size(286, 28);
@@ -88,7 +86,7 @@
             this.groupBox8.Size = new System.Drawing.Size(300, 56);
             this.groupBox8.TabIndex = 57;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Modelo do Manequim";
+            this.groupBox8.Text = "Modelo do manequim";
             // 
             // mannequinModelBox
             // 
@@ -110,15 +108,11 @@
             this.groupBox1.Size = new System.Drawing.Size(300, 56);
             this.groupBox1.TabIndex = 55;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Marca do Manequim";
+            this.groupBox1.Text = "Marca do manequim";
             // 
             // mannequinBrandBox
             // 
             this.mannequinBrandBox.FormattingEnabled = true;
-            this.mannequinBrandBox.Items.AddRange(new object[] {
-            "01 dB",
-            "Bruel and Kjaer",
-            "Neumann"});
             this.mannequinBrandBox.Location = new System.Drawing.Point(9, 20);
             this.mannequinBrandBox.Margin = new System.Windows.Forms.Padding(4);
             this.mannequinBrandBox.Name = "mannequinBrandBox";
@@ -145,6 +139,7 @@
             this.mannequinPicture.Location = new System.Drawing.Point(401, 80);
             this.mannequinPicture.Name = "mannequinPicture";
             this.mannequinPicture.Size = new System.Drawing.Size(165, 165);
+            this.mannequinPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mannequinPicture.TabIndex = 61;
             this.mannequinPicture.TabStop = false;
             // 
@@ -165,7 +160,6 @@
             this.Name = "calibrationSettingsB2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calibração com Manequim";
-            this.TopMost = true;
             this.groupBox6.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

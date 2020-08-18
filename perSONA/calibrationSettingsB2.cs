@@ -9,53 +9,50 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
+using ClosedXML.Excel;
 
 namespace perSONA
 {
     public partial class calibrationSettingsB2 : Form
     {
         private readonly IvAInterface vAInterface;
+        string earphoneBrand;
+        string earphoneModel;
+        bool earphoneQuality;
 
-        public calibrationSettingsB2(IvAInterface vAInterface)
+        public calibrationSettingsB2(IvAInterface vAInterface, string calibrationObjectBrand, string calibrationObjectModel, bool phoneQuality)
         {
             InitializeComponent();
             this.vAInterface = vAInterface;
+            earphoneBrand = calibrationObjectBrand;
+            earphoneModel = calibrationObjectModel;
+            earphoneQuality = phoneQuality;
+            fillMannequinBrandBox();
         }
 
         private void mannequinBrandBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             mannequinModelBox.Items.Clear();
             mannequinPinnaeBox.Items.Clear();
-            if (mannequinBrandBox.Text == "01 dB")
-            {
-                //Model
-                mannequinModelBox.Items.Add("Cortex MK I");
-                mannequinModelBox.Items.Add("Cortex MK II");
+            var wb = new XLWorkbook(Properties.Settings.Default.EQUIPMENTS_TABLE_LOCATION);
+            var Table = wb.Worksheet(8);
 
-                mannequinPinnaeBox.Items.Add("Sem Pinna");
-            }
-            else if (mannequinBrandBox.Text == "Bruel and Kjaer")
-            {
-                //model
-                mannequinModelBox.Items.Add("4100");
-                mannequinModelBox.Items.Add("4128-C");
-                mannequinModelBox.Items.Add("4128-D");
-                mannequinModelBox.Items.Add("5128");
+            var linha = 2;
 
-                //Pinnae
-                mannequinPinnaeBox.Items.Add("DZ-9769");
-                mannequinPinnaeBox.Items.Add("DZ-9770");
-                mannequinPinnaeBox.Items.Add("DZ-9773");
-                mannequinPinnaeBox.Items.Add("DZ-9774");
-                mannequinPinnaeBox.Items.Add("Sem Pinna");
-            }
-            else if (mannequinBrandBox.Text == "Neumann")
+            while (true)
             {
-                mannequinModelBox.Items.Add("KU-100");
+                var ModelColumnCell = Table.Cell("B" + linha.ToString()).Value.ToString();
+                var BrandColumnCell = Table.Cell("A" + linha.ToString()).Value.ToString();
 
-                mannequinPinnaeBox.Items.Add("Sem Pinna");
+                if (string.IsNullOrEmpty(BrandColumnCell)) break;
+
+                if (mannequinBrandBox.Text == BrandColumnCell)
+                {
+                    mannequinModelBox.Items.Add(ModelColumnCell);
+                }
+                linha++;
             }
+            wb.Dispose();
         }
 
         private void mannequinModelBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,26 +60,52 @@ namespace perSONA
             try
             {
                 //mannequinPicture.Image = Image.FromFile("C:\\Users\\Gustavo Trentin\\Desktop\\perSONA\\perSONA\\logo\\mannequin" + mannequinModelBox.Text + ".png");
-                //mannequinPicture.Image = Image.FromFile("logo/mannequin/" + mannequinModelBox.Text + ".png");
+                mannequinPicture.Image = Image.FromFile("logo/mannequin/" + mannequinModelBox.Text + ".png");
                 //mannequinPicture.ImageLocation = "logo/mannequin/" + mannequinModelBox.Text + ".png";
             }
             catch(FileNotFoundException)
             {
                 mannequinPicture.Image = null;
             }
+
+            //Add pinnae
+            mannequinPinnaeBox.Items.Clear();
+            var wb = new XLWorkbook(Properties.Settings.Default.EQUIPMENTS_TABLE_LOCATION);
+            var Table = wb.Worksheet(9);
+
+            var linha = 2;
+
+            while (true)
+            {
+                var PinnaeColumnCell = Table.Cell("B" + linha.ToString()).Value.ToString();
+                var ModelColumnCell = Table.Cell("A" + linha.ToString()).Value.ToString();
+
+                if (string.IsNullOrEmpty(ModelColumnCell)) break;
+
+                if (mannequinModelBox.Text == ModelColumnCell)
+                {
+                    mannequinPinnaeBox.Items.Add(PinnaeColumnCell);
+                }
+                linha++;
+            }
+            wb.Dispose();
+            mannequinPinnaeBox.Items.Add("Sem pinna");
         }
         private void Next_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(mannequinBrandBox.Text) | string.IsNullOrWhiteSpace(mannequinModelBox.Text))
+            if (string.IsNullOrWhiteSpace(mannequinBrandBox.Text) | string.IsNullOrWhiteSpace(mannequinModelBox.Text) | string.IsNullOrWhiteSpace(mannequinPinnaeBox.Text))
             {
-                MessageBox.Show("Adicione a marca e modelo do manequim para continuar", "Error");
+                MessageBox.Show("Preencha todos os campos para continuar", "Error");
             }
 
             else
             {
                 calibrationData calibration = new calibrationData()
                 {
+                    CalibrationObjectBrand = earphoneBrand,
+                    CalibrationObjectModel = earphoneModel,
+                    EarphoneQuality = earphoneQuality,
                     MannequinBrand = mannequinBrandBox.Text,
                     MannequinModel = mannequinModelBox.Text,
                     MannequinPinnae = mannequinPinnaeBox.Text,
@@ -96,7 +119,6 @@ namespace perSONA
                     File.WriteAllText(string.Format("{0}/CalibrationData/{1}.json",
                                                   Properties.Settings.Default.RESULTS_FOLDER,
                                                   "Calibration " + Properties.Settings.Default.CALIBRATION_ID), calibrationJson);
-
                 }
                 catch (DirectoryNotFoundException)
                 {
@@ -108,9 +130,29 @@ namespace perSONA
                 }
                 new calibrationHelp(vAInterface).Show();
                 Close();
-
             }
         }
+        private void fillMannequinBrandBox()
+        {
+            var wb = new XLWorkbook(Properties.Settings.Default.EQUIPMENTS_TABLE_LOCATION);
+            var Table = wb.Worksheet(8);
 
+            var linha = 2;
+            string previousCell = "";
+
+            while (true)
+            {
+                var BrandColumnCell = Table.Cell("A" + linha.ToString()).Value.ToString();
+                if (string.IsNullOrEmpty(BrandColumnCell)) break;
+                if (previousCell != BrandColumnCell)
+                {
+                    mannequinBrandBox.Items.Add(BrandColumnCell);
+                }
+                linha++;
+                previousCell = BrandColumnCell;
+            }
+
+            wb.Dispose();
+        }
     }
 } 

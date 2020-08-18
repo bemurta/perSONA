@@ -264,7 +264,6 @@
             this.rightHearingEtiology.Name = "rightHearingEtiology";
             this.rightHearingEtiology.Size = new System.Drawing.Size(369, 28);
             this.rightHearingEtiology.TabIndex = 0;
-            this.rightHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.rightHearingEtiology_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -280,7 +279,6 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Etiologia";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // leftHearingEtiology
             // 
@@ -308,7 +306,6 @@
             this.leftHearingEtiology.Name = "leftHearingEtiology";
             this.leftHearingEtiology.Size = new System.Drawing.Size(368, 28);
             this.leftHearingEtiology.TabIndex = 0;
-            this.leftHearingEtiology.SelectedIndexChanged += new System.EventHandler(this.leftHearingEtiology_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -396,7 +393,6 @@
             this.leftHearingLoss.Name = "leftHearingLoss";
             this.leftHearingLoss.Size = new System.Drawing.Size(368, 28);
             this.leftHearingLoss.TabIndex = 0;
-            this.leftHearingLoss.SelectedIndexChanged += new System.EventHandler(this.leftHearingLoss_SelectedIndexChanged);
             // 
             // groupBox36
             // 
@@ -429,7 +425,6 @@
             this.rightHearingLoss.Name = "rightHearingLoss";
             this.rightHearingLoss.Size = new System.Drawing.Size(369, 28);
             this.rightHearingLoss.TabIndex = 0;
-            this.rightHearingLoss.SelectedIndexChanged += new System.EventHandler(this.rightHearingLoss_SelectedIndexChanged);
             // 
             // groupBox37
             // 
@@ -498,7 +493,6 @@
             this.groupBox39.TabIndex = 7;
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "Pré ou pós lingual?";
-            this.groupBox39.Enter += new System.EventHandler(this.groupBox39_Enter);
             // 
             // rightPostLingual
             // 
@@ -515,7 +509,6 @@
             this.rightPostLingual.Name = "rightPostLingual";
             this.rightPostLingual.Size = new System.Drawing.Size(369, 28);
             this.rightPostLingual.TabIndex = 0;
-            this.rightPostLingual.SelectedIndexChanged += new System.EventHandler(this.rightPostLingual_SelectedIndexChanged);
             // 
             // groupBox40
             // 
@@ -550,7 +543,6 @@
             this.rightLossDegree.Name = "rightLossDegree";
             this.rightLossDegree.Size = new System.Drawing.Size(369, 28);
             this.rightLossDegree.TabIndex = 0;
-            this.rightLossDegree.SelectedIndexChanged += new System.EventHandler(this.rightLossDegree_SelectedIndexChanged);
             // 
             // groupBox21
             // 
@@ -619,7 +611,6 @@
             this.groupBox16.TabIndex = 6;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Pré ou pós lingual?";
-            this.groupBox16.Enter += new System.EventHandler(this.groupBox16_Enter);
             // 
             // leftPostLingual
             // 
@@ -636,7 +627,6 @@
             this.leftPostLingual.Name = "leftPostLingual";
             this.leftPostLingual.Size = new System.Drawing.Size(368, 28);
             this.leftPostLingual.TabIndex = 0;
-            this.leftPostLingual.SelectedIndexChanged += new System.EventHandler(this.leftPostLingual_SelectedIndexChanged);
             // 
             // groupBox17
             // 
@@ -652,7 +642,6 @@
             this.groupBox17.TabIndex = 4;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Grau da perda";
-            this.groupBox17.Enter += new System.EventHandler(this.groupBox17_Enter);
             // 
             // leftLossDegree
             // 
@@ -672,7 +661,6 @@
             this.leftLossDegree.Name = "leftLossDegree";
             this.leftLossDegree.Size = new System.Drawing.Size(368, 28);
             this.leftLossDegree.TabIndex = 0;
-            this.leftLossDegree.SelectedIndexChanged += new System.EventHandler(this.leftLossDegree_SelectedIndexChanged);
             // 
             // groupBox5
             // 
@@ -687,7 +675,7 @@
             this.groupBox5.Size = new System.Drawing.Size(191, 57);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Data de Ativação";
+            this.groupBox5.Text = "Data de ativação";
             // 
             // rightActivationDate
             // 
@@ -821,7 +809,6 @@
             this.rightDevice.Name = "rightDevice";
             this.rightDevice.Size = new System.Drawing.Size(173, 28);
             this.rightDevice.TabIndex = 0;
-            this.rightDevice.SelectedIndexChanged += new System.EventHandler(this.rightDevice_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -836,7 +823,7 @@
             this.groupBox4.Size = new System.Drawing.Size(190, 57);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Data de Ativação";
+            this.groupBox4.Text = "Data de ativação";
             // 
             // leftActivationDate
             // 
@@ -1020,7 +1007,6 @@
             this.sexTab.Name = "sexTab";
             this.sexTab.Size = new System.Drawing.Size(187, 28);
             this.sexTab.TabIndex = 0;
-            this.sexTab.SelectedIndexChanged += new System.EventHandler(this.sexTab_SelectedIndexChanged);
             // 
             // groupBox11
             // 
@@ -1084,7 +1070,6 @@
             this.work.Name = "work";
             this.work.Size = new System.Drawing.Size(429, 28);
             this.work.TabIndex = 0;
-            this.work.SelectedIndexChanged += new System.EventHandler(this.work_SelectedIndexChanged);
             // 
             // groupBox20
             // 
@@ -1112,7 +1097,6 @@
             this.observationBox.Name = "observationBox";
             this.observationBox.Size = new System.Drawing.Size(426, 79);
             this.observationBox.TabIndex = 0;
-            this.observationBox.TextChanged += new System.EventHandler(this.observationBox_TextChanged);
             // 
             // groupBox18
             // 
@@ -1148,7 +1132,6 @@
             this.motivationBox.Name = "motivationBox";
             this.motivationBox.Size = new System.Drawing.Size(429, 28);
             this.motivationBox.TabIndex = 0;
-            this.motivationBox.SelectedIndexChanged += new System.EventHandler(this.motivationBox_SelectedIndexChanged);
             // 
             // groupBox14
             // 
@@ -1248,7 +1231,6 @@
             this.scholarBox.Name = "scholarBox";
             this.scholarBox.Size = new System.Drawing.Size(429, 28);
             this.scholarBox.TabIndex = 0;
-            this.scholarBox.SelectedIndexChanged += new System.EventHandler(this.scholarBox_SelectedIndexChanged);
             // 
             // groupBox9
             // 
@@ -1275,7 +1257,6 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(429, 27);
             this.nameBox.TabIndex = 0;
-            this.nameBox.TextChanged += new System.EventHandler(this.nameBox_TextChanged);
             // 
             // tabControl1
             // 
@@ -1365,7 +1346,6 @@
             this.label3.Size = new System.Drawing.Size(228, 56);
             this.label3.TabIndex = 3;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tableLayoutPanel15
             // 
@@ -1565,7 +1545,7 @@
             this.groupBox30.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox30.Size = new System.Drawing.Size(460, 138);
+            this.groupBox30.Size = new System.Drawing.Size(460, 134);
             this.groupBox30.TabIndex = 0;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Audiometrias cadastradas";
@@ -1577,11 +1557,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.audiometryLists.FormattingEnabled = true;
             this.audiometryLists.ItemHeight = 20;
-            this.audiometryLists.Location = new System.Drawing.Point(11, 31);
+            this.audiometryLists.Location = new System.Drawing.Point(8, 31);
             this.audiometryLists.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryLists.Name = "audiometryLists";
             this.audiometryLists.ScrollAlwaysVisible = true;
-            this.audiometryLists.Size = new System.Drawing.Size(444, 84);
+            this.audiometryLists.Size = new System.Drawing.Size(442, 84);
             this.audiometryLists.TabIndex = 0;
             this.audiometryLists.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -1591,11 +1571,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox23.Controls.Add(this.tableLayoutPanel5);
-            this.groupBox23.Location = new System.Drawing.Point(5, 171);
+            this.groupBox23.Location = new System.Drawing.Point(5, 167);
             this.groupBox23.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox23.Size = new System.Drawing.Size(460, 540);
+            this.groupBox23.Size = new System.Drawing.Size(460, 544);
             this.groupBox23.TabIndex = 1;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Adicionar nova audiometria";
@@ -1614,7 +1594,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.16466F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.835341F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(441, 504);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(441, 508);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // button1
@@ -1622,7 +1602,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(5, 464);
+            this.button1.Location = new System.Drawing.Point(5, 468);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(431, 35);
@@ -1660,7 +1640,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(435, 453);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(435, 457);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -1671,13 +1651,13 @@
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(220, 378);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(220, 383);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 72);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(212, 73);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // button2
@@ -1688,7 +1668,7 @@
             this.button2.Location = new System.Drawing.Point(5, 15);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 40);
+            this.button2.Size = new System.Drawing.Size(202, 41);
             this.button2.TabIndex = 12;
             this.button2.Text = "Pré-Visualização";
             this.button2.UseVisualStyleBackColor = true;
@@ -1704,7 +1684,7 @@
             this.groupBox24.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox24.Size = new System.Drawing.Size(207, 65);
+            this.groupBox24.Size = new System.Drawing.Size(207, 66);
             this.groupBox24.TabIndex = 1;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Data de realização";
@@ -1727,11 +1707,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox26.Controls.Add(this.audiometrySide);
-            this.groupBox26.Location = new System.Drawing.Point(5, 80);
+            this.groupBox26.Location = new System.Drawing.Point(5, 81);
             this.groupBox26.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox26.Size = new System.Drawing.Size(207, 65);
+            this.groupBox26.Size = new System.Drawing.Size(207, 66);
             this.groupBox26.TabIndex = 3;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Lado";
@@ -1757,11 +1737,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox35.Controls.Add(this.freq8);
-            this.groupBox35.Location = new System.Drawing.Point(5, 380);
+            this.groupBox35.Location = new System.Drawing.Point(5, 385);
             this.groupBox35.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox35.Size = new System.Drawing.Size(207, 68);
+            this.groupBox35.Size = new System.Drawing.Size(207, 69);
             this.groupBox35.TabIndex = 11;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "8000 Hz";
@@ -1788,11 +1768,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox33.Controls.Add(this.freq7);
-            this.groupBox33.Location = new System.Drawing.Point(222, 305);
+            this.groupBox33.Location = new System.Drawing.Point(222, 309);
             this.groupBox33.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox33.Size = new System.Drawing.Size(208, 65);
+            this.groupBox33.Size = new System.Drawing.Size(208, 66);
             this.groupBox33.TabIndex = 10;
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "4000 Hz";
@@ -1818,11 +1798,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox28.Controls.Add(this.freq1);
-            this.groupBox28.Location = new System.Drawing.Point(5, 155);
+            this.groupBox28.Location = new System.Drawing.Point(5, 157);
             this.groupBox28.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox28.Size = new System.Drawing.Size(207, 65);
+            this.groupBox28.Size = new System.Drawing.Size(207, 66);
             this.groupBox28.TabIndex = 5;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "125 Hz";
@@ -1848,11 +1828,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox31.Controls.Add(this.freq4);
-            this.groupBox31.Location = new System.Drawing.Point(222, 230);
+            this.groupBox31.Location = new System.Drawing.Point(222, 233);
             this.groupBox31.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox31.Size = new System.Drawing.Size(208, 65);
+            this.groupBox31.Size = new System.Drawing.Size(208, 66);
             this.groupBox31.TabIndex = 8;
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "1000 Hz";
@@ -1879,11 +1859,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox32.Controls.Add(this.freq3);
-            this.groupBox32.Location = new System.Drawing.Point(5, 230);
+            this.groupBox32.Location = new System.Drawing.Point(5, 233);
             this.groupBox32.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox32.Size = new System.Drawing.Size(207, 65);
+            this.groupBox32.Size = new System.Drawing.Size(207, 66);
             this.groupBox32.TabIndex = 7;
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "500  Hz";
@@ -1909,11 +1889,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox29.Controls.Add(this.freq2);
-            this.groupBox29.Location = new System.Drawing.Point(222, 155);
+            this.groupBox29.Location = new System.Drawing.Point(222, 157);
             this.groupBox29.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox29.Size = new System.Drawing.Size(208, 65);
+            this.groupBox29.Size = new System.Drawing.Size(208, 66);
             this.groupBox29.TabIndex = 6;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "250 Hz";
@@ -1939,11 +1919,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox34.Controls.Add(this.freq6);
-            this.groupBox34.Location = new System.Drawing.Point(5, 305);
+            this.groupBox34.Location = new System.Drawing.Point(5, 309);
             this.groupBox34.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox34.Size = new System.Drawing.Size(207, 65);
+            this.groupBox34.Size = new System.Drawing.Size(207, 66);
             this.groupBox34.TabIndex = 9;
             this.groupBox34.TabStop = false;
             this.groupBox34.Text = "2000 Hz";
@@ -1970,11 +1950,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox27.Controls.Add(this.masking);
-            this.groupBox27.Location = new System.Drawing.Point(222, 80);
+            this.groupBox27.Location = new System.Drawing.Point(222, 81);
             this.groupBox27.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox27.Size = new System.Drawing.Size(208, 65);
+            this.groupBox27.Size = new System.Drawing.Size(208, 66);
             this.groupBox27.TabIndex = 4;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Mascaramento";
@@ -2004,7 +1984,7 @@
             this.groupBox25.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox25.Size = new System.Drawing.Size(208, 65);
+            this.groupBox25.Size = new System.Drawing.Size(208, 66);
             this.groupBox25.TabIndex = 2;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Via";
@@ -2179,9 +2159,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "patientManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Módulo de Gerenciamento de Paciente";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.patientManagement_Load);
+            this.Text = "Criar Paciente";
             this.groupBox42.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox41.ResumeLayout(false);

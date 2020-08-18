@@ -20,12 +20,19 @@ namespace perSONA
         public string ApplicationName { get; set; }
         public string ApplicationVersion { get; set; }
 
+        //Artificial Ear
+        public string ArtificialEarBrand { get; set; }
+        public string ArtificialEarModel { get; set; }
+
         //Mannequin
         public string MannequinBrand { get; set; }
         public string MannequinModel { get; set; }
         public string MannequinPinnae { get; set; }
 
         //Variáveis que servem para mais de um modo
+        public string CalibrationObjectBrand { get; set; }
+        public string CalibrationObjectModel { get; set; }
+        public bool EarphoneQuality { get; set; }
         public string MicrophoneBrand { get; set; }
         public string MicrophoneModel { get; set; }
         public string MicrophoneSerialNumber { get; set; }

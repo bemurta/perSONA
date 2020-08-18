@@ -13,15 +13,29 @@ namespace perSONA
 {
     public partial class Form2 : Form
     {
-
+        bool firstUse;
+        DateTime firstUseData;
         private readonly IvAInterface vAInterface;
 
-        public Form2(IvAInterface vAInterface)
+        public Form2()
         {
             InitializeComponent();
-            this.vAInterface = vAInterface;
+            firstUse = Properties.Settings.Default.FIRST_USE;
+            textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
+
+            const string message = "Bem-Vindo ao software perSONA. Antes de começar selecione a pasta que deseja salvar os resultados";
+            const string caption = "Bem-Vindo ao perSONA";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+        }
+
+        public Form2(IvAInterface ivAInterface)
+        {
+            InitializeComponent();
+            this.vAInterface = ivAInterface;
+            firstUse = Properties.Settings.Default.FIRST_USE;
             textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,14 +47,9 @@ namespace perSONA
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
                     string selectedPath = fbd.SelectedPath.ToString();
-
                     textBox1.Text = selectedPath;
-                    vAInterface.concatText("Changed default results folder to: " + selectedPath);
                 }
-
             }
-
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -59,32 +68,30 @@ namespace perSONA
                 }
                 catch (Exception)
                 {
-                    const string message =
-                   "Error ocurred. Couldn't set a results folder, reseting to default.";
+                    const string message = "Error ocurred. Couldn't set a results folder, reseting to default.";
                     const string caption = "Incorrect database format. Metadata required!";
                     var result = MessageBox.Show(message, caption,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
             }
-            Close();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.RESULTS_FOLDER = "%DEFAULTUSERPROFILE%/perSONA";
-            textBox1.Text = Properties.Settings.Default.RESULTS_FOLDER;
-            Properties.Settings.Default.Save();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            TopMost = true;
+            if (firstUse == false) 
+            {
+                vAInterface.updateApplicatorList();
+                vAInterface.updatePatientList();
+                Close();
+            }
+            else
+            {
+                firstUse = false;
+                firstUseData = DateTime.Now;
+                Properties.Settings.Default.FIRST_USE = firstUse;
+                Properties.Settings.Default.FIRST_USE_DATA = firstUseData;
+                Properties.Settings.Default.Save();
+                new Form5().Show();
+                Hide();
+            }
         }
     }
 }

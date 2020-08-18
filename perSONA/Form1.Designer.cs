@@ -93,8 +93,12 @@ namespace perSONA
             this.DeletePatient = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.applicatorBox = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.applicatorBox = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.CreateApplicator = new System.Windows.Forms.Button();
+            this.ShowApplicatorData = new System.Windows.Forms.Button();
+            this.DeleteApplicator = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -136,7 +140,8 @@ namespace perSONA
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -237,7 +242,6 @@ namespace perSONA
             this.label1.TabIndex = 13;
             this.label1.Text = "SNR: 0 dB";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -263,7 +267,7 @@ namespace perSONA
             this.speechRight.Name = "speechRight";
             this.speechRight.Size = new System.Drawing.Size(367, 36);
             this.speechRight.TabIndex = 5;
-            this.speechRight.Text = "Sinal à direita Ruído à frente";
+            this.speechRight.Text = "Sinal à direita, ruído à frente";
             this.speechRight.UseVisualStyleBackColor = true;
             this.speechRight.Click += new System.EventHandler(this.speechRight_Click);
             // 
@@ -277,7 +281,7 @@ namespace perSONA
             this.speechFront.Name = "speechFront";
             this.speechFront.Size = new System.Drawing.Size(367, 38);
             this.speechFront.TabIndex = 6;
-            this.speechFront.Text = "Sinal à frente Ruído à frente";
+            this.speechFront.Text = "Sinal à frente, ruído à frente";
             this.speechFront.UseVisualStyleBackColor = true;
             this.speechFront.Click += new System.EventHandler(this.speechFront_Click);
             // 
@@ -291,7 +295,7 @@ namespace perSONA
             this.speechLeft.Name = "speechLeft";
             this.speechLeft.Size = new System.Drawing.Size(367, 38);
             this.speechLeft.TabIndex = 4;
-            this.speechLeft.Text = "Sinal à esquerda Ruído à frente";
+            this.speechLeft.Text = "Sinal à esquerda, ruído à frente";
             this.speechLeft.UseVisualStyleBackColor = true;
             this.speechLeft.Click += new System.EventHandler(this.speechLeft_Click);
             // 
@@ -376,7 +380,6 @@ namespace perSONA
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.10778F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(377, 668);
             this.tableLayoutPanel12.TabIndex = 17;
-            this.tableLayoutPanel12.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel12_Paint);
             // 
             // tableLayoutPanel16
             // 
@@ -475,7 +478,6 @@ namespace perSONA
             this.zedGraphControl1.Size = new System.Drawing.Size(365, 290);
             this.zedGraphControl1.TabIndex = 14;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
-            this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
             // testSetup
             // 
@@ -483,10 +485,10 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.testSetup.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.testSetup.Location = new System.Drawing.Point(5, 146);
+            this.testSetup.Location = new System.Drawing.Point(5, 143);
             this.testSetup.Margin = new System.Windows.Forms.Padding(5);
             this.testSetup.Name = "testSetup";
-            this.testSetup.Size = new System.Drawing.Size(746, 40);
+            this.testSetup.Size = new System.Drawing.Size(746, 36);
             this.testSetup.TabIndex = 3;
             this.testSetup.Text = "Avaliação customizada";
             this.testSetup.UseVisualStyleBackColor = false;
@@ -498,12 +500,12 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(5, 52);
+            this.button2.Location = new System.Drawing.Point(5, 51);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(746, 37);
+            this.button2.Size = new System.Drawing.Size(746, 36);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Fala a frente, Ruído a frente";
+            this.button2.Text = "Fala a frente, ruído a frente";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -516,9 +518,9 @@ namespace perSONA
             this.button5.Location = new System.Drawing.Point(5, 5);
             this.button5.Margin = new System.Windows.Forms.Padding(5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(746, 37);
+            this.button5.Size = new System.Drawing.Size(746, 36);
             this.button5.TabIndex = 0;
-            this.button5.Text = "Fala a esquerda Ruído a frente";
+            this.button5.Text = "Fala a esquerda, ruído a frente";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -528,12 +530,12 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(5, 99);
+            this.button6.Location = new System.Drawing.Point(5, 97);
             this.button6.Margin = new System.Windows.Forms.Padding(5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(746, 37);
+            this.button6.Size = new System.Drawing.Size(746, 36);
             this.button6.TabIndex = 2;
-            this.button6.Text = "Fala a direita, Ruído a direita";
+            this.button6.Text = "Fala a direita, ruído a direita";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -655,16 +657,17 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.groupBox7, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.groupBox6, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.groupBox8, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(8, 8);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.20768F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.79232F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(783, 677);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
@@ -679,7 +682,7 @@ namespace perSONA
             this.groupBox7.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox7.Size = new System.Drawing.Size(773, 239);
+            this.groupBox7.Size = new System.Drawing.Size(773, 215);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Paciente";
@@ -693,9 +696,8 @@ namespace perSONA
             this.patientBox.Location = new System.Drawing.Point(20, 29);
             this.patientBox.Margin = new System.Windows.Forms.Padding(5);
             this.patientBox.Name = "patientBox";
-            this.patientBox.Size = new System.Drawing.Size(348, 204);
+            this.patientBox.Size = new System.Drawing.Size(348, 164);
             this.patientBox.TabIndex = 0;
-            this.patientBox.SelectedIndexChanged += new System.EventHandler(this.patientBox_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -714,7 +716,7 @@ namespace perSONA
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(361, 204);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(361, 180);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // CreatePatient
@@ -726,9 +728,9 @@ namespace perSONA
             this.CreatePatient.Location = new System.Drawing.Point(5, 5);
             this.CreatePatient.Margin = new System.Windows.Forms.Padding(5);
             this.CreatePatient.Name = "CreatePatient";
-            this.CreatePatient.Size = new System.Drawing.Size(351, 58);
+            this.CreatePatient.Size = new System.Drawing.Size(351, 50);
             this.CreatePatient.TabIndex = 1;
-            this.CreatePatient.Text = "Criar Paciente";
+            this.CreatePatient.Text = "Criar paciente";
             this.CreatePatient.UseVisualStyleBackColor = false;
             this.CreatePatient.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -738,12 +740,12 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowPatientData.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ShowPatientData.Location = new System.Drawing.Point(5, 73);
+            this.ShowPatientData.Location = new System.Drawing.Point(5, 65);
             this.ShowPatientData.Margin = new System.Windows.Forms.Padding(5);
             this.ShowPatientData.Name = "ShowPatientData";
-            this.ShowPatientData.Size = new System.Drawing.Size(351, 58);
+            this.ShowPatientData.Size = new System.Drawing.Size(351, 50);
             this.ShowPatientData.TabIndex = 2;
-            this.ShowPatientData.Text = "Ver Dados do Paciente";
+            this.ShowPatientData.Text = "Ver/Alterar dados do paciente";
             this.ShowPatientData.UseVisualStyleBackColor = false;
             this.ShowPatientData.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -753,12 +755,12 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DeletePatient.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.DeletePatient.Location = new System.Drawing.Point(5, 141);
+            this.DeletePatient.Location = new System.Drawing.Point(5, 125);
             this.DeletePatient.Margin = new System.Windows.Forms.Padding(5);
             this.DeletePatient.Name = "DeletePatient";
-            this.DeletePatient.Size = new System.Drawing.Size(351, 58);
+            this.DeletePatient.Size = new System.Drawing.Size(351, 50);
             this.DeletePatient.TabIndex = 3;
-            this.DeletePatient.Text = "Deletar Paciente";
+            this.DeletePatient.Text = "Deletar paciente";
             this.DeletePatient.UseVisualStyleBackColor = false;
             this.DeletePatient.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -768,11 +770,11 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox6.Location = new System.Drawing.Point(5, 448);
+            this.groupBox6.Location = new System.Drawing.Point(5, 455);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox6.Size = new System.Drawing.Size(773, 224);
+            this.groupBox6.Size = new System.Drawing.Size(773, 217);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Avaliaçao de percepção de fala";
@@ -795,34 +797,101 @@ namespace perSONA
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(756, 191);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(756, 184);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // groupBox8
+            // groupBox1
             // 
-            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox8.Controls.Add(this.applicatorBox);
-            this.groupBox8.Location = new System.Drawing.Point(5, 254);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox8.Size = new System.Drawing.Size(773, 63);
-            this.groupBox8.TabIndex = 1;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Aplicador";
+            this.groupBox1.Controls.Add(this.applicatorBox);
+            this.groupBox1.Controls.Add(this.tableLayoutPanel17);
+            this.groupBox1.Location = new System.Drawing.Point(5, 230);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Size = new System.Drawing.Size(773, 215);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Aplicador";
             // 
             // applicatorBox
             // 
-            this.applicatorBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.applicatorBox.Location = new System.Drawing.Point(10, 30);
+            this.applicatorBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.applicatorBox.FormattingEnabled = true;
+            this.applicatorBox.ItemHeight = 20;
+            this.applicatorBox.Location = new System.Drawing.Point(20, 29);
             this.applicatorBox.Margin = new System.Windows.Forms.Padding(5);
             this.applicatorBox.Name = "applicatorBox";
-            this.applicatorBox.Size = new System.Drawing.Size(753, 27);
+            this.applicatorBox.Size = new System.Drawing.Size(348, 164);
             this.applicatorBox.TabIndex = 0;
-            this.applicatorBox.Text = "Aplicador padrão";
+            // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel17.ColumnCount = 1;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Controls.Add(this.CreateApplicator, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.ShowApplicatorData, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.DeleteApplicator, 0, 2);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(391, 29);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 3;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(361, 180);
+            this.tableLayoutPanel17.TabIndex = 4;
+            // 
+            // CreateApplicator
+            // 
+            this.CreateApplicator.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CreateApplicator.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CreateApplicator.Location = new System.Drawing.Point(5, 5);
+            this.CreateApplicator.Margin = new System.Windows.Forms.Padding(5);
+            this.CreateApplicator.Name = "CreateApplicator";
+            this.CreateApplicator.Size = new System.Drawing.Size(351, 50);
+            this.CreateApplicator.TabIndex = 1;
+            this.CreateApplicator.Text = "Criar aplicador";
+            this.CreateApplicator.UseVisualStyleBackColor = false;
+            this.CreateApplicator.Click += new System.EventHandler(this.CreateApplicator_Click);
+            // 
+            // ShowApplicatorData
+            // 
+            this.ShowApplicatorData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ShowApplicatorData.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ShowApplicatorData.Location = new System.Drawing.Point(5, 65);
+            this.ShowApplicatorData.Margin = new System.Windows.Forms.Padding(5);
+            this.ShowApplicatorData.Name = "ShowApplicatorData";
+            this.ShowApplicatorData.Size = new System.Drawing.Size(351, 50);
+            this.ShowApplicatorData.TabIndex = 2;
+            this.ShowApplicatorData.Text = "Ver/Alterar dados do aplicador";
+            this.ShowApplicatorData.UseVisualStyleBackColor = false;
+            this.ShowApplicatorData.Click += new System.EventHandler(this.ShowApplicatorData_Click);
+            // 
+            // DeleteApplicator
+            // 
+            this.DeleteApplicator.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeleteApplicator.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.DeleteApplicator.Location = new System.Drawing.Point(5, 125);
+            this.DeleteApplicator.Margin = new System.Windows.Forms.Padding(5);
+            this.DeleteApplicator.Name = "DeleteApplicator";
+            this.DeleteApplicator.Size = new System.Drawing.Size(351, 50);
+            this.DeleteApplicator.TabIndex = 3;
+            this.DeleteApplicator.Text = "Deletar aplicador";
+            this.DeleteApplicator.UseVisualStyleBackColor = false;
+            this.DeleteApplicator.Click += new System.EventHandler(this.DeleteApplicator_Click);
             // 
             // tabPage1
             // 
@@ -896,7 +965,6 @@ namespace perSONA
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.94675F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(377, 676);
             this.tableLayoutPanel10.TabIndex = 13;
-            this.tableLayoutPanel10.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel10_Paint);
             // 
             // getFolder
             // 
@@ -1038,7 +1106,6 @@ namespace perSONA
             this.listBox2.ScrollAlwaysVisible = true;
             this.listBox2.Size = new System.Drawing.Size(367, 124);
             this.listBox2.TabIndex = 1;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -1110,7 +1177,6 @@ namespace perSONA
             this.panel3.Size = new System.Drawing.Size(359, 726);
             this.panel3.TabIndex = 1;
             this.panel3.Visible = false;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // tableLayoutPanel14
             // 
@@ -1268,7 +1334,6 @@ namespace perSONA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "perSONA 1.5  BETA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
@@ -1287,8 +1352,8 @@ namespace perSONA
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1341,8 +1406,6 @@ namespace perSONA
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox applicatorBox;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button CreatePatient;
         private System.Windows.Forms.Button ShowPatientData;
@@ -1387,6 +1450,12 @@ namespace perSONA
         private TableLayoutPanel tableLayoutPanel16;
         private TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Label label4;
+        private GroupBox groupBox1;
+        private ListBox applicatorBox;
+        private TableLayoutPanel tableLayoutPanel17;
+        private Button CreateApplicator;
+        private Button ShowApplicatorData;
+        private Button DeleteApplicator;
     }
 }
 

@@ -25,7 +25,7 @@ namespace perSONA.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("data/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Selecione uma pasta e salve a alteração")]
         public string RESULTS_FOLDER {
             get {
                 return ((string)(this["RESULTS_FOLDER"]));
@@ -152,6 +152,18 @@ namespace perSONA.Properties {
             }
             set {
                 this["EARPHONE_VOLUME"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("data/Equipments.xlsx")]
+        public string EQUIPMENTS_TABLE_LOCATION {
+            get {
+                return ((string)(this["EQUIPMENTS_TABLE_LOCATION"]));
+            }
+            set {
+                this["EQUIPMENTS_TABLE_LOCATION"] = value;
             }
         }
     }

@@ -57,6 +57,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.volumeLabel = new System.Windows.Forms.Label();
             this.volumeBar = new System.Windows.Forms.TrackBar();
+            this.VolumeLabelAdjusting = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SLM_Microphone)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -92,9 +93,9 @@
             // 
             // Fail
             // 
-            this.Fail.Location = new System.Drawing.Point(625, 319);
+            this.Fail.Location = new System.Drawing.Point(425, 282);
             this.Fail.Name = "Fail";
-            this.Fail.Size = new System.Drawing.Size(188, 35);
+            this.Fail.Size = new System.Drawing.Size(188, 53);
             this.Fail.TabIndex = 109;
             this.Fail.Text = "Falha";
             this.Fail.UseVisualStyleBackColor = true;
@@ -102,19 +103,19 @@
             // 
             // Sound
             // 
-            this.Sound.Location = new System.Drawing.Point(425, 163);
+            this.Sound.Location = new System.Drawing.Point(425, 109);
             this.Sound.Margin = new System.Windows.Forms.Padding(4);
             this.Sound.Name = "Sound";
-            this.Sound.Size = new System.Drawing.Size(388, 70);
+            this.Sound.Size = new System.Drawing.Size(388, 53);
             this.Sound.TabIndex = 108;
-            this.Sound.Text = "Gerar Sinal Sonoro";
+            this.Sound.Text = "Gerar sinal sonoro";
             this.Sound.UseVisualStyleBackColor = true;
             this.Sound.Click += new System.EventHandler(this.Sound_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(426, 118);
+            this.label3.Location = new System.Drawing.Point(426, 240);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 20);
@@ -124,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(426, 73);
+            this.label2.Location = new System.Drawing.Point(426, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 20);
@@ -135,7 +136,7 @@
             // 
             this.calibrated.AutoSize = true;
             this.calibrated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.calibrated.Location = new System.Drawing.Point(654, 117);
+            this.calibrated.Location = new System.Drawing.Point(672, 240);
             this.calibrated.Margin = new System.Windows.Forms.Padding(4);
             this.calibrated.Name = "calibrated";
             this.calibrated.Size = new System.Drawing.Size(111, 24);
@@ -148,7 +149,7 @@
             // 
             this.speakerLabel.AutoSize = true;
             this.speakerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.speakerLabel.Location = new System.Drawing.Point(650, 73);
+            this.speakerLabel.Location = new System.Drawing.Point(668, 72);
             this.speakerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.speakerLabel.Name = "speakerLabel";
             this.speakerLabel.Size = new System.Drawing.Size(110, 20);
@@ -157,10 +158,10 @@
             // 
             // Help
             // 
-            this.Help.Location = new System.Drawing.Point(425, 319);
+            this.Help.Location = new System.Drawing.Point(425, 343);
             this.Help.Margin = new System.Windows.Forms.Padding(4);
             this.Help.Name = "Help";
-            this.Help.Size = new System.Drawing.Size(188, 35);
+            this.Help.Size = new System.Drawing.Size(388, 53);
             this.Help.TabIndex = 102;
             this.Help.Text = "Ajuda";
             this.Help.UseVisualStyleBackColor = true;
@@ -172,20 +173,19 @@
             this.label1.Location = new System.Drawing.Point(426, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(382, 40);
+            this.label1.Size = new System.Drawing.Size(369, 40);
             this.label1.TabIndex = 103;
-            this.label1.Text = "       Altere o volume dos repdutores sonoros        \r\nseparadamente através da p" +
-    "laca de som";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Text = "Para calibrar altere o volume das caixas de som\r\nseparadamente";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Next
             // 
-            this.Next.Location = new System.Drawing.Point(425, 241);
+            this.Next.Location = new System.Drawing.Point(625, 282);
             this.Next.Margin = new System.Windows.Forms.Padding(4);
             this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(388, 70);
+            this.Next.Size = new System.Drawing.Size(188, 53);
             this.Next.TabIndex = 101;
-            this.Next.Text = "Próxima Caixa";
+            this.Next.Text = "Próxima caixa";
             this.Next.UseVisualStyleBackColor = true;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
@@ -392,7 +392,7 @@
             // volumeLabel
             // 
             this.volumeLabel.AutoSize = true;
-            this.volumeLabel.Location = new System.Drawing.Point(668, 366);
+            this.volumeLabel.Location = new System.Drawing.Point(668, 188);
             this.volumeLabel.Name = "volumeLabel";
             this.volumeLabel.Size = new System.Drawing.Size(102, 20);
             this.volumeLabel.TabIndex = 111;
@@ -400,7 +400,7 @@
             // 
             // volumeBar
             // 
-            this.volumeBar.Location = new System.Drawing.Point(425, 361);
+            this.volumeBar.Location = new System.Drawing.Point(425, 180);
             this.volumeBar.Maximum = 100;
             this.volumeBar.Minimum = 1;
             this.volumeBar.Name = "volumeBar";
@@ -411,17 +411,27 @@
             this.volumeBar.Value = 1;
             this.volumeBar.Scroll += new System.EventHandler(this.volumeBar_Scroll);
             // 
+            // VolumeLabelAdjusting
+            // 
+            this.VolumeLabelAdjusting.AutoSize = true;
+            this.VolumeLabelAdjusting.Location = new System.Drawing.Point(458, 188);
+            this.VolumeLabelAdjusting.Name = "VolumeLabelAdjusting";
+            this.VolumeLabelAdjusting.Size = new System.Drawing.Size(325, 20);
+            this.VolumeLabelAdjusting.TabIndex = 112;
+            this.VolumeLabelAdjusting.Text = "Altere o volume utilizando a placa de som ";
+            // 
             // speakerCalibration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 408);
+            this.Controls.Add(this.VolumeLabelAdjusting);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.volumeLabel);
             this.Controls.Add(this.volumeBar);
             this.Controls.Add(this.SLM_Microphone);
             this.Controls.Add(this.Fail);
             this.Controls.Add(this.Sound);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.calibrated);
             this.Controls.Add(this.speakerLabel);
@@ -443,8 +453,7 @@
             this.MinimumSize = new System.Drawing.Size(845, 455);
             this.Name = "speakerCalibration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Calibração de Reprodutores Sonoros";
-            this.TopMost = true;
+            this.Text = "Calibração das Caixas de Som";
             ((System.ComponentModel.ISupportInitialize)(this.SLM_Microphone)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -498,5 +507,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label volumeLabel;
         private System.Windows.Forms.TrackBar volumeBar;
+        private System.Windows.Forms.Label VolumeLabelAdjusting;
     }
 }

@@ -24,6 +24,8 @@ namespace perSONA
         {
             InitializeComponent();
             this.Text = "Módulo de Gerenciamento de Paciente";
+            tabControl1.TabPages.Remove(tabPage2);
+            tabControl1.TabPages.Remove(tabPage3);
             this.vAInterface = ivAInterface;
             masking.SelectedIndex = 0;
             audiometrySide.SelectedIndex = 0;
@@ -45,12 +47,12 @@ namespace perSONA
             motivationBox.SelectedIndex = 0;
             work.SelectedIndex = 0;
             bindPatient(person);
+            this.Text = "Paciente: " + person.Name;
             this.person = person;
         }
 
         public void bindPatient(Patient person)
         {
-
             nameBox.Text = person.Name;
             addressBox.Text = person.Address;
             bornDate.Value = person.BornDate;
@@ -91,14 +93,13 @@ namespace perSONA
             catch (Exception)
             {
                 MessageBox.Show("Problemas com dados do paciente");
-            }
-            
-
+            }            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             label3.Text = "Alterações salvas!";
+
             Patient person = new Patient()
             {
                 Name = nameBox.Text,
@@ -158,10 +159,6 @@ namespace perSONA
             vAInterface.updatePatientList();
         }
 
-        private void motivationBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void testsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -191,9 +188,7 @@ namespace perSONA
         }
 
         private void updateIterationGraph(ZedGraphControl graph)
-        {
-
-            
+        {            
             GraphPane myPane = graph.GraphPane;
             myPane.CurveList.Clear();
 
@@ -268,24 +263,15 @@ namespace perSONA
             graph.Refresh();
         }
 
+
+        //??
         private void button4_Click(object sender, EventArgs e)
         {
             updateIterationGraph(testsGraph);
         }
 
-        private void groupBox17_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox39_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             TonalAudiometryTest Audiometry = readAudiometry(audiometryLists.SelectedItem.ToString());
             plotAudiometry(audiometryGraph, Audiometry);
         }
@@ -306,7 +292,6 @@ namespace perSONA
                 //double[] signalToNoiseArray = test.IterativeSNR;
 
             audiometryString = string.Concat(audiometryString, "\r\n", "freqs: ");
-
 
 
             PointPairList audiometry = new PointPairList
@@ -359,7 +344,6 @@ namespace perSONA
                 Audiometry.AudiometryType,
                 string.Join(", ", Audiometry.ThisAudiometry.ToArray()),
                 string.Join(", ", Audiometry.Freqs.ToArray()));
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -410,15 +394,12 @@ namespace perSONA
             {
                 Audiometry.AudiometryType = "Condução Óssea (Em desenvolvimento)";
             }
-
         
             plotAudiometry(audiometryGraph, Audiometry);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             double[] thisAudiometry = { (double) freq1.Value,
                                         (double) freq2.Value,
                                         (double) freq3.Value,
@@ -476,108 +457,7 @@ namespace perSONA
             person = JsonConvert.DeserializeObject<Patient>(json);
             
 
-            bindPatient(person);
-            
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void leftHearingLoss_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void leftLossDegree_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox16_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rightLossDegree_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rightHearingEtiology_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void leftHearingEtiology_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rightHearingLoss_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void observationBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rightDevice_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void work_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void patientManagement_Load(object sender, EventArgs e)
-        {
-            TopMost = true;
-        }
-
-        private void nameBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void scholarBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void leftPostLingual_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rightPostLingual_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sexTab_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            bindPatient(person);            
         }
     }
 }

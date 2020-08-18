@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(calibrationSettingsB1));
             this.Next = new System.Windows.Forms.Button();
             this.ModeloOrelha = new System.Windows.Forms.GroupBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.artificialEarModelBox = new System.Windows.Forms.ComboBox();
             this.MarcaOrelha = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.artificialEarBrandBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ModeloOrelha.SuspendLayout();
             this.MarcaOrelha.SuspendLayout();
@@ -52,7 +52,7 @@
             // 
             // ModeloOrelha
             // 
-            this.ModeloOrelha.Controls.Add(this.comboBox8);
+            this.ModeloOrelha.Controls.Add(this.artificialEarModelBox);
             this.ModeloOrelha.Location = new System.Drawing.Point(342, 79);
             this.ModeloOrelha.Margin = new System.Windows.Forms.Padding(4);
             this.ModeloOrelha.Name = "ModeloOrelha";
@@ -60,20 +60,20 @@
             this.ModeloOrelha.Size = new System.Drawing.Size(300, 56);
             this.ModeloOrelha.TabIndex = 43;
             this.ModeloOrelha.TabStop = false;
-            this.ModeloOrelha.Text = "Modelo da Orelha Artificial";
+            this.ModeloOrelha.Text = "Modelo da orelha artificial";
             // 
-            // comboBox8
+            // artificialEarModelBox
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(9, 20);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(284, 28);
-            this.comboBox8.TabIndex = 11;
+            this.artificialEarModelBox.FormattingEnabled = true;
+            this.artificialEarModelBox.Location = new System.Drawing.Point(9, 20);
+            this.artificialEarModelBox.Margin = new System.Windows.Forms.Padding(4);
+            this.artificialEarModelBox.Name = "artificialEarModelBox";
+            this.artificialEarModelBox.Size = new System.Drawing.Size(284, 28);
+            this.artificialEarModelBox.TabIndex = 11;
             // 
             // MarcaOrelha
             // 
-            this.MarcaOrelha.Controls.Add(this.comboBox2);
+            this.MarcaOrelha.Controls.Add(this.artificialEarBrandBox);
             this.MarcaOrelha.Location = new System.Drawing.Point(10, 79);
             this.MarcaOrelha.Margin = new System.Windows.Forms.Padding(4);
             this.MarcaOrelha.Name = "MarcaOrelha";
@@ -81,16 +81,17 @@
             this.MarcaOrelha.Size = new System.Drawing.Size(300, 56);
             this.MarcaOrelha.TabIndex = 42;
             this.MarcaOrelha.TabStop = false;
-            this.MarcaOrelha.Text = "Marca da Orelha Artificial";
+            this.MarcaOrelha.Text = "Marca da orelha artificial";
             // 
-            // comboBox2
+            // artificialEarBrandBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(9, 20);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(284, 28);
-            this.comboBox2.TabIndex = 11;
+            this.artificialEarBrandBox.FormattingEnabled = true;
+            this.artificialEarBrandBox.Location = new System.Drawing.Point(9, 20);
+            this.artificialEarBrandBox.Margin = new System.Windows.Forms.Padding(4);
+            this.artificialEarBrandBox.Name = "artificialEarBrandBox";
+            this.artificialEarBrandBox.Size = new System.Drawing.Size(284, 28);
+            this.artificialEarBrandBox.TabIndex = 11;
+            this.artificialEarBrandBox.SelectedIndexChanged += new System.EventHandler(this.artificialEarBrandBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -120,7 +121,6 @@
             this.Name = "calibrationSettingsB1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calibração com Orelha Artificial";
-            this.TopMost = true;
             this.ModeloOrelha.ResumeLayout(false);
             this.MarcaOrelha.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -132,9 +132,9 @@
 
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.GroupBox ModeloOrelha;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox artificialEarModelBox;
         private System.Windows.Forms.GroupBox MarcaOrelha;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox artificialEarBrandBox;
         private System.Windows.Forms.Label label1;
     }
 }
