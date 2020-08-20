@@ -13,136 +13,66 @@ namespace perSONA
 {
     public class TonalAudiometryTest
     {
-        public double[] Freqs { get; set; } = {};
-        public double[] dB { get; set; } = { };
+        public DateTime audiometryDate { get; set; }
+        public List<double> Freqs { get; set; }
+        public List<double> dB { get; set; }
         public string AudiometryType { get; set; }
         public string Via { get; set; }
-        public string Prosthesis { get; set; }
         public string Side { get; set; }
-        public bool[] Masker { get; set; } = { };
-        public bool[] NoReply { get; set; } = { };
+        public List<double> Masker { get; set; }
+        public List<bool> NoReply { get; set; }
 
-
-        public ZedGraph.SymbolType getSymbol()
+        public static void bindGraph(ZedGraphControl graph)
         {
-            return ZedGraph.SymbolType.Star;
+            //To draw the graph we use several curves (1 curve / point for each symbol and 1 without symbols, which
+            //runs through the entire graph). The frequencies of the x-axis are strings, since zedgraph formatting
+            //does not have a graph of that style. We are unable to plot a curve at a specific point (case of symbol curves) 
+            //if the axis is a string, because of that, we use a new invisible axis (x2) to plot the frequencies.            
+            GraphPane myPane = graph.GraphPane;
+            myPane.Legend.IsVisible = false;
+            myPane.Legend.FontSpec.Size = 12;
+            myPane.Legend.Border.IsVisible = false;
+
+
+            myPane.Title.Text = "Audiograma";
+            myPane.Title.FontSpec.Size = 15;
+            myPane.XAxis.Title.Text = "Frequência (Hz)";
+            myPane.XAxis.Title.FontSpec.Size = 15;
+            myPane.XAxis.Scale.FontSpec.Size = 10;
+
+            myPane.YAxis.Title.Text = "Nível de audição (dB NA)";
+            myPane.YAxis.Title.FontSpec.Size = 15;
+            myPane.YAxis.Scale.FontSpec.Size = 10;
+
+            myPane.XAxis.Scale.MaxAuto = false;
+            myPane.XAxis.Scale.MinAuto = false;
+            myPane.YAxis.MajorGrid.IsVisible = true;
+            myPane.XAxis.MajorGrid.IsVisible = true;
+
+            myPane.YAxis.Scale.MajorStep = 10;
+            myPane.YAxis.Scale.Min = -18;
+            myPane.YAxis.Scale.Max = 126;
+            //reverse YAxis
+            myPane.YAxis.Scale.IsReverse = true;
+
+            myPane.XAxis.Type = AxisType.Text;
+            myPane.XAxis.Scale.Min = 0;
+            myPane.XAxis.Scale.Max = 8;
+            string[] XAxisText = { "125", "250", "500", "1000", "2000", "4000", "8000" };
+            myPane.XAxis.Scale.TextLabels = XAxisText;
+            myPane.XAxis.IsVisible = true;
+
+            //The invisible X2Axis to plot frequencies
+            myPane.X2Axis.Scale.MaxAuto = false;
+            myPane.X2Axis.Scale.MinAuto = false;
+            myPane.X2Axis.Type = AxisType.Linear;
+            myPane.X2Axis.Scale.Min = 0;
+            myPane.X2Axis.Scale.Max = 8;
+            myPane.X2Axis.IsVisible = false;
+
+            graph.AxisChange();
+            graph.Refresh();
         }
-
-
-        public static void drawSymbol(ZedGraphControl zgc, double Freq, double dB, bool Masker, bool NoReply, string Side, string Via)
-        {                 
-            if (Side == "Right")
-            {
-                if (Via == "Air")
-                {
-                    if (NoReply == false)
-                    {
-                        if (Masker == false) ViaAirREUnmasked(zgc, Freq, dB); //Function Via Air Right Ear Unmarked
-                        else ViaAirREMasked(zgc, Freq, dB);
-                    }
-                    else
-                    {
-                        if (Masker == false) ViaAirREUnmaskedNoReply(zgc, Freq, dB);
-                        else ViaAirREMaskedNoReply(zgc, Freq, dB);
-                    }
-                }
-                else if (Via == "Bone (mastoid)")
-                {
-                    if (NoReply == false)
-                    {
-                        if (Masker == false) ViaBoneMREUnmasked(zgc, Freq, dB);
-                        else ViaBoneMREMasked(zgc, Freq, dB);
-                    }
-                    else
-                    {
-                        if (Masker == false) ViaBoneMREUnmaskedNoReply(zgc, Freq, dB);
-                        else ViaBoneMREMaskedNoReply(zgc, Freq, dB);
-                    }
-                }
-                else if (Via == "Bone (forehead)")
-                {
-                    if (NoReply == false)
-                    {
-                        if (Masker == false) ViaBoneFREUnmasked(zgc, Freq, dB);
-                        else ViaBoneFREMasked(zgc, Freq, dB);
-                    }
-                    else
-                    {
-                        if (Masker == false) ViaBoneFREUnmaskedNoReply(zgc, Freq, dB);
-                        else ViaBoneFREMaskedNoReply(zgc, Freq, dB);
-                    }
-                }
-                else
-                {
-                    if (NoReply == false)
-                    {
-                        if (Masker == false) FFRE(zgc, Freq, dB);
-                        else FFREUnspecifiedResponsePresence(zgc, Freq, dB);
-                    }
-                    else
-                    {
-                        if (Masker == false) FFRENoReply(zgc, Freq, dB);
-                        else FFREUnspecifiedResponseAusence(zgc, Freq, dB);
-                    }
-                }
-            }
-            else
-            {
-                if (Via == "Air")
-                {
-                    if (NoReply == false)
-                    {
-                        if (Masker == false) ViaAirLEUnmasked(zgc, Freq, dB);
-                        else ViaAirLEMasked(zgc, Freq, dB);
-                    }
-                    else
-                    {
-                        if (Masker == false) ViaAirLEUnmaskedNoReply(zgc, Freq, dB);
-                        else ViaAirLEMaskedNoReply(zgc, Freq, dB);
-                    }
-                }
-                else if (Via == "Bone (mastoid)")
-                {
-                    if (NoReply == false)
-                    {
-                        if (Masker == false) ViaBoneMLEUnmasked(zgc, Freq, dB);
-                        else ViaBoneMLEMasked(zgc, Freq, dB);
-                    }
-                    else
-                    {
-                        if (Masker == false) ViaBoneMLEUnmaskedNoReply(zgc, Freq, dB);
-                        else ViaBoneMLEMaskedNoReply(zgc, Freq, dB);
-                    }
-                }
-                else if (Via == "Bone (forehead)")
-                {
-                    if (NoReply == false)
-                    {
-                        if (Masker == false) ViaBoneFLEUnmasked(zgc, Freq, dB);
-                        else ViaBoneFLEMasked(zgc, Freq, dB);
-                    }
-                    else
-                    {
-                        if (Masker == false) ViaBoneFLEUnmaskedNoReply(zgc, Freq, dB);
-                        else ViaBoneFLEMaskedNoReply(zgc, Freq, dB);
-                    }
-                }
-                else
-                {
-                    if (NoReply == false)
-                    {
-                        if (Masker == false) FFLE(zgc, Freq, dB);
-                        else FFLEUnspecifiedResponsePresence(zgc, Freq, dB);
-                    }
-                    else
-                    {
-                        if (Masker == false) FFLENoReply(zgc, Freq, dB);
-                        else FFLEUnspecifiedResponseAusence(zgc, Freq, dB);
-                    }
-                }
-            }
-        }
-
         public Color getColor()
         {
             return Side == "Right" ? Color.Red : Color.Blue;
@@ -154,8 +84,122 @@ namespace perSONA
                 line.Style = DashStyle.Custom;
                 line.DashOn = 5;
                 line.DashOff = 10;
-            }            
+            }
             line.Width = 2;
+        }
+
+        public static void drawSymbol(ZedGraphControl zgc, double Freq, double dB, double Masker, bool NoReply, string Side, string Via)
+        {
+            if (Side == "Right")
+            {
+                if (Via == "Air")
+                {
+                    if (NoReply == false)
+                    {
+                        if (Masker == 0) ViaAirREUnmasked(zgc, Freq, dB); //Function Via Air Right Ear Unmarked
+                        else ViaAirREMasked(zgc, Freq, dB);
+                    }
+                    else
+                    {
+                        if (Masker == 0) ViaAirREUnmaskedNoReply(zgc, Freq, dB);
+                        else ViaAirREMaskedNoReply(zgc, Freq, dB);
+                    }
+                }
+                else if (Via == "Bone (mastoid)")
+                {
+                    if (NoReply == false)
+                    {
+                        if (Masker == 0) ViaBoneMREUnmasked(zgc, Freq, dB);
+                        else ViaBoneMREMasked(zgc, Freq, dB);
+                    }
+                    else
+                    {
+                        if (Masker == 0) ViaBoneMREUnmaskedNoReply(zgc, Freq, dB);
+                        else ViaBoneMREMaskedNoReply(zgc, Freq, dB);
+                    }
+                }
+                else if (Via == "Bone (forehead)")
+                {
+                    if (NoReply == false)
+                    {
+                        if (Masker == 0) ViaBoneFREUnmasked(zgc, Freq, dB);
+                        else ViaBoneFREMasked(zgc, Freq, dB);
+                    }
+                    else
+                    {
+                        if (Masker == 0) ViaBoneFREUnmaskedNoReply(zgc, Freq, dB);
+                        else ViaBoneFREMaskedNoReply(zgc, Freq, dB);
+                    }
+                }
+                else
+                {
+                    if (NoReply == false)
+                    {
+                        if (Masker == 0) FFRE(zgc, Freq, dB);
+                        else FFREUnspecifiedResponsePresence(zgc, Freq, dB);
+                    }
+                    else
+                    {
+                        if (Masker == 0) FFRENoReply(zgc, Freq, dB);
+                        else FFREUnspecifiedResponseAusence(zgc, Freq, dB);
+                    }
+                }
+            }
+            else
+            {
+                if (Via == "Air")
+                {
+                    if (NoReply == false)
+                    {
+                        if (Masker == 0) ViaAirLEUnmasked(zgc, Freq, dB);
+                        else ViaAirLEMasked(zgc, Freq, dB);
+                    }
+                    else
+                    {
+                        if (Masker == 0) ViaAirLEUnmaskedNoReply(zgc, Freq, dB);
+                        else ViaAirLEMaskedNoReply(zgc, Freq, dB);
+                    }
+                }
+                else if (Via == "Bone (mastoid)")
+                {
+                    if (NoReply == false)
+                    {
+                        if (Masker == 0) ViaBoneMLEUnmasked(zgc, Freq, dB);
+                        else ViaBoneMLEMasked(zgc, Freq, dB);
+                    }
+                    else
+                    {
+                        if (Masker == 0) ViaBoneMLEUnmaskedNoReply(zgc, Freq, dB);
+                        else ViaBoneMLEMaskedNoReply(zgc, Freq, dB);
+                    }
+                }
+                else if (Via == "Bone (forehead)")
+                {
+                    if (NoReply == false)
+                    {
+                        if (Masker == 0) ViaBoneFLEUnmasked(zgc, Freq, dB);
+                        else ViaBoneFLEMasked(zgc, Freq, dB);
+                    }
+                    else
+                    {
+                        if (Masker == 0) ViaBoneFLEUnmaskedNoReply(zgc, Freq, dB);
+                        else ViaBoneFLEMaskedNoReply(zgc, Freq, dB);
+                    }
+                }
+                else
+                {
+                    if (NoReply == false)
+                    {
+                        if (Masker == 0) FFLE(zgc, Freq, dB);
+                        else FFLEUnspecifiedResponsePresence(zgc, Freq, dB);
+                    }
+                    else
+                    {
+                        if (Masker == 0) FFLENoReply(zgc, Freq, dB);
+                        else FFLEUnspecifiedResponseAusence(zgc, Freq, dB);
+                    }
+                }
+            }
         }
 
         //RIGHT EAR

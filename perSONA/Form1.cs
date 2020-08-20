@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using DocumentFormat.OpenXml.Presentation;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -770,9 +771,18 @@ namespace perSONA
         public void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName)
         {
             string AudiometryJson = Newtonsoft.Json.JsonConvert.SerializeObject(Audiometry);
+            string timestamp;
 
-            string timestamp = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
 
+            if (Audiometry.Side == "Left")
+            {
+                timestamp = Audiometry.audiometryDate.ToString("dd-MM-yyyy") + " orelha esquerda (" + patientName + ")";
+            }
+            else
+            {
+                timestamp = Audiometry.audiometryDate.ToString("dd-MM-yyyy") + " orelha direita (" + patientName + ")";
+            }
+            
             concatText(AudiometryJson);
 
             try

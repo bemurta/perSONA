@@ -106,6 +106,68 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.noReply1000 = new System.Windows.Forms.CheckBox();
+            this.noReply2000 = new System.Windows.Forms.CheckBox();
+            this.noReply4000 = new System.Windows.Forms.CheckBox();
+            this.noReply8000 = new System.Windows.Forms.CheckBox();
+            this.dB500 = new System.Windows.Forms.NumericUpDown();
+            this.dB4000 = new System.Windows.Forms.NumericUpDown();
+            this.dB8000 = new System.Windows.Forms.NumericUpDown();
+            this.dB2000 = new System.Windows.Forms.NumericUpDown();
+            this.label8000 = new System.Windows.Forms.Label();
+            this.label4000 = new System.Windows.Forms.Label();
+            this.dB1000 = new System.Windows.Forms.NumericUpDown();
+            this.label2000 = new System.Windows.Forms.Label();
+            this.dB250 = new System.Windows.Forms.NumericUpDown();
+            this.label1000 = new System.Windows.Forms.Label();
+            this.noReply500 = new System.Windows.Forms.CheckBox();
+            this.noReply250 = new System.Windows.Forms.CheckBox();
+            this.noReply125 = new System.Windows.Forms.CheckBox();
+            this.labelMask = new System.Windows.Forms.Label();
+            this.dB125 = new System.Windows.Forms.NumericUpDown();
+            this.labeldB = new System.Windows.Forms.Label();
+            this.labelFrequency = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label250 = new System.Windows.Forms.Label();
+            this.label500 = new System.Windows.Forms.Label();
+            this.labelNoReply = new System.Windows.Forms.Label();
+            this.label750 = new System.Windows.Forms.Label();
+            this.label1500 = new System.Windows.Forms.Label();
+            this.label3000 = new System.Windows.Forms.Label();
+            this.label6000 = new System.Windows.Forms.Label();
+            this.dB750 = new System.Windows.Forms.NumericUpDown();
+            this.dB1500 = new System.Windows.Forms.NumericUpDown();
+            this.dB3000 = new System.Windows.Forms.NumericUpDown();
+            this.dB6000 = new System.Windows.Forms.NumericUpDown();
+            this.masking8000 = new System.Windows.Forms.NumericUpDown();
+            this.masking6000 = new System.Windows.Forms.NumericUpDown();
+            this.masking4000 = new System.Windows.Forms.NumericUpDown();
+            this.masking2000 = new System.Windows.Forms.NumericUpDown();
+            this.useFrequency500 = new System.Windows.Forms.CheckBox();
+            this.useFrequency250 = new System.Windows.Forms.CheckBox();
+            this.masking250 = new System.Windows.Forms.NumericUpDown();
+            this.useFrequency125 = new System.Windows.Forms.CheckBox();
+            this.masking750 = new System.Windows.Forms.NumericUpDown();
+            this.masking500 = new System.Windows.Forms.NumericUpDown();
+            this.masking1000 = new System.Windows.Forms.NumericUpDown();
+            this.masking1500 = new System.Windows.Forms.NumericUpDown();
+            this.masking125 = new System.Windows.Forms.NumericUpDown();
+            this.masking3000 = new System.Windows.Forms.NumericUpDown();
+            this.useFrequency750 = new System.Windows.Forms.CheckBox();
+            this.useFrequency1000 = new System.Windows.Forms.CheckBox();
+            this.useFrequency1500 = new System.Windows.Forms.CheckBox();
+            this.useFrequency2000 = new System.Windows.Forms.CheckBox();
+            this.useFrequency3000 = new System.Windows.Forms.CheckBox();
+            this.useFrequency4000 = new System.Windows.Forms.CheckBox();
+            this.useFrequency6000 = new System.Windows.Forms.CheckBox();
+            this.useFrequency8000 = new System.Windows.Forms.CheckBox();
+            this.noReply750 = new System.Windows.Forms.CheckBox();
+            this.noReply1500 = new System.Windows.Forms.CheckBox();
+            this.noReply3000 = new System.Windows.Forms.CheckBox();
+            this.noReply6000 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -124,49 +186,7 @@
             this.previewAudiometryButton = new System.Windows.Forms.Button();
             this.saveAudiometryButton = new System.Windows.Forms.Button();
             this.deleteAudiometryButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.audiometryGraph = new ZedGraph.ZedGraphControl();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
-            this.noReply7 = new System.Windows.Forms.CheckBox();
-            this.freq8 = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.masking7 = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
-            this.noReply6 = new System.Windows.Forms.CheckBox();
-            this.freq7 = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.masking6 = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
-            this.noReply5 = new System.Windows.Forms.CheckBox();
-            this.freq6 = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.masking5 = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.noReply4 = new System.Windows.Forms.CheckBox();
-            this.freq4 = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.masking4 = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.noReply3 = new System.Windows.Forms.CheckBox();
-            this.freq3 = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.masking3 = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
-            this.noReply2 = new System.Windows.Forms.CheckBox();
-            this.freq2 = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.masking2 = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.noReply1 = new System.Windows.Forms.CheckBox();
-            this.freq1 = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.masking1 = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.testsGraph = new ZedGraph.ZedGraphControl();
@@ -216,6 +236,30 @@
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dB500)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB4000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB8000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB2000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB1000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB250)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB125)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB750)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB1500)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB3000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB6000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking8000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking6000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking4000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking2000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking250)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking750)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking500)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking1000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking1500)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking125)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking3000)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -226,23 +270,6 @@
             this.groupBox24.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.groupBox25.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            this.tableLayoutPanel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq8)).BeginInit();
-            this.tableLayoutPanel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq7)).BeginInit();
-            this.tableLayoutPanel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq6)).BeginInit();
-            this.tableLayoutPanel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq4)).BeginInit();
-            this.tableLayoutPanel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq3)).BeginInit();
-            this.tableLayoutPanel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq2)).BeginInit();
-            this.tableLayoutPanel19.SuspendLayout();
-            this.tableLayoutPanel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -1502,7 +1529,7 @@
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
-            this.tabPage2.Controls.Add(this.tableLayoutPanel8);
+            this.tabPage2.Controls.Add(this.tableLayoutPanel17);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage2.Name = "tabPage2";
@@ -1512,22 +1539,1173 @@
             this.tabPage2.Text = "Histórico de audiometrias";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel17.ColumnCount = 1;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel4, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 2;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(1332, 728);
+            this.tableLayoutPanel17.TabIndex = 4;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 12;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.940399F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.278147F));
+            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.noReply1000, 5, 3);
+            this.tableLayoutPanel4.Controls.Add(this.noReply2000, 7, 3);
+            this.tableLayoutPanel4.Controls.Add(this.noReply4000, 9, 3);
+            this.tableLayoutPanel4.Controls.Add(this.noReply8000, 11, 3);
+            this.tableLayoutPanel4.Controls.Add(this.dB500, 3, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dB4000, 9, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dB8000, 11, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dB2000, 7, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label8000, 11, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label4000, 9, 0);
+            this.tableLayoutPanel4.Controls.Add(this.dB1000, 5, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label2000, 7, 0);
+            this.tableLayoutPanel4.Controls.Add(this.dB250, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label1000, 5, 0);
+            this.tableLayoutPanel4.Controls.Add(this.noReply500, 3, 3);
+            this.tableLayoutPanel4.Controls.Add(this.noReply250, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.noReply125, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.labelMask, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.dB125, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.labeldB, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.labelFrequency, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label125, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label250, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label500, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.labelNoReply, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.label750, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label1500, 6, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label3000, 8, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label6000, 10, 0);
+            this.tableLayoutPanel4.Controls.Add(this.dB750, 4, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dB1500, 6, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dB3000, 8, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dB6000, 10, 1);
+            this.tableLayoutPanel4.Controls.Add(this.masking8000, 11, 2);
+            this.tableLayoutPanel4.Controls.Add(this.masking6000, 10, 2);
+            this.tableLayoutPanel4.Controls.Add(this.masking4000, 9, 2);
+            this.tableLayoutPanel4.Controls.Add(this.masking2000, 7, 2);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency500, 3, 4);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency250, 2, 4);
+            this.tableLayoutPanel4.Controls.Add(this.masking250, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency125, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.masking750, 4, 2);
+            this.tableLayoutPanel4.Controls.Add(this.masking500, 3, 2);
+            this.tableLayoutPanel4.Controls.Add(this.masking1000, 5, 2);
+            this.tableLayoutPanel4.Controls.Add(this.masking1500, 6, 2);
+            this.tableLayoutPanel4.Controls.Add(this.masking125, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.masking3000, 8, 2);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency750, 4, 4);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency1000, 5, 4);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency1500, 6, 4);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency2000, 7, 4);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency3000, 8, 4);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency4000, 9, 4);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency6000, 10, 4);
+            this.tableLayoutPanel4.Controls.Add(this.useFrequency8000, 11, 4);
+            this.tableLayoutPanel4.Controls.Add(this.noReply750, 4, 3);
+            this.tableLayoutPanel4.Controls.Add(this.noReply1500, 6, 3);
+            this.tableLayoutPanel4.Controls.Add(this.noReply3000, 8, 3);
+            this.tableLayoutPanel4.Controls.Add(this.noReply6000, 10, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 541);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 5;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1326, 184);
+            this.tableLayoutPanel4.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 40);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Utilizar Frequencia?";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // noReply1000
+            // 
+            this.noReply1000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply1000.AutoSize = true;
+            this.noReply1000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply1000.Location = new System.Drawing.Point(557, 111);
+            this.noReply1000.Name = "noReply1000";
+            this.noReply1000.Size = new System.Drawing.Size(103, 30);
+            this.noReply1000.TabIndex = 3;
+            this.noReply1000.Text = "Sim";
+            this.noReply1000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply1000.UseVisualStyleBackColor = true;
+            // 
+            // noReply2000
+            // 
+            this.noReply2000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply2000.AutoSize = true;
+            this.noReply2000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply2000.Location = new System.Drawing.Point(775, 111);
+            this.noReply2000.Name = "noReply2000";
+            this.noReply2000.Size = new System.Drawing.Size(103, 30);
+            this.noReply2000.TabIndex = 3;
+            this.noReply2000.Text = "Sim";
+            this.noReply2000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply2000.UseVisualStyleBackColor = true;
+            // 
+            // noReply4000
+            // 
+            this.noReply4000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply4000.AutoSize = true;
+            this.noReply4000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply4000.Location = new System.Drawing.Point(993, 111);
+            this.noReply4000.Name = "noReply4000";
+            this.noReply4000.Size = new System.Drawing.Size(103, 30);
+            this.noReply4000.TabIndex = 3;
+            this.noReply4000.Text = "Sim";
+            this.noReply4000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply4000.UseVisualStyleBackColor = true;
+            // 
+            // noReply8000
+            // 
+            this.noReply8000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply8000.AutoSize = true;
+            this.noReply8000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply8000.Location = new System.Drawing.Point(1211, 111);
+            this.noReply8000.Name = "noReply8000";
+            this.noReply8000.Size = new System.Drawing.Size(112, 30);
+            this.noReply8000.TabIndex = 3;
+            this.noReply8000.Text = "Sim";
+            this.noReply8000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply8000.UseVisualStyleBackColor = true;
+            // 
+            // dB500
+            // 
+            this.dB500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB500.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB500.Location = new System.Drawing.Point(341, 41);
+            this.dB500.Margin = new System.Windows.Forms.Padding(5);
+            this.dB500.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB500.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB500.Name = "dB500";
+            this.dB500.Size = new System.Drawing.Size(99, 27);
+            this.dB500.TabIndex = 0;
+            this.dB500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dB4000
+            // 
+            this.dB4000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB4000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB4000.Location = new System.Drawing.Point(995, 41);
+            this.dB4000.Margin = new System.Windows.Forms.Padding(5);
+            this.dB4000.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB4000.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB4000.Name = "dB4000";
+            this.dB4000.Size = new System.Drawing.Size(99, 27);
+            this.dB4000.TabIndex = 0;
+            this.dB4000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dB8000
+            // 
+            this.dB8000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB8000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB8000.Location = new System.Drawing.Point(1213, 41);
+            this.dB8000.Margin = new System.Windows.Forms.Padding(5);
+            this.dB8000.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB8000.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB8000.Name = "dB8000";
+            this.dB8000.Size = new System.Drawing.Size(108, 27);
+            this.dB8000.TabIndex = 0;
+            this.dB8000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dB2000
+            // 
+            this.dB2000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB2000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB2000.Location = new System.Drawing.Point(777, 41);
+            this.dB2000.Margin = new System.Windows.Forms.Padding(5);
+            this.dB2000.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB2000.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB2000.Name = "dB2000";
+            this.dB2000.Size = new System.Drawing.Size(99, 27);
+            this.dB2000.TabIndex = 0;
+            this.dB2000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8000
+            // 
+            this.label8000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8000.AutoSize = true;
+            this.label8000.ForeColor = System.Drawing.Color.Red;
+            this.label8000.Location = new System.Drawing.Point(1211, 0);
+            this.label8000.Name = "label8000";
+            this.label8000.Size = new System.Drawing.Size(112, 36);
+            this.label8000.TabIndex = 0;
+            this.label8000.Text = "8000 Hz";
+            this.label8000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4000
+            // 
+            this.label4000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4000.AutoSize = true;
+            this.label4000.ForeColor = System.Drawing.Color.Red;
+            this.label4000.Location = new System.Drawing.Point(993, 0);
+            this.label4000.Name = "label4000";
+            this.label4000.Size = new System.Drawing.Size(103, 36);
+            this.label4000.TabIndex = 0;
+            this.label4000.Text = "4000 Hz";
+            this.label4000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dB1000
+            // 
+            this.dB1000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB1000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB1000.Location = new System.Drawing.Point(559, 41);
+            this.dB1000.Margin = new System.Windows.Forms.Padding(5);
+            this.dB1000.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB1000.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB1000.Name = "dB1000";
+            this.dB1000.Size = new System.Drawing.Size(99, 27);
+            this.dB1000.TabIndex = 0;
+            this.dB1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2000
+            // 
+            this.label2000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2000.AutoSize = true;
+            this.label2000.ForeColor = System.Drawing.Color.Red;
+            this.label2000.Location = new System.Drawing.Point(775, 0);
+            this.label2000.Name = "label2000";
+            this.label2000.Size = new System.Drawing.Size(103, 36);
+            this.label2000.TabIndex = 0;
+            this.label2000.Text = "2000 Hz";
+            this.label2000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dB250
+            // 
+            this.dB250.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB250.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB250.Location = new System.Drawing.Point(232, 41);
+            this.dB250.Margin = new System.Windows.Forms.Padding(5);
+            this.dB250.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB250.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB250.Name = "dB250";
+            this.dB250.Size = new System.Drawing.Size(99, 27);
+            this.dB250.TabIndex = 0;
+            this.dB250.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1000
+            // 
+            this.label1000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1000.AutoSize = true;
+            this.label1000.ForeColor = System.Drawing.Color.Red;
+            this.label1000.Location = new System.Drawing.Point(557, 0);
+            this.label1000.Name = "label1000";
+            this.label1000.Size = new System.Drawing.Size(103, 36);
+            this.label1000.TabIndex = 0;
+            this.label1000.Text = "1000 Hz";
+            this.label1000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // noReply500
+            // 
+            this.noReply500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply500.AutoSize = true;
+            this.noReply500.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply500.Location = new System.Drawing.Point(339, 111);
+            this.noReply500.Name = "noReply500";
+            this.noReply500.Size = new System.Drawing.Size(103, 30);
+            this.noReply500.TabIndex = 3;
+            this.noReply500.Text = "Sim";
+            this.noReply500.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply500.UseVisualStyleBackColor = true;
+            // 
+            // noReply250
+            // 
+            this.noReply250.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply250.AutoSize = true;
+            this.noReply250.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply250.Location = new System.Drawing.Point(230, 111);
+            this.noReply250.Name = "noReply250";
+            this.noReply250.Size = new System.Drawing.Size(103, 30);
+            this.noReply250.TabIndex = 3;
+            this.noReply250.Text = "Sim";
+            this.noReply250.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply250.UseVisualStyleBackColor = true;
+            // 
+            // noReply125
+            // 
+            this.noReply125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply125.AutoSize = true;
+            this.noReply125.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply125.Location = new System.Drawing.Point(121, 111);
+            this.noReply125.Name = "noReply125";
+            this.noReply125.Size = new System.Drawing.Size(103, 30);
+            this.noReply125.TabIndex = 2;
+            this.noReply125.Text = "Sim";
+            this.noReply125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply125.UseVisualStyleBackColor = true;
+            // 
+            // labelMask
+            // 
+            this.labelMask.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMask.AutoSize = true;
+            this.labelMask.Location = new System.Drawing.Point(3, 72);
+            this.labelMask.Name = "labelMask";
+            this.labelMask.Size = new System.Drawing.Size(112, 36);
+            this.labelMask.TabIndex = 2;
+            this.labelMask.Text = "Mascaramento:";
+            this.labelMask.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dB125
+            // 
+            this.dB125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB125.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB125.Location = new System.Drawing.Point(123, 41);
+            this.dB125.Margin = new System.Windows.Forms.Padding(5);
+            this.dB125.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB125.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB125.Name = "dB125";
+            this.dB125.Size = new System.Drawing.Size(99, 27);
+            this.dB125.TabIndex = 0;
+            this.dB125.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labeldB
+            // 
+            this.labeldB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labeldB.AutoSize = true;
+            this.labeldB.Location = new System.Drawing.Point(3, 36);
+            this.labeldB.Name = "labeldB";
+            this.labeldB.Size = new System.Drawing.Size(112, 36);
+            this.labeldB.TabIndex = 1;
+            this.labeldB.Text = "dB (NA):";
+            this.labeldB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFrequency
+            // 
+            this.labelFrequency.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFrequency.AutoSize = true;
+            this.labelFrequency.Location = new System.Drawing.Point(3, 0);
+            this.labelFrequency.Name = "labelFrequency";
+            this.labelFrequency.Size = new System.Drawing.Size(112, 36);
+            this.labelFrequency.TabIndex = 0;
+            this.labelFrequency.Text = "Frequência:";
+            this.labelFrequency.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label125
+            // 
+            this.label125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label125.AutoSize = true;
+            this.label125.ForeColor = System.Drawing.Color.Red;
+            this.label125.Location = new System.Drawing.Point(121, 0);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(103, 36);
+            this.label125.TabIndex = 0;
+            this.label125.Text = "125 Hz";
+            this.label125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label250
+            // 
+            this.label250.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label250.AutoSize = true;
+            this.label250.ForeColor = System.Drawing.Color.Red;
+            this.label250.Location = new System.Drawing.Point(230, 0);
+            this.label250.Name = "label250";
+            this.label250.Size = new System.Drawing.Size(103, 36);
+            this.label250.TabIndex = 0;
+            this.label250.Text = "250 Hz";
+            this.label250.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label500
+            // 
+            this.label500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label500.AutoSize = true;
+            this.label500.ForeColor = System.Drawing.Color.Red;
+            this.label500.Location = new System.Drawing.Point(339, 0);
+            this.label500.Name = "label500";
+            this.label500.Size = new System.Drawing.Size(103, 36);
+            this.label500.TabIndex = 0;
+            this.label500.Text = "500 Hz";
+            this.label500.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelNoReply
+            // 
+            this.labelNoReply.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNoReply.AutoSize = true;
+            this.labelNoReply.Location = new System.Drawing.Point(3, 108);
+            this.labelNoReply.Name = "labelNoReply";
+            this.labelNoReply.Size = new System.Drawing.Size(112, 36);
+            this.labelNoReply.TabIndex = 3;
+            this.labelNoReply.Text = "Ausência de resposta:";
+            this.labelNoReply.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label750
+            // 
+            this.label750.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label750.AutoSize = true;
+            this.label750.ForeColor = System.Drawing.Color.Red;
+            this.label750.Location = new System.Drawing.Point(448, 0);
+            this.label750.Name = "label750";
+            this.label750.Size = new System.Drawing.Size(103, 36);
+            this.label750.TabIndex = 4;
+            this.label750.Text = "750 Hz";
+            this.label750.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1500
+            // 
+            this.label1500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1500.AutoSize = true;
+            this.label1500.ForeColor = System.Drawing.Color.Red;
+            this.label1500.Location = new System.Drawing.Point(666, 0);
+            this.label1500.Name = "label1500";
+            this.label1500.Size = new System.Drawing.Size(103, 36);
+            this.label1500.TabIndex = 5;
+            this.label1500.Text = "1500 Hz";
+            this.label1500.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3000
+            // 
+            this.label3000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3000.AutoSize = true;
+            this.label3000.ForeColor = System.Drawing.Color.Red;
+            this.label3000.Location = new System.Drawing.Point(884, 0);
+            this.label3000.Name = "label3000";
+            this.label3000.Size = new System.Drawing.Size(103, 36);
+            this.label3000.TabIndex = 6;
+            this.label3000.Text = "3000 Hz";
+            this.label3000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6000
+            // 
+            this.label6000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6000.AutoSize = true;
+            this.label6000.ForeColor = System.Drawing.Color.Red;
+            this.label6000.Location = new System.Drawing.Point(1102, 0);
+            this.label6000.Name = "label6000";
+            this.label6000.Size = new System.Drawing.Size(103, 36);
+            this.label6000.TabIndex = 7;
+            this.label6000.Text = "6000 Hz";
+            this.label6000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dB750
+            // 
+            this.dB750.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB750.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB750.Location = new System.Drawing.Point(450, 41);
+            this.dB750.Margin = new System.Windows.Forms.Padding(5);
+            this.dB750.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB750.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB750.Name = "dB750";
+            this.dB750.Size = new System.Drawing.Size(99, 27);
+            this.dB750.TabIndex = 8;
+            this.dB750.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dB1500
+            // 
+            this.dB1500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB1500.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB1500.Location = new System.Drawing.Point(668, 41);
+            this.dB1500.Margin = new System.Windows.Forms.Padding(5);
+            this.dB1500.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB1500.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB1500.Name = "dB1500";
+            this.dB1500.Size = new System.Drawing.Size(99, 27);
+            this.dB1500.TabIndex = 9;
+            this.dB1500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dB3000
+            // 
+            this.dB3000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB3000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB3000.Location = new System.Drawing.Point(886, 41);
+            this.dB3000.Margin = new System.Windows.Forms.Padding(5);
+            this.dB3000.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB3000.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB3000.Name = "dB3000";
+            this.dB3000.Size = new System.Drawing.Size(99, 27);
+            this.dB3000.TabIndex = 10;
+            this.dB3000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dB6000
+            // 
+            this.dB6000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dB6000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.dB6000.Location = new System.Drawing.Point(1104, 41);
+            this.dB6000.Margin = new System.Windows.Forms.Padding(5);
+            this.dB6000.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.dB6000.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.dB6000.Name = "dB6000";
+            this.dB6000.Size = new System.Drawing.Size(99, 27);
+            this.dB6000.TabIndex = 11;
+            this.dB6000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking8000
+            // 
+            this.masking8000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking8000.Location = new System.Drawing.Point(1213, 77);
+            this.masking8000.Margin = new System.Windows.Forms.Padding(5);
+            this.masking8000.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking8000.Name = "masking8000";
+            this.masking8000.Size = new System.Drawing.Size(108, 27);
+            this.masking8000.TabIndex = 14;
+            this.masking8000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking6000
+            // 
+            this.masking6000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking6000.Location = new System.Drawing.Point(1104, 77);
+            this.masking6000.Margin = new System.Windows.Forms.Padding(5);
+            this.masking6000.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking6000.Name = "masking6000";
+            this.masking6000.Size = new System.Drawing.Size(99, 27);
+            this.masking6000.TabIndex = 16;
+            this.masking6000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking4000
+            // 
+            this.masking4000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking4000.Location = new System.Drawing.Point(995, 77);
+            this.masking4000.Margin = new System.Windows.Forms.Padding(5);
+            this.masking4000.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking4000.Name = "masking4000";
+            this.masking4000.Size = new System.Drawing.Size(99, 27);
+            this.masking4000.TabIndex = 13;
+            this.masking4000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking2000
+            // 
+            this.masking2000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking2000.Location = new System.Drawing.Point(777, 77);
+            this.masking2000.Margin = new System.Windows.Forms.Padding(5);
+            this.masking2000.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking2000.Name = "masking2000";
+            this.masking2000.Size = new System.Drawing.Size(99, 27);
+            this.masking2000.TabIndex = 15;
+            this.masking2000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // useFrequency500
+            // 
+            this.useFrequency500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency500.AutoSize = true;
+            this.useFrequency500.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency500.Location = new System.Drawing.Point(339, 147);
+            this.useFrequency500.Name = "useFrequency500";
+            this.useFrequency500.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency500.TabIndex = 2;
+            this.useFrequency500.Text = "Sim";
+            this.useFrequency500.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency500.UseVisualStyleBackColor = true;
+            this.useFrequency500.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // useFrequency250
+            // 
+            this.useFrequency250.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency250.AutoSize = true;
+            this.useFrequency250.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency250.Location = new System.Drawing.Point(230, 147);
+            this.useFrequency250.Name = "useFrequency250";
+            this.useFrequency250.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency250.TabIndex = 2;
+            this.useFrequency250.Text = "Sim";
+            this.useFrequency250.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency250.UseVisualStyleBackColor = true;
+            this.useFrequency250.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // masking250
+            // 
+            this.masking250.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking250.Location = new System.Drawing.Point(232, 77);
+            this.masking250.Margin = new System.Windows.Forms.Padding(5);
+            this.masking250.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking250.Name = "masking250";
+            this.masking250.Size = new System.Drawing.Size(99, 27);
+            this.masking250.TabIndex = 19;
+            this.masking250.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // useFrequency125
+            // 
+            this.useFrequency125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency125.AutoSize = true;
+            this.useFrequency125.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency125.Location = new System.Drawing.Point(121, 147);
+            this.useFrequency125.Name = "useFrequency125";
+            this.useFrequency125.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency125.TabIndex = 1;
+            this.useFrequency125.Text = "Sim";
+            this.useFrequency125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency125.UseVisualStyleBackColor = true;
+            this.useFrequency125.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // masking750
+            // 
+            this.masking750.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking750.Location = new System.Drawing.Point(450, 77);
+            this.masking750.Margin = new System.Windows.Forms.Padding(5);
+            this.masking750.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking750.Name = "masking750";
+            this.masking750.Size = new System.Drawing.Size(99, 27);
+            this.masking750.TabIndex = 21;
+            this.masking750.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking500
+            // 
+            this.masking500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking500.Location = new System.Drawing.Point(341, 77);
+            this.masking500.Margin = new System.Windows.Forms.Padding(5);
+            this.masking500.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking500.Name = "masking500";
+            this.masking500.Size = new System.Drawing.Size(99, 27);
+            this.masking500.TabIndex = 22;
+            this.masking500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking1000
+            // 
+            this.masking1000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking1000.Location = new System.Drawing.Point(559, 77);
+            this.masking1000.Margin = new System.Windows.Forms.Padding(5);
+            this.masking1000.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking1000.Name = "masking1000";
+            this.masking1000.Size = new System.Drawing.Size(99, 27);
+            this.masking1000.TabIndex = 20;
+            this.masking1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking1500
+            // 
+            this.masking1500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking1500.Location = new System.Drawing.Point(668, 77);
+            this.masking1500.Margin = new System.Windows.Forms.Padding(5);
+            this.masking1500.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking1500.Name = "masking1500";
+            this.masking1500.Size = new System.Drawing.Size(99, 27);
+            this.masking1500.TabIndex = 17;
+            this.masking1500.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking125
+            // 
+            this.masking125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking125.Location = new System.Drawing.Point(123, 77);
+            this.masking125.Margin = new System.Windows.Forms.Padding(5);
+            this.masking125.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking125.Name = "masking125";
+            this.masking125.Size = new System.Drawing.Size(99, 27);
+            this.masking125.TabIndex = 18;
+            this.masking125.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // masking3000
+            // 
+            this.masking3000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking3000.Location = new System.Drawing.Point(886, 77);
+            this.masking3000.Margin = new System.Windows.Forms.Padding(5);
+            this.masking3000.Maximum = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.masking3000.Name = "masking3000";
+            this.masking3000.Size = new System.Drawing.Size(99, 27);
+            this.masking3000.TabIndex = 12;
+            this.masking3000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // useFrequency750
+            // 
+            this.useFrequency750.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency750.AutoSize = true;
+            this.useFrequency750.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency750.Location = new System.Drawing.Point(448, 147);
+            this.useFrequency750.Name = "useFrequency750";
+            this.useFrequency750.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency750.TabIndex = 2;
+            this.useFrequency750.Text = "Sim";
+            this.useFrequency750.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency750.UseVisualStyleBackColor = true;
+            this.useFrequency750.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // useFrequency1000
+            // 
+            this.useFrequency1000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency1000.AutoSize = true;
+            this.useFrequency1000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency1000.Location = new System.Drawing.Point(557, 147);
+            this.useFrequency1000.Name = "useFrequency1000";
+            this.useFrequency1000.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency1000.TabIndex = 2;
+            this.useFrequency1000.Text = "Sim";
+            this.useFrequency1000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency1000.UseVisualStyleBackColor = true;
+            this.useFrequency1000.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // useFrequency1500
+            // 
+            this.useFrequency1500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency1500.AutoSize = true;
+            this.useFrequency1500.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency1500.Location = new System.Drawing.Point(666, 147);
+            this.useFrequency1500.Name = "useFrequency1500";
+            this.useFrequency1500.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency1500.TabIndex = 2;
+            this.useFrequency1500.Text = "Sim";
+            this.useFrequency1500.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency1500.UseVisualStyleBackColor = true;
+            this.useFrequency1500.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // useFrequency2000
+            // 
+            this.useFrequency2000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency2000.AutoSize = true;
+            this.useFrequency2000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency2000.Location = new System.Drawing.Point(775, 147);
+            this.useFrequency2000.Name = "useFrequency2000";
+            this.useFrequency2000.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency2000.TabIndex = 2;
+            this.useFrequency2000.Text = "Sim";
+            this.useFrequency2000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency2000.UseVisualStyleBackColor = true;
+            this.useFrequency2000.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // useFrequency3000
+            // 
+            this.useFrequency3000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency3000.AutoSize = true;
+            this.useFrequency3000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency3000.Location = new System.Drawing.Point(884, 147);
+            this.useFrequency3000.Name = "useFrequency3000";
+            this.useFrequency3000.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency3000.TabIndex = 23;
+            this.useFrequency3000.Text = "Sim";
+            this.useFrequency3000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency3000.UseVisualStyleBackColor = true;
+            this.useFrequency3000.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // useFrequency4000
+            // 
+            this.useFrequency4000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency4000.AutoSize = true;
+            this.useFrequency4000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency4000.Location = new System.Drawing.Point(993, 147);
+            this.useFrequency4000.Name = "useFrequency4000";
+            this.useFrequency4000.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency4000.TabIndex = 24;
+            this.useFrequency4000.Text = "Sim";
+            this.useFrequency4000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency4000.UseVisualStyleBackColor = true;
+            this.useFrequency4000.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // useFrequency6000
+            // 
+            this.useFrequency6000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency6000.AutoSize = true;
+            this.useFrequency6000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency6000.Location = new System.Drawing.Point(1102, 147);
+            this.useFrequency6000.Name = "useFrequency6000";
+            this.useFrequency6000.Size = new System.Drawing.Size(103, 34);
+            this.useFrequency6000.TabIndex = 26;
+            this.useFrequency6000.Text = "Sim";
+            this.useFrequency6000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency6000.UseVisualStyleBackColor = true;
+            this.useFrequency6000.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // useFrequency8000
+            // 
+            this.useFrequency8000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.useFrequency8000.AutoSize = true;
+            this.useFrequency8000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.useFrequency8000.Location = new System.Drawing.Point(1211, 147);
+            this.useFrequency8000.Name = "useFrequency8000";
+            this.useFrequency8000.Size = new System.Drawing.Size(112, 34);
+            this.useFrequency8000.TabIndex = 25;
+            this.useFrequency8000.Text = "Sim";
+            this.useFrequency8000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.useFrequency8000.UseVisualStyleBackColor = true;
+            this.useFrequency8000.CheckedChanged += new System.EventHandler(this.useFrequency_CheckedChanged);
+            // 
+            // noReply750
+            // 
+            this.noReply750.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply750.AutoSize = true;
+            this.noReply750.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply750.Location = new System.Drawing.Point(448, 111);
+            this.noReply750.Name = "noReply750";
+            this.noReply750.Size = new System.Drawing.Size(103, 30);
+            this.noReply750.TabIndex = 27;
+            this.noReply750.Text = "Sim";
+            this.noReply750.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply750.UseVisualStyleBackColor = true;
+            // 
+            // noReply1500
+            // 
+            this.noReply1500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply1500.AutoSize = true;
+            this.noReply1500.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply1500.Location = new System.Drawing.Point(666, 111);
+            this.noReply1500.Name = "noReply1500";
+            this.noReply1500.Size = new System.Drawing.Size(103, 30);
+            this.noReply1500.TabIndex = 28;
+            this.noReply1500.Text = "Sim";
+            this.noReply1500.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply1500.UseVisualStyleBackColor = true;
+            // 
+            // noReply3000
+            // 
+            this.noReply3000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply3000.AutoSize = true;
+            this.noReply3000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply3000.Location = new System.Drawing.Point(884, 111);
+            this.noReply3000.Name = "noReply3000";
+            this.noReply3000.Size = new System.Drawing.Size(103, 30);
+            this.noReply3000.TabIndex = 29;
+            this.noReply3000.Text = "Sim";
+            this.noReply3000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply3000.UseVisualStyleBackColor = true;
+            // 
+            // noReply6000
+            // 
+            this.noReply6000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noReply6000.AutoSize = true;
+            this.noReply6000.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noReply6000.Location = new System.Drawing.Point(1102, 111);
+            this.noReply6000.Name = "noReply6000";
+            this.noReply6000.Size = new System.Drawing.Size(103, 30);
+            this.noReply6000.TabIndex = 30;
+            this.noReply6000.Text = "Sim";
+            this.noReply6000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.noReply6000.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.90279F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.6006006F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.56971F));
+            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tableLayoutPanel8.Controls.Add(this.panel3, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel7, 2, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(6, 8);
+            this.tableLayoutPanel8.Controls.Add(this.audiometryGraph, 2, 0);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1327, 718);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1326, 532);
             this.tableLayoutPanel8.TabIndex = 4;
             // 
             // panel3
@@ -1539,7 +2717,7 @@
             this.panel3.Location = new System.Drawing.Point(5, 5);
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(346, 708);
+            this.panel3.Size = new System.Drawing.Size(387, 522);
             this.panel3.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -1550,15 +2728,14 @@
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.groupBox30, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.groupBox23, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.groupBox23, 0, 1);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 3;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.81006F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.99441F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.33134F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.66866F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(341, 716);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(382, 530);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // groupBox30
@@ -1571,7 +2748,7 @@
             this.groupBox30.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox30.Size = new System.Drawing.Size(331, 139);
+            this.groupBox30.Size = new System.Drawing.Size(372, 171);
             this.groupBox30.TabIndex = 0;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Audiometrias cadastradas";
@@ -1587,7 +2764,7 @@
             this.audiometryLists.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryLists.Name = "audiometryLists";
             this.audiometryLists.ScrollAlwaysVisible = true;
-            this.audiometryLists.Size = new System.Drawing.Size(313, 104);
+            this.audiometryLists.Size = new System.Drawing.Size(354, 124);
             this.audiometryLists.TabIndex = 0;
             this.audiometryLists.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -1597,11 +2774,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox23.Controls.Add(this.tableLayoutPanel5);
-            this.groupBox23.Location = new System.Drawing.Point(5, 290);
+            this.groupBox23.Location = new System.Drawing.Point(5, 186);
             this.groupBox23.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox23.Size = new System.Drawing.Size(331, 421);
+            this.groupBox23.Size = new System.Drawing.Size(372, 339);
             this.groupBox23.TabIndex = 1;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Configurações da audiometria";
@@ -1620,7 +2797,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(312, 385);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(353, 303);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // audiometryTextBox
@@ -1628,11 +2805,11 @@
             this.audiometryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.audiometryTextBox.Location = new System.Drawing.Point(5, 274);
+            this.audiometryTextBox.Location = new System.Drawing.Point(5, 217);
             this.audiometryTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryTextBox.Multiline = true;
             this.audiometryTextBox.Name = "audiometryTextBox";
-            this.audiometryTextBox.Size = new System.Drawing.Size(302, 106);
+            this.audiometryTextBox.Size = new System.Drawing.Size(343, 81);
             this.audiometryTextBox.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -1658,7 +2835,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(306, 263);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(347, 206);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // groupBox24
@@ -1671,7 +2848,7 @@
             this.groupBox24.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox24.Size = new System.Drawing.Size(143, 77);
+            this.groupBox24.Size = new System.Drawing.Size(163, 58);
             this.groupBox24.TabIndex = 1;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Data de realização";
@@ -1685,7 +2862,7 @@
             this.audiometryDate.Location = new System.Drawing.Point(10, 24);
             this.audiometryDate.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryDate.Name = "audiometryDate";
-            this.audiometryDate.Size = new System.Drawing.Size(123, 27);
+            this.audiometryDate.Size = new System.Drawing.Size(143, 27);
             this.audiometryDate.TabIndex = 0;
             // 
             // groupBox26
@@ -1694,11 +2871,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox26.Controls.Add(this.audiometrySide);
-            this.groupBox26.Location = new System.Drawing.Point(5, 92);
+            this.groupBox26.Location = new System.Drawing.Point(5, 73);
             this.groupBox26.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox26.Size = new System.Drawing.Size(143, 77);
+            this.groupBox26.Size = new System.Drawing.Size(163, 58);
             this.groupBox26.TabIndex = 3;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Lado";
@@ -1713,10 +2890,10 @@
             this.audiometrySide.Items.AddRange(new object[] {
             "Direito",
             "Esquerdo"});
-            this.audiometrySide.Location = new System.Drawing.Point(10, 26);
+            this.audiometrySide.Location = new System.Drawing.Point(10, 20);
             this.audiometrySide.Margin = new System.Windows.Forms.Padding(5);
             this.audiometrySide.Name = "audiometrySide";
-            this.audiometrySide.Size = new System.Drawing.Size(123, 28);
+            this.audiometrySide.Size = new System.Drawing.Size(143, 28);
             this.audiometrySide.TabIndex = 0;
             // 
             // groupBox25
@@ -1725,11 +2902,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox25.Controls.Add(this.Conduction);
-            this.groupBox25.Location = new System.Drawing.Point(158, 5);
+            this.groupBox25.Location = new System.Drawing.Point(178, 5);
             this.groupBox25.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox25.Size = new System.Drawing.Size(143, 77);
+            this.groupBox25.Size = new System.Drawing.Size(164, 58);
             this.groupBox25.TabIndex = 2;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Via";
@@ -1746,10 +2923,10 @@
             "Óssea (mastóide)",
             "Óssea (fronte)",
             "Campo livre"});
-            this.Conduction.Location = new System.Drawing.Point(10, 26);
+            this.Conduction.Location = new System.Drawing.Point(10, 23);
             this.Conduction.Margin = new System.Windows.Forms.Padding(5);
             this.Conduction.Name = "Conduction";
-            this.Conduction.Size = new System.Drawing.Size(123, 28);
+            this.Conduction.Size = new System.Drawing.Size(144, 28);
             this.Conduction.TabIndex = 0;
             // 
             // previewAudiometryButton
@@ -1757,10 +2934,10 @@
             this.previewAudiometryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.previewAudiometryButton.Location = new System.Drawing.Point(158, 92);
+            this.previewAudiometryButton.Location = new System.Drawing.Point(178, 73);
             this.previewAudiometryButton.Margin = new System.Windows.Forms.Padding(5);
             this.previewAudiometryButton.Name = "previewAudiometryButton";
-            this.previewAudiometryButton.Size = new System.Drawing.Size(143, 77);
+            this.previewAudiometryButton.Size = new System.Drawing.Size(164, 58);
             this.previewAudiometryButton.TabIndex = 12;
             this.previewAudiometryButton.Text = "Pré-Visualização";
             this.previewAudiometryButton.UseVisualStyleBackColor = true;
@@ -1771,10 +2948,10 @@
             this.saveAudiometryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveAudiometryButton.Location = new System.Drawing.Point(5, 179);
+            this.saveAudiometryButton.Location = new System.Drawing.Point(5, 141);
             this.saveAudiometryButton.Margin = new System.Windows.Forms.Padding(5);
             this.saveAudiometryButton.Name = "saveAudiometryButton";
-            this.saveAudiometryButton.Size = new System.Drawing.Size(143, 79);
+            this.saveAudiometryButton.Size = new System.Drawing.Size(163, 60);
             this.saveAudiometryButton.TabIndex = 0;
             this.saveAudiometryButton.Text = "Cadastrar audiometria";
             this.saveAudiometryButton.UseVisualStyleBackColor = true;
@@ -1785,37 +2962,20 @@
             this.deleteAudiometryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteAudiometryButton.Location = new System.Drawing.Point(156, 177);
+            this.deleteAudiometryButton.Location = new System.Drawing.Point(176, 139);
             this.deleteAudiometryButton.Name = "deleteAudiometryButton";
-            this.deleteAudiometryButton.Size = new System.Drawing.Size(147, 83);
+            this.deleteAudiometryButton.Size = new System.Drawing.Size(168, 64);
             this.deleteAudiometryButton.TabIndex = 13;
             this.deleteAudiometryButton.Text = "Deletar audiometria";
             this.deleteAudiometryButton.UseVisualStyleBackColor = true;
             this.deleteAudiometryButton.Click += new System.EventHandler(this.deleteAudiometryButton_Click);
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.audiometryGraph, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel17, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(366, 3);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(958, 712);
-            this.tableLayoutPanel7.TabIndex = 3;
             // 
             // audiometryGraph
             // 
             this.audiometryGraph.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.audiometryGraph.Location = new System.Drawing.Point(6, 184);
+            this.audiometryGraph.Location = new System.Drawing.Point(456, 6);
             this.audiometryGraph.Margin = new System.Windows.Forms.Padding(6);
             this.audiometryGraph.Name = "audiometryGraph";
             this.audiometryGraph.ScrollGrace = 0D;
@@ -1825,748 +2985,9 @@
             this.audiometryGraph.ScrollMinX = 0D;
             this.audiometryGraph.ScrollMinY = 0D;
             this.audiometryGraph.ScrollMinY2 = 0D;
-            this.audiometryGraph.Size = new System.Drawing.Size(946, 522);
+            this.audiometryGraph.Size = new System.Drawing.Size(810, 520);
             this.audiometryGraph.TabIndex = 1;
             this.audiometryGraph.UseExtendedPrintDialog = true;
-            // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel17.ColumnCount = 8;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.62631F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.13505F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.13505F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.13505F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.13505F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.13505F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.13505F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.56341F));
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel25, 7, 0);
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel24, 6, 0);
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel23, 5, 0);
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel22, 4, 0);
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel21, 3, 0);
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel20, 2, 0);
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel19, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel18, 1, 0);
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 1;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(952, 172);
-            this.tableLayoutPanel17.TabIndex = 3;
-            // 
-            // tableLayoutPanel25
-            // 
-            this.tableLayoutPanel25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel25.ColumnCount = 1;
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel25.Controls.Add(this.noReply7, 0, 3);
-            this.tableLayoutPanel25.Controls.Add(this.freq8, 0, 1);
-            this.tableLayoutPanel25.Controls.Add(this.label14, 0, 0);
-            this.tableLayoutPanel25.Controls.Add(this.masking7, 0, 2);
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(832, 3);
-            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
-            this.tableLayoutPanel25.RowCount = 4;
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(117, 166);
-            this.tableLayoutPanel25.TabIndex = 7;
-            // 
-            // noReply7
-            // 
-            this.noReply7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.noReply7.AutoSize = true;
-            this.noReply7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.noReply7.Location = new System.Drawing.Point(3, 126);
-            this.noReply7.Name = "noReply7";
-            this.noReply7.Size = new System.Drawing.Size(111, 37);
-            this.noReply7.TabIndex = 3;
-            this.noReply7.Text = "Sim";
-            this.noReply7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.noReply7.UseVisualStyleBackColor = true;
-            // 
-            // freq8
-            // 
-            this.freq8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.freq8.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.freq8.Location = new System.Drawing.Point(5, 46);
-            this.freq8.Margin = new System.Windows.Forms.Padding(5);
-            this.freq8.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.freq8.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.freq8.Name = "freq8";
-            this.freq8.Size = new System.Drawing.Size(107, 27);
-            this.freq8.TabIndex = 0;
-            this.freq8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 41);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "8000 Hz";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // masking7
-            // 
-            this.masking7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.masking7.AutoSize = true;
-            this.masking7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.masking7.Location = new System.Drawing.Point(3, 85);
-            this.masking7.Name = "masking7";
-            this.masking7.Size = new System.Drawing.Size(111, 35);
-            this.masking7.TabIndex = 2;
-            this.masking7.Text = "Sim";
-            this.masking7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.masking7.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel24
-            // 
-            this.tableLayoutPanel24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel24.ColumnCount = 1;
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.Controls.Add(this.noReply6, 0, 3);
-            this.tableLayoutPanel24.Controls.Add(this.freq7, 0, 1);
-            this.tableLayoutPanel24.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel24.Controls.Add(this.masking6, 0, 2);
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(717, 3);
-            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
-            this.tableLayoutPanel24.RowCount = 4;
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(109, 166);
-            this.tableLayoutPanel24.TabIndex = 6;
-            // 
-            // noReply6
-            // 
-            this.noReply6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.noReply6.AutoSize = true;
-            this.noReply6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.noReply6.Location = new System.Drawing.Point(3, 126);
-            this.noReply6.Name = "noReply6";
-            this.noReply6.Size = new System.Drawing.Size(103, 37);
-            this.noReply6.TabIndex = 3;
-            this.noReply6.Text = "Sim";
-            this.noReply6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.noReply6.UseVisualStyleBackColor = true;
-            // 
-            // freq7
-            // 
-            this.freq7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.freq7.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.freq7.Location = new System.Drawing.Point(5, 46);
-            this.freq7.Margin = new System.Windows.Forms.Padding(5);
-            this.freq7.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.freq7.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.freq7.Name = "freq7";
-            this.freq7.Size = new System.Drawing.Size(99, 27);
-            this.freq7.TabIndex = 0;
-            this.freq7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(103, 41);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "4000 Hz";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // masking6
-            // 
-            this.masking6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.masking6.AutoSize = true;
-            this.masking6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.masking6.Location = new System.Drawing.Point(3, 85);
-            this.masking6.Name = "masking6";
-            this.masking6.Size = new System.Drawing.Size(103, 35);
-            this.masking6.TabIndex = 2;
-            this.masking6.Text = "Sim";
-            this.masking6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.masking6.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel23
-            // 
-            this.tableLayoutPanel23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel23.ColumnCount = 1;
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.Controls.Add(this.noReply5, 0, 3);
-            this.tableLayoutPanel23.Controls.Add(this.freq6, 0, 1);
-            this.tableLayoutPanel23.Controls.Add(this.label12, 0, 0);
-            this.tableLayoutPanel23.Controls.Add(this.masking5, 0, 2);
-            this.tableLayoutPanel23.Location = new System.Drawing.Point(602, 3);
-            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
-            this.tableLayoutPanel23.RowCount = 4;
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(109, 166);
-            this.tableLayoutPanel23.TabIndex = 5;
-            // 
-            // noReply5
-            // 
-            this.noReply5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.noReply5.AutoSize = true;
-            this.noReply5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.noReply5.Location = new System.Drawing.Point(3, 126);
-            this.noReply5.Name = "noReply5";
-            this.noReply5.Size = new System.Drawing.Size(103, 37);
-            this.noReply5.TabIndex = 3;
-            this.noReply5.Text = "Sim";
-            this.noReply5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.noReply5.UseVisualStyleBackColor = true;
-            // 
-            // freq6
-            // 
-            this.freq6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.freq6.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.freq6.Location = new System.Drawing.Point(5, 46);
-            this.freq6.Margin = new System.Windows.Forms.Padding(5);
-            this.freq6.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.freq6.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.freq6.Name = "freq6";
-            this.freq6.Size = new System.Drawing.Size(99, 27);
-            this.freq6.TabIndex = 0;
-            this.freq6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 41);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "2000 Hz";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // masking5
-            // 
-            this.masking5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.masking5.AutoSize = true;
-            this.masking5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.masking5.Location = new System.Drawing.Point(3, 85);
-            this.masking5.Name = "masking5";
-            this.masking5.Size = new System.Drawing.Size(103, 35);
-            this.masking5.TabIndex = 2;
-            this.masking5.Text = "Sim";
-            this.masking5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.masking5.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel22
-            // 
-            this.tableLayoutPanel22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel22.ColumnCount = 1;
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Controls.Add(this.noReply4, 0, 3);
-            this.tableLayoutPanel22.Controls.Add(this.freq4, 0, 1);
-            this.tableLayoutPanel22.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel22.Controls.Add(this.masking4, 0, 2);
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(487, 3);
-            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
-            this.tableLayoutPanel22.RowCount = 4;
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(109, 166);
-            this.tableLayoutPanel22.TabIndex = 4;
-            // 
-            // noReply4
-            // 
-            this.noReply4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.noReply4.AutoSize = true;
-            this.noReply4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.noReply4.Location = new System.Drawing.Point(3, 126);
-            this.noReply4.Name = "noReply4";
-            this.noReply4.Size = new System.Drawing.Size(103, 37);
-            this.noReply4.TabIndex = 3;
-            this.noReply4.Text = "Sim";
-            this.noReply4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.noReply4.UseVisualStyleBackColor = true;
-            // 
-            // freq4
-            // 
-            this.freq4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.freq4.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.freq4.Location = new System.Drawing.Point(5, 46);
-            this.freq4.Margin = new System.Windows.Forms.Padding(5);
-            this.freq4.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.freq4.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.freq4.Name = "freq4";
-            this.freq4.Size = new System.Drawing.Size(99, 27);
-            this.freq4.TabIndex = 0;
-            this.freq4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 41);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "1000 Hz";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // masking4
-            // 
-            this.masking4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.masking4.AutoSize = true;
-            this.masking4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.masking4.Location = new System.Drawing.Point(3, 85);
-            this.masking4.Name = "masking4";
-            this.masking4.Size = new System.Drawing.Size(103, 35);
-            this.masking4.TabIndex = 2;
-            this.masking4.Text = "Sim";
-            this.masking4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.masking4.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel21
-            // 
-            this.tableLayoutPanel21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel21.ColumnCount = 1;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.Controls.Add(this.noReply3, 0, 3);
-            this.tableLayoutPanel21.Controls.Add(this.freq3, 0, 1);
-            this.tableLayoutPanel21.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel21.Controls.Add(this.masking3, 0, 2);
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(372, 3);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            this.tableLayoutPanel21.RowCount = 4;
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(109, 166);
-            this.tableLayoutPanel21.TabIndex = 3;
-            // 
-            // noReply3
-            // 
-            this.noReply3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.noReply3.AutoSize = true;
-            this.noReply3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.noReply3.Location = new System.Drawing.Point(3, 126);
-            this.noReply3.Name = "noReply3";
-            this.noReply3.Size = new System.Drawing.Size(103, 37);
-            this.noReply3.TabIndex = 3;
-            this.noReply3.Text = "Sim";
-            this.noReply3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.noReply3.UseVisualStyleBackColor = true;
-            // 
-            // freq3
-            // 
-            this.freq3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.freq3.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.freq3.Location = new System.Drawing.Point(5, 46);
-            this.freq3.Margin = new System.Windows.Forms.Padding(5);
-            this.freq3.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.freq3.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.freq3.Name = "freq3";
-            this.freq3.Size = new System.Drawing.Size(99, 27);
-            this.freq3.TabIndex = 0;
-            this.freq3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 41);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "500 Hz";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // masking3
-            // 
-            this.masking3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.masking3.AutoSize = true;
-            this.masking3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.masking3.Location = new System.Drawing.Point(3, 85);
-            this.masking3.Name = "masking3";
-            this.masking3.Size = new System.Drawing.Size(103, 35);
-            this.masking3.TabIndex = 2;
-            this.masking3.Text = "Sim";
-            this.masking3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.masking3.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel20
-            // 
-            this.tableLayoutPanel20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel20.ColumnCount = 1;
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Controls.Add(this.noReply2, 0, 3);
-            this.tableLayoutPanel20.Controls.Add(this.freq2, 0, 1);
-            this.tableLayoutPanel20.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel20.Controls.Add(this.masking2, 0, 2);
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(257, 3);
-            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
-            this.tableLayoutPanel20.RowCount = 4;
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(109, 166);
-            this.tableLayoutPanel20.TabIndex = 2;
-            // 
-            // noReply2
-            // 
-            this.noReply2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.noReply2.AutoSize = true;
-            this.noReply2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.noReply2.Location = new System.Drawing.Point(3, 126);
-            this.noReply2.Name = "noReply2";
-            this.noReply2.Size = new System.Drawing.Size(103, 37);
-            this.noReply2.TabIndex = 3;
-            this.noReply2.Text = "Sim";
-            this.noReply2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.noReply2.UseVisualStyleBackColor = true;
-            // 
-            // freq2
-            // 
-            this.freq2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.freq2.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.freq2.Location = new System.Drawing.Point(5, 46);
-            this.freq2.Margin = new System.Windows.Forms.Padding(5);
-            this.freq2.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.freq2.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.freq2.Name = "freq2";
-            this.freq2.Size = new System.Drawing.Size(99, 27);
-            this.freq2.TabIndex = 0;
-            this.freq2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 41);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "250 Hz";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // masking2
-            // 
-            this.masking2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.masking2.AutoSize = true;
-            this.masking2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.masking2.Location = new System.Drawing.Point(3, 85);
-            this.masking2.Name = "masking2";
-            this.masking2.Size = new System.Drawing.Size(103, 35);
-            this.masking2.TabIndex = 2;
-            this.masking2.Text = "Sim";
-            this.masking2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.masking2.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel19
-            // 
-            this.tableLayoutPanel19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel19.ColumnCount = 1;
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel19.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel19.Controls.Add(this.label6, 0, 2);
-            this.tableLayoutPanel19.Controls.Add(this.label7, 0, 3);
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            this.tableLayoutPanel19.RowCount = 4;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(133, 166);
-            this.tableLayoutPanel19.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 41);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Frequência:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 41);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "dB:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 41);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Mascaramento:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 123);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 43);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Ausência de resposta:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel18
-            // 
-            this.tableLayoutPanel18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel18.ColumnCount = 1;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Controls.Add(this.noReply1, 0, 3);
-            this.tableLayoutPanel18.Controls.Add(this.freq1, 0, 1);
-            this.tableLayoutPanel18.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel18.Controls.Add(this.masking1, 0, 2);
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(142, 3);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 4;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(109, 166);
-            this.tableLayoutPanel18.TabIndex = 0;
-            // 
-            // noReply1
-            // 
-            this.noReply1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.noReply1.AutoSize = true;
-            this.noReply1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.noReply1.Location = new System.Drawing.Point(3, 126);
-            this.noReply1.Name = "noReply1";
-            this.noReply1.Size = new System.Drawing.Size(103, 37);
-            this.noReply1.TabIndex = 2;
-            this.noReply1.Text = "Sim";
-            this.noReply1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.noReply1.UseVisualStyleBackColor = true;
-            // 
-            // freq1
-            // 
-            this.freq1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.freq1.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.freq1.Location = new System.Drawing.Point(5, 46);
-            this.freq1.Margin = new System.Windows.Forms.Padding(5);
-            this.freq1.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.freq1.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
-            this.freq1.Name = "freq1";
-            this.freq1.Size = new System.Drawing.Size(99, 27);
-            this.freq1.TabIndex = 0;
-            this.freq1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 41);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "125 Hz";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // masking1
-            // 
-            this.masking1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.masking1.AutoSize = true;
-            this.masking1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.masking1.Location = new System.Drawing.Point(3, 85);
-            this.masking1.Name = "masking1";
-            this.masking1.Size = new System.Drawing.Size(103, 35);
-            this.masking1.TabIndex = 1;
-            this.masking1.Text = "Sim";
-            this.masking1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.masking1.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -2723,6 +3144,31 @@
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dB500)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB4000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB8000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB2000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB1000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB250)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB125)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB750)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB1500)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB3000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB6000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking8000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking6000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking4000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking2000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking250)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking750)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking500)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking1000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking1500)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking125)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masking3000)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -2734,31 +3180,6 @@
             this.groupBox24.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel25.ResumeLayout(false);
-            this.tableLayoutPanel25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq8)).EndInit();
-            this.tableLayoutPanel24.ResumeLayout(false);
-            this.tableLayoutPanel24.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq7)).EndInit();
-            this.tableLayoutPanel23.ResumeLayout(false);
-            this.tableLayoutPanel23.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq6)).EndInit();
-            this.tableLayoutPanel22.ResumeLayout(false);
-            this.tableLayoutPanel22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq4)).EndInit();
-            this.tableLayoutPanel21.ResumeLayout(false);
-            this.tableLayoutPanel21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq3)).EndInit();
-            this.tableLayoutPanel20.ResumeLayout(false);
-            this.tableLayoutPanel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq2)).EndInit();
-            this.tableLayoutPanel19.ResumeLayout(false);
-            this.tableLayoutPanel19.PerformLayout();
-            this.tableLayoutPanel18.ResumeLayout(false);
-            this.tableLayoutPanel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.freq1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2823,13 +3244,13 @@
         private System.Windows.Forms.GroupBox groupBox30;
         private System.Windows.Forms.ListBox audiometryLists;
         private System.Windows.Forms.Button previewAudiometryButton;
-        private System.Windows.Forms.NumericUpDown freq8;
-        private System.Windows.Forms.NumericUpDown freq7;
-        private System.Windows.Forms.NumericUpDown freq4;
-        private System.Windows.Forms.NumericUpDown freq6;
-        private System.Windows.Forms.NumericUpDown freq3;
-        private System.Windows.Forms.NumericUpDown freq2;
-        private System.Windows.Forms.NumericUpDown freq1;
+        private System.Windows.Forms.NumericUpDown dB8000;
+        private System.Windows.Forms.NumericUpDown dB4000;
+        private System.Windows.Forms.NumericUpDown dB1000;
+        private System.Windows.Forms.NumericUpDown dB2000;
+        private System.Windows.Forms.NumericUpDown dB500;
+        private System.Windows.Forms.NumericUpDown dB250;
+        private System.Windows.Forms.NumericUpDown dB125;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage3;
         private ZedGraph.ZedGraphControl testsGraph;
@@ -2867,7 +3288,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
@@ -2876,40 +3296,61 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox noReply7;
-        private System.Windows.Forms.CheckBox masking7;
-        private System.Windows.Forms.CheckBox noReply6;
-        private System.Windows.Forms.CheckBox masking6;
-        private System.Windows.Forms.CheckBox noReply5;
-        private System.Windows.Forms.CheckBox masking5;
-        private System.Windows.Forms.CheckBox noReply4;
-        private System.Windows.Forms.CheckBox masking4;
-        private System.Windows.Forms.CheckBox noReply3;
-        private System.Windows.Forms.CheckBox masking3;
-        private System.Windows.Forms.CheckBox noReply2;
-        private System.Windows.Forms.CheckBox masking2;
-        private System.Windows.Forms.CheckBox noReply1;
-        private System.Windows.Forms.CheckBox masking1;
+        private System.Windows.Forms.Label label8000;
+        private System.Windows.Forms.Label label4000;
+        private System.Windows.Forms.Label label2000;
+        private System.Windows.Forms.Label label1000;
+        private System.Windows.Forms.Label label500;
+        private System.Windows.Forms.Label label250;
+        private System.Windows.Forms.Label labelFrequency;
+        private System.Windows.Forms.Label labeldB;
+        private System.Windows.Forms.Label labelMask;
+        private System.Windows.Forms.Label labelNoReply;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.CheckBox noReply8000;
+        private System.Windows.Forms.CheckBox useFrequency2000;
+        private System.Windows.Forms.CheckBox noReply4000;
+        private System.Windows.Forms.CheckBox useFrequency1500;
+        private System.Windows.Forms.CheckBox noReply2000;
+        private System.Windows.Forms.CheckBox useFrequency1000;
+        private System.Windows.Forms.CheckBox noReply1000;
+        private System.Windows.Forms.CheckBox useFrequency750;
+        private System.Windows.Forms.CheckBox noReply500;
+        private System.Windows.Forms.CheckBox useFrequency500;
+        private System.Windows.Forms.CheckBox noReply250;
+        private System.Windows.Forms.CheckBox useFrequency250;
+        private System.Windows.Forms.CheckBox noReply125;
+        private System.Windows.Forms.CheckBox useFrequency125;
         private System.Windows.Forms.Button deleteAudiometryButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label label750;
+        private System.Windows.Forms.Label label1500;
+        private System.Windows.Forms.Label label3000;
+        private System.Windows.Forms.Label label6000;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.NumericUpDown dB750;
+        private System.Windows.Forms.NumericUpDown dB1500;
+        private System.Windows.Forms.NumericUpDown dB3000;
+        private System.Windows.Forms.NumericUpDown dB6000;
+        private System.Windows.Forms.NumericUpDown masking500;
+        private System.Windows.Forms.NumericUpDown masking750;
+        private System.Windows.Forms.NumericUpDown masking1000;
+        private System.Windows.Forms.NumericUpDown masking250;
+        private System.Windows.Forms.NumericUpDown masking125;
+        private System.Windows.Forms.NumericUpDown masking1500;
+        private System.Windows.Forms.NumericUpDown masking6000;
+        private System.Windows.Forms.NumericUpDown masking2000;
+        private System.Windows.Forms.NumericUpDown masking8000;
+        private System.Windows.Forms.NumericUpDown masking4000;
+        private System.Windows.Forms.NumericUpDown masking3000;
+        private System.Windows.Forms.CheckBox useFrequency3000;
+        private System.Windows.Forms.CheckBox useFrequency4000;
+        private System.Windows.Forms.CheckBox useFrequency6000;
+        private System.Windows.Forms.CheckBox useFrequency8000;
+        private System.Windows.Forms.CheckBox noReply750;
+        private System.Windows.Forms.CheckBox noReply1500;
+        private System.Windows.Forms.CheckBox noReply3000;
+        private System.Windows.Forms.CheckBox noReply6000;
+        private System.Windows.Forms.Label label4;
     }
 }

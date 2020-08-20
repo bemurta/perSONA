@@ -62,7 +62,6 @@ namespace perSONA
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             double[] angles = getSceneAngles();
             double[] radius = getSceneDistances();
             double angleSpeech = checkDirection(speechLeft.Checked, speechFront.Checked, speechRight.Checked); ;

@@ -45,7 +45,7 @@ namespace perSONA
             motivationBox.SelectedIndex = 0;
             work.SelectedIndex = 0;
             bindPatient(person);
-            bindGraph(audiometryGraph);
+            TonalAudiometryTest.bindGraph(audiometryGraph);
             this.Text = "Paciente: " + person.Name;
             this.person = person;
         }
@@ -268,117 +268,52 @@ namespace perSONA
             plotAudiometry(audiometryGraph, Audiometry);
         }
 
-
-        public void bindGraph(ZedGraphControl graph)
+        public void makeAudiometry(TonalAudiometryTest Audiometry)
         {
-            //To draw the graph we use several curves (1 curve / point for each symbol and 1 without symbols, which
-            //runs through the entire graph). The frequencies of the x-axis are strings, since zedgraph formatting
-            //does not have a graph of that style. We are unable to plot a curve at a specific point (case of symbol curves) 
-            //if the axis is a string, because of that, we use a new invisible axis (x2) to plot the frequencies.            
-            GraphPane myPane = graph.GraphPane;
-            myPane.Legend.IsVisible = false;
-            myPane.Legend.FontSpec.Size = 12;
-            myPane.Legend.Border.IsVisible = false;
+            List<double> freqs = new List<double>();
+            List<double> decibels = new List<double>();
+            List<double> masks = new List<double>();
+            List<bool> noReply = new List<bool>();
+
+            double[] allFreqs = { 125, 250, 500, 750, 1000, 1500, 2000, 3000, 4000, 6000, 8000 };
+
+            double[] allDecibels = { (double) dB125.Value, (double) dB250.Value, (double) dB500.Value, (double) dB750.Value,
+                                    (double) dB1000.Value, (double) dB1500.Value, (double) dB2000.Value, (double) dB3000.Value,
+                                    (double) dB4000.Value, (double) dB6000.Value, (double) dB8000.Value};
+
+            double[] allMasks = { (double)masking125.Value, (double)masking250.Value, (double)masking500.Value, (double)masking750.Value,
+                                  (double)masking1000.Value, (double)masking1500.Value, (double)masking2000.Value, (double)masking3000.Value,
+                                  (double)masking4000.Value, (double)masking6000.Value, (double)masking8000.Value};
 
 
-            myPane.Title.Text = "Audiograma";
-            myPane.Title.FontSpec.Size = 15;
-            myPane.XAxis.Title.Text = "Frequência (Hz)";
-            myPane.XAxis.Title.FontSpec.Size = 15;
-            myPane.XAxis.Scale.FontSpec.Size = 10;
+            bool[] allNoReply = { (bool) noReply125.Checked, (bool) noReply250.Checked, (bool) noReply500.Checked, (bool) noReply750.Checked,
+                                  (bool) noReply1000.Checked, (bool) noReply1500.Checked, (bool) noReply2000.Checked, (bool) noReply3000.Checked,
+                                  (bool) noReply4000.Checked, (bool) noReply6000.Checked, (bool)noReply8000.Checked};
 
-            myPane.YAxis.Title.Text = "Nível de audição (dB)";
-            myPane.YAxis.Title.FontSpec.Size = 15;
-            myPane.YAxis.Scale.FontSpec.Size = 10;
+            bool[] useFrequencyCheckResult = { (bool) useFrequency125.Checked, (bool) useFrequency250.Checked, (bool) useFrequency500.Checked, (bool) useFrequency750.Checked,
+                                               (bool) useFrequency1000.Checked, (bool) useFrequency1500.Checked, (bool) useFrequency2000.Checked, (bool) useFrequency3000.Checked,
+                                               (bool)useFrequency4000.Checked, (bool)useFrequency6000.Checked, (bool)useFrequency8000.Checked};
 
-            myPane.XAxis.Scale.MaxAuto = false;
-            myPane.XAxis.Scale.MinAuto = false;
-            myPane.YAxis.MajorGrid.IsVisible = true;
-            myPane.XAxis.MajorGrid.IsVisible = true;
-
-            myPane.YAxis.Scale.MajorStep = 10;
-            myPane.YAxis.Scale.Min = -20;
-            myPane.YAxis.Scale.Max = 120;
-            //reverse YAxis
-            myPane.YAxis.Scale.IsReverse = true;
-
-            myPane.XAxis.Type = AxisType.Text;
-            myPane.XAxis.Scale.Min = 0;
-            myPane.XAxis.Scale.Max = 8;
-            string[] XAxisText = { "125", "250", "500", "1000", "2000", "4000", "8000" };
-            myPane.XAxis.Scale.TextLabels = XAxisText;
-            myPane.XAxis.IsVisible = true;
-
-            //The invisible X2Axis to plot frequencies
-            myPane.X2Axis.Scale.MaxAuto = false;
-            myPane.X2Axis.Scale.MinAuto = false;
-            myPane.X2Axis.Type = AxisType.Linear;
-            myPane.X2Axis.Scale.Min = 0;
-            myPane.X2Axis.Scale.Max = 8;
-            myPane.X2Axis.IsVisible = false;
-
-            graph.AxisChange();
-            graph.Refresh();
-        }
-        public void plotAudiometry(ZedGraphControl graph, TonalAudiometryTest Audiometry)
-        {
-            GraphPane myPane = graph.GraphPane;
-            myPane.CurveList.Clear();
-            double[] freqs = new double[] { 1, 2, 3, 4, 5, 6, 7, 8 };
-            double[] freqVec = { 125, 250, 500, 1000, 2000, 4000, 8000 };
-            string audiometryString = "demo";
-            string audiometryType = "Air Right Unmasked";
-
-            audiometryString = string.Concat(audiometryString, "\r\n", "freqs: ");
-
-            for (int i = 0; i < Audiometry.Freqs.Length; i++)
+            int i = 0;
+            foreach (bool useFrequency in useFrequencyCheckResult)
             {
-                TonalAudiometryTest.drawSymbol(graph, (i+1d), Audiometry.dB[i], Audiometry.Masker[i], Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
-//                TonalAudiometryTest.drawSymbol(graph, Audiometry.Freqs[i], Audiometry.dB[i],Audiometry.Masker[i],Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
-//2^(x-1)*125
+                if (useFrequency)
+                {
+                    decibels.Add(allDecibels[i]);
+                    masks.Add(allMasks[i]);
+                    freqs.Add(allFreqs[i]);
+                    noReply.Add(allNoReply[i]);
+                }
+                i++;
             }
 
-            PointPairList audiometry = new PointPairList
-            {
-                { freqs, Audiometry.dB }
-            };
-            vAInterface.concatText(audiometryType);
-            LineItem audiometryCurve;
-
-            audiometryCurve = myPane.AddCurve(Audiometry.AudiometryType, audiometry, Audiometry.getColor(), SymbolType.None);
-            Audiometry.changeLine(audiometryCurve.Line);
-
-            audiometryTextBox.Text = audiometryString;
-            audiometryTextBox.Text = String.Format(
-                "{0}\r\n" + "Níveis auditivos: {1}\r\n" + "Frequências: {2}",
-                Audiometry.AudiometryType,
-                string.Join(", ", Audiometry.dB.ToArray()),
-                string.Join(", ", Audiometry.Freqs.ToArray()));
-            graph.AxisChange();
-            graph.Refresh();
-        }
-
-        private void previewAudiometryButton_Click(object sender, EventArgs e)
-        {
-            double[] decibel = { (double) freq1.Value, (double) freq2.Value, (double) freq3.Value, (double) freq4.Value,
-                                 (double) freq6.Value, (double) freq7.Value, (double) freq8.Value};
-
-            bool[] masking = { (bool) masking1.Checked, (bool) masking2.Checked, (bool) masking3.Checked, (bool) masking4.Checked,
-                               (bool) masking5.Checked, (bool) masking6.Checked, (bool) masking7.Checked};
-
-            bool[] noReply = { (bool) noReply1.Checked, (bool) noReply2.Checked, (bool) noReply3.Checked, (bool) noReply4.Checked,
-                               (bool) noReply5.Checked, (bool) noReply6.Checked, (bool) noReply7.Checked};
-
-            double[] freqs = { 125, 250, 500, 1000, 2000, 4000, 8000 };
-
-            TonalAudiometryTest Audiometry = new TonalAudiometryTest();
-
             string audiometryType = "";
+            Audiometry.audiometryDate = audiometryDate.Value;
             Audiometry.AudiometryType = audiometryType;
             Audiometry.Freqs = freqs;
-            Audiometry.dB = decibel;
+            Audiometry.dB = decibels;
             Audiometry.Side = audiometrySide.Text == "Esquerdo" ? "Left" : "Right";
-            Audiometry.Masker = masking;
+            Audiometry.Masker = masks;
             Audiometry.NoReply = noReply;
 
             if (Conduction.Text == "Aérea")
@@ -403,56 +338,62 @@ namespace perSONA
             audiometryType = audiometryType + "a, Via " + Conduction.Text;
 
             Audiometry.AudiometryType = audiometryType;
+        }
+        public void plotAudiometry(ZedGraphControl graph, TonalAudiometryTest Audiometry)
+        {
+            GraphPane myPane = graph.GraphPane;
+            myPane.CurveList.Clear();
+            string audiometryString = "demo";
+            string audiometryType = "Air Right Unmasked";
 
+            audiometryString = string.Concat(audiometryString, "\r\n", "freqs: ");
+
+            //linearize freqs
+            List<double> linearizedFreqs = new List<double>();
+            foreach (double frequency in Audiometry.Freqs)
+            {
+                linearizedFreqs.Add(Math.Log(frequency / 125, 2) + 1);
+            }
+
+            for (int i = 0; i < Audiometry.Freqs.Count; i++)
+            {
+                TonalAudiometryTest.drawSymbol(graph, linearizedFreqs[i], Audiometry.dB[i],Audiometry.Masker[i],Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
+//2^(x-1)*125
+            }
+
+            PointPairList audiometry = new PointPairList
+            {
+                {linearizedFreqs.ToArray(), Audiometry.dB.ToArray()}
+            };
+            vAInterface.concatText(audiometryType);
+            LineItem audiometryCurve;
+
+            audiometryCurve = myPane.AddCurve(Audiometry.AudiometryType, audiometry, Audiometry.getColor(), SymbolType.None);
+            audiometryCurve.IsX2Axis = true;
+            Audiometry.changeLine(audiometryCurve.Line);
+
+            audiometryTextBox.Text = audiometryString;
+            audiometryTextBox.Text = String.Format(
+                "{0}\r\n" + "Níveis auditivos: {1}\r\n" + "Frequências: {2}",
+                Audiometry.AudiometryType,
+                string.Join(", ", Audiometry.dB.ToArray()),
+                string.Join(", ", Audiometry.Freqs.ToArray()));
+            audiometryDate.Value = Audiometry.audiometryDate;
+            graph.AxisChange();
+            graph.Refresh();
+        }
+
+        private void previewAudiometryButton_Click(object sender, EventArgs e)
+        {
+            TonalAudiometryTest Audiometry = new TonalAudiometryTest();
+            makeAudiometry(Audiometry);
             plotAudiometry(audiometryGraph, Audiometry);
         }
 
         private void saveAudiometryButton_Click(object sender, EventArgs e)
         {
-            double[] decibel = { (double) freq1.Value, (double) freq2.Value, (double) freq3.Value, (double) freq4.Value,
-                                 (double) freq6.Value, (double) freq7.Value, (double) freq8.Value};
-
-            bool[] masking = { (bool) masking1.Checked, (bool) masking2.Checked, (bool) masking3.Checked, (bool) masking4.Checked,
-                               (bool) masking5.Checked, (bool) masking6.Checked, (bool) masking7.Checked};
-
-            bool[] noReply = { (bool) noReply1.Checked, (bool) noReply2.Checked, (bool) noReply3.Checked, (bool) noReply4.Checked,
-                               (bool) noReply5.Checked, (bool) noReply6.Checked, (bool) noReply7.Checked};
-
-            double[] freqs = { 125, 250, 500, 1000, 2000, 4000, 8000 };
-
-            TonalAudiometryTest Audiometry = new TonalAudiometryTest();
-
-            string audiometryType = "";
-            Audiometry.AudiometryType = audiometryType;
-            Audiometry.Freqs = freqs;
-            Audiometry.dB = decibel;
-            Audiometry.Side = audiometrySide.Text == "Esquerdo" ? "Left" : "Right";
-            Audiometry.Masker = masking;
-            Audiometry.NoReply = noReply;
-
-            if (Conduction.Text == "Aérea")
-            {
-                Audiometry.Via = "Air";
-            }
-            else if (Conduction.Text == "Óssea (mastóide)")
-            {
-                Audiometry.Via = "Bone (mastoid)";
-            }
-            else if (Conduction.Text == "Óssea (fronte)")
-            {
-                Audiometry.Via = "Bone (Forehead)";
-            }
-            else
-            {
-                Audiometry.Via = "Free field";
-            }
-
-            audiometryType = "Orelha " + audiometrySide.Text;
-            audiometryType = audiometryType.Remove(audiometryType.Length - 1);
-            audiometryType = audiometryType + "a, Via " + Conduction.Text;
-
-            Audiometry.AudiometryType = audiometryType;
-
+            TonalAudiometryTest Audiometry = new TonalAudiometryTest();            
+            makeAudiometry(Audiometry);
             vAInterface.addCompletedAudiometry(Audiometry, nameBox.Text);
 
             string jsonFile = string.Format("{0}/patients/{1}.json",
@@ -460,7 +401,6 @@ namespace perSONA
                                  nameBox.Text);
             string json = File.ReadAllText(jsonFile);
             person = JsonConvert.DeserializeObject<Patient>(json);
-
 
             bindPatient(person);
         }
@@ -497,6 +437,30 @@ namespace perSONA
                                             Properties.Settings.Default.RESULTS_FOLDER,
                                             "test-" + delete);
                 File.Delete(jsonFile);
+            }
+        }
+
+        private void useFrequency_CheckedChanged(object sender, EventArgs e)
+        {
+            bool[] useFrequency = { (bool) useFrequency125.Checked, (bool) useFrequency250.Checked, (bool) useFrequency500.Checked, (bool) useFrequency750.Checked,
+                                    (bool) useFrequency1000.Checked, (bool) useFrequency1500.Checked, (bool) useFrequency2000.Checked, (bool) useFrequency3000.Checked,
+                                    (bool)useFrequency4000.Checked, (bool)useFrequency6000.Checked, (bool)useFrequency8000.Checked};
+
+            System.Windows.Forms.Label[] freqsLabel = {label125, label250, label500, label750,
+                                                       label1000, label1500, label2000, label3000,
+                                                       label4000, label6000, label8000};
+            int i = 0;
+            foreach (bool check in useFrequency)
+            {
+                if (check)
+                {
+                    freqsLabel[i].ForeColor = Color.Green;
+                }
+                else
+                {
+                    freqsLabel[i].ForeColor = Color.Red;
+                }
+                i++;
             }
         }
     }
