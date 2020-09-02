@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VA;
@@ -132,8 +133,8 @@ namespace perSONA
             vAInterface.createAcousticScene(speechFile, test.NoiseFile);
 
             vAInterface.playScene(test.RadiusSpeech, test.AngleSpeech, actualSNR);
-
-
+            Thread.Sleep(3000);
+            vAInterface.stopScene();
         }
 
         private void updateIterationGraph(GraphPane graph, double[] signalToNoiseArray)

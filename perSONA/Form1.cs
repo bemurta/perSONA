@@ -404,11 +404,72 @@ namespace perSONA
             concatText("Selected Noise: " + noiseFile);
             vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
-            Thread.Sleep(3000);
+        }
+
+        public void playScene(double radius, double angle, double snr, double currentVolumePower, double refVolumePower)
+        {
+
+            if (!cond4.Checked)
+            {
+                concatText(String.Format("Scene not ok. Signal: {0}, Noise {1}, Receiver: {2}",
+                                     cond1.Checked, cond2.Checked, cond3.Checked));
+            }
+
+            double[] radiusList = { radius, radius };
+            double[] angleList = { angle, 0 };
+
+            plotSceneGraph(zedGraphControl1, radiusList, angleList);
+
+            double xSides = radius * Math.Sin(angle / 180 * Math.PI);
+            double zFront = radius * Math.Cos(angle / 180 * Math.PI);
+            double yHeight = 1.7;
+
+            //double normalizationFactor = trackBar2.Value / 100.0;
+            double normalizationFactor;
+            if (Properties.Settings.Default.CALIBRATED_AUDIOMETRY)
+            {
+                normalizationFactor = currentVolumePower/ 100.0;
+            }
+            else
+            {
+                normalizationFactor = refVolumePower / 100.0;
+            }
+            double powerSpeech = 0.25 * normalizationFactor;
+
+            double linRatio = Math.Pow(10.0, (snr / 20.0));
+            double powerNoise = powerSpeech / linRatio;
+
+            if (snr == 40)
+            {
+                powerNoise = 0;
+            }
+
+            vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
+            vA.SetSoundSourcePosition(noiseSource, new VAVec3(0, 1.7, radius));
+
+            vA.SetSoundSourceSoundPower(speechSource, powerSpeech);
+            vA.SetSoundSourceSignalSource(speechSource, speechSound);
+
+            vA.SetSoundSourceSoundPower(noiseSource, powerNoise);
+            vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
+
+            //concatText(string.Format("Created Source: {3} at position: {0},{1},{2}, looking forward",
+            //xSides, zFront, yHeight, speechSource));
+            concatText("Selected Speech: " + Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem)));
+            concatText(string.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %",
+                       powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
+            concatText("Selected Noise: " + noiseFile);
+            vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
+            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
+        }
+
+        public void stopScene()
+        {
+            vA.SetSignalSourceBufferPlaybackAction(speechSound, "stop");
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
         }
 
-        private void speechLeft_Click(object sender, EventArgs e)
+            private void speechLeft_Click(object sender, EventArgs e)
         {
             int angle = -90;
             int radius = 2;
@@ -877,19 +938,24 @@ namespace perSONA
             openTestForm("Default");
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void audiometryManualTest_Click(object sender, EventArgs e)
         {
-            openTestForm("Speech Left");
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            openTestForm("Speech Front");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            openTestForm("Speech Right");
+            if (Application.OpenForms["manualAudiometricTest"] == null)
+            {
+                try
+                {
+                    string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
+                    new manualAudiometricTest(this, subjects).Show();
+                }
+                catch (Exception)
+                {
+                    const string message = "Selecione um paciente e um aplicador para prosseguir";
+                    const string caption = "Erro";
+                    var result = MessageBox.Show(message, caption,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void openTestForm(string testTipe)

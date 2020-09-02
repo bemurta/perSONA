@@ -12,6 +12,8 @@ namespace perSONA
     {
 
         void playScene(double radius, double angle, double snr);
+        void playScene(double radius, double angle, double snr, double currentVolumePower, double refVolumePower);
+        void stopScene();
         void allSoundPlayersPlayScene(double radius, int numberOfSoundPlayers, string speechFile);
         void addCompletedTest(speechPerceptionTest test);
         string getDatabaseFolder();

@@ -38,5 +38,11 @@
     <Setting Name="EQUIPMENTS_TABLE_LOCATION" Type="System.String" Scope="User">
       <Value Profile="(Default)">data/Equipments.xlsx</Value>
     </Setting>
+    <Setting Name="CALIBRATED_AUDIOMETRY" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CALIBRATED_AUDIOMETRY_VALUES" Type="System.Double[]" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

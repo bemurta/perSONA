@@ -12,7 +12,7 @@ namespace perSONA.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -164,6 +164,29 @@ namespace perSONA.Properties {
             }
             set {
                 this["EQUIPMENTS_TABLE_LOCATION"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool CALIBRATED_AUDIOMETRY {
+            get {
+                return ((bool)(this["CALIBRATED_AUDIOMETRY"]));
+            }
+            set {
+                this["CALIBRATED_AUDIOMETRY"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public double[] CALIBRATED_AUDIOMETRY_VALUES {
+            get {
+                return ((double[])(this["CALIBRATED_AUDIOMETRY_VALUES"]));
+            }
+            set {
+                this["CALIBRATED_AUDIOMETRY_VALUES"] = value;
             }
         }
     }

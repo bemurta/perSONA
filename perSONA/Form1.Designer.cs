@@ -69,9 +69,7 @@ namespace perSONA
             this.label3 = new System.Windows.Forms.Label();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.testSetup = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.audiometryManualTest = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.audioDatabaseEditorAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -485,59 +483,29 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.testSetup.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.testSetup.Location = new System.Drawing.Point(5, 143);
+            this.testSetup.Location = new System.Drawing.Point(5, 97);
             this.testSetup.Margin = new System.Windows.Forms.Padding(5);
             this.testSetup.Name = "testSetup";
-            this.testSetup.Size = new System.Drawing.Size(746, 36);
+            this.testSetup.Size = new System.Drawing.Size(746, 82);
             this.testSetup.TabIndex = 3;
-            this.testSetup.Text = "Avaliação customizada";
+            this.testSetup.Text = "Avaliação de percepção de fala no ruido ";
             this.testSetup.UseVisualStyleBackColor = false;
             this.testSetup.Click += new System.EventHandler(this.testSetup_Click);
             // 
-            // button2
+            // audiometryManualTest
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.audiometryManualTest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(5, 51);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(746, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Fala a frente, ruído a frente";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(5, 5);
-            this.button5.Margin = new System.Windows.Forms.Padding(5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(746, 36);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Fala a esquerda, ruído a frente";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(5, 97);
-            this.button6.Margin = new System.Windows.Forms.Padding(5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(746, 36);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Fala a direita, ruído a direita";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.audiometryManualTest.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.audiometryManualTest.Location = new System.Drawing.Point(5, 5);
+            this.audiometryManualTest.Margin = new System.Windows.Forms.Padding(5);
+            this.audiometryManualTest.Name = "audiometryManualTest";
+            this.audiometryManualTest.Size = new System.Drawing.Size(746, 82);
+            this.audiometryManualTest.TabIndex = 0;
+            this.audiometryManualTest.Text = "Audiometria Tonal (Ensino)";
+            this.audiometryManualTest.UseVisualStyleBackColor = false;
+            this.audiometryManualTest.Click += new System.EventHandler(this.audiometryManualTest_Click);
             // 
             // menuStrip1
             // 
@@ -777,7 +745,7 @@ namespace perSONA
             this.groupBox6.Size = new System.Drawing.Size(773, 217);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Avaliaçao de percepção de fala";
+            this.groupBox6.Text = "Avaliações";
             // 
             // tableLayoutPanel3
             // 
@@ -786,17 +754,15 @@ namespace perSONA
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.button5, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.testSetup, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.button6, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.audiometryManualTest, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.testSetup, 0, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(8, 25);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(756, 184);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
@@ -1392,9 +1358,7 @@ namespace perSONA
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button testSetup;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button audiometryManualTest;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resultsFolderToolStripMenuItem;

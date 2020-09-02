@@ -26,10 +26,10 @@
     <ROW Property="ARPPRODUCTICON" Value="icone_perSONA.exe" Type="8"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="LVA-UFSC"/>
-    <ROW Property="ProductCode" Value="1033:{D046D97C-7EC0-4F19-8D4E-CE455C41C047} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{1DB5DE45-85DA-4940-AD63-1BDE8E102344} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="perSONA-BETA"/>
-    <ROW Property="ProductVersion" Value="1.5.16" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.6.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{2E351919-0754-48EA-9BCC-7450A9453229}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -52,6 +52,7 @@
     <ROW Directory="Ambisonics_Dir" Directory_Parent="Rendering_Dir" DefaultDir="AMBISO~1|Ambisonics"/>
     <ROW Directory="ArtificialReverb_Dir" Directory_Parent="Binaural_Dir" DefaultDir="ARTIFI~1|ArtificialReverb"/>
     <ROW Directory="Audio_Dir" Directory_Parent="Drivers_Dir" DefaultDir="Audio"/>
+    <ROW Directory="Audiometry_Dir" Directory_Parent="Sounds_Dir" DefaultDir="AUDIOM~1|Audiometry"/>
     <ROW Directory="Audiosignals_Dir" Directory_Parent="include_Dir" DefaultDir="AUDIOS~1|Audiosignals"/>
     <ROW Directory="Binaural_2_Dir" Directory_Parent="Reproduction_Dir" DefaultDir="Binaural"/>
     <ROW Directory="Binaural_Dir" Directory_Parent="Rendering_Dir" DefaultDir="Binaural"/>
@@ -131,6 +132,7 @@
     <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" ComponentId="{91C08A18-C122-4006-896B-3FC05ADB166A}" Directory_="perSONA_Dir" Attributes="256" KeyPath="perSONA.exe"/>
     <ROW Component="APPDIR" ComponentId="{DC46D28A-05EB-4A2A-AD0D-D391DA622250}" Directory_="APPDIR" Attributes="0"/>
     <ROW Component="COPYING" ComponentId="{2790BF3A-755A-4D52-8651-0D3E1AD03907}" Directory_="perSONA_Dir" Attributes="0" KeyPath="COPYING" Type="0"/>
+    <ROW Component="CircularProgressBar.dll" ComponentId="{9ADBAEFB-4ACD-4B0E-AE33-CB7E4A2E273D}" Directory_="perSONA_Dir" Attributes="0" KeyPath="CircularProgressBar.dll"/>
     <ROW Component="ClosedXML.dll" ComponentId="{26BDD520-B034-4243-8D86-6E2152D05D8D}" Directory_="perSONA_Dir" Attributes="0" KeyPath="ClosedXML.dll"/>
     <ROW Component="DAFF.dll" ComponentId="{01B414AE-F1B2-426D-B4FB-83083B9DC0B2}" Directory_="bin_Dir" Attributes="256" KeyPath="DAFF.dll"/>
     <ROW Component="DAFF.dll_1" ComponentId="{A80A64A8-4407-470F-A60C-EBCDE6FE1A1B}" Directory_="perSONA_Dir" Attributes="256" KeyPath="DAFF.dll_1"/>
@@ -343,6 +345,7 @@
     <ROW Component="VistaSpaceMouseTranscoder.dll_1" ComponentId="{896E7929-4221-435C-8C33-6E4541B21349}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaSpaceMouseTranscoder.dll_1"/>
     <ROW Component="VistaTools.dll" ComponentId="{D08B6522-1798-451E-A2C9-8F6A7FF5AB24}" Directory_="bin_Dir" Attributes="256" KeyPath="VistaTools.dll"/>
     <ROW Component="VistaTools.dll_1" ComponentId="{2D33CFA6-221B-47BB-B76C-BA973880A569}" Directory_="perSONA_Dir" Attributes="256" KeyPath="VistaTools.dll_1"/>
+    <ROW Component="WinFormAnimation.dll" ComponentId="{867AE9CA-4159-4C94-B0D2-9418256D4D20}" Directory_="perSONA_Dir" Attributes="0" KeyPath="WinFormAnimation.dll"/>
     <ROW Component="alcaim_f.WAV" ComponentId="{5F9FC00A-CD04-4DBC-AAEB-965469737F76}" Directory_="Speech_Dir" Attributes="0" KeyPath="alcaim_f.WAV" Type="0"/>
     <ROW Component="core.h" ComponentId="{F213B760-AEF4-4436-ACA5-6F325C5188FD}" Directory_="core_Dir" Attributes="0" KeyPath="core.h" Type="0"/>
     <ROW Component="itextsharp.dll" ComponentId="{5C4E8B0C-F36C-479D-8686-7B8F6365851B}" Directory_="perSONA_Dir" Attributes="0" KeyPath="itextsharp.dll"/>
@@ -392,6 +395,7 @@
     <ROW Component="tbbmalloc_proxy_debug.dll" ComponentId="{8FEBE9EA-A24A-44E6-8890-C07C6902EFC5}" Directory_="bin_Dir" Attributes="256" KeyPath="tbbmalloc_proxy_debug.dll"/>
     <ROW Component="tbbmalloc_proxy_debug.dll_1" ComponentId="{40236B56-C0E4-4AD2-9A51-CBD2700D59C2}" Directory_="perSONA_Dir" Attributes="256" KeyPath="tbbmalloc_proxy_debug.dll_1"/>
     <ROW Component="wav" ComponentId="{9AA2EFEE-8158-4EAA-B076-9AF1270400CE}" Directory_="data_Dir" Attributes="0" KeyPath="wav" Type="0"/>
+    <ROW Component="wav_1" ComponentId="{978F7CCF-CD5B-4EA3-8F77-FF712EAF7919}" Directory_="Audiometry_Dir" Attributes="0" KeyPath="wav_2" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -1140,6 +1144,20 @@
     <ROW File="ClosedXML.dll" Component_="ClosedXML.dll" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\packages\ClosedXML.0.95.3\lib\net46\ClosedXML.dll" SelfReg="false"/>
     <ROW File="DocumentFormat.OpenXml.dll" Component_="DocumentFormat.OpenXml.dll" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\packages\DocumentFormat.OpenXml.2.11.2\lib\net46\DocumentFormat.OpenXml.dll" SelfReg="false"/>
     <ROW File="ExcelNumberFormat.dll" Component_="ExcelNumberFormat.dll" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="CircularProgressBar.dll" Component_="CircularProgressBar.dll" FileName="CIRCUL~1.DLL|CircularProgressBar.dll" Attributes="0" SourcePath="..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll" SelfReg="false"/>
+    <ROW File="HMSII.PNG" Component_="png_1" FileName="HMSII~1.PNG|HMS II.PNG" Attributes="0" SourcePath="..\perSONA\logo\mannequin\HMS II.PNG" SelfReg="false"/>
+    <ROW File="WinFormAnimation.dll" Component_="WinFormAnimation.dll" FileName="WINFOR~1.DLL|WinFormAnimation.dll" Attributes="0" SourcePath="..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll" SelfReg="false"/>
+    <ROW File="wav_2" Component_="wav_1" FileName="1000.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\1000.wav" SelfReg="false"/>
+    <ROW File="wav_3" Component_="wav_1" FileName="125.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\125.wav" SelfReg="false"/>
+    <ROW File="wav_4" Component_="wav_1" FileName="1500.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\1500.wav" SelfReg="false"/>
+    <ROW File="wav_5" Component_="wav_1" FileName="2000.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\2000.wav" SelfReg="false"/>
+    <ROW File="wav_6" Component_="wav_1" FileName="250.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\250.wav" SelfReg="false"/>
+    <ROW File="wav_7" Component_="wav_1" FileName="3000.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\3000.wav" SelfReg="false"/>
+    <ROW File="wav_8" Component_="wav_1" FileName="4000.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\4000.wav" SelfReg="false"/>
+    <ROW File="wav_9" Component_="wav_1" FileName="500.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\500.wav" SelfReg="false"/>
+    <ROW File="wav_10" Component_="wav_1" FileName="6000.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\6000.wav" SelfReg="false"/>
+    <ROW File="wav_11" Component_="wav_1" FileName="750.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\750.wav" SelfReg="false"/>
+    <ROW File="wav_12" Component_="wav_1" FileName="8000.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Audiometry\8000.wav" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>
@@ -1491,6 +1509,9 @@
     <ROW Feature_="MainFeature" Component_="ClosedXML.dll"/>
     <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll"/>
     <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll"/>
+    <ROW Feature_="MainFeature" Component_="CircularProgressBar.dll"/>
+    <ROW Feature_="MainFeature" Component_="WinFormAnimation.dll"/>
+    <ROW Feature_="MainFeature" Component_="wav_1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
@@ -1528,7 +1549,7 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="UninstallperSONA" Directory_="perSONA_Dir" Name="UNINST~1|Uninstall perSONA" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
     <ROW Shortcut="UninstallperSONA_1" Directory_="SHORTCUTDIR" Name="UNINST~1|Uninstall perSONA" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
-    <ROW Shortcut="perSONALITE" Directory_="DesktopFolder" Name="PERSON~1.16-|perSONA v1.5.16-BETA" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" Target="[#perSONA.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
+    <ROW Shortcut="perSONALITE" Directory_="DesktopFolder" Name="PERSON~1.0-B|perSONA v1.6.0-BETA" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" Target="[#perSONA.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
     <ROW Shortcut="run_VAServer" Directory_="DesktopFolder" Name="VA(PER~1|VA (perSONA)" Component_="run_VAServer.bat" Target="[#run_VAServer.bat]" Hotkey="0" Icon_="run_VAServer_1.exe" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">

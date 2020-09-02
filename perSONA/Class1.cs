@@ -762,7 +762,11 @@ namespace perSONA
             curve.Symbol.UserSymbol.AddArc(new Rectangle(0, -1, 1, 1), 130, 180);
         }
 
-
+        public static void updateGraph(ZedGraphControl graph)
+        {
+            graph.AxisChange();
+            graph.Refresh();
+        }
         //Pass line object to dash line
         public static void DrawDashLine(Line line)
         {

@@ -2271,10 +2271,15 @@
             this.masking8000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking8000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking8000.Location = new System.Drawing.Point(1213, 77);
             this.masking8000.Margin = new System.Windows.Forms.Padding(5);
             this.masking8000.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2288,10 +2293,15 @@
             this.masking6000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking6000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking6000.Location = new System.Drawing.Point(1104, 77);
             this.masking6000.Margin = new System.Windows.Forms.Padding(5);
             this.masking6000.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2305,10 +2315,15 @@
             this.masking4000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking4000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking4000.Location = new System.Drawing.Point(995, 77);
             this.masking4000.Margin = new System.Windows.Forms.Padding(5);
             this.masking4000.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2322,10 +2337,15 @@
             this.masking2000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking2000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking2000.Location = new System.Drawing.Point(777, 77);
             this.masking2000.Margin = new System.Windows.Forms.Padding(5);
             this.masking2000.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2371,10 +2391,15 @@
             this.masking250.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking250.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking250.Location = new System.Drawing.Point(232, 77);
             this.masking250.Margin = new System.Windows.Forms.Padding(5);
             this.masking250.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2404,10 +2429,15 @@
             this.masking750.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking750.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking750.Location = new System.Drawing.Point(450, 77);
             this.masking750.Margin = new System.Windows.Forms.Padding(5);
             this.masking750.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2421,10 +2451,15 @@
             this.masking500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking500.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking500.Location = new System.Drawing.Point(341, 77);
             this.masking500.Margin = new System.Windows.Forms.Padding(5);
             this.masking500.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2438,10 +2473,15 @@
             this.masking1000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking1000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking1000.Location = new System.Drawing.Point(559, 77);
             this.masking1000.Margin = new System.Windows.Forms.Padding(5);
             this.masking1000.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2455,10 +2495,15 @@
             this.masking1500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking1500.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking1500.Location = new System.Drawing.Point(668, 77);
             this.masking1500.Margin = new System.Windows.Forms.Padding(5);
             this.masking1500.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2472,10 +2517,15 @@
             this.masking125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking125.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking125.Location = new System.Drawing.Point(123, 77);
             this.masking125.Margin = new System.Windows.Forms.Padding(5);
             this.masking125.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
@@ -2489,10 +2539,15 @@
             this.masking3000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.masking3000.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.masking3000.Location = new System.Drawing.Point(886, 77);
             this.masking3000.Margin = new System.Windows.Forms.Padding(5);
             this.masking3000.Maximum = new decimal(new int[] {
-            55,
+            120,
             0,
             0,
             0});
