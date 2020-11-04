@@ -74,12 +74,11 @@ namespace perSONA
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.audioDatabaseEditorAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resultsFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vASettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recalibrateAudiometry = new System.Windows.Forms.ToolStripMenuItem();
             this.patientAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calibraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -503,7 +502,7 @@ namespace perSONA
             this.audiometryManualTest.Name = "audiometryManualTest";
             this.audiometryManualTest.Size = new System.Drawing.Size(746, 82);
             this.audiometryManualTest.TabIndex = 0;
-            this.audiometryManualTest.Text = "Audiometria Tonal (Ensino)";
+            this.audiometryManualTest.Text = "Audiometria tonal (ensino)";
             this.audiometryManualTest.UseVisualStyleBackColor = false;
             this.audiometryManualTest.Click += new System.EventHandler(this.audiometryManualTest_Click);
             // 
@@ -515,8 +514,7 @@ namespace perSONA
             this.patientAreaToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.calibraçãoToolStripMenuItem,
-            this.contactToolStripMenuItem,
-            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem});
+            this.contactToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
@@ -529,7 +527,7 @@ namespace perSONA
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.audioDatabaseEditorAreaToolStripMenuItem,
             this.resultsFolderToolStripMenuItem,
-            this.vASettingsToolStripMenuItem});
+            this.recalibrateAudiometry});
             this.settingsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(131, 27);
@@ -549,11 +547,12 @@ namespace perSONA
             this.resultsFolderToolStripMenuItem.Text = "Pasta destino dos resultados";
             this.resultsFolderToolStripMenuItem.Click += new System.EventHandler(this.resultsFolderToolStripMenuItem_Click);
             // 
-            // vASettingsToolStripMenuItem
+            // recalibrateAudiometry
             // 
-            this.vASettingsToolStripMenuItem.Name = "vASettingsToolStripMenuItem";
-            this.vASettingsToolStripMenuItem.Size = new System.Drawing.Size(363, 26);
-            this.vASettingsToolStripMenuItem.Text = "Configurações do VA";
+            this.recalibrateAudiometry.Name = "recalibrateAudiometry";
+            this.recalibrateAudiometry.Size = new System.Drawing.Size(363, 26);
+            this.recalibrateAudiometry.Text = "Recalibrar audiômetro";
+            this.recalibrateAudiometry.Click += new System.EventHandler(this.recalibrateAudiometry_Click);
             // 
             // patientAreaToolStripMenuItem
             // 
@@ -586,11 +585,6 @@ namespace perSONA
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(86, 27);
             this.contactToolStripMenuItem.Text = "Contato";
             this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
-            // 
-            // áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem
-            // 
-            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Name = "áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem";
-            this.áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem.Size = new System.Drawing.Size(14, 27);
             // 
             // tabControl1
             // 
@@ -1298,7 +1292,7 @@ namespace perSONA
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.5  BETA";
+            this.Text = "perSONA 1.6  BETA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -1362,7 +1356,7 @@ namespace perSONA
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resultsFolderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vASettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recalibrateAudiometry;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem patientAreaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem audioDatabaseEditorAreaToolStripMenuItem;
@@ -1375,7 +1369,6 @@ namespace perSONA
         private System.Windows.Forms.Button ShowPatientData;
         private System.Windows.Forms.Button DeletePatient;
         private System.Windows.Forms.ListBox patientBox;
-        private System.Windows.Forms.ToolStripMenuItem áreaDeEdiçãoDeArquivosDeÁudioToolStripMenuItem;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel4;
         private ToolStripMenuItem contactToolStripMenuItem;

@@ -21,8 +21,10 @@ namespace perSONA
 
         public bool calibratedSystem = Properties.Settings.Default.CALIBRATED_AUDIOMETRY;
         public double[] intensitRef = new double[11];
+        public double[] maskIntensitRef = new double[11];
 
         public double currentVolumePower = 0;
+        public double currentMaskVolumePower = 0;
 
         public VANet vA { get; private set; }
 
@@ -61,6 +63,7 @@ namespace perSONA
         double currentdB = 50;
         bool currentNoReply = false;
 
+        double radius;
         public manualAudiometricTest(IvAInterface ivAInterface, string[] subjects)
         {
             InitializeComponent();
@@ -68,9 +71,10 @@ namespace perSONA
             this.subjects = subjects;
             patientLabel.Text = subjects[1];
             applicatorLabel.Text = subjects[0];
-            mask = true;
-            showMask();
-            mask = false;
+
+            maskLabel.Text = currentMask.ToString();
+            maskProgressBar.Value = Convert.ToInt32(currentMask);
+
             TonalAudiometryTest.bindGraph(leftGraph);
             TonalAudiometryTest.bindGraph(rightGraph);
         }
@@ -81,14 +85,12 @@ namespace perSONA
                 freq_sound.Add(freq, "data\\Sounds\\Audiometry\\" + freq.ToString() + ".wav");
                 freq_noise.Add(freq, "data\\Sounds\\Audiometry\\mask" + freq.ToString() + ".wav");
             }
-            //calibratedSystem = false;  //Só para testes
 
             if (!calibratedSystem)
             {
                 calibrateEnable.BackColor = Color.Purple;
-                leftGraph.Visible = false;
-                rightGraph.Visible = false;
-                const string message = "Olá, bem-vindo a interface de audiometria tonal do perSONA,\n" + "antes de realizar audiometrias é fundamental calibrar o sistema,\n" + "para isso, clique no botão \"Calibrate\".";
+                graphsPanel.Visible = false;
+                const string message = "Olá, bem-vindo a interface de audiometria tonal limiar do perSONA,\n" + "antes de realizar audiometrias é fundamental fazer a calibração do audiômetro, para isso, clique no botão \"Calibrate\".";
                 const string caption = "Bem-vindo";
                 MessageBox.Show(message, caption,
                     MessageBoxButtons.OK);
@@ -96,11 +98,49 @@ namespace perSONA
             }
             else
             {
-                calibrationPanel.Visible = false;
-                volumePanel.Visible = false;
+                allCalibrationPanel.Visible = false;
+                allPowerPanel.Visible = false;
+
+                //Speech reference sound power
                 intensitRef = Properties.Settings.Default.CALIBRATED_AUDIOMETRY_VALUES;
+
+                //Noise reference sound power
+                int i = 0;
+                foreach (double freq in intensitRef)
+                {
+                    if (i < 3) maskIntensitRef[i] = Math.Pow(10, 4 / 20.0) * freq;              //125, 250, 500                    
+                    else if (i < 4 | i > 7) maskIntensitRef[i] = Math.Pow(10, 5 / 20.0) * freq; //750, 4000, 6000, 8000
+                    else maskIntensitRef[i] = Math.Pow(10, 6 / 20.0) * freq;                    //1000, 1500, 2000, 3000
+                    i++;
+                    vAInterface.concatText(freq.ToString());
+                }
                 updateVolumePower();
+                MessageBox.Show("Lembre-se de ajustar o volume do computador em 100.", "Aviso", MessageBoxButtons.OK);
             }
+        }
+
+        private void VaConfig()
+        {
+            radius = 3;
+            vA = vAInterface.getVa();
+
+            vA.Reset();
+            int receiverId = vA.CreateSoundReceiver("Subject");
+
+            double xSides = 0;
+            double zFront = 0;
+            double yHeight = 1.7;
+
+
+            VAVec3 receiverPosition = new VAVec3(xSides, yHeight, zFront);
+            VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
+            VAVec3 receiverOrientationU = new VAVec3(0, 1, 0);
+
+            vA.SetSoundReceiverPosition(receiverId, receiverPosition);      //this receiver have position (xSides, yHeight, zFront)
+            vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU); //this receive look ahead with the top of the head up
+
+            int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
+            vA.SetSoundReceiverDirectivity(receiverId, hrirId);
         }
 
         private void changeVia_Click(object sender, EventArgs e)
@@ -134,12 +174,39 @@ namespace perSONA
         {
             updateCorrectAnswers(correctAnswers = 0);
             mask = !mask;
-            if (mask) maskLight.BackColor = Color.Yellow;
+            if (mask)
+            {
+                maskLight.BackColor = Color.Yellow;
+                PlayNoise();
+            }
             else
             {
                 maskLight.BackColor = Color.Silver;
                 currentMask = 0;
                 showMask();
+                vAInterface.stopScene(false, true);
+            }
+        }
+        
+        private void PlayNoise()
+        {
+            VaConfig();
+
+            string speechFile = freq_sound[currentFrequency];
+            string noiseFile = freq_noise[currentFrequency];
+
+            if (currentMaskVolumePower < 200000)
+            {
+                if (Side == "Left") vAInterface.playScene(radius, false, speechFile, 0, 0, true, noiseFile, 90, currentMaskVolumePower); 
+                else vAInterface.playScene(radius, false, speechFile, 0, 0, false, noiseFile, 270, currentMaskVolumePower);
+            }
+            else
+            {
+                soundLight.BackColor = Color.Silver;
+                MessageBox.Show("Limite de resposta do audiômetro atingido", "Erro",
+                                                        MessageBoxButtons.OK,
+                                                        MessageBoxIcon.Error);
+                
             }
         }
 
@@ -192,10 +259,10 @@ namespace perSONA
             }
             else
             {
-                intensitRef[freqID - 1] = volumeBar.Value + (decimalVolumeBar.Value / 100.0);
+                intensitRef[freqID - 1] = Decimal.ToDouble(volume.Value);
                 if (freqID == 1)
                 {
-                    MessageBox.Show("Sistema calibrado.", "Sucesso", MessageBoxButtons.OK);
+                    MessageBox.Show("Audiômetro calibrado.", "Sucesso", MessageBoxButtons.OK);
                     calibratedSystem = true;
                     Properties.Settings.Default.CALIBRATED_AUDIOMETRY_VALUES = intensitRef;
                     Properties.Settings.Default.CALIBRATED_AUDIOMETRY = calibratedSystem;
@@ -215,7 +282,7 @@ namespace perSONA
             if (!freqs.Contains(currentFrequency))
             {
                 double linearizedFreq = Math.Log(mapFreqs[freqID] / 125, 2) + 1;
-                TonalAudiometryTest.drawSymbol(graph, linearizedFreq, currentdB, currentMask, false, Side, Via);
+                TonalAudiometryTest.drawSymbol(graph, linearizedFreq, currentdB, currentMask, currentNoReply, Side, Via);
                 freqs.Add(currentFrequency);
                 db.Add(currentFrequency, currentdB);
                 mask.Add(currentFrequency, currentMask);
@@ -272,7 +339,7 @@ namespace perSONA
                 };
                 LineItem audiometryCurve;
 
-                Audiometry.Via = "Air";
+                Audiometry.Via = Via;
                 Audiometry.Side = Side;
                 Audiometry.Freqs = freqs;
                 Audiometry.dB = db;
@@ -381,62 +448,34 @@ namespace perSONA
             maskLabel.Text = currentMask.ToString();
             maskProgressBar.Value = Convert.ToInt32(currentMask);
             updateCorrectAnswers(correctAnswers = 0);
+            currentMaskVolumePower = Math.Pow(10, currentMask / 20.0) * maskIntensitRef[freqID - 1];
         }
 
         private void Sound_MouseUp(object sender, MouseEventArgs e)
         {
             soundLight.BackColor = Color.Silver;
-            vAInterface.stopScene();
+            vAInterface.stopScene(true, false);
         }
 
         private void Sound_MouseDown(object sender, MouseEventArgs e)
         {
             soundLight.BackColor = Color.Yellow;
 
-            double radius = 3;
-            vA = vAInterface.getVa();
-
-            vA.Reset();
-            int receiverId = vA.CreateSoundReceiver("Subject");
-
-            double xSides = 0;
-            double zFront = 0;
-            double yHeight = 1.7;
-
-
-            VAVec3 receiverPosition = new VAVec3(xSides, yHeight, zFront);
-            VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
-            VAVec3 receiverOrientationU = new VAVec3(0, 1, 0);
-
-            vA.SetSoundReceiverPosition(receiverId, receiverPosition);      //this receiver have position (xSides, yHeight, zFront)
-            vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU); //this receive look ahead with the top of the head up
-            vAInterface.concatText(string.Format("Receiver: {3} at position: {0},{1},{2}, looking forward ", xSides, zFront, yHeight, receiverId));
-
-            int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
-            vA.SetSoundReceiverDirectivity(receiverId, hrirId);
+            VaConfig();
 
             string speechFile = freq_sound[currentFrequency];
             string noiseFile = freq_noise[currentFrequency];
 
-            vAInterface.concatText(speechFile);
-
             if (calibratedSystem)
             {
-                if (currentVolumePower < 100)
+                if (currentVolumePower < 200000)
                 {
-                    if (Side == "Left")
-                    {
-                        vAInterface.createAcousticScene(speechFile, speechFile);
-                        vAInterface.playScene(radius, 270, 40, currentVolumePower, intensitRef[freqID - 1]);
-                    }
-                    else
-                    {
-                        vAInterface.createAcousticScene(speechFile, speechFile);
-                        vAInterface.playScene(radius, 90, 40, currentVolumePower, intensitRef[freqID - 1]);
-                    }
+                    if (Side == "Left") vAInterface.playScene(radius, true, speechFile, currentVolumePower, 270, false, noiseFile, 0, 0); 
+                    else vAInterface.playScene(radius, true, speechFile, currentVolumePower, 90, false, noiseFile, 0, 0);
                 }
                 else
                 {
+                    soundLight.BackColor = Color.Silver;
                     MessageBox.Show("Limite de resposta do audiômetro atingido", "Erro",
                                                         MessageBoxButtons.OK,
                                                         MessageBoxIcon.Error);
@@ -444,12 +483,12 @@ namespace perSONA
             }
             else
             {
-                vAInterface.createAcousticScene(speechFile, speechFile);
-                vAInterface.playScene(radius, 0, 40, currentVolumePower, volumeBar.Value+(decimalVolumeBar.Value / 100.0));
+                if (Side == "Left") vAInterface.playScene(radius, true, speechFile, Decimal.ToDouble(volume.Value), 270, false, noiseFile, 0, 0);                
+                else vAInterface.playScene(radius, true, speechFile, Decimal.ToDouble(volume.Value), 90, false, noiseFile, 0, 0);                
             }
         }
 
-        private void manualAudiometricTest_KeyDown(object sender, KeyEventArgs e)
+    private void manualAudiometricTest_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 116 | e.KeyValue == 179)
             {
@@ -473,13 +512,10 @@ namespace perSONA
 
         private void calibrateEnable_Click(object sender, EventArgs e)
         {
-            dbPanel.Visible = false;
-            soundDetectedPanel.Visible = false;
-            resetPanel.Visible = End.Visible = false;
-            maskPanel.Visible = onOffMaskPanel.Visible = false;
-            viaPanel.Visible = false;
-            sidePanel.Visible = false;
+            alldBPanel.Visible = allMaskPanel.Visible = allResetFinishPanel.Visible = graphsPanel.Visible = false;
+            soundDetectedPanel.Visible = onOffMaskPanel.Visible = viaPanel.Visible = false;
             freqUp.Visible = freqDown.Visible = false;
+
             currentdB = 0;
             freqID = 11;
             showFreq();
@@ -487,16 +523,19 @@ namespace perSONA
 
             calibrateLight.BackColor = Color.Yellow;
             MessageBox.Show("A calibração utilizará seu limiar auditivo como referência, assumindo que você tem uma audição saudável, " +
-                "portanto, você precisa ajustar o volume em cada uma das frequências até a minima intensidade em que ainda seja possível ouvir.", "Calibração  1/5", MessageBoxButtons.OK);
-            MessageBox.Show("Ajuste o volume do seu computador para 10%.", "Calibração  2/5", MessageBoxButtons.OK);
-            volumeBar.BackColor = decimalVolumeBar.BackColor = Color.Purple;
-            MessageBox.Show("Para cada uma das frequências que serão calibradas, ajuste o volume através das trackbars \"Volume Power\", o resultado desejado é o menor volume com som audível.", "Calibração  4/5", MessageBoxButtons.OK);
-            volumeBar.BackColor = decimalVolumeBar.BackColor = SystemColors.Control;
+                "portanto, você precisa ajustar o volume em cada uma das frequências até a minima intensidade em que ainda seja possível ouvir.", "Calibração  1/6", MessageBoxButtons.OK);
+            MessageBox.Show("Ajuste o volume do seu computador para 100.", "Calibração  2/6", MessageBoxButtons.OK);
+            volume.BackColor = Color.Purple;
+            MessageBox.Show("Para cada uma das frequências que serão calibradas, ajuste a potência sonora com o controle numérico \"Power\", o resultado desejado é a menor potência em que o som seja audível.", "Calibração  3/6", MessageBoxButtons.OK);
+            volume.BackColor = SystemColors.Control;
             Sound.BackColor = Color.Purple;
-            MessageBox.Show("O som correspondente a cada frequência pode ser gerando clicando no botão (\"Sound\").", "Calibração  4/5", MessageBoxButtons.OK);
+            MessageBox.Show("O som correspondente a cada frequência, será gerado enquanto o botão \"Sound\" estiver pressionado.", "Calibração  4/6", MessageBoxButtons.OK);
             Sound.BackColor = Color.Black;
+            changeSide.BackColor = Color.Purple;
+            MessageBox.Show("Para melhor resultado, teste cada frenquência e cada potência em ambas as orelhas, dando prioridade para a orelha com melhor audição (a orelha que percebe o estímulo de menor potência).", "Calibração  5/6", MessageBoxButtons.OK);
+            changeSide.BackColor = Color.Black;
             saveFrequency.BackColor = Color.Purple;
-            MessageBox.Show("Após calibrar salve o resultado do limiar para cada frequência clicando em (\"Save\").", "Calibração  5/5", MessageBoxButtons.OK);
+            MessageBox.Show("Após calibrar, salve o resultado do limiar para cada frequência clicando em \"Save\".", "Calibração  6/6", MessageBoxButtons.OK);
             saveFrequency.BackColor = Color.Black;
         }
 
@@ -504,17 +543,8 @@ namespace perSONA
         {
             currentVolumePower = Math.Pow(10, currentdB / 20.0) * intensitRef[freqID - 1];
 
-            if (currentVolumePower > 100) currentNoReply = true;
+            if (currentVolumePower > 200000) currentNoReply = true;
             else currentNoReply = false;
-        }
-        private void volumeBar_Scroll(object sender, EventArgs e)
-        {
-            volumeLabel.Text = (volumeBar.Value + (decimalVolumeBar.Value/100.0)).ToString();
-        }
-
-        private void decimalVolumeBar_Scroll(object sender, EventArgs e)
-        {
-            volumeLabel.Text = (volumeBar.Value + (decimalVolumeBar.Value / 100.0)).ToString();
         }
     }
 }

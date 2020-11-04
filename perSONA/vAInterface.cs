@@ -10,10 +10,9 @@ namespace perSONA
 {
     public interface IvAInterface
     {
-
         void playScene(double radius, double angle, double snr);
-        void playScene(double radius, double angle, double snr, double currentVolumePower, double refVolumePower);
-        void stopScene();
+        void playScene(double radius, bool speechON, string speechFile, double currentSpeechPower, double speechAngle, bool noiseON, string noiseFile, double noiseAngle, double currentNoisePower);
+        void stopScene(bool speechON, bool noiseON);
         void allSoundPlayersPlayScene(double radius, int numberOfSoundPlayers, string speechFile);
         void addCompletedTest(speechPerceptionTest test);
         string getDatabaseFolder();

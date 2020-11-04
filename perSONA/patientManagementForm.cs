@@ -46,6 +46,7 @@ namespace perSONA
             work.SelectedIndex = 0;
             bindPatient(person);
             TonalAudiometryTest.bindGraph(audiometryGraph);
+            nameBox.Enabled = false;
             this.Text = "Paciente: " + person.Name;
             this.person = person;
         }
@@ -97,7 +98,10 @@ namespace perSONA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label3.Text = "Alterações salvas!";
+            const string message = "Alterações salvas!";
+            const string caption = "Sucesso";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.OK);
             Patient person = new Patient()
             {
                 Name = nameBox.Text,
@@ -266,6 +270,31 @@ namespace perSONA
         {
             TonalAudiometryTest Audiometry = readAudiometry(audiometryLists.SelectedItem.ToString());
             plotAudiometry(audiometryGraph, Audiometry);
+            audiometryDate.Value = Audiometry.audiometryDate;
+            if (Audiometry.Via == "Air")
+            {
+                Conduction.Text = "aérea";
+            }
+            else if (Audiometry.Via == "Bone (mastoid)")
+            {
+                Conduction.Text = "óssea (mastóide)";
+            }
+            else if (Audiometry.Via == "Bone (forehead)")
+            {
+                Conduction.Text = "óssea (fronte)";
+            }
+            else
+            {
+                Conduction.Text = "campo livre";
+            }
+            if (Audiometry.Side == "Left")
+            {
+                audiometrySide.Text = "Esquerdo";
+            }
+            else
+            {
+                audiometrySide.Text = "Direito";
+            }
         }
 
         public void makeAudiometry(TonalAudiometryTest Audiometry)

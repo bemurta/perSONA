@@ -134,7 +134,7 @@ namespace perSONA
 
             vAInterface.playScene(test.RadiusSpeech, test.AngleSpeech, actualSNR);
             Thread.Sleep(3000);
-            vAInterface.stopScene();
+            vAInterface.stopScene(true, true);
         }
 
         private void updateIterationGraph(GraphPane graph, double[] signalToNoiseArray)

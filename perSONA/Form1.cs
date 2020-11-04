@@ -406,67 +406,66 @@ namespace perSONA
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
         }
 
-        public void playScene(double radius, double angle, double snr, double currentVolumePower, double refVolumePower)
+        public void playScene(double radius, bool speechON, string speechFile, double currentSpeechPower, double speechAngle, bool noiseON, string noiseFile, double noiseAngle, double currentNoisePower)
         {
 
-            if (!cond4.Checked)
+            if (speechON)
             {
-                concatText(String.Format("Scene not ok. Signal: {0}, Noise {1}, Receiver: {2}",
-                                     cond1.Checked, cond2.Checked, cond3.Checked));
+                double xSides = radius * Math.Sin(speechAngle / 180 * Math.PI);
+                double zFront = radius * Math.Cos(speechAngle / 180 * Math.PI);
+                double yHeight = 1.7;
+
+                double powerSpeech = (currentSpeechPower / 100000.0) * 0.25;
+                speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
+                speechSource = vA.CreateSoundSource("Speech");
+
+                int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+                vA.SetSoundSourceDirectivity(speechSource, humanDirectivity);
+
+                vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
+                vA.SetSoundSourceSoundPower(speechSource, powerSpeech);
+                vA.SetSoundSourceSignalSource(speechSource, speechSound);
             }
 
-            double[] radiusList = { radius, radius };
-            double[] angleList = { angle, 0 };
-
-            plotSceneGraph(zedGraphControl1, radiusList, angleList);
-
-            double xSides = radius * Math.Sin(angle / 180 * Math.PI);
-            double zFront = radius * Math.Cos(angle / 180 * Math.PI);
-            double yHeight = 1.7;
-
-            //double normalizationFactor = trackBar2.Value / 100.0;
-            double normalizationFactor;
-            if (Properties.Settings.Default.CALIBRATED_AUDIOMETRY)
+            if (noiseON)
             {
-                normalizationFactor = currentVolumePower/ 100.0;
-            }
-            else
-            {
-                normalizationFactor = refVolumePower / 100.0;
-            }
-            double powerSpeech = 0.25 * normalizationFactor;
+                double noisexSides = radius * Math.Sin(noiseAngle / 180 * Math.PI);
+                double noisezFront = radius * Math.Cos(noiseAngle / 180 * Math.PI);
+                double noiseyHeight = 1.7;
 
-            double linRatio = Math.Pow(10.0, (snr / 20.0));
-            double powerNoise = powerSpeech / linRatio;
+                double powerNoise = (currentNoisePower / 100000.0) * 0.25;
+                noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
+                noiseSource = vA.CreateSoundSource("Noise");
 
-            if (snr == 40)
-            {
-                powerNoise = 0;
+                vA.SetSoundSourcePosition(noiseSource, new VAVec3(noisexSides, noiseyHeight, noisezFront));
+
+                vA.SetSoundSourceSoundPower(noiseSource, powerNoise);
+                vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
             }
 
-            vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
-            vA.SetSoundSourcePosition(noiseSource, new VAVec3(0, 1.7, radius));
-
-            vA.SetSoundSourceSoundPower(speechSource, powerSpeech);
-            vA.SetSoundSourceSignalSource(speechSource, speechSound);
-
-            vA.SetSoundSourceSoundPower(noiseSource, powerNoise);
-            vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
-
-            //concatText(string.Format("Created Source: {3} at position: {0},{1},{2}, looking forward",
-            //xSides, zFront, yHeight, speechSource));
-            concatText("Selected Speech: " + Path.Combine(speechFolder, listBox2.GetItemText(listBox2.SelectedItem)));
-            concatText(string.Format("linear ratio: {2} ({3} dB), speech power: {0}, noise power: {1} - Volume: {4} %",
-                       powerSpeech, powerNoise, linRatio, 20 * Math.Log10(linRatio), normalizationFactor * 100.0));
-            concatText("Selected Noise: " + noiseFile);
-            vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
+            if (speechON) vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
+            
+            if (noiseON)
+            {
+                vA.SetSignalSourceBufferLooping(noiseSound, true);
+                vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
+            }
         }
 
-        public void stopScene()
+        public void stopScene(bool speechON, bool noiseON)
         {
-            vA.SetSignalSourceBufferPlaybackAction(speechSound, "stop");
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
+            if (speechON)
+            {
+                vA.SetSignalSourceBufferPlaybackAction(speechSound, "pause");
+                vA.SetSignalSourceBufferPlaybackAction(speechSound, "stop");
+                vA.DeleteSignalSource(speechSound);
+            }
+            if (noiseON)
+            {
+                vA.SetSignalSourceBufferPlaybackAction(noiseSound, "pause");
+                vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
+                vA.DeleteSignalSource(noiseSound);
+            }
         }
 
             private void speechLeft_Click(object sender, EventArgs e)
@@ -837,13 +836,30 @@ namespace perSONA
 
             if (Audiometry.Side == "Left")
             {
-                timestamp = Audiometry.audiometryDate.ToString("dd-MM-yyyy") + " orelha esquerda (" + patientName + ")";
+                timestamp = Audiometry.audiometryDate.ToString("dd-MM-yyyy") + " orelha esquerda,";
             }
             else
             {
-                timestamp = Audiometry.audiometryDate.ToString("dd-MM-yyyy") + " orelha direita (" + patientName + ")";
+                timestamp = Audiometry.audiometryDate.ToString("dd-MM-yyyy") + " orelha direita,";
             }
-            
+
+            if (Audiometry.Via == "Air")
+            {
+                timestamp = timestamp + " via aérea (" + patientName + ")";
+            }
+            else if (Audiometry.Via == "Bone (mastoid)")
+            {
+                timestamp = timestamp + " via óssea (mastóide) (" + patientName + ")";
+            }
+            else if (Audiometry.Via == "Bone (forehead)")
+            {
+                timestamp = timestamp + " via óssea (fronte) (" + patientName + ")";
+            }
+            else
+            {
+                timestamp = timestamp + " campo livre (" + patientName + ")";
+            }
+
             concatText(AudiometryJson);
 
             try
@@ -1220,6 +1236,16 @@ namespace perSONA
                 Applicator applicator = Newtonsoft.Json.JsonConvert.DeserializeObject<Applicator>(applicatorJson);
 
                 new applicatorManagementForm(this, applicator).Show();
+            }
+        }
+
+        private void recalibrateAudiometry_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Você realmente deseja recalibrar o audiômetro (os limiares atuais serão perdidos).", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes) 
+            {
+                Properties.Settings.Default.CALIBRATED_AUDIOMETRY = false;
+                Properties.Settings.Default.Save();
             }
         }
     }
