@@ -25,8 +25,12 @@ namespace perSONA
 
         public double currentVolumePower = 0;
         public double currentMaskVolumePower = 0;
+        public bool isVAConfigured = false;
 
         public VANet vA { get; private set; }
+
+        //Undo
+        public List<string> modifications = new List<string>();
 
         //Sounds (pure tones)
         public Dictionary<double, string> freq_sound = new Dictionary<double, string>();
@@ -44,6 +48,18 @@ namespace perSONA
         public Dictionary<double, double> rightFreqs_db = new Dictionary<double, double>();
         public Dictionary<double, double> rightFreqs_mask = new Dictionary<double, double>();
         public Dictionary<double, bool> rightFreqs_noReply = new Dictionary<double, bool>();
+
+        //leftBone
+        public List<double> leftFreqsB = new List<double>();
+        public Dictionary<double, double> leftFreqs_dbB = new Dictionary<double, double>();
+        public Dictionary<double, double> leftFreqs_maskB = new Dictionary<double, double>();
+        public Dictionary<double, bool> leftFreqs_noReplyB = new Dictionary<double, bool>();
+
+        //rightBone
+        public List<double> rightFreqsB = new List<double>();
+        public Dictionary<double, double> rightFreqs_dbB = new Dictionary<double, double>();
+        public Dictionary<double, double> rightFreqs_maskB = new Dictionary<double, double>();
+        public Dictionary<double, bool> rightFreqs_noReplyB = new Dictionary<double, bool>();
 
         public Dictionary<int, double> mapFreqs = new Dictionary<int, double>(){{1, 125}, {2, 250}, {3, 500}, {4, 750}, {5, 1000}, {6, 1500},
                                                                                 {7, 2000}, {8, 3000}, {9, 4000}, {10, 6000}, {11, 8000}};
@@ -67,6 +83,7 @@ namespace perSONA
         public manualAudiometricTest(IvAInterface ivAInterface, string[] subjects)
         {
             InitializeComponent();
+            resizeScreen();
             this.vAInterface = ivAInterface;
             this.subjects = subjects;
             patientLabel.Text = subjects[1];
@@ -121,76 +138,79 @@ namespace perSONA
 
         private void VaConfig()
         {
-            radius = 3;
-            vA = vAInterface.getVa();
+            if (!isVAConfigured)
+            {
+                isVAConfigured = true;
+                radius = 3;
+                vA = vAInterface.getVa();
 
-            vA.Reset();
-            int receiverId = vA.CreateSoundReceiver("Subject");
+                vA.Reset();
+                int receiverId = vA.CreateSoundReceiver("Subject");
 
-            double xSides = 0;
-            double zFront = 0;
-            double yHeight = 1.7;
+                double xSides = 0;
+                double zFront = 0;
+                double yHeight = 1.7;
 
 
-            VAVec3 receiverPosition = new VAVec3(xSides, yHeight, zFront);
-            VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
-            VAVec3 receiverOrientationU = new VAVec3(0, 1, 0);
+                VAVec3 receiverPosition = new VAVec3(xSides, yHeight, zFront);
+                VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
+                VAVec3 receiverOrientationU = new VAVec3(0, 1, 0);
 
-            vA.SetSoundReceiverPosition(receiverId, receiverPosition);      //this receiver have position (xSides, yHeight, zFront)
-            vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU); //this receive look ahead with the top of the head up
+                vA.SetSoundReceiverPosition(receiverId, receiverPosition);      //this receiver have position (xSides, yHeight, zFront)
+                vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU); //this receive look ahead with the top of the head up
 
-            int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
-            vA.SetSoundReceiverDirectivity(receiverId, hrirId);
+                int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
+                vA.SetSoundReceiverDirectivity(receiverId, hrirId);
+            }
         }
 
         private void changeVia_Click(object sender, EventArgs e)
         {
-            if (leftFreqs_db.Count == 0 & rightFreqs_db.Count == 0)
+            if (Via == "Air")
             {
-                if (Via == "Air")
-                {
-                    viaLightAir.BackColor = Color.Silver;
-                    viaLightBoneM.BackColor = Color.Yellow;
-                    Via = "Bone (mastoid)";
-                }
-                else
-                {
-                    viaLightAir.BackColor = Color.Yellow;
-                    viaLightBoneM.BackColor = Color.Silver;
-                    Via = "Air";
-                }
-                updateCorrectAnswers(correctAnswers = 0);
+                viaLightAir.BackColor = Color.Silver;
+                viaLightBoneM.BackColor = Color.Yellow;
+                Via = "Bone (mastoid)";
             }
             else
             {
-                const string message = "Não é possível mudar a via durante o teste,\n" + "para isso, reinicie o teste previamente.";
-                const string caption = "Erro";
-                MessageBox.Show(message, caption,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                viaLightAir.BackColor = Color.Yellow;
+                viaLightBoneM.BackColor = Color.Silver;
+                Via = "Air";
             }
+            updateCorrectAnswers(correctAnswers = 0);
         }
         private void activateMask_Click(object sender, EventArgs e)
         {
             updateCorrectAnswers(correctAnswers = 0);
-            mask = !mask;
-            if (mask)
+            if (!mask)
             {
                 maskLight.BackColor = Color.Yellow;
                 PlayNoise();
+                mask = !mask;
             }
             else
             {
+                turnOffMask();
+            }
+        }
+
+        private void turnOffMask(){
                 maskLight.BackColor = Color.Silver;
                 currentMask = 0;
                 showMask();
                 vAInterface.stopScene(false, true);
-            }
+                mask = !mask;
         }
         
         private void PlayNoise()
         {
+            //if (isVAConfigured)
+            //{
+            //    vAInterface.stopScene(false, true);
+            //}
             VaConfig();
+            showMask();
 
             string speechFile = freq_sound[currentFrequency];
             string noiseFile = freq_noise[currentFrequency];
@@ -198,7 +218,7 @@ namespace perSONA
             if (currentMaskVolumePower < 200000)
             {
                 if (Side == "Left") vAInterface.playScene(radius, false, speechFile, 0, 0, true, noiseFile, 90, currentMaskVolumePower); 
-                else vAInterface.playScene(radius, false, speechFile, 0, 0, false, noiseFile, 270, currentMaskVolumePower);
+                else vAInterface.playScene(radius, false, speechFile, 0, 0, true, noiseFile, 270, currentMaskVolumePower);
             }
             else
             {
@@ -226,34 +246,26 @@ namespace perSONA
             }
             updateCorrectAnswers(correctAnswers = 0);
         }
-        private void reset_Click(object sender, EventArgs e)
-        {
-            resetAll(leftFreqs, leftFreqs_db, leftFreqs_mask, leftFreqs_noReply, leftGraph);
-            resetAll(rightFreqs, rightFreqs_db, rightFreqs_mask, rightFreqs_noReply, rightGraph);
-        }
-
-        private void resetAll(List<double> freqs, Dictionary<double, double> db, Dictionary<double, double> mask, Dictionary<double, bool> noReply, ZedGraphControl graph)
-        {
-            graph.GraphPane.CurveList.Clear();
-            freqs.Clear();
-            db.Clear();
-            mask.Clear();
-            noReply.Clear();
-            TonalAudiometryTest.updateGraph(graph);
-            updateCorrectAnswers(correctAnswers = 0);
-        }
         
         private void saveFrequency_Click(object sender, EventArgs e)
         {
             if (calibratedSystem)
             {
-                if (Side == "Left")
+                if (Side == "Left" && Via == "Air")
                 {
                     saveThisFrequency(leftFreqs, leftFreqs_db, leftFreqs_mask, leftFreqs_noReply, leftGraph);
                 }
-                else
+                else if (Side == "Right" && Via == "Air")
                 {
                     saveThisFrequency(rightFreqs, rightFreqs_db, rightFreqs_mask, rightFreqs_noReply, rightGraph);
+                }
+                else if (Side == "Left" && Via == "Bone (mastoid)")
+                {
+                    saveThisFrequency(leftFreqsB, leftFreqs_dbB, leftFreqs_maskB, leftFreqs_noReplyB, leftGraph);
+                }
+                else if (Side == "Right" && Via == "Bone (mastoid)")
+                {
+                    saveThisFrequency(rightFreqsB, rightFreqs_dbB, rightFreqs_maskB, rightFreqs_noReplyB, rightGraph);
                 }
                 updateCorrectAnswers(correctAnswers = 0);
             }
@@ -283,6 +295,9 @@ namespace perSONA
             {
                 double linearizedFreq = Math.Log(mapFreqs[freqID] / 125, 2) + 1;
                 TonalAudiometryTest.drawSymbol(graph, linearizedFreq, currentdB, currentMask, currentNoReply, Side, Via);
+                vAInterface.concatText(linearizedFreq.ToString());
+                modifications.Add(Side+","+Via);
+                vAInterface.concatText(modifications[modifications.Count() - 1]);
                 freqs.Add(currentFrequency);
                 db.Add(currentFrequency, currentdB);
                 mask.Add(currentFrequency, currentMask);
@@ -299,14 +314,19 @@ namespace perSONA
         
         private void End_Click(object sender, EventArgs e)
         {
-            TonalAudiometryTest leftAudiometry = new TonalAudiometryTest();
-            TonalAudiometryTest rightAudiometry = new TonalAudiometryTest();
-            makeAudiometry(leftFreqs, leftFreqs_db, leftFreqs_mask, leftFreqs_noReply, leftGraph, leftAudiometry, "Left");
-            makeAudiometry(rightFreqs, rightFreqs_db, rightFreqs_mask, rightFreqs_noReply, rightGraph, rightAudiometry, "Right");
+            TonalAudiometryTest leftAudiometryA = new TonalAudiometryTest();
+            TonalAudiometryTest rightAudiometryA = new TonalAudiometryTest();
+            TonalAudiometryTest leftAudiometryB = new TonalAudiometryTest();
+            TonalAudiometryTest rightAudiometryB = new TonalAudiometryTest();
+            makeAudiometry(leftFreqs, leftFreqs_db, leftFreqs_mask, leftFreqs_noReply, leftGraph, leftAudiometryA, "Left", "Air");
+            makeAudiometry(rightFreqs, rightFreqs_db, rightFreqs_mask, rightFreqs_noReply, rightGraph, rightAudiometryA, "Right", "Air");
+            makeAudiometry(leftFreqsB, leftFreqs_dbB, leftFreqs_maskB, leftFreqs_noReplyB, leftGraph, leftAudiometryA, "Left", "Bone (mastoid)");
+            makeAudiometry(rightFreqsB, rightFreqs_dbB, rightFreqs_maskB, rightFreqs_noReplyB, rightGraph, rightAudiometryA, "Right", "Bone (mastoid)");
 
-            this.Close();
+            End.Visible = false;
+            //this.Close();
         }
-        private void makeAudiometry(List<double> freqs, Dictionary<double, double> dicDB, Dictionary<double, double> dicMask, Dictionary<double, bool> dicNoReply, ZedGraphControl graph, TonalAudiometryTest Audiometry, string Side)
+        private void makeAudiometry(List<double> freqs, Dictionary<double, double> dicDB, Dictionary<double, double> dicMask, Dictionary<double, bool> dicNoReply, ZedGraphControl graph, TonalAudiometryTest Audiometry, string Side, string Via)
         {
             string portugueseSide;
             string portugueseVia;
@@ -316,7 +336,7 @@ namespace perSONA
             if (Via == "Air") portugueseVia = "aérea";
             else portugueseVia = "óssea (mastóide)";
 
-            if (freqs.Count > 0)
+            if (freqs.Any())
             {
                 List<double> db = new List<double>();
                 List<double> mask = new List<double>();
@@ -337,7 +357,6 @@ namespace perSONA
                 {
                     {linearizedFreqs.ToArray(), db.ToArray()}
                 };
-                LineItem audiometryCurve;
 
                 Audiometry.Via = Via;
                 Audiometry.Side = Side;
@@ -354,18 +373,22 @@ namespace perSONA
 
                 Audiometry.AudiometryType = audiometryType;
 
-                audiometryCurve = graph.GraphPane.AddCurve(Audiometry.AudiometryType, audiometry, Audiometry.getColor(), SymbolType.None);
-                audiometryCurve.IsX2Axis = true;
-                Audiometry.changeLine(audiometryCurve.Line);
+                if(Via == "Air")
+                {
+                    LineItem audiometryCurve;
+                    audiometryCurve = graph.GraphPane.AddCurve(Audiometry.AudiometryType, audiometry, Audiometry.getColor(), SymbolType.None);
+                    audiometryCurve.IsX2Axis = true;
+                    Audiometry.changeLine(audiometryCurve.Line);
+                }
                 TonalAudiometryTest.updateGraph(graph);
 
                 vAInterface.addCompletedAudiometry(Audiometry, patientLabel.Text);
 
-                MessageBox.Show("Audiometria da orelha " + portugueseSide + " salva", "Sucesso", MessageBoxButtons.OK);
+                MessageBox.Show("Audiometria da orelha " + portugueseSide + " via " + portugueseVia + " salva", "Sucesso", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("Orelha " + portugueseSide + " não salva", "Sucesso", MessageBoxButtons.OK);
+                MessageBox.Show("Orelha " + portugueseSide + " via " + portugueseVia + " não salva", "Sucesso", MessageBoxButtons.OK);
             }
         }
         
@@ -375,6 +398,7 @@ namespace perSONA
             freqID++;
             if (freqID > 11) freqID = 11;
             showFreq();
+            if (mask) turnOffMask();
         }
 
         private void freqDown_Click(object sender, EventArgs e)
@@ -382,6 +406,7 @@ namespace perSONA
             freqID--;
             if (freqID < 1) freqID = 1;
             showFreq();
+            if (mask) turnOffMask();
         }
         private void showFreq()
         {
@@ -418,6 +443,8 @@ namespace perSONA
             {
                 currentMask = currentMask + 5;
                 if (currentMask > 120) currentMask = 120;
+                vAInterface.stopScene(false, true);
+                PlayNoise();
             }
             else
             {
@@ -425,7 +452,6 @@ namespace perSONA
                                                                     MessageBoxButtons.OK,
                                                                     MessageBoxIcon.Error);
             }
-            showMask();
         }
 
         private void maskDown_Click(object sender, EventArgs e)
@@ -434,6 +460,8 @@ namespace perSONA
             {
                 currentMask = currentMask - 5;
                 if (currentMask < 0) currentMask = 0;
+                vAInterface.stopScene(false, true);
+                PlayNoise();
             }
             else
             {
@@ -441,7 +469,6 @@ namespace perSONA
                                                                     MessageBoxButtons.OK,
                                                                     MessageBoxIcon.Error);
             }
-            showMask();
         }
         private void showMask()
         {
@@ -545,6 +572,105 @@ namespace perSONA
 
             if (currentVolumePower > 200000) currentNoReply = true;
             else currentNoReply = false;
+        }
+
+        private void undo_Click(object sender, EventArgs e)
+        {
+            if (modifications.Any())
+            {
+                string lastModificationSideVia = modifications[modifications.Count() - 1];
+
+                if (lastModificationSideVia == "Left,Air")
+                {
+                    undoAction(leftFreqs, leftFreqs_db, leftFreqs_mask, leftFreqs_noReply, leftGraph, leftFreqsB, leftFreqs_dbB, leftFreqs_maskB, leftFreqs_noReplyB);
+                }
+                else if (lastModificationSideVia == "Right,Air")
+                {
+                    undoAction(rightFreqs, rightFreqs_db, rightFreqs_mask, rightFreqs_noReply, rightGraph, rightFreqsB, rightFreqs_dbB, rightFreqs_maskB, rightFreqs_noReplyB);
+                }
+                else if (lastModificationSideVia == "Left,Bone (mastoid)")
+                {                    
+                    undoAction(leftFreqsB, leftFreqs_dbB, leftFreqs_maskB, leftFreqs_noReplyB, leftGraph, leftFreqs, leftFreqs_db, leftFreqs_mask, leftFreqs_noReply);
+                }
+                else if (lastModificationSideVia == "Right,Bone (mastoid)")
+                {
+                    undoAction(rightFreqsB, rightFreqs_dbB, rightFreqs_maskB, rightFreqs_noReplyB, rightGraph, rightFreqs, rightFreqs_db, rightFreqs_mask, rightFreqs_noReply);
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Realize alguma ação antes de retroceder", "Erro",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Error);
+            }
+        }
+
+        private void undoAction(List<double> freqsToClear, Dictionary<double, double> dbToClear, Dictionary<double, double> maskToClear, Dictionary<double, bool> noReplyToClear, 
+            ZedGraphControl graph, List<double> freqs, Dictionary<double, double> db, Dictionary<double, double> mask, Dictionary<double, bool> noReply)
+        {
+            string otherVia = " ";
+            string lastModificationSideVia = modifications[modifications.Count() - 1];
+            string[] lastSideLastVia = lastModificationSideVia.Split(',');
+            string lastModificationSide = lastSideLastVia[0];
+            string lastModificationVia = lastSideLastVia[1];
+
+            if (lastModificationVia == "Air") 
+            {
+                otherVia = "Bone (mastoid)";
+            }
+            else if (lastModificationVia == "Bone (mastoid)")
+            {
+                otherVia = "Air";
+            }
+
+            double item = freqsToClear[freqsToClear.Count() - 1];
+            freqsToClear.Remove(item);
+            dbToClear.Remove(item);
+            maskToClear.Remove(item);
+            noReplyToClear.Remove(item);
+            modifications.RemoveAt(modifications.Count() - 1);
+
+
+            graph.GraphPane.CurveList.Clear();
+
+            int i = 0;
+            double linearizedFreq = 0;
+            foreach (double freq in freqsToClear)
+            {
+                linearizedFreq = Math.Log(freq / 125, 2) + 1;
+                TonalAudiometryTest.drawSymbol(graph, linearizedFreq, dbToClear[freq], maskToClear[freq], noReplyToClear[freq], lastModificationSide, lastModificationVia);
+            }
+            foreach (double freq in freqs)
+            {
+                linearizedFreq = Math.Log(freq / 125, 2) + 1;
+                TonalAudiometryTest.drawSymbol(graph, linearizedFreq, db[freq], mask[freq], noReply[freq], lastModificationSide, otherVia);
+            }
+
+            TonalAudiometryTest.updateGraph(graph);
+            updateCorrectAnswers(correctAnswers = 0);
+        }
+        private void resizeScreen()
+        {
+            double PCResolutionWidth = Screen.PrimaryScreen.Bounds.Width;
+            double PCResolutionHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            double formWidth = this.Size.Width;
+            double formHeight = this.Size.Height;
+
+            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight * 0.925))
+            {
+                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.8);
+                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.875);
+                this.Size = new Size(newWidth, newHeight);
+            }
+        }
+
+        private void manualAudiometricTest_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (mask)
+            {
+                turnOffMask(); //close form when mask noise playing exception
+            }
         }
     }
 }

@@ -47,13 +47,16 @@
             this.verifySerialKey.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.verifySerialKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.verifySerialKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.verifySerialKey.ForeColor = System.Drawing.Color.White;
             this.verifySerialKey.Location = new System.Drawing.Point(552, 4);
             this.verifySerialKey.Margin = new System.Windows.Forms.Padding(4);
             this.verifySerialKey.Name = "verifySerialKey";
             this.verifySerialKey.Size = new System.Drawing.Size(176, 28);
             this.verifySerialKey.TabIndex = 3;
             this.verifySerialKey.Text = "OK";
-            this.verifySerialKey.UseVisualStyleBackColor = true;
+            this.verifySerialKey.UseVisualStyleBackColor = false;
             this.verifySerialKey.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
@@ -172,6 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(797, 243);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

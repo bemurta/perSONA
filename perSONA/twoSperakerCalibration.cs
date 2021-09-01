@@ -15,7 +15,7 @@ using VA;
 
 namespace perSONA
 {
-    public partial class speakerCalibration : Form
+    public partial class twoSperakerCalibration : Form
     {
         //VA
         private readonly IvAInterface vAInterface;
@@ -23,30 +23,24 @@ namespace perSONA
 
         public List<Panel> speakers = new List<Panel>();
         int i = Properties.Settings.Default.ITERATOR;
-
-
-
-        public speakerCalibration(IvAInterface vAInterface)
+     
+        public twoSperakerCalibration(IvAInterface vAInterface)
         {
             InitializeComponent();
             this.vAInterface = vAInterface;
             volumeBar.Value = Properties.Settings.Default.SPEAKER_VOLUME;
             volumeLabel.Text = string.Format("Volume: {0} %", Properties.Settings.Default.SPEAKER_VOLUME);
 
+
             speakers.Add(panel1);
             speakers.Add(panel2);
-            speakers.Add(panel3);
-            speakers.Add(panel4);
-            speakers.Add(panel5);
-            speakers.Add(panel6);
-            speakers.Add(panel7);
-            speakers.Add(panel8);
 
             speakerLabel.BackColor = System.Drawing.Color.Yellow;
 
             volumeBar.Visible = false;
             volumeLabel.Visible = false;
             VolumeLabelAdjusting.Visible = true;
+
 
             if (i == 0)
             {
@@ -55,15 +49,16 @@ namespace perSONA
                     element.Visible = false;
                 }
                 speakers[0].Visible = true;
+                speakerLabel.Text = "Caixa direita";
             }
-            else if (i < 8)
+            else if (i == 1)
             {
                 foreach (Panel element in speakers)
                 {
                     element.Visible = false;
                 }
-                speakers[i].Visible = true;
-                speakerLabel.Text = "Caixa " + (i + 1) + "(" + (i * 45) + "°)";
+                speakers[1].Visible = true;
+                speakerLabel.Text = "Caixa esquerda";
             }
             else
             {
@@ -83,13 +78,13 @@ namespace perSONA
             {
                 SLM_Microphone.Image = SLM_Microphone.ErrorImage; //microphone
             }
-
         }
+
         private void Next_Click(object sender, EventArgs e)
         {
             if (calibrated.Checked == false)
             {
-                const string message = "Clique em \"Calibrada\" antes de continuar";
+                const string message = "Clique em \"Calibrado\" antes de continuar";
                 const string caption = "Erro";
                 MessageBox.Show(message, caption,
                                 MessageBoxButtons.OK,
@@ -97,18 +92,17 @@ namespace perSONA
             }
             else
             {
-                if (i < 7)
+                if (i == 0)
                 {
-                    speakerLabel.Text = "Caixa " + (i + 2) + "(" + ((i + 1) * 45) + "°)";
+                    speakerLabel.Text = "Caixa esquerda";
+                    speakers[0].Visible = false;
+                    speakers[1].Visible = true;
 
-                    //iterando sobre a lista
-                    speakers[i].Visible = false;
-                    speakers[(i + 1)].Visible = true;
                     i = i + 1;
                     Properties.Settings.Default.ITERATOR = i;
                 }
 
-                else if (i == 7)
+                else if (i == 1)
                 {
                     label1.Text = "Altere o volume dos reprodutores sonoros" + "\n" + "através da barra da parte inferior da tela";
                     Next.Text = "Finalizar";
@@ -123,7 +117,7 @@ namespace perSONA
                     volumeLabel.Visible = true;
                     VolumeLabelAdjusting.Visible = false;
                 }
-                else if (i == 8)
+                else if (i == 2)
                 {
                     PDF_Generate("Sucesso");
                     i = 0;
@@ -162,6 +156,7 @@ namespace perSONA
             Hide();
         }
 
+
         private void Sound_Click(object sender, EventArgs e)
         {
             vA = vAInterface.getVa();
@@ -189,14 +184,14 @@ namespace perSONA
             vAInterface.concatText(speechFile);
             vAInterface.concatText(string.Format("Calibration sound angle: {0}", (90 + (i * 180))));
 
-            if (i < 7)
+            if (i < 2)
             {
                 vAInterface.createAcousticScene(speechFile, speechFile);
-                vAInterface.playScene(1.7, (i * 45), 40);
+                vAInterface.playScene(1.7, (90 + (i * 180)), 40);
             }
             else
             {
-                vAInterface.allSoundPlayersPlayScene(1.7, 8, speechFile);
+                vAInterface.allSoundPlayersPlayScene(1.7, 2, speechFile);
             }
         }
 
@@ -250,7 +245,7 @@ namespace perSONA
             paragraph.Add(p9);
 
             paragraph[p].Add(new Chunk("Objeto de calibração: ", H2bold));
-            paragraph[p].Add(new Chunk("Sistema de reprodução sonora do perSONA, composto por arranjo de 8 alto-falantes da marca " + calibration.CalibrationObjectBrand + " e modelo " + calibration.CalibrationObjectModel + "\r\n" + "\r\n", H2));
+            paragraph[p].Add(new Chunk("Sistema de reprodução sonora do perSONA, composto por arranjo de 2 alto-falantes da marca " + calibration.CalibrationObjectBrand + " e modelo " + calibration.CalibrationObjectModel + "\r\n" + "\r\n", H2));
             p++; //New paragraph
 
             paragraph[p].Add(new Chunk("Sinal de calibração: ", H2bold));
@@ -338,8 +333,8 @@ namespace perSONA
             doc.Add(p7);
             doc.Add(p8);
             doc.Add(p9);
-            
-            
+
+
             //Image
             iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance("data/Logo_Large.png");
             image.SetAbsolutePosition(492, 0);
@@ -352,9 +347,6 @@ namespace perSONA
 
             Properties.Settings.Default.CALIBRATION_ID = Properties.Settings.Default.CALIBRATION_ID + 1;
             Properties.Settings.Default.Save();
-
-
-
         }
 
         private void volumeBar_Scroll(object sender, EventArgs e)

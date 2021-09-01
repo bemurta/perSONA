@@ -29,6 +29,11 @@ namespace perSONA
         public string MannequinModel { get; set; }
         public string MannequinPinnae { get; set; }
 
+        //Sound card
+        public string SoundCardBrand { get; set; }
+        public string SoundCardModel { get; set; }
+
+
         //Variáveis que servem para mais de um modo
         public string CalibrationObjectBrand { get; set; }
         public string CalibrationObjectModel { get; set; }

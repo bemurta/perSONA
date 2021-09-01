@@ -113,8 +113,8 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.allResetFinishPanel = new System.Windows.Forms.Panel();
             this.resetPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.undo = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.reset = new System.Windows.Forms.Button();
             this.End = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1491,8 +1491,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.resetPanel.ColumnCount = 1;
             this.resetPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.resetPanel.Controls.Add(this.undo, 0, 1);
             this.resetPanel.Controls.Add(this.label12, 0, 0);
-            this.resetPanel.Controls.Add(this.reset, 0, 1);
             this.resetPanel.Location = new System.Drawing.Point(34, 29);
             this.resetPanel.Name = "resetPanel";
             this.resetPanel.RowCount = 2;
@@ -1500,6 +1500,20 @@
             this.resetPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.resetPanel.Size = new System.Drawing.Size(125, 86);
             this.resetPanel.TabIndex = 75;
+            // 
+            // undo
+            // 
+            this.undo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.undo.BackColor = System.Drawing.Color.Black;
+            this.undo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.undo.Location = new System.Drawing.Point(3, 28);
+            this.undo.Name = "undo";
+            this.undo.Size = new System.Drawing.Size(119, 55);
+            this.undo.TabIndex = 76;
+            this.undo.UseVisualStyleBackColor = false;
+            this.undo.Click += new System.EventHandler(this.undo_Click);
             // 
             // label12
             // 
@@ -1511,22 +1525,8 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(119, 25);
             this.label12.TabIndex = 45;
-            this.label12.Text = "Reset";
+            this.label12.Text = "Undo";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // reset
-            // 
-            this.reset.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reset.BackColor = System.Drawing.Color.Black;
-            this.reset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.reset.Location = new System.Drawing.Point(3, 28);
-            this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(119, 55);
-            this.reset.TabIndex = 44;
-            this.reset.UseVisualStyleBackColor = false;
-            this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // End
             // 
@@ -1574,6 +1574,7 @@
             this.Name = "manualAudiometricTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Audiometria Tonal (Ensino)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.manualAudiometricTest_FormClosing);
             this.Shown += new System.EventHandler(this.manualAudiometricTest_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.manualAudiometricTest_KeyDown);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1720,7 +1721,6 @@
         private System.Windows.Forms.Panel allResetFinishPanel;
         private System.Windows.Forms.TableLayoutPanel resetPanel;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Button End;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
@@ -1729,5 +1729,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button undo;
     }
 }

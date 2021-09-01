@@ -89,7 +89,7 @@ namespace perSONA
         }
 
         public static void drawSymbol(ZedGraphControl zgc, double Freq, double dB, double Masker, bool NoReply, string Side, string Via)
-        {
+        {            
             if (Side == "Right")
             {
                 if (Via == "Air")

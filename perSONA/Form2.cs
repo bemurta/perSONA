@@ -41,8 +41,11 @@ namespace perSONA
         {
             using (var fbd = new FolderBrowserDialog())
             {
-                fbd.SelectedPath = Directory.GetCurrentDirectory();
+                fbd.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 DialogResult result = fbd.ShowDialog();
+
+                vAInterface.concatText(fbd.SelectedPath.ToString());
+                
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
@@ -54,29 +57,46 @@ namespace perSONA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
+            Properties.Settings.Default.RESULTS_FOLDER = textBox1.Text;
+            Properties.Settings.Default.Save();
+            if(Directory.Exists(Properties.Settings.Default.RESULTS_FOLDER))
             {
-                Properties.Settings.Default.RESULTS_FOLDER = textBox1.Text;
-                Properties.Settings.Default.Save();
+                firstUseCheck();
             }
-            catch (DirectoryNotFoundException)
+            else
             {
-                try
-                {
-                    string dir = textBox1.Text;
-                    Directory.CreateDirectory(dir);
-                }
-                catch (Exception)
-                {
-                    const string message = "Error ocurred. Couldn't set a results folder, reseting to default.";
-                    const string caption = "Incorrect database format. Metadata required!";
-                    var result = MessageBox.Show(message, caption,
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
+                const string message = "Não foi possível selecionar a pasta destino de resultados especificada.";
+                const string caption = "Erro";
+                var result = MessageBox.Show(message, caption,
+                                           MessageBoxButtons.OK,
+                                           MessageBoxIcon.Error);
+            }
+        }
+
+        private void crateDocsFolderButton_Click(object sender, EventArgs e)
+        {
+            string resultsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Resultados perSONA";
+            if (!Directory.Exists(resultsFolder));
+            {
+                Directory.CreateDirectory(resultsFolder);
             }
 
-            if (firstUse == false) 
+            Properties.Settings.Default.RESULTS_FOLDER = resultsFolder;
+            Properties.Settings.Default.Save();
+
+
+            string message = "Uma pasta denomida 'Resultados perSONA' foi criada em 'Documentos'. Nesta pasta serão salvos todos os dados gerados no perSONA.";
+            string caption = "Sucesso";
+            var result = MessageBox.Show(message, caption,
+                                       MessageBoxButtons.OK,
+                                       MessageBoxIcon.Information);
+
+            firstUseCheck();
+        }
+
+        private void firstUseCheck()
+        {
+            if (firstUse == false)
             {
                 vAInterface.updateApplicatorList();
                 vAInterface.updatePatientList();

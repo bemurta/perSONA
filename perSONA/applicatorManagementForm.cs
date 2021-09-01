@@ -67,6 +67,7 @@ namespace perSONA
             }
             this.person = person;
             vAInterface.updateApplicatorList();
+            this.Close();
         }
 
         public void bindApplicator(Applicator person)

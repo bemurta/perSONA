@@ -50,6 +50,7 @@
             this.Subject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Subject.BackColor = System.Drawing.Color.White;
             this.Subject.Location = new System.Drawing.Point(146, 35);
             this.Subject.Margin = new System.Windows.Forms.Padding(4);
             this.Subject.Name = "Subject";
@@ -104,13 +105,16 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(146, 262);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(491, 47);
             this.button1.TabIndex = 3;
             this.button1.Text = "Enviar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // From
@@ -118,6 +122,7 @@
             this.From.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.From.BackColor = System.Drawing.Color.White;
             this.From.Location = new System.Drawing.Point(146, 4);
             this.From.Margin = new System.Windows.Forms.Padding(4);
             this.From.Name = "From";
@@ -200,12 +205,15 @@
             this.WhatsApp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.WhatsApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.WhatsApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WhatsApp.ForeColor = System.Drawing.Color.White;
             this.WhatsApp.Location = new System.Drawing.Point(315, 3);
             this.WhatsApp.Name = "WhatsApp";
             this.WhatsApp.Size = new System.Drawing.Size(175, 29);
             this.WhatsApp.TabIndex = 9;
             this.WhatsApp.Text = "Grupo de WhatsApp";
-            this.WhatsApp.UseVisualStyleBackColor = true;
+            this.WhatsApp.UseVisualStyleBackColor = false;
             this.WhatsApp.Click += new System.EventHandler(this.WhatsApp_Click);
             // 
             // label4
@@ -225,6 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(665, 417);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

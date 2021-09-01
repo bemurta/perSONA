@@ -24,6 +24,7 @@ namespace perSONA
         {
 
             InitializeComponent();
+            resizeScreen();
             this.subjects = subjects;
             applicatorLabel.Text = subjects[0];
             patientLabel.Text = subjects[1];
@@ -174,6 +175,21 @@ namespace perSONA
         private void noiseDistance_ValueChanged(object sender, EventArgs e)
         {
             vAInterface.plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
+        }
+        private void resizeScreen()
+        {
+            double PCResolutionWidth = Screen.PrimaryScreen.Bounds.Width;
+            double PCResolutionHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            double formWidth = this.Size.Width;
+            double formHeight = this.Size.Height;
+
+            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight * 0.925))
+            {
+                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.54);
+                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.875);
+                this.Size = new Size(newWidth, newHeight);
+            }
         }
     }
 }

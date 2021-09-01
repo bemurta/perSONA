@@ -25,6 +25,7 @@ namespace perSONA
         public patientManagement(IvAInterface ivAInterface)
         {
             InitializeComponent();
+            resizeScreen();
             tabControl1.TabPages.Remove(tabPage2);
             tabControl1.TabPages.Remove(tabPage3);
             this.vAInterface = ivAInterface;
@@ -38,6 +39,7 @@ namespace perSONA
         public patientManagement(IvAInterface ivAInterface, Patient person)
         {
             InitializeComponent();
+            resizeScreen();
             this.vAInterface = ivAInterface;
             audiometrySide.SelectedIndex = 0;
             Conduction.SelectedIndex = 0;
@@ -159,6 +161,7 @@ namespace perSONA
             }
             this.person = person;
             vAInterface.updatePatientList();
+            this.Close();
         }
 
 
@@ -268,32 +271,40 @@ namespace perSONA
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TonalAudiometryTest Audiometry = readAudiometry(audiometryLists.SelectedItem.ToString());
-            plotAudiometry(audiometryGraph, Audiometry);
-            audiometryDate.Value = Audiometry.audiometryDate;
-            if (Audiometry.Via == "Air")
+            vAInterface.concatText(audiometryLists.SelectedItems.Count.ToString());
+            audiometryGraph.GraphPane.CurveList.Clear();
+
+            if (audiometryLists.SelectedItems.Count == 0) // if no have selected itens
             {
-                Conduction.Text = "aérea";
+                audiometryGraph.GraphPane.AxisChange();
+                audiometryGraph.Refresh();
             }
-            else if (Audiometry.Via == "Bone (mastoid)")
+            else if (audiometryLists.SelectedItems.Count == 1) // if have only one selected itens
             {
-                Conduction.Text = "óssea (mastóide)";
+                confButtonsPanel.Visible = true;
+                TonalAudiometryTest Audiometry = readAudiometry(audiometryLists.SelectedItem.ToString());
+                plotAudiometry(audiometryGraph, Audiometry);
+
+                audiometryDate.Value = Audiometry.audiometryDate;   // Date
+
+                // Via
+                if (Audiometry.Via == "Air") Conduction.Text = "aérea";
+                else if (Audiometry.Via == "Bone (mastoid)") Conduction.Text = "óssea (mastóide)";
+                else if (Audiometry.Via == "Bone (forehead)") Conduction.Text = "óssea (fronte)";
+                else Conduction.Text = "campo livre";
+                
+                // Side                
+                if (Audiometry.Side == "Left") audiometrySide.Text = "Esquerdo";
+                else audiometrySide.Text = "Direito";
             }
-            else if (Audiometry.Via == "Bone (forehead)")
+            else 
             {
-                Conduction.Text = "óssea (fronte)";
-            }
-            else
-            {
-                Conduction.Text = "campo livre";
-            }
-            if (Audiometry.Side == "Left")
-            {
-                audiometrySide.Text = "Esquerdo";
-            }
-            else
-            {
-                audiometrySide.Text = "Direito";
+                confButtonsPanel.Visible = false;
+                foreach (object audiometryItem in audiometryLists.SelectedItems)    // Take all selected itens and plot
+                {
+                    TonalAudiometryTest Audiometry = readAudiometry(audiometryItem.ToString());
+                    plotAudiometry(audiometryGraph, Audiometry);
+                }
             }
         }
 
@@ -345,22 +356,10 @@ namespace perSONA
             Audiometry.Masker = masks;
             Audiometry.NoReply = noReply;
 
-            if (Conduction.Text == "Aérea")
-            {
-                Audiometry.Via = "Air";
-            }
-            else if (Conduction.Text == "Óssea (mastóide)")
-            {
-                Audiometry.Via = "Bone (mastoid)";
-            }
-            else if (Conduction.Text == "Óssea (fronte)")
-            {
-                Audiometry.Via = "Bone (forehead)";
-            }
-            else
-            {
-                Audiometry.Via = "Free field";
-            }
+            if (Conduction.Text == "Aérea") Audiometry.Via = "Air";
+            else if (Conduction.Text == "Óssea (mastóide)") Audiometry.Via = "Bone (mastoid)";
+            else if (Conduction.Text == "Óssea (fronte)") Audiometry.Via = "Bone (forehead)";
+            else Audiometry.Via = "Free field";
 
             audiometryType = "Orelha " + audiometrySide.Text;
             audiometryType = audiometryType.Remove(audiometryType.Length - 1);
@@ -371,7 +370,7 @@ namespace perSONA
         public void plotAudiometry(ZedGraphControl graph, TonalAudiometryTest Audiometry)
         {
             GraphPane myPane = graph.GraphPane;
-            myPane.CurveList.Clear();
+            //myPane.CurveList.Clear();
             string audiometryString = "demo";
             string audiometryType = "Air Right Unmasked";
 
@@ -387,19 +386,21 @@ namespace perSONA
             for (int i = 0; i < Audiometry.Freqs.Count; i++)
             {
                 TonalAudiometryTest.drawSymbol(graph, linearizedFreqs[i], Audiometry.dB[i],Audiometry.Masker[i],Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
-//2^(x-1)*125
+                //2^(x-1)*125
             }
 
             PointPairList audiometry = new PointPairList
             {
                 {linearizedFreqs.ToArray(), Audiometry.dB.ToArray()}
             };
-            vAInterface.concatText(audiometryType);
-            LineItem audiometryCurve;
 
-            audiometryCurve = myPane.AddCurve(Audiometry.AudiometryType, audiometry, Audiometry.getColor(), SymbolType.None);
-            audiometryCurve.IsX2Axis = true;
-            Audiometry.changeLine(audiometryCurve.Line);
+            if (Audiometry.Via == "Air")
+            {
+                LineItem audiometryCurve;
+                audiometryCurve = myPane.AddCurve(Audiometry.AudiometryType, audiometry, Audiometry.getColor(), SymbolType.None);
+                audiometryCurve.IsX2Axis = true;
+                Audiometry.changeLine(audiometryCurve.Line);
+            }
 
             audiometryTextBox.Text = audiometryString;
             audiometryTextBox.Text = String.Format(
@@ -416,6 +417,7 @@ namespace perSONA
         {
             TonalAudiometryTest Audiometry = new TonalAudiometryTest();
             makeAudiometry(Audiometry);
+            audiometryGraph.GraphPane.CurveList.Clear();
             plotAudiometry(audiometryGraph, Audiometry);
         }
 
@@ -490,6 +492,21 @@ namespace perSONA
                     freqsLabel[i].ForeColor = Color.Red;
                 }
                 i++;
+            }
+        }
+        private void resizeScreen()
+        {
+            double PCResolutionWidth = Screen.PrimaryScreen.Bounds.Width;
+            double PCResolutionHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            double formWidth = this.Size.Width;
+            double formHeight = this.Size.Height;
+
+            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight * 0.925))
+            {
+                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.87);
+                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.9);
+                this.Size = new Size(newWidth, newHeight);
             }
         }
     }

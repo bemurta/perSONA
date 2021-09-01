@@ -97,12 +97,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -172,7 +172,7 @@
             this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.audiometryLists = new System.Windows.Forms.ListBox();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.confButtonsPanel = new System.Windows.Forms.TableLayoutPanel();
             this.audiometryTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
@@ -262,7 +262,7 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.groupBox30.SuspendLayout();
             this.groupBox23.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.confButtonsPanel.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox26.SuspendLayout();
@@ -1352,20 +1352,6 @@
             this.tableLayoutPanel16.Size = new System.Drawing.Size(1322, 723);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(5, 666);
-            this.button3.Margin = new System.Windows.Forms.Padding(5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(1312, 52);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Salvar alterações";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // tableLayoutPanel15
             // 
             this.tableLayoutPanel15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1492,6 +1478,23 @@
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.04473F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(801, 312);
             this.tableLayoutPanel11.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(5, 666);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(1312, 52);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Salvar alterações";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage2
             // 
@@ -2777,15 +2780,12 @@
             // 
             // audiometryLists
             // 
-            this.audiometryLists.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.audiometryLists.FormattingEnabled = true;
             this.audiometryLists.ItemHeight = 20;
             this.audiometryLists.Location = new System.Drawing.Point(8, 31);
             this.audiometryLists.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryLists.Name = "audiometryLists";
-            this.audiometryLists.ScrollAlwaysVisible = true;
+            this.audiometryLists.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.audiometryLists.Size = new System.Drawing.Size(354, 124);
             this.audiometryLists.TabIndex = 0;
             this.audiometryLists.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -2795,7 +2795,7 @@
             this.groupBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox23.Controls.Add(this.tableLayoutPanel5);
+            this.groupBox23.Controls.Add(this.confButtonsPanel);
             this.groupBox23.Location = new System.Drawing.Point(5, 186);
             this.groupBox23.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox23.Name = "groupBox23";
@@ -2805,22 +2805,22 @@
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Configurações da audiometria";
             // 
-            // tableLayoutPanel5
+            // confButtonsPanel
             // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.confButtonsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.audiometryTextBox, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(8, 26);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(353, 303);
-            this.tableLayoutPanel5.TabIndex = 0;
+            this.confButtonsPanel.ColumnCount = 1;
+            this.confButtonsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.confButtonsPanel.Controls.Add(this.audiometryTextBox, 0, 1);
+            this.confButtonsPanel.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.confButtonsPanel.Location = new System.Drawing.Point(8, 26);
+            this.confButtonsPanel.Name = "confButtonsPanel";
+            this.confButtonsPanel.RowCount = 2;
+            this.confButtonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.confButtonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.confButtonsPanel.Size = new System.Drawing.Size(353, 303);
+            this.confButtonsPanel.TabIndex = 0;
             // 
             // audiometryTextBox
             // 
@@ -3109,6 +3109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1353, 766);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3195,8 +3196,8 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.groupBox30.ResumeLayout(false);
             this.groupBox23.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
+            this.confButtonsPanel.ResumeLayout(false);
+            this.confButtonsPanel.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
@@ -3307,7 +3308,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel confButtonsPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;

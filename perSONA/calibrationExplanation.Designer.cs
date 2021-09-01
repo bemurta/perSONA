@@ -154,12 +154,15 @@
             this.Next.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Next.ForeColor = System.Drawing.Color.White;
             this.Next.Location = new System.Drawing.Point(668, 3);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(323, 57);
             this.Next.TabIndex = 47;
             this.Next.Text = "Prosseguir";
-            this.Next.UseVisualStyleBackColor = true;
+            this.Next.UseVisualStyleBackColor = false;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // tableLayoutPanel1
@@ -202,7 +205,9 @@
             this.EquipmentsBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.EquipmentsBox.BackColor = System.Drawing.SystemColors.Control;
             this.EquipmentsBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EquipmentsBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.EquipmentsBox.FormattingEnabled = true;
             this.EquipmentsBox.Items.AddRange(new object[] {
             "Sistema de microfones, calibrador sonoro e placa de som"});
@@ -273,7 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 476);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

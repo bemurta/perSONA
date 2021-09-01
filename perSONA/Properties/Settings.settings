@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="RESULTS_FOLDER" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Selecione uma pasta e salve a alteração</Value>
+      <Value Profile="(Default)">Selecione uma pasta antes de prosseguir</Value>
     </Setting>
     <Setting Name="SERIAL_KEY" Type="System.String" Scope="User">
       <Value Profile="(Default)">PTMGF-28VKB-2W934-482QH-98623</Value>

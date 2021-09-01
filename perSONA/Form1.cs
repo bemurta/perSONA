@@ -43,8 +43,10 @@ namespace perSONA
         public Form1(string confFile, int sourceIndex)
         {
             InitializeComponent();
-            this.confFile = confFile;
 
+            resizeScreen();
+
+            this.confFile = confFile;
             this.sourceIndex = sourceIndex;
 
             vA = new VANet();
@@ -437,8 +439,10 @@ namespace perSONA
                 noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
                 noiseSource = vA.CreateSoundSource("Noise");
 
-                vA.SetSoundSourcePosition(noiseSource, new VAVec3(noisexSides, noiseyHeight, noisezFront));
+                int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+                vA.SetSoundSourceDirectivity(speechSource, humanDirectivity);
 
+                vA.SetSoundSourcePosition(noiseSource, new VAVec3(noisexSides, noiseyHeight, noisezFront));
                 vA.SetSoundSourceSoundPower(noiseSource, powerNoise);
                 vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
             }
@@ -1010,14 +1014,6 @@ namespace perSONA
             }
         }
 
-        private void patientAreaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Application.OpenForms["patientManagement"] == null)
-            {
-                new patientManagement(this).Show();
-            }
-        }
-
         private void audioDatabaseEditorAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["dbForm"] == null)
@@ -1246,6 +1242,21 @@ namespace perSONA
             {
                 Properties.Settings.Default.CALIBRATED_AUDIOMETRY = false;
                 Properties.Settings.Default.Save();
+            }
+        }
+
+        private void resizeScreen() {
+            double PCResolutionWidth = Screen.PrimaryScreen.Bounds.Width;
+            double PCResolutionHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            double formWidth = this.Size.Width;
+            double formHeight = this.Size.Height;
+
+            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight*0.925))
+            {
+                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.786);
+                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.9);
+                this.Size = new Size(newWidth, newHeight);
             }
         }
     }
