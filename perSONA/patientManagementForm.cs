@@ -26,6 +26,7 @@ namespace perSONA
         {
             InitializeComponent();
             resizeScreen();
+            this.Text = "Módulo de Gerenciamento de Paciente";
             tabControl1.TabPages.Remove(tabPage2);
             tabControl1.TabPages.Remove(tabPage3);
             this.vAInterface = ivAInterface;
