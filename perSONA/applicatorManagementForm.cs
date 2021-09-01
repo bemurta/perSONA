@@ -34,8 +34,8 @@ namespace perSONA
 
         private void save_Click(object sender, EventArgs e)
         {
-            const string message = "Sucesso";
-            const string caption = "Alterações salvas";
+            const string message = "Alterações salvas!";
+            const string caption = "Sucesso";
             var result = MessageBox.Show(message, caption,
                                          MessageBoxButtons.OK);
             Applicator person = new Applicator()
@@ -67,6 +67,7 @@ namespace perSONA
             }
             this.person = person;
             vAInterface.updateApplicatorList();
+            this.Close();
         }
 
         public void bindApplicator(Applicator person)

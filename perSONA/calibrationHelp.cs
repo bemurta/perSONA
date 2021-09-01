@@ -113,8 +113,16 @@ namespace perSONA
             }
             else
             {
-                new speakerCalibration(vAInterface).Show();
-                Close();
+                if(Properties.Settings.Default.REPRODUCTION_MODE == "2 Speakers")
+                {
+                    new twoSperakerCalibration(vAInterface).Show();
+                    Close();
+                }
+                else
+                {
+                    new speakerCalibration(vAInterface).Show();
+                    Close();
+                }
             }
         }
     }

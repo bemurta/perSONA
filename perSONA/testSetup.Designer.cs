@@ -274,13 +274,16 @@
             this.getFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.getFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.getFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getFolder.ForeColor = System.Drawing.Color.White;
             this.getFolder.Location = new System.Drawing.Point(5, 71);
             this.getFolder.Margin = new System.Windows.Forms.Padding(5);
             this.getFolder.Name = "getFolder";
             this.getFolder.Size = new System.Drawing.Size(354, 34);
             this.getFolder.TabIndex = 6;
             this.getFolder.Text = "Selecionar lista";
-            this.getFolder.UseVisualStyleBackColor = true;
+            this.getFolder.UseVisualStyleBackColor = false;
             this.getFolder.Click += new System.EventHandler(this.getFolder_Click);
             // 
             // listBox2
@@ -394,6 +397,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.speechRight.AutoSize = true;
+            this.speechRight.ForeColor = System.Drawing.SystemColors.ControlText;
             this.speechRight.Location = new System.Drawing.Point(279, 29);
             this.speechRight.Margin = new System.Windows.Forms.Padding(5);
             this.speechRight.Name = "speechRight";
@@ -409,13 +413,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.speechFront.AutoSize = true;
+            this.speechFront.BackColor = System.Drawing.Color.White;
             this.speechFront.Location = new System.Drawing.Point(156, 29);
             this.speechFront.Margin = new System.Windows.Forms.Padding(5);
             this.speechFront.Name = "speechFront";
             this.speechFront.Size = new System.Drawing.Size(78, 24);
             this.speechFront.TabIndex = 1;
             this.speechFront.Text = "Frente";
-            this.speechFront.UseVisualStyleBackColor = true;
+            this.speechFront.UseVisualStyleBackColor = false;
             this.speechFront.CheckedChanged += new System.EventHandler(this.speechFront_CheckedChanged);
             // 
             // groupBox3
@@ -536,13 +541,16 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(5, 573);
             this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(397, 64);
             this.button4.TabIndex = 19;
             this.button4.Text = "Iniciar teste";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox10
@@ -558,7 +566,7 @@
             this.groupBox10.Size = new System.Drawing.Size(397, 61);
             this.groupBox10.TabIndex = 18;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Passo de SNR";
+            this.groupBox10.Text = "Passo de SNR [dB]";
             // 
             // stepSnr
             // 
@@ -649,7 +657,7 @@
             this.groupBox5.Size = new System.Drawing.Size(397, 61);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "SNR inicial";
+            this.groupBox5.Text = "SNR inicial [dB]";
             // 
             // initialSnr
             // 
@@ -738,6 +746,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(836, 737);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -788,7 +797,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton speechLeft;
         private System.Windows.Forms.RadioButton speechRight;
-        private System.Windows.Forms.RadioButton speechFront;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button getFolder;
@@ -811,5 +819,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.RadioButton speechFront;
     }
 }

@@ -30,23 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(calibrationSettingsA3));
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.ModeloPlacaSom = new System.Windows.Forms.ComboBox();
+            this.soundCardModelBox = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.MarcaPlacaSom = new System.Windows.Forms.ComboBox();
+            this.soundCardBrandBox = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.NmrSerieMicrofone = new System.Windows.Forms.TextBox();
+            this.microphoneSerialNumberBox = new System.Windows.Forms.TextBox();
             this.Next = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.NmrSerieCalibrador = new System.Windows.Forms.TextBox();
+            this.SLMSerialNumberBox = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.ModeloCalibrador = new System.Windows.Forms.ComboBox();
+            this.SLMModelBox = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.ModeloMicrofone = new System.Windows.Forms.ComboBox();
+            this.microphoneModelBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.MarcaMicrofone = new System.Windows.Forms.ComboBox();
+            this.microphoneBrandBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.MarcaCalibrador = new System.Windows.Forms.ComboBox();
+            this.SLMBrandBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -55,211 +59,344 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.ModeloPlacaSom);
-            this.groupBox5.Location = new System.Drawing.Point(354, 301);
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.soundCardModelBox);
+            this.groupBox5.Location = new System.Drawing.Point(323, 4);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(300, 56);
+            this.groupBox5.Size = new System.Drawing.Size(311, 61);
             this.groupBox5.TabIndex = 58;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Modelo da placa de som";
             // 
-            // ModeloPlacaSom
+            // soundCardModelBox
             // 
-            this.ModeloPlacaSom.FormattingEnabled = true;
-            this.ModeloPlacaSom.Location = new System.Drawing.Point(9, 20);
-            this.ModeloPlacaSom.Margin = new System.Windows.Forms.Padding(4);
-            this.ModeloPlacaSom.Name = "ModeloPlacaSom";
-            this.ModeloPlacaSom.Size = new System.Drawing.Size(284, 28);
-            this.ModeloPlacaSom.TabIndex = 11;
+            this.soundCardModelBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.soundCardModelBox.FormattingEnabled = true;
+            this.soundCardModelBox.Location = new System.Drawing.Point(9, 20);
+            this.soundCardModelBox.Margin = new System.Windows.Forms.Padding(4);
+            this.soundCardModelBox.Name = "soundCardModelBox";
+            this.soundCardModelBox.Size = new System.Drawing.Size(294, 28);
+            this.soundCardModelBox.TabIndex = 11;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.MarcaPlacaSom);
-            this.groupBox7.Location = new System.Drawing.Point(21, 301);
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.soundCardBrandBox);
+            this.groupBox7.Location = new System.Drawing.Point(4, 4);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(300, 56);
+            this.groupBox7.Size = new System.Drawing.Size(311, 61);
             this.groupBox7.TabIndex = 57;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Marca da placa de som";
             // 
-            // MarcaPlacaSom
+            // soundCardBrandBox
             // 
-            this.MarcaPlacaSom.FormattingEnabled = true;
-            this.MarcaPlacaSom.Location = new System.Drawing.Point(9, 20);
-            this.MarcaPlacaSom.Margin = new System.Windows.Forms.Padding(4);
-            this.MarcaPlacaSom.Name = "MarcaPlacaSom";
-            this.MarcaPlacaSom.Size = new System.Drawing.Size(284, 28);
-            this.MarcaPlacaSom.TabIndex = 11;
+            this.soundCardBrandBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.soundCardBrandBox.FormattingEnabled = true;
+            this.soundCardBrandBox.Location = new System.Drawing.Point(9, 20);
+            this.soundCardBrandBox.Margin = new System.Windows.Forms.Padding(4);
+            this.soundCardBrandBox.Name = "soundCardBrandBox";
+            this.soundCardBrandBox.Size = new System.Drawing.Size(295, 28);
+            this.soundCardBrandBox.TabIndex = 11;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.NmrSerieMicrofone);
-            this.groupBox4.Location = new System.Drawing.Point(682, 186);
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.microphoneSerialNumberBox);
+            this.groupBox4.Location = new System.Drawing.Point(642, 4);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(300, 56);
+            this.groupBox4.Size = new System.Drawing.Size(311, 60);
             this.groupBox4.TabIndex = 56;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "N.º de série do microfone externo";
             // 
-            // NmrSerieMicrofone
+            // microphoneSerialNumberBox
             // 
-            this.NmrSerieMicrofone.Location = new System.Drawing.Point(8, 20);
-            this.NmrSerieMicrofone.Margin = new System.Windows.Forms.Padding(4);
-            this.NmrSerieMicrofone.Name = "NmrSerieMicrofone";
-            this.NmrSerieMicrofone.Size = new System.Drawing.Size(284, 27);
-            this.NmrSerieMicrofone.TabIndex = 30;
+            this.microphoneSerialNumberBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.microphoneSerialNumberBox.Location = new System.Drawing.Point(8, 20);
+            this.microphoneSerialNumberBox.Margin = new System.Windows.Forms.Padding(4);
+            this.microphoneSerialNumberBox.Name = "microphoneSerialNumberBox";
+            this.microphoneSerialNumberBox.Size = new System.Drawing.Size(295, 27);
+            this.microphoneSerialNumberBox.TabIndex = 30;
             // 
             // Next
             // 
-            this.Next.Location = new System.Drawing.Point(682, 301);
+            this.Next.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Next.ForeColor = System.Drawing.Color.White;
+            this.Next.Location = new System.Drawing.Point(642, 4);
             this.Next.Margin = new System.Windows.Forms.Padding(4);
             this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(300, 56);
+            this.Next.Size = new System.Drawing.Size(311, 61);
             this.Next.TabIndex = 55;
             this.Next.Text = "Prosseguir";
-            this.Next.UseVisualStyleBackColor = true;
+            this.Next.UseVisualStyleBackColor = false;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.NmrSerieCalibrador);
-            this.groupBox6.Location = new System.Drawing.Point(682, 74);
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.SLMSerialNumberBox);
+            this.groupBox6.Location = new System.Drawing.Point(642, 4);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(300, 56);
+            this.groupBox6.Size = new System.Drawing.Size(311, 60);
             this.groupBox6.TabIndex = 51;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "N.º de série do calibradro sonoro";
             // 
-            // NmrSerieCalibrador
+            // SLMSerialNumberBox
             // 
-            this.NmrSerieCalibrador.Location = new System.Drawing.Point(8, 20);
-            this.NmrSerieCalibrador.Margin = new System.Windows.Forms.Padding(4);
-            this.NmrSerieCalibrador.Name = "NmrSerieCalibrador";
-            this.NmrSerieCalibrador.Size = new System.Drawing.Size(284, 27);
-            this.NmrSerieCalibrador.TabIndex = 29;
+            this.SLMSerialNumberBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SLMSerialNumberBox.Location = new System.Drawing.Point(8, 20);
+            this.SLMSerialNumberBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SLMSerialNumberBox.Name = "SLMSerialNumberBox";
+            this.SLMSerialNumberBox.Size = new System.Drawing.Size(295, 27);
+            this.SLMSerialNumberBox.TabIndex = 29;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.ModeloCalibrador);
-            this.groupBox8.Location = new System.Drawing.Point(354, 74);
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox8.Controls.Add(this.SLMModelBox);
+            this.groupBox8.Location = new System.Drawing.Point(323, 4);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Size = new System.Drawing.Size(300, 56);
+            this.groupBox8.Size = new System.Drawing.Size(311, 60);
             this.groupBox8.TabIndex = 52;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Modelo do calibrador sonoro";
             // 
-            // ModeloCalibrador
+            // SLMModelBox
             // 
-            this.ModeloCalibrador.FormattingEnabled = true;
-            this.ModeloCalibrador.Location = new System.Drawing.Point(9, 20);
-            this.ModeloCalibrador.Margin = new System.Windows.Forms.Padding(4);
-            this.ModeloCalibrador.Name = "ModeloCalibrador";
-            this.ModeloCalibrador.Size = new System.Drawing.Size(284, 28);
-            this.ModeloCalibrador.TabIndex = 11;
+            this.SLMModelBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SLMModelBox.FormattingEnabled = true;
+            this.SLMModelBox.Location = new System.Drawing.Point(9, 20);
+            this.SLMModelBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SLMModelBox.Name = "SLMModelBox";
+            this.SLMModelBox.Size = new System.Drawing.Size(294, 28);
+            this.SLMModelBox.TabIndex = 11;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.ModeloMicrofone);
-            this.groupBox3.Location = new System.Drawing.Point(354, 186);
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.microphoneModelBox);
+            this.groupBox3.Location = new System.Drawing.Point(323, 4);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(300, 56);
+            this.groupBox3.Size = new System.Drawing.Size(311, 60);
             this.groupBox3.TabIndex = 54;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Modelo do microfone externo";
             // 
-            // ModeloMicrofone
+            // microphoneModelBox
             // 
-            this.ModeloMicrofone.FormattingEnabled = true;
-            this.ModeloMicrofone.Location = new System.Drawing.Point(9, 20);
-            this.ModeloMicrofone.Margin = new System.Windows.Forms.Padding(4);
-            this.ModeloMicrofone.Name = "ModeloMicrofone";
-            this.ModeloMicrofone.Size = new System.Drawing.Size(284, 28);
-            this.ModeloMicrofone.TabIndex = 11;
+            this.microphoneModelBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.microphoneModelBox.FormattingEnabled = true;
+            this.microphoneModelBox.Location = new System.Drawing.Point(9, 20);
+            this.microphoneModelBox.Margin = new System.Windows.Forms.Padding(4);
+            this.microphoneModelBox.Name = "microphoneModelBox";
+            this.microphoneModelBox.Size = new System.Drawing.Size(294, 28);
+            this.microphoneModelBox.TabIndex = 11;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.MarcaMicrofone);
-            this.groupBox2.Location = new System.Drawing.Point(21, 186);
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.microphoneBrandBox);
+            this.groupBox2.Location = new System.Drawing.Point(4, 4);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(300, 56);
+            this.groupBox2.Size = new System.Drawing.Size(311, 60);
             this.groupBox2.TabIndex = 53;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Marca do microfone externo";
             // 
-            // MarcaMicrofone
+            // microphoneBrandBox
             // 
-            this.MarcaMicrofone.FormattingEnabled = true;
-            this.MarcaMicrofone.Location = new System.Drawing.Point(9, 20);
-            this.MarcaMicrofone.Margin = new System.Windows.Forms.Padding(4);
-            this.MarcaMicrofone.Name = "MarcaMicrofone";
-            this.MarcaMicrofone.Size = new System.Drawing.Size(284, 28);
-            this.MarcaMicrofone.TabIndex = 11;
+            this.microphoneBrandBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.microphoneBrandBox.FormattingEnabled = true;
+            this.microphoneBrandBox.Location = new System.Drawing.Point(9, 20);
+            this.microphoneBrandBox.Margin = new System.Windows.Forms.Padding(4);
+            this.microphoneBrandBox.Name = "microphoneBrandBox";
+            this.microphoneBrandBox.Size = new System.Drawing.Size(295, 28);
+            this.microphoneBrandBox.TabIndex = 11;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.MarcaCalibrador);
-            this.groupBox1.Location = new System.Drawing.Point(21, 74);
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.SLMBrandBox);
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(300, 56);
+            this.groupBox1.Size = new System.Drawing.Size(311, 60);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marca do calibrador sonoro";
             // 
-            // MarcaCalibrador
+            // SLMBrandBox
             // 
-            this.MarcaCalibrador.FormattingEnabled = true;
-            this.MarcaCalibrador.Location = new System.Drawing.Point(9, 20);
-            this.MarcaCalibrador.Margin = new System.Windows.Forms.Padding(4);
-            this.MarcaCalibrador.Name = "MarcaCalibrador";
-            this.MarcaCalibrador.Size = new System.Drawing.Size(284, 28);
-            this.MarcaCalibrador.TabIndex = 11;
+            this.SLMBrandBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SLMBrandBox.FormattingEnabled = true;
+            this.SLMBrandBox.Location = new System.Drawing.Point(9, 20);
+            this.SLMBrandBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SLMBrandBox.Name = "SLMBrandBox";
+            this.SLMBrandBox.Size = new System.Drawing.Size(295, 28);
+            this.SLMBrandBox.TabIndex = 11;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 9);
+            this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(906, 40);
+            this.label1.Size = new System.Drawing.Size(955, 74);
             this.label1.TabIndex = 49;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(963, 297);
+            this.tableLayoutPanel1.TabIndex = 29;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.groupBox8, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.groupBox6, 2, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 77);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(957, 68);
+            this.tableLayoutPanel6.TabIndex = 30;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Controls.Add(this.groupBox7, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.groupBox5, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.Next, 2, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 225);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(957, 69);
+            this.tableLayoutPanel5.TabIndex = 30;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox4, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 151);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(957, 68);
+            this.tableLayoutPanel2.TabIndex = 27;
             // 
             // calibrationSettingsA3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 367);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.Next);
-            this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox8);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(987, 321);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -276,30 +413,38 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox ModeloPlacaSom;
+        private System.Windows.Forms.ComboBox soundCardModelBox;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox MarcaPlacaSom;
+        private System.Windows.Forms.ComboBox soundCardBrandBox;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox NmrSerieMicrofone;
+        private System.Windows.Forms.TextBox microphoneSerialNumberBox;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox NmrSerieCalibrador;
+        private System.Windows.Forms.TextBox SLMSerialNumberBox;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox ModeloCalibrador;
+        private System.Windows.Forms.ComboBox SLMModelBox;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox ModeloMicrofone;
+        private System.Windows.Forms.ComboBox microphoneModelBox;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox MarcaMicrofone;
+        private System.Windows.Forms.ComboBox microphoneBrandBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox MarcaCalibrador;
+        private System.Windows.Forms.ComboBox SLMBrandBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

@@ -125,5 +125,11 @@ namespace perSONA
             wb.Dispose();
 
         }
+
+        private void notCalibrateCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (notCalibrateCheckbox.Checked) lastCalibrationDateBox.Visible = false;
+            else lastCalibrationDateBox.Visible = true;
+        }
     }
 }

@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="RESULTS_FOLDER" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Selecione uma pasta e salve a alteração</Value>
+      <Value Profile="(Default)">Selecione uma pasta antes de prosseguir</Value>
     </Setting>
     <Setting Name="SERIAL_KEY" Type="System.String" Scope="User">
       <Value Profile="(Default)">PTMGF-28VKB-2W934-482QH-98623</Value>
@@ -37,6 +37,12 @@
     </Setting>
     <Setting Name="EQUIPMENTS_TABLE_LOCATION" Type="System.String" Scope="User">
       <Value Profile="(Default)">data/Equipments.xlsx</Value>
+    </Setting>
+    <Setting Name="CALIBRATED_AUDIOMETRY" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CALIBRATED_AUDIOMETRY_VALUES" Type="System.Double[]" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

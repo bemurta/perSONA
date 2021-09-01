@@ -56,12 +56,15 @@
             // 
             // Fail
             // 
+            this.Fail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.Fail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fail.ForeColor = System.Drawing.Color.White;
             this.Fail.Location = new System.Drawing.Point(424, 282);
             this.Fail.Name = "Fail";
             this.Fail.Size = new System.Drawing.Size(188, 53);
             this.Fail.TabIndex = 104;
             this.Fail.Text = "Falha";
-            this.Fail.UseVisualStyleBackColor = true;
+            this.Fail.UseVisualStyleBackColor = false;
             this.Fail.Click += new System.EventHandler(this.Fail_Click);
             // 
             // panel1
@@ -107,13 +110,16 @@
             // 
             // Sound
             // 
+            this.Sound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.Sound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sound.ForeColor = System.Drawing.Color.White;
             this.Sound.Location = new System.Drawing.Point(424, 109);
             this.Sound.Margin = new System.Windows.Forms.Padding(4);
             this.Sound.Name = "Sound";
             this.Sound.Size = new System.Drawing.Size(388, 53);
             this.Sound.TabIndex = 103;
             this.Sound.Text = "Gerar sinal sonoro";
-            this.Sound.UseVisualStyleBackColor = true;
+            this.Sound.UseVisualStyleBackColor = false;
             this.Sound.Click += new System.EventHandler(this.Sound_Click);
             // 
             // label3
@@ -147,13 +153,16 @@
             // 
             // Next
             // 
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Next.ForeColor = System.Drawing.Color.White;
             this.Next.Location = new System.Drawing.Point(624, 282);
             this.Next.Margin = new System.Windows.Forms.Padding(4);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(188, 53);
             this.Next.TabIndex = 96;
             this.Next.Text = "Próximo fone";
-            this.Next.UseVisualStyleBackColor = true;
+            this.Next.UseVisualStyleBackColor = false;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // calibrated
@@ -192,13 +201,16 @@
             // 
             // Help
             // 
+            this.Help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Help.ForeColor = System.Drawing.Color.White;
             this.Help.Location = new System.Drawing.Point(424, 342);
             this.Help.Margin = new System.Windows.Forms.Padding(4);
             this.Help.Name = "Help";
             this.Help.Size = new System.Drawing.Size(388, 53);
             this.Help.TabIndex = 97;
             this.Help.Text = "Ajuda";
-            this.Help.UseVisualStyleBackColor = true;
+            this.Help.UseVisualStyleBackColor = false;
             this.Help.Click += new System.EventHandler(this.Help_Click);
             // 
             // volumeBar
@@ -238,18 +250,22 @@
             // 
             // PhoneBalanceAdjusting
             // 
+            this.PhoneBalanceAdjusting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.PhoneBalanceAdjusting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PhoneBalanceAdjusting.ForeColor = System.Drawing.Color.White;
             this.PhoneBalanceAdjusting.Location = new System.Drawing.Point(424, 172);
             this.PhoneBalanceAdjusting.Name = "PhoneBalanceAdjusting";
             this.PhoneBalanceAdjusting.Size = new System.Drawing.Size(388, 53);
             this.PhoneBalanceAdjusting.TabIndex = 107;
             this.PhoneBalanceAdjusting.Text = "Como ajustar o balanço dos fones de ouvido?";
-            this.PhoneBalanceAdjusting.UseVisualStyleBackColor = true;
+            this.PhoneBalanceAdjusting.UseVisualStyleBackColor = false;
             this.PhoneBalanceAdjusting.Click += new System.EventHandler(this.PhoneBalanceAdjusting_Click);
             // 
             // earphoneCalibration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(827, 408);
             this.Controls.Add(this.PhoneBalanceAdjusting);
             this.Controls.Add(this.pictureBox2);

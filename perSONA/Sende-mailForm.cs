@@ -59,5 +59,11 @@ namespace perSONA
             Close();
             // In case of doubt -> https://www.youtube.com/watch?v=WKyVqmbCVc0   and    https://www.hostinger.com.br/tutoriais/aprenda-a-utilizar-o-smtp-google/
         }
+
+        private void WhatsApp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Você será direcionado a um grupo de WhatsApp destinado a resolver dúvidas de usuários, após ser respondido pedimos que se retire do grupo para facilitar a organização, Obrigado.", "Grupo de Dúvidas", MessageBoxButtons.OK);
+            System.Diagnostics.Process.Start("https://chat.whatsapp.com/DsJNiJ4zwYBCcRT0jxCP8h");
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using DocumentFormat.OpenXml.Presentation;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,8 +43,10 @@ namespace perSONA
         public Form1(string confFile, int sourceIndex)
         {
             InitializeComponent();
-            this.confFile = confFile;
 
+            resizeScreen();
+
+            this.confFile = confFile;
             this.sourceIndex = sourceIndex;
 
             vA = new VANet();
@@ -403,11 +406,73 @@ namespace perSONA
             concatText("Selected Noise: " + noiseFile);
             vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
             vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
-            Thread.Sleep(3000);
-            vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
         }
 
-        private void speechLeft_Click(object sender, EventArgs e)
+        public void playScene(double radius, bool speechON, string speechFile, double currentSpeechPower, double speechAngle, bool noiseON, string noiseFile, double noiseAngle, double currentNoisePower)
+        {
+
+            if (speechON)
+            {
+                double xSides = radius * Math.Sin(speechAngle / 180 * Math.PI);
+                double zFront = radius * Math.Cos(speechAngle / 180 * Math.PI);
+                double yHeight = 1.7;
+
+                double powerSpeech = (currentSpeechPower / 100000.0) * 0.25;
+                speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
+                speechSource = vA.CreateSoundSource("Speech");
+
+                int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+                vA.SetSoundSourceDirectivity(speechSource, humanDirectivity);
+
+                vA.SetSoundSourcePosition(speechSource, new VAVec3(xSides, yHeight, zFront));
+                vA.SetSoundSourceSoundPower(speechSource, powerSpeech);
+                vA.SetSoundSourceSignalSource(speechSource, speechSound);
+            }
+
+            if (noiseON)
+            {
+                double noisexSides = radius * Math.Sin(noiseAngle / 180 * Math.PI);
+                double noisezFront = radius * Math.Cos(noiseAngle / 180 * Math.PI);
+                double noiseyHeight = 1.7;
+
+                double powerNoise = (currentNoisePower / 100000.0) * 0.25;
+                noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
+                noiseSource = vA.CreateSoundSource("Noise");
+
+                int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+                vA.SetSoundSourceDirectivity(speechSource, humanDirectivity);
+
+                vA.SetSoundSourcePosition(noiseSource, new VAVec3(noisexSides, noiseyHeight, noisezFront));
+                vA.SetSoundSourceSoundPower(noiseSource, powerNoise);
+                vA.SetSoundSourceSignalSource(noiseSource, noiseSound);
+            }
+
+            if (speechON) vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
+            
+            if (noiseON)
+            {
+                vA.SetSignalSourceBufferLooping(noiseSound, true);
+                vA.SetSignalSourceBufferPlaybackAction(noiseSound, "play");
+            }
+        }
+
+        public void stopScene(bool speechON, bool noiseON)
+        {
+            if (speechON)
+            {
+                vA.SetSignalSourceBufferPlaybackAction(speechSound, "pause");
+                vA.SetSignalSourceBufferPlaybackAction(speechSound, "stop");
+                vA.DeleteSignalSource(speechSound);
+            }
+            if (noiseON)
+            {
+                vA.SetSignalSourceBufferPlaybackAction(noiseSound, "pause");
+                vA.SetSignalSourceBufferPlaybackAction(noiseSound, "stop");
+                vA.DeleteSignalSource(noiseSound);
+            }
+        }
+
+            private void speechLeft_Click(object sender, EventArgs e)
         {
             int angle = -90;
             int radius = 2;
@@ -770,8 +835,34 @@ namespace perSONA
         public void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName)
         {
             string AudiometryJson = Newtonsoft.Json.JsonConvert.SerializeObject(Audiometry);
+            string timestamp;
 
-            string timestamp = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
+
+            if (Audiometry.Side == "Left")
+            {
+                timestamp = Audiometry.audiometryDate.ToString("dd-MM-yyyy") + " orelha esquerda,";
+            }
+            else
+            {
+                timestamp = Audiometry.audiometryDate.ToString("dd-MM-yyyy") + " orelha direita,";
+            }
+
+            if (Audiometry.Via == "Air")
+            {
+                timestamp = timestamp + " via aérea (" + patientName + ")";
+            }
+            else if (Audiometry.Via == "Bone (mastoid)")
+            {
+                timestamp = timestamp + " via óssea (mastóide) (" + patientName + ")";
+            }
+            else if (Audiometry.Via == "Bone (forehead)")
+            {
+                timestamp = timestamp + " via óssea (fronte) (" + patientName + ")";
+            }
+            else
+            {
+                timestamp = timestamp + " campo livre (" + patientName + ")";
+            }
 
             concatText(AudiometryJson);
 
@@ -867,19 +958,24 @@ namespace perSONA
             openTestForm("Default");
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void audiometryManualTest_Click(object sender, EventArgs e)
         {
-            openTestForm("Speech Left");
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            openTestForm("Speech Front");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            openTestForm("Speech Right");
+            if (Application.OpenForms["manualAudiometricTest"] == null)
+            {
+                try
+                {
+                    string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
+                    new manualAudiometricTest(this, subjects).Show();
+                }
+                catch (Exception)
+                {
+                    const string message = "Selecione um paciente e um aplicador para prosseguir";
+                    const string caption = "Erro";
+                    var result = MessageBox.Show(message, caption,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void openTestForm(string testTipe)
@@ -918,14 +1014,6 @@ namespace perSONA
             }
         }
 
-        private void patientAreaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Application.OpenForms["patientManagement"] == null)
-            {
-                new patientManagement(this).Show();
-            }
-        }
-
         private void audioDatabaseEditorAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["dbForm"] == null)
@@ -960,16 +1048,29 @@ namespace perSONA
 
         private void button10_Click(object sender, EventArgs e)
         {
-            string jsonFile = string.Format("{0}/patients/{1}.json",
-                Properties.Settings.Default.RESULTS_FOLDER,
-                patientBox.SelectedItem.ToString());
-
             if (MessageBox.Show("Deseja deletar paciente?", patientBox.SelectedItem.ToString(),
                 MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1) == DialogResult.Yes)
 
             {
-                File.Delete(jsonFile);
+                string jsonPatientFile = string.Format("{0}/patients/{1}.json",
+                                Properties.Settings.Default.RESULTS_FOLDER,
+                                patientBox.SelectedItem.ToString());
+                string json = File.ReadAllText(jsonPatientFile);
+                Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(json);
+
+                List<string> tests = patient.Audiometrys.OfType<string>().ToList();
+
+                //delete patient audiometrys
+                foreach (string audiometry in tests)
+                {
+                    string jsonAudiometryFile = string.Format("{0}/audiometry/{1}.json",
+                                                Properties.Settings.Default.RESULTS_FOLDER,
+                                                "test-" + audiometry);
+                    File.Delete(jsonAudiometryFile);
+                }
+                //delet patient
+                File.Delete(jsonPatientFile);
                 concatText(string.Format("Deleted patient: {0}", patientBox.SelectedItem.ToString()));
             }
             updatePatientList();
@@ -1092,7 +1193,7 @@ namespace perSONA
                                             Properties.Settings.Default.RESULTS_FOLDER,
                                             applicatorBox.SelectedItem.ToString());
 
-            if (MessageBox.Show("Deseja deletar paciente?", applicatorBox.SelectedItem.ToString(),
+            if (MessageBox.Show("Deseja deletar aplicador?", applicatorBox.SelectedItem.ToString(),
                 MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
                 MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
@@ -1131,6 +1232,31 @@ namespace perSONA
                 Applicator applicator = Newtonsoft.Json.JsonConvert.DeserializeObject<Applicator>(applicatorJson);
 
                 new applicatorManagementForm(this, applicator).Show();
+            }
+        }
+
+        private void recalibrateAudiometry_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Você realmente deseja recalibrar o audiômetro (os limiares atuais serão perdidos).", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes) 
+            {
+                Properties.Settings.Default.CALIBRATED_AUDIOMETRY = false;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void resizeScreen() {
+            double PCResolutionWidth = Screen.PrimaryScreen.Bounds.Width;
+            double PCResolutionHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            double formWidth = this.Size.Width;
+            double formHeight = this.Size.Height;
+
+            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight*0.925))
+            {
+                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.786);
+                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.9);
+                this.Size = new Size(newWidth, newHeight);
             }
         }
     }

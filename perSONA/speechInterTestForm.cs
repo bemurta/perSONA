@@ -5,10 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VA;
 using ZedGraph;
+using TagLib;
 
 namespace perSONA
 {
@@ -30,7 +32,7 @@ namespace perSONA
         public speechIterTestForm(speechPerceptionTest test, IvAInterface vAInterface)
         {
             InitializeComponent();
-
+            resizeScreen();
             patientLabel.Text = test.PatientName;
             applicatorLabel.Text = test.Applicator;
 
@@ -70,7 +72,6 @@ namespace perSONA
             updateIterationGraph(zedGraphControl1.GraphPane, signalToNoiseArray);
             iteractiveResponseTime = new List<string> { };
             iteractiveResponsePercentage = new List<string> { };
-
         }
 
         private void all_correct_Click(object sender, EventArgs e)
@@ -134,6 +135,13 @@ namespace perSONA
             vAInterface.playScene(test.RadiusSpeech, test.AngleSpeech, actualSNR);
 
 
+            TagLib.File file = TagLib.File.Create(currentFile); //Take file at taglibe format   
+            var duration = file.Properties.Duration;            //Take duration
+            int msecduration = Convert.ToInt32(duration.TotalMilliseconds) + 20;
+            vAInterface.concatText(string.Format("Speech time: {0}", msecduration.ToString()));
+            Thread.Sleep(msecduration);      //Sleep fileduration milliseconds
+
+            vAInterface.stopScene(true, true);
         }
 
         private void updateIterationGraph(GraphPane graph, double[] signalToNoiseArray)
@@ -290,6 +298,21 @@ namespace perSONA
         {
             this.continuousTimerText.Text = string.Format("{0:hh\\:mm\\:ss}", DateTime.Now - test.TestStart);
             this.currentTryal.Text = string.Format("{0:mm\\:ss}", DateTime.Now - tryalStartTime);
+        }
+        private void resizeScreen()
+        {
+            double PCResolutionWidth = Screen.PrimaryScreen.Bounds.Width;
+            double PCResolutionHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            double formWidth = this.Size.Width;
+            double formHeight = this.Size.Height;
+
+            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight * 0.925))
+            {
+                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.78);
+                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.8);
+                this.Size = new Size(newWidth, newHeight);
+            }
         }
     }
 }

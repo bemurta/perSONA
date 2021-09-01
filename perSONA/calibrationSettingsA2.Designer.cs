@@ -280,13 +280,16 @@
             this.Next.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Next.ForeColor = System.Drawing.Color.White;
             this.Next.Location = new System.Drawing.Point(642, 4);
             this.Next.Margin = new System.Windows.Forms.Padding(4);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(311, 62);
             this.Next.TabIndex = 24;
             this.Next.Text = "Prosseguir";
-            this.Next.UseVisualStyleBackColor = true;
+            this.Next.UseVisualStyleBackColor = false;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // label1
@@ -431,11 +434,13 @@
             this.notCalibrateCheckbox.Text = "Não calibrado";
             this.notCalibrateCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.notCalibrateCheckbox.UseVisualStyleBackColor = true;
+            this.notCalibrateCheckbox.CheckedChanged += new System.EventHandler(this.notCalibrateCheckbox_CheckedChanged);
             // 
             // calibrationSettingsA2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(987, 321);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

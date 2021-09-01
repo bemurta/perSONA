@@ -185,11 +185,11 @@ namespace perSONA
             int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
             vA.SetSoundReceiverDirectivity(receiverId, hrirId);
 
-            string speechFile = "data/Sounds/BandPassLimitedWhiteNoise.wav";
+            string speechFile = "data/Sounds/CalibrationNoise.wav";
             vAInterface.concatText(speechFile);
             vAInterface.concatText(string.Format("Calibration sound angle: {0}", (90 + (i * 180))));
 
-            if (i < 2)
+            if (i < 7)
             {
                 vAInterface.createAcousticScene(speechFile, speechFile);
                 vAInterface.playScene(1.7, (i * 45), 40);
@@ -309,6 +309,15 @@ namespace perSONA
                 }
             }
 
+            //Sound Card System
+            if (Properties.Settings.Default.CALIBRATION_MODE == "A3")
+            {
+                paragraph[p].Add(new Chunk("Sistema utilizado na calibração: ", H2bold));
+                paragraph[p].Add(new Chunk(string.Format("Calibrador sonoro {0} {1} {2}, auxiliado de um microfone {3} {4} {5} e uma placa de som {6} {7}",
+                                        calibration.SLMBrand, calibration.SLMModel, calibration.SLMSerialNumber, calibration.MicrophoneBrand, calibration.MicrophoneModel, calibration.MicrophoneSerialNumber, calibration.SoundCardBrand, calibration.SoundCardModel) + "\r\n" + "\r\n", H2));
+                p++;
+            }
+
 
 
             paragraph[p].Add(new Chunk("Status da calibração do sistema: ", H2bold));
@@ -329,14 +338,14 @@ namespace perSONA
             doc.Add(p7);
             doc.Add(p8);
             doc.Add(p9);
-            /* 
+            
+            
             //Image
-            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance("C:/Users/Gustavo Trentin/Desktop/Fotos/Gustavo.jpeg");
-            image.SetAbsolutePosition(90,90);
-            image.ScaleAbsoluteHeight(20);
-            image.ScaleAbsoluteWidth(90);
+            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance("data/Logo_Large.png");
+            image.SetAbsolutePosition(492, 0);
+            image.ScaleAbsoluteHeight(60);
+            image.ScaleAbsoluteWidth(100);
             doc.Add(image);
-            */
 
             doc.Close();
 
