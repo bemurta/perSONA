@@ -36,7 +36,6 @@ namespace perSONA
             patientLabel.Text = test.PatientName;
             applicatorLabel.Text = test.Applicator;
 
-
             tryalStartTime = DateTime.Now;
             timer1.Tick += new EventHandler(timer1_Tick);
             this.timer1.Interval = 1000;
@@ -205,7 +204,7 @@ namespace perSONA
         {
             double answer = testWordsList.SelectedItems.Count;
             double totalWords = testWordsList.Items.Count;
-            double nextSNR;
+            double nextSNR = 0;
 
             if (answer / totalWords < test.AcceptanceRule)
             {
@@ -213,20 +212,28 @@ namespace perSONA
                 currentStreak = false;
                 streakText.Text = "False";
             }
-            else
+
+            else if (test.PresentingLogic[0] == 2) //test verifies 2 form "2 down 1 up"
             {
-                if (currentStreak)
-                {
-                    nextSNR = currentSNR - snrStep;
-                    currentStreak = false;
-                    streakText.Text = "False";
-                }
-                else
-                {
-                    nextSNR = currentSNR;
-                    currentStreak = true;
-                    streakText.Text = "True";
-                }
+                    if (currentStreak)
+                    {
+                        nextSNR = currentSNR - snrStep;
+                        currentStreak = false;
+                        streakText.Text = "False";
+                    }
+                    else
+                    {
+                        nextSNR = currentSNR;
+                        currentStreak = true;
+                        streakText.Text = "True";
+                    }
+            }
+
+            else if (test.PresentingLogic[0] == 1) //test verifies 1 form "1 down 1 up"
+            {
+                nextSNR = currentSNR - snrStep;
+                currentStreak = true;
+                streakText.Text = "True";
             }
 
             return nextSNR;
