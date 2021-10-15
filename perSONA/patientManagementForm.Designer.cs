@@ -1484,9 +1484,9 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(5, 666);
             this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Name = "button3";
@@ -2956,13 +2956,16 @@
             this.previewAudiometryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.previewAudiometryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.previewAudiometryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.previewAudiometryButton.ForeColor = System.Drawing.Color.White;
             this.previewAudiometryButton.Location = new System.Drawing.Point(178, 73);
             this.previewAudiometryButton.Margin = new System.Windows.Forms.Padding(5);
             this.previewAudiometryButton.Name = "previewAudiometryButton";
             this.previewAudiometryButton.Size = new System.Drawing.Size(164, 58);
             this.previewAudiometryButton.TabIndex = 3;
             this.previewAudiometryButton.Text = "Pré-Visualização";
-            this.previewAudiometryButton.UseVisualStyleBackColor = true;
+            this.previewAudiometryButton.UseVisualStyleBackColor = false;
             this.previewAudiometryButton.Click += new System.EventHandler(this.previewAudiometryButton_Click);
             // 
             // saveAudiometryButton
@@ -2970,13 +2973,16 @@
             this.saveAudiometryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveAudiometryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.saveAudiometryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveAudiometryButton.ForeColor = System.Drawing.Color.White;
             this.saveAudiometryButton.Location = new System.Drawing.Point(5, 141);
             this.saveAudiometryButton.Margin = new System.Windows.Forms.Padding(5);
             this.saveAudiometryButton.Name = "saveAudiometryButton";
             this.saveAudiometryButton.Size = new System.Drawing.Size(163, 60);
             this.saveAudiometryButton.TabIndex = 4;
             this.saveAudiometryButton.Text = "Cadastrar audiometria";
-            this.saveAudiometryButton.UseVisualStyleBackColor = true;
+            this.saveAudiometryButton.UseVisualStyleBackColor = false;
             this.saveAudiometryButton.Click += new System.EventHandler(this.saveAudiometryButton_Click);
             // 
             // deleteAudiometryButton
@@ -2984,12 +2990,15 @@
             this.deleteAudiometryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteAudiometryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.deleteAudiometryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteAudiometryButton.ForeColor = System.Drawing.Color.White;
             this.deleteAudiometryButton.Location = new System.Drawing.Point(176, 139);
             this.deleteAudiometryButton.Name = "deleteAudiometryButton";
             this.deleteAudiometryButton.Size = new System.Drawing.Size(168, 64);
             this.deleteAudiometryButton.TabIndex = 5;
             this.deleteAudiometryButton.Text = "Deletar audiometria";
-            this.deleteAudiometryButton.UseVisualStyleBackColor = true;
+            this.deleteAudiometryButton.UseVisualStyleBackColor = false;
             this.deleteAudiometryButton.Click += new System.EventHandler(this.deleteAudiometryButton_Click);
             // 
             // audiometryGraph

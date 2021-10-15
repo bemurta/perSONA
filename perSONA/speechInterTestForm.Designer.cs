@@ -96,9 +96,9 @@
             this.all_correct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.all_correct.BackColor = System.Drawing.SystemColors.Control;
+            this.all_correct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.all_correct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.all_correct.ForeColor = System.Drawing.Color.Black;
+            this.all_correct.ForeColor = System.Drawing.Color.White;
             this.all_correct.Location = new System.Drawing.Point(5, 50);
             this.all_correct.Margin = new System.Windows.Forms.Padding(5);
             this.all_correct.Name = "all_correct";
@@ -188,9 +188,9 @@
             this.all_incorrect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.all_incorrect.BackColor = System.Drawing.SystemColors.Control;
+            this.all_incorrect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.all_incorrect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.all_incorrect.ForeColor = System.Drawing.Color.Black;
+            this.all_incorrect.ForeColor = System.Drawing.Color.White;
             this.all_incorrect.Location = new System.Drawing.Point(5, 95);
             this.all_incorrect.Margin = new System.Windows.Forms.Padding(5);
             this.all_incorrect.Name = "all_incorrect";
@@ -257,9 +257,9 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(5, 254);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
@@ -410,9 +410,9 @@
             this.playCurrentScene.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.playCurrentScene.BackColor = System.Drawing.SystemColors.Control;
+            this.playCurrentScene.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.playCurrentScene.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playCurrentScene.ForeColor = System.Drawing.Color.Black;
+            this.playCurrentScene.ForeColor = System.Drawing.Color.White;
             this.playCurrentScene.Location = new System.Drawing.Point(5, 5);
             this.playCurrentScene.Margin = new System.Windows.Forms.Padding(5);
             this.playCurrentScene.Name = "playCurrentScene";
