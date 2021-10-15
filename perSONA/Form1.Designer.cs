@@ -162,13 +162,16 @@ namespace perSONA
             this.reset.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reset.ForeColor = System.Drawing.Color.White;
             this.reset.Location = new System.Drawing.Point(172, 5);
             this.reset.Margin = new System.Windows.Forms.Padding(5);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(158, 30);
             this.reset.TabIndex = 9;
             this.reset.Text = "Limpar cena";
-            this.reset.UseVisualStyleBackColor = true;
+            this.reset.UseVisualStyleBackColor = false;
             this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // createReceiver
@@ -176,13 +179,16 @@ namespace perSONA
             this.createReceiver.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.createReceiver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.createReceiver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createReceiver.ForeColor = System.Drawing.Color.White;
             this.createReceiver.Location = new System.Drawing.Point(5, 5);
             this.createReceiver.Margin = new System.Windows.Forms.Padding(5);
             this.createReceiver.Name = "createReceiver";
             this.createReceiver.Size = new System.Drawing.Size(157, 30);
             this.createReceiver.TabIndex = 8;
             this.createReceiver.Text = "Criar receptor";
-            this.createReceiver.UseVisualStyleBackColor = true;
+            this.createReceiver.UseVisualStyleBackColor = false;
             this.createReceiver.Click += new System.EventHandler(this.createReceiver_Click);
             // 
             // createSource2
@@ -190,13 +196,16 @@ namespace perSONA
             this.createSource2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.createSource2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.createSource2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createSource2.ForeColor = System.Drawing.Color.White;
             this.createSource2.Location = new System.Drawing.Point(172, 5);
             this.createSource2.Margin = new System.Windows.Forms.Padding(5);
             this.createSource2.Name = "createSource2";
             this.createSource2.Size = new System.Drawing.Size(158, 34);
             this.createSource2.TabIndex = 3;
             this.createSource2.Text = "Sinal aleatório";
-            this.createSource2.UseVisualStyleBackColor = true;
+            this.createSource2.UseVisualStyleBackColor = false;
             this.createSource2.Click += new System.EventHandler(this.createSource2_Click);
             // 
             // play2
@@ -204,13 +213,16 @@ namespace perSONA
             this.play2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.play2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.play2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.play2.ForeColor = System.Drawing.Color.White;
             this.play2.Location = new System.Drawing.Point(5, 203);
             this.play2.Margin = new System.Windows.Forms.Padding(5);
             this.play2.Name = "play2";
             this.play2.Size = new System.Drawing.Size(331, 33);
             this.play2.TabIndex = 7;
             this.play2.Text = "Direção aleatória";
-            this.play2.UseVisualStyleBackColor = true;
+            this.play2.UseVisualStyleBackColor = false;
             this.play2.Click += new System.EventHandler(this.play2_Click);
             // 
             // trackBar1
@@ -262,13 +274,16 @@ namespace perSONA
             this.speechRight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.speechRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.speechRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.speechRight.ForeColor = System.Drawing.Color.White;
             this.speechRight.Location = new System.Drawing.Point(5, 115);
             this.speechRight.Margin = new System.Windows.Forms.Padding(5);
             this.speechRight.Name = "speechRight";
             this.speechRight.Size = new System.Drawing.Size(331, 33);
             this.speechRight.TabIndex = 5;
             this.speechRight.Text = "Sinal à direita, ruído à frente";
-            this.speechRight.UseVisualStyleBackColor = true;
+            this.speechRight.UseVisualStyleBackColor = false;
             this.speechRight.Click += new System.EventHandler(this.speechRight_Click);
             // 
             // speechFront
@@ -276,13 +291,16 @@ namespace perSONA
             this.speechFront.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.speechFront.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.speechFront.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.speechFront.ForeColor = System.Drawing.Color.White;
             this.speechFront.Location = new System.Drawing.Point(5, 158);
             this.speechFront.Margin = new System.Windows.Forms.Padding(5);
             this.speechFront.Name = "speechFront";
             this.speechFront.Size = new System.Drawing.Size(331, 35);
             this.speechFront.TabIndex = 6;
             this.speechFront.Text = "Sinal à frente, ruído à frente";
-            this.speechFront.UseVisualStyleBackColor = true;
+            this.speechFront.UseVisualStyleBackColor = false;
             this.speechFront.Click += new System.EventHandler(this.speechFront_Click);
             // 
             // speechLeft
@@ -290,13 +308,16 @@ namespace perSONA
             this.speechLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.speechLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.speechLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.speechLeft.ForeColor = System.Drawing.Color.White;
             this.speechLeft.Location = new System.Drawing.Point(5, 70);
             this.speechLeft.Margin = new System.Windows.Forms.Padding(5);
             this.speechLeft.Name = "speechLeft";
             this.speechLeft.Size = new System.Drawing.Size(331, 35);
             this.speechLeft.TabIndex = 4;
             this.speechLeft.Text = "Sinal à esquerda, ruído à frente";
-            this.speechLeft.UseVisualStyleBackColor = true;
+            this.speechLeft.UseVisualStyleBackColor = false;
             this.speechLeft.Click += new System.EventHandler(this.speechLeft_Click);
             // 
             // listBox1
@@ -330,13 +351,16 @@ namespace perSONA
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(5, 5);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 34);
             this.button1.TabIndex = 0;
             this.button1.Text = "Usar sinal selecionado";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
@@ -986,13 +1010,16 @@ namespace perSONA
             this.getFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.getFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.getFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getFolder.ForeColor = System.Drawing.Color.White;
             this.getFolder.Location = new System.Drawing.Point(5, 5);
             this.getFolder.Margin = new System.Windows.Forms.Padding(5);
             this.getFolder.Name = "getFolder";
             this.getFolder.Size = new System.Drawing.Size(331, 36);
             this.getFolder.TabIndex = 0;
             this.getFolder.Text = "Carregar pasta com sinais";
-            this.getFolder.UseVisualStyleBackColor = true;
+            this.getFolder.UseVisualStyleBackColor = false;
             this.getFolder.Click += new System.EventHandler(this.getFolder_Click);
             // 
             // tableLayoutPanel7
