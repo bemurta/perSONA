@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="16.0" version="18.2" Modules="simple" RootPath="." Language="en" Id="{ABD7320D-1FCA-4936-9F32-D2B3BEF17D86}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="16.0" version="18.7" Modules="simple" RootPath="." Language="en" Id="{ABD7320D-1FCA-4936-9F32-D2B3BEF17D86}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="AI_CURRENT_YEAR" Value="2021" ValueLocId="-"/>
@@ -18,10 +18,10 @@
     <ROW Property="ARPPRODUCTICON" Value="icone_perSONA.exe" Type="8"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="LVA-UFSC"/>
-    <ROW Property="ProductCode" Value="1033:{7835CC76-7F54-44D7-9FB2-9CC7BC63FDF8} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{2B50E787-6734-4762-B140-743E6ED0813D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="perSONA-BETA"/>
-    <ROW Property="ProductVersion" Value="1.7.7" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.1.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{2E351919-0754-48EA-9BCC-7450A9453229}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -69,7 +69,19 @@
     <ROW Directory="Freefield_Dir" Directory_Parent="Ambisonics_Dir" DefaultDir="FREEFI~1|Freefield"/>
     <ROW Directory="GenericPath_Dir" Directory_Parent="Prototyping_Dir" DefaultDir="GENERI~1|GenericPath"/>
     <ROW Directory="HearingAid_Dir" Directory_Parent="Prototyping_Dir" DefaultDir="HEARIN~1|HearingAid"/>
+    <ROW Directory="IsaK_Dir" Directory_Parent="Speech_Dir" DefaultDir="ISAK~1|Isa K"/>
+    <ROW Directory="Lista10_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista10"/>
     <ROW Directory="Lista1A_1_Dir" Directory_Parent="Trainning_Dir" DefaultDir="LISTA1~1|Lista 1A"/>
+    <ROW Directory="Lista1_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista1"/>
+    <ROW Directory="Lista2_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista2"/>
+    <ROW Directory="Lista3_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista3"/>
+    <ROW Directory="Lista4_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista4"/>
+    <ROW Directory="Lista5_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista5"/>
+    <ROW Directory="Lista6_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista6"/>
+    <ROW Directory="Lista7_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista7"/>
+    <ROW Directory="Lista8_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista8"/>
+    <ROW Directory="Lista9_Dir" Directory_Parent="Listas_Dir" DefaultDir="Lista9"/>
+    <ROW Directory="Listas_Dir" Directory_Parent="IsaK_Dir" DefaultDir="Listas"/>
     <ROW Directory="M0001_Dir" Directory_Parent="M_Dir" DefaultDir="M0001"/>
     <ROW Directory="M0002_Dir" Directory_Parent="M_Dir" DefaultDir="M0002"/>
     <ROW Directory="M0003_Dir" Directory_Parent="M_Dir" DefaultDir="M0003"/>
@@ -134,6 +146,16 @@
     <ROW Component="F0008001.wav" ComponentId="{EFF600B2-A44A-4363-B59C-B62B22A7BA31}" Directory_="F0008_Dir" Attributes="0" KeyPath="F0008001.wav" Type="0"/>
     <ROW Component="F0009001.wav" ComponentId="{186B51BE-FE79-45CC-9C76-833CE2958829}" Directory_="F0009_Dir" Attributes="0" KeyPath="F0009001.wav" Type="0"/>
     <ROW Component="F0010001.WAV" ComponentId="{CE5A388F-0FF1-44D8-B5C4-C778AF3EDB54}" Directory_="F0010_Dir" Attributes="0" KeyPath="F0010001.WAV" Type="0"/>
+    <ROW Component="FF1L10S01.wav" ComponentId="{721D35B4-4FA9-4B63-BDC4-A3177E5C134F}" Directory_="Lista10_Dir" Attributes="0" KeyPath="FF1L10S01.wav" Type="0"/>
+    <ROW Component="FF1L1S01.wav" ComponentId="{D71AC591-C3C8-4676-8BA0-1F60344FABDE}" Directory_="Lista1_Dir" Attributes="0" KeyPath="FF1L1S01.wav" Type="0"/>
+    <ROW Component="FF1L2S01.wav" ComponentId="{CF1D1F86-FDEB-477C-8227-4A3F3CEB8264}" Directory_="Lista2_Dir" Attributes="0" KeyPath="FF1L2S01.wav" Type="0"/>
+    <ROW Component="FF1L3S01.wav" ComponentId="{0FF8A5F0-6CC2-47FA-A83F-FC3CCE93E765}" Directory_="Lista3_Dir" Attributes="0" KeyPath="FF1L3S01.wav" Type="0"/>
+    <ROW Component="FF1L4S01.wav" ComponentId="{5721D885-922F-4DAD-8E1F-50FAE93976CE}" Directory_="Lista4_Dir" Attributes="0" KeyPath="FF1L4S01.wav" Type="0"/>
+    <ROW Component="FF1L5S01.wav" ComponentId="{335629CC-8E96-41A5-82DC-7097C13397D5}" Directory_="Lista5_Dir" Attributes="0" KeyPath="FF1L5S01.wav" Type="0"/>
+    <ROW Component="FF1L6S01.wav" ComponentId="{35697FDF-A7B7-4A05-B3C3-433C39F43146}" Directory_="Lista6_Dir" Attributes="0" KeyPath="FF1L6S01.wav" Type="0"/>
+    <ROW Component="FF1L7S01.wav" ComponentId="{608F9290-8E2B-4CAA-939A-3958CDAC53BA}" Directory_="Lista7_Dir" Attributes="0" KeyPath="FF1L7S01.wav" Type="0"/>
+    <ROW Component="FF1L8S01.wav" ComponentId="{86846919-96AB-4419-8074-B519F4C29DE9}" Directory_="Lista8_Dir" Attributes="0" KeyPath="FF1L8S01.wav" Type="0"/>
+    <ROW Component="FF1L9S01.wav" ComponentId="{7E9103C8-9498-437E-9076-8806BEB32122}" Directory_="Lista9_Dir" Attributes="0" KeyPath="FF1L9S01.wav" Type="0"/>
     <ROW Component="ITABase.dll" ComponentId="{DD72D1B6-876C-4506-B0E0-4FD73AB7492A}" Directory_="bin_Dir" Attributes="256" KeyPath="ITABase.dll"/>
     <ROW Component="ITABase.dll_1" ComponentId="{6A661F02-9F45-42A1-B948-B3FFB16214DA}" Directory_="perSONA_Dir" Attributes="256" KeyPath="ITABase.dll_1"/>
     <ROW Component="ITACTC.dll" ComponentId="{52ABFAEF-344B-4D21-9CB1-EED80D4EA85F}" Directory_="bin_Dir" Attributes="256" KeyPath="ITACTC.dll"/>
@@ -1057,6 +1079,206 @@
     <ROW File="Logo_Large.png" Component_="wav" FileName="LOGO_L~1.PNG|Logo_Large.png" Attributes="0" SourcePath="..\perSONA\data\Logo_Large.png" SelfReg="false"/>
     <ROW File="VACore_UFSC_CTC.ini" Component_="VACore.experimental.ini" FileName="VACORE~5.INI|VACore_UFSC_CTC.ini" Attributes="0" SourcePath="..\perSONA\conf\VACore_UFSC_CTC.ini" SelfReg="false"/>
     <ROW File="CalibrationNoise.wav" Component_="kHzTone_60dB_SPL.wav" FileName="CALIBR~1.WAV|CalibrationNoise.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\CalibrationNoise.wav" SelfReg="false"/>
+    <ROW File="FF1L1S01.wav" Component_="FF1L1S01.wav" FileName="FF1L1S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S01.wav" SelfReg="false"/>
+    <ROW File="FF1L1S02.wav" Component_="FF1L1S01.wav" FileName="FF1L1S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S02.wav" SelfReg="false"/>
+    <ROW File="FF1L1S03.wav" Component_="FF1L1S01.wav" FileName="FF1L1S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S03.wav" SelfReg="false"/>
+    <ROW File="FF1L1S04.wav" Component_="FF1L1S01.wav" FileName="FF1L1S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S04.wav" SelfReg="false"/>
+    <ROW File="FF1L1S05.wav" Component_="FF1L1S01.wav" FileName="FF1L1S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S05.wav" SelfReg="false"/>
+    <ROW File="FF1L1S06.wav" Component_="FF1L1S01.wav" FileName="FF1L1S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S06.wav" SelfReg="false"/>
+    <ROW File="FF1L1S07.wav" Component_="FF1L1S01.wav" FileName="FF1L1S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S07.wav" SelfReg="false"/>
+    <ROW File="FF1L1S08.wav" Component_="FF1L1S01.wav" FileName="FF1L1S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S08.wav" SelfReg="false"/>
+    <ROW File="FF1L1S09.wav" Component_="FF1L1S01.wav" FileName="FF1L1S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S09.wav" SelfReg="false"/>
+    <ROW File="FF1L1S10.wav" Component_="FF1L1S01.wav" FileName="FF1L1S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S10.wav" SelfReg="false"/>
+    <ROW File="FF1L1S11.wav" Component_="FF1L1S01.wav" FileName="FF1L1S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S11.wav" SelfReg="false"/>
+    <ROW File="FF1L1S12.wav" Component_="FF1L1S01.wav" FileName="FF1L1S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S12.wav" SelfReg="false"/>
+    <ROW File="FF1L1S13.wav" Component_="FF1L1S01.wav" FileName="FF1L1S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S13.wav" SelfReg="false"/>
+    <ROW File="FF1L1S14.wav" Component_="FF1L1S01.wav" FileName="FF1L1S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S14.wav" SelfReg="false"/>
+    <ROW File="FF1L1S15.wav" Component_="FF1L1S01.wav" FileName="FF1L1S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S15.wav" SelfReg="false"/>
+    <ROW File="FF1L1S16.wav" Component_="FF1L1S01.wav" FileName="FF1L1S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S16.wav" SelfReg="false"/>
+    <ROW File="FF1L1S17.wav" Component_="FF1L1S01.wav" FileName="FF1L1S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S17.wav" SelfReg="false"/>
+    <ROW File="FF1L1S18.wav" Component_="FF1L1S01.wav" FileName="FF1L1S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S18.wav" SelfReg="false"/>
+    <ROW File="FF1L1S19.wav" Component_="FF1L1S01.wav" FileName="FF1L1S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S19.wav" SelfReg="false"/>
+    <ROW File="FF1L1S20.wav" Component_="FF1L1S01.wav" FileName="FF1L1S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista1\FF1L1S20.wav" SelfReg="false"/>
+    <ROW File="FF1L10S01.wav" Component_="FF1L10S01.wav" FileName="FF1L10~1.WAV|FF1L10S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S01.wav" SelfReg="false"/>
+    <ROW File="FF1L10S02.wav" Component_="FF1L10S01.wav" FileName="FF1L10~2.WAV|FF1L10S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S02.wav" SelfReg="false"/>
+    <ROW File="FF1L10S03.wav" Component_="FF1L10S01.wav" FileName="FF1L10~3.WAV|FF1L10S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S03.wav" SelfReg="false"/>
+    <ROW File="FF1L10S04.wav" Component_="FF1L10S01.wav" FileName="FF1L10~4.WAV|FF1L10S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S04.wav" SelfReg="false"/>
+    <ROW File="FF1L10S05.wav" Component_="FF1L10S01.wav" FileName="FF1L10~5.WAV|FF1L10S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S05.wav" SelfReg="false"/>
+    <ROW File="FF1L10S06.wav" Component_="FF1L10S01.wav" FileName="FF1L10~6.WAV|FF1L10S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S06.wav" SelfReg="false"/>
+    <ROW File="FF1L10S07.wav" Component_="FF1L10S01.wav" FileName="FF1L10~7.WAV|FF1L10S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S07.wav" SelfReg="false"/>
+    <ROW File="FF1L10S08.wav" Component_="FF1L10S01.wav" FileName="FF1L10~8.WAV|FF1L10S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S08.wav" SelfReg="false"/>
+    <ROW File="FF1L10S09.wav" Component_="FF1L10S01.wav" FileName="FF1L10~9.WAV|FF1L10S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S09.wav" SelfReg="false"/>
+    <ROW File="FF1L10S10.wav" Component_="FF1L10S01.wav" FileName="FF1L1~10.WAV|FF1L10S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S10.wav" SelfReg="false"/>
+    <ROW File="FF1L10S11.wav" Component_="FF1L10S01.wav" FileName="FF1L1~11.WAV|FF1L10S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S11.wav" SelfReg="false"/>
+    <ROW File="FF1L10S12.wav" Component_="FF1L10S01.wav" FileName="FF1L1~12.WAV|FF1L10S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S12.wav" SelfReg="false"/>
+    <ROW File="FF1L10S13.wav" Component_="FF1L10S01.wav" FileName="FF1L1~13.WAV|FF1L10S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S13.wav" SelfReg="false"/>
+    <ROW File="FF1L10S14.wav" Component_="FF1L10S01.wav" FileName="FF1L1~14.WAV|FF1L10S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S14.wav" SelfReg="false"/>
+    <ROW File="FF1L10S15.wav" Component_="FF1L10S01.wav" FileName="FF1L1~15.WAV|FF1L10S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S15.wav" SelfReg="false"/>
+    <ROW File="FF1L10S16.wav" Component_="FF1L10S01.wav" FileName="FF1L1~16.WAV|FF1L10S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S16.wav" SelfReg="false"/>
+    <ROW File="FF1L10S17.wav" Component_="FF1L10S01.wav" FileName="FF1L1~17.WAV|FF1L10S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S17.wav" SelfReg="false"/>
+    <ROW File="FF1L10S18.wav" Component_="FF1L10S01.wav" FileName="FF1L1~18.WAV|FF1L10S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S18.wav" SelfReg="false"/>
+    <ROW File="FF1L10S19.wav" Component_="FF1L10S01.wav" FileName="FF1L1~19.WAV|FF1L10S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S19.wav" SelfReg="false"/>
+    <ROW File="FF1L10S20.wav" Component_="FF1L10S01.wav" FileName="FF1L1~20.WAV|FF1L10S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista10\FF1L10S20.wav" SelfReg="false"/>
+    <ROW File="FF1L2S01.wav" Component_="FF1L2S01.wav" FileName="FF1L2S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S01.wav" SelfReg="false"/>
+    <ROW File="FF1L2S02.wav" Component_="FF1L2S01.wav" FileName="FF1L2S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S02.wav" SelfReg="false"/>
+    <ROW File="FF1L2S03.wav" Component_="FF1L2S01.wav" FileName="FF1L2S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S03.wav" SelfReg="false"/>
+    <ROW File="FF1L2S04.wav" Component_="FF1L2S01.wav" FileName="FF1L2S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S04.wav" SelfReg="false"/>
+    <ROW File="FF1L2S05.wav" Component_="FF1L2S01.wav" FileName="FF1L2S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S05.wav" SelfReg="false"/>
+    <ROW File="FF1L2S06.wav" Component_="FF1L2S01.wav" FileName="FF1L2S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S06.wav" SelfReg="false"/>
+    <ROW File="FF1L2S07.wav" Component_="FF1L2S01.wav" FileName="FF1L2S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S07.wav" SelfReg="false"/>
+    <ROW File="FF1L2S08.wav" Component_="FF1L2S01.wav" FileName="FF1L2S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S08.wav" SelfReg="false"/>
+    <ROW File="FF1L2S09.wav" Component_="FF1L2S01.wav" FileName="FF1L2S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S09.wav" SelfReg="false"/>
+    <ROW File="FF1L2S10.wav" Component_="FF1L2S01.wav" FileName="FF1L2S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S10.wav" SelfReg="false"/>
+    <ROW File="FF1L2S11.wav" Component_="FF1L2S01.wav" FileName="FF1L2S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S11.wav" SelfReg="false"/>
+    <ROW File="FF1L2S12.wav" Component_="FF1L2S01.wav" FileName="FF1L2S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S12.wav" SelfReg="false"/>
+    <ROW File="FF1L2S13.wav" Component_="FF1L2S01.wav" FileName="FF1L2S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S13.wav" SelfReg="false"/>
+    <ROW File="FF1L2S14.wav" Component_="FF1L2S01.wav" FileName="FF1L2S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S14.wav" SelfReg="false"/>
+    <ROW File="FF1L2S15.wav" Component_="FF1L2S01.wav" FileName="FF1L2S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S15.wav" SelfReg="false"/>
+    <ROW File="FF1L2S16.wav" Component_="FF1L2S01.wav" FileName="FF1L2S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S16.wav" SelfReg="false"/>
+    <ROW File="FF1L2S17.wav" Component_="FF1L2S01.wav" FileName="FF1L2S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S17.wav" SelfReg="false"/>
+    <ROW File="FF1L2S18.wav" Component_="FF1L2S01.wav" FileName="FF1L2S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S18.wav" SelfReg="false"/>
+    <ROW File="FF1L2S19.wav" Component_="FF1L2S01.wav" FileName="FF1L2S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S19.wav" SelfReg="false"/>
+    <ROW File="FF1L2S20.wav" Component_="FF1L2S01.wav" FileName="FF1L2S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista2\FF1L2S20.wav" SelfReg="false"/>
+    <ROW File="FF1L3S01.wav" Component_="FF1L3S01.wav" FileName="FF1L3S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S01.wav" SelfReg="false"/>
+    <ROW File="FF1L3S02.wav" Component_="FF1L3S01.wav" FileName="FF1L3S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S02.wav" SelfReg="false"/>
+    <ROW File="FF1L3S03.wav" Component_="FF1L3S01.wav" FileName="FF1L3S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S03.wav" SelfReg="false"/>
+    <ROW File="FF1L3S04.wav" Component_="FF1L3S01.wav" FileName="FF1L3S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S04.wav" SelfReg="false"/>
+    <ROW File="FF1L3S05.wav" Component_="FF1L3S01.wav" FileName="FF1L3S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S05.wav" SelfReg="false"/>
+    <ROW File="FF1L3S06.wav" Component_="FF1L3S01.wav" FileName="FF1L3S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S06.wav" SelfReg="false"/>
+    <ROW File="FF1L3S07.wav" Component_="FF1L3S01.wav" FileName="FF1L3S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S07.wav" SelfReg="false"/>
+    <ROW File="FF1L3S08.wav" Component_="FF1L3S01.wav" FileName="FF1L3S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S08.wav" SelfReg="false"/>
+    <ROW File="FF1L3S09.wav" Component_="FF1L3S01.wav" FileName="FF1L3S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S09.wav" SelfReg="false"/>
+    <ROW File="FF1L3S10.wav" Component_="FF1L3S01.wav" FileName="FF1L3S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S10.wav" SelfReg="false"/>
+    <ROW File="FF1L3S11.wav" Component_="FF1L3S01.wav" FileName="FF1L3S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S11.wav" SelfReg="false"/>
+    <ROW File="FF1L3S12.wav" Component_="FF1L3S01.wav" FileName="FF1L3S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S12.wav" SelfReg="false"/>
+    <ROW File="FF1L3S13.wav" Component_="FF1L3S01.wav" FileName="FF1L3S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S13.wav" SelfReg="false"/>
+    <ROW File="FF1L3S14.wav" Component_="FF1L3S01.wav" FileName="FF1L3S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S14.wav" SelfReg="false"/>
+    <ROW File="FF1L3S15.wav" Component_="FF1L3S01.wav" FileName="FF1L3S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S15.wav" SelfReg="false"/>
+    <ROW File="FF1L3S16.wav" Component_="FF1L3S01.wav" FileName="FF1L3S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S16.wav" SelfReg="false"/>
+    <ROW File="FF1L3S17.wav" Component_="FF1L3S01.wav" FileName="FF1L3S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S17.wav" SelfReg="false"/>
+    <ROW File="FF1L3S18.wav" Component_="FF1L3S01.wav" FileName="FF1L3S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S18.wav" SelfReg="false"/>
+    <ROW File="FF1L3S19.wav" Component_="FF1L3S01.wav" FileName="FF1L3S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S19.wav" SelfReg="false"/>
+    <ROW File="FF1L3S20.wav" Component_="FF1L3S01.wav" FileName="FF1L3S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista3\FF1L3S20.wav" SelfReg="false"/>
+    <ROW File="FF1L4S01.wav" Component_="FF1L4S01.wav" FileName="FF1L4S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S01.wav" SelfReg="false"/>
+    <ROW File="FF1L4S02.wav" Component_="FF1L4S01.wav" FileName="FF1L4S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S02.wav" SelfReg="false"/>
+    <ROW File="FF1L4S03.wav" Component_="FF1L4S01.wav" FileName="FF1L4S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S03.wav" SelfReg="false"/>
+    <ROW File="FF1L4S04.wav" Component_="FF1L4S01.wav" FileName="FF1L4S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S04.wav" SelfReg="false"/>
+    <ROW File="FF1L4S05.wav" Component_="FF1L4S01.wav" FileName="FF1L4S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S05.wav" SelfReg="false"/>
+    <ROW File="FF1L4S06.wav" Component_="FF1L4S01.wav" FileName="FF1L4S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S06.wav" SelfReg="false"/>
+    <ROW File="FF1L4S07.wav" Component_="FF1L4S01.wav" FileName="FF1L4S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S07.wav" SelfReg="false"/>
+    <ROW File="FF1L4S08.wav" Component_="FF1L4S01.wav" FileName="FF1L4S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S08.wav" SelfReg="false"/>
+    <ROW File="FF1L4S09.wav" Component_="FF1L4S01.wav" FileName="FF1L4S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S09.wav" SelfReg="false"/>
+    <ROW File="FF1L4S10.wav" Component_="FF1L4S01.wav" FileName="FF1L4S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S10.wav" SelfReg="false"/>
+    <ROW File="FF1L4S11.wav" Component_="FF1L4S01.wav" FileName="FF1L4S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S11.wav" SelfReg="false"/>
+    <ROW File="FF1L4S12.wav" Component_="FF1L4S01.wav" FileName="FF1L4S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S12.wav" SelfReg="false"/>
+    <ROW File="FF1L4S13.wav" Component_="FF1L4S01.wav" FileName="FF1L4S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S13.wav" SelfReg="false"/>
+    <ROW File="FF1L4S14.wav" Component_="FF1L4S01.wav" FileName="FF1L4S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S14.wav" SelfReg="false"/>
+    <ROW File="FF1L4S15.wav" Component_="FF1L4S01.wav" FileName="FF1L4S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S15.wav" SelfReg="false"/>
+    <ROW File="FF1L4S16.wav" Component_="FF1L4S01.wav" FileName="FF1L4S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S16.wav" SelfReg="false"/>
+    <ROW File="FF1L4S17.wav" Component_="FF1L4S01.wav" FileName="FF1L4S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S17.wav" SelfReg="false"/>
+    <ROW File="FF1L4S18.wav" Component_="FF1L4S01.wav" FileName="FF1L4S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S18.wav" SelfReg="false"/>
+    <ROW File="FF1L4S19.wav" Component_="FF1L4S01.wav" FileName="FF1L4S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S19.wav" SelfReg="false"/>
+    <ROW File="FF1L4S20.wav" Component_="FF1L4S01.wav" FileName="FF1L4S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista4\FF1L4S20.wav" SelfReg="false"/>
+    <ROW File="FF1L5S01.wav" Component_="FF1L5S01.wav" FileName="FF1L5S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S01.wav" SelfReg="false"/>
+    <ROW File="FF1L5S02.wav" Component_="FF1L5S01.wav" FileName="FF1L5S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S02.wav" SelfReg="false"/>
+    <ROW File="FF1L5S03.wav" Component_="FF1L5S01.wav" FileName="FF1L5S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S03.wav" SelfReg="false"/>
+    <ROW File="FF1L5S04.wav" Component_="FF1L5S01.wav" FileName="FF1L5S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S04.wav" SelfReg="false"/>
+    <ROW File="FF1L5S05.wav" Component_="FF1L5S01.wav" FileName="FF1L5S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S05.wav" SelfReg="false"/>
+    <ROW File="FF1L5S06.wav" Component_="FF1L5S01.wav" FileName="FF1L5S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S06.wav" SelfReg="false"/>
+    <ROW File="FF1L5S07.wav" Component_="FF1L5S01.wav" FileName="FF1L5S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S07.wav" SelfReg="false"/>
+    <ROW File="FF1L5S08.wav" Component_="FF1L5S01.wav" FileName="FF1L5S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S08.wav" SelfReg="false"/>
+    <ROW File="FF1L5S09.wav" Component_="FF1L5S01.wav" FileName="FF1L5S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S09.wav" SelfReg="false"/>
+    <ROW File="FF1L5S10.wav" Component_="FF1L5S01.wav" FileName="FF1L5S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S10.wav" SelfReg="false"/>
+    <ROW File="FF1L5S11.wav" Component_="FF1L5S01.wav" FileName="FF1L5S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S11.wav" SelfReg="false"/>
+    <ROW File="FF1L5S12.wav" Component_="FF1L5S01.wav" FileName="FF1L5S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S12.wav" SelfReg="false"/>
+    <ROW File="FF1L5S13.wav" Component_="FF1L5S01.wav" FileName="FF1L5S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S13.wav" SelfReg="false"/>
+    <ROW File="FF1L5S14.wav" Component_="FF1L5S01.wav" FileName="FF1L5S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S14.wav" SelfReg="false"/>
+    <ROW File="FF1L5S15.wav" Component_="FF1L5S01.wav" FileName="FF1L5S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S15.wav" SelfReg="false"/>
+    <ROW File="FF1L5S16.wav" Component_="FF1L5S01.wav" FileName="FF1L5S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S16.wav" SelfReg="false"/>
+    <ROW File="FF1L5S17.wav" Component_="FF1L5S01.wav" FileName="FF1L5S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S17.wav" SelfReg="false"/>
+    <ROW File="FF1L5S18.wav" Component_="FF1L5S01.wav" FileName="FF1L5S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S18.wav" SelfReg="false"/>
+    <ROW File="FF1L5S19.wav" Component_="FF1L5S01.wav" FileName="FF1L5S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S19.wav" SelfReg="false"/>
+    <ROW File="FF1L5S20.wav" Component_="FF1L5S01.wav" FileName="FF1L5S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista5\FF1L5S20.wav" SelfReg="false"/>
+    <ROW File="FF1L6S01.wav" Component_="FF1L6S01.wav" FileName="FF1L6S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S01.wav" SelfReg="false"/>
+    <ROW File="FF1L6S02.wav" Component_="FF1L6S01.wav" FileName="FF1L6S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S02.wav" SelfReg="false"/>
+    <ROW File="FF1L6S03.wav" Component_="FF1L6S01.wav" FileName="FF1L6S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S03.wav" SelfReg="false"/>
+    <ROW File="FF1L6S04.wav" Component_="FF1L6S01.wav" FileName="FF1L6S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S04.wav" SelfReg="false"/>
+    <ROW File="FF1L6S05.wav" Component_="FF1L6S01.wav" FileName="FF1L6S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S05.wav" SelfReg="false"/>
+    <ROW File="FF1L6S06.wav" Component_="FF1L6S01.wav" FileName="FF1L6S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S06.wav" SelfReg="false"/>
+    <ROW File="FF1L6S07.wav" Component_="FF1L6S01.wav" FileName="FF1L6S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S07.wav" SelfReg="false"/>
+    <ROW File="FF1L6S08.wav" Component_="FF1L6S01.wav" FileName="FF1L6S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S08.wav" SelfReg="false"/>
+    <ROW File="FF1L6S09.wav" Component_="FF1L6S01.wav" FileName="FF1L6S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S09.wav" SelfReg="false"/>
+    <ROW File="FF1L6S10.wav" Component_="FF1L6S01.wav" FileName="FF1L6S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S10.wav" SelfReg="false"/>
+    <ROW File="FF1L6S11.wav" Component_="FF1L6S01.wav" FileName="FF1L6S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S11.wav" SelfReg="false"/>
+    <ROW File="FF1L6S12.wav" Component_="FF1L6S01.wav" FileName="FF1L6S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S12.wav" SelfReg="false"/>
+    <ROW File="FF1L6S13.wav" Component_="FF1L6S01.wav" FileName="FF1L6S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S13.wav" SelfReg="false"/>
+    <ROW File="FF1L6S14.wav" Component_="FF1L6S01.wav" FileName="FF1L6S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S14.wav" SelfReg="false"/>
+    <ROW File="FF1L6S15.wav" Component_="FF1L6S01.wav" FileName="FF1L6S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S15.wav" SelfReg="false"/>
+    <ROW File="FF1L6S16.wav" Component_="FF1L6S01.wav" FileName="FF1L6S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S16.wav" SelfReg="false"/>
+    <ROW File="FF1L6S17.wav" Component_="FF1L6S01.wav" FileName="FF1L6S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S17.wav" SelfReg="false"/>
+    <ROW File="FF1L6S18.wav" Component_="FF1L6S01.wav" FileName="FF1L6S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S18.wav" SelfReg="false"/>
+    <ROW File="FF1L6S19.wav" Component_="FF1L6S01.wav" FileName="FF1L6S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S19.wav" SelfReg="false"/>
+    <ROW File="FF1L6S20.wav" Component_="FF1L6S01.wav" FileName="FF1L6S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista6\FF1L6S20.wav" SelfReg="false"/>
+    <ROW File="FF1L7S01.wav" Component_="FF1L7S01.wav" FileName="FF1L7S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S01.wav" SelfReg="false"/>
+    <ROW File="FF1L7S02.wav" Component_="FF1L7S01.wav" FileName="FF1L7S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S02.wav" SelfReg="false"/>
+    <ROW File="FF1L7S03.wav" Component_="FF1L7S01.wav" FileName="FF1L7S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S03.wav" SelfReg="false"/>
+    <ROW File="FF1L7S04.wav" Component_="FF1L7S01.wav" FileName="FF1L7S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S04.wav" SelfReg="false"/>
+    <ROW File="FF1L7S05.wav" Component_="FF1L7S01.wav" FileName="FF1L7S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S05.wav" SelfReg="false"/>
+    <ROW File="FF1L7S06.wav" Component_="FF1L7S01.wav" FileName="FF1L7S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S06.wav" SelfReg="false"/>
+    <ROW File="FF1L7S07.wav" Component_="FF1L7S01.wav" FileName="FF1L7S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S07.wav" SelfReg="false"/>
+    <ROW File="FF1L7S08.wav" Component_="FF1L7S01.wav" FileName="FF1L7S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S08.wav" SelfReg="false"/>
+    <ROW File="FF1L7S09.wav" Component_="FF1L7S01.wav" FileName="FF1L7S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S09.wav" SelfReg="false"/>
+    <ROW File="FF1L7S10.wav" Component_="FF1L7S01.wav" FileName="FF1L7S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S10.wav" SelfReg="false"/>
+    <ROW File="FF1L7S11.wav" Component_="FF1L7S01.wav" FileName="FF1L7S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S11.wav" SelfReg="false"/>
+    <ROW File="FF1L7S12.wav" Component_="FF1L7S01.wav" FileName="FF1L7S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S12.wav" SelfReg="false"/>
+    <ROW File="FF1L7S13.wav" Component_="FF1L7S01.wav" FileName="FF1L7S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S13.wav" SelfReg="false"/>
+    <ROW File="FF1L7S14.wav" Component_="FF1L7S01.wav" FileName="FF1L7S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S14.wav" SelfReg="false"/>
+    <ROW File="FF1L7S15.wav" Component_="FF1L7S01.wav" FileName="FF1L7S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S15.wav" SelfReg="false"/>
+    <ROW File="FF1L7S16.wav" Component_="FF1L7S01.wav" FileName="FF1L7S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S16.wav" SelfReg="false"/>
+    <ROW File="FF1L7S17.wav" Component_="FF1L7S01.wav" FileName="FF1L7S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S17.wav" SelfReg="false"/>
+    <ROW File="FF1L7S18.wav" Component_="FF1L7S01.wav" FileName="FF1L7S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S18.wav" SelfReg="false"/>
+    <ROW File="FF1L7S19.wav" Component_="FF1L7S01.wav" FileName="FF1L7S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S19.wav" SelfReg="false"/>
+    <ROW File="FF1L7S20.wav" Component_="FF1L7S01.wav" FileName="FF1L7S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista7\FF1L7S20.wav" SelfReg="false"/>
+    <ROW File="FF1L8S01.wav" Component_="FF1L8S01.wav" FileName="FF1L8S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S01.wav" SelfReg="false"/>
+    <ROW File="FF1L8S02.wav" Component_="FF1L8S01.wav" FileName="FF1L8S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S02.wav" SelfReg="false"/>
+    <ROW File="FF1L8S03.wav" Component_="FF1L8S01.wav" FileName="FF1L8S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S03.wav" SelfReg="false"/>
+    <ROW File="FF1L8S04.wav" Component_="FF1L8S01.wav" FileName="FF1L8S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S04.wav" SelfReg="false"/>
+    <ROW File="FF1L8S05.wav" Component_="FF1L8S01.wav" FileName="FF1L8S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S05.wav" SelfReg="false"/>
+    <ROW File="FF1L8S06.wav" Component_="FF1L8S01.wav" FileName="FF1L8S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S06.wav" SelfReg="false"/>
+    <ROW File="FF1L8S07.wav" Component_="FF1L8S01.wav" FileName="FF1L8S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S07.wav" SelfReg="false"/>
+    <ROW File="FF1L8S08.wav" Component_="FF1L8S01.wav" FileName="FF1L8S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S08.wav" SelfReg="false"/>
+    <ROW File="FF1L8S09.wav" Component_="FF1L8S01.wav" FileName="FF1L8S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S09.wav" SelfReg="false"/>
+    <ROW File="FF1L8S10.wav" Component_="FF1L8S01.wav" FileName="FF1L8S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S10.wav" SelfReg="false"/>
+    <ROW File="FF1L8S11.wav" Component_="FF1L8S01.wav" FileName="FF1L8S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S11.wav" SelfReg="false"/>
+    <ROW File="FF1L8S12.wav" Component_="FF1L8S01.wav" FileName="FF1L8S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S12.wav" SelfReg="false"/>
+    <ROW File="FF1L8S13.wav" Component_="FF1L8S01.wav" FileName="FF1L8S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S13.wav" SelfReg="false"/>
+    <ROW File="FF1L8S14.wav" Component_="FF1L8S01.wav" FileName="FF1L8S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S14.wav" SelfReg="false"/>
+    <ROW File="FF1L8S15.wav" Component_="FF1L8S01.wav" FileName="FF1L8S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S15.wav" SelfReg="false"/>
+    <ROW File="FF1L8S16.wav" Component_="FF1L8S01.wav" FileName="FF1L8S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S16.wav" SelfReg="false"/>
+    <ROW File="FF1L8S17.wav" Component_="FF1L8S01.wav" FileName="FF1L8S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S17.wav" SelfReg="false"/>
+    <ROW File="FF1L8S18.wav" Component_="FF1L8S01.wav" FileName="FF1L8S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S18.wav" SelfReg="false"/>
+    <ROW File="FF1L8S19.wav" Component_="FF1L8S01.wav" FileName="FF1L8S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S19.wav" SelfReg="false"/>
+    <ROW File="FF1L8S20.wav" Component_="FF1L8S01.wav" FileName="FF1L8S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista8\FF1L8S20.wav" SelfReg="false"/>
+    <ROW File="FF1L9S01.wav" Component_="FF1L9S01.wav" FileName="FF1L9S01.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S01.wav" SelfReg="false"/>
+    <ROW File="FF1L9S02.wav" Component_="FF1L9S01.wav" FileName="FF1L9S02.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S02.wav" SelfReg="false"/>
+    <ROW File="FF1L9S03.wav" Component_="FF1L9S01.wav" FileName="FF1L9S03.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S03.wav" SelfReg="false"/>
+    <ROW File="FF1L9S04.wav" Component_="FF1L9S01.wav" FileName="FF1L9S04.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S04.wav" SelfReg="false"/>
+    <ROW File="FF1L9S05.wav" Component_="FF1L9S01.wav" FileName="FF1L9S05.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S05.wav" SelfReg="false"/>
+    <ROW File="FF1L9S06.wav" Component_="FF1L9S01.wav" FileName="FF1L9S06.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S06.wav" SelfReg="false"/>
+    <ROW File="FF1L9S07.wav" Component_="FF1L9S01.wav" FileName="FF1L9S07.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S07.wav" SelfReg="false"/>
+    <ROW File="FF1L9S08.wav" Component_="FF1L9S01.wav" FileName="FF1L9S08.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S08.wav" SelfReg="false"/>
+    <ROW File="FF1L9S09.wav" Component_="FF1L9S01.wav" FileName="FF1L9S09.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S09.wav" SelfReg="false"/>
+    <ROW File="FF1L9S10.wav" Component_="FF1L9S01.wav" FileName="FF1L9S10.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S10.wav" SelfReg="false"/>
+    <ROW File="FF1L9S11.wav" Component_="FF1L9S01.wav" FileName="FF1L9S11.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S11.wav" SelfReg="false"/>
+    <ROW File="FF1L9S12.wav" Component_="FF1L9S01.wav" FileName="FF1L9S12.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S12.wav" SelfReg="false"/>
+    <ROW File="FF1L9S13.wav" Component_="FF1L9S01.wav" FileName="FF1L9S13.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S13.wav" SelfReg="false"/>
+    <ROW File="FF1L9S14.wav" Component_="FF1L9S01.wav" FileName="FF1L9S14.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S14.wav" SelfReg="false"/>
+    <ROW File="FF1L9S15.wav" Component_="FF1L9S01.wav" FileName="FF1L9S15.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S15.wav" SelfReg="false"/>
+    <ROW File="FF1L9S16.wav" Component_="FF1L9S01.wav" FileName="FF1L9S16.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S16.wav" SelfReg="false"/>
+    <ROW File="FF1L9S17.wav" Component_="FF1L9S01.wav" FileName="FF1L9S17.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S17.wav" SelfReg="false"/>
+    <ROW File="FF1L9S18.wav" Component_="FF1L9S01.wav" FileName="FF1L9S18.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S18.wav" SelfReg="false"/>
+    <ROW File="FF1L9S19.wav" Component_="FF1L9S01.wav" FileName="FF1L9S19.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S19.wav" SelfReg="false"/>
+    <ROW File="FF1L9S20.wav" Component_="FF1L9S01.wav" FileName="FF1L9S20.wav" Attributes="0" SourcePath="..\perSONA\data\Sounds\Speech\Isa K\Listas\Lista9\FF1L9S20.wav" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_ZedGraph.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_ZedGraph.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_ZedGraph.dll]" Type="2" Content="0"/>
@@ -1404,6 +1626,16 @@
     <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll"/>
     <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll"/>
     <ROW Feature_="MainFeature" Component_="BouncyCastle.Crypto.dll"/>
+    <ROW Feature_="MainFeature" Component_="FF1L1S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L10S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L2S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L3S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L4S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L5S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L6S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L7S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L8S01.wav"/>
+    <ROW Feature_="MainFeature" Component_="FF1L9S01.wav"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
@@ -1441,7 +1673,7 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="UninstallperSONA" Directory_="perSONA_Dir" Name="UNINST~1|Uninstall perSONA" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
     <ROW Shortcut="UninstallperSONA_1" Directory_="SHORTCUTDIR" Name="UNINST~1|Uninstall perSONA" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
-    <ROW Shortcut="perSONALITE" Directory_="DesktopFolder" Name="PERSON~1.7-B|perSONA v1.7.7-BETA" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" Target="[#perSONA.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
+    <ROW Shortcut="perSONALITE" Directory_="DesktopFolder" Name="PERSON~1.0-B|perSONA v2.1.0-BETA" Component_="AI_PROPPATH_FILENAME_PERBUILD_perSONA.exe" Target="[#perSONA.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
     <ROW Shortcut="run_VAServer" Directory_="DesktopFolder" Name="VA(PER~1|VA (perSONA)" Component_="run_VAServer.bat" Target="[#run_VAServer.bat]" Hotkey="0" Icon_="run_VAServer_1.exe" IconIndex="0" ShowCmd="1" WkDir="perSONA_Dir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
