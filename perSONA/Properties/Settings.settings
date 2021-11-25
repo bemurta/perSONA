@@ -44,5 +44,8 @@
     <Setting Name="CALIBRATED_AUDIOMETRY_VALUES" Type="System.Double[]" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Logo" Type="System.Windows.Forms.ImageLayout" Scope="User">
+      <Value Profile="(Default)">Stretch</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

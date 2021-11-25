@@ -184,7 +184,11 @@
             this.previewAudiometryButton = new System.Windows.Forms.Button();
             this.saveAudiometryButton = new System.Windows.Forms.Button();
             this.deleteAudiometryButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.audiometryGraph = new ZedGraph.ZedGraphControl();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.print_audiograph_button = new System.Windows.Forms.Button();
+            this.save_img_button = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.testsGraph = new ZedGraph.ZedGraphControl();
@@ -267,6 +271,8 @@
             this.groupBox24.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -2725,7 +2731,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tableLayoutPanel8.Controls.Add(this.panel3, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.audiometryGraph, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel5, 2, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
@@ -3001,12 +3007,28 @@
             this.deleteAudiometryButton.UseVisualStyleBackColor = false;
             this.deleteAudiometryButton.Click += new System.EventHandler(this.deleteAudiometryButton_Click);
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.audiometryGraph, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 1);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(453, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(816, 526);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
             // audiometryGraph
             // 
             this.audiometryGraph.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.audiometryGraph.Location = new System.Drawing.Point(456, 6);
+            this.audiometryGraph.BackColor = System.Drawing.Color.Transparent;
+            this.audiometryGraph.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.audiometryGraph.Location = new System.Drawing.Point(6, 6);
             this.audiometryGraph.Margin = new System.Windows.Forms.Padding(6);
             this.audiometryGraph.Name = "audiometryGraph";
             this.audiometryGraph.ScrollGrace = 0D;
@@ -3016,9 +3038,57 @@
             this.audiometryGraph.ScrollMinX = 0D;
             this.audiometryGraph.ScrollMinY = 0D;
             this.audiometryGraph.ScrollMinY2 = 0D;
-            this.audiometryGraph.Size = new System.Drawing.Size(810, 520);
+            this.audiometryGraph.Size = new System.Drawing.Size(804, 455);
             this.audiometryGraph.TabIndex = 0;
             this.audiometryGraph.UseExtendedPrintDialog = true;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.print_audiograph_button, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.save_img_button, 0, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 470);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(810, 53);
+            this.tableLayoutPanel7.TabIndex = 2;
+            // 
+            // print_audiograph_button
+            // 
+            this.print_audiograph_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.print_audiograph_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.print_audiograph_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.print_audiograph_button.ForeColor = System.Drawing.Color.White;
+            this.print_audiograph_button.Location = new System.Drawing.Point(410, 5);
+            this.print_audiograph_button.Margin = new System.Windows.Forms.Padding(5);
+            this.print_audiograph_button.Name = "print_audiograph_button";
+            this.print_audiograph_button.Size = new System.Drawing.Size(395, 43);
+            this.print_audiograph_button.TabIndex = 5;
+            this.print_audiograph_button.Text = "Imprimir Audiograma";
+            this.print_audiograph_button.UseVisualStyleBackColor = false;
+            this.print_audiograph_button.Click += new System.EventHandler(this.print_audiograph_button_Click);
+            // 
+            // save_img_button
+            // 
+            this.save_img_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.save_img_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.save_img_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_img_button.ForeColor = System.Drawing.Color.White;
+            this.save_img_button.Location = new System.Drawing.Point(5, 5);
+            this.save_img_button.Margin = new System.Windows.Forms.Padding(5);
+            this.save_img_button.Name = "save_img_button";
+            this.save_img_button.Size = new System.Drawing.Size(395, 43);
+            this.save_img_button.TabIndex = 4;
+            this.save_img_button.Text = "Salvar Audiograma";
+            this.save_img_button.UseVisualStyleBackColor = false;
+            this.save_img_button.Click += new System.EventHandler(this.save_img_button_Click);
             // 
             // tabPage3
             // 
@@ -3211,6 +3281,8 @@
             this.groupBox24.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -3381,5 +3453,9 @@
         private System.Windows.Forms.CheckBox noReply3000;
         private System.Windows.Forms.CheckBox noReply6000;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button save_img_button;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Button print_audiograph_button;
     }
 }
