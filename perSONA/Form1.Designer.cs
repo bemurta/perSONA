@@ -1391,7 +1391,7 @@ namespace perSONA
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 1.7 BETA";
+            this.Text = "perSONA 2.2 BETA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel1.ResumeLayout(false);

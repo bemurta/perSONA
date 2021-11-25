@@ -410,6 +410,11 @@ namespace perSONA
                 string.Join(", ", Audiometry.dB.ToArray()),
                 string.Join(", ", Audiometry.Freqs.ToArray()));
             audiometryDate.Value = Audiometry.audiometryDate;
+
+            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var logo = new ImageObj(img, new RectangleF(0.9f, 1.05f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
+            myPane.GraphObjList.Add(logo);
+
             graph.AxisChange();
             graph.Refresh();
         }
@@ -510,5 +515,27 @@ namespace perSONA
                 this.Size = new Size(newWidth, newHeight);
             }
         }
+
+
+        private void save_img_button_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog audiograph = new SaveFileDialog();
+            //audiometryGraph.SaveFileDialog.FileName = ;// Default file name
+            audiograph.Title = "Salvar Audiograma"; //Título da Caixa 
+            audiograph.DefaultExt = ".png";  //Extenção Padrão
+            audiograph.AddExtension = true;
+            audiograph.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Inicia em meus documentos
+            audiograph.RestoreDirectory = true; //Próxima Iniciação Inicia na ultima pasta aberta
+            audiograph.Filter = "PNG Image|*.png|JPeg Image|*.jpg"; // Filter files by extension
+
+            audiometryGraph.SaveFileDialog = audiograph;
+            audiometryGraph.SaveAsBitmap();
+        }
+
+        private void print_audiograph_button_Click(object sender, EventArgs e)
+        {
+            audiometryGraph.DoPrint();
+        }
+
     }
 }
