@@ -96,7 +96,7 @@ namespace perSONA
             catch (Exception)
             {
                 MessageBox.Show("Problemas com dados do paciente");
-            }
+            }            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -169,6 +169,7 @@ namespace perSONA
         private void testsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             updateIterationGraph(testsGraph);
+
         }
 
         private speechPerceptionTest readTest(string timestamp)
@@ -178,7 +179,7 @@ namespace perSONA
             timestamp);
             string json = File.ReadAllText(jsonFile);
             speechPerceptionTest test = Newtonsoft.Json.JsonConvert.DeserializeObject<speechPerceptionTest>(json);
-
+            
             return test;
         }
 
@@ -189,7 +190,7 @@ namespace perSONA
             timestamp);
             string json = File.ReadAllText(jsonFile);
             TonalAudiometryTest test = JsonConvert.DeserializeObject<TonalAudiometryTest>(json);
-
+            
             return test;
         }
 
@@ -197,6 +198,10 @@ namespace perSONA
         {
             GraphPane myPane = graph.GraphPane;
             myPane.CurveList.Clear();
+
+            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var logo = new ImageObj(img, new RectangleF(0.92f, 1.13f, 0.13f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
+            myPane.GraphObjList.Add(logo);
 
             var colorRotator = new ColorSymbolRotator();
 
@@ -207,9 +212,12 @@ namespace perSONA
             {
                 string timestamp = item.ToString();
                 speechPerceptionTest test = readTest(timestamp);
+
                 double[] signalToNoiseArray = test.IterativeSNR;
+                double actualSNR = signalToNoiseArray.Last<double>();
                 double meanSNR = vAInterface.getMeanSRT(test.IterativeSNR);
-                testsString = string.Concat(testsString, "\r\n", string.Format("\r\nThis test SRT: {0} dB", meanSNR), "\r\n", test.testSummary());
+
+                testsString = string.Concat(testsString, "\r\n", string.Format("\r\nSRT deste teste: {0} dB", Math.Round(meanSNR,2)), string.Format("\r\nLimiar de convergência SNR: {0} dB",actualSNR), "\r\n", test.testSummary());
                 Color colorScene = Color.DodgerBlue;
 
                 PointPairList snrArray = new PointPairList();
@@ -225,34 +233,31 @@ namespace perSONA
                 {
                     colorScene = Color.DimGray;
                 }
-                else if (test.AngleSpeech == 90)
+                else if(test.AngleSpeech == 90)
                 {
                     colorScene = Color.Crimson;
                 }
 
-                LineItem snrCurve = myPane.AddCurve(timestamp.Substring(0, 10), snrArray,
+                LineItem snrCurve = myPane.AddCurve(timestamp.Substring(0,10), snrArray,
                     colorScene, colorRotator.NextSymbol);
                 snrCurve.Line.IsVisible = true;
                 snrCurve.Line.Width = 2;
                 snrCurve.Symbol.Size = 10;
 
-
-
             }
-
             testInfo.Text = testsString;
             myPane.Legend.FontSpec.Size = 12;
             myPane.Legend.Border.IsVisible = true;
-
+            
             myPane.Title.FontSpec.Size = 18;
             myPane.XAxis.Title.FontSpec.Size = 18;
             myPane.XAxis.Scale.FontSpec.Size = 21;
 
             myPane.YAxis.Title.FontSpec.Size = 18;
             myPane.YAxis.Scale.FontSpec.Size = 21;
-
+            
             myPane.XAxis.Title.Text = "Iterações";
-            myPane.YAxis.Title.Text = "SNR";
+            myPane.YAxis.Title.Text = "SNR [dB]";
             myPane.Title.Text = "Razões sinal-ruído apresentadas";
             myPane.XAxis.Title.FontSpec.Size = 25;
             myPane.Title.FontSpec.Size = 25;
@@ -266,11 +271,11 @@ namespace perSONA
             myPane.XAxis.Scale.Max = 20;
             myPane.XAxis.MinorGrid.IsVisible = true;
             myPane.Y2Axis.MinorGrid.IsVisible = true;
-     
-   
+
+
+
             graph.AxisChange();
             graph.Refresh();
-
         }
 
 
@@ -297,12 +302,12 @@ namespace perSONA
                 else if (Audiometry.Via == "Bone (mastoid)") Conduction.Text = "óssea (mastóide)";
                 else if (Audiometry.Via == "Bone (forehead)") Conduction.Text = "óssea (fronte)";
                 else Conduction.Text = "campo livre";
-
+                
                 // Side                
                 if (Audiometry.Side == "Left") audiometrySide.Text = "Esquerdo";
                 else audiometrySide.Text = "Direito";
             }
-            else
+            else 
             {
                 confButtonsPanel.Visible = false;
                 foreach (object audiometryItem in audiometryLists.SelectedItems)    // Take all selected itens and plot
@@ -390,7 +395,7 @@ namespace perSONA
 
             for (int i = 0; i < Audiometry.Freqs.Count; i++)
             {
-                TonalAudiometryTest.drawSymbol(graph, linearizedFreqs[i], Audiometry.dB[i], Audiometry.Masker[i], Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
+                TonalAudiometryTest.drawSymbol(graph, linearizedFreqs[i], Audiometry.dB[i],Audiometry.Masker[i],Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
                 //2^(x-1)*125
             }
 
@@ -415,10 +420,7 @@ namespace perSONA
                 string.Join(", ", Audiometry.Freqs.ToArray()));
             audiometryDate.Value = Audiometry.audiometryDate;
 
-            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
-            var logo = new ImageObj(img, new RectangleF(0.9f, 1.05f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
-            myPane.GraphObjList.Add(logo);
-
+            
 
             graph.AxisChange();
             graph.Refresh();
@@ -434,7 +436,7 @@ namespace perSONA
 
         private void saveAudiometryButton_Click(object sender, EventArgs e)
         {
-            TonalAudiometryTest Audiometry = new TonalAudiometryTest();
+            TonalAudiometryTest Audiometry = new TonalAudiometryTest();            
             makeAudiometry(Audiometry);
             vAInterface.addCompletedAudiometry(Audiometry, nameBox.Text);
 
@@ -520,7 +522,7 @@ namespace perSONA
                 this.Size = new Size(newWidth, newHeight);
             }
         }
-
+        
         private void save_img_button_Click(object sender, EventArgs e)
         {
             SaveFileDialog audiograph = new SaveFileDialog();
@@ -534,7 +536,7 @@ namespace perSONA
 
             audiometryGraph.SaveFileDialog = audiograph;
             audiometryGraph.SaveAsBitmap();
-            
+
         }
 
         private void print_audiograph_button_Click(object sender, EventArgs e)
@@ -542,17 +544,33 @@ namespace perSONA
             audiometryGraph.DoPrint();
         }
 
- 
+        private void save_noisetest_button_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog noisetest = new SaveFileDialog();
+            //audiometryGraph.SaveFileDialog.FileName = ;// Default file name
+            noisetest.Title = "Salvar Teste de Ruído"; //Título da Caixa 
+            noisetest.DefaultExt = ".png";  //Extenção Padrão
+            noisetest.AddExtension = true;
+            noisetest.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Inicia em meus documentos
+            noisetest.RestoreDirectory = true; //Próxima Iniciação Inicia na ultima pasta aberta
+            noisetest.Filter = "PNG Image|*.png|JPeg Image|*.jpg"; // Filter files by extension
 
-        //private void testsGraph_Load(object sender, EventArgs e)
-        //{
-        //    GraphPane pane = new graficoteste.GraphPane;
-        //    Image img2 = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\logo\logo_perSONA.jpg");
-        //    var logo2 = new ImageObj(img2, new RectangleF(0.95f, 1.05f, 0.08f, 0.1f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
-        //    pane.GraphObjList.Add(logo2);
-        //    graficoteste.Refresh();
+            testsGraph.SaveFileDialog = noisetest;
+            testsGraph.SaveAsBitmap();
+        }
 
+        private void print_noisetest_button_Click(object sender, EventArgs e)
+        {
+            testsGraph.DoPrint();
+        }
 
-        //}
+        private void testsGraph_Load(object sender, EventArgs e)
+        {
+            GraphPane pane = testsGraph.GraphPane;
+            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var logo = new ImageObj(img, new RectangleF(0.1f, 0.1f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
+            pane.GraphObjList.Add(logo); 
+            testsGraph.Refresh();
+        }
     }
 }

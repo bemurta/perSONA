@@ -36,11 +36,11 @@ namespace perSONA
 
             myPane.Title.Text = "Audiograma";
             myPane.Title.FontSpec.Size = 15;
-            myPane.XAxis.Title.Text = "Frequência (Hz)";
+            myPane.XAxis.Title.Text = "Frequência [Hz]";
             myPane.XAxis.Title.FontSpec.Size = 15;
             myPane.XAxis.Scale.FontSpec.Size = 10;
 
-            myPane.YAxis.Title.Text = "Nível de audição (dB NA)";
+            myPane.YAxis.Title.Text = "Nível de audição [dB NA]";
             myPane.YAxis.Title.FontSpec.Size = 15;
             myPane.YAxis.Scale.FontSpec.Size = 10;
 
@@ -69,6 +69,10 @@ namespace perSONA
             myPane.X2Axis.Scale.Min = 0;
             myPane.X2Axis.Scale.Max = 8;
             myPane.X2Axis.IsVisible = false;
+
+            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var logo = new ImageObj(img, new RectangleF(0.9f, 1.05f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
+            myPane.GraphObjList.Add(logo);
 
             graph.AxisChange();
             graph.Refresh();
