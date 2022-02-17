@@ -169,6 +169,7 @@ namespace perSONA
         private void testsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             updateIterationGraph(testsGraph);
+
         }
 
         private speechPerceptionTest readTest(string timestamp)
@@ -194,9 +195,13 @@ namespace perSONA
         }
 
         private void updateIterationGraph(ZedGraphControl graph)
-        {            
+        {
             GraphPane myPane = graph.GraphPane;
             myPane.CurveList.Clear();
+
+            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var logo = new ImageObj(img, new RectangleF(0.92f, 1.13f, 0.13f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
+            myPane.GraphObjList.Add(logo);
 
             var colorRotator = new ColorSymbolRotator();
 
@@ -207,9 +212,12 @@ namespace perSONA
             {
                 string timestamp = item.ToString();
                 speechPerceptionTest test = readTest(timestamp);
+
                 double[] signalToNoiseArray = test.IterativeSNR;
+                double actualSNR = signalToNoiseArray.Last<double>();
                 double meanSNR = vAInterface.getMeanSRT(test.IterativeSNR);
-                testsString = string.Concat(testsString, "\r\n", string.Format("\r\nThis test SRT: {0} dB", meanSNR), "\r\n", test.testSummary());
+
+                testsString = string.Concat(testsString, "\r\n", string.Format("\r\nSRT deste teste: {0} dB", Math.Round(meanSNR,2)), string.Format("\r\nLimiar de convergência SNR: {0} dB",actualSNR), "\r\n", test.testSummary());
                 Color colorScene = Color.DodgerBlue;
 
                 PointPairList snrArray = new PointPairList();
@@ -249,7 +257,7 @@ namespace perSONA
             myPane.YAxis.Scale.FontSpec.Size = 21;
             
             myPane.XAxis.Title.Text = "Iterações";
-            myPane.YAxis.Title.Text = "SNR";
+            myPane.YAxis.Title.Text = "SNR [dB]";
             myPane.Title.Text = "Razões sinal-ruído apresentadas";
             myPane.XAxis.Title.FontSpec.Size = 25;
             myPane.Title.FontSpec.Size = 25;
@@ -263,7 +271,8 @@ namespace perSONA
             myPane.XAxis.Scale.Max = 20;
             myPane.XAxis.MinorGrid.IsVisible = true;
             myPane.Y2Axis.MinorGrid.IsVisible = true;
-            
+
+
 
             graph.AxisChange();
             graph.Refresh();
@@ -410,6 +419,9 @@ namespace perSONA
                 string.Join(", ", Audiometry.dB.ToArray()),
                 string.Join(", ", Audiometry.Freqs.ToArray()));
             audiometryDate.Value = Audiometry.audiometryDate;
+
+            
+
             graph.AxisChange();
             graph.Refresh();
         }
@@ -509,6 +521,56 @@ namespace perSONA
                 int newHeight = Convert.ToInt32(PCResolutionHeight * 0.9);
                 this.Size = new Size(newWidth, newHeight);
             }
+        }
+        
+        private void save_img_button_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog audiograph = new SaveFileDialog();
+            //audiometryGraph.SaveFileDialog.FileName = ;// Default file name
+            audiograph.Title = "Salvar Audiograma"; //Título da Caixa 
+            audiograph.DefaultExt = ".png";  //Extenção Padrão
+            audiograph.AddExtension = true;
+            audiograph.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Inicia em meus documentos
+            audiograph.RestoreDirectory = true; //Próxima Iniciação Inicia na ultima pasta aberta
+            audiograph.Filter = "PNG Image|*.png|JPeg Image|*.jpg"; // Filter files by extension
+
+            audiometryGraph.SaveFileDialog = audiograph;
+            audiometryGraph.SaveAsBitmap();
+
+        }
+
+        private void print_audiograph_button_Click(object sender, EventArgs e)
+        {
+            audiometryGraph.DoPrint();
+        }
+
+        private void save_noisetest_button_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog noisetest = new SaveFileDialog();
+            //audiometryGraph.SaveFileDialog.FileName = ;// Default file name
+            noisetest.Title = "Salvar Teste de Ruído"; //Título da Caixa 
+            noisetest.DefaultExt = ".png";  //Extenção Padrão
+            noisetest.AddExtension = true;
+            noisetest.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Inicia em meus documentos
+            noisetest.RestoreDirectory = true; //Próxima Iniciação Inicia na ultima pasta aberta
+            noisetest.Filter = "PNG Image|*.png|JPeg Image|*.jpg"; // Filter files by extension
+
+            testsGraph.SaveFileDialog = noisetest;
+            testsGraph.SaveAsBitmap();
+        }
+
+        private void print_noisetest_button_Click(object sender, EventArgs e)
+        {
+            testsGraph.DoPrint();
+        }
+
+        private void testsGraph_Load(object sender, EventArgs e)
+        {
+            GraphPane pane = testsGraph.GraphPane;
+            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var logo = new ImageObj(img, new RectangleF(0.1f, 0.1f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
+            pane.GraphObjList.Add(logo); 
+            testsGraph.Refresh();
         }
     }
 }

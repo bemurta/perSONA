@@ -633,6 +633,7 @@ namespace perSONA
 
             graph.GraphPane.CurveList.Clear();
 
+
             int i = 0;
             double linearizedFreq = 0;
             foreach (double freq in freqsToClear)
@@ -645,7 +646,7 @@ namespace perSONA
                 linearizedFreq = Math.Log(freq / 125, 2) + 1;
                 TonalAudiometryTest.drawSymbol(graph, linearizedFreq, db[freq], mask[freq], noReply[freq], lastModificationSide, otherVia);
             }
-
+          
             TonalAudiometryTest.updateGraph(graph);
             updateCorrectAnswers(correctAnswers = 0);
         }

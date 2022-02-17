@@ -18,14 +18,27 @@ namespace perSONA
     {
         private readonly speechPerceptionTest test;
         private readonly IvAInterface vAInterface;
+        
         public string[] speechFiles;
         public string currentFile;
+
         public bool currentStreak = false;
+
+        public double SumofAnswers;
+        public double SumofWords;
         private double actualSNR;
+
         double[] signalToNoiseArray;
+
+        private int allCountCorrectWords;
+        private int allCountWords;
+
         List<string> iteractiveResponseTime;
         List<string> iteractiveResponsePercentage;
+
         DateTime tryalStartTime;
+
+        
 
         public VANet vA { get; private set; }
 
@@ -46,7 +59,7 @@ namespace perSONA
 
             double[] radiusList = { test.RadiusSpeech, test.RadiusNoise };
             double[] angleList = { test.AngleSpeech, test.AngleNoise };
-           
+
             vAInterface.plotSceneGraph(zedGraphControl2, radiusList, angleList);
 
             detailsBox.Text = test.ToString();
@@ -61,14 +74,19 @@ namespace perSONA
 
             detailsBox.AppendText(currentFile);
             vAInterface.fillWords(currentFile, testWordsList);
+
+          
+
             updatePercentage();
+          
             computedAudioText.Text = (filenameList.SelectedIndex + 1).ToString();
             totalWordsText.Text = string.Format("{0}", filenameList.Items.Count);
             actualSNR = test.SignalToNoise;
-            textBox3.Text = string.Format("{0}", actualSNR); 
+            textBox3.Text = string.Format("{0}", actualSNR);
 
-            signalToNoiseArray = new double[] {actualSNR};
+            signalToNoiseArray = new double[] { actualSNR };
             updateIterationGraph(zedGraphControl1.GraphPane, signalToNoiseArray);
+
             iteractiveResponseTime = new List<string> { };
             iteractiveResponsePercentage = new List<string> { };
         }
@@ -82,19 +100,21 @@ namespace perSONA
         }
 
 
-        public void updatePercentage()
+        public Tuple<int, int> updatePercentage()
         {
-            double answer = testWordsList.SelectedItems.Count;
-            double totalWords = testWordsList.Items.Count;
+            int correctWords = testWordsList.SelectedItems.Count;
+            int totalWords = testWordsList.Items.Count;
+            //textBox1.Text = string.Format("{0}", correctWords);
+            //textBox2.Text = string.Format("{0}%", 100.0 * (correctWords / totalWords));
 
-            textBox1.Text = string.Format("{0}", answer);
-            textBox2.Text = string.Format("{0}%", 100.0 * (answer / totalWords));
-
+            return Tuple.Create(correctWords, totalWords);
         }
+
+   
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updatePercentage();      
+            updatePercentage();
         }
 
         private void all_incorrect_Click(object sender, EventArgs e)
@@ -190,11 +210,15 @@ namespace perSONA
             myPane.XAxis.Scale.Max = signalToNoiseArray.Length + 3;
             
             myPane.XAxis.Title.Text = "Iterações";
-            myPane.YAxis.Title.Text = "SNR";
+            myPane.YAxis.Title.Text = "SNR [dB]";
             myPane.Title.Text = "Razões sinal-ruído apresentadas";
             myPane.XAxis.Title.FontSpec.Size = 25;
             myPane.Title.FontSpec.Size = 25;
             myPane.YAxis.Title.FontSpec.Size = 25;
+
+            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var logo = new ImageObj(img, new RectangleF(0.87f, 1.22f, 0.15f, 0.19f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
+            myPane.GraphObjList.Add(logo);
 
             zedGraphControl1.AxisChange();
             zedGraphControl1.Refresh();
@@ -254,6 +278,11 @@ namespace perSONA
             double totalWords = testWordsList.Items.Count;
             string responsePercentage = string.Format("{0}%", Math.Round(100*(answer / totalWords)));
             vAInterface.concatText(string.Format("{0} - response time: {1}", string.Join(",", testWordsList.Items.Cast<string>()), responseTime));
+            
+            Tuple<int, int> SpeechTestFormWords = updatePercentage();
+            allCountCorrectWords += SpeechTestFormWords.Item1;
+            allCountWords += SpeechTestFormWords.Item2;
+            double PORCENTAGEMDEACERTOTOTAL = 100.0 * allCountCorrectWords / allCountWords;
 
             if (filenameList.SelectedIndex + 1 < filenameList.Items.Count)
             {
@@ -262,7 +291,11 @@ namespace perSONA
 
                 detailsBox.AppendText(currentFile);
                 vAInterface.fillWords(currentFile, testWordsList);
-                updatePercentage();
+                
+
+                textBox1.Text = string.Format("{0}", allCountCorrectWords);
+                textBox2.Text = string.Format("{0}%", Math.Round(100.0 * allCountCorrectWords / allCountWords,2)); // 100.0 * (correctWords / totalWords));
+                
 
                 computedAudioText.Text = (filenameList.SelectedIndex + 1).ToString();
                 totalWordsText.Text = string.Format("{0}", filenameList.Items.Count);
@@ -275,6 +308,7 @@ namespace perSONA
             }
             else
             {
+                test.FinalPercentage = Math.Round(PORCENTAGEMDEACERTOTOTAL,2);
                 test.IterativeSNR = signalToNoiseArray;
 
                 detailsBox.AppendText("/r/n Finished list");
@@ -287,8 +321,8 @@ namespace perSONA
                 double meanSRT = vAInterface.getMeanSRT(test.IterativeSNR);
 
                 string completedTestMessage = string.Format(
-                    "Avaliação finalizada. SNR de convergência: {0} dB - Média {3} dB, Número de iterações: {1}, duração total: {2}",
-                    actualSNR, signalToNoiseArray.Length, test.TotalDuration, meanSRT);
+                    "Avaliação finalizada. SNR de convergência: {0} dB - Média {3} dB, Porcentagem de acertos: {4}%, Número de iterações: {1}, duração total: {2}",
+                    actualSNR, signalToNoiseArray.Length, test.TotalDuration, meanSRT, test.FinalPercentage);
 
                 string message = completedTestMessage;
                 const string caption = "Fim da avaliação";
@@ -321,5 +355,6 @@ namespace perSONA
                 this.Size = new Size(newWidth, newHeight);
             }
         }
+
     }
 }

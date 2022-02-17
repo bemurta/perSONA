@@ -26,6 +26,8 @@ namespace perSONA
         void updatePatientList();
         void updateApplicatorList();
         double getMeanSRT(double[] iterativeSNR);
+
+        //double getActualSNR(double );
         void addCompletedAudiometry(TonalAudiometryTest Audiometry, string patientName);
     }
 }

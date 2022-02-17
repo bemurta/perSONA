@@ -184,10 +184,18 @@
             this.previewAudiometryButton = new System.Windows.Forms.Button();
             this.saveAudiometryButton = new System.Windows.Forms.Button();
             this.deleteAudiometryButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.print_audiograph_button = new System.Windows.Forms.Button();
+            this.save_img_button = new System.Windows.Forms.Button();
             this.audiometryGraph = new ZedGraph.ZedGraphControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.testsGraph = new ZedGraph.ZedGraphControl();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.print_noisetest_button = new System.Windows.Forms.Button();
+            this.save_noisetest_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.testsBox = new System.Windows.Forms.ListBox();
             this.testInfo = new System.Windows.Forms.TextBox();
@@ -267,8 +275,12 @@
             this.groupBox24.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -2719,13 +2731,12 @@
             this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel8.ColumnCount = 4;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.06787F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.73454F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.19759F));
             this.tableLayoutPanel8.Controls.Add(this.panel3, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.audiometryGraph, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel5, 2, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
@@ -2742,7 +2753,7 @@
             this.panel3.Location = new System.Drawing.Point(5, 5);
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(387, 522);
+            this.panel3.Size = new System.Drawing.Size(454, 522);
             this.panel3.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -2760,7 +2771,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.33134F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.66866F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(382, 530);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(456, 517);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // groupBox30
@@ -2773,7 +2784,7 @@
             this.groupBox30.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox30.Size = new System.Drawing.Size(372, 171);
+            this.groupBox30.Size = new System.Drawing.Size(446, 167);
             this.groupBox30.TabIndex = 0;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Audiometrias cadastradas";
@@ -2786,7 +2797,7 @@
             this.audiometryLists.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryLists.Name = "audiometryLists";
             this.audiometryLists.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.audiometryLists.Size = new System.Drawing.Size(354, 124);
+            this.audiometryLists.Size = new System.Drawing.Size(419, 124);
             this.audiometryLists.TabIndex = 0;
             this.audiometryLists.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -2796,11 +2807,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox23.Controls.Add(this.confButtonsPanel);
-            this.groupBox23.Location = new System.Drawing.Point(5, 186);
+            this.groupBox23.Location = new System.Drawing.Point(5, 182);
             this.groupBox23.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox23.Size = new System.Drawing.Size(372, 339);
+            this.groupBox23.Size = new System.Drawing.Size(446, 330);
             this.groupBox23.TabIndex = 1;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Configurações da audiometria";
@@ -2814,12 +2825,12 @@
             this.confButtonsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.confButtonsPanel.Controls.Add(this.audiometryTextBox, 0, 1);
             this.confButtonsPanel.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.confButtonsPanel.Location = new System.Drawing.Point(8, 26);
+            this.confButtonsPanel.Location = new System.Drawing.Point(0, 23);
             this.confButtonsPanel.Name = "confButtonsPanel";
             this.confButtonsPanel.RowCount = 2;
             this.confButtonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.confButtonsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.confButtonsPanel.Size = new System.Drawing.Size(353, 303);
+            this.confButtonsPanel.Size = new System.Drawing.Size(451, 294);
             this.confButtonsPanel.TabIndex = 0;
             // 
             // audiometryTextBox
@@ -2827,11 +2838,11 @@
             this.audiometryTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.audiometryTextBox.Location = new System.Drawing.Point(5, 217);
+            this.audiometryTextBox.Location = new System.Drawing.Point(5, 210);
             this.audiometryTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryTextBox.Multiline = true;
             this.audiometryTextBox.Name = "audiometryTextBox";
-            this.audiometryTextBox.Size = new System.Drawing.Size(343, 81);
+            this.audiometryTextBox.Size = new System.Drawing.Size(441, 79);
             this.audiometryTextBox.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -2857,7 +2868,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(347, 206);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(445, 199);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // groupBox24
@@ -2870,7 +2881,7 @@
             this.groupBox24.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox24.Size = new System.Drawing.Size(163, 58);
+            this.groupBox24.Size = new System.Drawing.Size(212, 56);
             this.groupBox24.TabIndex = 0;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Data de realização";
@@ -2884,7 +2895,7 @@
             this.audiometryDate.Location = new System.Drawing.Point(10, 24);
             this.audiometryDate.Margin = new System.Windows.Forms.Padding(5);
             this.audiometryDate.Name = "audiometryDate";
-            this.audiometryDate.Size = new System.Drawing.Size(143, 27);
+            this.audiometryDate.Size = new System.Drawing.Size(192, 27);
             this.audiometryDate.TabIndex = 0;
             // 
             // groupBox26
@@ -2893,11 +2904,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox26.Controls.Add(this.audiometrySide);
-            this.groupBox26.Location = new System.Drawing.Point(5, 73);
+            this.groupBox26.Location = new System.Drawing.Point(5, 71);
             this.groupBox26.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox26.Size = new System.Drawing.Size(163, 58);
+            this.groupBox26.Size = new System.Drawing.Size(212, 56);
             this.groupBox26.TabIndex = 2;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Lado";
@@ -2915,7 +2926,7 @@
             this.audiometrySide.Location = new System.Drawing.Point(10, 20);
             this.audiometrySide.Margin = new System.Windows.Forms.Padding(5);
             this.audiometrySide.Name = "audiometrySide";
-            this.audiometrySide.Size = new System.Drawing.Size(143, 28);
+            this.audiometrySide.Size = new System.Drawing.Size(192, 28);
             this.audiometrySide.TabIndex = 0;
             // 
             // groupBox25
@@ -2924,11 +2935,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox25.Controls.Add(this.Conduction);
-            this.groupBox25.Location = new System.Drawing.Point(178, 5);
+            this.groupBox25.Location = new System.Drawing.Point(227, 5);
             this.groupBox25.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox25.Size = new System.Drawing.Size(164, 58);
+            this.groupBox25.Size = new System.Drawing.Size(213, 56);
             this.groupBox25.TabIndex = 1;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Via";
@@ -2948,7 +2959,7 @@
             this.Conduction.Location = new System.Drawing.Point(10, 23);
             this.Conduction.Margin = new System.Windows.Forms.Padding(5);
             this.Conduction.Name = "Conduction";
-            this.Conduction.Size = new System.Drawing.Size(144, 28);
+            this.Conduction.Size = new System.Drawing.Size(196, 28);
             this.Conduction.TabIndex = 0;
             // 
             // previewAudiometryButton
@@ -2959,10 +2970,10 @@
             this.previewAudiometryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.previewAudiometryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previewAudiometryButton.ForeColor = System.Drawing.Color.White;
-            this.previewAudiometryButton.Location = new System.Drawing.Point(178, 73);
+            this.previewAudiometryButton.Location = new System.Drawing.Point(227, 71);
             this.previewAudiometryButton.Margin = new System.Windows.Forms.Padding(5);
             this.previewAudiometryButton.Name = "previewAudiometryButton";
-            this.previewAudiometryButton.Size = new System.Drawing.Size(164, 58);
+            this.previewAudiometryButton.Size = new System.Drawing.Size(213, 56);
             this.previewAudiometryButton.TabIndex = 3;
             this.previewAudiometryButton.Text = "Pré-Visualização";
             this.previewAudiometryButton.UseVisualStyleBackColor = false;
@@ -2976,10 +2987,10 @@
             this.saveAudiometryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.saveAudiometryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveAudiometryButton.ForeColor = System.Drawing.Color.White;
-            this.saveAudiometryButton.Location = new System.Drawing.Point(5, 141);
+            this.saveAudiometryButton.Location = new System.Drawing.Point(5, 137);
             this.saveAudiometryButton.Margin = new System.Windows.Forms.Padding(5);
             this.saveAudiometryButton.Name = "saveAudiometryButton";
-            this.saveAudiometryButton.Size = new System.Drawing.Size(163, 60);
+            this.saveAudiometryButton.Size = new System.Drawing.Size(212, 57);
             this.saveAudiometryButton.TabIndex = 4;
             this.saveAudiometryButton.Text = "Cadastrar audiometria";
             this.saveAudiometryButton.UseVisualStyleBackColor = false;
@@ -2993,20 +3004,84 @@
             this.deleteAudiometryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.deleteAudiometryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteAudiometryButton.ForeColor = System.Drawing.Color.White;
-            this.deleteAudiometryButton.Location = new System.Drawing.Point(176, 139);
+            this.deleteAudiometryButton.Location = new System.Drawing.Point(225, 135);
             this.deleteAudiometryButton.Name = "deleteAudiometryButton";
-            this.deleteAudiometryButton.Size = new System.Drawing.Size(168, 64);
+            this.deleteAudiometryButton.Size = new System.Drawing.Size(217, 61);
             this.deleteAudiometryButton.TabIndex = 5;
             this.deleteAudiometryButton.Text = "Deletar audiometria";
             this.deleteAudiometryButton.UseVisualStyleBackColor = false;
             this.deleteAudiometryButton.Click += new System.EventHandler(this.deleteAudiometryButton_Click);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.audiometryGraph, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(490, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(813, 526);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.print_audiograph_button, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.save_img_button, 0, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 470);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(807, 53);
+            this.tableLayoutPanel7.TabIndex = 2;
+            // 
+            // print_audiograph_button
+            // 
+            this.print_audiograph_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.print_audiograph_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.print_audiograph_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.print_audiograph_button.ForeColor = System.Drawing.Color.White;
+            this.print_audiograph_button.Location = new System.Drawing.Point(408, 5);
+            this.print_audiograph_button.Margin = new System.Windows.Forms.Padding(5);
+            this.print_audiograph_button.Name = "print_audiograph_button";
+            this.print_audiograph_button.Size = new System.Drawing.Size(394, 43);
+            this.print_audiograph_button.TabIndex = 5;
+            this.print_audiograph_button.Text = "Imprimir Audiograma";
+            this.print_audiograph_button.UseVisualStyleBackColor = false;
+            this.print_audiograph_button.Click += new System.EventHandler(this.print_audiograph_button_Click);
+            // 
+            // save_img_button
+            // 
+            this.save_img_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.save_img_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.save_img_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_img_button.ForeColor = System.Drawing.Color.White;
+            this.save_img_button.Location = new System.Drawing.Point(5, 5);
+            this.save_img_button.Margin = new System.Windows.Forms.Padding(5);
+            this.save_img_button.Name = "save_img_button";
+            this.save_img_button.Size = new System.Drawing.Size(393, 43);
+            this.save_img_button.TabIndex = 4;
+            this.save_img_button.Text = "Salvar Audiograma";
+            this.save_img_button.UseVisualStyleBackColor = false;
+            this.save_img_button.Click += new System.EventHandler(this.save_img_button_Click);
             // 
             // audiometryGraph
             // 
             this.audiometryGraph.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.audiometryGraph.Location = new System.Drawing.Point(456, 6);
+            this.audiometryGraph.BackColor = System.Drawing.Color.Transparent;
+            this.audiometryGraph.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.audiometryGraph.Location = new System.Drawing.Point(6, 6);
             this.audiometryGraph.Margin = new System.Windows.Forms.Padding(6);
             this.audiometryGraph.Name = "audiometryGraph";
             this.audiometryGraph.ScrollGrace = 0D;
@@ -3016,7 +3091,7 @@
             this.audiometryGraph.ScrollMinX = 0D;
             this.audiometryGraph.ScrollMinY = 0D;
             this.audiometryGraph.ScrollMinY2 = 0D;
-            this.audiometryGraph.Size = new System.Drawing.Size(810, 520);
+            this.audiometryGraph.Size = new System.Drawing.Size(801, 455);
             this.audiometryGraph.TabIndex = 0;
             this.audiometryGraph.UseExtendedPrintDialog = true;
             // 
@@ -3040,7 +3115,7 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.7705F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.2295F));
-            this.tableLayoutPanel2.Controls.Add(this.testsGraph, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel13, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -3049,12 +3124,29 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1329, 722);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel13.ColumnCount = 1;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Controls.Add(this.testsGraph, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel18, 0, 1);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(597, 3);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 2;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(729, 716);
+            this.tableLayoutPanel13.TabIndex = 5;
+            // 
             // testsGraph
             // 
             this.testsGraph.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.testsGraph.Location = new System.Drawing.Point(600, 6);
+            this.testsGraph.Location = new System.Drawing.Point(6, 6);
             this.testsGraph.Margin = new System.Windows.Forms.Padding(6);
             this.testsGraph.Name = "testsGraph";
             this.testsGraph.ScrollGrace = 0D;
@@ -3064,9 +3156,60 @@
             this.testsGraph.ScrollMinX = 0D;
             this.testsGraph.ScrollMinY = 0D;
             this.testsGraph.ScrollMinY2 = 0D;
-            this.testsGraph.Size = new System.Drawing.Size(723, 710);
+            this.testsGraph.Size = new System.Drawing.Size(717, 632);
             this.testsGraph.TabIndex = 2;
             this.testsGraph.UseExtendedPrintDialog = true;
+            this.testsGraph.Load += new System.EventHandler(this.testsGraph_Load);
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel18.ColumnCount = 2;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.Controls.Add(this.print_noisetest_button, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.save_noisetest_button, 0, 0);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 647);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(723, 66);
+            this.tableLayoutPanel18.TabIndex = 3;
+            // 
+            // print_noisetest_button
+            // 
+            this.print_noisetest_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.print_noisetest_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.print_noisetest_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.print_noisetest_button.ForeColor = System.Drawing.Color.White;
+            this.print_noisetest_button.Location = new System.Drawing.Point(366, 5);
+            this.print_noisetest_button.Margin = new System.Windows.Forms.Padding(5);
+            this.print_noisetest_button.Name = "print_noisetest_button";
+            this.print_noisetest_button.Size = new System.Drawing.Size(352, 56);
+            this.print_noisetest_button.TabIndex = 6;
+            this.print_noisetest_button.Text = "Imprimir Teste de Ruído";
+            this.print_noisetest_button.UseVisualStyleBackColor = false;
+            // 
+            // save_noisetest_button
+            // 
+            this.save_noisetest_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.save_noisetest_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.save_noisetest_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_noisetest_button.ForeColor = System.Drawing.Color.White;
+            this.save_noisetest_button.Location = new System.Drawing.Point(5, 5);
+            this.save_noisetest_button.Margin = new System.Windows.Forms.Padding(5);
+            this.save_noisetest_button.Name = "save_noisetest_button";
+            this.save_noisetest_button.Size = new System.Drawing.Size(351, 56);
+            this.save_noisetest_button.TabIndex = 5;
+            this.save_noisetest_button.Text = "Salvar Teste de Ruído";
+            this.save_noisetest_button.UseVisualStyleBackColor = false;
+            this.save_noisetest_button.Click += new System.EventHandler(this.save_noisetest_button_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -3211,8 +3354,12 @@
             this.groupBox24.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -3381,5 +3528,13 @@
         private System.Windows.Forms.CheckBox noReply3000;
         private System.Windows.Forms.CheckBox noReply6000;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button save_img_button;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Button print_audiograph_button;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private System.Windows.Forms.Button print_noisetest_button;
+        private System.Windows.Forms.Button save_noisetest_button;
     }
 }

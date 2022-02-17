@@ -8,9 +8,12 @@ namespace perSONA
 {
     public class speechPerceptionTest
     {
+        public double FinalPercentage { get; set; }
         public string Label { get; set; }
         public double SignalToNoise { get; set; }
         public string SpeechFolder { get; set; }
+        public string SpeechDirection { get; set; } = null;
+        public string NoiseDirection { get; set; } = null;
         public string NoiseFile { get; set; }
         public double AngleSpeech { get; set; }
         public double RadiusSpeech { get; set; }
@@ -35,13 +38,13 @@ namespace perSONA
 
 
 
-            testString = string.Format("{0} - {1} - Carried by: {11}\r\n Mean SRT: {12}" +
-                                         "Speech Folder: {2} Angle:{3}\r\n " +
-                                         "Noise Folder:{4} Angle:{5}\r\n " +
-                                         "Logic: {6}-down-{7}-up, Criteria:{8}%, SNR:{9}dB SNR step:{10}dB",
-                                    Label, TestStart.ToShortDateString(), SpeechFolder, AngleSpeech, NoiseFile, AngleNoise,
-                                    PresentingLogic[0], PresentingLogic[1], AcceptanceRule * 100, SignalToNoise, SignalToNoiseStep,
-                                    Applicator, MeanSRT);
+            testString = string.Format( "{0} - {1} - Carried by: {11}\r\n Mean SRT: {12}" +
+                                        "Speech Folder: {2} Angle:{3}\r\n " +
+                                        "Noise Folder:{4} Angle:{5}\r\n " +
+                                        "Logic: {6}-down-{7}-up, Criteria:{8}%, SNR:{9}dB SNR step:{10}dB",
+                                        Label, TestStart.ToShortDateString(), SpeechFolder, AngleSpeech, NoiseFile, AngleNoise,
+                                        PresentingLogic[0], PresentingLogic[1], AcceptanceRule * 100, SignalToNoise, SignalToNoiseStep,
+                                        Applicator, MeanSRT);
 
 
             return testString;
@@ -53,13 +56,44 @@ namespace perSONA
 
         public string testSummary()
         {
-            return string.Format("Ensaio: {0} - Data: {1}\r\n" +
-                                 "Direção da fala: {2}, Direção do ruído {3} \r\n" +
-                                 "Lista de falas: {4}, Tipo de Ruído: {5} \r\n" +
-                                 "Aplicador: {6}", Label, TestStart.ToShortDateString(),
-                                 AngleSpeech, AngleNoise, SpeechFolder, NoiseFile,
-                                 Applicator);
+            if(AngleNoise == 0)
+            {
+                 NoiseDirection = "Frente";
+            }
+            else if (AngleNoise > 0)
+            {
+                NoiseDirection = "Direita";
+            }
+            else
+            {
+                NoiseDirection = "Esquerda";
+            }
 
+            if (AngleSpeech == 0)
+            {
+                NoiseDirection = "Frente";
+            }
+            else if (AngleSpeech > 0)
+            {
+                NoiseDirection = "Direita";
+            }
+            else
+            {
+                SpeechDirection = "Esquerda";
+            }
+            
+            return string.Format("Ensaio: {0} - Data: {1}\r\n" +
+                                 "Direção da fala: {2} \r\n" +
+                                 "Direção do ruído: {3} \r\n" +
+                                 "Distancia da fonte sonora da fala: {10}m \r\n" +
+                                 "Distancia da fonte sonora do ruído: {11}m \r\n" +
+                                 "Lista de falas: {4} \r\n" +
+                                 "Tipo de teste: {7}-down-{8}-up \r\n" +
+                                 "Tipo de Ruído: {5} \r\n" +
+                                 "Porcentagem de acerto: {9}% \r\n" +
+                                 "Aplicador: {6}", Label, TestStart.ToShortDateString(),
+                                 SpeechDirection, NoiseDirection, SpeechFolder, NoiseFile,
+                                 Applicator, PresentingLogic[0], PresentingLogic[1], FinalPercentage, RadiusSpeech, RadiusNoise);
         }
 
         public speechPerceptionTest(

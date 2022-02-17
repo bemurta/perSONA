@@ -769,8 +769,8 @@ namespace perSONA
                 {
                     changed.Add(iterativeSNR[i]);
                 }
-                lastInclination = currentInclination;
 
+                lastInclination = currentInclination;
 
             }
             concatText(string.Format("{0} inversions, SRT: {1}.", changed.Count, changed.Sum() / changed.Count));
