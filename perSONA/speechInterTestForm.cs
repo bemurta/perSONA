@@ -282,6 +282,7 @@ namespace perSONA
             Tuple<int, int> SpeechTestFormWords = updatePercentage();
             allCountCorrectWords += SpeechTestFormWords.Item1;
             allCountWords += SpeechTestFormWords.Item2;
+            double PORCENTAGEMDEACERTOTOTAL = 100.0 * allCountCorrectWords / allCountWords;
 
             if (filenameList.SelectedIndex + 1 < filenameList.Items.Count)
             {
@@ -290,6 +291,7 @@ namespace perSONA
 
                 detailsBox.AppendText(currentFile);
                 vAInterface.fillWords(currentFile, testWordsList);
+                
 
                 textBox1.Text = string.Format("{0}", allCountCorrectWords);
                 textBox2.Text = string.Format("{0}%", Math.Round(100.0 * allCountCorrectWords / allCountWords,2)); // 100.0 * (correctWords / totalWords));
@@ -306,7 +308,6 @@ namespace perSONA
             }
             else
             {
-                double PORCENTAGEMDEACERTOTOTAL = 100.0 * allCountCorrectWords / allCountWords;
                 test.FinalPercentage = Math.Round(PORCENTAGEMDEACERTOTOTAL,2);
                 test.IterativeSNR = signalToNoiseArray;
 
@@ -321,7 +322,7 @@ namespace perSONA
 
                 string completedTestMessage = string.Format(
                     "Avaliação finalizada. SNR de convergência: {0} dB - Média {3} dB, Porcentagem de acertos: {4}%, Número de iterações: {1}, duração total: {2}",
-                    actualSNR, signalToNoiseArray.Length, test.TotalDuration, meanSRT, PORCENTAGEMDEACERTOTOTAL);
+                    actualSNR, signalToNoiseArray.Length, test.TotalDuration, meanSRT, test.FinalPercentage);
 
                 string message = completedTestMessage;
                 const string caption = "Fim da avaliação";

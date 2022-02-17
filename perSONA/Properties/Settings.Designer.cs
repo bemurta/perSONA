@@ -201,5 +201,17 @@ namespace perSONA.Properties {
                 this["Logo"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int DB_VERSION {
+            get {
+                return ((int)(this["DB_VERSION"]));
+            }
+            set {
+                this["DB_VERSION"] = value;
+            }
+        }
     }
 }
