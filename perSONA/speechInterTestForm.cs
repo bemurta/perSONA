@@ -99,18 +99,13 @@ namespace perSONA
             }
         }
 
-
         public Tuple<int, int> updatePercentage()
         {
             int correctWords = testWordsList.SelectedItems.Count;
             int totalWords = testWordsList.Items.Count;
-            //textBox1.Text = string.Format("{0}", correctWords);
-            //textBox2.Text = string.Format("{0}%", 100.0 * (correctWords / totalWords));
 
             return Tuple.Create(correctWords, totalWords);
         }
-
-   
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -132,7 +127,6 @@ namespace perSONA
             double zFront = 0;
             double yHeight = 1.7;
 
-
             VAVec3 receiverPosition = new VAVec3(xSides, yHeight, zFront);
             VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
             VAVec3 receiverOrientationU = new VAVec3(0, 1, 0);
@@ -152,7 +146,6 @@ namespace perSONA
             vAInterface.createAcousticScene(speechFile, test.NoiseFile);
 
             vAInterface.playScene(test.RadiusSpeech, test.AngleSpeech, actualSNR);
-
 
             TagLib.File file = TagLib.File.Create(currentFile); //Take file at taglibe format   
             var duration = file.Properties.Duration;            //Take duration
@@ -186,7 +179,6 @@ namespace perSONA
             myPane.Title.FontSpec.Size = 21;
             myPane.XAxis.Title.FontSpec.Size = 21;
             myPane.XAxis.Scale.FontSpec.Size = 21;
-
 
             myPane.YAxis.Title.FontSpec.Size = 21;
             myPane.YAxis.Scale.FontSpec.Size = 21;
@@ -340,6 +332,7 @@ namespace perSONA
             this.continuousTimerText.Text = string.Format("{0:hh\\:mm\\:ss}", DateTime.Now - test.TestStart);
             this.currentTryal.Text = string.Format("{0:mm\\:ss}", DateTime.Now - tryalStartTime);
         }
+
         private void resizeScreen()
         {
             double PCResolutionWidth = Screen.PrimaryScreen.Bounds.Width;
@@ -355,6 +348,5 @@ namespace perSONA
                 this.Size = new Size(newWidth, newHeight);
             }
         }
-
     }
 }

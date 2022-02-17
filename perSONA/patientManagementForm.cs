@@ -21,7 +21,6 @@ namespace perSONA
         public string[] loadedTests = { };
         public Patient person;
 
-
         public patientManagement(IvAInterface ivAInterface)
         {
             InitializeComponent();
@@ -165,7 +164,6 @@ namespace perSONA
             this.Close();
         }
 
-
         private void testsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             updateIterationGraph(testsGraph);
@@ -272,12 +270,9 @@ namespace perSONA
             myPane.XAxis.MinorGrid.IsVisible = true;
             myPane.Y2Axis.MinorGrid.IsVisible = true;
 
-
-
             graph.AxisChange();
             graph.Refresh();
         }
-
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -395,7 +390,8 @@ namespace perSONA
 
             for (int i = 0; i < Audiometry.Freqs.Count; i++)
             {
-                TonalAudiometryTest.drawSymbol(graph, linearizedFreqs[i], Audiometry.dB[i],Audiometry.Masker[i],Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
+                TonalAudiometryTest.drawSymbol(graph, linearizedFreqs[i], Audiometry.dB[i],Audiometry.Masker[i],
+                    Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
                 //2^(x-1)*125
             }
 
@@ -407,7 +403,8 @@ namespace perSONA
             if (Audiometry.Via == "Air")
             {
                 LineItem audiometryCurve;
-                audiometryCurve = myPane.AddCurve(Audiometry.AudiometryType, audiometry, Audiometry.getColor(), SymbolType.None);
+                audiometryCurve = myPane.AddCurve(Audiometry.AudiometryType, audiometry,
+                    Audiometry.getColor(), SymbolType.None);
                 audiometryCurve.IsX2Axis = true;
                 Audiometry.changeLine(audiometryCurve.Line);
             }
@@ -419,8 +416,6 @@ namespace perSONA
                 string.Join(", ", Audiometry.dB.ToArray()),
                 string.Join(", ", Audiometry.Freqs.ToArray()));
             audiometryDate.Value = Audiometry.audiometryDate;
-
-            
 
             graph.AxisChange();
             graph.Refresh();
@@ -526,12 +521,11 @@ namespace perSONA
         private void save_img_button_Click(object sender, EventArgs e)
         {
             SaveFileDialog audiograph = new SaveFileDialog();
-            //audiometryGraph.SaveFileDialog.FileName = ;// Default file name
-            audiograph.Title = "Salvar Audiograma"; //Título da Caixa 
-            audiograph.DefaultExt = ".png";  //Extenção Padrão
+            audiograph.Title = "Salvar Audiograma"; 
+            audiograph.DefaultExt = ".png";  
             audiograph.AddExtension = true;
-            audiograph.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Inicia em meus documentos
-            audiograph.RestoreDirectory = true; //Próxima Iniciação Inicia na ultima pasta aberta
+            audiograph.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); //Folder Initialize "My Documents"
+            audiograph.RestoreDirectory = true; //Folder Initialize in last oppened folder
             audiograph.Filter = "PNG Image|*.png|JPeg Image|*.jpg"; // Filter files by extension
 
             audiometryGraph.SaveFileDialog = audiograph;
@@ -547,13 +541,12 @@ namespace perSONA
         private void save_noisetest_button_Click(object sender, EventArgs e)
         {
             SaveFileDialog noisetest = new SaveFileDialog();
-            //audiometryGraph.SaveFileDialog.FileName = ;// Default file name
-            noisetest.Title = "Salvar Teste de Ruído"; //Título da Caixa 
-            noisetest.DefaultExt = ".png";  //Extenção Padrão
+            noisetest.Title = "Salvar Teste de Ruído"; 
+            noisetest.DefaultExt = ".png"; 
             noisetest.AddExtension = true;
-            noisetest.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Inicia em meus documentos
-            noisetest.RestoreDirectory = true; //Próxima Iniciação Inicia na ultima pasta aberta
-            noisetest.Filter = "PNG Image|*.png|JPeg Image|*.jpg"; // Filter files by extension
+            noisetest.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            noisetest.RestoreDirectory = true; 
+            noisetest.Filter = "PNG Image|*.png|JPeg Image|*.jpg"; 
 
             testsGraph.SaveFileDialog = noisetest;
             testsGraph.SaveAsBitmap();
