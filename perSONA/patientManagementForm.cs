@@ -98,7 +98,7 @@ namespace perSONA
             }            
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void SaveChanges_Click(object sender, EventArgs e)
         {
             const string message = "Alterações salvas!";
             const string caption = "Sucesso";
@@ -555,15 +555,6 @@ namespace perSONA
         private void print_noisetest_button_Click(object sender, EventArgs e)
         {
             testsGraph.DoPrint();
-        }
-
-        private void testsGraph_Load(object sender, EventArgs e)
-        {
-            GraphPane pane = testsGraph.GraphPane;
-            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
-            var logo = new ImageObj(img, new RectangleF(0.1f, 0.1f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
-            pane.GraphObjList.Add(logo); 
-            testsGraph.Refresh();
         }
     }
 }

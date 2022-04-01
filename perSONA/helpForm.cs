@@ -15,6 +15,13 @@ namespace perSONA
         public helpForm()
         {
             InitializeComponent();
+            this.MinimumSize = new System.Drawing.Size(1100,700);
+        }
+
+        private void OpenManual_Click(object sender, EventArgs e)
+        {
+            string filemanual = @"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Manual_perSONA.pdf";
+            System.Diagnostics.Process.Start(filemanual);
         }
     }
 }

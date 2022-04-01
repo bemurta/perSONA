@@ -102,12 +102,6 @@ namespace perSONA
             updateApplicatorList();
         }
 
-        //??
-        ~Form1()
-        {
-            this.Form1_FormClosing(null, null);
-        }
-
         private ProcessStartInfo VAServerProcessInfo()
         {
             info = new ProcessStartInfo();
@@ -559,7 +553,7 @@ namespace perSONA
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void UseSignal_Click(object sender, EventArgs e)
         {
             string speechFile = System.IO.Path.Combine(testFolder, listBox2.GetItemText(listBox2.SelectedItem));
             concatText(speechFile);
@@ -607,21 +601,6 @@ namespace perSONA
             concatText(string.Format("\r\nCreated Source Signals: {0} with file: {1}, {2} with file {3}",
                                      speechSource, Path.GetFileName(speechFile),
                                      noiseSource, Path.GetFileName(noiseFile)));
-        }
-
-        //????
-        private void button2_Click(object sender, EventArgs e)
-        {
-            int angleSpeech = 45;
-            int radiusSpeech = 2;
-
-            int angleNoise = 0;
-            int radiusNoise = 2;
-
-            double[] radius = { radiusSpeech, radiusNoise };
-            double[] angle = { angleSpeech, angleNoise };
-
-            plotSceneGraph(zedGraphControl1, radius, angle);
         }
 
         public void plotSceneGraph(ZedGraphControl graph, double[] radius, double[] angle)
@@ -742,8 +721,7 @@ namespace perSONA
 
         }
 
-
-        private void button3_Click(object sender, EventArgs e)
+        private void OpendbForm_Click(object sender, EventArgs e)
         {
             new dbForm(this).Show();
         }
@@ -1022,7 +1000,7 @@ namespace perSONA
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void CreatePatient_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["patientManagement"] == null)
             {
@@ -1030,7 +1008,7 @@ namespace perSONA
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void ShowPatientData_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["patientManagement"] == null)
             {
@@ -1046,7 +1024,7 @@ namespace perSONA
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void DeletePatient_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja deletar paciente?", patientBox.SelectedItem.ToString(),
                 MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
@@ -1076,7 +1054,7 @@ namespace perSONA
             updatePatientList();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void HidePanel_Click(object sender, EventArgs e)
         {
             if (panel3.Visible)
             {

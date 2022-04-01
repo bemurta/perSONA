@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dbForm));
-            this.button2 = new System.Windows.Forms.Button();
+            this.PlayAudio = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.SaveChanges = new System.Windows.Forms.Button();
+            this.Preview = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SelectList = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,23 +51,23 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // PlayAudio
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PlayAudio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button2.Enabled = false;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(5, 5);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 31);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Reproduzir áudio";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.playAudioButton_Click);
+            this.PlayAudio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.PlayAudio.Enabled = false;
+            this.PlayAudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlayAudio.ForeColor = System.Drawing.Color.White;
+            this.PlayAudio.Location = new System.Drawing.Point(5, 5);
+            this.PlayAudio.Margin = new System.Windows.Forms.Padding(5);
+            this.PlayAudio.Name = "PlayAudio";
+            this.PlayAudio.Size = new System.Drawing.Size(196, 31);
+            this.PlayAudio.TabIndex = 4;
+            this.PlayAudio.Text = "Reproduzir áudio";
+            this.PlayAudio.UseVisualStyleBackColor = false;
+            this.PlayAudio.Click += new System.EventHandler(this.PlayAudio_Click);
             // 
             // textBox1
             // 
@@ -93,41 +93,41 @@
             this.listBox2.Size = new System.Drawing.Size(201, 244);
             this.listBox2.TabIndex = 7;
             // 
-            // button4
+            // SaveChanges
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SaveChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button4.Enabled = false;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(5, 87);
-            this.button4.Margin = new System.Windows.Forms.Padding(5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(196, 32);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Salvar modificações";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.SaveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.SaveChanges.Enabled = false;
+            this.SaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveChanges.ForeColor = System.Drawing.Color.White;
+            this.SaveChanges.Location = new System.Drawing.Point(5, 87);
+            this.SaveChanges.Margin = new System.Windows.Forms.Padding(5);
+            this.SaveChanges.Name = "SaveChanges";
+            this.SaveChanges.Size = new System.Drawing.Size(196, 32);
+            this.SaveChanges.TabIndex = 6;
+            this.SaveChanges.Text = "Salvar modificações";
+            this.SaveChanges.UseVisualStyleBackColor = false;
+            this.SaveChanges.Click += new System.EventHandler(this.SaveChanges_Click);
             // 
-            // button5
+            // Preview
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Preview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button5.Enabled = false;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(5, 46);
-            this.button5.Margin = new System.Windows.Forms.Padding(5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(196, 31);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Pré-visualização";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.Preview.Enabled = false;
+            this.Preview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Preview.ForeColor = System.Drawing.Color.White;
+            this.Preview.Location = new System.Drawing.Point(5, 46);
+            this.Preview.Margin = new System.Windows.Forms.Padding(5);
+            this.Preview.Name = "Preview";
+            this.Preview.Size = new System.Drawing.Size(196, 31);
+            this.Preview.TabIndex = 5;
+            this.Preview.Text = "Pré-visualização";
+            this.Preview.UseVisualStyleBackColor = false;
+            this.Preview.Click += new System.EventHandler(this.Preview_Click);
             // 
             // label1
             // 
@@ -149,9 +149,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PlayAudio, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.SaveChanges, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Preview, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(214, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -210,22 +210,22 @@
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // button1
+            // SelectList
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SelectList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(5, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(419, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Selecionar lista para configuração";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SelectList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.SelectList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SelectList.ForeColor = System.Drawing.Color.White;
+            this.SelectList.Location = new System.Drawing.Point(5, 5);
+            this.SelectList.Margin = new System.Windows.Forms.Padding(5);
+            this.SelectList.Name = "SelectList";
+            this.SelectList.Size = new System.Drawing.Size(419, 33);
+            this.SelectList.TabIndex = 0;
+            this.SelectList.Text = "Selecionar lista para configuração";
+            this.SelectList.UseVisualStyleBackColor = false;
+            this.SelectList.Click += new System.EventHandler(this.SelectList_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -235,7 +235,7 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.listBox1, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.SelectList, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
@@ -304,17 +304,17 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button PlayAudio;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button SaveChanges;
+        private System.Windows.Forms.Button Preview;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SelectList;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
