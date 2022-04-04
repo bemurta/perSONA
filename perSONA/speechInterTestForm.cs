@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using VA;
 using ZedGraph;
 using TagLib;
@@ -91,7 +92,7 @@ namespace perSONA
             iteractiveResponsePercentage = new List<string> { };
         }
 
-        private void all_correct_Click(object sender, EventArgs e)
+        private void AllCorrect_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < testWordsList.Items.Count; i++)
             {
@@ -103,7 +104,8 @@ namespace perSONA
         {
             int correctWords = testWordsList.SelectedItems.Count;
             int totalWords = testWordsList.Items.Count;
-
+            textBox1.Text = string.Format("{0}", correctWords);
+            textBox2.Text = string.Format("{0}%", Math.Round(100.0 * correctWords / totalWords, 2));
             return Tuple.Create(correctWords, totalWords);
         }
 
@@ -112,7 +114,7 @@ namespace perSONA
             updatePercentage();
         }
 
-        private void all_incorrect_Click(object sender, EventArgs e)
+        private void AllIncorrect_Click(object sender, EventArgs e)
         {
             testWordsList.ClearSelected();
         }
@@ -208,7 +210,10 @@ namespace perSONA
             myPane.Title.FontSpec.Size = 25;
             myPane.YAxis.Title.FontSpec.Size = 25;
 
-            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            var path = Path.Combine(dir.ToString(), "LVA-UFSC", "perSONA-BETA", "perSONA", "data", "Logo_Large.png");
+            string filelogo = path;
+            Image img = Image.FromFile(filelogo);
             var logo = new ImageObj(img, new RectangleF(0.87f, 1.22f, 0.15f, 0.19f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
             myPane.GraphObjList.Add(logo);
 
@@ -255,13 +260,7 @@ namespace perSONA
             return nextSNR;
         }
 
-        //?
-        private void button2_Click(object sender, EventArgs e)
-        {        
-            updateIterationGraph(zedGraphControl1.GraphPane , signalToNoiseArray);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void NextSentence_Click(object sender, EventArgs e)
         {
             actualSNR = getNextSNR(actualSNR, test.SignalToNoiseStep);
 
@@ -285,8 +284,8 @@ namespace perSONA
                 vAInterface.fillWords(currentFile, testWordsList);
                 
 
-                textBox1.Text = string.Format("{0}", allCountCorrectWords);
-                textBox2.Text = string.Format("{0}%", Math.Round(100.0 * allCountCorrectWords / allCountWords,2)); // 100.0 * (correctWords / totalWords));
+                textBox4.Text = string.Format("{0}", allCountCorrectWords);
+                textBox5.Text = string.Format("{0}%", Math.Round(100.0 * allCountCorrectWords / allCountWords,2)); // 100.0 * (correctWords / totalWords));
                 
 
                 computedAudioText.Text = (filenameList.SelectedIndex + 1).ToString();
@@ -310,10 +309,10 @@ namespace perSONA
 
                 vAInterface.concatText(string.Format("Elapsed time: {0}", test.TotalDuration));
 
-                double meanSRT = vAInterface.getMeanSRT(test.IterativeSNR);
+                double meanSRT = Math.Round(vAInterface.getMeanSRT(test.IterativeSNR),2);
 
                 string completedTestMessage = string.Format(
-                    "Avaliação finalizada. SNR de convergência: {0} dB - Média {3} dB, Porcentagem de acertos: {4}%, Número de iterações: {1}, duração total: {2}",
+                    "Avaliação finalizada. SNR de convergência: {0} dB, MédiaSTR: {3} dB, Porcentagem de acertos: {4}%, Número de iterações: {1}, duração total: {2}",
                     actualSNR, signalToNoiseArray.Length, test.TotalDuration, meanSRT, test.FinalPercentage);
 
                 string message = completedTestMessage;

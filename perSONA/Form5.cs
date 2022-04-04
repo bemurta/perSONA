@@ -33,7 +33,7 @@ namespace perSONA
             selectReproduction.SelectedIndex = 0;
         }
 
-        private void button1_Click(object sender, EventArgs e)           //When the button clicked the program verify if the license has expired 
+        private void StartperSONA_Click(object sender, EventArgs e)           //When the button clicked the program verify if the license has expired 
         {
             int selected_index = selectReproduction.SelectedIndex;
 

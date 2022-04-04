@@ -59,7 +59,7 @@ namespace perSONA
             this.speechLeft = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.UseSignal = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
@@ -112,14 +112,14 @@ namespace perSONA
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.HidePanel = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.openServer = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.OpendbForm = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.buttonConnect = new System.Windows.Forms.Button();
@@ -346,22 +346,22 @@ namespace perSONA
             this.textBox2.Size = new System.Drawing.Size(331, 27);
             this.textBox2.TabIndex = 2;
             // 
-            // button1
+            // UseSignal
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.UseSignal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(5, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Usar sinal selecionado";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.UseSignal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.UseSignal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UseSignal.ForeColor = System.Drawing.Color.White;
+            this.UseSignal.Location = new System.Drawing.Point(5, 5);
+            this.UseSignal.Margin = new System.Windows.Forms.Padding(5);
+            this.UseSignal.Name = "UseSignal";
+            this.UseSignal.Size = new System.Drawing.Size(157, 34);
+            this.UseSignal.TabIndex = 0;
+            this.UseSignal.Text = "Usar sinal selecionado";
+            this.UseSignal.UseVisualStyleBackColor = false;
+            this.UseSignal.Click += new System.EventHandler(this.UseSignal_Click);
             // 
             // panel1
             // 
@@ -746,7 +746,7 @@ namespace perSONA
             this.CreatePatient.TabIndex = 1;
             this.CreatePatient.Text = "Criar paciente";
             this.CreatePatient.UseVisualStyleBackColor = false;
-            this.CreatePatient.Click += new System.EventHandler(this.button7_Click);
+            this.CreatePatient.Click += new System.EventHandler(this.CreatePatient_Click);
             // 
             // ShowPatientData
             // 
@@ -763,7 +763,7 @@ namespace perSONA
             this.ShowPatientData.TabIndex = 2;
             this.ShowPatientData.Text = "Ver/Alterar dados do paciente";
             this.ShowPatientData.UseVisualStyleBackColor = false;
-            this.ShowPatientData.Click += new System.EventHandler(this.button8_Click);
+            this.ShowPatientData.Click += new System.EventHandler(this.ShowPatientData_Click);
             // 
             // DeletePatient
             // 
@@ -780,7 +780,7 @@ namespace perSONA
             this.DeletePatient.TabIndex = 3;
             this.DeletePatient.Text = "Deletar paciente";
             this.DeletePatient.UseVisualStyleBackColor = false;
-            this.DeletePatient.Click += new System.EventHandler(this.button10_Click);
+            this.DeletePatient.Click += new System.EventHandler(this.DeletePatient_Click);
             // 
             // groupBox1
             // 
@@ -1126,7 +1126,7 @@ namespace perSONA
             this.tableLayoutPanel9.ColumnCount = 2;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.UseSignal, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.createSource2, 1, 0);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 180);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -1176,21 +1176,21 @@ namespace perSONA
             this.label5.Text = "Ruído";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button9
+            // HidePanel
             // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.HidePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(5, 5);
-            this.button9.Margin = new System.Windows.Forms.Padding(5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(321, 35);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "Mostrar/Esconder painel de controle";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.HidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.HidePanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HidePanel.ForeColor = System.Drawing.Color.White;
+            this.HidePanel.Location = new System.Drawing.Point(5, 5);
+            this.HidePanel.Margin = new System.Windows.Forms.Padding(5);
+            this.HidePanel.Name = "HidePanel";
+            this.HidePanel.Size = new System.Drawing.Size(321, 35);
+            this.HidePanel.TabIndex = 0;
+            this.HidePanel.Text = "Mostrar/Esconder painel de controle";
+            this.HidePanel.UseVisualStyleBackColor = false;
+            this.HidePanel.Click += new System.EventHandler(this.HidePanel_Click);
             // 
             // panel4
             // 
@@ -1200,7 +1200,7 @@ namespace perSONA
             this.panel4.BackColor = System.Drawing.SystemColors.Window;
             this.panel4.BackgroundImage = global::perSONA.Properties.Resources.resized_help;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Controls.Add(this.button9);
+            this.panel4.Controls.Add(this.HidePanel);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Location = new System.Drawing.Point(5, 5);
             this.panel4.Margin = new System.Windows.Forms.Padding(5);
@@ -1262,7 +1262,7 @@ namespace perSONA
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.openServer, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button3, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.OpendbForm, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -1290,22 +1290,22 @@ namespace perSONA
             this.openServer.UseVisualStyleBackColor = false;
             this.openServer.Click += new System.EventHandler(this.openServer_Click);
             // 
-            // button3
+            // OpendbForm
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.OpendbForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(5, 92);
-            this.button3.Margin = new System.Windows.Forms.Padding(5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(311, 35);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Configuração de arquivos de audio";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.OpendbForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.OpendbForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpendbForm.ForeColor = System.Drawing.Color.White;
+            this.OpendbForm.Location = new System.Drawing.Point(5, 92);
+            this.OpendbForm.Margin = new System.Windows.Forms.Padding(5);
+            this.OpendbForm.Name = "OpendbForm";
+            this.OpendbForm.Size = new System.Drawing.Size(311, 35);
+            this.OpendbForm.TabIndex = 3;
+            this.OpendbForm.Text = "Configuração de arquivos de audio";
+            this.OpendbForm.UseVisualStyleBackColor = false;
+            this.OpendbForm.Click += new System.EventHandler(this.OpendbForm_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -1450,7 +1450,7 @@ namespace perSONA
         private System.Windows.Forms.Button speechLeft;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button UseSignal;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button testSetup;
         private System.Windows.Forms.Button audiometryManualTest;
@@ -1469,7 +1469,7 @@ namespace perSONA
         private System.Windows.Forms.Button ShowPatientData;
         private System.Windows.Forms.Button DeletePatient;
         private System.Windows.Forms.ListBox patientBox;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button HidePanel;
         private System.Windows.Forms.Panel panel4;
         private ToolStripMenuItem contactToolStripMenuItem;
         private Panel panel2;
@@ -1482,7 +1482,7 @@ namespace perSONA
         private CheckBox cond1;
         private System.Windows.Forms.Label label3;
         private TextBox textBox;
-        private Button button3;
+        private Button OpendbForm;
         private Button buttonConnect;
         private Button buttonDisconnect;
         private Button openServer;

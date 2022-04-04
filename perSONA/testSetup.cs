@@ -61,7 +61,7 @@ namespace perSONA
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void BeginTest_Click(object sender, EventArgs e)
         {
             double[] angles = getSceneAngles();
             double[] radius = getSceneDistances();

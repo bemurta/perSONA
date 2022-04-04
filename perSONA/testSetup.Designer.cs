@@ -56,7 +56,7 @@
             this.noiseLeft = new System.Windows.Forms.RadioButton();
             this.noiseRight = new System.Windows.Forms.RadioButton();
             this.noiseFront = new System.Windows.Forms.RadioButton();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BeginTest = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.stepSnr = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -336,7 +336,7 @@
             this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.groupBox3, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.groupBox2, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.button4, 0, 8);
+            this.tableLayoutPanel3.Controls.Add(this.BeginTest, 0, 8);
             this.tableLayoutPanel3.Controls.Add(this.groupBox10, 0, 7);
             this.tableLayoutPanel3.Controls.Add(this.groupBox4, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.groupBox5, 0, 6);
@@ -536,22 +536,22 @@
             this.noiseFront.UseVisualStyleBackColor = true;
             this.noiseFront.CheckedChanged += new System.EventHandler(this.noiseFront_CheckedChanged);
             // 
-            // button4
+            // BeginTest
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BeginTest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(5, 573);
-            this.button4.Margin = new System.Windows.Forms.Padding(5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(397, 64);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Iniciar teste";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.BeginTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.BeginTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BeginTest.ForeColor = System.Drawing.Color.White;
+            this.BeginTest.Location = new System.Drawing.Point(5, 573);
+            this.BeginTest.Margin = new System.Windows.Forms.Padding(5);
+            this.BeginTest.Name = "BeginTest";
+            this.BeginTest.Size = new System.Drawing.Size(397, 64);
+            this.BeginTest.TabIndex = 19;
+            this.BeginTest.Text = "Iniciar teste";
+            this.BeginTest.UseVisualStyleBackColor = false;
+            this.BeginTest.Click += new System.EventHandler(this.BeginTest_Click);
             // 
             // groupBox10
             // 
@@ -797,7 +797,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton speechLeft;
         private System.Windows.Forms.RadioButton speechRight;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BeginTest;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button getFolder;
         private System.Windows.Forms.ComboBox comboBox3;

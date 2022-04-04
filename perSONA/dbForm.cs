@@ -24,7 +24,7 @@ namespace perSONA
                 this.vAInterface = idbInterface;
         }
 
-        private void playAudioButton_Click(object sender, EventArgs e)
+        private void PlayAudio_Click(object sender, EventArgs e)
         {
             vA = vAInterface.getVa();
 
@@ -57,52 +57,25 @@ namespace perSONA
             vAInterface.playScene(2, 0, 50);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SelectList_Click(object sender, EventArgs e)
         {
             speechFolder = vAInterface.getDatabaseFolder();
             string[] filePaths = System.IO.Directory.GetFiles(@speechFolder, "*.wav");
             string[] fileNames = filePaths.Select(System.IO.Path.GetFileName).ToArray();
             listBox1.DataSource = fileNames;
             vAInterface.concatText(speechFolder);
-            button2.Enabled = true;
-            button4.Enabled = true;
-            button5.Enabled = true;
+            PlayAudio.Enabled = true;
+            SaveChanges.Enabled = true;
+            Preview.Enabled = true;
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string speechFile = System.IO.Path.Combine(speechFolder, listBox1.GetItemText(listBox1.SelectedItem));
-            vAInterface.concatText(speechFile);
-
-            //String noiseFile = "data/Sounds/Noise/4talker-babble_ISTS.wav";
-            //idbInterface.createAcousticScene(String.Concat(speechFile, ".WAV"), noiseFile);
-
-
-            string title = vAInterface.getTitle(speechFile);
-
-
-            if (!string.IsNullOrEmpty(title))
-            {
-                textBox1.Text = title;
-                string[] words = title.Split(null);
-                listBox2.DataSource = words;
-                listBox2.ClearSelected();
-
-            }
-            else
-            {
-                listBox2.DataSource = "Digite Texto na Caixa ao lado".Split(null);
-                listBox2.ClearSelected();
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void SaveChanges_Click(object sender, EventArgs e)
         {
             saveTag();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Preview_Click(object sender, EventArgs e)
         {
             string title = textBox1.Text;
 
