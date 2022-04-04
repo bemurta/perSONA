@@ -37,7 +37,7 @@ namespace perSONA
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SelectFolder_Click(object sender, EventArgs e)
         {
             using (var fbd = new FolderBrowserDialog())
             {
@@ -55,7 +55,7 @@ namespace perSONA
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void SaveChanges_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.RESULTS_FOLDER = textBox1.Text;
             Properties.Settings.Default.Save();

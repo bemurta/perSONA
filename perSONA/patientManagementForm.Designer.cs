@@ -102,7 +102,7 @@
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SaveChanges = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -1355,7 +1355,7 @@
             this.tableLayoutPanel16.ColumnCount = 1;
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel15, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.button3, 0, 1);
+            this.tableLayoutPanel16.Controls.Add(this.SaveChanges, 0, 1);
             this.tableLayoutPanel16.Location = new System.Drawing.Point(8, 8);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 2;
@@ -1491,22 +1491,22 @@
             this.tableLayoutPanel11.Size = new System.Drawing.Size(801, 312);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
-            // button3
+            // SaveChanges
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SaveChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(5, 666);
-            this.button3.Margin = new System.Windows.Forms.Padding(5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(1312, 52);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Salvar alterações";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.SaveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.SaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveChanges.ForeColor = System.Drawing.Color.White;
+            this.SaveChanges.Location = new System.Drawing.Point(5, 666);
+            this.SaveChanges.Margin = new System.Windows.Forms.Padding(5);
+            this.SaveChanges.Name = "SaveChanges";
+            this.SaveChanges.Size = new System.Drawing.Size(1312, 52);
+            this.SaveChanges.TabIndex = 1;
+            this.SaveChanges.Text = "Salvar alterações";
+            this.SaveChanges.UseVisualStyleBackColor = false;
+            this.SaveChanges.Click += new System.EventHandler(this.SaveChanges_Click);
             // 
             // tabPage2
             // 
@@ -3159,7 +3159,6 @@
             this.testsGraph.Size = new System.Drawing.Size(717, 632);
             this.testsGraph.TabIndex = 2;
             this.testsGraph.UseExtendedPrintDialog = true;
-            this.testsGraph.Load += new System.EventHandler(this.testsGraph_Load);
             // 
             // tableLayoutPanel18
             // 
@@ -3193,6 +3192,7 @@
             this.print_noisetest_button.TabIndex = 6;
             this.print_noisetest_button.Text = "Imprimir Teste de Ruído";
             this.print_noisetest_button.UseVisualStyleBackColor = false;
+            this.print_noisetest_button.Click += new System.EventHandler(this.print_noisetest_button_Click);
             // 
             // save_noisetest_button
             // 
@@ -3429,7 +3429,7 @@
         private System.Windows.Forms.NumericUpDown dB500;
         private System.Windows.Forms.NumericUpDown dB250;
         private System.Windows.Forms.NumericUpDown dB125;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SaveChanges;
         private System.Windows.Forms.TabPage tabPage3;
         private ZedGraph.ZedGraphControl testsGraph;
         private System.Windows.Forms.ListBox testsBox;

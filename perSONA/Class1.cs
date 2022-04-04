@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ZedGraph;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Net;
 using System.Windows;
 
@@ -70,7 +71,11 @@ namespace perSONA
             myPane.X2Axis.Scale.Max = 8;
             myPane.X2Axis.IsVisible = false;
 
-            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+
+            var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            var path = Path.Combine(dir.ToString(), "LVA-UFSC", "perSONA-BETA", "perSONA", "data", "Logo_Large.png");
+            string filelogo = path;
+            Image img = Image.FromFile(filelogo);
             var logo = new ImageObj(img, new RectangleF(0.9f, 1.05f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
             myPane.GraphObjList.Add(logo);
 

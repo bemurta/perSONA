@@ -117,6 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Criar novo paciente:
+
+1. Clique em "Criar Paciente" localizado a direita 
+na página inicial, ou em "Novo Paciente" 
+localizado no rodapé da página inicial;
+
+2. Uma nova tela chamada "Módulo de 
+Gerenciamento de Paciente" irá se abrir;
+
+3. Agora basta preencher os dados do paciente 
+e salvar as alterações.
+
+Ver dados ou deletar pacientes:
+
+1. Selecione o paciente que desejar na lista da 
+página inicial que está localizada ao lado 
+esquerdo dos botões de criar, ver e deletar 
+paciente;
+
+2. Clique no botão que indica a ação que 
+queira realizar.
+
+3. É importante ressaltar que ao ver dados de
+paciente podemos navegar pelo cabeçalho da
+página, vendo os resultados de exames já
+realizados pelo mesmo</value>
+  </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Inicialização do VA (IMPORTANTE):
 
@@ -174,34 +202,6 @@ Contato:
 em "Contato", no cabeçalho da página inicial
 
 2. Informe seu e-mail assunto e texto, e envie</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Criar novo paciente:
-
-1. Clique em "Criar Paciente" localizado a direita 
-na página inicial, ou em "Novo Paciente" 
-localizado no rodapé da página inicial;
-
-2. Uma nova tela chamada "Módulo de 
-Gerenciamento de Paciente" irá se abrir;
-
-3. Agora basta preencher os dados do paciente 
-e salvar as alterações.
-
-Ver dados ou deletar pacientes:
-
-1. Selecione o paciente que desejar na lista da 
-página inicial que está localizada ao lado 
-esquerdo dos botões de criar, ver e deletar 
-paciente;
-
-2. Clique no botão que indica a ação que 
-queira realizar.
-
-3. É importante ressaltar que ao ver dados de
-paciente podemos navegar pelo cabeçalho da
-página, vendo os resultados de exames já
-realizados pelo mesmo</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
