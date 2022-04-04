@@ -840,6 +840,12 @@
     <Content Include="data\Sounds\Noise\4talker-babble_ISTS.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="data\Sounds\Noise\Babble_12_Meninas_Dialog.wav" />
+    <Content Include="data\Sounds\Noise\Babble_12_Meninas_Ind.wav" />
+    <Content Include="data\Sounds\Noise\Babble_4_Meninas_Dialog.wav" />
+    <Content Include="data\Sounds\Noise\Babble_4_Meninas_Ind.wav" />
+    <Content Include="data\Sounds\Noise\Babble_8_Meninas_Dialog.wav" />
+    <Content Include="data\Sounds\Noise\Babble_8_Meninas_Ind.wav" />
     <Content Include="data\Sounds\Noise\cafeteria_babble.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
