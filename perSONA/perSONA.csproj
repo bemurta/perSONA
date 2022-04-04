@@ -444,6 +444,7 @@
     <None Include="data\License.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="data\MANUAL-DE-USUARIO.pdf" />
     <None Include="data\Singer.v17.ms.daff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
