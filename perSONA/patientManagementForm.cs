@@ -197,7 +197,10 @@ namespace perSONA
             GraphPane myPane = graph.GraphPane;
             myPane.CurveList.Clear();
 
-            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            var path = Path.Combine(dir.ToString(), "LVA-UFSC", "perSONA-BETA", "perSONA", "data", "Logo_Large.png");
+            string filelogo = path;
+            Image img = Image.FromFile(filelogo);
             var logo = new ImageObj(img, new RectangleF(0.92f, 1.13f, 0.13f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
             myPane.GraphObjList.Add(logo);
 

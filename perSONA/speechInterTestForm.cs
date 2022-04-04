@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using VA;
 using ZedGraph;
 using TagLib;
@@ -209,7 +210,10 @@ namespace perSONA
             myPane.Title.FontSpec.Size = 25;
             myPane.YAxis.Title.FontSpec.Size = 25;
 
-            Image img = Image.FromFile(@"C:\Program Files (x86)\LVA-UFSC\perSONA-BETA\perSONA\data\Logo_Large.png");
+            var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            var path = Path.Combine(dir.ToString(), "LVA-UFSC", "perSONA-BETA", "perSONA", "data", "Logo_Large.png");
+            string filelogo = path;
+            Image img = Image.FromFile(filelogo);
             var logo = new ImageObj(img, new RectangleF(0.87f, 1.22f, 0.15f, 0.19f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
             myPane.GraphObjList.Add(logo);
 
