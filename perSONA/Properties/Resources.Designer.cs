@@ -83,6 +83,16 @@ namespace perSONA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Questionario {
+            get {
+                object obj = ResourceManager.GetObject("Questionario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap resized_help {
             get {
                 object obj = ResourceManager.GetObject("resized_help", resourceCulture);

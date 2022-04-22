@@ -17,7 +17,7 @@ namespace perSONA
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void verifySerialKey_Click(object sender, EventArgs e)
         {
             CompareSerialKey();
         }
