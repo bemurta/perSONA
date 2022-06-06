@@ -16,7 +16,12 @@ namespace perSONA
         public helpForm()
         {
             InitializeComponent();
-            this.MinimumSize = new System.Drawing.Size(1100,700);
+            string w = System.Windows.SystemParameters.PrimaryScreenWidth.ToString();
+            string h = System.Windows.SystemParameters.PrimaryScreenHeight.ToString();
+            int x = Int32.Parse(w);
+            int y = Int32.Parse(h);
+            this.MinimumSize = new System.Drawing.Size((x * 1100) / 1920, (y * 700) / 1080);
+            //this.MinimumSize = new System.Drawing.Size(1100,700);
         }
 
         private void OpenManual_Click(object sender, EventArgs e)
@@ -29,3 +34,4 @@ namespace perSONA
         }
     }
 }
+//this.MinimumSize = new System.Drawing.Size((1920 * 1100) / x, (1080 * 700) / y);
