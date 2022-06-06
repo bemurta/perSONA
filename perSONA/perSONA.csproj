@@ -113,6 +113,12 @@
     <Reference Include="ATL, Version=3.13.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\z440.atl.core.3.13.0\lib\net45\ATL.dll</HintPath>
     </Reference>
+    <Reference Include="AudioSwitcher.AudioApi, Version=3.0.0.209, Culture=neutral, PublicKeyToken=fda5729e2db3a64f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AudioSwitcher.AudioApi.3.0.0\lib\net40\AudioSwitcher.AudioApi.dll</HintPath>
+    </Reference>
+    <Reference Include="AudioSwitcher.AudioApi.CoreAudio, Version=3.0.0.209, Culture=neutral, PublicKeyToken=fda5729e2db3a64f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AudioSwitcher.AudioApi.CoreAudio.3.0.0.1\lib\net40\AudioSwitcher.AudioApi.CoreAudio.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -444,6 +450,7 @@
     <None Include="data\License.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="data\MANUAL-DE-USUARIO.pdf" />
     <None Include="data\Singer.v17.ms.daff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1344,6 +1351,7 @@
     </Content>
     <None Include="Resources\readmeEditForm.png" />
     <Content Include="perSONA Icone.ico" />
+    <None Include="Resources\Questionario.JPG" />
     <Content Include="VABase.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

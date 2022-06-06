@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AudioSwitcher.AudioApi.CoreAudio;
+
 
 namespace perSONA
 {
@@ -35,6 +37,10 @@ namespace perSONA
 
         private void StartperSONA_Click(object sender, EventArgs e)           //When the button clicked the program verify if the license has expired 
         {
+            CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
+            defaultPlaybackDevice.Mute(false);
+            defaultPlaybackDevice.Volume = 100;
+
             int selected_index = selectReproduction.SelectedIndex;
 
             switch (selected_index)
