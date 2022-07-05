@@ -95,7 +95,7 @@ namespace perSONA
             catch (Exception)
             {
                 MessageBox.Show("Problemas com dados do paciente");
-            }            
+            }
         }
 
         private void SaveChanges_Click(object sender, EventArgs e)
@@ -177,7 +177,7 @@ namespace perSONA
             timestamp);
             string json = File.ReadAllText(jsonFile);
             speechPerceptionTest test = Newtonsoft.Json.JsonConvert.DeserializeObject<speechPerceptionTest>(json);
-            
+
             return test;
         }
 
@@ -188,7 +188,7 @@ namespace perSONA
             timestamp);
             string json = File.ReadAllText(jsonFile);
             TonalAudiometryTest test = JsonConvert.DeserializeObject<TonalAudiometryTest>(json);
-            
+
             return test;
         }
 
@@ -197,8 +197,7 @@ namespace perSONA
             GraphPane myPane = graph.GraphPane;
             myPane.CurveList.Clear();
 
-            var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
-            var path = Path.Combine(dir.ToString(), "LVA-UFSC", "perSONA-BETA", "perSONA", "data", "Logo_Large.png");
+            var path = Path.Combine("data", "Logo_Large.png");
             string filelogo = path;
             Image img = Image.FromFile(filelogo);
             var logo = new ImageObj(img, new RectangleF(0.92f, 1.13f, 0.13f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
@@ -218,7 +217,7 @@ namespace perSONA
                 double actualSNR = signalToNoiseArray.Last<double>();
                 double meanSNR = vAInterface.getMeanSRT(test.IterativeSNR);
 
-                testsString = string.Concat(testsString, "\r\n", string.Format("\r\nSRT deste teste: {0} dB", Math.Round(meanSNR,2)), string.Format("\r\nLimiar de convergência SNR: {0} dB",actualSNR), "\r\n", test.testSummary());
+                testsString = string.Concat(testsString, "\r\n", string.Format("\r\nSRT deste teste: {0} dB", Math.Round(meanSNR, 2)), string.Format("\r\nLimiar de convergência SNR: {0} dB", actualSNR), "\r\n", test.testSummary());
                 Color colorScene = Color.DodgerBlue;
 
                 PointPairList snrArray = new PointPairList();
@@ -234,12 +233,12 @@ namespace perSONA
                 {
                     colorScene = Color.DimGray;
                 }
-                else if(test.AngleSpeech == 90)
+                else if (test.AngleSpeech == 90)
                 {
                     colorScene = Color.Crimson;
                 }
 
-                LineItem snrCurve = myPane.AddCurve(timestamp.Substring(0,10), snrArray,
+                LineItem snrCurve = myPane.AddCurve(timestamp.Substring(0, 10), snrArray,
                     colorScene, colorRotator.NextSymbol);
                 snrCurve.Line.IsVisible = true;
                 snrCurve.Line.Width = 2;
@@ -249,14 +248,14 @@ namespace perSONA
             testInfo.Text = testsString;
             myPane.Legend.FontSpec.Size = 12;
             myPane.Legend.Border.IsVisible = true;
-            
+
             myPane.Title.FontSpec.Size = 18;
             myPane.XAxis.Title.FontSpec.Size = 18;
             myPane.XAxis.Scale.FontSpec.Size = 21;
 
             myPane.YAxis.Title.FontSpec.Size = 18;
             myPane.YAxis.Scale.FontSpec.Size = 21;
-            
+
             myPane.XAxis.Title.Text = "Iterações";
             myPane.YAxis.Title.Text = "SNR [dB]";
             myPane.Title.Text = "Razões sinal-ruído apresentadas";
@@ -300,12 +299,12 @@ namespace perSONA
                 else if (Audiometry.Via == "Bone (mastoid)") Conduction.Text = "óssea (mastóide)";
                 else if (Audiometry.Via == "Bone (forehead)") Conduction.Text = "óssea (fronte)";
                 else Conduction.Text = "campo livre";
-                
+
                 // Side                
                 if (Audiometry.Side == "Left") audiometrySide.Text = "Esquerdo";
                 else audiometrySide.Text = "Direito";
             }
-            else 
+            else
             {
                 confButtonsPanel.Visible = false;
                 foreach (object audiometryItem in audiometryLists.SelectedItems)    // Take all selected itens and plot
@@ -393,7 +392,7 @@ namespace perSONA
 
             for (int i = 0; i < Audiometry.Freqs.Count; i++)
             {
-                TonalAudiometryTest.drawSymbol(graph, linearizedFreqs[i], Audiometry.dB[i],Audiometry.Masker[i],
+                TonalAudiometryTest.drawSymbol(graph, linearizedFreqs[i], Audiometry.dB[i], Audiometry.Masker[i],
                     Audiometry.NoReply[i], Audiometry.Side, Audiometry.Via);
                 //2^(x-1)*125
             }
@@ -434,7 +433,7 @@ namespace perSONA
 
         private void saveAudiometryButton_Click(object sender, EventArgs e)
         {
-            TonalAudiometryTest Audiometry = new TonalAudiometryTest();            
+            TonalAudiometryTest Audiometry = new TonalAudiometryTest();
             makeAudiometry(Audiometry);
             vAInterface.addCompletedAudiometry(Audiometry, nameBox.Text);
 
@@ -520,12 +519,12 @@ namespace perSONA
                 this.Size = new Size(newWidth, newHeight);
             }
         }
-        
+
         private void save_img_button_Click(object sender, EventArgs e)
         {
             SaveFileDialog audiograph = new SaveFileDialog();
-            audiograph.Title = "Salvar Audiograma"; 
-            audiograph.DefaultExt = ".png";  
+            audiograph.Title = "Salvar Audiograma";
+            audiograph.DefaultExt = ".png";
             audiograph.AddExtension = true;
             audiograph.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); //Folder Initialize "My Documents"
             audiograph.RestoreDirectory = true; //Folder Initialize in last oppened folder
@@ -544,12 +543,12 @@ namespace perSONA
         private void save_noisetest_button_Click(object sender, EventArgs e)
         {
             SaveFileDialog noisetest = new SaveFileDialog();
-            noisetest.Title = "Salvar Teste de Ruído"; 
-            noisetest.DefaultExt = ".png"; 
+            noisetest.Title = "Salvar Teste de Ruído";
+            noisetest.DefaultExt = ".png";
             noisetest.AddExtension = true;
             noisetest.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            noisetest.RestoreDirectory = true; 
-            noisetest.Filter = "PNG Image|*.png|JPeg Image|*.jpg"; 
+            noisetest.RestoreDirectory = true;
+            noisetest.Filter = "PNG Image|*.png|JPeg Image|*.jpg";
 
             testsGraph.SaveFileDialog = noisetest;
             testsGraph.SaveAsBitmap();
