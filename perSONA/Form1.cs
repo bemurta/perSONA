@@ -46,6 +46,12 @@ namespace perSONA
 
             resizeScreen();
 
+            string message = "O perSONA modificou o volume do seu computador para 100% e poderá fazer futuras alterações";
+            const string caption = "Acesso ao volume";
+            var result = MessageBox.Show(message, caption,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
             this.confFile = confFile;
             this.sourceIndex = sourceIndex;
 
@@ -74,7 +80,7 @@ namespace perSONA
             listBox2.DataSource = fileNames;
             comboBox3.DataSource = Directory.GetFiles(@noiseFolder).Select(Path.GetFileName).ToArray();
             comboBox3.SelectedItem = comboBox3.Items.IndexOf("4talker-babble_ISTS.wav");
-            plotSceneGraph(zedGraphControl1, new double[] { 2, 4 }, new double[] { 90, -90});
+            plotSceneGraph(zedGraphControl1, new double[] { 2, 4 }, new double[] { 90, -90 });
             textBox.Text = "Started perSONA";
             concatText("New VA Session started.");
 
@@ -340,19 +346,35 @@ namespace perSONA
                     selectedFolder = 1;
                     folder = fbd.SelectedPath;
                     concatText("Files found: " + files.Length.ToString());
-                }          
+                }
                 return folder;
             }
+        }
+
+        public string getDatabaseFiles(string Location)
+        {
+            var fbd = Location;
+
+            string folder = speechFolder;
+
+            if (!string.IsNullOrWhiteSpace(fbd))
+            {
+                string[] files = Directory.GetFiles(fbd);
+                selectedFolder = 1;
+                folder = fbd;
+                concatText("Files found: " + files.Length.ToString());
+            }
+            return folder;
         }
 
         public void playScene(double radius, double angle, double snr)
         {
 
             if (!cond4.Checked)
-                {
-                    concatText(String.Format("Scene not ok. Signal: {0}, Noise {1}, Receiver: {2}",
-                                         cond1.Checked, cond2.Checked, cond3.Checked));                    
-                }
+            {
+                concatText(String.Format("Scene not ok. Signal: {0}, Noise {1}, Receiver: {2}",
+                                     cond1.Checked, cond2.Checked, cond3.Checked));
+            }
 
             double[] radiusList = { radius, radius };
             double[] angleList = { angle, 0 };
@@ -369,13 +391,14 @@ namespace perSONA
             {
                 normalizationFactor = Properties.Settings.Default.EARPHONE_VOLUME / 100.0;
             }
-            else 
+            else
             {
                 normalizationFactor = Properties.Settings.Default.SPEAKER_VOLUME / 100.0;
             }
             double powerSpeech = 0.25 * normalizationFactor;
-
+            //A linha acima serve para 
             double linRatio = Math.Pow(10.0, (snr / 20.0));
+            //A linha acima é utilizada para realizar o cálculo do valor do SNR atual que será utilizado na reprodução do som
             double powerNoise = powerSpeech / linRatio;
 
             if (snr == 40)
@@ -442,7 +465,7 @@ namespace perSONA
             }
 
             if (speechON) vA.SetSignalSourceBufferPlaybackAction(speechSound, "play");
-            
+
             if (noiseON)
             {
                 vA.SetSignalSourceBufferLooping(noiseSound, true);
@@ -466,7 +489,7 @@ namespace perSONA
             }
         }
 
-            private void speechLeft_Click(object sender, EventArgs e)
+        private void speechLeft_Click(object sender, EventArgs e)
         {
             int angle = -90;
             int radius = 2;
@@ -522,7 +545,7 @@ namespace perSONA
         }
 
 
-        public void fillWords(string speechFile, ListBox listbox, bool test=false)
+        public void fillWords(string speechFile, ListBox listbox, bool test = false)
         {
             string title = getTitle(speechFile);
 
@@ -988,7 +1011,7 @@ namespace perSONA
         {
             if (Application.OpenForms["Form2"] == null)
             {
-                new Form2(this).Show();       
+                new Form2(this).Show();
             }
         }
 
@@ -1216,21 +1239,29 @@ namespace perSONA
         private void recalibrateAudiometry_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Você realmente deseja recalibrar o audiômetro (os limiares atuais serão perdidos).", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialog == DialogResult.Yes) 
+            if (dialog == DialogResult.Yes)
             {
                 Properties.Settings.Default.CALIBRATED_AUDIOMETRY = false;
                 Properties.Settings.Default.Save();
             }
         }
-
-        private void resizeScreen() {
+        //private void resizeScreen()
+        //{
+        //    string w = System.Windows.SystemParameters.PrimaryScreenWidth.ToString();
+        //    string h = System.Windows.SystemParameters.PrimaryScreenHeight.ToString();
+        //    int x = Int32.Parse(w);
+        //    int y = Int32.Parse(h);
+        //    this.MinimumSize = new System.Drawing.Size((x * 1100) / 1920, (y * 700) / 1080);
+        //}
+        private void resizeScreen()
+        {
             double PCResolutionWidth = Screen.PrimaryScreen.Bounds.Width;
             double PCResolutionHeight = Screen.PrimaryScreen.Bounds.Height;
 
             double formWidth = this.Size.Width;
             double formHeight = this.Size.Height;
 
-            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight*0.925))
+            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight * 0.925))
             {
                 int newWidth = Convert.ToInt32(PCResolutionWidth * 0.786);
                 int newHeight = Convert.ToInt32(PCResolutionHeight * 0.9);

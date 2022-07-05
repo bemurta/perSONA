@@ -16,13 +16,14 @@ namespace perSONA
         void allSoundPlayersPlayScene(double radius, int numberOfSoundPlayers, string speechFile);
         void addCompletedTest(speechPerceptionTest test);
         string getDatabaseFolder();
+        string getDatabaseFiles(string Location);
         void createAcousticScene(string speechFile, string noiseFile);
         string getTitle(string speechFile);
         TimeSpan getDuration(string speechFile);
         void concatText(string textToAppend);
         VANet getVa();
         void plotSceneGraph(ZedGraph.ZedGraphControl graph, double[] radius, double[] angle);
-        void fillWords(string speechFile, ListBox listbox, bool test=false);
+        void fillWords(string speechFile, ListBox listbox, bool test = false);
         void updatePatientList();
         void updateApplicatorList();
         double getMeanSRT(double[] iterativeSNR);

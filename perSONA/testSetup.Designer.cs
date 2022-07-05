@@ -41,10 +41,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
-            this.getFolder = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.speechList = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.speechFiles = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.speechLeft = new System.Windows.Forms.RadioButton();
@@ -71,6 +73,8 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -202,24 +206,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.zedGraphControl1, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.getFolder, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.listBox2, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.speechList, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.comboBox3, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 67);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 7;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.424779F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.919003F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.853582F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.1433F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.959502F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.29595F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.31153F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.428908F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.924526F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.85954F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.16583F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.962264F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.300891F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.35804F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(364, 642);
             this.tableLayoutPanel2.TabIndex = 21;
             // 
@@ -234,7 +238,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(354, 28);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Informações do teste";
+            this.label6.Text = "Informações do ensaio";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox1
@@ -255,7 +259,7 @@
             this.zedGraphControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraphControl1.Location = new System.Drawing.Point(6, 324);
+            this.zedGraphControl1.Location = new System.Drawing.Point(6, 349);
             this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(6);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
@@ -265,40 +269,23 @@
             this.zedGraphControl1.ScrollMinX = 0D;
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
-            this.zedGraphControl1.Size = new System.Drawing.Size(352, 312);
+            this.zedGraphControl1.Size = new System.Drawing.Size(352, 287);
             this.zedGraphControl1.TabIndex = 10;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
             // 
-            // getFolder
+            // speechList
             // 
-            this.getFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.speechList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.getFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
-            this.getFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.getFolder.ForeColor = System.Drawing.Color.White;
-            this.getFolder.Location = new System.Drawing.Point(5, 71);
-            this.getFolder.Margin = new System.Windows.Forms.Padding(5);
-            this.getFolder.Name = "getFolder";
-            this.getFolder.Size = new System.Drawing.Size(354, 34);
-            this.getFolder.TabIndex = 6;
-            this.getFolder.Text = "Selecionar lista";
-            this.getFolder.UseVisualStyleBackColor = false;
-            this.getFolder.Click += new System.EventHandler(this.getFolder_Click);
-            // 
-            // listBox2
-            // 
-            this.listBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(5, 115);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.ScrollAlwaysVisible = true;
-            this.listBox2.Size = new System.Drawing.Size(354, 144);
-            this.listBox2.TabIndex = 7;
+            this.speechList.FormattingEnabled = true;
+            this.speechList.ItemHeight = 20;
+            this.speechList.Location = new System.Drawing.Point(5, 140);
+            this.speechList.Margin = new System.Windows.Forms.Padding(5);
+            this.speechList.Name = "speechList";
+            this.speechList.ScrollAlwaysVisible = true;
+            this.speechList.Size = new System.Drawing.Size(354, 144);
+            this.speechList.TabIndex = 7;
             // 
             // label5
             // 
@@ -306,7 +293,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 265);
+            this.label5.Location = new System.Drawing.Point(5, 290);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(354, 19);
@@ -320,11 +307,49 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(5, 289);
+            this.comboBox3.Location = new System.Drawing.Point(5, 314);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(354, 28);
             this.comboBox3.TabIndex = 9;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.groupBox7, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 69);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(358, 63);
+            this.tableLayoutPanel5.TabIndex = 11;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.speechFiles);
+            this.groupBox7.Location = new System.Drawing.Point(3, 3);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(352, 57);
+            this.groupBox7.TabIndex = 14;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Teste";
+            // 
+            // speechFiles
+            // 
+            this.speechFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.speechFiles.FormattingEnabled = true;
+            this.speechFiles.Location = new System.Drawing.Point(3, 19);
+            this.speechFiles.Name = "speechFiles";
+            this.speechFiles.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.speechFiles.Size = new System.Drawing.Size(343, 28);
+            this.speechFiles.TabIndex = 12;
+            this.speechFiles.SelectedIndexChanged += new System.EventHandler(this.speechFiles_SelectedIndexChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -761,6 +786,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -798,8 +825,7 @@
         private System.Windows.Forms.RadioButton speechLeft;
         private System.Windows.Forms.RadioButton speechRight;
         private System.Windows.Forms.Button BeginTest;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button getFolder;
+        private System.Windows.Forms.ListBox speechList;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
@@ -820,5 +846,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.RadioButton speechFront;
+        private System.Windows.Forms.ComboBox speechFiles;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }
