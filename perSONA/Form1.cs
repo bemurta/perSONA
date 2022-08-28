@@ -46,11 +46,11 @@ namespace perSONA
 
             resizeScreen();
 
-            string message = "O perSONA modificou o volume do seu computador para 100% e poderá fazer futuras alterações";
-            const string caption = "Acesso ao volume";
-            var result = MessageBox.Show(message, caption,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+            //string message = "O perSONA modificou o volume do seu computador para 100% e poderá fazer futuras alterações";
+            //const string caption = "Acesso ao volume";
+            //var result = MessageBox.Show(message, caption,
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Information);
 
             this.confFile = confFile;
             this.sourceIndex = sourceIndex;
@@ -625,7 +625,28 @@ namespace perSONA
                                      speechSource, Path.GetFileName(speechFile),
                                      noiseSource, Path.GetFileName(noiseFile)));
         }
+        public void createSpeechScene(string speechFile)
+        {
+            speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
+            speechSource = vA.CreateSoundSource("Speech");
 
+            int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+            vA.SetSoundSourceDirectivity(speechSource, humanDirectivity);
+
+            concatText(string.Format("\r\nCreated Source Signals: {0} with file: {1}",
+                                     speechSource, Path.GetFileName(speechFile)));
+        }
+        public void createNoiseScene(string noiseFile)
+        {
+            noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
+            noiseSource = vA.CreateSoundSource("Noise");
+
+            int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+            vA.SetSoundSourceDirectivity(noiseSource, humanDirectivity);
+
+            concatText(string.Format("\r\nCreated Source Signals: {0} with file: {1}",
+                                     noiseSource, Path.GetFileName(noiseFile)));
+        }
         public void plotSceneGraph(ZedGraphControl graph, double[] radius, double[] angle)
         {
             GraphPane myPane = graph.GraphPane;

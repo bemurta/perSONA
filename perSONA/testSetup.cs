@@ -6,9 +6,12 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VA;
 using ZedGraph;
+using TagLib;
 
 namespace perSONA
 {
@@ -16,10 +19,10 @@ namespace perSONA
     {
         public speechPerceptionTest test;
         private readonly IvAInterface vAInterface;
-        string speechFolder;
+        string speechFolder = "data/Sounds/Speech";
         string noiseFolder = "data/Sounds/Noise";
         string[] subjects;
-
+        public VANet vA { get; private set; }
         public testSetup(IvAInterface vAInterface, string testTipe, string[] subjects)
         {
 
@@ -37,9 +40,15 @@ namespace perSONA
             string[] procedureList = { "2-down-1-up", "1-down-1-up" };
             comboBox1.DataSource = procedureList;
             comboBox1.SelectedItem = comboBox1.Items.IndexOf("2-down-1-up");
-            string[] SpeechList = { "Alcaim1_/F", "Alcaim1_/M", "RASP", "Trainning" };
-            speechFiles.DataSource = SpeechList;
-            speechFiles.SelectedItem = speechFiles.Items.IndexOf("Trainning");
+
+            string[] testnames = Directory.GetDirectories(speechFolder).Select(Path.GetFileName).ToArray();
+            for (int i = 0; i < testnames.Length; i++)
+            {
+                Console.WriteLine(testnames[i]);
+                speechFiles.Items.Add(testnames[i]);
+            }
+            speechFiles.SelectedItem = speechFiles.Items[0];
+
             vAInterface.plotSceneGraph(zedGraphControl1, getSceneDistances(), getSceneAngles());
 
             switch (testTipe)
@@ -80,7 +89,7 @@ namespace perSONA
             double acceptanceRule = (double)numericRule.Value;
             double signalToNoiseStep = (double)stepSnr.Value;
             var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
-            string Location = Path.Combine("data", "Sounds", "Speech", speechFiles.GetItemText(speechFiles.SelectedItem), speechList.GetItemText(speechList.SelectedItem));
+            string Location = Path.Combine(speechFolder, speechFiles.GetItemText(speechFiles.SelectedItem), speechLists.GetItemText(speechLists.SelectedItem));
             speechFolder = vAInterface.getDatabaseFiles(Location);
 
             speechPerceptionTest speechTest = new speechPerceptionTest(
@@ -98,6 +107,56 @@ namespace perSONA
             {
                 new speechIterTestForm(speechTest, vAInterface).Show();
             }
+        }
+
+        private void playSpeech_Click(object sender, EventArgs e)
+        {
+            string Location = Path.Combine(speechFolder, speechFiles.GetItemText(speechFiles.SelectedItem), speechLists.GetItemText(speechLists.SelectedItem));
+            string currentFile = System.IO.Path.Combine(Location, speechSentences.GetItemText(speechSentences.SelectedItem));
+            double[] angles = getSceneAngles();
+            double[] radius = getSceneDistances();
+            double angleSpeech = checkDirection(speechLeft.Checked, speechFront.Checked, speechRight.Checked); ;
+            double radiusSpeech = (double)speechDistance.Value;
+            double angleNoise = checkDirection(noiseLeft.Checked, noiseFront.Checked, noiseRight.Checked); ;
+            double radiusNoise = (double)noiseDistance.Value;
+            double snr = (double)initialSnr.Value;
+            string noiseFile = Path.Combine(noiseFolder, comboBox3.SelectedItem.ToString());
+
+            vA = vAInterface.getVa();
+            vA.Reset();
+            int receiverId = vA.CreateSoundReceiver("Subject");
+
+            double xSides = 0;
+            double zFront = 0;
+            double yHeight = 1.7;
+
+            VAVec3 receiverPosition = new VAVec3(xSides, yHeight, zFront);
+            VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
+            VAVec3 receiverOrientationU = new VAVec3(0, 1, 0);
+
+            vA.SetSoundReceiverPosition(receiverId, receiverPosition);
+            vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU);
+            vAInterface.concatText(string.Format("Receiver: {3} at position: {0},{1},{2}, looking forward ",
+                                     xSides, zFront, yHeight, receiverId));
+
+            int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
+            vA.SetSoundReceiverDirectivity(receiverId, hrirId);
+
+            string speechFile = currentFile;
+            vAInterface.concatText(speechFile);
+            vAInterface.concatText(
+                string.Format("Angle speech: {0}, Angle noise: {1}", angleSpeech, angleNoise));
+            vAInterface.createAcousticScene(speechFile, noiseFile);
+
+            vAInterface.playScene(radiusSpeech, angleSpeech, snr);
+
+            TagLib.File file = TagLib.File.Create(currentFile); //Take file at taglibe format   
+            var duration = file.Properties.Duration;            //Take duration
+            int msecduration = Convert.ToInt32(duration.TotalMilliseconds) + 20;
+            vAInterface.concatText(string.Format("Speech time: {0}", msecduration.ToString()));
+            Thread.Sleep(msecduration);      //Sleep fileduration milliseconds
+
+            vAInterface.stopScene(true, true);
         }
 
         private double checkDirection(bool left, bool front, bool right)
@@ -191,10 +250,26 @@ namespace perSONA
 
         private void speechFiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string SpeechFile = speechFiles.GetItemText(speechFiles.SelectedItem);
-            var filePaths = Path.Combine("data", "Sounds", "Speech", SpeechFile);
-            string[] SpeechLists = Directory.GetDirectories(filePaths).Select(Path.GetFileName).ToArray();
-            speechList.DataSource = SpeechLists;
+            speechLists.Items.Clear();
+            string Lists = Path.Combine(speechFolder, speechFiles.SelectedItem.ToString());
+            Console.WriteLine(Lists);
+            string[] testlist = Directory.GetDirectories(Lists).Select(Path.GetFileName).ToArray();
+            for (int i = 0; i < testlist.Length; i++)
+            {
+                Console.WriteLine(testlist[i]);
+                speechLists.Items.Add(testlist[i]);
+            }
+            speechLists.SelectedItem = speechLists.Items[0];
+        }
+
+        private void speechLists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string Location = Path.Combine(speechFolder, speechFiles.GetItemText(speechFiles.SelectedItem), speechLists.GetItemText(speechLists.SelectedItem));
+            string[] filePaths = System.IO.Directory.GetFiles(Location, "*.wav");
+            string[] Files = filePaths.Select(System.IO.Path.GetFileName).ToArray();
+
+            speechSentences.DataSource = Files;
+            speechSentences.SelectedIndex = 0;
         }
     }
 }

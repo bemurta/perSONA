@@ -861,246 +861,246 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\Sounds\Noise\street_noise_louzu_16kHz_21s.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001001.wav">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001001.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001002.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001002.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001003.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001003.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001004.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001004.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001005.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001005.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001006.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001006.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001007.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001007.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001008.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001008.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001009.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001009.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0001\F0001010.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0001\F0001010.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0002\F0002010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0003\F0003010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0004\F0004010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0005\F0005010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0006\F0006010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0007\F0007010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0008\F0008010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009001.wav" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0009\F0009010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\F\F0010\F0010010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001001.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002001.wav" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0002\F0002010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003001.wav" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0003\F0003010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004001.wav" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0004\F0004010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005001.wav" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0005\F0005010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006001.wav" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0006\F0006010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007001.wav" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0007\F0007010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008001.wav" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0008\F0008010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009001.wav" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0009\F0009010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_F\F0010\F0010010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001001.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001002.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001002.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001003.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001003.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001004.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001004.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001005.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001005.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001006.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001006.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001007.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001007.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001008.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001008.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001009.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001009.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0001\M0001010.WAV">
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0001\M0001010.WAV">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0002\M0002010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0003\M0003010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0004\M0004010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0005\M0005010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0006\M0006010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0007\M0007010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0008\M0008010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0009\M0009010.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010001.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010002.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010003.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010004.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010005.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010006.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010007.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010008.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010009.WAV" />
-    <Content Include="data\Sounds\Speech\Alcaim1_\M\M0010\M0010010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0002\M0002010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0003\M0003010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0004\M0004010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0005\M0005010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0006\M0006010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0007\M0007010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0008\M0008010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0009\M0009010.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010001.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010002.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010003.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010004.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010005.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010006.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010007.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010008.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010009.WAV" />
+    <Content Include="data\Sounds\Speech\Alcaim1_M\M0010\M0010010.WAV" />
     <Content Include="data\Sounds\Speech\RASP\Lista10\FF1L10S01.wav" />
     <Content Include="data\Sounds\Speech\RASP\Lista10\FF1L10S02.wav" />
     <Content Include="data\Sounds\Speech\RASP\Lista10\FF1L10S03.wav" />
@@ -1301,32 +1301,32 @@
     <Content Include="data\Sounds\Speech\RASP\Lista9\FF1L9S18.wav" />
     <Content Include="data\Sounds\Speech\RASP\Lista9\FF1L9S19.wav" />
     <Content Include="data\Sounds\Speech\RASP\Lista9\FF1L9S20.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase1.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase10.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase11.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase12.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase13.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase14.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase15.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase16.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase17.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase18.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase19.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase2.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase20.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase21.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase22.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase23.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase24.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase25.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase3.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase4.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase5.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase6.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase7.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase8.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\Lista 1A\Lista 1A_frase9.wav" />
-    <Content Include="data\Sounds\Speech\Trainning\lista.gif" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase1.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase10.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase11.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase12.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase13.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase14.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase15.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase16.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase17.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase18.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase19.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase2.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase20.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase21.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase22.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase23.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase24.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase25.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase3.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase4.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase5.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase6.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase7.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase8.wav" />
+    <Content Include="data\Sounds\Speech\Training\Lista 1A\Lista 1A_frase9.wav" />
+    <Content Include="data\Sounds\Speech\Training\lista.gif" />
     <Content Include="data\Sounds\S_01_01.wav" />
     <Content Include="data\Sounds\S_01_02.wav" />
     <Content Include="data\Sounds\S_01_03.wav" />
@@ -1386,6 +1386,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
