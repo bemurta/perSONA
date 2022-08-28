@@ -230,7 +230,7 @@ namespace perSONA
             }
         }
 
-        private void changeSide_Click(object sender, EventArgs e)
+        private void rightEar_Click(object sender, EventArgs e)
         {
             if (Side == "Left")
             {
@@ -240,13 +240,26 @@ namespace perSONA
             }
             else
             {
+                
+            }
+            updateCorrectAnswers(correctAnswers = 0);
+        }
+
+        private void leftEar_Click(object sender, EventArgs e)
+        {
+            if (Side == "Right")
+            {
                 sideLightLeft.BackColor = Color.Yellow;
                 sideLightRight.BackColor = Color.Silver;
                 Side = "Left";
             }
+            else
+            {
+
+            }
             updateCorrectAnswers(correctAnswers = 0);
         }
-        
+
         private void saveFrequency_Click(object sender, EventArgs e)
         {
             if (calibratedSystem)
@@ -558,9 +571,11 @@ namespace perSONA
             Sound.BackColor = Color.Purple;
             MessageBox.Show("O som correspondente a cada frequência, será gerado enquanto o botão \"Sound\" estiver pressionado.", "Calibração  4/6", MessageBoxButtons.OK);
             Sound.BackColor = Color.Black;
-            changeSide.BackColor = Color.Purple;
+            rightEar.BackColor = Color.Purple;
+            leftEar.BackColor = Color.Purple;
             MessageBox.Show("Para melhor resultado, teste cada frenquência e cada potência em ambas as orelhas, dando prioridade para a orelha com melhor audição (a orelha que percebe o estímulo de menor potência).", "Calibração  5/6", MessageBoxButtons.OK);
-            changeSide.BackColor = Color.Black;
+            rightEar.BackColor = Color.Red;
+            leftEar.BackColor = Color.RoyalBlue;
             saveFrequency.BackColor = Color.Purple;
             MessageBox.Show("Após calibrar, salve o resultado do limiar para cada frequência clicando em \"Save\".", "Calibração  6/6", MessageBoxButtons.OK);
             saveFrequency.BackColor = Color.Black;
@@ -673,5 +688,7 @@ namespace perSONA
                 turnOffMask(); //close form when mask noise playing exception
             }
         }
+
+
     }
 }

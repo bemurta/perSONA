@@ -40,7 +40,7 @@
             this.Sound = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.changeSide = new System.Windows.Forms.Button();
+            this.rightEar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Correct = new System.Windows.Forms.Button();
             this.sideLightLeft = new System.Windows.Forms.PictureBox();
@@ -71,6 +71,8 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.sidePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.leftEar = new System.Windows.Forms.Button();
             this.onOffMaskPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.soundLight = new System.Windows.Forms.PictureBox();
@@ -127,6 +129,7 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.sidePanel.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.onOffMaskPanel.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soundLight)).BeginInit();
@@ -311,19 +314,19 @@
             this.label6.Text = "Right";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // changeSide
+            // rightEar
             // 
-            this.changeSide.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.rightEar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeSide.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.changeSide.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.changeSide.Location = new System.Drawing.Point(3, 50);
-            this.changeSide.Name = "changeSide";
-            this.changeSide.Size = new System.Drawing.Size(119, 55);
-            this.changeSide.TabIndex = 35;
-            this.changeSide.UseVisualStyleBackColor = false;
-            this.changeSide.Click += new System.EventHandler(this.changeSide_Click);
+            this.rightEar.BackColor = System.Drawing.Color.Red;
+            this.rightEar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rightEar.Location = new System.Drawing.Point(3, 3);
+            this.rightEar.Name = "rightEar";
+            this.rightEar.Size = new System.Drawing.Size(53, 49);
+            this.rightEar.TabIndex = 35;
+            this.rightEar.UseVisualStyleBackColor = false;
+            this.rightEar.Click += new System.EventHandler(this.rightEar_Click);
             // 
             // label7
             // 
@@ -412,11 +415,11 @@
             this.freqUp.BackColor = System.Drawing.Color.Black;
             this.freqUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.freqUp.ForeColor = System.Drawing.Color.White;
-            this.freqUp.Location = new System.Drawing.Point(3, 3);
+            this.freqUp.Location = new System.Drawing.Point(103, 3);
             this.freqUp.Name = "freqUp";
-            this.freqUp.Size = new System.Drawing.Size(72, 30);
+            this.freqUp.Size = new System.Drawing.Size(29, 30);
             this.freqUp.TabIndex = 48;
-            this.freqUp.Text = "Up";
+            this.freqUp.Text = "+";
             this.freqUp.UseVisualStyleBackColor = false;
             this.freqUp.Click += new System.EventHandler(this.freqUp_Click);
             // 
@@ -428,11 +431,11 @@
             this.freqDown.BackColor = System.Drawing.Color.Black;
             this.freqDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.freqDown.ForeColor = System.Drawing.Color.White;
-            this.freqDown.Location = new System.Drawing.Point(3, 57);
+            this.freqDown.Location = new System.Drawing.Point(3, 3);
             this.freqDown.Name = "freqDown";
-            this.freqDown.Size = new System.Drawing.Size(72, 30);
+            this.freqDown.Size = new System.Drawing.Size(27, 30);
             this.freqDown.TabIndex = 49;
-            this.freqDown.Text = "Down";
+            this.freqDown.Text = "-";
             this.freqDown.UseVisualStyleBackColor = false;
             this.freqDown.Click += new System.EventHandler(this.freqDown_Click);
             // 
@@ -444,11 +447,11 @@
             this.dBDown.BackColor = System.Drawing.Color.Black;
             this.dBDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.dBDown.ForeColor = System.Drawing.Color.White;
-            this.dBDown.Location = new System.Drawing.Point(3, 57);
+            this.dBDown.Location = new System.Drawing.Point(3, 3);
             this.dBDown.Name = "dBDown";
-            this.dBDown.Size = new System.Drawing.Size(72, 30);
+            this.dBDown.Size = new System.Drawing.Size(25, 27);
             this.dBDown.TabIndex = 51;
-            this.dBDown.Text = "Down";
+            this.dBDown.Text = "-";
             this.dBDown.UseVisualStyleBackColor = false;
             this.dBDown.Click += new System.EventHandler(this.dBDown_Click);
             // 
@@ -460,11 +463,11 @@
             this.dBUp.BackColor = System.Drawing.Color.Black;
             this.dBUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.dBUp.ForeColor = System.Drawing.Color.White;
-            this.dBUp.Location = new System.Drawing.Point(3, 3);
+            this.dBUp.Location = new System.Drawing.Point(96, 3);
             this.dBUp.Name = "dBUp";
-            this.dBUp.Size = new System.Drawing.Size(72, 30);
+            this.dBUp.Size = new System.Drawing.Size(26, 27);
             this.dBUp.TabIndex = 50;
-            this.dBUp.Text = "Up";
+            this.dBUp.Text = "+";
             this.dBUp.UseVisualStyleBackColor = false;
             this.dBUp.Click += new System.EventHandler(this.dBUp_Click);
             // 
@@ -476,11 +479,11 @@
             this.maskDown.BackColor = System.Drawing.Color.Black;
             this.maskDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maskDown.ForeColor = System.Drawing.Color.White;
-            this.maskDown.Location = new System.Drawing.Point(3, 57);
+            this.maskDown.Location = new System.Drawing.Point(3, 3);
             this.maskDown.Name = "maskDown";
-            this.maskDown.Size = new System.Drawing.Size(72, 30);
+            this.maskDown.Size = new System.Drawing.Size(25, 30);
             this.maskDown.TabIndex = 53;
-            this.maskDown.Text = "Down";
+            this.maskDown.Text = "-";
             this.maskDown.UseVisualStyleBackColor = false;
             this.maskDown.Click += new System.EventHandler(this.maskDown_Click);
             // 
@@ -492,11 +495,11 @@
             this.maskUp.BackColor = System.Drawing.Color.Black;
             this.maskUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maskUp.ForeColor = System.Drawing.Color.White;
-            this.maskUp.Location = new System.Drawing.Point(3, 3);
+            this.maskUp.Location = new System.Drawing.Point(96, 3);
             this.maskUp.Name = "maskUp";
-            this.maskUp.Size = new System.Drawing.Size(72, 30);
+            this.maskUp.Size = new System.Drawing.Size(26, 30);
             this.maskUp.TabIndex = 52;
-            this.maskUp.Text = "Up";
+            this.maskUp.Text = "+";
             this.maskUp.UseVisualStyleBackColor = false;
             this.maskUp.Click += new System.EventHandler(this.maskUp_Click);
             // 
@@ -508,9 +511,9 @@
             this.freqLabel.AutoSize = true;
             this.freqLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.freqLabel.ForeColor = System.Drawing.Color.Black;
-            this.freqLabel.Location = new System.Drawing.Point(3, 36);
+            this.freqLabel.Location = new System.Drawing.Point(36, 0);
             this.freqLabel.Name = "freqLabel";
-            this.freqLabel.Size = new System.Drawing.Size(72, 18);
+            this.freqLabel.Size = new System.Drawing.Size(61, 36);
             this.freqLabel.TabIndex = 54;
             this.freqLabel.Text = "1000";
             this.freqLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -523,9 +526,9 @@
             this.dBLabel.AutoSize = true;
             this.dBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dBLabel.ForeColor = System.Drawing.Color.Black;
-            this.dBLabel.Location = new System.Drawing.Point(3, 36);
+            this.dBLabel.Location = new System.Drawing.Point(34, 0);
             this.dBLabel.Name = "dBLabel";
-            this.dBLabel.Size = new System.Drawing.Size(72, 18);
+            this.dBLabel.Size = new System.Drawing.Size(56, 33);
             this.dBLabel.TabIndex = 55;
             this.dBLabel.Text = "50";
             this.dBLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -538,9 +541,9 @@
             this.maskLabel.AutoSize = true;
             this.maskLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskLabel.ForeColor = System.Drawing.Color.Black;
-            this.maskLabel.Location = new System.Drawing.Point(3, 36);
+            this.maskLabel.Location = new System.Drawing.Point(34, 0);
             this.maskLabel.Name = "maskLabel";
-            this.maskLabel.Size = new System.Drawing.Size(72, 18);
+            this.maskLabel.Size = new System.Drawing.Size(56, 36);
             this.maskLabel.TabIndex = 56;
             this.maskLabel.Text = "0";
             this.maskLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -590,18 +593,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dbPanel.BackColor = System.Drawing.Color.Transparent;
-            this.dbPanel.ColumnCount = 1;
-            this.dbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dbPanel.Controls.Add(this.dBUp, 0, 0);
-            this.dbPanel.Controls.Add(this.dBLabel, 0, 1);
-            this.dbPanel.Controls.Add(this.dBDown, 0, 2);
-            this.dbPanel.Location = new System.Drawing.Point(68, 61);
+            this.dbPanel.ColumnCount = 3;
+            this.dbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.dbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.dbPanel.Controls.Add(this.dBLabel, 1, 0);
+            this.dbPanel.Controls.Add(this.dBUp, 2, 0);
+            this.dbPanel.Controls.Add(this.dBDown, 0, 0);
+            this.dbPanel.Location = new System.Drawing.Point(43, 88);
             this.dbPanel.Name = "dbPanel";
-            this.dbPanel.RowCount = 3;
-            this.dbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.dbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.dbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.dbPanel.Size = new System.Drawing.Size(78, 90);
+            this.dbPanel.RowCount = 1;
+            this.dbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dbPanel.Size = new System.Drawing.Size(125, 33);
             this.dbPanel.TabIndex = 64;
             // 
             // freqProgressBar
@@ -814,7 +817,7 @@
             this.sidePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.sidePanel.Controls.Add(this.tableLayoutPanel9, 0, 0);
             this.sidePanel.Controls.Add(this.tableLayoutPanel10, 0, 1);
-            this.sidePanel.Controls.Add(this.changeSide, 0, 2);
+            this.sidePanel.Controls.Add(this.tableLayoutPanel6, 0, 2);
             this.sidePanel.Location = new System.Drawing.Point(43, 3);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.RowCount = 3;
@@ -823,6 +826,34 @@
             this.sidePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
             this.sidePanel.Size = new System.Drawing.Size(125, 108);
             this.sidePanel.TabIndex = 79;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.rightEar, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.leftEar, 1, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 50);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(119, 55);
+            this.tableLayoutPanel6.TabIndex = 79;
+            // 
+            // leftEar
+            // 
+            this.leftEar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.leftEar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.leftEar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.leftEar.Location = new System.Drawing.Point(62, 3);
+            this.leftEar.Name = "leftEar";
+            this.leftEar.Size = new System.Drawing.Size(54, 49);
+            this.leftEar.TabIndex = 35;
+            this.leftEar.UseVisualStyleBackColor = false;
+            this.leftEar.Click += new System.EventHandler(this.leftEar_Click);
             // 
             // onOffMaskPanel
             // 
@@ -1246,18 +1277,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.freqPanel.BackColor = System.Drawing.Color.Transparent;
-            this.freqPanel.ColumnCount = 1;
-            this.freqPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.freqPanel.Controls.Add(this.freqDown, 0, 2);
-            this.freqPanel.Controls.Add(this.freqLabel, 0, 1);
-            this.freqPanel.Controls.Add(this.freqUp, 0, 0);
-            this.freqPanel.Location = new System.Drawing.Point(68, 61);
+            this.freqPanel.ColumnCount = 3;
+            this.freqPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.freqPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.freqPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.freqPanel.Controls.Add(this.freqLabel, 1, 0);
+            this.freqPanel.Controls.Add(this.freqDown, 0, 0);
+            this.freqPanel.Controls.Add(this.freqUp, 2, 0);
+            this.freqPanel.Location = new System.Drawing.Point(39, 85);
             this.freqPanel.Name = "freqPanel";
-            this.freqPanel.RowCount = 3;
-            this.freqPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.freqPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.freqPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.freqPanel.Size = new System.Drawing.Size(78, 90);
+            this.freqPanel.RowCount = 1;
+            this.freqPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.freqPanel.Size = new System.Drawing.Size(135, 36);
             this.freqPanel.TabIndex = 64;
             // 
             // tableLayoutPanel12
@@ -1299,18 +1330,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maskPanel.BackColor = System.Drawing.Color.Transparent;
-            this.maskPanel.ColumnCount = 1;
-            this.maskPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.maskPanel.Controls.Add(this.maskDown, 0, 2);
-            this.maskPanel.Controls.Add(this.maskLabel, 0, 1);
-            this.maskPanel.Controls.Add(this.maskUp, 0, 0);
-            this.maskPanel.Location = new System.Drawing.Point(68, 61);
+            this.maskPanel.ColumnCount = 3;
+            this.maskPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.maskPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.maskPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.maskPanel.Controls.Add(this.maskUp, 2, 0);
+            this.maskPanel.Controls.Add(this.maskLabel, 1, 0);
+            this.maskPanel.Controls.Add(this.maskDown, 0, 0);
+            this.maskPanel.Location = new System.Drawing.Point(44, 85);
             this.maskPanel.Name = "maskPanel";
-            this.maskPanel.RowCount = 3;
-            this.maskPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.maskPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.maskPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.maskPanel.Size = new System.Drawing.Size(78, 90);
+            this.maskPanel.RowCount = 1;
+            this.maskPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.maskPanel.Size = new System.Drawing.Size(125, 36);
             this.maskPanel.TabIndex = 64;
             // 
             // tableLayoutPanel17
@@ -1592,6 +1623,7 @@
             this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.sidePanel.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.onOffMaskPanel.ResumeLayout(false);
             this.onOffMaskPanel.PerformLayout();
             this.tableLayoutPanel13.ResumeLayout(false);
@@ -1652,7 +1684,7 @@
         private System.Windows.Forms.Button Sound;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button changeSide;
+        private System.Windows.Forms.Button rightEar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Correct;
         private System.Windows.Forms.PictureBox sideLightLeft;
@@ -1730,5 +1762,7 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button undo;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button leftEar;
     }
 }
