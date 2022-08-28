@@ -36,7 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.AllIncorrect = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,13 +43,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.NextSentence = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
             this.currentTryal = new System.Windows.Forms.TextBox();
             this.streakText = new System.Windows.Forms.TextBox();
             this.computedAudioText = new System.Windows.Forms.TextBox();
-            this.totalWordsText = new System.Windows.Forms.TextBox();
-            this.continuousTimerText = new System.Windows.Forms.TextBox();
             this.filenameList = new System.Windows.Forms.ListBox();
             this.playCurrentScene = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -63,12 +59,15 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.detailsBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.continuousTimerText = new System.Windows.Forms.TextBox();
+            this.totalWordsText = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -142,7 +141,7 @@
             this.label1.Location = new System.Drawing.Point(5, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 20);
+            this.label1.Size = new System.Drawing.Size(199, 32);
             this.label1.TabIndex = 13;
             this.label1.Text = "SNR:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,10 +152,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 57);
+            this.label2.Location = new System.Drawing.Point(5, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 20);
+            this.label2.Size = new System.Drawing.Size(199, 32);
             this.label2.TabIndex = 15;
             this.label2.Text = "Sequência de acerto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -167,27 +166,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 114);
+            this.label3.Location = new System.Drawing.Point(5, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(221, 20);
+            this.label3.Size = new System.Drawing.Size(199, 32);
             this.label3.TabIndex = 17;
             this.label3.Text = "Sentença atual";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 171);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(221, 20);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Total de sentenças";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // AllIncorrect
             // 
@@ -281,28 +266,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 228);
+            this.label7.Location = new System.Drawing.Point(5, 192);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(221, 20);
+            this.label7.Size = new System.Drawing.Size(199, 32);
             this.label7.TabIndex = 21;
             this.label7.Text = "Tempo de resposta";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 285);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(221, 20);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Duração do ensaio";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // zedGraphControl2
             // 
@@ -329,10 +299,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.currentTryal.Enabled = false;
-            this.currentTryal.Location = new System.Drawing.Point(5, 253);
+            this.currentTryal.Location = new System.Drawing.Point(5, 229);
             this.currentTryal.Margin = new System.Windows.Forms.Padding(5);
             this.currentTryal.Name = "currentTryal";
-            this.currentTryal.Size = new System.Drawing.Size(221, 27);
+            this.currentTryal.Size = new System.Drawing.Size(199, 27);
             this.currentTryal.TabIndex = 22;
             // 
             // streakText
@@ -341,10 +311,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.streakText.Enabled = false;
-            this.streakText.Location = new System.Drawing.Point(5, 82);
+            this.streakText.Location = new System.Drawing.Point(5, 101);
             this.streakText.Margin = new System.Windows.Forms.Padding(5);
             this.streakText.Name = "streakText";
-            this.streakText.Size = new System.Drawing.Size(221, 27);
+            this.streakText.Size = new System.Drawing.Size(199, 27);
             this.streakText.TabIndex = 16;
             // 
             // computedAudioText
@@ -353,35 +323,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.computedAudioText.Enabled = false;
-            this.computedAudioText.Location = new System.Drawing.Point(5, 139);
+            this.computedAudioText.Location = new System.Drawing.Point(5, 165);
             this.computedAudioText.Margin = new System.Windows.Forms.Padding(5);
             this.computedAudioText.Name = "computedAudioText";
-            this.computedAudioText.Size = new System.Drawing.Size(221, 27);
+            this.computedAudioText.Size = new System.Drawing.Size(199, 27);
             this.computedAudioText.TabIndex = 18;
-            // 
-            // totalWordsText
-            // 
-            this.totalWordsText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalWordsText.Enabled = false;
-            this.totalWordsText.Location = new System.Drawing.Point(5, 196);
-            this.totalWordsText.Margin = new System.Windows.Forms.Padding(5);
-            this.totalWordsText.Name = "totalWordsText";
-            this.totalWordsText.Size = new System.Drawing.Size(221, 27);
-            this.totalWordsText.TabIndex = 20;
-            // 
-            // continuousTimerText
-            // 
-            this.continuousTimerText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.continuousTimerText.Enabled = false;
-            this.continuousTimerText.Location = new System.Drawing.Point(5, 310);
-            this.continuousTimerText.Margin = new System.Windows.Forms.Padding(5);
-            this.continuousTimerText.Name = "continuousTimerText";
-            this.continuousTimerText.Size = new System.Drawing.Size(221, 27);
-            this.continuousTimerText.TabIndex = 24;
             // 
             // filenameList
             // 
@@ -421,10 +367,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(5, 25);
+            this.textBox3.Location = new System.Drawing.Point(5, 37);
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 27);
+            this.textBox3.Size = new System.Drawing.Size(199, 27);
             this.textBox3.TabIndex = 14;
             // 
             // timer1
@@ -565,33 +511,27 @@
             // 
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Controls.Add(this.textBox5, 0, 4);
-            this.tableLayoutPanel8.Controls.Add(this.label12, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(this.textBox4, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.label11, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.detailsBox, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.currentTryal, 0, 7);
+            this.tableLayoutPanel8.Controls.Add(this.label7, 0, 6);
+            this.tableLayoutPanel8.Controls.Add(this.computedAudioText, 0, 5);
+            this.tableLayoutPanel8.Controls.Add(this.label3, 0, 4);
+            this.tableLayoutPanel8.Controls.Add(this.streakText, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.textBox3, 0, 1);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(365, 123);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 5;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(200, 226);
+            this.tableLayoutPanel8.RowCount = 8;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(209, 257);
             this.tableLayoutPanel8.TabIndex = 28;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(5, 185);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 27);
-            this.textBox5.TabIndex = 11;
             // 
             // label12
             // 
@@ -599,10 +539,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 135);
+            this.label12.Location = new System.Drawing.Point(5, 282);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(190, 45);
+            this.label12.Size = new System.Drawing.Size(221, 47);
             this.label12.TabIndex = 10;
             this.label12.Text = "Porcentagem total de acertos";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -613,10 +553,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(5, 95);
+            this.textBox4.Location = new System.Drawing.Point(5, 240);
             this.textBox4.Margin = new System.Windows.Forms.Padding(5);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 27);
+            this.textBox4.Size = new System.Drawing.Size(221, 27);
             this.textBox4.TabIndex = 9;
             // 
             // label11
@@ -625,26 +565,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 45);
+            this.label11.Location = new System.Drawing.Point(5, 188);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(190, 45);
+            this.label11.Size = new System.Drawing.Size(221, 47);
             this.label11.TabIndex = 8;
             this.label11.Text = "Total de palavras corretas";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // detailsBox
-            // 
-            this.detailsBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.detailsBox.Location = new System.Drawing.Point(5, 5);
-            this.detailsBox.Margin = new System.Windows.Forms.Padding(5);
-            this.detailsBox.Multiline = true;
-            this.detailsBox.Name = "detailsBox";
-            this.detailsBox.Size = new System.Drawing.Size(190, 35);
-            this.detailsBox.TabIndex = 2;
-            this.detailsBox.Visible = false;
             // 
             // tableLayoutPanel4
             // 
@@ -653,36 +580,92 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.textBox3, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.continuousTimerText, 0, 11);
-            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.currentTryal, 0, 9);
-            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 10);
-            this.tableLayoutPanel4.Controls.Add(this.totalWordsText, 0, 7);
-            this.tableLayoutPanel4.Controls.Add(this.streakText, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.computedAudioText, 0, 5);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 8);
-            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 6);
-            this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label11, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.textBox4, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.label12, 0, 6);
+            this.tableLayoutPanel4.Controls.Add(this.textBox5, 0, 7);
+            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.continuousTimerText, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.totalWordsText, 0, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 12;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowCount = 8;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(231, 379);
             this.tableLayoutPanel4.TabIndex = 29;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 94);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label8.Size = new System.Drawing.Size(221, 47);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Duração total do ensaio";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox5.Enabled = false;
+            this.textBox5.Location = new System.Drawing.Point(5, 334);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(221, 27);
+            this.textBox5.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(221, 47);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Total de sentenças";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // continuousTimerText
+            // 
+            this.continuousTimerText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.continuousTimerText.Enabled = false;
+            this.continuousTimerText.Location = new System.Drawing.Point(5, 146);
+            this.continuousTimerText.Margin = new System.Windows.Forms.Padding(5);
+            this.continuousTimerText.Name = "continuousTimerText";
+            this.continuousTimerText.Size = new System.Drawing.Size(221, 27);
+            this.continuousTimerText.TabIndex = 24;
+            // 
+            // totalWordsText
+            // 
+            this.totalWordsText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalWordsText.Enabled = false;
+            this.totalWordsText.Location = new System.Drawing.Point(5, 52);
+            this.totalWordsText.Margin = new System.Windows.Forms.Padding(5);
+            this.totalWordsText.Name = "totalWordsText";
+            this.totalWordsText.Size = new System.Drawing.Size(221, 27);
+            this.totalWordsText.TabIndex = 20;
             // 
             // tableLayoutPanel5
             // 
@@ -772,7 +755,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button AllIncorrect;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -780,13 +762,10 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button NextSentence;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private ZedGraph.ZedGraphControl zedGraphControl2;
         private System.Windows.Forms.TextBox currentTryal;
         private System.Windows.Forms.TextBox streakText;
         private System.Windows.Forms.TextBox computedAudioText;
-        private System.Windows.Forms.TextBox totalWordsText;
-        private System.Windows.Forms.TextBox continuousTimerText;
         private System.Windows.Forms.ListBox filenameList;
         private System.Windows.Forms.Button playCurrentScene;
         private System.Windows.Forms.TextBox textBox3;
@@ -803,10 +782,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox detailsBox;
+        private System.Windows.Forms.TextBox continuousTimerText;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox totalWordsText;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
