@@ -72,12 +72,11 @@ namespace perSONA
             myPane.X2Axis.IsVisible = false;
 
 
-            var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
-            var path = Path.Combine(dir.ToString(), "LVA-UFSC", "perSONA-BETA", "perSONA", "data", "Logo_Large.png");
+            myPane.X2Axis.IsVisible = false;
+            var path = Path.Combine("data", "Logo_Large.png");
             string filelogo = path;
             Image img = Image.FromFile(filelogo);
             var logo = new ImageObj(img, new RectangleF(0.9f, 1.05f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
-            myPane.GraphObjList.Add(logo);
 
             graph.AxisChange();
             graph.Refresh();
