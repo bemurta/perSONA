@@ -26,9 +26,8 @@ namespace perSONA
 
         private void OpenManual_Click(object sender, EventArgs e)
         {
-            var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
-            var path = Path.Combine(dir.ToString(), "LVA-UFSC", "perSONA-BETA","perSONA","data","MANUAL-DE-USUARIO.pdf");
-            Console.WriteLine(path);
+            var path = Path.Combine("data", "MANUAL-DE-USUARIO.pdf");
+            Console.WriteLine(Directory.GetCurrentDirectory());
             string filemanual = path;
             System.Diagnostics.Process.Start(filemanual);
         }
