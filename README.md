@@ -20,9 +20,14 @@ Currently version (1.4.1 BETA) installer can be downloaded at: http://bit.ly/per
 
 ## History
 
-Initially conceived and developed by Bernardo Murta at Federal University of Santa Catarina's Laboratory of Vibrations and Acoustics (LVA-UFSC)
+Initially conceived and developed by Bernardo Murta at Federal University of Santa Catarina's Laboratory of Vibrations and Acoustics (LVA-UFSC) 
+Plataforma para ensaios de percepção sonora com fontes distribuídas aplicável a dispositivos auditivos: perSONA
+https://repositorio.ufsc.br/handle/123456789/215732
 
 ## Collaborators
-- Gustavo 
+- Bernardo Murta
+- Gustavo Trentin
 - Bruna Bagnara
+- Madalena Pinheiro
+- Angelo
 - Stephan Paul
