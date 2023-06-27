@@ -23,7 +23,7 @@ namespace perSONA
 
         public List<Panel> speakers = new List<Panel>();
         int i = Properties.Settings.Default.ITERATOR;
-     
+        bool calibrationSNR;
         public twoSperakerCalibration(IvAInterface vAInterface)
         {
             InitializeComponent();
@@ -122,6 +122,7 @@ namespace perSONA
                     PDF_Generate("Sucesso");
                     i = 0;
                     Properties.Settings.Default.ITERATOR = i;
+                    Properties.Settings.Default.CALIBRATED_SNR_2_SPEAKER = true;
                     Close();
                 }
                 speakerLabel.BackColor = System.Drawing.Color.Yellow;
