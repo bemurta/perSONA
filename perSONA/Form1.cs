@@ -27,7 +27,7 @@ namespace perSONA
 
         List<speechPerceptionTest> completedTests = new List<speechPerceptionTest>();
 
-        string speechFolder = "data\\Sounds\\Speech\\Alcaim1_\\F\\F0001";
+        string speechFolder = "data\\Sounds\\Speech\\Alcaim1_F\\F0001";
         string testFolder = "data\\Sounds";
         string noiseFile = "data\\Sounds\\Noise\\4talker-babble_ISTS.wav";
         string noiseFolder = "data\\Sounds\\Noise";
@@ -39,6 +39,9 @@ namespace perSONA
         int selectedFolder = 0;
         int waitTimeMS = 3000;
         int sourceIndex;
+        bool calibrationEarphone;
+        bool calibration2Speaker;
+        bool calibration8Speaker;
 
         public Form1(string confFile, int sourceIndex)
         {
@@ -51,6 +54,18 @@ namespace perSONA
             var result = MessageBox.Show(message, caption,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+<<<<<<< Updated upstream
+=======
+
+            if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
+                calibrationEarphone = Properties.Settings.Default.CALIBRATED_SNR_EARPHONE;
+
+            else if (Properties.Settings.Default.REPRODUCTION_MODE == "2 Speakers")
+                calibration2Speaker = Properties.Settings.Default.CALIBRATED_SNR_2_SPEAKER;
+
+            else if (Properties.Settings.Default.REPRODUCTION_MODE == "8 Speakers")
+                calibration8Speaker = Properties.Settings.Default.CALIBRATED_SNR_8_SPEAKER;
+>>>>>>> Stashed changes
 
             this.confFile = confFile;
             this.sourceIndex = sourceIndex;
@@ -892,7 +907,6 @@ namespace perSONA
             string json = File.ReadAllText(jsonFile);
             Patient patient = Newtonsoft.Json.JsonConvert.DeserializeObject<Patient>(json);
 
-
             List<string> tests = patient.Audiometrys.OfType<string>().ToList();
 
             tests.Add(timestamp);
@@ -921,24 +935,6 @@ namespace perSONA
             File.WriteAllText(jsonFile, output);
         }
 
-
-        //??
-        private double checkDirection(bool left, bool front, bool right)
-        {
-            if (left)
-            {
-                return -90;
-            }
-            else if (front)
-            {
-                return 0;
-            }
-            else
-            {
-                return 90;
-            }
-        }
-
         private bool checkValidScene()
         {
 
@@ -956,6 +952,15 @@ namespace perSONA
 
         private void testSetup_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
+                calibrationEarphone = Properties.Settings.Default.CALIBRATED_SNR_EARPHONE;
+
+            else if (Properties.Settings.Default.REPRODUCTION_MODE == "2 Speakers")
+                calibration2Speaker = Properties.Settings.Default.CALIBRATED_SNR_2_SPEAKER;
+
+            else if (Properties.Settings.Default.REPRODUCTION_MODE == "8 Speakers")
+                calibration8Speaker = Properties.Settings.Default.CALIBRATED_SNR_8_SPEAKER;
+
             openTestForm("Default");
         }
 
@@ -983,14 +988,61 @@ namespace perSONA
         {
             if (Application.OpenForms["testSetup"] == null)
             {
-                try
+                if ((Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")&&(Properties.Settings.Default.CALIBRATED_SNR_EARPHONE == true))
                 {
-                    string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
-                    new testSetup(this, testTipe, subjects).Show();
+                    try
+                    {
+                        string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
+                        new testSetup(this, testTipe, subjects).Show();
+                    }
+                    catch (Exception)
+                    {
+                        const string message = "Selecione um paciente e um aplicador para prosseguir";
+                        const string caption = "Erro";
+                        var result = MessageBox.Show(message, caption,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
                 }
-                catch (Exception)
+
+                else if ((Properties.Settings.Default.REPRODUCTION_MODE == "2 Speakers")&&(Properties.Settings.Default.CALIBRATED_SNR_2_SPEAKER == true))
                 {
-                    const string message = "Selecione um paciente e um aplicador para prosseguir";
+                    try
+                    {
+                        string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
+                        new testSetup(this, testTipe, subjects).Show();
+                    }
+                    catch (Exception)
+                    {
+                        const string message = "Selecione um paciente e um aplicador para prosseguir";
+                        const string caption = "Erro";
+                        var result = MessageBox.Show(message, caption,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                }
+
+
+                else if ((Properties.Settings.Default.REPRODUCTION_MODE == "8 Speakers")&&(Properties.Settings.Default.CALIBRATED_SNR_8_SPEAKER == true))
+                {
+                    try
+                    {
+                        string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
+                        new testSetup(this, testTipe, subjects).Show();
+                    }
+                    catch (Exception)
+                    {
+                        const string message = "Selecione um paciente e um aplicador para prosseguir";
+                        const string caption = "Erro";
+                        var result = MessageBox.Show(message, caption,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                }
+
+                else
+                {
+                    const string message = "Antes de acessar a avaliação de percepção de fala no ruído, realize uma calibração instrumental ou calibração psicoacústica de um pré-ensaio. A calibração pode ser acessada na aba ''Calibração'' presente no topo da janela.";
                     const string caption = "Erro";
                     var result = MessageBox.Show(message, caption,
                         MessageBoxButtons.OK,
@@ -1099,15 +1151,6 @@ namespace perSONA
                 new Sende_mailForm().Show();
             }
         }
-
-        private void calibraçãoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Application.OpenForms["calibrationExplanation"] == null)
-            {
-                new calibrationExplanation(this).Show();
-            }
-        }
-
 
         public void allSoundPlayersPlayScene(double radius, int numberOfSoundPlayers, string speechFile)
         {
@@ -1267,6 +1310,40 @@ namespace perSONA
                 int newHeight = Convert.ToInt32(PCResolutionHeight * 0.9);
                 this.Size = new Size(newWidth, newHeight);
             }
+        }
+
+        private void preliminaryTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["preliminaryTest"] == null)
+            {
+                new preliminaryTest(this).Show();
+            }
+        }
+
+        private void instrumentalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["calibrationExplanation"] == null)
+            {
+                new calibrationExplanation(this).Show();
+            }
+        }
+
+        private void speechPerceptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            calibrationEarphone = false;
+            calibration2Speaker = false;
+            calibration8Speaker = false;
+
+            if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
+                Properties.Settings.Default.CALIBRATED_SNR_EARPHONE = calibrationEarphone;
+
+            else if (Properties.Settings.Default.REPRODUCTION_MODE == "2 Speakers")
+                Properties.Settings.Default.CALIBRATED_SNR_2_SPEAKER = calibration2Speaker;
+
+            else if (Properties.Settings.Default.REPRODUCTION_MODE == "8 Speakers")
+                Properties.Settings.Default.CALIBRATED_SNR_8_SPEAKER = calibration8Speaker;
+
+            Properties.Settings.Default.Save();
         }
     }
 }

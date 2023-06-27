@@ -24,8 +24,6 @@ namespace perSONA
         public List<Panel> earphone = new List<Panel>();
         int i = Properties.Settings.Default.ITERATOR;
 
-
-
         public earphoneCalibration(IvAInterface vAInterface)
         {
             InitializeComponent();
@@ -34,7 +32,6 @@ namespace perSONA
             volumeBar.Visible = false;
             volumeLabel.Visible = false;
             PhoneBalanceAdjusting.Visible = true;
-
             volumeBar.Value = Properties.Settings.Default.EARPHONE_VOLUME;
             volumeLabel.Text = string.Format("Volume: {0} %", Properties.Settings.Default.EARPHONE_VOLUME);
 
@@ -114,6 +111,7 @@ namespace perSONA
                     PDF_Generate("Sucesso");
                     i = 0;
                     Properties.Settings.Default.ITERATOR = i;
+                    Properties.Settings.Default.CALIBRATED_SNR_EARPHONE = true;
                     Close();
                 }
                 earphoneLabel.BackColor = System.Drawing.Color.Yellow;
