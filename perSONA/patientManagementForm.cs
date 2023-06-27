@@ -20,11 +20,42 @@ namespace perSONA
         private readonly IvAInterface vAInterface;
         public string[] loadedTests = { };
         public Patient person;
+        public List<Panel> earGraph = new List<Panel>();
+        public List<string> leftL = new List<string>();
+        public List<string> rightL = new List<string>();
+        string direito = "direita";
+        string esquerda = "esquerda";
+
+        int i = 0;
+        bool graphs;
 
         public patientManagement(IvAInterface ivAInterface)
         {
             InitializeComponent();
             resizeScreen();
+
+            graphs = false;
+
+            earGraph.Add(audiometryListPanel);
+            earGraph.Add(rightEarPanel);
+            earGraph.Add(leftEarPanel);
+            earGraph.Add(audiometryPanel);
+            earGraph.Add(rightEarGraphPanel);
+            earGraph.Add(leftEarGraphPanel);
+            earGraph.Add(savePanel);
+            earGraph.Add(printPanel);
+
+            foreach (Panel element in earGraph)
+            {
+                element.Visible = false;
+            }
+
+            earGraph[3].Visible = true;
+            earGraph[1].Visible = true;
+            earGraph[2].Visible = true;
+            earGraph[6].Visible = true;
+            earGraph[7].Visible = true;
+
             this.Text = "Módulo de Gerenciamento de Paciente";
             tabControl1.TabPages.Remove(tabPage2);
             tabControl1.TabPages.Remove(tabPage3);
@@ -48,6 +79,8 @@ namespace perSONA
             work.SelectedIndex = 0;
             bindPatient(person);
             TonalAudiometryTest.bindGraph(audiometryGraph);
+            TonalAudiometryTest.bindGraph(leftEarGraph);
+            TonalAudiometryTest.bindGraph(rightEarGraph);
             nameBox.Enabled = false;
             this.Text = "Paciente: " + person.Name;
             this.person = person;
@@ -67,6 +100,22 @@ namespace perSONA
             loadedTests = person.Tests;
             testsBox.DataSource = person.Tests;
             audiometryLists.DataSource = person.Audiometrys;
+
+            foreach (string element in person.Audiometrys)
+            {
+                if (element.Contains(direito))
+                {
+                    rightL.Add(element);
+                }
+                else if (element.Contains(esquerda))
+                {
+                    leftL.Add(element);
+                }
+            }
+
+            rightEar.DataSource = rightL;
+            leftEar.DataSource = leftL;
+
             try
             {
                 work.Text = person.Work;
@@ -167,7 +216,6 @@ namespace perSONA
         private void testsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             updateIterationGraph(testsGraph);
-
         }
 
         private speechPerceptionTest readTest(string timestamp)
@@ -276,7 +324,7 @@ namespace perSONA
             graph.Refresh();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void audiometryLists_SelectedIndexChanged(object sender, EventArgs e)
         {
             vAInterface.concatText(audiometryLists.SelectedItems.Count.ToString());
             audiometryGraph.GraphPane.CurveList.Clear();
@@ -557,6 +605,107 @@ namespace perSONA
         private void print_noisetest_button_Click(object sender, EventArgs e)
         {
             testsGraph.DoPrint();
+        }
+
+        private void graphView_Click(object sender, EventArgs e)
+        {
+            earGraph.Add(audiometryListPanel);
+            earGraph.Add(rightEarPanel);
+            earGraph.Add(leftEarPanel);
+            earGraph.Add(audiometryPanel);
+            earGraph.Add(rightEarGraphPanel);
+            earGraph.Add(leftEarGraphPanel);
+            earGraph.Add(savePanel);
+            earGraph.Add(printPanel);
+            if (graphs == false)
+            {
+                graphView.Text = "Juntar audiometrias";
+
+                earGraph[0].Visible = false;
+                earGraph[1].Visible = true;
+                earGraph[2].Visible = true;
+                earGraph[3].Visible = false;
+                earGraph[4].Visible = true;
+                earGraph[5].Visible = true;
+                earGraph[6].Visible = false;
+                earGraph[7].Visible = false;
+                graphs = true;
+                confButtonsPanel.Visible = false;
+            }
+            else
+            {
+                graphView.Text = "Separar audiometrias";
+
+                earGraph[0].Visible = true;
+                earGraph[1].Visible = false;
+                earGraph[2].Visible = false;
+                earGraph[3].Visible = true;
+                earGraph[4].Visible = false;
+                earGraph[5].Visible = false;
+                earGraph[6].Visible = true;
+                earGraph[7].Visible = true;
+                graphs = false;
+                if (audiometryLists.SelectedItems.Count < 2)
+                {
+                    confButtonsPanel.Visible = true;
+                }
+            }
+        }
+
+        private void leftEar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            vAInterface.concatText(leftEar.SelectedItems.Count.ToString());
+            leftEarGraph.GraphPane.CurveList.Clear();
+
+            if (leftEar.SelectedItems.Count == 0) // if no have selected itens
+            {
+                leftEarGraph.GraphPane.AxisChange();
+                leftEarGraph.Refresh();
+            }
+            else if (leftEar.SelectedItems.Count == 1) // if have only one selected itens
+            {
+                TonalAudiometryTest Audiometry = readAudiometry(leftEar.SelectedItem.ToString());
+                plotAudiometry(leftEarGraph, Audiometry);
+
+                audiometryDate.Value = Audiometry.audiometryDate;   // Date
+
+                // Via
+                if (Audiometry.Via == "Air") Conduction.Text = "aérea";
+                else if (Audiometry.Via == "Bone (mastoid)") Conduction.Text = "óssea (mastóide)";
+                else if (Audiometry.Via == "Bone (forehead)") Conduction.Text = "óssea (fronte)";
+                else Conduction.Text = "campo livre";
+
+                // Side                
+                audiometrySide.Text = "Direito";
+            }
+        }
+
+        private void rightEar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            vAInterface.concatText(rightEar.SelectedItems.Count.ToString());
+            rightEarGraph.GraphPane.CurveList.Clear();
+
+            if (rightEar.SelectedItems.Count == 0) // if no have selected itens
+            {
+                rightEarGraph.GraphPane.AxisChange();
+                rightEarGraph.Refresh();
+            }
+            else if (rightEar.SelectedItems.Count == 1) // if have only one selected itens
+            {
+                TonalAudiometryTest Audiometry = readAudiometry(rightEar.SelectedItem.ToString());
+                plotAudiometry(rightEarGraph, Audiometry);
+
+                audiometryDate.Value = Audiometry.audiometryDate;   // Date
+
+                // Via
+                if (Audiometry.Via == "Air") Conduction.Text = "aérea";
+                else if (Audiometry.Via == "Bone (mastoid)") Conduction.Text = "óssea (mastóide)";
+                else if (Audiometry.Via == "Bone (forehead)") Conduction.Text = "óssea (fronte)";
+                else Conduction.Text = "campo livre";
+
+                // Side                
+                audiometrySide.Text = "Esquerdo";
+            }
         }
     }
 }
