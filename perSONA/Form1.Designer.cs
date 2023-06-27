@@ -75,8 +75,11 @@ namespace perSONA
             this.audioDatabaseEditorAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resultsFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recalibrateAudiometry = new System.Windows.Forms.ToolStripMenuItem();
+            this.speechPerceptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calibraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calibrateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preliminaryTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.instrumentalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -544,7 +547,7 @@ namespace perSONA
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
             this.helpToolStripMenuItem,
-            this.calibraçãoToolStripMenuItem,
+            this.calibrateToolStripMenuItem,
             this.contactToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -558,7 +561,8 @@ namespace perSONA
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.audioDatabaseEditorAreaToolStripMenuItem,
             this.resultsFolderToolStripMenuItem,
-            this.recalibrateAudiometry});
+            this.recalibrateAudiometry,
+            this.speechPerceptionToolStripMenuItem});
             this.settingsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
@@ -570,7 +574,7 @@ namespace perSONA
             this.audioDatabaseEditorAreaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.audioDatabaseEditorAreaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.audioDatabaseEditorAreaToolStripMenuItem.Name = "audioDatabaseEditorAreaToolStripMenuItem";
-            this.audioDatabaseEditorAreaToolStripMenuItem.Size = new System.Drawing.Size(363, 26);
+            this.audioDatabaseEditorAreaToolStripMenuItem.Size = new System.Drawing.Size(437, 26);
             this.audioDatabaseEditorAreaToolStripMenuItem.Text = "Área de edição de arquivos de áudio";
             this.audioDatabaseEditorAreaToolStripMenuItem.Click += new System.EventHandler(this.audioDatabaseEditorAreaToolStripMenuItem_Click);
             // 
@@ -579,7 +583,7 @@ namespace perSONA
             this.resultsFolderToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.resultsFolderToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.resultsFolderToolStripMenuItem.Name = "resultsFolderToolStripMenuItem";
-            this.resultsFolderToolStripMenuItem.Size = new System.Drawing.Size(363, 26);
+            this.resultsFolderToolStripMenuItem.Size = new System.Drawing.Size(437, 26);
             this.resultsFolderToolStripMenuItem.Text = "Pasta destino dos resultados";
             this.resultsFolderToolStripMenuItem.Click += new System.EventHandler(this.resultsFolderToolStripMenuItem_Click);
             // 
@@ -588,9 +592,18 @@ namespace perSONA
             this.recalibrateAudiometry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
             this.recalibrateAudiometry.ForeColor = System.Drawing.Color.White;
             this.recalibrateAudiometry.Name = "recalibrateAudiometry";
-            this.recalibrateAudiometry.Size = new System.Drawing.Size(363, 26);
+            this.recalibrateAudiometry.Size = new System.Drawing.Size(437, 26);
             this.recalibrateAudiometry.Text = "Recalibrar audiômetro";
             this.recalibrateAudiometry.Click += new System.EventHandler(this.recalibrateAudiometry_Click);
+            // 
+            // speechPerceptionToolStripMenuItem
+            // 
+            this.speechPerceptionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.speechPerceptionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.speechPerceptionToolStripMenuItem.Name = "speechPerceptionToolStripMenuItem";
+            this.speechPerceptionToolStripMenuItem.Size = new System.Drawing.Size(437, 26);
+            this.speechPerceptionToolStripMenuItem.Text = "Recalibrar teste de percepção de fala no ruído";
+            this.speechPerceptionToolStripMenuItem.Click += new System.EventHandler(this.speechPerceptionToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -601,14 +614,36 @@ namespace perSONA
             this.helpToolStripMenuItem.Text = "Ajuda";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
-            // calibraçãoToolStripMenuItem
+            // calibrateToolStripMenuItem
             // 
-            this.calibraçãoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calibraçãoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.calibraçãoToolStripMenuItem.Name = "calibraçãoToolStripMenuItem";
-            this.calibraçãoToolStripMenuItem.Size = new System.Drawing.Size(104, 27);
-            this.calibraçãoToolStripMenuItem.Text = "Calibração";
-            this.calibraçãoToolStripMenuItem.Click += new System.EventHandler(this.calibraçãoToolStripMenuItem_Click);
+            this.calibrateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.preliminaryTestToolStripMenuItem,
+            this.instrumentalToolStripMenuItem});
+            this.calibrateToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calibrateToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.calibrateToolStripMenuItem.Name = "calibrateToolStripMenuItem";
+            this.calibrateToolStripMenuItem.Size = new System.Drawing.Size(104, 27);
+            this.calibrateToolStripMenuItem.Text = "Calibração";
+            // 
+            // preliminaryTestToolStripMenuItem
+            // 
+            this.preliminaryTestToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.preliminaryTestToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.preliminaryTestToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.preliminaryTestToolStripMenuItem.Name = "preliminaryTestToolStripMenuItem";
+            this.preliminaryTestToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.preliminaryTestToolStripMenuItem.Text = "Pré ensaio";
+            this.preliminaryTestToolStripMenuItem.Click += new System.EventHandler(this.preliminaryTestToolStripMenuItem_Click);
+            // 
+            // instrumentalToolStripMenuItem
+            // 
+            this.instrumentalToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(137)))));
+            this.instrumentalToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instrumentalToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.instrumentalToolStripMenuItem.Name = "instrumentalToolStripMenuItem";
+            this.instrumentalToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.instrumentalToolStripMenuItem.Text = "Instrumental";
+            this.instrumentalToolStripMenuItem.Click += new System.EventHandler(this.instrumentalToolStripMenuItem_Click);
             // 
             // contactToolStripMenuItem
             // 
@@ -1391,7 +1426,7 @@ namespace perSONA
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "perSONA 2.2 BETA";
+            this.Text = "perSONA 2.5 BETA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -1502,7 +1537,7 @@ namespace perSONA
         private TableLayoutPanel tableLayoutPanel13;
         private Panel panel3;
         private TableLayoutPanel tableLayoutPanel14;
-        private ToolStripMenuItem calibraçãoToolStripMenuItem;
+        private ToolStripMenuItem calibrateToolStripMenuItem;
         private TableLayoutPanel tableLayoutPanel16;
         private TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Label label4;
@@ -1515,6 +1550,9 @@ namespace perSONA
         private Button getFolder;
         private TableLayoutPanel tableLayoutPanel18;
         private TableLayoutPanel tableLayoutPanel19;
+        private ToolStripMenuItem preliminaryTestToolStripMenuItem;
+        private ToolStripMenuItem instrumentalToolStripMenuItem;
+        private ToolStripMenuItem speechPerceptionToolStripMenuItem;
     }
 }
 
