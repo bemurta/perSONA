@@ -337,7 +337,7 @@ namespace perSONA
             makeAudiometry(rightFreqsB, rightFreqs_dbB, rightFreqs_maskB, rightFreqs_noReplyB, rightGraph, rightAudiometryA, "Right", "Bone (mastoid)");
 
             End.Visible = false;
-            //this.Close();
+            this.Close();
         }
         private void makeAudiometry(List<double> freqs, Dictionary<double, double> dicDB, Dictionary<double, double> dicMask, Dictionary<double, bool> dicNoReply, ZedGraphControl graph, TonalAudiometryTest Audiometry, string Side, string Via)
         {

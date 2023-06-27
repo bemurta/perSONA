@@ -77,6 +77,7 @@ namespace perSONA
             string filelogo = path;
             Image img = Image.FromFile(filelogo);
             var logo = new ImageObj(img, new RectangleF(0.9f, 1.05f, 0.11f, 0.13f), CoordType.ChartFraction, AlignH.Left, AlignV.Top);
+            myPane.GraphObjList.Add(logo);
 
             graph.AxisChange();
             graph.Refresh();
