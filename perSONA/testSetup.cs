@@ -72,15 +72,18 @@ namespace perSONA
             double radiusNoise = (double)noiseDistance.Value;
             double snr = (double)initialSnr.Value;
             string noiseFile = Path.Combine(noiseFolder, comboBox3.SelectedItem.ToString());
-
+            bool sceeneLogic = checkLogic(noiseLogic.Checked, speechLogic.Checked);
             string procedureString = (string)comboBox1.SelectedItem;
 
             double[] presentingLogic = { double.Parse(procedureString.Split('-')[0]), double.Parse(procedureString.Split('-')[2]) };
-            double[] iterativeSNR = { };
             double acceptanceRule = (double)numericRule.Value;
             double signalToNoiseStep = (double)stepSnr.Value;
+<<<<<<< Updated upstream
             var dir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
             string Location = Path.Combine("data", "Sounds", "Speech", speechFiles.GetItemText(speechFiles.SelectedItem), speechList.GetItemText(speechList.SelectedItem));
+=======
+            string Location = Path.Combine(speechFolder, speechFiles.GetItemText(speechFiles.SelectedItem), speechLists.GetItemText(speechLists.SelectedItem));
+>>>>>>> Stashed changes
             speechFolder = vAInterface.getDatabaseFiles(Location);
 
             speechPerceptionTest speechTest = new speechPerceptionTest(
@@ -90,7 +93,7 @@ namespace perSONA
                                                     textBox1.Text, snr,
                                                     presentingLogic,
                                                     acceptanceRule / 100, signalToNoiseStep,
-                                                    subjects[0], subjects[1]);
+                                                    subjects[0], subjects[1], sceeneLogic);
             string testString = speechTest.ToString();
             vAInterface.concatText(testString);
 
@@ -98,8 +101,118 @@ namespace perSONA
             {
                 new speechIterTestForm(speechTest, vAInterface).Show();
             }
+            this.Close();
         }
 
+<<<<<<< Updated upstream
+=======
+        private void playSpeech_Click(object sender, EventArgs e)
+        {
+            string Location = Path.Combine(speechFolder, speechFiles.GetItemText(speechFiles.SelectedItem), speechLists.GetItemText(speechLists.SelectedItem));
+            string currentFile = System.IO.Path.Combine(Location, speechSentences.GetItemText(speechSentences.SelectedItem));
+            double[] angles = getSceneAngles();
+            double[] radius = getSceneDistances();
+            double angleSpeech = checkDirection(speechLeft.Checked, speechFront.Checked, speechRight.Checked); ;
+            double radiusSpeech = (double)speechDistance.Value;
+            double angleNoise = checkDirection(noiseLeft.Checked, noiseFront.Checked, noiseRight.Checked); ;
+            double radiusNoise = (double)noiseDistance.Value;
+            double snr = (double)initialSnr.Value;
+            string noiseFile = Path.Combine(noiseFolder, comboBox3.SelectedItem.ToString());
+
+            vA = vAInterface.getVa();
+            vA.Reset();
+            int receiverId = vA.CreateSoundReceiver("Subject");
+
+            double xSides = 0;
+            double zFront = 0;
+            double yHeight = 1.7;
+
+            VAVec3 receiverPosition = new VAVec3(xSides, yHeight, zFront);
+            VAVec3 receiverOrientationV = new VAVec3(0, 0, -1);
+            VAVec3 receiverOrientationU = new VAVec3(0, 1, 0);
+
+            vA.SetSoundReceiverPosition(receiverId, receiverPosition);
+            vA.SetSoundReceiverOrientationVU(receiverId, receiverOrientationV, receiverOrientationU);
+            vAInterface.concatText(string.Format("Receiver: {3} at position: {0},{1},{2}, looking forward ",
+                                     xSides, zFront, yHeight, receiverId));
+
+            int hrirId = vA.CreateDirectivityFromFile("data/ITA_Artificial_Head_5x5_44kHz_128.v17.ir.daff");
+            vA.SetSoundReceiverDirectivity(receiverId, hrirId);
+
+            if (simulaFala.Checked==true)
+            {
+                string speechFile = currentFile;
+                vAInterface.concatText(speechFile);
+                vAInterface.concatText(string.Format("Angle speech:", angleSpeech));
+                vAInterface.createAcousticScene(speechFile, speechFile);
+
+                vAInterface.playScene(radiusSpeech, angleSpeech, snr);
+
+                TagLib.File file = TagLib.File.Create(currentFile); //Take file at taglibe format   
+                var duration = file.Properties.Duration;            //Take duration
+                int msecduration = Convert.ToInt32(duration.TotalMilliseconds) + 20;
+                vAInterface.concatText(string.Format("Speech time: {0}", msecduration.ToString()));
+                Thread.Sleep(msecduration);      //Sleep fileduration milliseconds
+
+                vAInterface.stopScene(true, true);
+            }
+
+            else if (simulaRuido.Checked == true)
+            {
+                string speechFile = noiseFile;
+                vAInterface.concatText(noiseFile);
+                vAInterface.concatText(
+                    string.Format("Angle noise:", angleNoise));
+                vAInterface.createAcousticScene(noiseFile, noiseFile);
+
+                vAInterface.playScene(radiusNoise, angleNoise, snr);
+
+                TagLib.File file = TagLib.File.Create(currentFile); //Take file at taglibe format   
+                var duration = file.Properties.Duration;            //Take duration
+                int msecduration = Convert.ToInt32(duration.TotalMilliseconds) + 20;
+                vAInterface.concatText(string.Format("Speech time: {0}", msecduration.ToString()));
+                Thread.Sleep(msecduration);      //Sleep fileduration milliseconds
+
+                vAInterface.stopScene(true, true);
+            }
+
+            else if (simulaFalaeRuido.Checked == true)
+            {
+                string speechFile = currentFile;
+                vAInterface.concatText(speechFile);
+                vAInterface.concatText(
+                    string.Format("Angle speech: {0}, Angle noise: {1}", angleSpeech, angleNoise));
+                vAInterface.createAcousticScene(speechFile, noiseFile);
+
+                vAInterface.playScene(radiusSpeech, angleSpeech, snr);
+
+                TagLib.File file = TagLib.File.Create(currentFile); //Take file at taglibe format   
+                var duration = file.Properties.Duration;            //Take duration
+                int msecduration = Convert.ToInt32(duration.TotalMilliseconds) + 20;
+                vAInterface.concatText(string.Format("Speech time: {0}", msecduration.ToString()));
+                Thread.Sleep(msecduration);      //Sleep fileduration milliseconds
+
+                vAInterface.stopScene(true, true);
+            }
+        }
+
+        public bool checkLogic(bool noise, bool speech)
+        {
+            if(noise)
+            {
+                return true;
+            }
+            else if(speech)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+>>>>>>> Stashed changes
         private double checkDirection(bool left, bool front, bool right)
         {
             if (left)
@@ -195,6 +308,16 @@ namespace perSONA
             var filePaths = Path.Combine("data", "Sounds", "Speech", SpeechFile);
             string[] SpeechLists = Directory.GetDirectories(filePaths).Select(Path.GetFileName).ToArray();
             speechList.DataSource = SpeechLists;
+        }
+
+        private void noiseLogic_CheckedChanged(object sender, EventArgs e)
+        {
+            speechLogic.Checked = false;
+        }
+
+        private void speechLogic_CheckedChanged(object sender, EventArgs e)
+        {
+            noiseLogic.Checked = false;
         }
     }
 }
