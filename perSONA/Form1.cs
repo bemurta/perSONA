@@ -1013,8 +1013,9 @@ namespace perSONA
                         string[] subjects = { applicatorBox.SelectedItem.ToString(), patientBox.SelectedItem.ToString() };
                         new testSetup(this, testTipe, subjects).Show();
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
+                        MessageBox.Show(ex.Message);
                         const string message = "Selecione um paciente e um aplicador para prosseguir";
                         const string caption = "Erro";
                         var result = MessageBox.Show(message, caption,

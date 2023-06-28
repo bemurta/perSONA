@@ -75,8 +75,8 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.sceneLogic = new System.Windows.Forms.GroupBox();
-            this.speechLogic = new System.Windows.Forms.RadioButton();
             this.noiseLogic = new System.Windows.Forms.RadioButton();
+            this.speechLogic = new System.Windows.Forms.RadioButton();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -870,22 +870,6 @@
             this.sceneLogic.TabStop = false;
             this.sceneLogic.Text = "Lógica de Reprodução";
             // 
-            // speechLogic
-            // 
-            this.speechLogic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.speechLogic.AutoSize = true;
-            this.speechLogic.BackColor = System.Drawing.Color.White;
-            this.speechLogic.Location = new System.Drawing.Point(176, 26);
-            this.speechLogic.Margin = new System.Windows.Forms.Padding(5);
-            this.speechLogic.Name = "speechLogic";
-            this.speechLogic.Size = new System.Drawing.Size(140, 24);
-            this.speechLogic.TabIndex = 2;
-            this.speechLogic.Text = "Fala constante";
-            this.speechLogic.UseVisualStyleBackColor = false;
-            this.speechLogic.CheckedChanged += new System.EventHandler(this.speechLogic_CheckedChanged);
-            // 
             // noiseLogic
             // 
             this.noiseLogic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -902,6 +886,22 @@
             this.noiseLogic.Text = "Ruído constante";
             this.noiseLogic.UseVisualStyleBackColor = true;
             this.noiseLogic.CheckedChanged += new System.EventHandler(this.noiseLogic_CheckedChanged);
+            // 
+            // speechLogic
+            // 
+            this.speechLogic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.speechLogic.AutoSize = true;
+            this.speechLogic.BackColor = System.Drawing.Color.White;
+            this.speechLogic.Location = new System.Drawing.Point(176, 26);
+            this.speechLogic.Margin = new System.Windows.Forms.Padding(5);
+            this.speechLogic.Name = "speechLogic";
+            this.speechLogic.Size = new System.Drawing.Size(140, 24);
+            this.speechLogic.TabIndex = 2;
+            this.speechLogic.Text = "Fala constante";
+            this.speechLogic.UseVisualStyleBackColor = false;
+            this.speechLogic.CheckedChanged += new System.EventHandler(this.speechLogic_CheckedChanged);
             // 
             // testSetup
             // 

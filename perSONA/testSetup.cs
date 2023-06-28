@@ -329,12 +329,12 @@ namespace perSONA
 
         private void noiseLogic_CheckedChanged(object sender, EventArgs e)
         {
-            speechLogic.Checked = false;
+            //speechLogic.Checked = false;
         }
 
         private void speechLogic_CheckedChanged(object sender, EventArgs e)
         {
-            noiseLogic.Checked = false;
+            //noiseLogic.Checked = false;
         }
     }
 }
