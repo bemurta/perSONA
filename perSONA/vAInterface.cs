@@ -18,6 +18,8 @@ namespace perSONA
         string getDatabaseFolder();
         string getDatabaseFiles(string Location);
         void createAcousticScene(string speechFile, string noiseFile);
+        void createSpeechScene(string speechFile);
+        void createNoiseScene(string noiseFile);
         string getTitle(string speechFile);
         TimeSpan getDuration(string speechFile);
         void concatText(string textToAppend);

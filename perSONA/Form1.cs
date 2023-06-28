@@ -54,8 +54,6 @@ namespace perSONA
             var result = MessageBox.Show(message, caption,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-<<<<<<< Updated upstream
-=======
 
             if (Properties.Settings.Default.REPRODUCTION_MODE == "Earphone")
                 calibrationEarphone = Properties.Settings.Default.CALIBRATED_SNR_EARPHONE;
@@ -65,7 +63,6 @@ namespace perSONA
 
             else if (Properties.Settings.Default.REPRODUCTION_MODE == "8 Speakers")
                 calibration8Speaker = Properties.Settings.Default.CALIBRATED_SNR_8_SPEAKER;
->>>>>>> Stashed changes
 
             this.confFile = confFile;
             this.sourceIndex = sourceIndex;
@@ -640,7 +637,28 @@ namespace perSONA
                                      speechSource, Path.GetFileName(speechFile),
                                      noiseSource, Path.GetFileName(noiseFile)));
         }
+        public void createSpeechScene(string speechFile)
+        {
+            speechSound = vA.CreateSignalSourceBufferFromFile(speechFile);
+            speechSource = vA.CreateSoundSource("Speech");
 
+            int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+            vA.SetSoundSourceDirectivity(speechSource, humanDirectivity);
+
+            concatText(string.Format("\r\nCreated Source Signals: {0} with file: {1}",
+                                     speechSource, Path.GetFileName(speechFile)));
+        }
+        public void createNoiseScene(string noiseFile)
+        {
+            noiseSound = vA.CreateSignalSourceBufferFromFile(noiseFile);
+            noiseSource = vA.CreateSoundSource("Noise");
+
+            int humanDirectivity = vA.CreateDirectivityFromFile("data/Singer.v17.ms.daff");
+            vA.SetSoundSourceDirectivity(noiseSource, humanDirectivity);
+
+            concatText(string.Format("\r\nCreated Source Signals: {0} with file: {1}",
+                                     noiseSource, Path.GetFileName(noiseFile)));
+        }
         public void plotSceneGraph(ZedGraphControl graph, double[] radius, double[] angle)
         {
             GraphPane myPane = graph.GraphPane;
