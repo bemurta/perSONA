@@ -20,6 +20,7 @@ namespace perSONA
         public double AngleNoise { get; set; }
         public double RadiusNoise { get; set; }
         public double MeanSRT { get; set; }
+        public bool SceeneLogic { get; set; }
         public double[] PresentingLogic { get; set; } = { 2, 1 };
         public double[] IterativeSNR { get; set; } = { };
         public double AcceptanceRule { get; set; } = 0.5;
@@ -97,37 +98,19 @@ namespace perSONA
         }
 
         public speechPerceptionTest(
-                                    double angleSpeech, double radiusSpeech, 
-                                    double angleNoise, double radiusNoise,
-                                    string speechFolder, string noiseFile,
-                                    string label, double snr)
-        {
-            AngleSpeech = angleSpeech;
-            RadiusSpeech = radiusSpeech;
-            AngleNoise = angleNoise;
-            RadiusNoise = radiusNoise;
-            SignalToNoise = snr;
-            SpeechFolder = speechFolder;
-            NoiseFile = noiseFile;
-            Label = label;
-            TestStart = DateTime.Now;
-
-
-        }
-
-        public speechPerceptionTest(
                             double angleSpeech, double radiusSpeech,
                             double angleNoise, double radiusNoise,
                             string speechFolder, string noiseFile,
                             string label, double snr,
                             double[] presentingLogic,
                             double acceptanceRule, double signalToNoiseStep,
-                            string applicator, string patientName)
+                            string applicator, string patientName, bool sceeneLogic)
         {
             Applicator = applicator;
             PatientName = patientName;
             AngleSpeech = angleSpeech;
             RadiusSpeech = radiusSpeech;
+            SceeneLogic = sceeneLogic;
             AngleNoise = angleNoise;
             RadiusNoise = radiusNoise;
             SignalToNoise = snr;
