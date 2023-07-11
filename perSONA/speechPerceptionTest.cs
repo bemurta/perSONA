@@ -20,7 +20,7 @@ namespace perSONA
         public double AngleNoise { get; set; }
         public double RadiusNoise { get; set; }
         public double MeanSRT { get; set; }
-        public bool SceeneLogic { get; set; }
+        public string SceeneLogic { get; set; }
         public double[] PresentingLogic { get; set; } = { 2, 1 };
         public double[] IterativeSNR { get; set; } = { };
         public double AcceptanceRule { get; set; } = 0.5;
@@ -104,7 +104,7 @@ namespace perSONA
                             string label, double snr,
                             double[] presentingLogic,
                             double acceptanceRule, double signalToNoiseStep,
-                            string applicator, string patientName, bool sceeneLogic)
+                            string applicator, string patientName, string sceeneLogic)
         {
             Applicator = applicator;
             PatientName = patientName;

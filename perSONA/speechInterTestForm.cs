@@ -117,9 +117,10 @@ namespace perSONA
             testWordsList.ClearSelected();
         }
 
+
         private void playCurrentScene_Click(object sender, EventArgs e)
         {
-            if(test.SceeneLogic == true)
+            if(test.SceeneLogic == "SpeechConstant")
             {
                 vA = vAInterface.getVa();
                 vA.Reset();
@@ -146,8 +147,7 @@ namespace perSONA
                 vAInterface.concatText(
                     string.Format("Angle speech: {0}, Angle noise: {1}", test.AngleSpeech, test.AngleNoise));
                 vAInterface.createAcousticScene(speechFile, test.NoiseFile);
-
-                vAInterface.playScene(test.RadiusSpeech, test.AngleSpeech, actualSNR);
+                vAInterface.playSceneSpeechFixed(test.RadiusSpeech, test.AngleSpeech, actualSNR);
 
                 TagLib.File file = TagLib.File.Create(currentFile); //Take file at taglibe format   
                 var duration = file.Properties.Duration;            //Take duration
@@ -185,8 +185,7 @@ namespace perSONA
                 vAInterface.concatText(
                     string.Format("Angle speech: {0}, Angle noise: {1}", test.AngleSpeech, test.AngleNoise));
                 vAInterface.createAcousticScene(speechFile, test.NoiseFile);
-
-                vAInterface.playScene(test.RadiusSpeech, test.AngleSpeech, actualSNR);
+                vAInterface.playSceneNoiseFixed(test.RadiusSpeech, test.AngleSpeech, actualSNR);
 
                 TagLib.File file = TagLib.File.Create(currentFile); //Take file at taglibe format   
                 var duration = file.Properties.Duration;            //Take duration
@@ -207,11 +206,23 @@ namespace perSONA
             for (int i = 1; i < signalToNoiseArray.Length + 2; i++)
             {
                 double value = i;
-                indexes.Add(value);
+                indexes.
+                    Add(value);
+            }
+
+            string tipoSNR = "";
+
+            if (test.SceeneLogic == "SpeechConstant")
+            {
+                 tipoSNR = "SNR adaptativa considerando potência da fala constante";
+            }
+            else
+            {
+                tipoSNR = "SNR adaptativa considerando potência do ruído constante";
             }
 
             snrArray.Add(indexes.ToArray(), signalToNoiseArray);
-            LineItem snrCurve = myPane.AddCurve("SNR Adaptativa", snrArray, Color.Blue, SymbolType.XCross);
+            LineItem snrCurve = myPane.AddCurve(tipoSNR, snrArray, Color.Blue, SymbolType.XCross);
             snrCurve.Line.IsVisible = true;
             snrCurve.Line.Width = 2;
             snrCurve.Symbol.Size = 20;
@@ -380,10 +391,10 @@ namespace perSONA
             double formWidth = this.Size.Width;
             double formHeight = this.Size.Height;
 
-            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight * 0.925))
+            if ((formWidth < PCResolutionWidth) | (formHeight < PCResolutionHeight))
             {
-                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.78);
-                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.8);
+                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.95);
+                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.95);
                 this.Size = new Size(newWidth, newHeight);
             }
         }

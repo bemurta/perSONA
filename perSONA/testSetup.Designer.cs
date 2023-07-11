@@ -110,7 +110,7 @@
             this.panel2.Location = new System.Drawing.Point(14, 14);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(814, 720);
+            this.panel2.Size = new System.Drawing.Size(956, 720);
             this.panel2.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -131,7 +131,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.991826F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.00817F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(806, 712);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(948, 712);
             this.tableLayoutPanel4.TabIndex = 23;
             // 
             // tableLayoutPanel1
@@ -151,7 +151,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(364, 58);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 58);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // label9
@@ -164,7 +164,7 @@
             this.label9.Location = new System.Drawing.Point(5, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 29);
+            this.label9.Size = new System.Drawing.Size(164, 29);
             this.label9.TabIndex = 0;
             this.label9.Text = "Aplicador:";
             // 
@@ -175,10 +175,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.applicatorLabel.AutoSize = true;
             this.applicatorLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.applicatorLabel.Location = new System.Drawing.Point(152, 0);
+            this.applicatorLabel.Location = new System.Drawing.Point(179, 0);
             this.applicatorLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.applicatorLabel.Name = "applicatorLabel";
-            this.applicatorLabel.Size = new System.Drawing.Size(207, 29);
+            this.applicatorLabel.Size = new System.Drawing.Size(245, 29);
             this.applicatorLabel.TabIndex = 1;
             this.applicatorLabel.Text = "tipoAplicador";
             // 
@@ -189,10 +189,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.patientLabel.AutoSize = true;
             this.patientLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.patientLabel.Location = new System.Drawing.Point(152, 29);
+            this.patientLabel.Location = new System.Drawing.Point(179, 29);
             this.patientLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.patientLabel.Name = "patientLabel";
-            this.patientLabel.Size = new System.Drawing.Size(207, 29);
+            this.patientLabel.Size = new System.Drawing.Size(245, 29);
             this.patientLabel.TabIndex = 3;
             this.patientLabel.Text = "nomePaciente";
             // 
@@ -206,7 +206,7 @@
             this.label10.Location = new System.Drawing.Point(5, 29);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 29);
+            this.label10.Size = new System.Drawing.Size(164, 29);
             this.label10.TabIndex = 2;
             this.label10.Text = "Paciente:";
             // 
@@ -232,7 +232,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.0035F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.001F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.001F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(364, 642);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(429, 642);
             this.tableLayoutPanel2.TabIndex = 21;
             // 
             // simulacaodeFala
@@ -247,7 +247,7 @@
             this.simulacaodeFala.Margin = new System.Windows.Forms.Padding(5);
             this.simulacaodeFala.Name = "simulacaodeFala";
             this.simulacaodeFala.Padding = new System.Windows.Forms.Padding(5);
-            this.simulacaodeFala.Size = new System.Drawing.Size(354, 54);
+            this.simulacaodeFala.Size = new System.Drawing.Size(419, 54);
             this.simulacaodeFala.TabIndex = 12;
             this.simulacaodeFala.TabStop = false;
             this.simulacaodeFala.Text = "Simulação";
@@ -306,7 +306,7 @@
             this.textBox1.Location = new System.Drawing.Point(5, 37);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(354, 27);
+            this.textBox1.Size = new System.Drawing.Size(419, 27);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Test one";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -320,7 +320,7 @@
             this.label6.Location = new System.Drawing.Point(5, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(354, 32);
+            this.label6.Size = new System.Drawing.Size(419, 32);
             this.label6.TabIndex = 4;
             this.label6.Text = "Informações do ensaio";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -337,7 +337,7 @@
             this.groupBox7.Controls.Add(this.comboBox3);
             this.groupBox7.Location = new System.Drawing.Point(3, 67);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(358, 218);
+            this.groupBox7.Size = new System.Drawing.Size(423, 218);
             this.groupBox7.TabIndex = 14;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Teste";
@@ -351,7 +351,7 @@
             this.speechFiles.Location = new System.Drawing.Point(6, 24);
             this.speechFiles.Name = "speechFiles";
             this.speechFiles.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.speechFiles.Size = new System.Drawing.Size(350, 28);
+            this.speechFiles.Size = new System.Drawing.Size(415, 28);
             this.speechFiles.TabIndex = 12;
             this.speechFiles.SelectedIndexChanged += new System.EventHandler(this.speechFiles_SelectedIndexChanged);
             // 
@@ -363,7 +363,7 @@
             this.speechLists.FormattingEnabled = true;
             this.speechLists.Location = new System.Drawing.Point(6, 58);
             this.speechLists.Name = "speechLists";
-            this.speechLists.Size = new System.Drawing.Size(350, 28);
+            this.speechLists.Size = new System.Drawing.Size(415, 28);
             this.speechLists.TabIndex = 10;
             this.speechLists.SelectedIndexChanged += new System.EventHandler(this.speechLists_SelectedIndexChanged);
             // 
@@ -378,7 +378,7 @@
             this.speechSentences.Margin = new System.Windows.Forms.Padding(5);
             this.speechSentences.Name = "speechSentences";
             this.speechSentences.ScrollAlwaysVisible = true;
-            this.speechSentences.Size = new System.Drawing.Size(350, 44);
+            this.speechSentences.Size = new System.Drawing.Size(415, 44);
             this.speechSentences.TabIndex = 7;
             // 
             // label5
@@ -404,8 +404,9 @@
             this.comboBox3.Location = new System.Drawing.Point(6, 178);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(350, 28);
+            this.comboBox3.Size = new System.Drawing.Size(415, 28);
             this.comboBox3.TabIndex = 9;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // zedGraphControl1
             // 
@@ -422,7 +423,7 @@
             this.zedGraphControl1.ScrollMinX = 0D;
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
-            this.zedGraphControl1.Size = new System.Drawing.Size(352, 212);
+            this.zedGraphControl1.Size = new System.Drawing.Size(417, 212);
             this.zedGraphControl1.TabIndex = 10;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
             // 
@@ -437,7 +438,7 @@
             this.playSpeech.Location = new System.Drawing.Point(5, 581);
             this.playSpeech.Margin = new System.Windows.Forms.Padding(5);
             this.playSpeech.Name = "playSpeech";
-            this.playSpeech.Size = new System.Drawing.Size(354, 56);
+            this.playSpeech.Size = new System.Drawing.Size(419, 56);
             this.playSpeech.TabIndex = 8;
             this.playSpeech.Text = "Simular";
             this.playSpeech.UseVisualStyleBackColor = false;
@@ -459,7 +460,7 @@
             this.tableLayoutPanel3.Controls.Add(this.groupBox5, 0, 6);
             this.tableLayoutPanel3.Controls.Add(this.groupBox8, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.groupBox6, 0, 4);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(396, 67);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(466, 67);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 9;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -471,7 +472,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(407, 642);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(479, 642);
             this.tableLayoutPanel3.TabIndex = 22;
             // 
             // groupBox1
@@ -486,7 +487,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(397, 61);
+            this.groupBox1.Size = new System.Drawing.Size(469, 61);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Localização do sinal de fala";
@@ -515,7 +516,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.speechRight.AutoSize = true;
             this.speechRight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.speechRight.Location = new System.Drawing.Point(279, 29);
+            this.speechRight.Location = new System.Drawing.Point(379, 29);
             this.speechRight.Margin = new System.Windows.Forms.Padding(5);
             this.speechRight.Name = "speechRight";
             this.speechRight.Size = new System.Drawing.Size(80, 24);
@@ -531,7 +532,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.speechFront.AutoSize = true;
             this.speechFront.BackColor = System.Drawing.Color.White;
-            this.speechFront.Location = new System.Drawing.Point(156, 29);
+            this.speechFront.Location = new System.Drawing.Point(204, 30);
             this.speechFront.Margin = new System.Windows.Forms.Padding(5);
             this.speechFront.Name = "speechFront";
             this.speechFront.Size = new System.Drawing.Size(78, 24);
@@ -550,7 +551,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox3.Size = new System.Drawing.Size(397, 61);
+            this.groupBox3.Size = new System.Drawing.Size(469, 61);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Distância da fonte sonora da fala [metros]";
@@ -579,7 +580,7 @@
             0,
             0});
             this.speechDistance.Name = "speechDistance";
-            this.speechDistance.Size = new System.Drawing.Size(371, 27);
+            this.speechDistance.Size = new System.Drawing.Size(443, 27);
             this.speechDistance.TabIndex = 0;
             this.speechDistance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speechDistance.Value = new decimal(new int[] {
@@ -601,7 +602,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox2.Size = new System.Drawing.Size(397, 61);
+            this.groupBox2.Size = new System.Drawing.Size(469, 61);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Localização do sinal de ruído";
@@ -612,7 +613,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.noiseLeft.AutoSize = true;
-            this.noiseLeft.Location = new System.Drawing.Point(10, 29);
+            this.noiseLeft.Location = new System.Drawing.Point(10, 27);
             this.noiseLeft.Margin = new System.Windows.Forms.Padding(5);
             this.noiseLeft.Name = "noiseLeft";
             this.noiseLeft.Size = new System.Drawing.Size(101, 24);
@@ -627,7 +628,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.noiseRight.AutoSize = true;
-            this.noiseRight.Location = new System.Drawing.Point(279, 29);
+            this.noiseRight.Location = new System.Drawing.Point(379, 27);
             this.noiseRight.Margin = new System.Windows.Forms.Padding(5);
             this.noiseRight.Name = "noiseRight";
             this.noiseRight.Size = new System.Drawing.Size(80, 24);
@@ -643,7 +644,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.noiseFront.AutoSize = true;
             this.noiseFront.Checked = true;
-            this.noiseFront.Location = new System.Drawing.Point(156, 29);
+            this.noiseFront.Location = new System.Drawing.Point(204, 27);
             this.noiseFront.Margin = new System.Windows.Forms.Padding(5);
             this.noiseFront.Name = "noiseFront";
             this.noiseFront.Size = new System.Drawing.Size(78, 24);
@@ -664,7 +665,7 @@
             this.BeginTest.Location = new System.Drawing.Point(5, 573);
             this.BeginTest.Margin = new System.Windows.Forms.Padding(5);
             this.BeginTest.Name = "BeginTest";
-            this.BeginTest.Size = new System.Drawing.Size(397, 64);
+            this.BeginTest.Size = new System.Drawing.Size(469, 64);
             this.BeginTest.TabIndex = 19;
             this.BeginTest.Text = "Iniciar teste";
             this.BeginTest.UseVisualStyleBackColor = false;
@@ -680,7 +681,7 @@
             this.groupBox10.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox10.Size = new System.Drawing.Size(397, 61);
+            this.groupBox10.Size = new System.Drawing.Size(469, 61);
             this.groupBox10.TabIndex = 18;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Passo de SNR [dB]";
@@ -703,7 +704,7 @@
             0,
             -2147483648});
             this.stepSnr.Name = "stepSnr";
-            this.stepSnr.Size = new System.Drawing.Size(371, 27);
+            this.stepSnr.Size = new System.Drawing.Size(443, 27);
             this.stepSnr.TabIndex = 0;
             this.stepSnr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.stepSnr.Value = new decimal(new int[] {
@@ -722,7 +723,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox4.Size = new System.Drawing.Size(397, 61);
+            this.groupBox4.Size = new System.Drawing.Size(469, 61);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Distância da fonte sonora de ruído [metros]";
@@ -751,7 +752,7 @@
             0,
             0});
             this.noiseDistance.Name = "noiseDistance";
-            this.noiseDistance.Size = new System.Drawing.Size(366, 27);
+            this.noiseDistance.Size = new System.Drawing.Size(438, 27);
             this.noiseDistance.TabIndex = 0;
             this.noiseDistance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.noiseDistance.Value = new decimal(new int[] {
@@ -771,10 +772,10 @@
             this.groupBox5.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox5.Size = new System.Drawing.Size(397, 61);
+            this.groupBox5.Size = new System.Drawing.Size(469, 61);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "SNR inicial [dB]";
+            this.groupBox5.Text = "SNR inicial [dB] (SNR inicial >= 40 dB zera o ruído)";
             // 
             // initialSnr
             // 
@@ -794,7 +795,7 @@
             0,
             -2147483648});
             this.initialSnr.Name = "initialSnr";
-            this.initialSnr.Size = new System.Drawing.Size(371, 27);
+            this.initialSnr.Size = new System.Drawing.Size(443, 27);
             this.initialSnr.TabIndex = 0;
             this.initialSnr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -808,7 +809,7 @@
             this.groupBox8.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox8.Size = new System.Drawing.Size(397, 61);
+            this.groupBox8.Size = new System.Drawing.Size(469, 61);
             this.groupBox8.TabIndex = 16;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Critério de aceitação (% de acertos)";
@@ -821,7 +822,7 @@
             this.numericRule.Location = new System.Drawing.Point(10, 28);
             this.numericRule.Margin = new System.Windows.Forms.Padding(5);
             this.numericRule.Name = "numericRule";
-            this.numericRule.Size = new System.Drawing.Size(371, 27);
+            this.numericRule.Size = new System.Drawing.Size(443, 27);
             this.numericRule.TabIndex = 0;
             this.numericRule.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericRule.Value = new decimal(new int[] {
@@ -840,7 +841,7 @@
             this.groupBox6.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox6.Size = new System.Drawing.Size(397, 61);
+            this.groupBox6.Size = new System.Drawing.Size(469, 61);
             this.groupBox6.TabIndex = 15;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Procedimento";
@@ -856,19 +857,23 @@
             this.comboBox1.Location = new System.Drawing.Point(10, 26);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(367, 28);
+            this.comboBox1.Size = new System.Drawing.Size(439, 28);
             this.comboBox1.TabIndex = 0;
             // 
             // sceneLogic
             // 
+            this.sceneLogic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sceneLogic.Controls.Add(this.noiseLogic);
             this.sceneLogic.Controls.Add(this.speechLogic);
-            this.sceneLogic.Location = new System.Drawing.Point(396, 3);
+            this.sceneLogic.Location = new System.Drawing.Point(466, 3);
             this.sceneLogic.Name = "sceneLogic";
-            this.sceneLogic.Size = new System.Drawing.Size(407, 58);
+            this.sceneLogic.Size = new System.Drawing.Size(479, 58);
             this.sceneLogic.TabIndex = 23;
             this.sceneLogic.TabStop = false;
-            this.sceneLogic.Text = "Lógica de Reprodução";
+            this.sceneLogic.Text = "Cálculo e ajuste SNR";
+            this.sceneLogic.Enter += new System.EventHandler(this.sceneLogic_Enter);
             // 
             // noiseLogic
             // 
@@ -876,14 +881,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.noiseLogic.AutoSize = true;
-            this.noiseLogic.Checked = true;
-            this.noiseLogic.Location = new System.Drawing.Point(15, 26);
+            this.noiseLogic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noiseLogic.Location = new System.Drawing.Point(236, 28);
             this.noiseLogic.Margin = new System.Windows.Forms.Padding(5);
             this.noiseLogic.Name = "noiseLogic";
-            this.noiseLogic.Size = new System.Drawing.Size(151, 24);
+            this.noiseLogic.Size = new System.Drawing.Size(238, 24);
             this.noiseLogic.TabIndex = 3;
-            this.noiseLogic.TabStop = true;
-            this.noiseLogic.Text = "Ruído constante";
+            this.noiseLogic.Text = "Potência do ruído constante";
             this.noiseLogic.UseVisualStyleBackColor = true;
             this.noiseLogic.CheckedChanged += new System.EventHandler(this.noiseLogic_CheckedChanged);
             // 
@@ -894,12 +898,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.speechLogic.AutoSize = true;
             this.speechLogic.BackColor = System.Drawing.Color.White;
-            this.speechLogic.Location = new System.Drawing.Point(176, 26);
+            this.speechLogic.Checked = true;
+            this.speechLogic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speechLogic.Location = new System.Drawing.Point(8, 28);
             this.speechLogic.Margin = new System.Windows.Forms.Padding(5);
             this.speechLogic.Name = "speechLogic";
-            this.speechLogic.Size = new System.Drawing.Size(140, 24);
+            this.speechLogic.Size = new System.Drawing.Size(219, 24);
             this.speechLogic.TabIndex = 2;
-            this.speechLogic.Text = "Fala constante";
+            this.speechLogic.TabStop = true;
+            this.speechLogic.Text = "Potência de fala constante";
             this.speechLogic.UseVisualStyleBackColor = false;
             this.speechLogic.CheckedChanged += new System.EventHandler(this.speechLogic_CheckedChanged);
             // 
@@ -908,7 +915,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(836, 737);
+            this.ClientSize = new System.Drawing.Size(978, 737);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
