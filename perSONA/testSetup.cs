@@ -28,7 +28,6 @@ namespace perSONA
 
             InitializeComponent();
             resizeScreen();
-
             this.subjects = subjects;
             applicatorLabel.Text = subjects[0];
             patientLabel.Text = subjects[1];
@@ -40,6 +39,9 @@ namespace perSONA
             string[] procedureList = { "2-down-1-up", "1-down-1-up" };
             comboBox1.DataSource = procedureList;
             comboBox1.SelectedItem = comboBox1.Items.IndexOf("2-down-1-up");
+
+            noiseLogic.Checked = false;
+            speechLogic.Checked = true;
 
             string[] testnames = Directory.GetDirectories(speechFolder).Select(Path.GetFileName).ToArray();
             for (int i = 0; i < testnames.Length; i++)
@@ -81,7 +83,7 @@ namespace perSONA
             double radiusNoise = (double)noiseDistance.Value;
             double snr = (double)initialSnr.Value;
             string noiseFile = Path.Combine(noiseFolder, comboBox3.SelectedItem.ToString());
-            bool sceeneLogic = checkLogic(noiseLogic.Checked, speechLogic.Checked);
+            string sceeneLogic = checkLogic(noiseLogic.Checked);
             string procedureString = (string)comboBox1.SelectedItem;
 
             double[] presentingLogic = { double.Parse(procedureString.Split('-')[0]), double.Parse(procedureString.Split('-')[2]) };
@@ -198,19 +200,15 @@ namespace perSONA
             }
         }
 
-        public bool checkLogic(bool noise, bool speech)
+        public string checkLogic(bool noise)
         {
             if(noise)
             {
-                return true;
+                return "NoiseConstant";
             }
-            else if(speech)
+            else 
             {
-                return false;
-            }
-            else
-            {
-                return true;
+                return "SpeechConstant";
             }
         }
 
@@ -295,10 +293,10 @@ namespace perSONA
             double formWidth = this.Size.Width;
             double formHeight = this.Size.Height;
 
-            if ((formWidth > PCResolutionWidth) | (formHeight > PCResolutionHeight * 0.925))
+            if ((formWidth < PCResolutionWidth) | (formHeight < PCResolutionHeight))
             {
-                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.54);
-                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.875);
+                int newWidth = Convert.ToInt32(PCResolutionWidth * 0.95);
+                int newHeight = Convert.ToInt32(PCResolutionHeight * 0.95);
                 this.Size = new Size(newWidth, newHeight);
             }
         }
@@ -329,12 +327,36 @@ namespace perSONA
 
         private void noiseLogic_CheckedChanged(object sender, EventArgs e)
         {
-            //speechLogic.Checked = false;
+            if(noiseLogic.Checked == true)
+            {
+                speechLogic.Checked = false;
+            }
+            else
+            {
+                speechLogic.Checked = true;
+            }
         }
 
         private void speechLogic_CheckedChanged(object sender, EventArgs e)
         {
-            //noiseLogic.Checked = false;
+            if(speechLogic.Checked == true)
+            {
+                noiseLogic.Checked = false;
+            }
+            else
+            {
+                noiseLogic.Checked = true;
+            }
+        }
+
+        private void sceneLogic_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
